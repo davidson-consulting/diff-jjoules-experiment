@@ -31,6 +31,12 @@ def build_graph(energies_v1, durations_v1, energies_v2, durations_v2, labels, ou
 
     tkw = dict(size=4, width=1)
 
+    energies_v1.reverse()
+    durations_v1.reverse()
+    energies_v2.reverse()
+    durations_v2.reverse()
+    labels.reverse()
+
     energy_v1_ax = fig.add_subplot(111)
     for tick in energy_v1_ax.yaxis.get_major_ticks():
         tick.label.set_fontsize(6)
