@@ -159,7 +159,10 @@ def git_log(path_project, output_file_path):
     )
 
 def mkdir(path):
-    os.makedirs(path)
+    try:
+        os.makedirs(path)
+    except FileExistsError:
+        print('pass...')
 
 
 CMD_GIT_RESET_HARD = 'git reset --hard'
