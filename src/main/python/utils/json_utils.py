@@ -9,16 +9,16 @@ def read_json(path_to_json):
         data = json.load(json_file)
     return data
 
-CORE_MJ_KEY = 'core|uJ'
+CPU_MJ_KEY = 'package|uJ'
 DURATION_NS_KEY = 'duration|ns'
 DRAM_MJ_KEY = 'dram|uJ'
 
 def get_energy_data(data):
     return {
-        'energy': data[CORE_MJ_KEY],
+        'energy': data[CPU_MJ_KEY],
         'duration': data[DURATION_NS_KEY],
         'dram': data[DRAM_MJ_KEY],
-    }
+    } if data[CPU_MJ_KEY] > 0 else {}
 
 def avg_on_each_field(entries, entry):
     new_entries = {}

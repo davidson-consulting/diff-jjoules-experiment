@@ -8,6 +8,11 @@ import pandas as pd
 from utils.graph_args import *
 from utils.json_utils import *
 
+def make_patch_spines_invisible(ax):
+    ax.set_frame_on(True)
+    ax.patch.set_visible(False)
+    for sp in ax.spines.values():
+        sp.set_visible(False)
 
 def get_max(arrayv1, arrayv2):
     current_max = -1
@@ -33,37 +38,63 @@ def build_graph(energies_v1, durations_v1, energies_v2, durations_v2, labels, ou
     energy_v2_ax = energy_v1_ax.twiny()
     duration_v2_ax = energy_v1_ax.twiny()
 
-    energy_v1_ax.xaxis.label.set_color('blue')
-    duration_v1_ax.xaxis.label.set_color('cyan')
-    energy_v2_ax.xaxis.label.set_color('orange')
-    duration_v2_ax.xaxis.label.set_color('gold')
+    energy_v2_ax.spines["top"].set_visible(False)
+    duration_v2_ax.spines["top"].set_visible(False)
+    energy_v2_ax.xaxis.set_visible(False)
+    duration_v2_ax.xaxis.set_visible(False)
+    energy_v2_ax.yaxis.set_visible(False)
+    duration_v2_ax.yaxis.set_visible(False)
 
-    energy_v1_ax.tick_params(axis='x', colors='blue', **tkw)
-    duration_v1_ax.tick_params(axis='x', colors='cyan', **tkw)
-    energy_v2_ax.tick_params(axis='x', colors='orange', **tkw)
-    duration_v2_ax.tick_params(axis='x', colors='gold', **tkw)
+    # make_patch_spines_invisible(duration_v1_ax)
+    # duration_v1_ax.spines["top"].set_visible(True)
 
-    energy_v1_ax.set_xlabel('Energy V1(uJ)')
-    duration_v1_ax.set_xlabel('Duration V1(s)')
-    energy_v2_ax.set_xlabel('Energy V2(uJ)')
-    duration_v2_ax.set_xlabel('Duration V2(s)')
+    # energy_v2_ax.spines["top"].set_position(("axes", 1.05))
+    # make_patch_spines_invisible(energy_v2_ax)
+    # energy_v2_ax.spines["top"].set_visible(True)
+
+    # duration_v2_ax.spines["top"].set_position(("axes", 1.15))
+    # make_patch_spines_invisible(duration_v2_ax)
+    # duration_v2_ax.spines["top"].set_visible(True)
+
+    energy_v1_ax.xaxis.label.set_color('black')
+    duration_v1_ax.xaxis.label.set_color('black')
+
+    # energy_v1_ax.xaxis.label.set_color('blue')
+    # duration_v1_ax.xaxis.label.set_color('cyan')
+    # energy_v2_ax.xaxis.label.set_color('orange')
+    # duration_v2_ax.xaxis.label.set_color('gold')
+
+    energy_v1_ax.tick_params(axis='x', colors='black', **tkw)
+    duration_v1_ax.tick_params(axis='x', colors='black', **tkw)
+    energy_v1_ax.tick_params(axis='y', colors='white', **tkw)
+    duration_v1_ax.tick_params(axis='y', colors='white', **tkw)
+
+    # energy_v1_ax.tick_params(axis='x', colors='blue', **tkw)
+    # duration_v1_ax.tick_params(axis='x', colors='cyan', **tkw)
+    # energy_v2_ax.tick_params(axis='x', colors='orange', **tkw)
+    # duration_v2_ax.tick_params(axis='x', colors='gold', **tkw)
+
+    energy_v1_ax.set_xlabel('Energy(uJ)')
+    duration_v1_ax.set_xlabel('Duration(s)')
+    # energy_v2_ax.set_xlabel('Energy V2(uJ)')
+    # duration_v2_ax.set_xlabel('Duration V2(s)')
 
     energy_v1_ax.tick_params(axis='both', which='major', labelsize=14)
     energy_v1_ax.tick_params(axis='both', which='minor', labelsize=14)
     duration_v1_ax.tick_params(axis='both', which='major', labelsize=14)
     duration_v1_ax.tick_params(axis='both', which='minor', labelsize=14)
-    energy_v2_ax.tick_params(axis='both', which='major', labelsize=14)
-    energy_v2_ax.tick_params(axis='both', which='minor', labelsize=14)
-    duration_v2_ax.tick_params(axis='both', which='major', labelsize=14)
-    duration_v2_ax.tick_params(axis='both', which='minor', labelsize=14)
+    # energy_v2_ax.tick_params(axis='both', which='major', labelsize=14)
+    # energy_v2_ax.tick_params(axis='both', which='minor', labelsize=14)
+    # duration_v2_ax.tick_params(axis='both', which='major', labelsize=14)
+    # duration_v2_ax.tick_params(axis='both', which='minor', labelsize=14)
 
     max_energy = get_max(energies_v1, energies_v2)
     max_duration = get_max(durations_v1, durations_v2)
 
     energy_v1_ax.set_xlim([0, max_energy])
     duration_v1_ax.set_xlim([0, max_duration])
-    energy_v2_ax.set_xlim([0, max_energy])
-    duration_v2_ax.set_xlim([0, max_duration])
+    # energy_v2_ax.set_xlim([0, max_energy])
+    # duration_v2_ax.set_xlim([0, max_duration])
 
     width = 0.1
     df = pd.DataFrame({
@@ -72,10 +103,15 @@ def build_graph(energies_v1, durations_v1, energies_v2, durations_v2, labels, ou
         'EnergyV2': energies_v2,
         'DurationV2': durations_v2
     }, index=labels)
-    df.EnergyV1.plot.barh(color='blue', ax=energy_v1_ax, width=width, position=3)
-    df.DurationV1.plot.barh(color='cyan', ax=duration_v1_ax, width=width, position=2)
-    df.EnergyV2.plot.barh(color='orange', ax=energy_v2_ax, width=width, position=1)
-    df.DurationV2.plot.barh(color='gold', ax=duration_v2_ax, width=width, position=0)
+    plt_energy_v1 = df.EnergyV1.plot.barh(color='blue', ax=energy_v1_ax, width=width, position=3)
+    plt_duration_v1 = df.DurationV1.plot.barh(color='cyan', ax=duration_v1_ax, width=width, position=2)
+    plt_energy_v2 = df.EnergyV2.plot.barh(color='orange', ax=energy_v2_ax, width=width, position=1)
+    plt_duration_v2 = df.DurationV2.plot.barh(color='gold', ax=duration_v2_ax, width=width, position=0)
+
+    energy_v1_ax.legend(bbox_to_anchor=(0.10, 1.3), loc='upper center')
+    duration_v1_ax.legend(bbox_to_anchor=(0.35, 1.3), loc='upper center')
+    energy_v2_ax.legend(bbox_to_anchor=(0.60, 1.3), loc='upper center')
+    duration_v2_ax.legend(bbox_to_anchor=(0.85, 1.3), loc='upper center')
 
     plt.tight_layout()
     plt.savefig(output)
@@ -89,10 +125,14 @@ def build_data_per_class(data_v1, data_v2):
     energies_v2 = {}
     durations_v2 = {}
     labels = []
+    done_test_class_names = []
     for key in data_v1:
+        if not key in data_v2:
+            continue
         test_class_name = get_test_class(key)
-        if not test_class_name in labels:
-            labels.append(test_class_name)
+        if not test_class_name in done_test_class_names:
+            labels.append(str(len(done_test_class_names)))
+            done_test_class_names.append(test_class_name)
             energies_v1[test_class_name] = data_v1[key]['energy']
             durations_v1[test_class_name] = data_v1[key]['duration']
             energies_v2[test_class_name] = data_v2[key]['energy']
@@ -114,6 +154,8 @@ def build_data_per_test(data_v1, data_v2, output_path):
     energies_v2 = {}
     durations_v2 = {}
     for key in data_v1:
+        if not key in data_v2:
+            continue
         test_class_name = get_test_class(key)
         if not test_class_name in test_per_test_classes:
             test_per_test_classes[test_class_name] = []
@@ -130,7 +172,7 @@ def build_data_per_test(data_v1, data_v2, output_path):
         current_durations_v2 = []
         labels = []
         for test in test_per_test_classes[test_class_name]:
-            labels.append(test)
+            labels.append(str(test_per_test_classes[test_class_name].index(test)))
             current_energies_v1.append(energies_v1[test_class_name + '-' + test])
             current_durations_v1.append(durations_v1[test_class_name + '-' + test])
             current_energies_v2.append(energies_v2[test_class_name + '-' + test])
