@@ -148,12 +148,12 @@ def build_data_per_class(data_v1, data_v2):
             durations_v1[test_class_name] = durations_v1[test_class_name] + data_v1[key]['duration']
             energies_v2[test_class_name] = energies_v2[test_class_name] + data_v2[key]['energy']
             durations_v2[test_class_name] = durations_v2[test_class_name] + data_v2[key]['duration']
-    return list(energies_v1.values()), list(durations_v1.values()), list(energies_v2.values()), list(durations_v2.values()), labels
+    return list(energies_v1.values()), list(durations_v1.values()), list(energies_v2.values()), list(durations_v2.values()), labels, done_test_class_names
 
 def get_test_name(key):
     return key.split('-')[1]
 
-def build_data_per_test(data_v1, data_v2, output_path):
+def build_data_per_test(data_v1, data_v2):
     test_per_test_classes = {}
     energies_v1 = {}
     durations_v1 = {}
@@ -170,7 +170,10 @@ def build_data_per_test(data_v1, data_v2, output_path):
         durations_v1[key] = data_v1[key]['duration']
         energies_v2[key] = data_v2[key]['energy']
         durations_v2[key] = data_v2[key]['duration']
+    return test_per_test_classes, energies_v1, durations_v1, energies_v2, durations_v2
 
+def build_and_draw_per_test(data_v1, data_v2, output_path):
+    test_per_test_classes, energies_v1, durations_v1, energies_v2, durations_v2 = build_data_per_test(data_v1, data_v2)
     for test_class_name in test_per_test_classes:
         current_energies_v1 = []
         current_durations_v1 = []
@@ -206,6 +209,6 @@ if __name__ == '__main__':
             energies_v1, durations_v1, energies_v2, durations_v2, labels = build_data_per_class(data_v1, data_v2)
             build_graph(energies_v1, durations_v1, energies_v2, durations_v2, labels, output=path_to_file + '/'+ project_name +'.png')
         elif mode == mode.per_test:
-            build_data_per_test(data_v1, data_v2, path_to_file)
+            build_and_draw_per_test(data_v1, data_v2, path_to_file)
         else:
             print('unkown mode', mode)
