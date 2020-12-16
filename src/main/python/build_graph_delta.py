@@ -25,17 +25,18 @@ def get_max(arrayv1, arrayv2):
 def build_graph(energies_v1, durations_v1, energies_v2, durations_v2, labels, output='graph.png'):
     df = pd.DataFrame({'Test': labels,
                     'EnergyV1': energies_v1,
-                    'DurationsV1': durations_v1,
+                    #'DurationsV1': durations_v1,
                     'EnergyV2': energies_v2,
-                    'DurationsV2': durations_v2
-                })
-    bar_plot = sns.barplot(x='EnergyV1', y='Test', data=df, order=labels, color='red')
-    bar_plot = sns.barplot(x='DurationsV1', y='Test', data=df, order=labels)
-    bar_plot = sns.barplot(x='EnergyV2', y='Test', data=df, order=labels)
-    bar_plot = sns.barplot(x='DurationsV2', y='Test', data=df, order=labels)
+                    #'DurationsV2': durations_v2
+                }, index=labels)
+    bar_plot = sns.barplot(x="EnergyV1", y="Test", data=df, order=labels, color='red')
+    # bar_plot = sns.barplot(x='DurationsV1', y='Test', data=df, order=labels)
+    bar_plot = sns.barplot(x='EnergyV2', y='Test', data=df, order=labels, color='blue')
+    # bar_plot = sns.barplot(x='DurationsV2', y='Test', data=df, order=labels)
     bar_plot.set(xlabel="Energy in uJ", ylabel="Test", title = "Delta SEC V1-V2")
     plt.tight_layout()
     plt.savefig(output)
+    plt.clf()
 
 def get_test_class(key):
     return key.split('-')[0]
@@ -46,10 +47,14 @@ def build_data_per_class(data_v1, data_v2):
     energies_v2 = {}
     durations_v2 = {}
     labels = []
+    done_test_class_names = []
     for key in data_v1:
+        if not key in data_v2:
+            continue
         test_class_name = get_test_class(key)
-        if not test_class_name in labels:
-            labels.append(test_class_name)
+        if not test_class_name in done_test_class_names:
+            labels.append(str(len(done_test_class_names)))
+            done_test_class_names.append(test_class_name)
             energies_v1[test_class_name] = data_v1[key]['energy']
             durations_v1[test_class_name] = data_v1[key]['duration']
             energies_v2[test_class_name] = data_v2[key]['energy']
@@ -81,9 +86,8 @@ def build_data_per_class(data_v1, data_v2):
             delta_durations_v1.append(delta_duration)
             delta_durations_v2.append(0)
         else:
-            delta_durations_v1.append(delta_duration)
-            delta_durations_v2.append(0)
-
+            delta_durations_v2.append(delta_duration)
+            delta_durations_v1.append(0)
     return delta_energies_v1, delta_durations_v1, delta_energies_v2, delta_durations_v2, labels
 
 def get_test_name(key):
