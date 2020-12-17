@@ -164,6 +164,8 @@ def build_data_per_test(data_v1, data_v2):
     durations_v1 = {}
     energies_v2 = {}
     durations_v2 = {}
+    valid_iteration_v1 = {}
+    valid_iteration_v2 = {}
     for key in data_v1:
         if not key in data_v2:
             continue
@@ -175,7 +177,9 @@ def build_data_per_test(data_v1, data_v2):
         durations_v1[key] = data_v1[key]['duration']
         energies_v2[key] = data_v2[key]['energy']
         durations_v2[key] = data_v2[key]['duration']
-    return test_per_test_classes, energies_v1, durations_v1, energies_v2, durations_v2
+        valid_iteration_v2[key] = data_v2[key]['iteration']
+        valid_iteration_v1[key] = data_v1[key]['iteration']
+    return test_per_test_classes, energies_v1, durations_v1, energies_v2, durations_v2, valid_iteration_v1, valid_iteration_v2
 
 def build_and_draw_per_test(data_v1, data_v2, output_path):
     test_per_test_classes, energies_v1, durations_v1, energies_v2, durations_v2 = build_data_per_test(data_v1, data_v2)

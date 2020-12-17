@@ -9,23 +9,19 @@ def get_class_name(json_file):
 
 def compute_energy_for_tests(path_to_folder_iteration):
     compute_energy_for_tests = {}
-    nb = 0
-    nb_skipped = 0
     for json_file in os.listdir(path_to_folder_iteration):
         key = get_class_name(json_file)
         data = get_energy_data(read_json(path_to_folder_iteration + '/' + json_file))
         if len(data) > 0:
             compute_energy_for_tests[key] = data
         else:
-            nb_skipped = nb_skipped + 1
-            #print(path_to_folder_iteration + '/' + json_file, 'not added')
-        nb = nb + 1
-    print(path_to_folder_iteration, nb - nb_skipped, nb_skipped, nb)
+            print(path_to_folder_iteration + '/' + json_file, 'not added')
     return compute_energy_for_tests
 
 def compute_avg_energy_for_iterations(path_to_data_version):
     iteration_folders = os.listdir(path_to_data_version)
     avg_energy_per_test = compute_energy_for_tests(path_to_data_version + '/' + iteration_folders[0])
+    nb_validated_iteration_per_test = {}
     for iteration_folder in iteration_folders[1:]:
         current_avg_energy_per_test = compute_energy_for_tests(path_to_data_version + '/' + iteration_folder)
         for test in current_avg_energy_per_test:
@@ -33,6 +29,15 @@ def compute_avg_energy_for_iterations(path_to_data_version):
                 avg_energy_per_test[test] = avg_on_each_field(avg_energy_per_test[test], current_avg_energy_per_test[test])
             else:
                 avg_energy_per_test[test] = avg_on_each_field(current_avg_energy_per_test[test], current_avg_energy_per_test[test])
+            if len(current_avg_energy_per_test[test]) > 0:
+                if test in nb_validated_iteration_per_test:
+                    nb_validated_iteration_per_test[test] = nb_validated_iteration_per_test[test] + 1
+                else:
+                    nb_validated_iteration_per_test[test] = 1
+    
+    for test in avg_energy_per_test:
+        avg_energy_per_test[test]['iteration'] = nb_validated_iteration_per_test[test]
+
     return avg_energy_per_test
 
 def compute_avg_energy_for_commit(path_to_data_commit):
