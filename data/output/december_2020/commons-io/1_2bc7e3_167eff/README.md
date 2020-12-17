@@ -15,10 +15,6 @@ https://github.com/apache/commons-io/commit/167eff
 
 ![](./commons-io.png)
 
-![](./commons-io_delta.png)
-
-![](./commons-io_delta_v.png)
-
 ![](./commons-io_delta_1_v.png)
 
 | TestClassName | Index |

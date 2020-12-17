@@ -10,10 +10,6 @@ https://github.com/apache/commons-io/commit/82b029
 
 ![](./commons-io.png)
 
-![](./commons-io_delta.png)
-
-![](./commons-io_delta_v.png)
-
 ![](./commons-io_delta_1_v.png)
 
 | TestClassName | Index |
