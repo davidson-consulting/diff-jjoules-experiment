@@ -4,9 +4,9 @@
 https://github.com/apache/commons-io/commit/82b029
 
 
-| Index | EnergyV1 | EnergyV2 | DeltaEnergy | DurationV1 | DurationsV2 | DeltaDuration |
-| --- | --- | --- | --- | --- | --- | --- |
-| 0 | 81798448.22120596 | 87884529.77223545 | -6086081.551029488 | 2629787093.9069085 | 2705070827.7852273 | -75283733.87831879 |
+| Index | EnergyV1 | EnergyV2 | DeltaEnergy | DurationV1 | DurationsV2 | DeltaDuration | #Tests |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0 | 81798448.22120596 | 87884529.77223545 | -6086081.551029488 | 2629787093.9069085 | 2705070827.7852273 | -75283733.87831879 | 8 |
 
 ![](./commons-io.png)
 

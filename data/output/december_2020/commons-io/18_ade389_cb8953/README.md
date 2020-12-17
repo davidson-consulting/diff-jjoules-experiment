@@ -4,9 +4,9 @@
 https://github.com/apache/commons-io/commit/cb8953
 
 
-| Index | EnergyV1 | EnergyV2 | DeltaEnergy | DurationV1 | DurationsV2 | DeltaDuration |
-| --- | --- | --- | --- | --- | --- | --- |
-| 0 | 8705996.295461081 | 8225586.045831206 | 480410.2496298747 | 257570514.09869653 | 239522470.71294 | 18048043.385756522 |
+| Index | EnergyV1 | EnergyV2 | DeltaEnergy | DurationV1 | DurationsV2 | DeltaDuration | #Tests |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0 | 8705996.295461081 | 8225586.045831206 | 480410.2496298747 | 257570514.09869653 | 239522470.71294 | 18048043.385756522 | 28 |
 
 ![](./commons-io.png)
 
