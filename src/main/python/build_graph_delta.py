@@ -22,20 +22,29 @@ def get_max(arrayv1, arrayv2):
             current_max = arrayv2[i]
     return current_max
 
-def build_graph(energies_v1, durations_v1, energies_v2, durations_v2, labels, output='graph.png'):
+def build_graph(energies_v1, durations_v1, energies_v2, durations_v2, labels, colors, output='graph.png'):
     df = pd.DataFrame({'Test': labels,
                     'EnergyV1': energies_v1,
                     #'DurationsV1': durations_v1,
                     'EnergyV2': energies_v2,
                     #'DurationsV2': durations_v2
                 }, index=labels)
-    bar_plot = sns.barplot(x="EnergyV1", y="Test", data=df, order=labels, color='red')
+    bar_plot = sns.barplot(x="EnergyV1", y="Test", data=df, order=labels, color=colors[0])
     # bar_plot = sns.barplot(x='DurationsV1', y='Test', data=df, order=labels)
-    bar_plot = sns.barplot(x='EnergyV2', y='Test', data=df, order=labels, color='blue')
+    bar_plot = sns.barplot(x='EnergyV2', y='Test', data=df, order=labels, color=colors[1])
     # bar_plot = sns.barplot(x='DurationsV2', y='Test', data=df, order=labels)
     bar_plot.set(xlabel="Energy in uJ", ylabel="Test", title = "Delta SEC V1-V2")
     plt.tight_layout()
-    plt.savefig(output)
+    plt.savefig(output + '.png')
+    plt.clf()
+
+    bar_plot = sns.barplot(x="Test", y="EnergyV1", data=df, order=labels, color=colors[0])
+    # bar_plot = sns.barplot(x='DurationsV1', y='Test', data=df, order=labels)
+    bar_plot = sns.barplot(y='EnergyV2', x='Test', data=df, order=labels, color=colors[1])
+    # bar_plot = sns.barplot(x='DurationsV2', y='Test', data=df, order=labels)
+    bar_plot.set(ylabel="Energy in uJ", xlabel="Test", title = "Delta SEC V1-V2")
+    plt.tight_layout()
+    plt.savefig(output + '_v.png')
     plt.clf()
 
 def get_test_class(key):
@@ -73,12 +82,20 @@ def build_data_per_class(data_v1, data_v2):
     delta_durations_v2 = []
     durations_v1_values = list(durations_v1.values())
     durations_v2_values = list(durations_v2.values())
+
+    delta_energies_v1_1 = []
+    delta_energies_v2_1 = []
+
     for i in range(0, len(energies_v1)):
         delta_energy = energies_v1_values[i] - energies_v2_values[i]
         if delta_energy < 0:
+            delta_energies_v1_1.append(0)
+            delta_energies_v2_1.append(-delta_energy)
             delta_energies_v1.append(delta_energy)
             delta_energies_v2.append(0)
         else:
+            delta_energies_v2_1.append(0)
+            delta_energies_v1_1.append(-delta_energy)
             delta_energies_v2.append(delta_energy)
             delta_energies_v1.append(0)
         delta_duration = durations_v1_values[i] - durations_v2_values[i]
@@ -88,7 +105,7 @@ def build_data_per_class(data_v1, data_v2):
         else:
             delta_durations_v2.append(delta_duration)
             delta_durations_v1.append(0)
-    return delta_energies_v1, delta_durations_v1, delta_energies_v2, delta_durations_v2, labels
+    return delta_energies_v1, delta_durations_v1, delta_energies_v2, delta_durations_v2, labels, delta_energies_v1_1, delta_energies_v2_1
 
 def get_test_name(key):
     return key.split('-')[1]
@@ -121,7 +138,7 @@ def build_data_per_test(data_v1, data_v2, output_path):
             current_durations_v1.append(durations_v1[test_class_name + '-' + test])
             current_energies_v2.append(energies_v2[test_class_name + '-' + test])
             current_durations_v2.append(durations_v2[test_class_name + '-' + test])
-        build_graph(current_energies_v1, current_durations_v1, current_energies_v2, current_durations_v2, labels, output=output_path + '/' + test_class_name + '-graph_delta.png')
+        build_graph(current_energies_v1, current_durations_v1, current_energies_v2, current_durations_v2, labels, output=output_path + '/' + test_class_name + '-graph_delta')
 
 if __name__ == '__main__':
 
@@ -141,8 +158,9 @@ if __name__ == '__main__':
         data_v2 = read_json(path_to_file  + '/avg_v2.json')
 
         if mode == mode.per_class:
-            energies_v1, durations_v1, energies_v2, durations_v2, labels = build_data_per_class(data_v1, data_v2)
-            build_graph(energies_v1, durations_v1, energies_v2, durations_v2, labels, output=path_to_file + '/'+ project_name +'_delta.png')
+            energies_v1, durations_v1, energies_v2, durations_v2, labels, delta_energies_v1_1, delta_energies_v2_1 = build_data_per_class(data_v1, data_v2)
+            build_graph(energies_v1, durations_v1, energies_v2, durations_v2, labels, colors=['red', 'blue'], output=path_to_file + '/'+ project_name +'_delta')
+            build_graph(delta_energies_v1_1, durations_v1, delta_energies_v2_1, durations_v2, labels, colors=['blue', 'red'], output=path_to_file + '/'+ project_name +'_delta_1')
         elif mode == mode.per_test:
             build_data_per_test(data_v1, data_v2, path_to_file)
         else:

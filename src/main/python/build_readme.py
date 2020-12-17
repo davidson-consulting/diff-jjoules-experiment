@@ -34,7 +34,7 @@ def run_commit(input_file_path, commit_folder):
     print_to_file(construct_row_markdown(['---', '---', '---', '---', '---', '---', '---']), path_to_readme)
     for i in range(0, len(done_test_class_names)):
         row = construct_row_markdown([
-            labels[i], 
+            labels[i],
             str(energies_v1[i]), 
             str(energies_v2[i]), 
             str(energies_v1[i] - energies_v2[i]),
@@ -46,12 +46,31 @@ def run_commit(input_file_path, commit_folder):
 
     print_to_file('\n![](./' + project_name + '.png)\n', path_to_readme)
     print_to_file('![](./' + project_name + '_delta.png)\n', path_to_readme)
+    print_to_file('![](./' + project_name + '_delta_v.png)\n', path_to_readme)
+    print_to_file('![](./' + project_name + '_delta_1_v.png)\n', path_to_readme)
 
     print_to_file(construct_row_markdown(['TestClassName', 'Index']), path_to_readme)
     print_to_file(construct_row_markdown(['---', '---']), path_to_readme)
     for i in range(0, len(done_test_class_names)):
         row = construct_row_markdown([done_test_class_names[i], labels[i]])
         print_to_file(row, path_to_readme)
+    
+    time_file_path = path_to_commit_folder + '/time'
+    with open(time_file_path, 'r') as time_file:
+        time = time_file.readlines()[0].split('\n')[0]
+    time_file_path = path_to_commit_folder + '/time_injection'
+    with open(time_file_path, 'r') as time_file:
+        time_injection = time_file.readlines()[0].split('\n')[0]
+    time_file_path = path_to_commit_folder + '/time_selection'
+    with open(time_file_path, 'r') as time_file:
+        time_selection = time_file.readlines()[0].split('\n')[0]
+
+    print_to_file('\n\n', path_to_readme)
+    print_to_file(construct_row_markdown(['Time Label', 'Time (s)']), path_to_readme)
+    print_to_file(construct_row_markdown(['---', '---']), path_to_readme)
+    print_to_file(construct_row_markdown(['Selection', time_selection]), path_to_readme)
+    print_to_file(construct_row_markdown(['Injection', time_injection]), path_to_readme)
+    print_to_file(construct_row_markdown(['Total', time]), path_to_readme)
 
     test_per_test_classes, energies_v1, durations_v1, energies_v2, durations_v2 = build_data_per_test(data_v1, data_v2)
 

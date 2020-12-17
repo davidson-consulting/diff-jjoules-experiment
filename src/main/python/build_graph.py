@@ -206,7 +206,7 @@ if __name__ == '__main__':
         data_v2 = read_json(path_to_file  + '/avg_v2.json')
 
         if mode == mode.per_class:
-            energies_v1, durations_v1, energies_v2, durations_v2, labels = build_data_per_class(data_v1, data_v2)
+            energies_v1, durations_v1, energies_v2, durations_v2, labels, done_test_class_names = build_data_per_class(data_v1, data_v2)
             build_graph(energies_v1, durations_v1, energies_v2, durations_v2, labels, output=path_to_file + '/'+ project_name +'.png')
         elif mode == mode.per_test:
             build_and_draw_per_test(data_v1, data_v2, path_to_file)
