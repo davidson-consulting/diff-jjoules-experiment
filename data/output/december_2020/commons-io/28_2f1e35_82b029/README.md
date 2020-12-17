@@ -12,9 +12,18 @@ https://github.com/apache/commons-io/commit/82b029
 
 ![](./commons-io_delta.png)
 
+![](./commons-io_delta_v.png)
+
+![](./commons-io_delta_1_v.png)
+
 | TestClassName | Index |
 | --- | --- |
 | org.apache.commons.io.input.ReadAheadInputStreamTest | 0 |
+| Time Label | Time (s) |
+| --- | --- |
+| Selection | 180.98642230033875 |
+| Injection | 18.1212260723114 |
+| Total | 2679.017842531204 |
 ## org.apache.commons.io.input.ReadAheadInputStreamTest
 
 | Test | EnergyV1 | EnergyV2 | DeltaEnergy | DurationV1 | DurationsV2 | DeltaDuration |

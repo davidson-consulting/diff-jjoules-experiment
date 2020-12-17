@@ -12,9 +12,18 @@ https://github.com/apache/commons-io/commit/cb8953
 
 ![](./commons-io_delta.png)
 
+![](./commons-io_delta_v.png)
+
+![](./commons-io_delta_1_v.png)
+
 | TestClassName | Index |
 | --- | --- |
 | org.apache.commons.io.input.CharSequenceInputStreamTest | 0 |
+| Time Label | Time (s) |
+| --- | --- |
+| Selection | 183.52903985977173 |
+| Injection | 17.821444749832153 |
+| Total | 2194.431027173996 |
 ## org.apache.commons.io.input.CharSequenceInputStreamTest
 
 | Test | EnergyV1 | EnergyV2 | DeltaEnergy | DurationV1 | DurationsV2 | DeltaDuration |

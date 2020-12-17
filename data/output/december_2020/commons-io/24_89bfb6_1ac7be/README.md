@@ -19,6 +19,10 @@ https://github.com/apache/commons-io/commit/1ac7be
 
 ![](./commons-io_delta.png)
 
+![](./commons-io_delta_v.png)
+
+![](./commons-io_delta_1_v.png)
+
 | TestClassName | Index |
 | --- | --- |
 | org.apache.commons.io.file.PathUtilsTest | 0 |
@@ -29,6 +33,11 @@ https://github.com/apache/commons-io/commit/1ac7be
 | org.apache.commons.io.file.DirectoryStreamFilterTest | 5 |
 | org.apache.commons.io.FileUtilsDirectoryContainsTestCase | 6 |
 | org.apache.commons.io.IOCaseTestCase | 7 |
+| Time Label | Time (s) |
+| --- | --- |
+| Selection | 179.6017870903015 |
+| Injection | 19.072049140930176 |
+| Total | 3114.3995587825775 |
 ## org.apache.commons.io.file.PathUtilsTest
 
 | Test | EnergyV1 | EnergyV2 | DeltaEnergy | DurationV1 | DurationsV2 | DeltaDuration |

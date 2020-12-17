@@ -16,6 +16,10 @@ https://github.com/apache/commons-io/commit/aafc32
 
 ![](./commons-io_delta.png)
 
+![](./commons-io_delta_v.png)
+
+![](./commons-io_delta_1_v.png)
+
 | TestClassName | Index |
 | --- | --- |
 | org.apache.commons.io.filefilter.DirectoryFileFilterTest | 0 |
@@ -23,6 +27,11 @@ https://github.com/apache/commons-io/commit/aafc32
 | org.apache.commons.io.filefilter.AgeFileFilterTest | 2 |
 | org.apache.commons.io.filefilter.NameFileFilterTest | 3 |
 | org.apache.commons.io.FileUtilsListFilesTestCase | 4 |
+| Time Label | Time (s) |
+| --- | --- |
+| Selection | 174.91481256484985 |
+| Injection | 17.75053334236145 |
+| Total | 2692.328253030777 |
 ## org.apache.commons.io.filefilter.DirectoryFileFilterTest
 
 | Test | EnergyV1 | EnergyV2 | DeltaEnergy | DurationV1 | DurationsV2 | DeltaDuration |

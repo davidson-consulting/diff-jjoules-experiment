@@ -13,10 +13,19 @@ https://github.com/apache/commons-io/commit/540460
 
 ![](./commons-io_delta.png)
 
+![](./commons-io_delta_v.png)
+
+![](./commons-io_delta_1_v.png)
+
 | TestClassName | Index |
 | --- | --- |
 | org.apache.commons.io.FileUtilsTestCase | 0 |
 | org.apache.commons.io.FileUtilsListFilesTestCase | 1 |
+| Time Label | Time (s) |
+| --- | --- |
+| Selection | 175.07302165031433 |
+| Injection | 17.972687005996704 |
+| Total | 2291.1670048236847 |
 ## org.apache.commons.io.FileUtilsTestCase
 
 | Test | EnergyV1 | EnergyV2 | DeltaEnergy | DurationV1 | DurationsV2 | DeltaDuration |

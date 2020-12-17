@@ -19,6 +19,10 @@ https://github.com/apache/commons-io/commit/8ae947
 
 ![](./commons-io_delta.png)
 
+![](./commons-io_delta_v.png)
+
+![](./commons-io_delta_1_v.png)
+
 | TestClassName | Index |
 | --- | --- |
 | org.apache.commons.io.FileUtilsCleanSymlinksTestCase | 0 |
@@ -29,6 +33,11 @@ https://github.com/apache/commons-io/commit/8ae947
 | org.apache.commons.io.FileCleaningTrackerTestCase | 5 |
 | org.apache.commons.io.monitor.FileAlterationObserverTestCase | 6 |
 | org.apache.commons.io.FileCleanerTestCase | 7 |
+| Time Label | Time (s) |
+| --- | --- |
+| Selection | 181.181147813797 |
+| Injection | 18.35735845565796 |
+| Total | 3536.1573956012726 |
 ## org.apache.commons.io.FileUtilsCleanSymlinksTestCase
 
 | Test | EnergyV1 | EnergyV2 | DeltaEnergy | DurationV1 | DurationsV2 | DeltaDuration |

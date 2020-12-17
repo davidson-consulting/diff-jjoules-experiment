@@ -17,6 +17,10 @@ https://github.com/apache/commons-io/commit/167eff
 
 ![](./commons-io_delta.png)
 
+![](./commons-io_delta_v.png)
+
+![](./commons-io_delta_1_v.png)
+
 | TestClassName | Index |
 | --- | --- |
 | org.apache.commons.io.file.PathUtilsDeleteFileTest | 0 |
@@ -25,6 +29,11 @@ https://github.com/apache/commons-io/commit/167eff
 | org.apache.commons.io.file.PathUtilsDeleteTest | 3 |
 | org.apache.commons.io.FileUtilsTestCase | 4 |
 | org.apache.commons.io.monitor.FileAlterationObserverTestCase | 5 |
+| Time Label | Time (s) |
+| --- | --- |
+| Selection | 183.5668432712555 |
+| Injection | 18.8448965549469 |
+| Total | 273.8443660736084 |
 ## org.apache.commons.io.file.PathUtilsDeleteFileTest
 
 | Test | EnergyV1 | EnergyV2 | DeltaEnergy | DurationV1 | DurationsV2 | DeltaDuration |
