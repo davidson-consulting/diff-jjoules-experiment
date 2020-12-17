@@ -28,10 +28,10 @@ def run_commit(input_file_path, commit_folder):
 
     data_v1 = read_json(path_to_commit_folder  + '/avg_v1.json')
     data_v2 = read_json(path_to_commit_folder  + '/avg_v2.json')
-    energies_v1, durations_v1, energies_v2, durations_v2, labels, done_test_class_names = build_data_per_class(data_v1, data_v2)
+    energies_v1, durations_v1, energies_v2, durations_v2, labels, done_test_class_names, counter = build_data_per_class(data_v1, data_v2)
 
-    print_to_file(construct_row_markdown(['Index', 'EnergyV1', 'EnergyV2', 'DeltaEnergy', 'DurationV1', 'DurationsV2', 'DeltaDuration']), path_to_readme)
-    print_to_file(construct_row_markdown(['---', '---', '---', '---', '---', '---', '---']), path_to_readme)
+    print_to_file(construct_row_markdown(['Index', 'EnergyV1', 'EnergyV2', 'DeltaEnergy', 'DurationV1', 'DurationsV2', 'DeltaDuration', '#Tests']), path_to_readme)
+    print_to_file(construct_row_markdown(['---', '---', '---', '---', '---', '---', '---', '---']), path_to_readme)
     for i in range(0, len(done_test_class_names)):
         row = construct_row_markdown([
             labels[i],
@@ -40,7 +40,8 @@ def run_commit(input_file_path, commit_folder):
             str(energies_v1[i] - energies_v2[i]),
             str(durations_v1[i]), 
             str(durations_v2[i]),
-            str(durations_v1[i] - durations_v2[i])
+            str(durations_v1[i] - durations_v2[i]),
+            str(counter[i])
         ])
         print_to_file(row, path_to_readme)
 

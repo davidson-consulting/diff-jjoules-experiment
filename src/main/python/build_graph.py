@@ -132,11 +132,15 @@ def build_data_per_class(data_v1, data_v2):
     durations_v2 = {}
     labels = []
     done_test_class_names = []
+    counter = {}
+    print(len(data_v1))
+    print(len(data_v2))
     for key in data_v1:
         if not key in data_v2:
             continue
         test_class_name = get_test_class(key)
         if not test_class_name in done_test_class_names:
+            counter[test_class_name] = 1
             labels.append(str(len(done_test_class_names)))
             done_test_class_names.append(test_class_name)
             energies_v1[test_class_name] = data_v1[key]['energy']
@@ -144,11 +148,12 @@ def build_data_per_class(data_v1, data_v2):
             energies_v2[test_class_name] = data_v2[key]['energy']
             durations_v2[test_class_name] = data_v2[key]['duration']
         else:
+            counter[test_class_name] = counter[test_class_name] + 1
             energies_v1[test_class_name] = energies_v1[test_class_name] + data_v1[key]['energy']
             durations_v1[test_class_name] = durations_v1[test_class_name] + data_v1[key]['duration']
             energies_v2[test_class_name] = energies_v2[test_class_name] + data_v2[key]['energy']
             durations_v2[test_class_name] = durations_v2[test_class_name] + data_v2[key]['duration']
-    return list(energies_v1.values()), list(durations_v1.values()), list(energies_v2.values()), list(durations_v2.values()), labels, done_test_class_names
+    return list(energies_v1.values()), list(durations_v1.values()), list(energies_v2.values()), list(durations_v2.values()), labels, done_test_class_names, list(counter.values())
 
 def get_test_name(key):
     return key.split('-')[1]

@@ -9,13 +9,18 @@ def get_class_name(json_file):
 
 def compute_energy_for_tests(path_to_folder_iteration):
     compute_energy_for_tests = {}
+    nb = 0
+    nb_skipped = 0
     for json_file in os.listdir(path_to_folder_iteration):
         key = get_class_name(json_file)
         data = get_energy_data(read_json(path_to_folder_iteration + '/' + json_file))
         if len(data) > 0:
             compute_energy_for_tests[key] = data
         else:
-            print(path_to_folder_iteration + '/' + json_file, 'not added')
+            nb_skipped = nb_skipped + 1
+            #print(path_to_folder_iteration + '/' + json_file, 'not added')
+        nb = nb + 1
+    print(path_to_folder_iteration, nb - nb_skipped, nb_skipped, nb)
     return compute_energy_for_tests
 
 def compute_avg_energy_for_iterations(path_to_data_version):
