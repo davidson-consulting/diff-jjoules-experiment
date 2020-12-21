@@ -77,12 +77,12 @@ def run_mvn_clean_test(path):
 BUILD_CLASSPATH_GOAL = 'dependency:build-classpath'
 OPT_OUTPUT_CP_FILE = '-Dmdep.outputFile=classpath'
 
-
 def run_mvn_build_classpath_and_instrument(path_first_version, path_second_version, output_path_file):
     return run_command(
          ' '.join([
             MVN_CMD,
             path_first_version + POM_FILE,
+            MVN_CLEAN_GOAL,
             MVN_LOG_OPT,
             output_path_file,
             MVN_TEST,

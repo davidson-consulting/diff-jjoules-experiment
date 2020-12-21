@@ -52,7 +52,7 @@ def init_repositories(repo_url):
 
 def init_current_paths(commit_sha_v1, commit_sha_v2, cursor_commits, success_output_path, error_output_path):
     current_output_path = success_output_path + '/' + '_'.join([str(cursor_commits), commit_sha_v1[:6], commit_sha_v2[:6]])
-    current_err_output_path = error_output_path + '/' + '_'.join([str(cursor_commits), commit_sha_v1[:6], commit_sha_v2[:6]])
+    current_err_output_path = error_output_path + '/'
     current_output_path_log = current_output_path + '/log'
     current_output_path_time = current_output_path + '/time'
     try:
@@ -90,6 +90,7 @@ def run(nb_iteration, output_path, output_path_log):
         print_to_file('No test could be selected', output_path_log)
         return -1
 
+    run_mvn_clean_test(PATH_V2)
     start_time = time.time()
     code = run_mvn_build_classpath_and_instrument(PATH_V1, PATH_V2, output_path + '/mvn_cp_instr.log')
     elasped_time = time.time() - start_time
