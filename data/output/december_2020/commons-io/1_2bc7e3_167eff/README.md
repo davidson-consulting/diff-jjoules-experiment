@@ -133,6 +133,11 @@ https://github.com/apache/commons-io/commit/167eff
 
 ## Aggregation per test class
 
+
+![](./commons-io.png)
+
+![](./commons-io_delta_1_v.png)
+
 | Index | EnergyV1 | EnergyV2 | DeltaEnergy |
 | --- | --- | --- | --- |
 | 0 | 491387.749861352 | 498699.4167405553 | 7311.666879203345 |
@@ -150,11 +155,6 @@ https://github.com/apache/commons-io/commit/167eff
 | 3 | 22642091.668144546 | 27291977.844813995 | 4649886.176669449 |
 | 4 | 18184872.141432904 | 18513130.07864078 | 328257.93720787764 |
 | 5 | 1098046482.9212298 | 1069859200.780695 | -28187282.140534878 |
-
-![](./commons-io.png)
-
-![](./commons-io_delta_1_v.png)
-
 | Index | TestClassName | #Tests |
 | --- | --- | --- |
 | 0 | org.apache.commons.io.file.PathUtilsDeleteFileTest | 5 |

@@ -161,6 +161,11 @@ https://github.com/apache/commons-io/commit/cb8953
 
 ## Aggregation per test class
 
+
+![](./commons-io.png)
+
+![](./commons-io_delta_1_v.png)
+
 | Index | EnergyV1 | EnergyV2 | DeltaEnergy |
 | --- | --- | --- | --- |
 | 0 | 8705996.295461081 | 8225586.045831206 | -480410.2496298747 |
@@ -168,11 +173,6 @@ https://github.com/apache/commons-io/commit/cb8953
 | Index | DurationV1 | DurationsV2 | DeltaDuration |
 | --- | --- | --- | --- |
 | 0 | 257570514.09869653 | 239522470.71294 | -18048043.385756522 |
-
-![](./commons-io.png)
-
-![](./commons-io_delta_1_v.png)
-
 | Index | TestClassName | #Tests |
 | --- | --- | --- |
 | 0 | org.apache.commons.io.input.CharSequenceInputStreamTest | 28 |

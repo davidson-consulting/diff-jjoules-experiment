@@ -81,6 +81,11 @@ https://github.com/apache/commons-io/commit/aafc32
 
 ## Aggregation per test class
 
+
+![](./commons-io.png)
+
+![](./commons-io_delta_1_v.png)
+
 | Index | EnergyV1 | EnergyV2 | DeltaEnergy |
 | --- | --- | --- | --- |
 | 0 | 1478202.043258743 | 1610775.6883487056 | 132573.64508996275 |
@@ -96,11 +101,6 @@ https://github.com/apache/commons-io/commit/aafc32
 | 2 | 55857079.715943635 | 56202544.520549916 | 345464.8046062812 |
 | 3 | 55443452.0210945 | 55890687.528999984 | 447235.50790548325 |
 | 4 | 18368912.32333353 | 17138969.16271036 | -1229943.1606231704 |
-
-![](./commons-io.png)
-
-![](./commons-io_delta_1_v.png)
-
 | Index | TestClassName | #Tests |
 | --- | --- | --- |
 | 0 | org.apache.commons.io.filefilter.DirectoryFileFilterTest | 1 |

@@ -133,6 +133,11 @@ https://github.com/apache/commons-io/commit/8ae947
 
 ## Aggregation per test class
 
+
+![](./commons-io.png)
+
+![](./commons-io_delta_1_v.png)
+
 | Index | EnergyV1 | EnergyV2 | DeltaEnergy |
 | --- | --- | --- | --- |
 | 0 | 993824.5031531989 | 1095184.7330522835 | 101360.22989908466 |
@@ -154,11 +159,6 @@ https://github.com/apache/commons-io/commit/8ae947
 | 5 | 532935350.8319085 | 534326109.1227176 | 1390758.290809095 |
 | 6 | 1141808196.3657005 | 872309374.1574292 | -269498822.20827127 |
 | 7 | 536963094.8691577 | 532973723.7827536 | -3989371.086404085 |
-
-![](./commons-io.png)
-
-![](./commons-io_delta_1_v.png)
-
 | Index | TestClassName | #Tests |
 | --- | --- | --- |
 | 0 | org.apache.commons.io.FileUtilsCleanSymlinksTestCase | 4 |

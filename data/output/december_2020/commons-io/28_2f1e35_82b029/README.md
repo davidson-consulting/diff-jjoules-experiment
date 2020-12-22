@@ -73,6 +73,11 @@ https://github.com/apache/commons-io/commit/82b029
 
 ## Aggregation per test class
 
+
+![](./commons-io.png)
+
+![](./commons-io_delta_1_v.png)
+
 | Index | EnergyV1 | EnergyV2 | DeltaEnergy |
 | --- | --- | --- | --- |
 | 0 | 81798448.22120596 | 87884529.77223545 | 6086081.551029488 |
@@ -80,11 +85,6 @@ https://github.com/apache/commons-io/commit/82b029
 | Index | DurationV1 | DurationsV2 | DeltaDuration |
 | --- | --- | --- | --- |
 | 0 | 2629787093.9069085 | 2705070827.7852273 | 75283733.87831879 |
-
-![](./commons-io.png)
-
-![](./commons-io_delta_1_v.png)
-
 | Index | TestClassName | #Tests |
 | --- | --- | --- |
 | 0 | org.apache.commons.io.input.ReadAheadInputStreamTest | 8 |

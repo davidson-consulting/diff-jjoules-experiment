@@ -165,6 +165,11 @@ https://github.com/apache/commons-io/commit/1ac7be
 
 ## Aggregation per test class
 
+
+![](./commons-io.png)
+
+![](./commons-io_delta_1_v.png)
+
 | Index | EnergyV1 | EnergyV2 | DeltaEnergy |
 | --- | --- | --- | --- |
 | 0 | 551903.928833029 | 582537.7685818132 | 30633.8397487842 |
@@ -186,11 +191,6 @@ https://github.com/apache/commons-io/commit/1ac7be
 | 5 | 18342488.73580369 | 19031893.304802887 | 689404.5689991973 |
 | 6 | 9353123.124287238 | 12190905.988082385 | 2837782.8637951463 |
 | 7 | 15060386.892577663 | 17823841.216772377 | 2763454.3241947144 |
-
-![](./commons-io.png)
-
-![](./commons-io_delta_1_v.png)
-
 | Index | TestClassName | #Tests |
 | --- | --- | --- |
 | 0 | org.apache.commons.io.file.PathUtilsTest | 1 |

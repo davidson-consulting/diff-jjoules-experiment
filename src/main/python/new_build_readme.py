@@ -20,6 +20,10 @@ def run_for_per_class(data_v1, data_v2, path_to_readme):
     energies_v1, durations_v1, energies_v2, durations_v2, labels, done_test_class_names, counter = build_data_per_class(data_v1, data_v2)
 
     print_to_file('## Aggregation per test class\n', path_to_readme)
+
+    print_to_file('\n![](./' + project_name + '.png)\n', path_to_readme)
+    print_to_file('![](./' + project_name + '_delta_1_v.png)\n', path_to_readme)
+
     print_to_file(construct_row_markdown(['Index', 'EnergyV1', 'EnergyV2', 'DeltaEnergy', ]), path_to_readme)
     print_to_file(construct_row_markdown(['---', '---', '---', '---']), path_to_readme)
     for i in range(0, len(done_test_class_names)):
@@ -42,12 +46,6 @@ def run_for_per_class(data_v1, data_v2, path_to_readme):
             str(durations_v2[i] - durations_v1[i]),
         ])
         print_to_file(row, path_to_readme)
-
-    print_to_file('\n![](./' + project_name + '.png)\n', path_to_readme)
-    #print_to_file('![](./' + project_name + '_delta.png)\n', path_to_readme)
-    #print_to_file('![](./' + project_name + '_delta_v.png)\n', path_to_readme)
-    #print_to_file('![](./' + project_name + '_delta_1.png)\n', path_to_readme)
-    print_to_file('![](./' + project_name + '_delta_1_v.png)\n', path_to_readme)
 
     print_to_file(construct_row_markdown(['Index', 'TestClassName', '#Tests']), path_to_readme)
     print_to_file(construct_row_markdown(['---', '---', '---']), path_to_readme)
