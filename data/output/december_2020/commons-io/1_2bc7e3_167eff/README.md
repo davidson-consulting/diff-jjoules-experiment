@@ -4,7 +4,12 @@
 https://github.com/apache/commons-io/commit/167eff
 
 
+
 ## Delta Energy per test method
+
+![](./commons-io_delta_energy_0_v.png)
+
+![](./commons-io_delta_energy_1_v.png)
 
 
 | ID | EnergyV1 | EnergyV2 | DeltaEnergy |
@@ -32,12 +37,11 @@ https://github.com/apache/commons-io/commit/167eff
 | 20 | 37001.104849729716 | 37593.04807634387 | 591.9432266141521 |
 | 21 | 13137542.45480706 | 12839208.947796445 | -298333.5070106145 |
 
-
-![](./commons-io_delta_energy_0_v.png)
-
-![](./commons-io_delta_energy_1_v.png)
-
 ## Delta Duration per test method
+
+![](./commons-io_delta_duration_0_v.png)
+
+![](./commons-io_delta_duration_1_v.png)
 
 
 | ID | DurationV1 | DurationsV2 | DeltaDuration |
@@ -64,11 +68,6 @@ https://github.com/apache/commons-io/commit/167eff
 | 19 | 877834.8045564841 | 925556.7001915097 | 47721.895635025576 |
 | 20 | 870350.1031069553 | 880236.6360006097 | 9886.532893654425 |
 | 21 | 1098046482.9212298 | 1069859200.780695 | -28187282.140534878 |
-
-
-![](./commons-io_delta_duration_1_v.png)
-
-![](./commons-io_delta_duration_0_v.png)
 
 ## Misc.
 
@@ -131,6 +130,8 @@ https://github.com/apache/commons-io/commit/167eff
 | Injection | 18.8448965549469 |
 | Total | 273.8443660736084 |
 
+
+## Aggregation per test class
 
 | Index | EnergyV1 | EnergyV2 | DeltaEnergy |
 | --- | --- | --- | --- |

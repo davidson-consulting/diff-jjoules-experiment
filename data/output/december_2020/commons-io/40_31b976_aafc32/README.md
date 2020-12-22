@@ -4,7 +4,10 @@
 https://github.com/apache/commons-io/commit/aafc32
 
 
+
 ## Delta Energy per test method
+
+![](./commons-io_delta_energy_0_v.png)
 
 
 | ID | EnergyV1 | EnergyV2 | DeltaEnergy |
@@ -20,10 +23,9 @@ https://github.com/apache/commons-io/commit/aafc32
 | 8 | 36536.00057481181 | 33104.65546292409 | -3431.34511188772 |
 | 9 | 528102.5746007697 | 490846.2235812485 | -37256.351019521186 |
 
-
-![](./commons-io_delta_energy_0_v.png)
-
 ## Delta Duration per test method
+
+![](./commons-io_delta_duration_0_v.png)
 
 
 | ID | DurationV1 | DurationsV2 | DeltaDuration |
@@ -38,9 +40,6 @@ https://github.com/apache/commons-io/commit/aafc32
 | 7 | 54390145.81901464 | 54799308.61105562 | 409162.79204098135 |
 | 8 | 1053306.2020798638 | 1091378.9179443663 | 38072.71586450259 |
 | 9 | 18368912.32333353 | 17138969.16271036 | -1229943.1606231704 |
-
-
-![](./commons-io_delta_duration_0_v.png)
 
 ## Misc.
 
@@ -79,6 +78,8 @@ https://github.com/apache/commons-io/commit/aafc32
 | Injection | 17.75053334236145 |
 | Total | 2692.328253030777 |
 
+
+## Aggregation per test class
 
 | Index | EnergyV1 | EnergyV2 | DeltaEnergy |
 | --- | --- | --- | --- |

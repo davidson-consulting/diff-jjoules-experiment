@@ -4,7 +4,14 @@
 https://github.com/apache/commons-io/commit/1ac7be
 
 
+
 ## Delta Energy per test method
+
+![](./commons-io_delta_energy_0_v.png)
+
+![](./commons-io_delta_energy_1_v.png)
+
+![](./commons-io_delta_energy_2_v.png)
 
 
 | ID | EnergyV1 | EnergyV2 | DeltaEnergy |
@@ -39,14 +46,13 @@ https://github.com/apache/commons-io/commit/1ac7be
 | 27 | 462670.31201053807 | 594967.8752618986 | 132297.56325136055 |
 | 28 | 31876.445110038614 | 31510.461015230034 | -365.98409480858027 |
 
-
-![](./commons-io_delta_energy_2_v.png)
-
-![](./commons-io_delta_energy_0_v.png)
-
-![](./commons-io_delta_energy_1_v.png)
-
 ## Delta Duration per test method
+
+![](./commons-io_delta_duration_0_v.png)
+
+![](./commons-io_delta_duration_1_v.png)
+
+![](./commons-io_delta_duration_2_v.png)
 
 
 | ID | DurationV1 | DurationsV2 | DeltaDuration |
@@ -80,13 +86,6 @@ https://github.com/apache/commons-io/commit/1ac7be
 | 26 | 767915.3056485254 | 1136177.7993984378 | 368262.4937499125 |
 | 27 | 14111896.787287321 | 17093228.33999574 | 2981331.552708421 |
 | 28 | 948490.1052903421 | 730612.8767766369 | -217877.2285137052 |
-
-
-![](./commons-io_delta_duration_1_v.png)
-
-![](./commons-io_delta_duration_2_v.png)
-
-![](./commons-io_delta_duration_0_v.png)
 
 ## Misc.
 
@@ -163,6 +162,8 @@ https://github.com/apache/commons-io/commit/1ac7be
 | Injection | 19.072049140930176 |
 | Total | 3114.3995587825775 |
 
+
+## Aggregation per test class
 
 | Index | EnergyV1 | EnergyV2 | DeltaEnergy |
 | --- | --- | --- | --- |

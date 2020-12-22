@@ -19,6 +19,7 @@ def construct_row_markdown(array_values):
 def run_for_per_class(data_v1, data_v2, path_to_readme):
     energies_v1, durations_v1, energies_v2, durations_v2, labels, done_test_class_names, counter = build_data_per_class(data_v1, data_v2)
 
+    print_to_file('## Aggregation per test class\n', path_to_readme)
     print_to_file(construct_row_markdown(['Index', 'EnergyV1', 'EnergyV2', 'DeltaEnergy', ]), path_to_readme)
     print_to_file(construct_row_markdown(['---', '---', '---', '---']), path_to_readme)
     for i in range(0, len(done_test_class_names)):
@@ -83,27 +84,24 @@ def run_per_test(data_v1, data_v2, path_to_readme, path_to_commit_folder):
             current_iteration_v1.append(valid_iteration_v1[test_class_name + '-' + test])
             current_iteration_v2.append(valid_iteration_v2[test_class_name + '-' + test])
         
-    print_to_file('## Delta Energy per test method\n', path_to_readme)
+    print_to_file('\n## Delta Energy per test method\n', path_to_readme)
+    files = sorted(os.listdir(path_to_commit_folder))
+    for file in files:
+        if file.startswith(project_name + '_delta_energy_') and file.endswith('_v.png'):
+            print_to_file('![](./' + file + ')\n', path_to_readme)
     print_to_file('\n' + construct_row_markdown(['ID', 'EnergyV1', 'EnergyV2', 'DeltaEnergy']), path_to_readme)
     print_to_file(construct_row_markdown(['---', '---', '---', '---']), path_to_readme)
     print_array(current_energies_v1, current_energies_v2, path_to_readme)
-
-    print_to_file('\n', path_to_readme)
-    for file in os.listdir(path_to_commit_folder):
-        if file.startswith(project_name + '_delta_energy_') and file.endswith('_v.png'):
-            print_to_file('![](./' + file + ')\n', path_to_readme)
     
-    print_to_file('## Delta Duration per test method\n', path_to_readme)
+    print_to_file('\n## Delta Duration per test method\n', path_to_readme)
+    for file in files:
+        if file.startswith(project_name + '_delta_duration_') and file.endswith('_v.png'):
+            print_to_file('![](./' + file + ')\n', path_to_readme)
     print_to_file('\n' + construct_row_markdown(['ID', 'DurationV1', 'DurationsV2', 'DeltaDuration']), path_to_readme)
     print_to_file(construct_row_markdown(['---', '---', '---', '---']), path_to_readme)
     print_array(current_durations_v1, current_durations_v2, path_to_readme)
-
-    print_to_file('\n', path_to_readme)
-    for file in os.listdir(path_to_commit_folder):
-        if file.startswith(project_name + '_delta_duration_') and file.endswith('_v.png'):
-            print_to_file('![](./' + file + ')\n', path_to_readme)
-
-    print_to_file('## Misc.\n', path_to_readme)
+    
+    print_to_file('\n## Misc.\n', path_to_readme)
     print_to_file(construct_row_markdown(['ID', 'Test Class', 'Test Method']), path_to_readme)
     print_to_file(construct_row_markdown(['---', '---', '---']), path_to_readme)
     for index in range(0, len(labels)):
@@ -115,7 +113,6 @@ def run_per_test(data_v1, data_v2, path_to_readme, path_to_commit_folder):
                 test_method
         ])
         print_to_file(row, path_to_readme)
-
     print_to_file('\n', path_to_readme)
     print_to_file(construct_row_markdown(['Test', 'IterationV1', 'IterationV2', 'DeltaIteration']), path_to_readme)
     print_to_file(construct_row_markdown(['---', '---', '---', '---']), path_to_readme)
