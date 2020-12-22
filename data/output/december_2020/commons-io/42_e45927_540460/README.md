@@ -4,6 +4,62 @@
 https://github.com/apache/commons-io/commit/540460
 
 
+## Delta Energy per test method
+
+
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy |
+| --- | --- | --- | --- |
+| 0 | 178872.74672482364 | 109763.15620911923 | -69109.5905157044 |
+| 1 | 110641.79159666353 | 84952.54896236729 | -25689.242634296243 |
+| 2 | 150131.38135900637 | 74478.01930165262 | -75653.36205735375 |
+| 3 | 501277.1434375253 | 478717.8853036134 | -22559.258133911935 |
+| 4 | 524106.97158115753 | 502905.5699115395 | -21201.401669618033 |
+
+
+![](./commons-io_delta_energy_0_v.png)
+
+## Delta Duration per test method
+
+
+| ID | DurationV1 | DurationsV2 | DeltaDuration |
+| --- | --- | --- | --- |
+| 0 | 4754103.848838034 | 3680583.689074125 | -1073520.159763909 |
+| 1 | 3371281.1306147203 | 2586415.400313509 | -784865.7303012111 |
+| 2 | 4436843.683973078 | 3088443.1987832626 | -1348400.485189815 |
+| 3 | 14083314.564078184 | 13317070.898900468 | -766243.665177716 |
+| 4 | 16762674.185985073 | 16561647.54805864 | -201026.63792643324 |
+
+
+![](./commons-io_delta_duration_0_v.png)
+
+## Misc.
+
+| ID | Test Class | Test Method |
+| --- | --- | --- |
+| 0 | org.apache.commons.io.FileUtilsTestCase | testIterateFiles |
+| 1 | org.apache.commons.io.FileUtilsTestCase | testListFiles |
+| 2 | org.apache.commons.io.FileUtilsTestCase | testIterateFilesAndDirs |
+| 3 | org.apache.commons.io.FileUtilsTestCase | testListFilesWithDirs |
+| 4 | org.apache.commons.io.FileUtilsListFilesTestCase | testListFiles |
+
+
+| Test | IterationV1 | IterationV2 | DeltaIteration |
+| --- | --- | --- | --- |
+| 0 | 99 | 99 | 0 |
+| 1 | 99 | 99 | 0 |
+| 2 | 99 | 99 | 0 |
+| 3 | 99 | 99 | 0 |
+| 4 | 99 | 99 | 0 |
+
+
+
+| Time Label | Time (s) |
+| --- | --- |
+| Selection | 175.07302165031433 |
+| Injection | 17.972687005996704 |
+| Total | 2291.1670048236847 |
+
+
 | Index | EnergyV1 | EnergyV2 | DeltaEnergy |
 | --- | --- | --- | --- |
 | 0 | 940923.0631180189 | 747911.6097767525 | -193011.45334126637 |
@@ -22,52 +78,3 @@ https://github.com/apache/commons-io/commit/540460
 | --- | --- | --- |
 | 0 | org.apache.commons.io.FileUtilsTestCase | 4 |
 | 1 | org.apache.commons.io.FileUtilsListFilesTestCase | 1 |
-
-
-
-| Time Label | Time (s) |
-| --- | --- |
-| Selection | 175.07302165031433 |
-| Injection | 17.972687005996704 |
-| Total | 2291.1670048236847 |
-## org.apache.commons.io.FileUtilsTestCase
-
-| Test | IterationV1 | IterationV2 | DeltaIteration |
-| --- | --- | --- | --- |
-| org.apache.commons.io.FileUtilsTestCase-testIterateFiles | 99 | 99 | 0 |
-| org.apache.commons.io.FileUtilsTestCase-testListFiles | 99 | 99 | 0 |
-| org.apache.commons.io.FileUtilsTestCase-testIterateFilesAndDirs | 99 | 99 | 0 |
-| org.apache.commons.io.FileUtilsTestCase-testListFilesWithDirs | 99 | 99 | 0 |
-
-| Test | EnergyV1 | EnergyV2 | DeltaEnergy |
-| --- | --- | --- | --- |
-| org.apache.commons.io.FileUtilsTestCase-testIterateFiles | 178872.74672482364 | 109763.15620911923 | -69109.5905157044 |
-| org.apache.commons.io.FileUtilsTestCase-testListFiles | 110641.79159666353 | 84952.54896236729 | -25689.242634296243 |
-| org.apache.commons.io.FileUtilsTestCase-testIterateFilesAndDirs | 150131.38135900637 | 74478.01930165262 | -75653.36205735375 |
-| org.apache.commons.io.FileUtilsTestCase-testListFilesWithDirs | 501277.1434375253 | 478717.8853036134 | -22559.258133911935 |
-
-| Test | DurationV1 | DurationsV2 | DeltaDuration |
-| --- | --- | --- | --- |
-| org.apache.commons.io.FileUtilsTestCase-testIterateFiles | 4754103.848838034 | 3680583.689074125 | -1073520.159763909 |
-| org.apache.commons.io.FileUtilsTestCase-testListFiles | 3371281.1306147203 | 2586415.400313509 | -784865.7303012111 |
-| org.apache.commons.io.FileUtilsTestCase-testIterateFilesAndDirs | 4436843.683973078 | 3088443.1987832626 | -1348400.485189815 |
-| org.apache.commons.io.FileUtilsTestCase-testListFilesWithDirs | 14083314.564078184 | 13317070.898900468 | -766243.665177716 |
-
-![](./org.apache.commons.io.FileUtilsTestCase-graph.png)
-
-## org.apache.commons.io.FileUtilsListFilesTestCase
-
-| Test | IterationV1 | IterationV2 | DeltaIteration |
-| --- | --- | --- | --- |
-| org.apache.commons.io.FileUtilsListFilesTestCase-testListFiles | 99 | 99 | 0 |
-
-| Test | EnergyV1 | EnergyV2 | DeltaEnergy |
-| --- | --- | --- | --- |
-| org.apache.commons.io.FileUtilsListFilesTestCase-testListFiles | 524106.97158115753 | 502905.5699115395 | -21201.401669618033 |
-
-| Test | DurationV1 | DurationsV2 | DeltaDuration |
-| --- | --- | --- | --- |
-| org.apache.commons.io.FileUtilsListFilesTestCase-testListFiles | 16762674.185985073 | 16561647.54805864 | -201026.63792643324 |
-
-![](./org.apache.commons.io.FileUtilsListFilesTestCase-graph.png)
-
