@@ -4,6 +4,7 @@ from utils.run_for_project_args import *
 import csv
 import datetime
 import time
+import os
 
 PREFIX_TMP = '/tmp/'
 FOLDER_PATH_V1 = 'v1'
@@ -11,8 +12,8 @@ FOLDER_PATH_V2 = 'v2'
 PATH_V1 = PREFIX_TMP + FOLDER_PATH_V1
 PATH_V2 = PREFIX_TMP + FOLDER_PATH_V2
 
-def get_tests_to_execute():
-    path = PATH_V1 + '/' + VALUE_TEST_LISTS
+def get_tests_to_execute(output_path):
+    path = output_path + '/' + VALUE_TEST_LISTS
     tests_to_execute = {}
     with open(path, 'r') as csvfile:
         file = csv.reader(csvfile, delimiter=';')
@@ -65,6 +66,15 @@ def init_current_paths(commit_sha_v1, commit_sha_v2, cursor_commits, success_out
         print('pass...')
     return current_output_path, current_err_output_path, current_output_path_log, current_output_path_time
 
+
+def copy_test_list(output_path):
+    for dirName, subdirList, fileList in os.walk(PATH_V1):
+        for file in fileList:
+            if file == VALUE_TEST_LISTS:
+                print('copy', dirName + '/' + VALUE_TEST_LISTS, output_path + '/' + VALUE_TEST_LISTS)
+                copy(dirName + '/' + VALUE_TEST_LISTS, output_path + '/' + VALUE_TEST_LISTS)
+                return
+
 def run(nb_iteration, output_path, output_path_log):
     code = run_mvn_clean_test(PATH_V1)
     if not code == 0:
@@ -84,8 +94,8 @@ def run(nb_iteration, output_path, output_path_log):
         print_to_file('Error(s) while selecting tests with diff-test-selection', output_path_log)
         return -1
 
-    copy(PATH_V1 + '/' + VALUE_TEST_LISTS, output_path + '/' + VALUE_TEST_LISTS)
-    tests_to_execute = get_tests_to_execute()
+    copy_test_list(output_path)
+    tests_to_execute = get_tests_to_execute(output_path)
     if len(tests_to_execute) == 0:
         print_to_file('No test could be selected', output_path_log)
         return -1
@@ -145,6 +155,8 @@ if __name__ == '__main__':
         print('Run for', project_name, commit_sha_v1, cursor_commits, commit_sha_v2, cursor_commits - 1, 'output_path', output_path)
         reset_hard(commit_sha_v1, PATH_V1)
         reset_hard(commit_sha_v2, PATH_V2)
+        delete_module_info_java(PATH_V1)
+        delete_module_info_java(PATH_V2)
         print(cursor_commits, '/', len(commits) - 1)
         print_to_file(str(cursor_commits) + ' / ' + str(len(commits) - 1), current_output_path_log)
 

@@ -2,7 +2,8 @@ import os
 from shutil import copyfile, SameFileError, copytree, rmtree, move
 
 POM_FILE = '/pom.xml'
-JJOULED_POM_FILE = '/pom_jjouled.xml'
+JJOULED_POM_FILE = '/pom.xml'
+# JJOULED_POM_FILE = '/pom_jjouled.xml'
 MVN_CMD = 'mvn -Drat.skip=true -Djacoco.skip=true -Danimal.sniffer.skip=true -f '
 MVN_CLEAN_GOAL = 'clean'
 MVN_TEST = 'test'
@@ -17,6 +18,12 @@ def print_to_file(text, filepath):
 def run_command(command):
     print(command)
     return os.system(command)
+
+def delete_module_info_java(path):
+    for dirName, subdirList, fileList in os.walk(path):
+        for file in fileList:
+            if file == 'module-info.java':
+                delete_file(dirName + '/' + file)
 
 def run_mvn_test(path, tests_to_execute, output_path_file, jjouled=False):
     return run_command(
@@ -90,20 +97,23 @@ def run_mvn_build_classpath_and_instrument(path_first_version, path_second_versi
             BUILD_CLASSPATH_GOAL,
             OPT_OUTPUT_CP_FILE,
             CMD_DIFF_INSTRUMENT,
-            OPT_TEST_LISTS + path_first_version + '/' + VALUE_TEST_LISTS,
+            #OPT_TEST_LISTS + path_first_version + '/' + VALUE_TEST_LISTS,
+            OPT_TEST_LISTS + VALUE_TEST_LISTS,
             OPT_PATH_DIR_SECOND_VERSION + path_second_version,
         ])
     )
 
-JJOULES_REPORT_FOLDER = 'target/jjoules-reports'
+JJOULES_REPORT_FOLDER = 'jjoules-reports'
 
 def move_directory(src_dir, dst):
     move(src_dir, dst)
 
 def copy_jjoules_result(src_dir, dst):
-    src = src_dir + '/' + JJOULES_REPORT_FOLDER
-    print('copy dir', src,  dst)
-    copy_directory(src, dst)
+    for dirName, subdirList, fileList in os.walk(src_dir):
+        for subdir in subdirList:
+            if subdir == JJOULES_REPORT_FOLDER:
+                print('copy dir', dirName + '/' + subdir,  dst)
+                copy_directory(dirName + '/' + subdir, dst)
 
 def copy(src, dst):
     try:
