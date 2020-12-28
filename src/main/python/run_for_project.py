@@ -184,6 +184,11 @@ if __name__ == '__main__':
             current_nb_completed_commits = current_nb_completed_commits + 1
             print_to_file('Success! ' + str(current_nb_completed_commits) + ' / ' + str(nb_commits), current_output_path_log)
             print('Success!', current_nb_completed_commits, '/', nb_commits)
+            print('zipping v1 and v2 result folders... and delete them')
+            zip_folder(current_output_path + '/' + PATH_V1)
+            delete_directory(current_output_path + '/' + PATH_V1)            
+            zip_folder(current_output_path + '/' + PATH_V2)
+            delete_directory(current_output_path + '/' + PATH_V2)
         else:
             move_directory(current_output_path, current_err_output_path)
         cursor_commits = cursor_commits + 1
