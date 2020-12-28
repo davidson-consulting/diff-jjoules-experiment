@@ -114,6 +114,13 @@ def run(nb_iteration, output_path, output_path_log):
 
     return 0
 
+def result_dir_exists_or_error_dir_exists(commit_sha_v1, commit_sha_v2, cursor_commits, success_output_path, error_output_path):
+    print(success_output_path + '/' + '_'.join([str(cursor_commits), commit_sha_v1[:6], commit_sha_v2[:6]]))
+    print(error_output_path + '/' + '_'.join([str(cursor_commits), commit_sha_v1[:6], commit_sha_v2[:6]]))
+    return os.path.isdir(success_output_path + '/' + '_'.join([str(cursor_commits), commit_sha_v1[:6], commit_sha_v2[:6]])) or \
+            os.path.isdir(error_output_path + '/' + '_'.join([str(cursor_commits), commit_sha_v1[:6], commit_sha_v2[:6]]))
+
+
 if __name__ == '__main__':
 
     args = RunArgs().build_parser().parse_args()
@@ -123,6 +130,7 @@ if __name__ == '__main__':
     commits_file_path = args.commits + '/' + project_name + '/input'
     nb_iteration = int(args.iteration)
     nb_commits = int(args.nb_commits)
+    mode = args.mode
 
     commits, repo_url = init_commits(commits_file_path)
     init_repositories(repo_url[:-1])
@@ -137,6 +145,13 @@ if __name__ == '__main__':
     while current_nb_completed_commits < nb_commits and cursor_commits < len(commits) - 1:
         commit_sha_v1 = commits[cursor_commits]
         commit_sha_v2 = commits[cursor_commits - 1]
+
+        if mode == mode.continue_mode:
+            if result_dir_exists_or_error_dir_exists(commit_sha_v1, commit_sha_v2, cursor_commits, success_output_path, error_output_path):
+               print(commit_sha_v1, commit_sha_v2, 'already done! Skipping...')
+               cursor_commits = cursor_commits + 1
+               continue
+
         current_output_path, current_err_output_path, current_output_path_log, current_output_path_time = init_current_paths(
             commit_sha_v1, commit_sha_v2, cursor_commits, success_output_path, error_output_path
         )
@@ -169,6 +184,11 @@ if __name__ == '__main__':
             current_nb_completed_commits = current_nb_completed_commits + 1
             print_to_file('Success! ' + str(current_nb_completed_commits) + ' / ' + str(nb_commits), current_output_path_log)
             print('Success!', current_nb_completed_commits, '/', nb_commits)
+            print('zipping v1 and v2 result folders... and delete them')
+            zip_folder(current_output_path + '/' + PATH_V1)
+            delete_directory(current_output_path + '/' + PATH_V1)            
+            zip_folder(current_output_path + '/' + PATH_V2)
+            delete_directory(current_output_path + '/' + PATH_V2)
         else:
             move_directory(current_output_path, current_err_output_path)
         cursor_commits = cursor_commits + 1

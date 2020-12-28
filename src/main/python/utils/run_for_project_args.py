@@ -1,4 +1,12 @@
 import argparse
+from enum import Enum
+
+class Mode(Enum):
+    restart_mode = 'restart'
+    continue_mode = 'continue'
+
+    def __str__(self):
+        return self.value
 
 class RunArgs():
 
@@ -10,5 +18,6 @@ class RunArgs():
         parser.add_argument('-c', '--commits', type=str, help='Specify the path to the commits file.')
         parser.add_argument('-i', '--iteration', type=str, help='Specify the number of iteration be done', default='2')
         parser.add_argument('-n', '--nb-commits', type=str, help='Specify the number of commits that must completed', default='2')
+        parser.add_argument('mode', default='restart', type=Mode, choices=list(Mode))
 
         return parser

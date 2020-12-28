@@ -187,3 +187,11 @@ def reset_hard(commitsha, git_repo_path):
         ])
     )
     os.chdir(cwd)
+
+def zip_folder(path_to_folder):
+    run_command(' '.join([
+            'zip',
+            path_to_folder + '.zip',
+            path_to_folder
+        ]
+    ))
