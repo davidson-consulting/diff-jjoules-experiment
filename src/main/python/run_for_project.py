@@ -57,6 +57,14 @@ def init_current_paths(commit_sha_v1, commit_sha_v2, cursor_commits, success_out
     current_output_path_log = current_output_path + '/log'
     current_output_path_time = current_output_path + '/time'
     try:
+        delete_directory(current_output_path)
+    except FileExistsError:
+        print('pass...')
+    try:
+        delete_directory(current_err_output_path)
+    except FileExistsError:
+        print('pass...')
+    try:
         mkdir(current_output_path)
     except FileExistsError:
         print('pass...')
@@ -155,6 +163,7 @@ if __name__ == '__main__':
         current_output_path, current_err_output_path, current_output_path_log, current_output_path_time = init_current_paths(
             commit_sha_v1, commit_sha_v2, cursor_commits, success_output_path, error_output_path
         )
+        
         print_to_file(str(datetime.datetime.today()).split()[0], current_output_path_log)
         print_to_file(' '.join([
             'Run for', 
@@ -185,10 +194,10 @@ if __name__ == '__main__':
             print_to_file('Success! ' + str(current_nb_completed_commits) + ' / ' + str(nb_commits), current_output_path_log)
             print('Success!', current_nb_completed_commits, '/', nb_commits)
             print('zipping v1 and v2 result folders... and delete them')
-            zip_folder(current_output_path + '/' + PATH_V1)
-            delete_directory(current_output_path + '/' + PATH_V1)            
-            zip_folder(current_output_path + '/' + PATH_V2)
-            delete_directory(current_output_path + '/' + PATH_V2)
+            zip_folder(current_output_path + '/v1')
+            delete_directory(current_output_path + '/v1')
+            zip_folder(current_output_path + '/v2')
+            delete_directory(current_output_path + '/v2')
         else:
             move_directory(current_output_path, current_err_output_path)
         cursor_commits = cursor_commits + 1
