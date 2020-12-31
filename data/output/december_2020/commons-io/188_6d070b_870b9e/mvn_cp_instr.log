@@ -1,0 +1,328 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< commons-io:commons-io >------------------------
+[INFO] Building Apache Commons IO 2.8.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ commons-io ---
+[INFO] Deleting /tmp/v1/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven-version) @ commons-io ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven-3) @ commons-io ---
+[INFO] 
+[INFO] --- apache-rat-plugin:0.13:check (rat-check) @ commons-io ---
+[INFO] RAT will not execute since it is configured to be skipped via system property 'rat.skip'.
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.2.0:parse-version (parse-version) @ commons-io ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.8:run (javadoc.resources) @ commons-io ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 2 files to /tmp/v1/target/apidocs/META-INF
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.7.0:process (process-resource-bundles) @ commons-io ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ commons-io ---
+[INFO] Executing: /bin/sh -c cd '/tmp/v1' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /tmp/v1
+[INFO] Storing buildNumber: 6d070b521e33fbcffb24862b40a7cbae37b36983 at timestamp: 1609076532090
+[INFO] Storing buildScmBranch: master
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ commons-io ---
+[INFO] Using 'iso-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/src/main/resources
+[INFO] Copying 2 resources to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ commons-io ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 162 source files to /tmp/v1/target/classes
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/input/ClassLoaderObjectInputStream.java: Some input files use or override a deprecated API.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/input/ClassLoaderObjectInputStream.java: Recompile with -Xlint:deprecation for details.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/IOExceptionList.java: /tmp/v1/src/main/java/org/apache/commons/io/IOExceptionList.java uses unchecked or unsafe operations.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/IOExceptionList.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-bundle-plugin:5.1.1:manifest (bundle-manifest) @ commons-io ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ commons-io ---
+[INFO] Using 'iso-8859-1' encoding to copy filtered resources.
+[INFO] Copying 50 resources
+[INFO] Copying 2 resources to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ commons-io ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 160 source files to /tmp/v1/target/test-classes
+[INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.19:check (checkAPIcompatibility) @ commons-io ---
+[INFO] Signature checking is skipped.
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (prepare-agent) @ commons-io ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] argLine set to empty
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ commons-io ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:build-classpath (default-cli) @ commons-io ---
+[INFO] Skipped writing classpath file '/tmp/v1/classpath'.  No changes found.
+[INFO] 
+[INFO] --- diff-jjoules:0.0.1-SNAPSHOT:instrument (default-cli) @ commons-io ---
+[INFO] Running on:
+[INFO] /tmp/v1
+[INFO] /tmp/v2/
+[INFO] Configuration{pathToFirstVersion='/tmp/v1', pathToSecondVersion='/tmp/v2/', pathToTestListAsCSV='/tmp/v1/testsThatExecuteTheChange.csv', classpath=[/home/spino/.m2/repository/org/junit/jupiter/junit-jupiter/5.6.2/junit-jupiter-5.6.2.jar, /home/spino/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar, /home/spino/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar, /home/spino/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar, /home/spino/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar, /home/spino/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar, /home/spino/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar, /home/spino/.m2/repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar, /home/spino/.m2/repository/org/junit-pioneer/junit-pioneer/0.9.0/junit-pioneer-0.9.0.jar, /home/spino/.m2/repository/org/mockito/mockito-core/3.5.2/mockito-core-3.5.2.jar, /home/spino/.m2/repository/net/bytebuddy/byte-buddy/1.10.13/byte-buddy-1.10.13.jar, /home/spino/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.13/byte-buddy-agent-1.10.13.jar, /home/spino/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar, /home/spino/.m2/repository/com/google/jimfs/jimfs/1.1/jimfs-1.1.jar, /home/spino/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar, /home/spino/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar], junit4=false}
+[INFO] org.apache.commons.io.LineIteratorTestCase:[testNextLineOnlyDefaultEncoding, testCloseEarly, testValidEncoding, testThreeLines, testTwoLines, testNextOnly, testZeroLines, testFilteringBufferedReader, testFilteringFileReader, testInvalidEncoding, testNextLineOnlyUtf8Encoding, testOneLines, testNextLineOnlyNullEncoding]
+org.apache.commons.io.IOUtilsCopyTestCase:[testCopy_readerToOutputStream_Encoding_nullEncoding]
+org.apache.commons.io.input.XmlStreamReaderUtilitiesTest:[testCalculateHttpEncoding]
+org.apache.commons.io.input.BoundedInputStreamTest:[testReadArray]
+org.apache.commons.io.output.ProxyWriterTest:[appendChar]
+org.apache.commons.io.filefilter.FileFilterTestCase:[testMagicNumberFileFilterString]
+org.apache.commons.io.FileUtilsTestCase:[testWriteLines_3arg_nullSeparator, testWriteLinesEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines, testWriteLines_3argsWithAppendOptionFalse_ShouldDeletePreviousFileLines, testWriteLines_4arg, testWriteLines_5argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines, testWriteLinesEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines, testWriteLines_4argsWithAppendOptionFalse_ShouldDeletePreviousFileLines, testWriteLines_3argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines, testWriteLines_4argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines, testWriteLines_5argsWithAppendOptionFalse_ShouldDeletePreviousFileLines, testWriteLines_4arg_nullSeparator]
+org.apache.commons.io.output.TeeWriterTest:[testArrayIOExceptionOnWriteCharArray1]
+org.apache.commons.io.output.ByteArrayOutputStreamTestCase:[[1] ByteArrayOutputStream.toBufferedInputStream(InputStream)]
+org.apache.commons.io.input.BoundedReaderTest:[testLineNumberReaderAndFileReaderLastLineEolNo]
+org.apache.commons.io.input.BOMInputStreamTest:[testEmptyBufferWithoutBOM]
+org.apache.commons.io.output.TaggedOutputStreamTest:[testBrokenStream]
+org.apache.commons.io.FileSystemUtilsTestCase:[testGetFreeSpaceWindows_String_EmptyMultiLineResponse]
+org.apache.commons.io.input.TaggedReaderTest:[testEmptyReader]
+org.apache.commons.io.IOUtilsWriteTestCase:[testWriteLines_OutputStream_Encoding_nullEncoding, testWriteLines_OutputStream_nullSeparator, testWriteLines_OutputStream_Encoding, testWriteLines_OutputStream, testWriteLines_OutputStream_Encoding_nullSeparator, testWriteLines_Writer_nullSeparator]
+org.apache.commons.io.input.MessageDigestCalculatingInputStreamTest:[test]
+org.apache.commons.io.output.ProxyCollectionWriterTest:[testArrayIOExceptionOnWriteCharArray1]
+org.apache.commons.io.input.AutoCloseInputStreamTest:[testReadBuffer]
+org.apache.commons.io.input.TailerTest:[testBufferBreak]
+org.apache.commons.io.input.ObservableInputStreamTest:[testDataByteCalled]
+org.apache.commons.io.input.TeeReaderTest:[testReadToCharBuffer]
+org.apache.commons.io.output.DeferredFileOutputStreamTest:[initialBufferSize = 1]
+org.apache.commons.io.output.TaggedWriterTest:[testBrokenWriter]
+org.apache.commons.io.output.FileWriterWithEncodingTest:[constructor_File_encoding_badEncoding]
+org.apache.commons.io.input.CountingInputStreamTest:[testLargeFiles_IO84]
+org.apache.commons.io.FileUtilsCopyToFileTestCase:[testCopyToFile]
+org.apache.commons.io.output.CountingOutputStreamTest:[testLargeFiles_IO84]
+org.apache.commons.io.input.ProxyReaderTest:[testNullCharArray]
+org.apache.commons.io.CopyUtilsTest:[copy_byteArrayToOutputStream]
+org.apache.commons.io.input.CharacterFilterReaderTest:[testReadUsingReader]
+org.apache.commons.io.input.TeeInputStreamTest:[testCloseMainIOException]
+org.apache.commons.io.output.ProxyOutputStreamTest:[testWriteNullBaSucceeds]
+org.apache.commons.io.output.TeeOutputStreamTest:[testIOExceptionOnClose]
+org.apache.commons.io.input.XmlStreamReaderTest:[testRawNoBomIso8859_1]
+org.apache.commons.io.input.SwappedDataInputStreamTest:[testReadBoolean]
+org.apache.commons.io.file.PathUtilsContentEqualsTest:[testFileContentEquals]
+org.apache.commons.io.input.TaggedInputStreamTest:[testBrokenStream]
+[INFO] Instrument version before commit...
+[INFO] Run on /tmp/v1
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit5.JJoulesProcessor
+Processing org.apache.commons.io.file.PathUtilsContentEqualsTest#testFileContentEquals
+Processing org.apache.commons.io.filefilter.FileFilterTestCase#testMagicNumberFileFilterString
+Processing org.apache.commons.io.input.AutoCloseInputStreamTest#testReadBuffer
+Processing org.apache.commons.io.input.BOMInputStreamTest#testEmptyBufferWithoutBOM
+Processing org.apache.commons.io.input.BoundedInputStreamTest#testReadArray
+Processing org.apache.commons.io.input.BoundedReaderTest#testLineNumberReaderAndFileReaderLastLineEolNo
+Processing org.apache.commons.io.input.CharacterFilterReaderTest#testReadUsingReader
+Processing org.apache.commons.io.input.CountingInputStreamTest#testLargeFiles_IO84
+Processing org.apache.commons.io.input.MessageDigestCalculatingInputStreamTest#test
+Processing org.apache.commons.io.input.ObservableInputStreamTest#testDataByteCalled
+Processing org.apache.commons.io.input.ProxyReaderTest#testNullCharArray
+Processing org.apache.commons.io.input.SwappedDataInputStreamTest#testReadBoolean
+Processing org.apache.commons.io.input.TaggedInputStreamTest#testBrokenStream
+Processing org.apache.commons.io.input.TaggedReaderTest#testEmptyReader
+Processing org.apache.commons.io.input.TailerTest#testBufferBreak
+Processing org.apache.commons.io.input.TeeInputStreamTest#testCloseMainIOException
+Processing org.apache.commons.io.input.TeeReaderTest#testReadToCharBuffer
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawNoBomIso8859_1
+Processing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateHttpEncoding
+Processing org.apache.commons.io.output.CountingOutputStreamTest#testLargeFiles_IO84
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_encoding_badEncoding
+Processing org.apache.commons.io.output.ProxyCollectionWriterTest#testArrayIOExceptionOnWriteCharArray1
+Processing org.apache.commons.io.output.ProxyOutputStreamTest#testWriteNullBaSucceeds
+Processing org.apache.commons.io.output.ProxyWriterTest#appendChar
+Processing org.apache.commons.io.output.TaggedOutputStreamTest#testBrokenStream
+Processing org.apache.commons.io.output.TaggedWriterTest#testBrokenWriter
+Processing org.apache.commons.io.output.TeeOutputStreamTest#testIOExceptionOnClose
+Processing org.apache.commons.io.output.TeeWriterTest#testArrayIOExceptionOnWriteCharArray1
+Processing org.apache.commons.io.CopyUtilsTest#copy_byteArrayToOutputStream
+Processing org.apache.commons.io.FileSystemUtilsTestCase#testGetFreeSpaceWindows_String_EmptyMultiLineResponse
+Processing org.apache.commons.io.FileUtilsCopyToFileTestCase#testCopyToFile
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4arg
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4arg_nullSeparator
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_3arg_nullSeparator
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_5argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_5argsWithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4argsWithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLinesEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLinesEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_3argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_3argsWithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToOutputStream_Encoding_nullEncoding
+Processing org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream
+Processing org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_nullSeparator
+Processing org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_Encoding
+Processing org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_Encoding_nullSeparator
+Processing org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_Encoding_nullEncoding
+Processing org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_Writer_nullSeparator
+Processing org.apache.commons.io.LineIteratorTestCase#testZeroLines
+Processing org.apache.commons.io.LineIteratorTestCase#testOneLines
+Processing org.apache.commons.io.LineIteratorTestCase#testTwoLines
+Processing org.apache.commons.io.LineIteratorTestCase#testThreeLines
+Processing org.apache.commons.io.LineIteratorTestCase#testValidEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testInvalidEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyDefaultEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyNullEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyUtf8Encoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextOnly
+Processing org.apache.commons.io.LineIteratorTestCase#testCloseEarly
+Processing org.apache.commons.io.LineIteratorTestCase#testFilteringFileReader
+Processing org.apache.commons.io.LineIteratorTestCase#testFilteringBufferedReader
+[INFO] Printing org.apache.commons.io.CopyUtilsTest to /tmp/v1/src/test/java//org/apache/commons/io/CopyUtilsTest.java
+[INFO] Printing org.apache.commons.io.input.AutoCloseInputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/input/AutoCloseInputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.TeeInputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/input/TeeInputStreamTest.java
+[INFO] Printing org.apache.commons.io.output.FileWriterWithEncodingTest to /tmp/v1/src/test/java//org/apache/commons/io/output/FileWriterWithEncodingTest.java
+[INFO] Printing org.apache.commons.io.input.ObservableInputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/input/ObservableInputStreamTest.java
+[INFO] Printing org.apache.commons.io.output.TeeWriterTest to /tmp/v1/src/test/java//org/apache/commons/io/output/TeeWriterTest.java
+[INFO] Printing org.apache.commons.io.input.MessageDigestCalculatingInputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/input/MessageDigestCalculatingInputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.TaggedReaderTest to /tmp/v1/src/test/java//org/apache/commons/io/input/TaggedReaderTest.java
+[INFO] Printing org.apache.commons.io.output.CountingOutputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/output/CountingOutputStreamTest.java
+[INFO] Printing org.apache.commons.io.output.TaggedWriterTest to /tmp/v1/src/test/java//org/apache/commons/io/output/TaggedWriterTest.java
+[INFO] Printing org.apache.commons.io.input.TeeReaderTest to /tmp/v1/src/test/java//org/apache/commons/io/input/TeeReaderTest.java
+[INFO] Printing org.apache.commons.io.input.BOMInputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/input/BOMInputStreamTest.java
+[INFO] Printing org.apache.commons.io.output.ProxyCollectionWriterTest to /tmp/v1/src/test/java//org/apache/commons/io/output/ProxyCollectionWriterTest.java
+[INFO] Printing org.apache.commons.io.file.PathUtilsContentEqualsTest to /tmp/v1/src/test/java//org/apache/commons/io/file/PathUtilsContentEqualsTest.java
+[INFO] Printing org.apache.commons.io.input.BoundedReaderTest to /tmp/v1/src/test/java//org/apache/commons/io/input/BoundedReaderTest.java
+[INFO] Printing org.apache.commons.io.input.TailerTest to /tmp/v1/src/test/java//org/apache/commons/io/input/TailerTest.java
+[INFO] Printing org.apache.commons.io.IOUtilsCopyTestCase to /tmp/v1/src/test/java//org/apache/commons/io/IOUtilsCopyTestCase.java
+[INFO] Printing org.apache.commons.io.LineIteratorTestCase to /tmp/v1/src/test/java//org/apache/commons/io/LineIteratorTestCase.java
+[INFO] Printing org.apache.commons.io.input.SwappedDataInputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/input/SwappedDataInputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.CharacterFilterReaderTest to /tmp/v1/src/test/java//org/apache/commons/io/input/CharacterFilterReaderTest.java
+[INFO] Printing org.apache.commons.io.FileUtilsCopyToFileTestCase to /tmp/v1/src/test/java//org/apache/commons/io/FileUtilsCopyToFileTestCase.java
+[INFO] Printing org.apache.commons.io.FileSystemUtilsTestCase to /tmp/v1/src/test/java//org/apache/commons/io/FileSystemUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.output.TeeOutputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/output/TeeOutputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.XmlStreamReaderTest to /tmp/v1/src/test/java//org/apache/commons/io/input/XmlStreamReaderTest.java
+[INFO] Printing org.apache.commons.io.input.TaggedInputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/input/TaggedInputStreamTest.java
+[INFO] Printing org.apache.commons.io.FileUtilsTestCase to /tmp/v1/src/test/java//org/apache/commons/io/FileUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.IOUtilsWriteTestCase to /tmp/v1/src/test/java//org/apache/commons/io/IOUtilsWriteTestCase.java
+[INFO] Printing org.apache.commons.io.input.BoundedInputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/input/BoundedInputStreamTest.java
+[INFO] Printing org.apache.commons.io.output.ProxyWriterTest to /tmp/v1/src/test/java//org/apache/commons/io/output/ProxyWriterTest.java
+[INFO] Printing org.apache.commons.io.output.TaggedOutputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/output/TaggedOutputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.CountingInputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/input/CountingInputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.ProxyReaderTest to /tmp/v1/src/test/java//org/apache/commons/io/input/ProxyReaderTest.java
+[INFO] Printing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest to /tmp/v1/src/test/java//org/apache/commons/io/input/XmlStreamReaderUtilitiesTest.java
+[INFO] Printing org.apache.commons.io.output.ProxyOutputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/output/ProxyOutputStreamTest.java
+[INFO] Printing org.apache.commons.io.filefilter.FileFilterTestCase to /tmp/v1/src/test/java//org/apache/commons/io/filefilter/FileFilterTestCase.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v1/pom.xml
+[INFO] Output new POM file in /tmp/v1/pom.xml
+[INFO] Instrument version after commit...
+[INFO] Run on /tmp/v2/
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit5.JJoulesProcessor
+Processing org.apache.commons.io.file.PathUtilsContentEqualsTest#testFileContentEquals
+Processing org.apache.commons.io.filefilter.FileFilterTestCase#testMagicNumberFileFilterString
+Processing org.apache.commons.io.input.AutoCloseInputStreamTest#testReadBuffer
+Processing org.apache.commons.io.input.BOMInputStreamTest#testEmptyBufferWithoutBOM
+Processing org.apache.commons.io.input.BoundedInputStreamTest#testReadArray
+Processing org.apache.commons.io.input.BoundedReaderTest#testLineNumberReaderAndFileReaderLastLineEolNo
+Processing org.apache.commons.io.input.CharacterFilterReaderTest#testReadUsingReader
+Processing org.apache.commons.io.input.CountingInputStreamTest#testLargeFiles_IO84
+Processing org.apache.commons.io.input.MessageDigestCalculatingInputStreamTest#test
+Processing org.apache.commons.io.input.ObservableInputStreamTest#testDataByteCalled
+Processing org.apache.commons.io.input.ProxyReaderTest#testNullCharArray
+Processing org.apache.commons.io.input.SwappedDataInputStreamTest#testReadBoolean
+Processing org.apache.commons.io.input.TaggedInputStreamTest#testBrokenStream
+Processing org.apache.commons.io.input.TaggedReaderTest#testEmptyReader
+Processing org.apache.commons.io.input.TailerTest#testBufferBreak
+Processing org.apache.commons.io.input.TeeInputStreamTest#testCloseMainIOException
+Processing org.apache.commons.io.input.TeeReaderTest#testReadToCharBuffer
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawNoBomIso8859_1
+Processing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateHttpEncoding
+Processing org.apache.commons.io.output.CountingOutputStreamTest#testLargeFiles_IO84
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_encoding_badEncoding
+Processing org.apache.commons.io.output.ProxyCollectionWriterTest#testArrayIOExceptionOnWriteCharArray1
+Processing org.apache.commons.io.output.ProxyOutputStreamTest#testWriteNullBaSucceeds
+Processing org.apache.commons.io.output.ProxyWriterTest#appendChar
+Processing org.apache.commons.io.output.TaggedOutputStreamTest#testBrokenStream
+Processing org.apache.commons.io.output.TaggedWriterTest#testBrokenWriter
+Processing org.apache.commons.io.output.TeeOutputStreamTest#testIOExceptionOnClose
+Processing org.apache.commons.io.output.TeeWriterTest#testArrayIOExceptionOnWriteCharArray1
+Processing org.apache.commons.io.CopyUtilsTest#copy_byteArrayToOutputStream
+Processing org.apache.commons.io.FileSystemUtilsTestCase#testGetFreeSpaceWindows_String_EmptyMultiLineResponse
+Processing org.apache.commons.io.FileUtilsCopyToFileTestCase#testCopyToFile
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4arg
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4arg_nullSeparator
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_3arg_nullSeparator
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_5argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_5argsWithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4argsWithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLinesEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLinesEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_3argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_3argsWithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.IOUtilsCopyTestCase#testCopy_readerToOutputStream_Encoding_nullEncoding
+Processing org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream
+Processing org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_nullSeparator
+Processing org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_Encoding
+Processing org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_Encoding_nullSeparator
+Processing org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_OutputStream_Encoding_nullEncoding
+Processing org.apache.commons.io.IOUtilsWriteTestCase#testWriteLines_Writer_nullSeparator
+Processing org.apache.commons.io.LineIteratorTestCase#testZeroLines
+Processing org.apache.commons.io.LineIteratorTestCase#testOneLines
+Processing org.apache.commons.io.LineIteratorTestCase#testTwoLines
+Processing org.apache.commons.io.LineIteratorTestCase#testThreeLines
+Processing org.apache.commons.io.LineIteratorTestCase#testValidEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testInvalidEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyDefaultEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyNullEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyUtf8Encoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextOnly
+Processing org.apache.commons.io.LineIteratorTestCase#testCloseEarly
+Processing org.apache.commons.io.LineIteratorTestCase#testFilteringFileReader
+Processing org.apache.commons.io.LineIteratorTestCase#testFilteringBufferedReader
+[INFO] Printing org.apache.commons.io.CopyUtilsTest to /tmp/v2//src/test/java//org/apache/commons/io/CopyUtilsTest.java
+[INFO] Printing org.apache.commons.io.input.AutoCloseInputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/input/AutoCloseInputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.TeeInputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/input/TeeInputStreamTest.java
+[INFO] Printing org.apache.commons.io.output.FileWriterWithEncodingTest to /tmp/v2//src/test/java//org/apache/commons/io/output/FileWriterWithEncodingTest.java
+[INFO] Printing org.apache.commons.io.input.ObservableInputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/input/ObservableInputStreamTest.java
+[INFO] Printing org.apache.commons.io.output.TeeWriterTest to /tmp/v2//src/test/java//org/apache/commons/io/output/TeeWriterTest.java
+[INFO] Printing org.apache.commons.io.input.MessageDigestCalculatingInputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/input/MessageDigestCalculatingInputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.TaggedReaderTest to /tmp/v2//src/test/java//org/apache/commons/io/input/TaggedReaderTest.java
+[INFO] Printing org.apache.commons.io.output.CountingOutputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/output/CountingOutputStreamTest.java
+[INFO] Printing org.apache.commons.io.output.TaggedWriterTest to /tmp/v2//src/test/java//org/apache/commons/io/output/TaggedWriterTest.java
+[INFO] Printing org.apache.commons.io.input.TeeReaderTest to /tmp/v2//src/test/java//org/apache/commons/io/input/TeeReaderTest.java
+[INFO] Printing org.apache.commons.io.input.BOMInputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/input/BOMInputStreamTest.java
+[INFO] Printing org.apache.commons.io.output.ProxyCollectionWriterTest to /tmp/v2//src/test/java//org/apache/commons/io/output/ProxyCollectionWriterTest.java
+[INFO] Printing org.apache.commons.io.file.PathUtilsContentEqualsTest to /tmp/v2//src/test/java//org/apache/commons/io/file/PathUtilsContentEqualsTest.java
+[INFO] Printing org.apache.commons.io.input.BoundedReaderTest to /tmp/v2//src/test/java//org/apache/commons/io/input/BoundedReaderTest.java
+[INFO] Printing org.apache.commons.io.input.TailerTest to /tmp/v2//src/test/java//org/apache/commons/io/input/TailerTest.java
+[INFO] Printing org.apache.commons.io.IOUtilsCopyTestCase to /tmp/v2//src/test/java//org/apache/commons/io/IOUtilsCopyTestCase.java
+[INFO] Printing org.apache.commons.io.LineIteratorTestCase to /tmp/v2//src/test/java//org/apache/commons/io/LineIteratorTestCase.java
+[INFO] Printing org.apache.commons.io.LineIteratorTestCase to /tmp/v2//src/test/java//org/apache/commons/io/LineIteratorTestCase.java
+[INFO] Printing org.apache.commons.io.input.SwappedDataInputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/input/SwappedDataInputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.CharacterFilterReaderTest to /tmp/v2//src/test/java//org/apache/commons/io/input/CharacterFilterReaderTest.java
+[INFO] Printing org.apache.commons.io.FileUtilsCopyToFileTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsCopyToFileTestCase.java
+[INFO] Printing org.apache.commons.io.FileSystemUtilsTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileSystemUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.output.TeeOutputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/output/TeeOutputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.XmlStreamReaderTest to /tmp/v2//src/test/java//org/apache/commons/io/input/XmlStreamReaderTest.java
+[INFO] Printing org.apache.commons.io.input.TaggedInputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/input/TaggedInputStreamTest.java
+[INFO] Printing org.apache.commons.io.FileUtilsTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.IOUtilsWriteTestCase to /tmp/v2//src/test/java//org/apache/commons/io/IOUtilsWriteTestCase.java
+[INFO] Printing org.apache.commons.io.FileUtilsTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.IOUtilsWriteTestCase to /tmp/v2//src/test/java//org/apache/commons/io/IOUtilsWriteTestCase.java
+[INFO] Printing org.apache.commons.io.input.BoundedInputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/input/BoundedInputStreamTest.java
+[INFO] Printing org.apache.commons.io.output.ProxyWriterTest to /tmp/v2//src/test/java//org/apache/commons/io/output/ProxyWriterTest.java
+[INFO] Printing org.apache.commons.io.output.TaggedOutputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/output/TaggedOutputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.CountingInputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/input/CountingInputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.ProxyReaderTest to /tmp/v2//src/test/java//org/apache/commons/io/input/ProxyReaderTest.java
+[INFO] Printing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest to /tmp/v2//src/test/java//org/apache/commons/io/input/XmlStreamReaderUtilitiesTest.java
+[INFO] Printing org.apache.commons.io.output.ProxyOutputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/output/ProxyOutputStreamTest.java
+[INFO] Printing org.apache.commons.io.filefilter.FileFilterTestCase to /tmp/v2//src/test/java//org/apache/commons/io/filefilter/FileFilterTestCase.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v2//pom.xml
+[INFO] Output new POM file in /tmp/v2//pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19.628 s
+[INFO] Finished at: 2020-12-27T14:42:29+01:00
+[INFO] ------------------------------------------------------------------------

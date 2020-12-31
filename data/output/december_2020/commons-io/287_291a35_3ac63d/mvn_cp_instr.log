@@ -1,0 +1,221 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< commons-io:commons-io >------------------------
+[INFO] Building Apache Commons IO 2.8.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ commons-io ---
+[INFO] Deleting /tmp/v1/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven-version) @ commons-io ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven-3) @ commons-io ---
+[INFO] 
+[INFO] --- apache-rat-plugin:0.13:check (rat-check) @ commons-io ---
+[INFO] RAT will not execute since it is configured to be skipped via system property 'rat.skip'.
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.2.0:parse-version (parse-version) @ commons-io ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.8:run (javadoc.resources) @ commons-io ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 2 files to /tmp/v1/target/apidocs/META-INF
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.7.0:process (process-resource-bundles) @ commons-io ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ commons-io ---
+[INFO] Executing: /bin/sh -c cd '/tmp/v1' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /tmp/v1
+[INFO] Storing buildNumber: 291a35ef8be015be252664e2cbde0af741cd82f1 at timestamp: 1609155493576
+[INFO] Storing buildScmBranch: master
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ commons-io ---
+[INFO] Using 'iso-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/src/main/resources
+[INFO] Copying 2 resources to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ commons-io ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 160 source files to /tmp/v1/target/classes
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/input/ClassLoaderObjectInputStream.java: Some input files use or override a deprecated API.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/input/ClassLoaderObjectInputStream.java: Recompile with -Xlint:deprecation for details.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/IOExceptionList.java: /tmp/v1/src/main/java/org/apache/commons/io/IOExceptionList.java uses unchecked or unsafe operations.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/IOExceptionList.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-bundle-plugin:5.1.1:manifest (bundle-manifest) @ commons-io ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ commons-io ---
+[INFO] Using 'iso-8859-1' encoding to copy filtered resources.
+[INFO] Copying 45 resources
+[INFO] Copying 2 resources to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ commons-io ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 159 source files to /tmp/v1/target/test-classes
+[INFO] /tmp/v1/src/test/java/org/apache/commons/io/LineIteratorTestCase.java: Some input files use or override a deprecated API.
+[INFO] /tmp/v1/src/test/java/org/apache/commons/io/LineIteratorTestCase.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.19:check (checkAPIcompatibility) @ commons-io ---
+[INFO] Signature checking is skipped.
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (prepare-agent) @ commons-io ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] argLine set to empty
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ commons-io ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:build-classpath (default-cli) @ commons-io ---
+[INFO] Skipped writing classpath file '/tmp/v1/classpath'.  No changes found.
+[INFO] 
+[INFO] --- diff-jjoules:0.0.1-SNAPSHOT:instrument (default-cli) @ commons-io ---
+[INFO] Running on:
+[INFO] /tmp/v1
+[INFO] /tmp/v2/
+[INFO] Configuration{pathToFirstVersion='/tmp/v1', pathToSecondVersion='/tmp/v2/', pathToTestListAsCSV='/tmp/v1/testsThatExecuteTheChange.csv', classpath=[/home/spino/.m2/repository/org/junit/jupiter/junit-jupiter/5.6.2/junit-jupiter-5.6.2.jar, /home/spino/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar, /home/spino/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar, /home/spino/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar, /home/spino/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar, /home/spino/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar, /home/spino/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar, /home/spino/.m2/repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar, /home/spino/.m2/repository/org/junit-pioneer/junit-pioneer/0.8.0/junit-pioneer-0.8.0.jar, /home/spino/.m2/repository/org/mockito/mockito-core/3.4.6/mockito-core-3.4.6.jar, /home/spino/.m2/repository/net/bytebuddy/byte-buddy/1.10.13/byte-buddy-1.10.13.jar, /home/spino/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.13/byte-buddy-agent-1.10.13.jar, /home/spino/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar, /home/spino/.m2/repository/com/google/jimfs/jimfs/1.1/jimfs-1.1.jar, /home/spino/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar, /home/spino/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar], junit4=false}
+[INFO] org.apache.commons.io.output.FileWriterWithEncodingTest:[constructor_File_encoding_badEncoding, constructor_File_directory]
+org.apache.commons.io.file.PathUtilsDeleteTest:[testDeleteDirectory1FileSize0, testDeleteDirectory1FileSize1]
+org.apache.commons.io.LineIteratorTestCase:[testNextLineOnlyDefaultEncoding, testCloseEarly, testValidEncoding, testThreeLines, testNextOnly, testTwoLines, testZeroLines, testFilteringBufferedReader, testFilteringFileReader, testNextLineOnlyUtf8Encoding, testNextWithException, testOneLines, testNextLineOnlyNullEncoding]
+org.apache.commons.io.IOUtilsTestCase:[testCloseMulti, testClose]
+org.apache.commons.io.file.CopyDirectoryVisitorTest:[[2] 0 files, 0 directories, 0 bytes, [1] 0 files, 0 directories, 0 bytes]
+org.apache.commons.io.FileUtilsCopyDirectoryToDirectoryTestCase:[copyFileAndCheckAcl]
+org.apache.commons.io.file.PathUtilsCleanDirectoryTest:[testCleanDirectory2FileSize2, testCleanDirectory1FileSize1, testCleanDirectory1FileSize0]
+org.apache.commons.io.FileUtilsTestCase:[testCopyFile2WithoutFileDatePreservation, testCopyDirectoryFiltered, testCopyDirectoryToChild, testCopyFile1, testIncorrectOutputSize, testCopyFile2, testCopyDirectoryPreserveDates, testMoveFile_CopyDelete_Failed, testCopyFile1ToDir, testCopyDirectoryToDirectory_NonExistingDest, testCopyToDirectoryWithIterable, testMoveDirectory_CopyDelete, testCopyDirectoryToNonExistingDest, testCopyDirectoryToGrandChild, testMoveFile_CopyDelete, testCopyToDirectoryWithFile, testCopyToSelf, testCopyToDirectoryWithDirectory, testCopyDirectoryToExistingDest, testCopyFile2ToDir]
+org.apache.commons.io.file.DeletingPathVisitorTest:[[2] 0 files, 0 directories, 0 bytes, [1] 0 files, 0 directories, 0 bytes]
+org.apache.commons.io.file.CleaningPathVisitorTest:[[2] 0 files, 0 directories, 0 bytes, [1] 0 files, 0 directories, 0 bytes]
+org.apache.commons.io.file.PathUtilsDeleteDirectoryTest:[testDeleteDirectory2FileSize2, testDeleteDirectory1FileSize0, testDeleteDirectory1FileSize1]
+[INFO] Instrument version before commit...
+[INFO] Run on /tmp/v1
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit5.JJoulesProcessor
+Processing org.apache.commons.io.file.PathUtilsCleanDirectoryTest#testCleanDirectory1FileSize0
+Processing org.apache.commons.io.file.PathUtilsCleanDirectoryTest#testCleanDirectory1FileSize1
+Processing org.apache.commons.io.file.PathUtilsCleanDirectoryTest#testCleanDirectory2FileSize2
+Processing org.apache.commons.io.file.PathUtilsDeleteDirectoryTest#testDeleteDirectory1FileSize0
+Processing org.apache.commons.io.file.PathUtilsDeleteDirectoryTest#testDeleteDirectory1FileSize1
+Processing org.apache.commons.io.file.PathUtilsDeleteDirectoryTest#testDeleteDirectory2FileSize2
+Processing org.apache.commons.io.file.PathUtilsDeleteTest#testDeleteDirectory1FileSize0
+Processing org.apache.commons.io.file.PathUtilsDeleteTest#testDeleteDirectory1FileSize1
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_encoding_badEncoding
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_directory
+Processing org.apache.commons.io.FileUtilsCopyDirectoryToDirectoryTestCase#copyFileAndCheckAcl
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile1
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile2
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyToSelf
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile2WithoutFileDatePreservation
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToDirectory_NonExistingDest
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToNonExistingDest
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToExistingDest
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryFiltered
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryPreserveDates
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToChild
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToGrandChild
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyToDirectoryWithFile
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyToDirectoryWithDirectory
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyToDirectoryWithIterable
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile1ToDir
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile2ToDir
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveFile_CopyDelete
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveFile_CopyDelete_Failed
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveDirectory_CopyDelete
+Processing org.apache.commons.io.FileUtilsTestCase#testIncorrectOutputSize
+Processing org.apache.commons.io.IOUtilsTestCase#testClose
+Processing org.apache.commons.io.IOUtilsTestCase#testCloseMulti
+Processing org.apache.commons.io.LineIteratorTestCase#testZeroLines
+Processing org.apache.commons.io.LineIteratorTestCase#testOneLines
+Processing org.apache.commons.io.LineIteratorTestCase#testTwoLines
+Processing org.apache.commons.io.LineIteratorTestCase#testThreeLines
+Processing org.apache.commons.io.LineIteratorTestCase#testValidEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyDefaultEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyNullEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyUtf8Encoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextOnly
+Processing org.apache.commons.io.LineIteratorTestCase#testNextWithException
+Processing org.apache.commons.io.LineIteratorTestCase#testCloseEarly
+Processing org.apache.commons.io.LineIteratorTestCase#testFilteringFileReader
+Processing org.apache.commons.io.LineIteratorTestCase#testFilteringBufferedReader
+[INFO] Printing org.apache.commons.io.output.FileWriterWithEncodingTest to /tmp/v1/src/test/java//org/apache/commons/io/output/FileWriterWithEncodingTest.java
+[INFO] Printing org.apache.commons.io.file.PathUtilsDeleteDirectoryTest to /tmp/v1/src/test/java//org/apache/commons/io/file/PathUtilsDeleteDirectoryTest.java
+[INFO] Printing org.apache.commons.io.FileUtilsCopyDirectoryToDirectoryTestCase to /tmp/v1/src/test/java//org/apache/commons/io/FileUtilsCopyDirectoryToDirectoryTestCase.java
+[INFO] Printing org.apache.commons.io.LineIteratorTestCase to /tmp/v1/src/test/java//org/apache/commons/io/LineIteratorTestCase.java
+[INFO] Printing org.apache.commons.io.file.PathUtilsDeleteTest to /tmp/v1/src/test/java//org/apache/commons/io/file/PathUtilsDeleteTest.java
+[INFO] Printing org.apache.commons.io.file.PathUtilsCleanDirectoryTest to /tmp/v1/src/test/java//org/apache/commons/io/file/PathUtilsCleanDirectoryTest.java
+[INFO] Printing org.apache.commons.io.FileUtilsTestCase to /tmp/v1/src/test/java//org/apache/commons/io/FileUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.IOUtilsTestCase to /tmp/v1/src/test/java//org/apache/commons/io/IOUtilsTestCase.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v1/pom.xml
+[INFO] Output new POM file in /tmp/v1/pom.xml
+[INFO] Instrument version after commit...
+[INFO] Run on /tmp/v2/
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit5.JJoulesProcessor
+Processing org.apache.commons.io.file.PathUtilsCleanDirectoryTest#testCleanDirectory1FileSize0
+Processing org.apache.commons.io.file.PathUtilsCleanDirectoryTest#testCleanDirectory1FileSize1
+Processing org.apache.commons.io.file.PathUtilsCleanDirectoryTest#testCleanDirectory2FileSize2
+Processing org.apache.commons.io.file.PathUtilsDeleteDirectoryTest#testDeleteDirectory1FileSize0
+Processing org.apache.commons.io.file.PathUtilsDeleteDirectoryTest#testDeleteDirectory1FileSize1
+Processing org.apache.commons.io.file.PathUtilsDeleteDirectoryTest#testDeleteDirectory2FileSize2
+Processing org.apache.commons.io.file.PathUtilsDeleteTest#testDeleteDirectory1FileSize0
+Processing org.apache.commons.io.file.PathUtilsDeleteTest#testDeleteDirectory1FileSize1
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_encoding_badEncoding
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_directory
+Processing org.apache.commons.io.FileUtilsCopyDirectoryToDirectoryTestCase#copyFileAndCheckAcl
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile1
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile2
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyToSelf
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile2WithoutFileDatePreservation
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToDirectory_NonExistingDest
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToNonExistingDest
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToExistingDest
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryFiltered
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryPreserveDates
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToChild
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToGrandChild
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyToDirectoryWithFile
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyToDirectoryWithDirectory
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyToDirectoryWithIterable
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile1ToDir
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile2ToDir
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveFile_CopyDelete
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveFile_CopyDelete_Failed
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveDirectory_CopyDelete
+Processing org.apache.commons.io.FileUtilsTestCase#testIncorrectOutputSize
+Processing org.apache.commons.io.IOUtilsTestCase#testClose
+Processing org.apache.commons.io.LineIteratorTestCase#testZeroLines
+Processing org.apache.commons.io.LineIteratorTestCase#testOneLines
+Processing org.apache.commons.io.LineIteratorTestCase#testTwoLines
+Processing org.apache.commons.io.LineIteratorTestCase#testThreeLines
+Processing org.apache.commons.io.LineIteratorTestCase#testValidEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyDefaultEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyNullEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyUtf8Encoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextOnly
+Processing org.apache.commons.io.LineIteratorTestCase#testNextWithException
+Processing org.apache.commons.io.LineIteratorTestCase#testCloseEarly
+Processing org.apache.commons.io.LineIteratorTestCase#testFilteringFileReader
+Processing org.apache.commons.io.LineIteratorTestCase#testFilteringBufferedReader
+[INFO] Printing org.apache.commons.io.output.FileWriterWithEncodingTest to /tmp/v2//src/test/java//org/apache/commons/io/output/FileWriterWithEncodingTest.java
+[INFO] Printing org.apache.commons.io.output.FileWriterWithEncodingTest to /tmp/v2//src/test/java//org/apache/commons/io/output/FileWriterWithEncodingTest.java
+[INFO] Printing org.apache.commons.io.file.PathUtilsDeleteDirectoryTest to /tmp/v2//src/test/java//org/apache/commons/io/file/PathUtilsDeleteDirectoryTest.java
+[INFO] Printing org.apache.commons.io.file.PathUtilsDeleteDirectoryTest to /tmp/v2//src/test/java//org/apache/commons/io/file/PathUtilsDeleteDirectoryTest.java
+[INFO] Printing org.apache.commons.io.FileUtilsCopyDirectoryToDirectoryTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsCopyDirectoryToDirectoryTestCase.java
+[INFO] Printing org.apache.commons.io.file.PathUtilsDeleteTest to /tmp/v2//src/test/java//org/apache/commons/io/file/PathUtilsDeleteTest.java
+[INFO] Printing org.apache.commons.io.file.PathUtilsDeleteTest to /tmp/v2//src/test/java//org/apache/commons/io/file/PathUtilsDeleteTest.java
+[INFO] Printing org.apache.commons.io.file.PathUtilsCleanDirectoryTest to /tmp/v2//src/test/java//org/apache/commons/io/file/PathUtilsCleanDirectoryTest.java
+[INFO] Printing org.apache.commons.io.FileUtilsTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.IOUtilsTestCase to /tmp/v2//src/test/java//org/apache/commons/io/IOUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.file.PathUtilsCleanDirectoryTest to /tmp/v2//src/test/java//org/apache/commons/io/file/PathUtilsCleanDirectoryTest.java
+[INFO] Printing org.apache.commons.io.FileUtilsTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.IOUtilsTestCase to /tmp/v2//src/test/java//org/apache/commons/io/IOUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.LineIteratorTestCase to /tmp/v2//src/test/java//org/apache/commons/io/LineIteratorTestCase.java
+[INFO] Printing org.apache.commons.io.LineIteratorTestCase to /tmp/v2//src/test/java//org/apache/commons/io/LineIteratorTestCase.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v2//pom.xml
+[INFO] Output new POM file in /tmp/v2//pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19.967 s
+[INFO] Finished at: 2020-12-28T12:38:31+01:00
+[INFO] ------------------------------------------------------------------------

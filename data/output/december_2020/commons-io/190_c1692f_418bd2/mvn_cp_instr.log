@@ -1,0 +1,189 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< commons-io:commons-io >------------------------
+[INFO] Building Apache Commons IO 2.8.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ commons-io ---
+[INFO] Deleting /tmp/v1/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven-version) @ commons-io ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven-3) @ commons-io ---
+[INFO] 
+[INFO] --- apache-rat-plugin:0.13:check (rat-check) @ commons-io ---
+[INFO] RAT will not execute since it is configured to be skipped via system property 'rat.skip'.
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.2.0:parse-version (parse-version) @ commons-io ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.8:run (javadoc.resources) @ commons-io ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 2 files to /tmp/v1/target/apidocs/META-INF
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.7.0:process (process-resource-bundles) @ commons-io ---
+[INFO] Skipping remote resources execution.
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ commons-io ---
+[INFO] Executing: /bin/sh -c cd '/tmp/v1' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /tmp/v1
+[INFO] Storing buildNumber: c1692f43ef5a41328b54bbbcd06285120aff52c3 at timestamp: 1609080042868
+[INFO] Storing buildScmBranch: master
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ commons-io ---
+[INFO] Using 'iso-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/src/main/resources
+[INFO] Copying 2 resources to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ commons-io ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 162 source files to /tmp/v1/target/classes
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/input/ClassLoaderObjectInputStream.java: Some input files use or override a deprecated API.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/input/ClassLoaderObjectInputStream.java: Recompile with -Xlint:deprecation for details.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/IOExceptionList.java: /tmp/v1/src/main/java/org/apache/commons/io/IOExceptionList.java uses unchecked or unsafe operations.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/IOExceptionList.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-bundle-plugin:5.1.1:manifest (bundle-manifest) @ commons-io ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ commons-io ---
+[INFO] Using 'iso-8859-1' encoding to copy filtered resources.
+[INFO] Copying 50 resources
+[INFO] Copying 2 resources to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ commons-io ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 160 source files to /tmp/v1/target/test-classes
+[INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.19:check (checkAPIcompatibility) @ commons-io ---
+[INFO] Signature checking is skipped.
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (prepare-agent) @ commons-io ---
+[INFO] Skipping JaCoCo execution because property jacoco.skip is set.
+[INFO] argLine set to empty
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ commons-io ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:build-classpath (default-cli) @ commons-io ---
+[INFO] Skipped writing classpath file '/tmp/v1/classpath'.  No changes found.
+[INFO] 
+[INFO] --- diff-jjoules:0.0.1-SNAPSHOT:instrument (default-cli) @ commons-io ---
+[INFO] Running on:
+[INFO] /tmp/v1
+[INFO] /tmp/v2/
+[INFO] Configuration{pathToFirstVersion='/tmp/v1', pathToSecondVersion='/tmp/v2/', pathToTestListAsCSV='/tmp/v1/testsThatExecuteTheChange.csv', classpath=[/home/spino/.m2/repository/org/junit/jupiter/junit-jupiter/5.6.2/junit-jupiter-5.6.2.jar, /home/spino/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar, /home/spino/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar, /home/spino/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar, /home/spino/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar, /home/spino/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar, /home/spino/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar, /home/spino/.m2/repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar, /home/spino/.m2/repository/org/junit-pioneer/junit-pioneer/0.9.0/junit-pioneer-0.9.0.jar, /home/spino/.m2/repository/org/mockito/mockito-core/3.5.2/mockito-core-3.5.2.jar, /home/spino/.m2/repository/net/bytebuddy/byte-buddy/1.10.13/byte-buddy-1.10.13.jar, /home/spino/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.13/byte-buddy-agent-1.10.13.jar, /home/spino/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar, /home/spino/.m2/repository/com/google/jimfs/jimfs/1.1/jimfs-1.1.jar, /home/spino/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar, /home/spino/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar], junit4=false}
+[INFO] org.apache.commons.io.input.CountingInputStreamTest:[testLargeFiles_IO84]
+org.apache.commons.io.IOUtilsCopyTestCase:[testCopy_inputStreamToOutputStream_IO84, testCopy_inputStreamToOutputStream_nullOut, testCopy_inputStreamToOutputStream, testCopy_inputStreamToOutputStreamWithBufferSize, testCopy_inputStreamToOutputStream_nullIn]
+org.apache.commons.io.FileUtilsCopyToFileTestCase:[testCopyToFile, testCopyInputStreamToFile]
+org.apache.commons.io.output.CountingOutputStreamTest:[testLargeFiles_IO84]
+org.apache.commons.io.IOUtilsTestCase:[testToByteArray_InputStream, testToByteArray_URL, testCopy_ByteArray_OutputStream, testToBufferedInputStreamWithBufferSize_InputStream, testToByteArray_URI, testCopy_ByteArray_Writer, testResourceToByteArray_ExistingResourceAtRootPackage_WithClassLoader, testToInputStream_String, testToString_ByteArray, testResourceToByteArray_ExistingResourceAtRootPackage, testToByteArray_URLConnection, testResourceToByteArray_ExistingResourceAtSubPackage, testResourceToByteArray_ExistingResourceAtSubPackage_WithClassLoader, testToInputStream_CharSequence, testConsume, testToBufferedInputStream_InputStream]
+org.apache.commons.io.input.BoundedInputStreamTest:[testReadArray]
+org.apache.commons.io.FileUtilsTestCase:[testContentEquals, testChecksumCRC32, testCopyURLToFileWithTimeout, testChecksumOnNullChecksum, testChecksumDouble, testChecksum, testCopyFileToOutputStream, testCopyURLToFile]
+org.apache.commons.io.output.ByteArrayOutputStreamTestCase:[[2] ByteArrayOutputStream.toBufferedInputStream(InputStream, int), [3] UnsynchronizedByteArrayOutputStream.toBufferedInputStream(InputStream), [1] ByteArrayOutputStream, [2] UnsynchronizedByteArrayOutputStream, [1] ByteArrayOutputStream.toBufferedInputStream(InputStream), [4] UnsynchronizedByteArrayOutputStream.toBufferedInputStream(InputStream, int)]
+org.apache.commons.io.output.DeferredFileOutputStreamTest:[initialBufferSize = 64, initialBufferSize = 32, initialBufferSize = 1024, initialBufferSize = 4096, initialBufferSize = 256, initialBufferSize = 8, initialBufferSize = 2048, initialBufferSize = 128, initialBufferSize = 512, initialBufferSize = 2, initialBufferSize = 16, initialBufferSize = 4, initialBufferSize = 1]
+[INFO] Instrument version before commit...
+[INFO] Run on /tmp/v1
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit5.JJoulesProcessor
+Processing org.apache.commons.io.input.BoundedInputStreamTest#testReadArray
+Processing org.apache.commons.io.input.CountingInputStreamTest#testLargeFiles_IO84
+Processing org.apache.commons.io.output.CountingOutputStreamTest#testLargeFiles_IO84
+Processing org.apache.commons.io.FileUtilsCopyToFileTestCase#testCopyToFile
+Processing org.apache.commons.io.FileUtilsCopyToFileTestCase#testCopyInputStreamToFile
+Processing org.apache.commons.io.FileUtilsTestCase#testContentEquals
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyURLToFile
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyURLToFileWithTimeout
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFileToOutputStream
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksumCRC32
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksum
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksumOnNullChecksum
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksumDouble
+Processing org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStream
+Processing org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStream_IO84
+Processing org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStream_nullIn
+Processing org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStream_nullOut
+Processing org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStreamWithBufferSize
+Processing org.apache.commons.io.IOUtilsTestCase#testConsume
+Processing org.apache.commons.io.IOUtilsTestCase#testCopy_ByteArray_OutputStream
+Processing org.apache.commons.io.IOUtilsTestCase#testCopy_ByteArray_Writer
+Processing org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtRootPackage
+Processing org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtRootPackage_WithClassLoader
+Processing org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtSubPackage
+Processing org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtSubPackage_WithClassLoader
+Processing org.apache.commons.io.IOUtilsTestCase#testToBufferedInputStream_InputStream
+Processing org.apache.commons.io.IOUtilsTestCase#testToBufferedInputStreamWithBufferSize_InputStream
+Processing org.apache.commons.io.IOUtilsTestCase#testToByteArray_InputStream
+Processing org.apache.commons.io.IOUtilsTestCase#testToByteArray_URI
+Processing org.apache.commons.io.IOUtilsTestCase#testToByteArray_URL
+Processing org.apache.commons.io.IOUtilsTestCase#testToByteArray_URLConnection
+Processing org.apache.commons.io.IOUtilsTestCase#testToInputStream_CharSequence
+Processing org.apache.commons.io.IOUtilsTestCase#testToInputStream_String
+Processing org.apache.commons.io.IOUtilsTestCase#testToString_ByteArray
+[INFO] Printing org.apache.commons.io.input.BoundedInputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/input/BoundedInputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.CountingInputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/input/CountingInputStreamTest.java
+[INFO] Printing org.apache.commons.io.FileUtilsCopyToFileTestCase to /tmp/v1/src/test/java//org/apache/commons/io/FileUtilsCopyToFileTestCase.java
+[INFO] Printing org.apache.commons.io.IOUtilsCopyTestCase to /tmp/v1/src/test/java//org/apache/commons/io/IOUtilsCopyTestCase.java
+[INFO] Printing org.apache.commons.io.output.CountingOutputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/output/CountingOutputStreamTest.java
+[INFO] Printing org.apache.commons.io.FileUtilsTestCase to /tmp/v1/src/test/java//org/apache/commons/io/FileUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.IOUtilsTestCase to /tmp/v1/src/test/java//org/apache/commons/io/IOUtilsTestCase.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v1/pom.xml
+[INFO] Output new POM file in /tmp/v1/pom.xml
+[INFO] Instrument version after commit...
+[INFO] Run on /tmp/v2/
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit5.JJoulesProcessor
+Processing org.apache.commons.io.input.BoundedInputStreamTest#testReadArray
+Processing org.apache.commons.io.input.CountingInputStreamTest#testLargeFiles_IO84
+Processing org.apache.commons.io.output.CountingOutputStreamTest#testLargeFiles_IO84
+Processing org.apache.commons.io.FileUtilsCopyToFileTestCase#testCopyToFile
+Processing org.apache.commons.io.FileUtilsCopyToFileTestCase#testCopyInputStreamToFile
+Processing org.apache.commons.io.FileUtilsTestCase#testContentEquals
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyURLToFile
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyURLToFileWithTimeout
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFileToOutputStream
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksumCRC32
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksum
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksumOnNullChecksum
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksumDouble
+Processing org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStream
+Processing org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStream_IO84
+Processing org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStream_nullIn
+Processing org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStream_nullOut
+Processing org.apache.commons.io.IOUtilsCopyTestCase#testCopy_inputStreamToOutputStreamWithBufferSize
+Processing org.apache.commons.io.IOUtilsTestCase#testConsume
+Processing org.apache.commons.io.IOUtilsTestCase#testCopy_ByteArray_OutputStream
+Processing org.apache.commons.io.IOUtilsTestCase#testCopy_ByteArray_Writer
+Processing org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtRootPackage
+Processing org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtRootPackage_WithClassLoader
+Processing org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtSubPackage
+Processing org.apache.commons.io.IOUtilsTestCase#testResourceToByteArray_ExistingResourceAtSubPackage_WithClassLoader
+Processing org.apache.commons.io.IOUtilsTestCase#testToBufferedInputStream_InputStream
+Processing org.apache.commons.io.IOUtilsTestCase#testToBufferedInputStreamWithBufferSize_InputStream
+Processing org.apache.commons.io.IOUtilsTestCase#testToByteArray_InputStream
+Processing org.apache.commons.io.IOUtilsTestCase#testToByteArray_URI
+Processing org.apache.commons.io.IOUtilsTestCase#testToByteArray_URL
+Processing org.apache.commons.io.IOUtilsTestCase#testToByteArray_URLConnection
+Processing org.apache.commons.io.IOUtilsTestCase#testToInputStream_CharSequence
+Processing org.apache.commons.io.IOUtilsTestCase#testToInputStream_String
+Processing org.apache.commons.io.IOUtilsTestCase#testToString_ByteArray
+[INFO] Printing org.apache.commons.io.input.BoundedInputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/input/BoundedInputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.CountingInputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/input/CountingInputStreamTest.java
+[INFO] Printing org.apache.commons.io.FileUtilsCopyToFileTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsCopyToFileTestCase.java
+[INFO] Printing org.apache.commons.io.FileUtilsCopyToFileTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsCopyToFileTestCase.java
+[INFO] Printing org.apache.commons.io.IOUtilsCopyTestCase to /tmp/v2//src/test/java//org/apache/commons/io/IOUtilsCopyTestCase.java
+[INFO] Printing org.apache.commons.io.IOUtilsCopyTestCase to /tmp/v2//src/test/java//org/apache/commons/io/IOUtilsCopyTestCase.java
+[INFO] Printing org.apache.commons.io.output.CountingOutputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/output/CountingOutputStreamTest.java
+[INFO] Printing org.apache.commons.io.FileUtilsTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.IOUtilsTestCase to /tmp/v2//src/test/java//org/apache/commons/io/IOUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.FileUtilsTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.IOUtilsTestCase to /tmp/v2//src/test/java//org/apache/commons/io/IOUtilsTestCase.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v2//pom.xml
+[INFO] Output new POM file in /tmp/v2//pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19.399 s
+[INFO] Finished at: 2020-12-27T15:41:00+01:00
+[INFO] ------------------------------------------------------------------------
