@@ -108,7 +108,7 @@ def run(nb_iteration, output_path, output_path_log):
         print_to_file('No test could be selected', output_path_log)
         return -1
 
-    run_mvn_clean_test(PATH_V2)
+    run_mvn_clean_test_build_cp(PATH_V2)
     start_time = time.time()
     code = run_mvn_build_classpath_and_instrument(PATH_V1, PATH_V2, output_path + '/mvn_cp_instr.log')
     elasped_time = time.time() - start_time

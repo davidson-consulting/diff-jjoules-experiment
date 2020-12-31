@@ -9,11 +9,12 @@ from utils.graph_args import *
 from utils.json_utils import *
 
 
-def build_graph(array):
+def build_graph(array, output_path):
     fig, ax = plt.subplots()
     t = np.arange(0.0, len(array))
     ax.plot(t, array)
-    plt.show()
+    plt.tight_layout()
+    plt.savefig(output_path)
 
 if __name__ == '__main__':
 
@@ -28,10 +29,9 @@ if __name__ == '__main__':
     commits_folder.reverse()
     energies_v1, energies_v2, durations_v1, durations_v2 = [], [], [], []
     delta_energy, delta_duration = [], []
-    for file in os.listdir(path_to_commit_folders):
+    acc_delta_energy, acc_delta_duration = [], []
+    for file in commits_folder:
         path_to_file = path_to_commit_folders + file
-        if file == 'input':
-            continue
         data_v1 = read_json(path_to_file  + '/avg_v1.json')
         data_v2 = read_json(path_to_file  + '/avg_v2.json')
         energy_v1, duration_v1, energy_v2, duration_v2  = 0, 0, 0, 0
@@ -46,4 +46,11 @@ if __name__ == '__main__':
         durations_v2.append(duration_v2)
         delta_energy.append(energy_v2 - energy_v1)
         delta_duration.append(duration_v2 - duration_v1)
-    build_graph(delta_energy)
+        if len(acc_delta_energy) == 0:
+            acc_delta_energy.append(energy_v2 - energy_v1)
+            acc_delta_duration.append(duration_v2 - duration_v1)
+        else:
+            acc_delta_energy.append(acc_delta_energy[-1] + (energy_v2 - energy_v1))
+            acc_delta_duration.append(acc_delta_duration[-1] + (duration_v2 - duration_v1))
+    build_graph(acc_delta_energy, path_to_commit_folders + '/delta_energy_evolution.png')
+    build_graph(acc_delta_duration, path_to_commit_folders + '/delta_duration_evolution.png')

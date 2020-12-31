@@ -84,6 +84,22 @@ def run_mvn_clean_test(path):
 BUILD_CLASSPATH_GOAL = 'dependency:build-classpath'
 OPT_OUTPUT_CP_FILE = '-Dmdep.outputFile=classpath'
 
+OPT_CP_V2 = '-Dclasspath-path-v2=classpath'
+OPT_CP_V1 = '-Dclasspath-path-v1=classpath'
+
+def run_mvn_clean_test_build_cp(path):
+    return run_command(
+        ' '.join([
+            MVN_CMD,
+            path + POM_FILE,
+            MVN_CLEAN_GOAL,
+            MVN_TEST,
+            MVN_SKIP_TEST,
+             BUILD_CLASSPATH_GOAL,
+            OPT_OUTPUT_CP_FILE,
+        ])
+    )
+
 def run_mvn_build_classpath_and_instrument(path_first_version, path_second_version, output_path_file):
     return run_command(
          ' '.join([
@@ -100,6 +116,8 @@ def run_mvn_build_classpath_and_instrument(path_first_version, path_second_versi
             #OPT_TEST_LISTS + path_first_version + '/' + VALUE_TEST_LISTS,
             OPT_TEST_LISTS + VALUE_TEST_LISTS,
             OPT_PATH_DIR_SECOND_VERSION + path_second_version,
+            OPT_CP_V2,
+            OPT_CP_V1,
         ])
     )
 
