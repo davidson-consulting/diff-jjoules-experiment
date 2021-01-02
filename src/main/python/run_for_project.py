@@ -152,9 +152,9 @@ if __name__ == '__main__':
 
     if mode == mode.continue_mode:
         print(os.listdir(success_output_path))
-        commits_folders = sorted(os.listdir(success_output_path), key=lambda folder_name: int(folder_name.split('_')[0]))
+        commits_folders = sorted( [folder for folder in os.listdir(success_output_path) if not folder.endswith('.png')], key=lambda folder_name: int(folder_name.split('_')[0]))
         print(commits_folders)
-        cursor_commits = int(commits_folders[-1].split('_')[0])
+        cursor_commits = int(commits_folders[-1].split('_')[0]) + 1
         print('continue at', str(cursor_commits))
 
     while current_nb_completed_commits < nb_commits and cursor_commits < len(commits) - 1:
