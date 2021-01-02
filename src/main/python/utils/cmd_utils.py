@@ -68,6 +68,7 @@ def run_mvn_instrument(path_first_version, path_second_version):
         ])
     )
 
+MVN_INSTALL = 'install'
 MVN_SKIP_TEST = '-DskipTests'
 
 def run_mvn_clean_test(path):
@@ -76,7 +77,7 @@ def run_mvn_clean_test(path):
             MVN_CMD,
             path + POM_FILE,
             MVN_CLEAN_GOAL,
-            MVN_TEST,
+            MVN_INSTALL,
             MVN_SKIP_TEST,
         ])
     )
@@ -124,6 +125,7 @@ def run_mvn_build_classpath_and_instrument(path_first_version, path_second_versi
 JJOULES_REPORT_FOLDER = 'jjoules-reports'
 
 def move_directory(src_dir, dst):
+    print('move', src_dir, 'to', dst)
     move(src_dir, dst)
 
 def copy_jjoules_result(src_dir, dst):
@@ -214,3 +216,7 @@ def zip_folder(path_to_folder):
             path_to_folder
         ]
     ))
+
+def read_module_name(input_path):
+    with open(input_path + '/module') as module_file:
+        return module_file.readlines()[0]

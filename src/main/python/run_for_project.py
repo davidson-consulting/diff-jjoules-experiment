@@ -9,8 +9,10 @@ import os
 PREFIX_TMP = '/tmp/'
 FOLDER_PATH_V1 = 'v1'
 FOLDER_PATH_V2 = 'v2'
-PATH_V1 = PREFIX_TMP + FOLDER_PATH_V1
-PATH_V2 = PREFIX_TMP + FOLDER_PATH_V2
+ROOT_PATH_V1 = PREFIX_TMP + FOLDER_PATH_V1
+ROOT_PATH_V2 = PREFIX_TMP + FOLDER_PATH_V2
+PATH_V1 = ROOT_PATH_V1
+PATH_V2 = ROOT_PATH_V2
 
 def get_tests_to_execute(output_path):
     path = output_path + '/' + VALUE_TEST_LISTS
@@ -61,10 +63,6 @@ def init_current_paths(commit_sha_v1, commit_sha_v2, cursor_commits, success_out
     except FileExistsError:
         print('pass...')
     try:
-        delete_directory(current_err_output_path)
-    except FileExistsError:
-        print('pass...')
-    try:
         mkdir(current_output_path)
     except FileExistsError:
         print('pass...')
@@ -84,11 +82,11 @@ def copy_test_list(output_path):
                 return
 
 def run(nb_iteration, output_path, output_path_log):
-    code = run_mvn_clean_test(PATH_V1)
+    code = run_mvn_clean_test(ROOT_PATH_V1)
     if not code == 0:
         print_to_file('mvn test did not succeed on v1', output_path_log)
         return -1
-    code = run_mvn_clean_test(PATH_V2)
+    code = run_mvn_clean_test(ROOT_PATH_V2)
     if not code == 0:
         print_to_file('mvn test did not succeed on v2', output_path_log)
         return -1
@@ -139,7 +137,8 @@ if __name__ == '__main__':
     nb_iteration = int(args.iteration)
     nb_commits = int(args.nb_commits)
     mode = args.mode
-
+    main_module_name = read_module_name(args.commits + '/' + project_name)
+    
     commits, repo_url = init_commits(commits_file_path)
     init_repositories(repo_url[:-1])
     create_if_does_not_exist(output_path + project_name)
@@ -156,6 +155,9 @@ if __name__ == '__main__':
         print(commits_folders)
         cursor_commits = int(commits_folders[-1].split('_')[0]) + 1
         print('continue at', str(cursor_commits))
+
+    PATH_V1 = PATH_V1 + '/' + main_module_name
+    PATH_V2 = PATH_V2 + '/' + main_module_name
 
     while current_nb_completed_commits < nb_commits and cursor_commits < len(commits) - 1:
         commit_sha_v1 = commits[cursor_commits]
