@@ -150,15 +150,16 @@ if __name__ == '__main__':
     success_output_path = output_path + '/' + project_name + '/'
     error_output_path = output_path + '/' + project_name + '_error/'
 
+    if mode == mode.continue_mode:
+        print(os.listdir(success_output_path))
+        commits_folders = sorted(os.listdir(success_output_path), key=lambda folder_name: int(folder_name.split('_')[0]))
+        print(commits_folders)
+        cursor_commits = int(commits_folders[-1].split('_')[0])
+        print('continue at', str(cursor_commits))
+
     while current_nb_completed_commits < nb_commits and cursor_commits < len(commits) - 1:
         commit_sha_v1 = commits[cursor_commits]
         commit_sha_v2 = commits[cursor_commits - 1]
-
-        if mode == mode.continue_mode:
-            if result_dir_exists_or_error_dir_exists(commit_sha_v1, commit_sha_v2, cursor_commits, success_output_path, error_output_path):
-               print(commit_sha_v1, commit_sha_v2, 'already done! Skipping...')
-               cursor_commits = cursor_commits + 1
-               continue
 
         current_output_path, current_err_output_path, current_output_path_log, current_output_path_time = init_current_paths(
             commit_sha_v1, commit_sha_v2, cursor_commits, success_output_path, error_output_path
