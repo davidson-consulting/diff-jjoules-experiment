@@ -126,6 +126,14 @@ def result_dir_exists_or_error_dir_exists(commit_sha_v1, commit_sha_v2, cursor_c
     return os.path.isdir(success_output_path + '/' + '_'.join([str(cursor_commits), commit_sha_v1[:6], commit_sha_v2[:6]])) or \
             os.path.isdir(error_output_path + '/' + '_'.join([str(cursor_commits), commit_sha_v1[:6], commit_sha_v2[:6]]))
 
+def list_and_get_max(folder):
+    commits_folders = sorted([subfolder for subfolder in os.listdir(success_output_path) if not subfolder.endswith('.png')], key=lambda folder_name: int(folder_name.split('_')[0]))
+    return int(commits_folders[-1].split('_')[0]) + 1
+
+def get_cursor_to_continue(folder_success, folder_error):
+    cursor_success = list_and_get_max(folder_success)
+    cursor_error = list_and_get_max(folder_error)
+    return max(cursor_error, cursor_success)
 
 if __name__ == '__main__':
 
@@ -150,10 +158,7 @@ if __name__ == '__main__':
     error_output_path = output_path + '/' + project_name + '_error/'
 
     if mode == mode.continue_mode:
-        print(os.listdir(success_output_path))
-        commits_folders = sorted( [folder for folder in os.listdir(success_output_path) if not folder.endswith('.png')], key=lambda folder_name: int(folder_name.split('_')[0]))
-        print(commits_folders)
-        cursor_commits = int(commits_folders[-1].split('_')[0]) + 1
+        cursor_commits = get_cursor_to_continue(success_output_path, error_output_path)
         print('continue at', str(cursor_commits))
 
     PATH_V1 = PATH_V1 + '/' + main_module_name
