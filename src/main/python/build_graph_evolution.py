@@ -36,9 +36,11 @@ if __name__ == '__main__':
         data_v2 = read_json(path_to_file  + '/avg_v2.json')
         energy_v1, duration_v1, energy_v2, duration_v2  = 0, 0, 0, 0
         for data in data_v1:
+            if not data in data_v2:
+                continue
             energy_v1 = energy_v1 + data_v1[data]['energy']
-            energy_v2 = energy_v2 + data_v2[data]['energy']
             duration_v1 = duration_v1 + data_v1[data]['duration']
+            energy_v2 = energy_v2 + data_v2[data]['energy']
             duration_v2 = duration_v2 + data_v2[data]['duration']
         energies_v1.append(energy_v1)
         energies_v2.append(energy_v2)

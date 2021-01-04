@@ -3,7 +3,7 @@ import os
 
 def unzip(path_to_zip):
     print('unzipping', path_to_zip)
-    os.system(' '.join(['unzip', '-o', path_to_zip]))
+    os.system(' '.join(['unzip', '-qq', '-o', path_to_zip]))
 
 if __name__ == '__main__':
     root_folder = sys.argv[1]

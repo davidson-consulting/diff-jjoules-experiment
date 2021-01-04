@@ -113,6 +113,8 @@ def build_data_per_test(data_v1, data_v2):
     energies_v2 = {}
     durations_v2 = {}
     for key in data_v1:
+        if not key in data_v2:
+            continue
         test_class_name = get_test_class(key)
         if not test_class_name in test_per_test_classes:
             test_per_test_classes[test_class_name] = []

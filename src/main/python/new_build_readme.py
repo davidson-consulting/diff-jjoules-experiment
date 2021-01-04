@@ -163,4 +163,5 @@ if __name__ == '__main__':
     path_to_data_project = data_path + '/' + project_name + '/'
 
     for commit_folder in os.listdir(path_to_data_project):
-        run_commit(commits_file_path, commit_folder)
+        if not commit_folder.endswith('.png'):
+            run_commit(commits_file_path, commit_folder)
