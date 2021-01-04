@@ -82,11 +82,11 @@ def copy_test_list(output_path):
                 return
 
 def run(nb_iteration, output_path, output_path_log):
-    code = run_mvn_clean_test(ROOT_PATH_V1)
+    code = run_mvn_clean_test(ROOT_PATH_V1 if os.path.isfile(ROOT_PATH_V1 + '/pom.xml') else PATH_V1)
     if not code == 0:
         print_to_file('mvn test did not succeed on v1', output_path_log)
         return -1
-    code = run_mvn_clean_test(ROOT_PATH_V2)
+    code = run_mvn_clean_test(ROOT_PATH_V2 if os.path.isfile(ROOT_PATH_V2 + '/pom.xml') else PATH_V2)
     if not code == 0:
         print_to_file('mvn test did not succeed on v2', output_path_log)
         return -1

@@ -14,8 +14,8 @@ def compute_energy_for_tests(path_to_folder_iteration):
         data = get_energy_data(read_json(path_to_folder_iteration + '/' + json_file))
         if len(data) > 0:
             compute_energy_for_tests[key] = data
-        else:
-            print(path_to_folder_iteration + '/' + json_file, 'not added')
+        #else:
+        #    print(path_to_folder_iteration + '/' + json_file, 'not added')
     return compute_energy_for_tests
 
 def compute_avg_energy_for_iterations(path_to_data_version):
@@ -54,10 +54,12 @@ if __name__ == '__main__':
     path_to_data = args.data_path
 
     path_to_commit_folders = path_to_data + '/' + project_name + '/'
-
-    for file in os.listdir(path_to_commit_folders):
+    files = os.listdir(path_to_commit_folders)
+    for file in files:
         path_to_file = path_to_commit_folders + file
-        print(file)
+        print(file, files.index(file), '/', len(files))
+        if os.path.isfile(path_to_file + '/avg_v1.json') and os.path.isfile(path_to_file + '/avg_v2.json'):
+            continue
         if os.path.isdir(path_to_file):
             data_v1, data_v2 = compute_avg_energy_for_commit(path_to_file)
             write_json(path_to_file + '/avg_v1.json', data_v1)
