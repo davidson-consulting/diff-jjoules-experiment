@@ -111,7 +111,7 @@ def run_per_test(data_v1, data_v2, path_to_readme, path_to_commit_folder):
                 test_method
         ])
         print_to_file(row, path_to_readme)
-    print_to_file('\n', path_to_readme)
+    print_to_file('\n\n\n', path_to_readme)
     print_to_file(construct_row_markdown(['Test', 'IterationV1', 'IterationV2', 'DeltaIteration']), path_to_readme)
     print_to_file(construct_row_markdown(['---', '---', '---', '---']), path_to_readme)
     print_array(current_iteration_v1, current_iteration_v2, path_to_readme)
@@ -150,7 +150,7 @@ def run_commit(input_file_path, commit_folder):
     
     run_per_test(data_v1, data_v2, path_to_readme, path_to_commit_folder)
     run_for_time(path_to_commit_folder, path_to_readme)
-    run_for_per_class(data_v1, data_v2, path_to_readme)
+    #run_for_per_class(data_v1, data_v2, path_to_readme)
         
 if __name__ == '__main__':
 
@@ -162,6 +162,31 @@ if __name__ == '__main__':
 
     path_to_data_project = data_path + '/' + project_name + '/'
 
+    nb_commit_measured = 0
+    nb_commit_error = len(os.listdir(data_path + '/' + project_name + '_error/'))
+
     for commit_folder in os.listdir(path_to_data_project):
-        if not commit_folder.endswith('.png'):
+        if not commit_folder.endswith('.png') and not commit_folder == 'README.md':
             run_commit(commits_file_path, commit_folder)
+            nb_commit_measured = nb_commit_measured + 1
+    
+    path_to_readme = path_to_data_project + 'README.md'
+    delete_file(path_to_readme)
+
+    print_to_file('# ' + project_name, path_to_readme)
+    with open(commits_file_path, 'r') as commits_file:
+        lines = commits_file.readlines()
+        repo_url = lines[0]
+        print_to_file('\n' + repo_url, path_to_readme)
+    
+    print_to_file('![](./delta_energy_evolution.png)\n', path_to_readme)
+    print_to_file('![](./delta_duration_evolution.png)\n', path_to_readme)
+
+    print_to_file(construct_row_markdown(['Nb total commit', 'Nb commit measured', 'Nb commit errord', 'perc']), path_to_readme)
+    print_to_file(construct_row_markdown(['---','---', '---', '---']), path_to_readme)
+    print_to_file(construct_row_markdown([
+        str(int(nb_commit_measured + nb_commit_error)),
+        str(nb_commit_measured),
+        str(nb_commit_error),
+        '{:.2f}'.format(float(float(nb_commit_measured) / float((nb_commit_measured + nb_commit_error))) * 100
+    )]), path_to_readme)

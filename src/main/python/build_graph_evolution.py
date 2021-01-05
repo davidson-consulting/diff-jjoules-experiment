@@ -25,7 +25,8 @@ if __name__ == '__main__':
 
     path_to_commit_folders = path_to_data + '/' + project_name + '/'
 
-    commits_folder = sorted(os.listdir(path_to_commit_folders), key=lambda folder_name: int(folder_name.split('_')[0]))
+    commits_folder = list(filter(lambda x: not (x == 'README.md' or x.endswith('.png')), os.listdir(path_to_commit_folders)))
+    commits_folder = sorted(commits_folder, key=lambda folder_name: int(folder_name.split('_')[0]))
     commits_folder.reverse()
     energies_v1, energies_v2, durations_v1, durations_v2 = [], [], [], []
     delta_energy, delta_duration = [], []

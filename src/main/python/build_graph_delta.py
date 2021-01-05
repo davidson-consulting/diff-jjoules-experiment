@@ -29,12 +29,14 @@ def build_graph(energies_v1, energies_v2, labels, colors, classfier, unit, outpu
                     classifier_v1: energies_v1,
                     classifier_v2: energies_v2,
                 }, index=labels)
+    '''
     bar_plot = sns.barplot(x=classifier_v1, y="Test", data=df, order=labels, color=colors[0])
     bar_plot = sns.barplot(x=classifier_v2, y='Test', data=df, order=labels, color=colors[1])
     bar_plot.set(xlabel=classfier + ' in ' + unit, ylabel="Test")
     plt.tight_layout()
     plt.savefig(output + '.png')
     plt.clf()
+    '''
 
     bar_plot = sns.barplot(x="Test", y=classifier_v1, data=df, order=labels, color=colors[0])
     bar_plot = sns.barplot(x='Test', y=classifier_v2, data=df, order=labels, color=colors[1])
@@ -167,6 +169,8 @@ def build_data_per_test(data_v1, data_v2):
     
 def build_graph_per_test(array_v1, array_v2, path_to_file, project_name, dimension, unit):
     nb_max_bar_per_graph = min(10, len(array_v1))
+    if nb_max_bar_per_graph == 0:
+        return
     nb_graph = int(len(array_v1) / nb_max_bar_per_graph)
     nb_bar_last_graph = int(len(array_v1) % nb_max_bar_per_graph) 
     if nb_bar_last_graph < 5:
@@ -214,7 +218,7 @@ if __name__ == '__main__':
 
     for file in os.listdir(path_to_commit_folders):
         path_to_file = path_to_commit_folders + file
-        if file == 'input':
+        if file == 'input' or file.endswith('.png') or file == 'README.md':
             continue
         print('generate', mode, 'for', file)
         data_v1 = read_json(path_to_file  + '/avg_v1.json')
@@ -225,8 +229,11 @@ if __name__ == '__main__':
             build_graph(energies_v1, durations_v1, energies_v2, durations_v2, labels, colors=['red', 'blue'], output=path_to_file + '/'+ project_name +'_delta')
             build_graph(delta_energies_v1_1, durations_v1, delta_energies_v2_1, durations_v2, labels, colors=['blue', 'red'], output=path_to_file + '/'+ project_name +'_delta_1')
         elif mode == mode.per_test:
-            fullqualified_name_test, delta_energies_v1, delta_energies_v2, delta_durations_v1, delta_durations_v2 = build_data_per_test(data_v1, data_v2)
-            build_graph_per_test(delta_energies_v1, delta_energies_v2, path_to_file, project_name, 'energy', 'uJ')
-            build_graph_per_test(delta_durations_v1, delta_durations_v2, path_to_file, project_name, 'duration', 's')
+            if not os.path.isfile(path_to_file + '/' + project_name + '_delta_duration_0_v.png'):
+                fullqualified_name_test, delta_energies_v1, delta_energies_v2, delta_durations_v1, delta_durations_v2 = build_data_per_test(data_v1, data_v2)
+                build_graph_per_test(delta_energies_v1, delta_energies_v2, path_to_file, project_name, 'energy', 'uJ')
+                build_graph_per_test(delta_durations_v1, delta_durations_v2, path_to_file, project_name, 'duration', 's')
+            else:
+                print(path_to_file, 'already generated')
         else:
             print('unkown mode', mode)
