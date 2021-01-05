@@ -20,6 +20,9 @@ def compute_energy_for_tests(path_to_folder_iteration):
 
 def compute_avg_energy_for_iterations(path_to_data_version):
     iteration_folders = os.listdir(path_to_data_version)
+    if len(iteration_folders) == 0:
+        print('No iteration folders found in ', path_to_data_version)
+        return {}
     avg_energy_per_test = compute_energy_for_tests(path_to_data_version + '/' + iteration_folders[0])
     nb_validated_iteration_per_test = {}
     for iteration_folder in iteration_folders[1:]:

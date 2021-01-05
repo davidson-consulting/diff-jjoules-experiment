@@ -12,4 +12,5 @@ if __name__ == '__main__':
     for dirName, subdirList, fileList in os.walk(root_folder):
         for file in fileList:
             if file.endswith('.zip'):
-                unzip(dirName + '/' + file)
+                if not os.path.isdir(dirName + '/' + file.split('.zip')[0]):
+                    unzip(dirName + '/' + file)
