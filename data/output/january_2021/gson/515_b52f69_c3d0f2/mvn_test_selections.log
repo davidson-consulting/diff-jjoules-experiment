@@ -1,0 +1,905 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.google.code.gson:gson >----------------------
+[INFO] Building Gson 2.2.5-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gson ---
+[INFO] Deleting /tmp/v1/gson/target
+[INFO] 
+[INFO] --- dspot-diff-test-selection:3.1.1-SNAPSHOT:list (default-cli) @ gson ---
+[INFO] Running on:
+[INFO] /tmp/v1/gson
+[INFO] /tmp/v2/gson/
+[WARNING] No path to diff file has been specified.
+[WARNING] I'll compute a diff file using the UNIX diff command
+[WARNING] You may encounter troubles.
+[WARNING] If so, please specify a path to a correct diff file
+[WARNING] or implement a new way to compute a diff file.
+[INFO] Computing the diff with diff commnd line
+[INFO] The diff will be computed between:
+[INFO] /tmp/v1/gson/src and 
+[INFO] /tmp/v2/gson/src
+[INFO] Executing: diff -ru /tmp/v1/gson/src /tmp/v2/gson/src from /tmp/v1/gson/src
+[INFO] Running in enhanced mode...
+[INFO] Computing coverage for /tmp/v1/gson
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mcom.google.code.gson:gson[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding Gson 2.2.5-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mclover-maven-plugin:4.4.1:setup[m [1m(default-cli)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Creating new database at '/tmp/v1/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.8 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 64 files (6 packages).
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Updating existing database at '/tmp/v1/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.8 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 79 files (8 packages).
+[[1;34mINFO[m] 917 test methods detected.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.2:enforce[m [1m(enforce-maven)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Skipping Rule Enforcement.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /tmp/v1/gson/src/main/resources
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 64 source files to /tmp/v1/gson/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /tmp/v1/gson/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 79 source files to /tmp/v1/gson/target/test-classes
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/JsonNullTest.java: Some input files use or override a deprecated API.
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/JsonNullTest.java: Recompile with -Xlint:deprecation for details.
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/MapTest.java: Some input files use unchecked or unsafe operations.
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/MapTest.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /tmp/v1/gson/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.google.gson.DefaultDateTypeAdapterTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.101 sec
+Running com.google.gson.InnerClassExclusionStrategyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.GsonTypeAdapterTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 sec
+Running com.google.gson.internal.LinkedHashTreeMapTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 sec
+Running com.google.gson.internal.bind.JsonTreeWriterTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Running com.google.gson.internal.bind.JsonElementReaderTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
+Running com.google.gson.internal.LinkedTreeMapTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
+Running com.google.gson.ParameterizedTypeTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.common.TestTypes
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.google.gson.GsonBuilderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.reflect.TypeTokenTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.DefaultInetAddressTypeAdapterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.ExposeAnnotationExclusionStrategyTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.google.gson.FieldAttributesTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.CommentsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.JsonNullTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.JsonObjectTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.google.gson.stream.JsonWriterTest
+Tests run: 34, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
+Running com.google.gson.stream.JsonReaderTest
+Tests run: 121, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.101 sec
+Running com.google.gson.metrics.PerformanceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.MixedStreamTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.google.gson.DefaultMapJsonSerializerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.VersionExclusionStrategyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.InternationalizationTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.functional.SecurityTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.EnumTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
+Running com.google.gson.functional.ObjectTest
+Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 sec
+Running com.google.gson.functional.FieldExclusionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.functional.ExposeFieldsTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.functional.ParameterizedTypesTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 sec
+Running com.google.gson.functional.PrettyPrintingTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.gson.functional.CustomTypeAdaptersTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+Running com.google.gson.functional.ReadersWritersTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.CircularReferenceTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 sec
+Running com.google.gson.functional.RawSerializationTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.gson.functional.CustomDeserializerTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.gson.functional.TypeAdapterPrecedenceTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.functional.MoreSpecificTypeSerializationTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.InterfaceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.functional.TypeVariableTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.ExclusionStrategyFunctionalTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.gson.functional.DefaultTypeAdaptersTest
+Tests run: 64, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 sec
+Running com.google.gson.functional.NullObjectAndFieldTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Running com.google.gson.functional.MapAsArrayTypeAdapterTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.InstanceCreatorTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.functional.PrimitiveCharacterTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.functional.MapTest
+Tests run: 41, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 sec
+Running com.google.gson.functional.FieldNamingTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.VersioningTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.functional.DelegateTypeAdapterTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.functional.InheritanceTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.google.gson.functional.TypeHierarchyAdapterTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.functional.CustomSerializerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.StreamingTypeAdaptersTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+Running com.google.gson.functional.EscapingTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.CollectionTest
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
+Running com.google.gson.functional.JsonTreeTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.ArrayTest
+Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+Running com.google.gson.functional.PrintFormattingTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.functional.StringTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.google.gson.functional.UncategorizedTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.gson.functional.JsonParserTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.functional.NamingPolicyTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running com.google.gson.functional.ConcurrencyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 sec
+Running com.google.gson.functional.PrimitiveTest
+Tests run: 97, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 sec
+Running com.google.gson.functional.TreeTypeAdaptersTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.ObjectTypeAdapterTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.JsonStreamParserTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.JavaSerializationTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 sec
+Running com.google.gson.GenericArrayTypeTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.JsonArrayTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.JsonParserTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.JsonPrimitiveTest
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.google.gson.LongSerializationPolicyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.OverrideCoreTypeAdaptersTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+
+Results :
+
+Tests run: 917, Failures: 0, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  7.779 s
+[[1;34mINFO[m] Finished at: 2021-01-05T05:19:43+01:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+Writing HTML report to '/tmp/v1/gson/target/clover/report'
+Done. Processed 9 packages in 3086ms (342ms per package).
+[INFO] Computing coverage for /tmp/v2/gson/
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mcom.google.code.gson:gson[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding Gson 2.2.5-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Deleting /tmp/v2/gson/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mclover-maven-plugin:4.4.1:setup[m [1m(default-cli)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Creating new database at '/tmp/v2/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.8 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 64 files (6 packages).
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Updating existing database at '/tmp/v2/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.8 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 79 files (8 packages).
+[[1;34mINFO[m] 917 test methods detected.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.2:enforce[m [1m(enforce-maven)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Skipping Rule Enforcement.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /tmp/v2/gson/src/main/resources
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 64 source files to /tmp/v2/gson/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /tmp/v2/gson/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 79 source files to /tmp/v2/gson/target/test-classes
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/DefaultTypeAdaptersTest.java: Some input files use or override a deprecated API.
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/DefaultTypeAdaptersTest.java: Recompile with -Xlint:deprecation for details.
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/ParameterizedTypesTest.java: Some input files use unchecked or unsafe operations.
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/ParameterizedTypesTest.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /tmp/v2/gson/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.google.gson.DefaultDateTypeAdapterTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 sec
+Running com.google.gson.InnerClassExclusionStrategyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.GsonTypeAdapterTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 sec
+Running com.google.gson.internal.LinkedHashTreeMapTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 sec
+Running com.google.gson.internal.bind.JsonTreeWriterTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
+Running com.google.gson.internal.bind.JsonElementReaderTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.google.gson.internal.LinkedTreeMapTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Running com.google.gson.ParameterizedTypeTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.common.TestTypes
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.GsonBuilderTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.reflect.TypeTokenTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.DefaultInetAddressTypeAdapterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.ExposeAnnotationExclusionStrategyTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.FieldAttributesTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.CommentsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.JsonNullTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.JsonObjectTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.stream.JsonWriterTest
+Tests run: 34, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
+Running com.google.gson.stream.JsonReaderTest
+Tests run: 121, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 sec
+Running com.google.gson.metrics.PerformanceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.MixedStreamTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.google.gson.DefaultMapJsonSerializerTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.VersionExclusionStrategyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.InternationalizationTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.functional.SecurityTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.functional.EnumTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+Running com.google.gson.functional.ObjectTest
+Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 sec
+Running com.google.gson.functional.FieldExclusionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.ExposeFieldsTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.ParameterizedTypesTest
+Tests run: 17, Failures: 0, Errors: 16, Skipped: 0, Time elapsed: 0.041 sec <<< FAILURE!
+testTypesWithMultipleParametersSerialization(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.008 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$3.<init>(ParameterizedTypesTest.java:80)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_1gq8gls7jr(ParameterizedTypesTest.java:79)
+	at com.google.gson.functional.ParameterizedTypesTest.testTypesWithMultipleParametersSerialization(ParameterizedTypesTest.java:75)
+
+testTypesWithMultipleParametersDeserialization(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$4.<init>(ParameterizedTypesTest.java:89)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_1q9ape97jx(ParameterizedTypesTest.java:88)
+	at com.google.gson.functional.ParameterizedTypesTest.testTypesWithMultipleParametersDeserialization(ParameterizedTypesTest.java:87)
+
+testParameterizedTypeWithCustomSerializer(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.003 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$5.<init>(ParameterizedTypesTest.java:101)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_118xmz57k3(ParameterizedTypesTest.java:101)
+	at com.google.gson.functional.ParameterizedTypesTest.testParameterizedTypeWithCustomSerializer(ParameterizedTypesTest.java:100)
+
+testParameterizedTypesWithCustomDeserializer(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$7.<init>(ParameterizedTypesTest.java:117)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_1uloo2l7kd(ParameterizedTypesTest.java:117)
+	at com.google.gson.functional.ParameterizedTypesTest.testParameterizedTypesWithCustomDeserializer(ParameterizedTypesTest.java:116)
+
+testParameterizedTypesWithWriterSerialization(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.003 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$9.<init>(ParameterizedTypesTest.java:141)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_1wdmcus7kp(ParameterizedTypesTest.java:141)
+	at com.google.gson.functional.ParameterizedTypesTest.testParameterizedTypesWithWriterSerialization(ParameterizedTypesTest.java:138)
+
+testParameterizedTypeWithReaderDeserialization(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$10.<init>(ParameterizedTypesTest.java:149)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_16125v07kv(ParameterizedTypesTest.java:149)
+	at com.google.gson.functional.ParameterizedTypesTest.testParameterizedTypeWithReaderDeserialization(ParameterizedTypesTest.java:146)
+
+testVariableTypeFieldsAndGenericArraysSerialization(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$11.<init>(ParameterizedTypesTest.java:169)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_1ypcex07l4(ParameterizedTypesTest.java:169)
+	at com.google.gson.functional.ParameterizedTypesTest.testVariableTypeFieldsAndGenericArraysSerialization(ParameterizedTypesTest.java:161)
+
+testVariableTypeFieldsAndGenericArraysDeserialization(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$12.<init>(ParameterizedTypesTest.java:186)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_1v1nr0b7lf(ParameterizedTypesTest.java:186)
+	at com.google.gson.functional.ParameterizedTypesTest.testVariableTypeFieldsAndGenericArraysDeserialization(ParameterizedTypesTest.java:178)
+
+testVariableTypeDeserialization(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$13.<init>(ParameterizedTypesTest.java:196)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_1pscamm7lr(ParameterizedTypesTest.java:196)
+	at com.google.gson.functional.ParameterizedTypesTest.testVariableTypeDeserialization(ParameterizedTypesTest.java:195)
+
+testVariableTypeArrayDeserialization(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$14.<init>(ParameterizedTypesTest.java:208)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_14fgc4b7lx(ParameterizedTypesTest.java:208)
+	at com.google.gson.functional.ParameterizedTypesTest.testVariableTypeArrayDeserialization(ParameterizedTypesTest.java:205)
+
+testParameterizedTypeWithVariableTypeDeserialization(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$15.<init>(ParameterizedTypesTest.java:222)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_1p6zn3b7m4(ParameterizedTypesTest.java:222)
+	at com.google.gson.functional.ParameterizedTypesTest.testParameterizedTypeWithVariableTypeDeserialization(ParameterizedTypesTest.java:217)
+
+testParameterizedTypeGenericArraysSerialization(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$16.<init>(ParameterizedTypesTest.java:238)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_1o9f1h57md(ParameterizedTypesTest.java:238)
+	at com.google.gson.functional.ParameterizedTypesTest.testParameterizedTypeGenericArraysSerialization(ParameterizedTypesTest.java:232)
+
+testParameterizedTypeGenericArraysDeserialization(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$17.<init>(ParameterizedTypesTest.java:252)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_1k6g92y7mm(ParameterizedTypesTest.java:252)
+	at com.google.gson.functional.ParameterizedTypesTest.testParameterizedTypeGenericArraysDeserialization(ParameterizedTypesTest.java:246)
+
+testDeepParameterizedTypeDeserialization(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$18.<init>(ParameterizedTypesTest.java:498)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_1dlclvl7si(ParameterizedTypesTest.java:498)
+	at com.google.gson.functional.ParameterizedTypesTest.testDeepParameterizedTypeDeserialization(ParameterizedTypesTest.java:496)
+
+testParameterizedTypesSerialization(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$1.<init>(ParameterizedTypesTest.java:56)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_1myj6lh7jd(ParameterizedTypesTest.java:56)
+	at com.google.gson.functional.ParameterizedTypesTest.testParameterizedTypesSerialization(ParameterizedTypesTest.java:54)
+
+testParameterizedTypeDeserialization(com.google.gson.functional.ParameterizedTypesTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.ParameterizedTypesTest$2.<init>(ParameterizedTypesTest.java:64)
+	at com.google.gson.functional.ParameterizedTypesTest.__CLR4_4_13lko237ji(ParameterizedTypesTest.java:64)
+	at com.google.gson.functional.ParameterizedTypesTest.testParameterizedTypeDeserialization(ParameterizedTypesTest.java:61)
+
+Running com.google.gson.functional.PrettyPrintingTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.functional.CustomTypeAdaptersTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
+Running com.google.gson.functional.ReadersWritersTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.CircularReferenceTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+Running com.google.gson.functional.RawSerializationTest
+Tests run: 5, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.008 sec <<< FAILURE!
+testThreeLevelParameterizedObject(com.google.gson.functional.RawSerializationTest)  Time elapsed: 0.003 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.RawSerializationTest$3.<init>(RawSerializationTest.java:82)
+	at com.google.gson.functional.RawSerializationTest.__CLR4_4_1tkc7qx893(RawSerializationTest.java:82)
+	at com.google.gson.functional.RawSerializationTest.testThreeLevelParameterizedObject(RawSerializationTest.java:75)
+
+testParameterizedObject(com.google.gson.functional.RawSerializationTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.RawSerializationTest$1.<init>(RawSerializationTest.java:60)
+	at com.google.gson.functional.RawSerializationTest.__CLR4_4_1vssfsd88p(RawSerializationTest.java:60)
+	at com.google.gson.functional.RawSerializationTest.testParameterizedObject(RawSerializationTest.java:53)
+
+testTwoLevelParameterizedObject(com.google.gson.functional.RawSerializationTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.RawSerializationTest$2.<init>(RawSerializationTest.java:71)
+	at com.google.gson.functional.RawSerializationTest.__CLR4_4_1aohzxx88w(RawSerializationTest.java:71)
+	at com.google.gson.functional.RawSerializationTest.testTwoLevelParameterizedObject(RawSerializationTest.java:64)
+
+Running com.google.gson.functional.CustomDeserializerTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.gson.functional.TypeAdapterPrecedenceTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.functional.MoreSpecificTypeSerializationTest
+Tests run: 6, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.011 sec <<< FAILURE!
+testParameterizedSubclassFields(com.google.gson.functional.MoreSpecificTypeSerializationTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:72)
+	at com.google.gson.reflect.TypeToken.get(TypeToken.java:296)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:119)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:72)
+	at com.google.gson.Gson.getAdapter(Gson.java:356)
+	at com.google.gson.Gson.toJson(Gson.java:585)
+	at com.google.gson.Gson.toJson(Gson.java:572)
+	at com.google.gson.Gson.toJson(Gson.java:527)
+	at com.google.gson.Gson.toJson(Gson.java:507)
+	at com.google.gson.functional.MoreSpecificTypeSerializationTest.__CLR4_4_1mxqxdr764(MoreSpecificTypeSerializationTest.java:79)
+	at com.google.gson.functional.MoreSpecificTypeSerializationTest.testParameterizedSubclassFields(MoreSpecificTypeSerializationTest.java:76)
+
+testListOfParameterizedSubclassFields(com.google.gson.functional.MoreSpecificTypeSerializationTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:456)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:72)
+	at com.google.gson.reflect.TypeToken.get(TypeToken.java:296)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:119)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:72)
+	at com.google.gson.Gson.getAdapter(Gson.java:356)
+	at com.google.gson.Gson.toJson(Gson.java:585)
+	at com.google.gson.Gson.toJson(Gson.java:572)
+	at com.google.gson.Gson.toJson(Gson.java:527)
+	at com.google.gson.Gson.toJson(Gson.java:507)
+	at com.google.gson.functional.MoreSpecificTypeSerializationTest.__CLR4_4_1k2jvpm769(MoreSpecificTypeSerializationTest.java:94)
+	at com.google.gson.functional.MoreSpecificTypeSerializationTest.testListOfParameterizedSubclassFields(MoreSpecificTypeSerializationTest.java:88)
+
+testMapOfParameterizedSubclassFields(com.google.gson.functional.MoreSpecificTypeSerializationTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:456)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:72)
+	at com.google.gson.reflect.TypeToken.get(TypeToken.java:296)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:119)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:72)
+	at com.google.gson.Gson.getAdapter(Gson.java:356)
+	at com.google.gson.Gson.toJson(Gson.java:585)
+	at com.google.gson.Gson.toJsonTree(Gson.java:486)
+	at com.google.gson.Gson.toJsonTree(Gson.java:465)
+	at com.google.gson.functional.MoreSpecificTypeSerializationTest.__CLR4_4_1ly3lio76h(MoreSpecificTypeSerializationTest.java:109)
+	at com.google.gson.functional.MoreSpecificTypeSerializationTest.testMapOfParameterizedSubclassFields(MoreSpecificTypeSerializationTest.java:103)
+
+Running com.google.gson.functional.InterfaceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.functional.TypeVariableTest
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.005 sec <<< FAILURE!
+testAdvancedTypeVariables(com.google.gson.functional.TypeVariableTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:72)
+	at com.google.gson.reflect.TypeToken.get(TypeToken.java:296)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:126)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:72)
+	at com.google.gson.Gson.getAdapter(Gson.java:356)
+	at com.google.gson.Gson.toJson(Gson.java:585)
+	at com.google.gson.Gson.toJson(Gson.java:572)
+	at com.google.gson.Gson.toJson(Gson.java:527)
+	at com.google.gson.Gson.toJson(Gson.java:507)
+	at com.google.gson.functional.TypeVariableTest.__CLR4_4_1ht8fsg8ms(TypeVariableTest.java:47)
+	at com.google.gson.functional.TypeVariableTest.testAdvancedTypeVariables(TypeVariableTest.java:38)
+
+testTypeVariablesViaTypeParameter(com.google.gson.functional.TypeVariableTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.TypeVariableTest$1.<init>(TypeVariableTest.java:57)
+	at com.google.gson.functional.TypeVariableTest.__CLR4_4_1kpv6rx8n4(TypeVariableTest.java:57)
+	at com.google.gson.functional.TypeVariableTest.testTypeVariablesViaTypeParameter(TypeVariableTest.java:53)
+
+testBasicTypeVariables(com.google.gson.functional.TypeVariableTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:72)
+	at com.google.gson.reflect.TypeToken.get(TypeToken.java:296)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:126)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:72)
+	at com.google.gson.Gson.getAdapter(Gson.java:356)
+	at com.google.gson.Gson.toJson(Gson.java:585)
+	at com.google.gson.Gson.toJson(Gson.java:572)
+	at com.google.gson.Gson.toJson(Gson.java:527)
+	at com.google.gson.Gson.toJson(Gson.java:507)
+	at com.google.gson.functional.TypeVariableTest.__CLR4_4_1gqpxp48nc(TypeVariableTest.java:67)
+	at com.google.gson.functional.TypeVariableTest.testBasicTypeVariables(TypeVariableTest.java:64)
+
+Running com.google.gson.functional.ExclusionStrategyFunctionalTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.gson.functional.DefaultTypeAdaptersTest
+Tests run: 64, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 sec
+Running com.google.gson.functional.NullObjectAndFieldTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.google.gson.functional.MapAsArrayTypeAdapterTest
+Tests run: 5, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.009 sec <<< FAILURE!
+testMapWithTypeVariableSerialization(com.google.gson.functional.MapAsArrayTypeAdapterTest)  Time elapsed: 0.002 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.MapAsArrayTypeAdapterTest$7.<init>(MapAsArrayTypeAdapterTest.java:103)
+	at com.google.gson.functional.MapAsArrayTypeAdapterTest.__CLR4_4_18pmqwf6w4(MapAsArrayTypeAdapterTest.java:103)
+	at com.google.gson.functional.MapAsArrayTypeAdapterTest.testMapWithTypeVariableSerialization(MapAsArrayTypeAdapterTest.java:99)
+
+testMapWithTypeVariableDeserialization(com.google.gson.functional.MapAsArrayTypeAdapterTest)  Time elapsed: 0.001 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.MapAsArrayTypeAdapterTest$8.<init>(MapAsArrayTypeAdapterTest.java:111)
+	at com.google.gson.functional.MapAsArrayTypeAdapterTest.__CLR4_4_16i6j9s6wb(MapAsArrayTypeAdapterTest.java:111)
+	at com.google.gson.functional.MapAsArrayTypeAdapterTest.testMapWithTypeVariableDeserialization(MapAsArrayTypeAdapterTest.java:108)
+
+Running com.google.gson.functional.InstanceCreatorTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.functional.PrimitiveCharacterTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.functional.MapTest
+Tests run: 41, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.043 sec <<< FAILURE!
+testParameterizedMapSubclassSerialization(com.google.gson.functional.MapTest)  Time elapsed: 0.003 sec  <<< ERROR!
+java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.MapTest$14.<init>(MapTest.java:185)
+	at com.google.gson.functional.MapTest.__CLR4_4_14ewsmi6zd(MapTest.java:185)
+	at com.google.gson.functional.MapTest.testParameterizedMapSubclassSerialization(MapTest.java:182)
+
+Running com.google.gson.functional.FieldNamingTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.VersioningTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.functional.DelegateTypeAdapterTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.functional.InheritanceTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.google.gson.functional.TypeHierarchyAdapterTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.functional.CustomSerializerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.StreamingTypeAdaptersTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Running com.google.gson.functional.EscapingTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.CollectionTest
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
+Running com.google.gson.functional.JsonTreeTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.ArrayTest
+Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.google.gson.functional.PrintFormattingTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.functional.StringTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.functional.UncategorizedTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.functional.JsonParserTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.functional.NamingPolicyTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.functional.ConcurrencyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+Running com.google.gson.functional.PrimitiveTest
+Tests run: 97, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec
+Running com.google.gson.functional.TreeTypeAdaptersTest
+org.apache.maven.surefire.util.SurefireReflectionException: java.lang.reflect.InvocationTargetException; nested exception is java.lang.reflect.InvocationTargetException: null
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.maven.surefire.testset.TestSetFailedException: com.google.gson.functional.TreeTypeAdaptersTest; nested exception is java.lang.ExceptionInInitializerError: null
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:111)
+	at org.apache.maven.surefire.junit.JUnit3Provider.executeTestSet(JUnit3Provider.java:121)
+	at org.apache.maven.surefire.junit.JUnit3Provider.invoke(JUnit3Provider.java:98)
+	... 9 more
+Caused by: java.lang.ExceptionInInitializerError
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at junit.framework.TestSuite.createTest(TestSuite.java:54)
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:280)
+	at junit.framework.TestSuite.<init>(TestSuite.java:140)
+	at sun.reflect.GeneratedConstructorAccessor2.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.maven.surefire.common.junit3.JUnit3Reflector.constructTestObject(JUnit3Reflector.java:127)
+	at org.apache.maven.surefire.junit.JUnitTestSet.execute(JUnitTestSet.java:70)
+	... 11 more
+Caused by: java.lang.IllegalArgumentException
+	at com.google.gson.internal.$Gson$Preconditions.checkArgument($Gson$Preconditions.java:42)
+	at com.google.gson.internal.$Gson$Types$ParameterizedTypeImpl.<init>($Gson$Types.java:447)
+	at com.google.gson.internal.$Gson$Types.canonicalize($Gson$Types.java:101)
+	at com.google.gson.reflect.TypeToken.getSuperclassTypeParameter(TypeToken.java:87)
+	at com.google.gson.reflect.TypeToken.<init>(TypeToken.java:62)
+	at com.google.gson.functional.TreeTypeAdaptersTest$1.<init>(TreeTypeAdaptersTest.java:47)
+	at com.google.gson.functional.TreeTypeAdaptersTest.<clinit>(TreeTypeAdaptersTest.java:46)
+	... 23 more
+
+Results :
+
+Tests in error: 
+  testTypesWithMultipleParametersSerialization(com.google.gson.functional.ParameterizedTypesTest)
+  testTypesWithMultipleParametersDeserialization(com.google.gson.functional.ParameterizedTypesTest)
+  testParameterizedTypeWithCustomSerializer(com.google.gson.functional.ParameterizedTypesTest)
+  testParameterizedTypesWithCustomDeserializer(com.google.gson.functional.ParameterizedTypesTest)
+  testParameterizedTypesWithWriterSerialization(com.google.gson.functional.ParameterizedTypesTest)
+  testParameterizedTypeWithReaderDeserialization(com.google.gson.functional.ParameterizedTypesTest)
+  testVariableTypeFieldsAndGenericArraysSerialization(com.google.gson.functional.ParameterizedTypesTest)
+  testVariableTypeFieldsAndGenericArraysDeserialization(com.google.gson.functional.ParameterizedTypesTest)
+  testVariableTypeDeserialization(com.google.gson.functional.ParameterizedTypesTest)
+  testVariableTypeArrayDeserialization(com.google.gson.functional.ParameterizedTypesTest)
+  testParameterizedTypeWithVariableTypeDeserialization(com.google.gson.functional.ParameterizedTypesTest)
+  testParameterizedTypeGenericArraysSerialization(com.google.gson.functional.ParameterizedTypesTest)
+  testParameterizedTypeGenericArraysDeserialization(com.google.gson.functional.ParameterizedTypesTest)
+  testDeepParameterizedTypeDeserialization(com.google.gson.functional.ParameterizedTypesTest)
+  testParameterizedTypesSerialization(com.google.gson.functional.ParameterizedTypesTest)
+  testParameterizedTypeDeserialization(com.google.gson.functional.ParameterizedTypesTest)
+  testThreeLevelParameterizedObject(com.google.gson.functional.RawSerializationTest)
+  testParameterizedObject(com.google.gson.functional.RawSerializationTest)
+  testTwoLevelParameterizedObject(com.google.gson.functional.RawSerializationTest)
+  testParameterizedSubclassFields(com.google.gson.functional.MoreSpecificTypeSerializationTest)
+  testListOfParameterizedSubclassFields(com.google.gson.functional.MoreSpecificTypeSerializationTest)
+  testMapOfParameterizedSubclassFields(com.google.gson.functional.MoreSpecificTypeSerializationTest)
+  testAdvancedTypeVariables(com.google.gson.functional.TypeVariableTest)
+  testTypeVariablesViaTypeParameter(com.google.gson.functional.TypeVariableTest)
+  testBasicTypeVariables(com.google.gson.functional.TypeVariableTest)
+  testMapWithTypeVariableSerialization(com.google.gson.functional.MapAsArrayTypeAdapterTest)
+  testMapWithTypeVariableDeserialization(com.google.gson.functional.MapAsArrayTypeAdapterTest)
+  testParameterizedMapSubclassSerialization(com.google.gson.functional.MapTest)
+
+Tests run: 857, Failures: 0, Errors: 28, Skipped: 0
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  8.047 s
+[[1;34mINFO[m] Finished at: 2021-01-05T05:19:55+01:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.12.4:test[m [1m(default-test)[m on project [36mgson[m: [1;31mExecution default-test of goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test failed: The forked VM terminated without saying properly goodbye. VM crash or System.exit called ?[m -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/PluginExecutionException
+Writing HTML report to '/tmp/v2/gson/target/clover/report'
+Done. Processed 9 packages in 2002ms (222ms per package).
+[INFO] /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
+[INFO] /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
+[INFO] com.google.gson.internal.$Gson$Types:[444, 444] are modified.
+[INFO] com.google.gson.internal.$Gson$Types:444 covered.
+[INFO] com.google.gson.internal.$Gson$Types:[444, 444, 446, 447, 444, 447, 444] are modified.
+[INFO] com.google.gson.internal.$Gson$Types:446 covered.
+[INFO] com.google.gson.internal.$Gson$Types:447 covered.
+[INFO] Saving result in /tmp/v1/gson/testsThatExecuteTheChange.csv ...
+[INFO] com.google.gson.functional.ArrayTest;testArrayOfCollectionSerialization;testArrayOfCollectionDeserialization
+com.google.gson.functional.NullObjectAndFieldTest;testExplicitSerializationOfNullStringMembers;testPrintPrintingObjectWithNulls;testExplicitSerializationOfNullArrayMembers;testExplicitSerializationOfNullCollectionMembers
+com.google.gson.functional.MoreSpecificTypeSerializationTest;testMapOfSubclassFields;testListOfSubclassFields;testListOfParameterizedSubclassFields;testMapOfParameterizedSubclassFields;testParameterizedSubclassFields
+com.google.gson.functional.PrimitiveTest;testStringsAsBooleans
+com.google.gson.functional.CustomTypeAdaptersTest;testCustomAdapterInvokedForCollectionElementSerializationWithType;testCustomAdapterInvokedForCollectionElementDeserialization;testCustomAdapterInvokedForMapElementSerializationWithType;testCustomAdapterInvokedForMapElementDeserialization;testCustomAdapterInvokedForCollectionElementSerialization
+com.google.gson.functional.MapTest;testMapSerializationWithNullValueButSerializeNulls;testInterfaceTypeMapWithSerializer;testNumberKeyDeserialization;testMapStandardSubclassDeserialization;testGeneralMapField;testMapSerializationWithNullValuesSerialized;testMapDeserializationWithWildcardValues;testSerializeMapOfMaps;testMapDeserializationWithIntegerKeys;testMapSerializationWithNullKey;testReadMapsWithEmptyStringKey;testMapDeserializationWithNullKey;testComplexKeysSerialization;testComplexKeysDeserialization;testMapOfMapDeserialization;testStringKeyDeserialization;testMapSerialization;testMapDeserializationWithNullValue;testMapSerializationEmpty;testInterfaceTypeMap;testMapSubclassSerialization;testMapNamePromotionWithJsonElementReader;testMapDeserializationWithDuplicateKeys;testMapSerializationWithNullValue;testMapSerializationWithIntegerKeys;testSortedMap;testDeerializeMapOfMaps;testMapSubclassDeserialization;testMapDeserialization;testMapDeserializationEmpty;testMapSerializationWithNullValues;testMapSerializationWithWildcardValues;testCustomSerializerForSpecificMapType;testParameterizedMapSubclassSerialization;testHashMapDeserialization;testBooleanKeyDeserialization
+com.google.gson.functional.InheritanceTest;testSubInterfacesOfCollectionDeserialization;testSubInterfacesOfCollectionSerialization;testClassWithBaseCollectionFieldSerialization
+com.google.gson.functional.CollectionTest;testWildcardPrimitiveCollectionDeserilaization;testTopLevelCollectionOfIntegersSerialization;testNullsInListSerialization;testWildcardPrimitiveCollectionSerilaization;testNullsInListDeserialization;testQueueSerialization;testSetSerialization;testCollectionOfStringsSerialization;testCollectionOfStringsDeserialization;testLinkedListDeserialization;testRawCollectionSerialization;testWildcardCollectionField;testQueueDeserialization;testRawCollectionOfIntegersSerialization;testSetDeserialization;testCollectionOfObjectWithNullSerialization;testUserCollectionTypeAdapter;testFieldIsArrayList;testTopLevelCollectionOfIntegersDeserialization;testTopLevelListOfIntegerCollectionsDeserialization;testCollectionOfObjectSerialization;testLinkedListSerialization;testCollectionOfBagOfPrimitivesSerialization
+com.google.gson.functional.DefaultTypeAdaptersTest;testTreeSetDeserialization;testDateSerializationInCollection;testSetSerialization;testNullSerialization;testTreeSetSerialization
+com.google.gson.functional.EscapingTest;testEscapeAllHtmlCharacters
+com.google.gson.functional.UncategorizedTest;testTrailingWhitespace
+com.google.gson.functional.ObjectTest;testEmptyCollectionInAnObjectSerialization;testSingletonLists;testDateAsMapObjectField;testEmptyCollectionInAnObjectDeserialization;testTruncatedDeserialization
+com.google.gson.functional.TreeTypeAdaptersTest;testDeserializeId;testSerializeId
+com.google.gson.functional.TypeVariableTest;testBasicTypeVariables;testAdvancedTypeVariables;testTypeVariablesViaTypeParameter
+com.google.gson.functional.ParameterizedTypesTest;testParameterizedTypeWithReaderDeserialization;testVariableTypeFieldsAndGenericArraysSerialization;testTypesWithMultipleParametersSerialization;testParameterizedTypeGenericArraysSerialization;testParameterizedTypeWithVariableTypeDeserialization;testVariableTypeArrayDeserialization;testParameterizedTypeDeserialization;testParameterizedTypeWithCustomSerializer;testParameterizedTypeGenericArraysDeserialization;testVariableTypeFieldsAndGenericArraysDeserialization;testVariableTypeDeserialization;testParameterizedTypesWithWriterSerialization;testDeepParameterizedTypeDeserialization;testParameterizedTypesSerialization;testTypesWithMultipleParametersDeserialization;testParameterizedTypesWithCustomDeserializer
+com.google.gson.ParameterizedTypeTest;testNotEquals;testOurTypeFunctionality
+com.google.gson.MixedStreamTest;testWriteLenient;testReadClosed;testWriteHtmlSafe
+com.google.gson.functional.EnumTest;testEnumSubclass;testEnumSet;testEnumSubclassAsParameterizedType;testCollectionOfEnumsDeserialization;testEnumSubclassWithRegisteredTypeAdapter;testCollectionOfEnumsSerialization
+com.google.gson.functional.RawSerializationTest;testParameterizedObject;testCollectionOfObjects;testThreeLevelParameterizedObject;testCollectionOfPrimitives;testTwoLevelParameterizedObject
+com.google.gson.functional.DelegateTypeAdapterTest;testDelegateInvoked
+com.google.gson.functional.PrintFormattingTest;testCompactFormattingLeavesNoWhiteSpace
+com.google.gson.functional.StreamingTypeAdaptersTest;testNullSafe;testSerializeWithCustomTypeAdapter;testDeserializeWithCustomTypeAdapter
+com.google.gson.functional.InstanceCreatorTest;testInstanceCreatorForCollectionType;testInstanceCreatorForParametrizedType
+com.google.gson.functional.ReadersWritersTest;testTypeMismatchThrowsJsonSyntaxExceptionForStrings;testTypeMismatchThrowsJsonSyntaxExceptionForReaders
+com.google.gson.functional.JsonParserTest;testExtraCommasInMaps;testExtraCommasInArrays
+com.google.gson.functional.PrettyPrintingTest;testEmptyMapField;testPrettyPrintList;testPrettyPrintListOfPrimitiveArrays
+com.google.gson.functional.CircularReferenceTest;testDirectedAcyclicGraphDeserialization;testCircularSerialization;testDirectedAcyclicGraphSerialization
+com.google.gson.DefaultMapJsonSerializerTest;testNonEmptyMapSerialization;testEmptyMapSerialization
+com.google.gson.functional.MapAsArrayTypeAdapterTest;testTwoTypesCollapseToOneDeserialize;testMultipleEnableComplexKeyRegistrationHasNoEffect;testMapWithTypeVariableDeserialization;testSerializeComplexMapWithTypeAdapter;testMapWithTypeVariableSerialization
+com.google.gson.FieldAttributesTest;testDeclaredTypeAndClass
+com.google.gson.ObjectTypeAdapterTest;testSerialize
+com.google.gson.reflect.TypeTokenTest;testIsAssignableFromWithNestedWildcards;testIsAssignableFromWithBasicWildcards;testIsAssignableFromWithTypeParameters
+com.google.gson.GenericArrayTypeTest;testNotEquals;testOurTypeFunctionality
+com.google.gson.JavaSerializationTest;testNumberIsSerializable;testMapIsSerializable;testListIsSerializable
+com.google.gson.CommentsTest;testParseComments
+[INFO] Writing Coverage in /tmp/v1/gson/testsThatExecuteTheChange_coverage.csv
+[INFO] com.google.gson.internal.$Gson$Types;3;3
+
+[INFO] total;3;3
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  26.198 s
+[INFO] Finished at: 2021-01-05T05:19:59+01:00
+[INFO] ------------------------------------------------------------------------
