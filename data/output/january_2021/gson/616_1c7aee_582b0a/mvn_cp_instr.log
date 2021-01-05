@@ -1,0 +1,129 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.google.code.gson:gson >----------------------
+[INFO] Building Gson 2.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gson ---
+[INFO] Deleting /tmp/v1/gson/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ gson ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/gson/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ gson ---
+[INFO] Compiling 64 source files to /tmp/v1/gson/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/gson/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ gson ---
+[INFO] Compiling 76 source files to /tmp/v1/gson/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gson ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:build-classpath (default-cli) @ gson ---
+[INFO] Skipped writing classpath file '/tmp/v1/gson/classpath'.  No changes found.
+[INFO] 
+[INFO] --- diff-jjoules:0.0.1-SNAPSHOT:instrument (default-cli) @ gson ---
+[INFO] Running on:
+[INFO] /tmp/v1/gson
+[INFO] /tmp/v2/gson/
+[INFO] Enable JUnit4 mode
+[INFO] Configuration{pathToFirstVersion='/tmp/v1/gson', pathToSecondVersion='/tmp/v2/gson/', pathToTestListAsCSV='/tmp/v1/gson/testsThatExecuteTheChange.csv', classpath=[/home/spino/.m2/repository/junit/junit/3.8.2/junit-3.8.2.jar], junit4=true}
+[INFO] com.google.gson.internal.bind.JsonElementReaderTest:[testStrings, testNumbers, testNulls, testArray, testNumbersFromStrings, testWrongType, testLenientNansAndInfinities, testNestedArrays, testStrictNansAndInfinities, testEmptyArray, testStringsFromNumbers, testObject, testNestedObjects, testEarlyClose, testEmptyObject, testBooleans, testSkipValue]
+com.google.gson.functional.MapTest:[testMapNamePromotionWithJsonElementReader]
+com.google.gson.functional.JsonParserTest:[testChangingCustomTreeAndDeserializing]
+com.google.gson.JsonParserTest:[testParseMixedArray, testParseString, testParseUnquotedMultiWordStringFails, testParseEmptyWhitespaceInput, testParseEmptyString, testParseReader, testParseUnquotedSingleWordStringFails, testParseUnquotedStringArrayFails]
+com.google.gson.JsonObjectTest:[testReadPropertyWithEmptyStringName]
+[INFO] Instrument version before commit...
+[INFO] Run on /tmp/v1/gson
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit4.JJoulesProcessor
+Processing com.google.gson.functional.JsonParserTest#testChangingCustomTreeAndDeserializing
+Processing com.google.gson.functional.MapTest#testMapNamePromotionWithJsonElementReader
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNumbers
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testLenientNansAndInfinities
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testStrictNansAndInfinities
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNumbersFromStrings
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testStringsFromNumbers
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testBooleans
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNulls
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testStrings
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testArray
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testObject
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testEmptyArray
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNestedArrays
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNestedObjects
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testEmptyObject
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testSkipValue
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testWrongType
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testEarlyClose
+Processing com.google.gson.JsonObjectTest#testReadPropertyWithEmptyStringName
+Processing com.google.gson.JsonParserTest#testParseUnquotedStringArrayFails
+Processing com.google.gson.JsonParserTest#testParseString
+Processing com.google.gson.JsonParserTest#testParseEmptyString
+Processing com.google.gson.JsonParserTest#testParseEmptyWhitespaceInput
+Processing com.google.gson.JsonParserTest#testParseUnquotedSingleWordStringFails
+Processing com.google.gson.JsonParserTest#testParseUnquotedMultiWordStringFails
+Processing com.google.gson.JsonParserTest#testParseMixedArray
+Processing com.google.gson.JsonParserTest#testParseReader
+[INFO] Printing com.google.gson.functional.JsonParserTest to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonParserTest.java
+[INFO] Printing com.google.gson.JsonParserTest to /tmp/v1/gson/src/test/java//com/google/gson/JsonParserTest.java
+[INFO] Printing com.google.gson.JsonObjectTest to /tmp/v1/gson/src/test/java//com/google/gson/JsonObjectTest.java
+[INFO] Printing com.google.gson.functional.MapTest to /tmp/v1/gson/src/test/java//com/google/gson/functional/MapTest.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v1/gson/pom.xml
+[INFO] Output new POM file in /tmp/v1/gson/pom.xml
+[INFO] Instrument version after commit...
+[INFO] Run on /tmp/v2/gson/
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit4.JJoulesProcessor
+Processing com.google.gson.functional.JsonParserTest#testChangingCustomTreeAndDeserializing
+Processing com.google.gson.functional.MapTest#testMapNamePromotionWithJsonElementReader
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNumbers
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testLenientNansAndInfinities
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testStrictNansAndInfinities
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNumbersFromStrings
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testStringsFromNumbers
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testBooleans
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNulls
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testStrings
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testArray
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testObject
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testEmptyArray
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNestedArrays
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNestedObjects
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testEmptyObject
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testSkipValue
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testWrongType
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testEarlyClose
+Processing com.google.gson.JsonObjectTest#testReadPropertyWithEmptyStringName
+Processing com.google.gson.JsonParserTest#testParseUnquotedStringArrayFails
+Processing com.google.gson.JsonParserTest#testParseString
+Processing com.google.gson.JsonParserTest#testParseEmptyString
+Processing com.google.gson.JsonParserTest#testParseEmptyWhitespaceInput
+Processing com.google.gson.JsonParserTest#testParseUnquotedSingleWordStringFails
+Processing com.google.gson.JsonParserTest#testParseUnquotedMultiWordStringFails
+Processing com.google.gson.JsonParserTest#testParseMixedArray
+Processing com.google.gson.JsonParserTest#testParseReader
+[INFO] Printing com.google.gson.functional.JsonParserTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonParserTest.java
+[INFO] Printing com.google.gson.JsonParserTest to /tmp/v2/gson//src/test/java//com/google/gson/JsonParserTest.java
+[INFO] Printing com.google.gson.functional.JsonParserTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonParserTest.java
+[INFO] Printing com.google.gson.JsonParserTest to /tmp/v2/gson//src/test/java//com/google/gson/JsonParserTest.java
+[INFO] Printing com.google.gson.JsonObjectTest to /tmp/v2/gson//src/test/java//com/google/gson/JsonObjectTest.java
+[INFO] Printing com.google.gson.functional.MapTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/MapTest.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v2/gson//pom.xml
+[INFO] Output new POM file in /tmp/v2/gson//pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.847 s
+[INFO] Finished at: 2021-01-05T17:27:02+01:00
+[INFO] ------------------------------------------------------------------------
