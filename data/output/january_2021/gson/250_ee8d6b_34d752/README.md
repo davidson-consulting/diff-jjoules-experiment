@@ -10,51 +10,49 @@ https://github.com/google/gson/commit/34d752
 ![](./gson_delta_energy_0_v.png)
 
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy |
-| --- | --- | --- | --- |
-| 0 | 35307.89749311493 | 54062.0803384147 | 18754.182845299772 |
-| 1 | 98031.51149004805 | 54890.82383410778 | -43140.68765594027 |
-| 2 | 144770.085056233 | 957303.8981029589 | 812533.8130467259 |
-| 3 | 270935.9467156746 | 304697.25159585034 | 33761.30488017574 |
-| 4 | 31584.40449597512 | 39136.278013193834 | 7551.873517218715 |
-| 5 | 35934.24452076726 | 36087.53670446114 | 153.292183693884 |
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
+| --- | --- | --- | --- | --- | --- |
+| 0 | 34459.55882352941 | 82602.44444444444 | 48142.885620915025 | 3852.818465603166 | 222638.20968501098 |
+| 1 | 56003.333333333336 | 38849.77272727273 | -17153.560606060608 | 155726.46345754518 | 16183.612053083536 |
+| 2 | 59502.729166666664 | 61698.85567010309 | 2196.126503436426 | 63095.06338495628 | 58975.80140481343 |
+| 3 | 73745.0303030303 | 75843.65656565657 | 2098.6262626262615 | 24502.723465800813 | 41060.163583432244 |
+| 4 | 443907.6060606061 | 434413.24242424243 | -9494.363636363647 | 679992.9201044211 | 694492.6857796387 |
+| 5 | 262975.8484848485 | 271729.64646464644 | 8753.797979797935 | 63545.85467782001 | 58826.247549317624 |
 
 ## Delta Duration per test method
-
-![](./gson_delta_duration_0_v.png)
 
 
 | ID | DurationV1 | DurationsV2 | DeltaDuration |
 | --- | --- | --- | --- |
-| 0 | 1787611.2791954894 | 2263639.276886397 | 476027.9976909077 |
-| 1 | 3268775.328262713 | 2005939.115784458 | -1262836.212478255 |
-| 2 | 4840110.619953005 | 29583951.484066766 | 24743840.864113763 |
-| 3 | 8102352.263087474 | 9162346.371206114 | 1059994.1081186403 |
-| 4 | 1306369.3833792075 | 813073.7614461861 | -493295.62193302135 |
-| 5 | 1332711.524612323 | 950808.7957672869 | -381902.728845036 |
+| 0 | 883704.6470588235 | 2314783.8055555555 | 1431079.158496732 |
+| 1 | 1787832.1228070175 | 1180351.7575757576 | -607480.36523126 |
+| 2 | 2307744.1458333335 | 2381717.2989690723 | 73973.1531357388 |
+| 3 | 2720089.5757575757 | 2758458.8282828284 | 38369.252525252756 |
+| 4 | 13293633.868686868 | 12638282.161616161 | -655351.7070707064 |
+| 5 | 8042992.141414141 | 8087677.363636363 | 44685.222222222015 |
 
 ## Misc.
 
 | ID | Test Class | Test Method |
 | --- | --- | --- |
-| 0 | com.google.gson.functional.ParameterizedTypesTest | testParameterizedTypeWithCustomSerializer |
-| 1 | com.google.gson.functional.CustomDeserializerTest | testJsonTypeFieldBasedDeserialization |
-| 2 | com.google.gson.functional.TypeHierarchyAdapterTest | testTypeHierarchy |
-| 3 | com.google.gson.functional.CircularReferenceTest | testSelfReferenceCustomHandlerSerialization |
-| 4 | com.google.gson.functional.NullObjectAndFieldTest | testCustomTypeAdapterPassesNullSerialization |
-| 5 | com.google.gson.functional.NullObjectAndFieldTest | testCustomTypeAdapterPassesNullDesrialization |
+| 0 | com.google.gson.functional.NullObjectAndFieldTest | testCustomTypeAdapterPassesNullSerialization |
+| 1 | com.google.gson.functional.NullObjectAndFieldTest | testCustomTypeAdapterPassesNullDesrialization |
+| 2 | com.google.gson.functional.ParameterizedTypesTest | testParameterizedTypeWithCustomSerializer |
+| 3 | com.google.gson.functional.CustomDeserializerTest | testJsonTypeFieldBasedDeserialization |
+| 4 | com.google.gson.functional.TypeHierarchyAdapterTest | testTypeHierarchy |
+| 5 | com.google.gson.functional.CircularReferenceTest | testSelfReferenceCustomHandlerSerialization |
 
 
 
 
 | Test | IterationV1 | IterationV2 | DeltaIteration |
 | --- | --- | --- | --- |
-| 0 | 96 | 97 | 1 |
-| 1 | 99 | 99 | 0 |
-| 2 | 99 | 99 | 0 |
+| 0 | 34 | 36 | 2 |
+| 1 | 57 | 66 | 9 |
+| 2 | 96 | 97 | 1 |
 | 3 | 99 | 99 | 0 |
-| 4 | 34 | 36 | 2 |
-| 5 | 57 | 66 | 9 |
+| 4 | 99 | 99 | 0 |
+| 5 | 99 | 99 | 0 |
 
 
 

@@ -1,1382 +1,1612 @@
 {
-    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomAdapterInvokedForCollectionElementDeserialization": {
-        "energy": 45225.999535804876,
-        "duration": 1235871.679744287,
-        "dram": 4449.850263977602,
-        "iteration": 69
+    "com.google.gson.functional.TypeAdapterPrecedenceTest-testStreamingFollowedByNonstreaming": {
+        "energy": 42713.318181818184,
+        "duration": 464528.95454545453,
+        "dram": 3150.5,
+        "iteration": 22,
+        "stdev": 3380.8747306303553
     },
     "com.google.gson.functional.StreamingTypeAdaptersTest-testNullSafe": {
-        "energy": 71273.97375520972,
-        "duration": 1697424.7839681692,
-        "dram": 9694.57032895105,
-        "iteration": 94
+        "energy": 69888.94680851063,
+        "duration": 1833438.6595744682,
+        "dram": 6524.627659574468,
+        "iteration": 94,
+        "stdev": 34614.05100391206
     },
     "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest-testJsonAdapterInvoked": {
-        "energy": 76807.74649569356,
-        "duration": 1650284.9181784706,
-        "dram": 7151.039148616655,
-        "iteration": 99
-    },
-    "com.google.gson.functional.ExclusionStrategyFunctionalTest-testExclusionStrategySerializationDoesNotImpactSerialization": {
-        "energy": 44162.60024063557,
-        "duration": 604004.4742602844,
-        "dram": 4166.74002431758,
-        "iteration": 36
+        "energy": 74841.1313131313,
+        "duration": 2041159.6363636365,
+        "dram": 6872.676767676768,
+        "iteration": 99,
+        "stdev": 36348.910450553434
     },
     "com.google.gson.MixedStreamTest-testReaderDoesNotMutateState": {
-        "energy": 45934.08597025648,
-        "duration": 417620.1219442561,
-        "dram": 3073.929795283824,
-        "iteration": 28
+        "energy": 44636.21428571428,
+        "duration": 498202.1785714286,
+        "dram": 2810.714285714286,
+        "iteration": 28,
+        "stdev": 2884.730444910914
     },
     "com.google.gson.functional.InstanceCreatorTest-testInstanceCreatorForParametrizedType": {
-        "energy": 88244.73196940991,
-        "duration": 2367047.941778177,
-        "dram": 7945.625776254044,
-        "iteration": 99
+        "energy": 84673.41414141415,
+        "duration": 2215920.131313131,
+        "dram": 7965.444444444444,
+        "iteration": 99,
+        "stdev": 34465.316577218335
     },
     "com.google.gson.functional.DefaultTypeAdaptersTest-testDateSerializationWithPatternNotOverridenByTypeAdapter": {
-        "energy": 41709.35064299084,
-        "duration": 1152879.7293468707,
-        "dram": 2854.687688254229,
-        "iteration": 95
+        "energy": 45338.70526315789,
+        "duration": 1282467.6,
+        "dram": 4365.936842105263,
+        "iteration": 95,
+        "stdev": 11000.794469753617
     },
     "com.google.gson.functional.JsonAdapterSerializerDeserializerTest-testJsonSerializerDeserializerBasedJsonAdapterOnFields": {
-        "energy": 112462.20333636986,
-        "duration": 2585542.2420890406,
-        "dram": 9919.118645830396,
-        "iteration": 99
-    },
-    "com.google.gson.functional.NullObjectAndFieldTest-testCustomTypeAdapterPassesNullSerialization": {
-        "energy": 40760.576332092285,
-        "duration": 430856.9542160034,
-        "dram": 3129.5897331237793,
-        "iteration": 18
-    },
-    "com.google.gson.internal.bind.RecursiveTypesResolveTest-testIssue440WeakReference": {
-        "energy": 47918.69899149849,
-        "duration": 1854582.0573227527,
-        "dram": 4330.4052829907705,
-        "iteration": 90
-    },
-    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomAdapterInvokedForMapElementDeserialization": {
-        "energy": 43844.96501212477,
-        "duration": 891526.5448530817,
-        "dram": 4148.721696557255,
-        "iteration": 64
-    },
-    "com.google.gson.functional.MapTest-testSerializeMaps": {
-        "energy": 44929.393166121925,
-        "duration": 948698.1464609161,
-        "dram": 4517.903925875828,
-        "iteration": 77
-    },
-    "com.google.gson.functional.ReadersWritersTest-testReadWriteTwoObjects": {
-        "energy": 47940.30295481078,
-        "duration": 1373474.6558384323,
-        "dram": 4307.479051709617,
-        "iteration": 74
-    },
-    "com.google.gson.functional.MapTest-testInterfaceTypeMapWithSerializer": {
-        "energy": 61062.57536809185,
-        "duration": 1401588.5349767085,
-        "dram": 5913.685285393083,
-        "iteration": 99
-    },
-    "com.google.gson.GsonBuilderTest-testExcludeFieldsWithModifiers": {
-        "energy": 45833.084062113296,
-        "duration": 749813.7020163925,
-        "dram": 3613.5494694751246,
-        "iteration": 51
-    },
-    "com.google.gson.functional.DefaultTypeAdaptersTest-testDateSerializationWithPattern": {
-        "energy": 42825.6093955096,
-        "duration": 1078426.040374966,
-        "dram": 4039.747735773401,
-        "iteration": 85
-    },
-    "com.google.gson.functional.CustomDeserializerTest-testCustomDeserializerReturnsNullForArrayElementsForArrayField": {
-        "energy": 45301.331969769686,
-        "duration": 834361.8097193124,
-        "dram": 3218.824826070184,
-        "iteration": 73
-    },
-    "com.google.gson.JsonParserTest-testReadWriteTwoObjects": {
-        "energy": 49426.47063144736,
-        "duration": 842381.84920871,
-        "dram": 4572.0657944028135,
-        "iteration": 75
-    },
-    "com.google.gson.functional.NullObjectAndFieldTest-testExplicitSerializationOfNullStringMembers": {
-        "energy": 45569.73489633412,
-        "duration": 535871.2144491769,
-        "dram": 3167.6949494984,
-        "iteration": 34
-    },
-    "com.google.gson.functional.ObjectTest-testSingletonLists": {
-        "energy": 41129.88472321308,
-        "duration": 1483811.2045206307,
-        "dram": 3854.760248907768,
-        "iteration": 99
-    },
-    "com.google.gson.functional.VersioningTest-testVersionedGsonMixingSinceAndUntilDeserialization": {
-        "energy": 42331.42469215438,
-        "duration": 811384.700359174,
-        "dram": 3801.3590038259053,
-        "iteration": 42
-    },
-    "com.google.gson.functional.NamingPolicyTest-testGsonWithLowerCaseDashPolicyDeserialiation": {
-        "energy": 43388.227414818015,
-        "duration": 542533.108496103,
-        "dram": 4030.4985638461076,
-        "iteration": 31
-    },
-    "com.google.gson.functional.FieldExclusionTest-testDefaultInnerClassExclusion": {
-        "energy": 42793.30635016299,
-        "duration": 912378.8279637217,
-        "dram": 3782.9646659036007,
-        "iteration": 74
-    },
-    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomAdapterInvokedForMapElementSerializationWithType": {
-        "energy": 46473.9473597117,
-        "duration": 790084.6608726121,
-        "dram": 4782.621320890699,
-        "iteration": 56
-    },
-    "com.google.gson.functional.CustomDeserializerTest-testCustomDeserializerReturnsNull": {
-        "energy": 44249.50606309644,
-        "duration": 697204.6953024473,
-        "dram": 3971.011757251028,
-        "iteration": 71
-    },
-    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testPrimitiveFieldAnnotationTakesPrecedenceOverDefault": {
-        "energy": 44954.91882937246,
-        "duration": 1215679.9341943855,
-        "dram": 4011.1558287977978,
-        "iteration": 99
-    },
-    "com.google.gson.functional.TypeHierarchyAdapterTest-testRegisterSuperTypeFirst": {
-        "energy": 43694.510212729474,
-        "duration": 625907.4734014783,
-        "dram": 2505.2834204902856,
-        "iteration": 48
-    },
-    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomNestedSerializers": {
-        "energy": 45032.64882549498,
-        "duration": 932187.5985583905,
-        "dram": 3848.505316548659,
-        "iteration": 66
-    },
-    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testClassAnnotationAdapterFactoryTakesPrecedenceOverDefault": {
-        "energy": 51994.51613040647,
-        "duration": 1466129.0613290116,
-        "dram": 2391.519884280043,
-        "iteration": 98
-    },
-    "com.google.gson.functional.EnumTest-testEnumSubclassWithRegisteredTypeAdapter": {
-        "energy": 108576.03393235656,
-        "duration": 2450648.8183149034,
-        "dram": 10390.783430684223,
-        "iteration": 99
-    },
-    "com.google.gson.functional.VersioningTest-testVersionedUntilSerialization": {
-        "energy": 142054.01104247122,
-        "duration": 3494965.75061706,
-        "dram": 14293.197460161757,
-        "iteration": 99
-    },
-    "com.google.gson.functional.DefaultTypeAdaptersTest-testOverrideBigIntegerTypeAdapter": {
-        "energy": 49643.07305419368,
-        "duration": 1658410.4453911074,
-        "dram": 5442.66805977152,
-        "iteration": 99
-    },
-    "com.google.gson.functional.MapAsArrayTypeAdapterTest-testMultipleEnableComplexKeyRegistrationHasNoEffect": {
-        "energy": 40723.25279415098,
-        "duration": 1141436.002991657,
-        "dram": 3096.0933315407183,
-        "iteration": 69
-    },
-    "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest-testRegisteredDeserializerOverridesJsonAdapter": {
-        "energy": 82652.92502247784,
-        "duration": 1773950.9468863104,
-        "dram": 5181.511180591213,
-        "iteration": 82
-    },
-    "com.google.gson.functional.NamingPolicyTest-testGsonDuplicateNameUsingSerializedNameFieldNamingPolicySerialization": {
-        "energy": 657158.453654776,
-        "duration": 18932581.443481218,
-        "dram": 59656.797028429864,
-        "iteration": 76
-    },
-    "com.google.gson.LongSerializationPolicyTest-testStringLongSerializationIntegration": {
-        "energy": 39255.58954620361,
-        "duration": 810619.113697052,
-        "dram": 2667.5733890533447,
-        "iteration": 19
-    },
-    "com.google.gson.MixedStreamTest-testReadInvalidState": {
-        "energy": 42357.01873064041,
-        "duration": 387856.1894085407,
-        "dram": 4299.5205109119415,
-        "iteration": 22
-    },
-    "com.google.gson.functional.TypeVariableTest-testAdvancedTypeVariables": {
-        "energy": 85666.4093224016,
-        "duration": 1746885.8271503109,
-        "dram": 6415.756773054536,
-        "iteration": 99
-    },
-    "com.google.gson.functional.MapTest-testMapSerializationWithNullValuesSerialized": {
-        "energy": 54060.06791685722,
-        "duration": 1333584.3831012256,
-        "dram": 5372.237585110975,
-        "iteration": 87
-    },
-    "com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeWithCustomSerializer": {
-        "energy": 59721.595614151214,
-        "duration": 1355051.2576180594,
-        "dram": 4969.17441964222,
-        "iteration": 84
-    },
-    "com.google.gson.functional.CustomDeserializerTest-testJsonTypeFieldBasedDeserialization": {
-        "energy": 59344.02785336611,
-        "duration": 1426434.589081225,
-        "dram": 3919.7786703419592,
-        "iteration": 99
-    },
-    "com.google.gson.functional.DefaultTypeAdaptersTest-testSqlDateSerialization": {
-        "energy": 44959.40287465694,
-        "duration": 932138.8845003472,
-        "dram": 1964.6084470088065,
-        "iteration": 82
-    },
-    "com.google.gson.functional.ObjectTest-testAnonymousLocalClassesCustomSerialization": {
-        "energy": 51486.94969013619,
-        "duration": 1209308.984250181,
-        "dram": 4740.338967668258,
-        "iteration": 75
-    },
-    "com.google.gson.functional.MapTest-testCustomSerializerForSpecificMapType": {
-        "energy": 42428.65220977822,
-        "duration": 750192.3299658704,
-        "dram": 3723.8967393481485,
-        "iteration": 63
-    },
-    "com.google.gson.functional.DefaultTypeAdaptersTest-testClassSerialization": {
-        "energy": 41128.21356156422,
-        "duration": 772507.096497716,
-        "dram": 2742.7960695855136,
-        "iteration": 58
-    },
-    "com.google.gson.functional.FieldNamingTest-testIdentity": {
-        "energy": 73891.96777099237,
-        "duration": 1733966.1518609808,
-        "dram": 5745.525825413929,
-        "iteration": 90
-    },
-    "com.google.gson.functional.InstanceCreatorTest-testInstanceCreatorReturnsBaseType": {
-        "energy": 96221.50892674168,
-        "duration": 2259893.1322968663,
-        "dram": 8459.769870140557,
-        "iteration": 75
-    },
-    "com.google.gson.functional.NullObjectAndFieldTest-testAbsentJsonElementsAreSetToNull": {
-        "energy": 44272.27356949796,
-        "duration": 895836.5954253597,
-        "dram": 4814.43752290817,
-        "iteration": 66
-    },
-    "com.google.gson.functional.MapAsArrayTypeAdapterTest-testMapWithTypeVariableDeserialization": {
-        "energy": 120283.54993816733,
-        "duration": 3514192.6722227223,
-        "dram": 5653.849330236899,
-        "iteration": 74
-    },
-    "com.google.gson.functional.JavaUtilConcurrentAtomicTest-testAtomicLongArrayWithStringSerializationPolicy": {
-        "energy": 43338.47055443573,
-        "duration": 1294742.0640376983,
-        "dram": 5397.9240210712815,
-        "iteration": 98
-    },
-    "com.google.gson.functional.MapTest-testGeneralMapField": {
-        "energy": 48355.933438914464,
-        "duration": 990024.0450085696,
-        "dram": 4279.930675360796,
-        "iteration": 86
-    },
-    "com.google.gson.functional.VersioningTest-testVersionedClassesDeserialization": {
-        "energy": 42717.754820343594,
-        "duration": 546690.3200245252,
-        "dram": 3788.708809482101,
-        "iteration": 37
-    },
-    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testClassAnnotationAdapterTakesPrecedenceOverDefault": {
-        "energy": 57030.30794190098,
-        "duration": 1504323.0886871784,
-        "dram": 4966.398380729899,
-        "iteration": 95
-    },
-    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testFieldAnnotationWorksForParameterizedType": {
-        "energy": 47021.574027412724,
-        "duration": 1149473.460809017,
-        "dram": 3894.7679486666416,
-        "iteration": 96
-    },
-    "com.google.gson.functional.MapTest-testMapSerializationWithNullValueButSerializeNulls": {
-        "energy": 47394.71655200629,
-        "duration": 810182.4846282769,
-        "dram": 4519.452877198915,
-        "iteration": 63
-    },
-    "com.google.gson.functional.InstanceCreatorTest-testInstanceCreatorReturnsSubTypeForField": {
-        "energy": 64671.159169596955,
-        "duration": 1362299.162651388,
-        "dram": 5716.590410239376,
-        "iteration": 60
-    },
-    "com.google.gson.functional.MapAsArrayTypeAdapterTest-testSerializeComplexMapWithTypeAdapter": {
-        "energy": 310398.876807532,
-        "duration": 9426062.764134908,
-        "dram": 28221.628124216375,
-        "iteration": 99
-    },
-    "com.google.gson.functional.ExclusionStrategyFunctionalTest-testExcludeTopLevelClassSerialization": {
-        "energy": 43546.03699970245,
-        "duration": 404428.86569309235,
-        "dram": 1873.7769989967346,
-        "iteration": 21
-    },
-    "com.google.gson.functional.NamingPolicyTest-testGsonWithSerializedNameFieldNamingPolicySerialization": {
-        "energy": 40751.383966106514,
-        "duration": 1170063.107438682,
-        "dram": 5442.784835856943,
-        "iteration": 67
-    },
-    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomNestedDeserializers": {
-        "energy": 45766.54543925241,
-        "duration": 757286.3375055577,
-        "dram": 4214.311267555289,
-        "iteration": 55
-    },
-    "com.google.gson.CommentsTest-testParseComments": {
-        "energy": 65679.85367463765,
-        "duration": 1636486.1681218566,
-        "dram": 5509.593474050353,
-        "iteration": 65
-    },
-    "com.google.gson.functional.ExclusionStrategyFunctionalTest-testExclusionStrategySerializationDoesNotImpactDeserialization": {
-        "energy": 44727.28018854566,
-        "duration": 824014.1264095659,
-        "dram": 1585.7882777924237,
-        "iteration": 52
-    },
-    "com.google.gson.functional.NamingPolicyTest-testGsonWithNonDefaultFieldNamingPolicyDeserialiation": {
-        "energy": 103689.78875677398,
-        "duration": 3023180.2730970783,
-        "dram": 10010.582913497354,
-        "iteration": 42
-    },
-    "com.google.gson.functional.EscapingTest-testGsonAcceptsEscapedAndNonEscapedJsonDeserialization": {
-        "energy": 48620.62484801491,
-        "duration": 906234.3116832534,
-        "dram": 1345.8449961625126,
-        "iteration": 63
-    },
-    "com.google.gson.functional.DefaultTypeAdaptersTest-testTimestampSerialization": {
-        "energy": 43858.714769839484,
-        "duration": 1108688.731849051,
-        "dram": 3728.538182383299,
-        "iteration": 95
-    },
-    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomTypeAdapterDoesNotAppliesToSubClasses": {
-        "energy": 47052.37258711874,
-        "duration": 1137338.980892498,
-        "dram": 4323.835567034491,
-        "iteration": 90
-    },
-    "com.google.gson.functional.DefaultTypeAdaptersTest-testDefaultDateDeserializationUsingBuilder": {
-        "energy": 371197.1924145915,
-        "duration": 9004201.78788073,
-        "dram": 33599.68889728446,
-        "iteration": 99
-    },
-    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomAdapterInvokedForCollectionElementSerialization": {
-        "energy": 45926.578957212725,
-        "duration": 550885.2043379704,
-        "dram": 3688.9796093639598,
-        "iteration": 36
-    },
-    "com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeDeserialization": {
-        "energy": 76788.28652289358,
-        "duration": 2127512.4222398796,
-        "dram": 7746.788905540482,
-        "iteration": 99
-    },
-    "com.google.gson.functional.MapTest-testInterfaceTypeMap": {
-        "energy": 65360.92039862697,
-        "duration": 1750094.4118294502,
-        "dram": 6550.2923220832345,
-        "iteration": 99
-    },
-    "com.google.gson.functional.ExclusionStrategyFunctionalTest-testExcludeTopLevelClassDeserializationDoesNotImpactSerialization": {
-        "energy": 40113.24488979718,
-        "duration": 640697.6286219845,
-        "dram": 2907.269123718841,
-        "iteration": 32
-    },
-    "com.google.gson.functional.CustomSerializerTest-testSubClassSerializerInvokedForBaseClassFieldsHoldingSubClassInstances": {
-        "energy": 89632.29093143022,
-        "duration": 2219896.349570588,
-        "dram": 6058.167556440911,
-        "iteration": 67
-    },
-    "com.google.gson.functional.VersioningTest-testVersionedClassesSerialization": {
-        "energy": 42978.7585635324,
-        "duration": 893659.0095863709,
-        "dram": 4140.127157415407,
-        "iteration": 65
-    },
-    "com.google.gson.functional.CustomTypeAdaptersTest-testRegisterHierarchyAdapterForDate": {
-        "energy": 49873.07840255251,
-        "duration": 1300453.9779689095,
-        "dram": 4703.582612206877,
-        "iteration": 75
-    },
-    "com.google.gson.functional.TypeAdapterPrecedenceTest-testNonstreamingHierarchicalFollowedByNonstreaming": {
-        "energy": 42234.74496245384,
-        "duration": 461158.77407741547,
-        "dram": 3725.539898633957,
-        "iteration": 22
-    },
-    "com.google.gson.functional.SecurityTest-testNonExecutableJsonDeserialization": {
-        "energy": 40841.894206762314,
-        "duration": 893949.065148592,
-        "dram": 3763.101942539215,
-        "iteration": 22
-    },
-    "com.google.gson.functional.NullObjectAndFieldTest-testPrintPrintingObjectWithNulls": {
-        "energy": 43778.92941364726,
-        "duration": 756202.324007055,
-        "dram": 4399.687062463006,
-        "iteration": 55
-    },
-    "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest-testRegisteredSerializerOverridesJsonAdapter": {
-        "energy": 45406.232527746586,
-        "duration": 924826.905014937,
-        "dram": 4516.6921078690575,
-        "iteration": 58
-    },
-    "com.google.gson.functional.CollectionTest-testUserCollectionTypeAdapter": {
-        "energy": 47723.47839407149,
-        "duration": 1036181.3246409401,
-        "dram": 5737.755897623436,
-        "iteration": 69
-    },
-    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testRegisteredTypeAdapterTakesPrecedenceOverClassAnnotationAdapter": {
-        "energy": 46144.27774951395,
-        "duration": 812283.3041185013,
-        "dram": 3929.415012466977,
-        "iteration": 54
-    },
-    "com.google.gson.functional.UncategorizedTest-testReturningDerivedClassesDuringDeserialization": {
-        "energy": 49130.30852228326,
-        "duration": 1508661.3540799862,
-        "dram": 5007.952535132937,
-        "iteration": 99
-    },
-    "com.google.gson.DefaultMapJsonSerializerTest-testNonEmptyMapSerialization": {
-        "energy": 42294.87986427521,
-        "duration": 847943.0000665239,
-        "dram": 2492.3934034901804,
-        "iteration": 60
-    },
-    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomAdapterInvokedForCollectionElementSerializationWithType": {
-        "energy": 44087.54727321058,
-        "duration": 1162076.6585538785,
-        "dram": 4210.912035979985,
-        "iteration": 90
-    },
-    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomDeserializers": {
-        "energy": 50363.60574933628,
-        "duration": 835147.6443014073,
-        "dram": 4165.811345656717,
-        "iteration": 51
-    },
-    "com.google.gson.functional.TypeVariableTest-testTypeVariablesViaTypeParameter": {
-        "energy": 43340.00443161366,
-        "duration": 1056670.7459875229,
-        "dram": 4585.371385089072,
-        "iteration": 88
-    },
-    "com.google.gson.functional.VersioningTest-testVersionedGsonMixingSinceAndUntilSerialization": {
-        "energy": 44118.50746734621,
-        "duration": 1036017.305408865,
-        "dram": 4465.695541892619,
-        "iteration": 86
-    },
-    "com.google.gson.functional.DefaultTypeAdaptersTest-testOverrideBigDecimalTypeAdapter": {
-        "energy": 51636.29876404452,
-        "duration": 1207452.6266011216,
-        "dram": 4460.441871165682,
-        "iteration": 99
-    },
-    "com.google.gson.functional.DefaultTypeAdaptersTest-testNullSerialization": {
-        "energy": 1345864.0017718067,
-        "duration": 31294918.23662448,
-        "dram": 114819.7287307184,
-        "iteration": 99
-    },
-    "com.google.gson.functional.TypeHierarchyAdapterTest-testTypeHierarchy": {
-        "energy": 110653.15216476674,
-        "duration": 2621442.682402724,
-        "dram": 9841.631581075548,
-        "iteration": 99
-    },
-    "com.google.gson.functional.SecurityTest-testJsonWithNonExectuableTokenWithRegularGsonDeserialization": {
-        "energy": 40930.20890414715,
-        "duration": 575184.4483969212,
-        "dram": 2317.931001186371,
-        "iteration": 23
-    },
-    "com.google.gson.OverrideCoreTypeAdaptersTest-testOverrideWrapperBooleanAdapter": {
-        "energy": 42695.899423194816,
-        "duration": 494775.05787073774,
-        "dram": 3884.914650201332,
-        "iteration": 32
-    },
-    "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest-testNullSafeObjectFromJson": {
-        "energy": 43176.849499881515,
-        "duration": 864947.639336134,
-        "dram": 4207.805417908567,
-        "iteration": 72
-    },
-    "com.google.gson.functional.ReadersWritersTest-testReadWriteTwoStrings": {
-        "energy": 50954.76605980919,
-        "duration": 1293026.1603723993,
-        "dram": 3702.7590920704347,
-        "iteration": 71
-    },
-    "com.google.gson.GsonTypeAdapterTest-testDeserializerForAbstractClass": {
-        "energy": 72506.8823328105,
-        "duration": 1692316.3793702123,
-        "dram": 7526.682548911412,
-        "iteration": 99
-    },
-    "com.google.gson.functional.DefaultTypeAdaptersTest-testDateDeserializationWithPattern": {
-        "energy": 42275.172100450174,
-        "duration": 999729.1770347697,
-        "dram": 3922.8334015085256,
-        "iteration": 81
-    },
-    "com.google.gson.functional.TypeAdapterPrecedenceTest-testNonstreamingFollowedByNonstreaming": {
-        "energy": 105488.69167532815,
-        "duration": 2643583.666946199,
-        "dram": 7883.683995248175,
-        "iteration": 79
-    },
-    "com.google.gson.functional.PrimitiveTest-testDoubleNaNSerialization": {
-        "energy": 42007.3161689627,
-        "duration": 782493.2903720974,
-        "dram": 4190.074478007956,
-        "iteration": 45
-    },
-    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomByteArrayDeserializerAndInstanceCreator": {
-        "energy": 46487.87708260532,
-        "duration": 980715.6094966726,
-        "dram": 4010.5273676632823,
-        "iteration": 66
-    },
-    "com.google.gson.functional.MapAsArrayTypeAdapterTest-testTwoTypesCollapseToOneDeserialize": {
-        "energy": 101248.83301029337,
-        "duration": 2493412.8574569225,
-        "dram": 8581.893484160835,
-        "iteration": 76
-    },
-    "com.google.gson.functional.FieldExclusionTest-testInnerClassExclusion": {
-        "energy": 43701.181640625,
-        "duration": 334125.53125,
-        "dram": 4150.681640625,
-        "iteration": 9
-    },
-    "com.google.gson.MixedStreamTest-testWriteHtmlSafe": {
-        "energy": 43540.29055658089,
-        "duration": 1004005.8686843996,
-        "dram": 2991.023468628191,
-        "iteration": 64
-    },
-    "com.google.gson.internal.bind.RecursiveTypesResolveTest-testRecursiveResolveSimple": {
-        "energy": 99269.70158535444,
-        "duration": 2672956.8745182715,
-        "dram": 8475.528782249326,
-        "iteration": 98
-    },
-    "com.google.gson.functional.JsonAdapterSerializerDeserializerTest-testDifferentJsonAdaptersForGenericFieldsOfSameRawType": {
-        "energy": 50043.736933149,
-        "duration": 1474192.7719978034,
-        "dram": 4782.650714402247,
-        "iteration": 99
-    },
-    "com.google.gson.functional.CustomTypeAdaptersTest-testEnsureCustomSerializerNotInvokedForNullValues": {
-        "energy": 46706.87690842587,
-        "duration": 1105473.1191644003,
-        "dram": 4205.735568959976,
-        "iteration": 79
-    },
-    "com.google.gson.functional.DefaultTypeAdaptersTest-testDateSerializationInCollection": {
-        "energy": 43125.51420860921,
-        "duration": 1294486.7430113894,
-        "dram": 3728.877321092084,
-        "iteration": 99
-    },
-    "com.google.gson.internal.bind.RecursiveTypesResolveTest-testRecursiveTypeVariablesResolve1": {
-        "energy": 39103.065264530385,
-        "duration": 853481.8963908775,
-        "dram": 3453.2763644052256,
-        "iteration": 52
-    },
-    "com.google.gson.functional.CustomSerializerTest-testBaseClassSerializerInvokedForBaseClassFieldsHoldingSubClassInstances": {
-        "energy": 46517.48425483331,
-        "duration": 586805.9722679164,
-        "dram": 4247.569133447483,
-        "iteration": 29
-    },
-    "com.google.gson.functional.TypeAdapterPrecedenceTest-testStreamingFollowedByStreaming": {
-        "energy": 41678.874197512865,
-        "duration": 589162.5656528473,
-        "dram": 3792.7292406857014,
-        "iteration": 25
-    },
-    "com.google.gson.functional.DefaultTypeAdaptersTest-testSetSerialization": {
-        "energy": 42816.35849657515,
-        "duration": 706970.9318972845,
-        "dram": 1606.0373140606098,
-        "iteration": 31
-    },
-    "com.google.gson.internal.bind.RecursiveTypesResolveTest-testIssue603PrintStream": {
-        "energy": 368264.9511007408,
-        "duration": 9591354.6042357,
-        "dram": 29580.482304772973,
-        "iteration": 99
-    },
-    "com.google.gson.functional.DefaultTypeAdaptersTest-testBitSetSerialization": {
-        "energy": 41231.203457951546,
-        "duration": 410134.50738310814,
-        "dram": 3810.448766708374,
-        "iteration": 23
-    },
-    "com.google.gson.MixedStreamTest-testWriteLenient": {
-        "energy": 47960.70136298001,
-        "duration": 1307737.3005390856,
-        "dram": 4746.739431622268,
-        "iteration": 71
-    },
-    "com.google.gson.functional.VersioningTest-testIgnoreLaterVersionClassDeserialization": {
-        "energy": 41215.32499189675,
-        "duration": 487054.4560084045,
-        "dram": 2003.5078967809677,
-        "iteration": 26
-    },
-    "com.google.gson.functional.ExclusionStrategyFunctionalTest-testExclusionStrategySerialization": {
-        "energy": 95063.72686993767,
-        "duration": 2554978.305216574,
-        "dram": 9627.246643355727,
-        "iteration": 99
-    },
-    "com.google.gson.functional.JsonAdapterSerializerDeserializerTest-testJsonSerializerDeserializerBasedJsonAdapterOnClass": {
-        "energy": 44159.624800848076,
-        "duration": 1179255.8134287442,
-        "dram": 4059.4819804417093,
-        "iteration": 95
-    },
-    "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest-testJsonAdapterFactoryInvoked": {
-        "energy": 45536.4283761284,
-        "duration": 1022077.9435503645,
-        "dram": 4199.518184650633,
-        "iteration": 92
-    },
-    "com.google.gson.internal.bind.RecursiveTypesResolveTest-testRecursiveTypeVariablesResolve12": {
-        "energy": 40386.241339470274,
-        "duration": 842654.2473580231,
-        "dram": 3635.974042677875,
-        "iteration": 41
-    },
-    "com.google.gson.functional.NullObjectAndFieldTest-testExplicitSerializationOfNullArrayMembers": {
-        "energy": 50570.43219876212,
-        "duration": 1148497.7783103422,
-        "dram": 4860.081020140137,
-        "iteration": 86
-    },
-    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testFieldAnnotationTakesPrecedenceOverClassAnnotation": {
-        "energy": 44952.64482511424,
-        "duration": 998736.6294652885,
-        "dram": 4325.863451987781,
-        "iteration": 84
-    },
-    "com.google.gson.functional.CustomSerializerTest-testSubClassSerializerInvokedForBaseClassFieldsHoldingArrayOfSubClassInstances": {
-        "energy": 43776.71310533544,
-        "duration": 911489.8401943473,
-        "dram": 5017.300251895062,
-        "iteration": 55
-    },
-    "com.google.gson.functional.CircularReferenceTest-testSelfReferenceCustomHandlerSerialization": {
-        "energy": 351173.6049223371,
-        "duration": 8230745.416938486,
-        "dram": 32229.82023607448,
-        "iteration": 99
-    },
-    "com.google.gson.functional.CustomTypeAdaptersTest-testEnsureCustomDeserializerNotInvokedForNullValues": {
-        "energy": 96014.88630688845,
-        "duration": 2236822.5036326395,
-        "dram": 8704.149410667967,
-        "iteration": 57
-    },
-    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomDeserializerInvokedForPrimitives": {
-        "energy": 44916.032924557454,
-        "duration": 670968.3961506749,
-        "dram": 3787.9400832016145,
-        "iteration": 39
-    },
-    "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest-testIncorrectJsonAdapterType": {
-        "energy": 80096.12207089359,
-        "duration": 1781827.8398073134,
-        "dram": 5242.190594054537,
-        "iteration": 74
-    },
-    "com.google.gson.functional.MapAsArrayTypeAdapterTest-testMapWithTypeVariableSerialization": {
-        "energy": 40135.74681704325,
-        "duration": 1282180.6914824361,
-        "dram": 3784.710470836938,
-        "iteration": 86
-    },
-    "com.google.gson.functional.CustomDeserializerTest-testCustomDeserializerReturnsNullForTopLevelObject": {
-        "energy": 46073.17681927125,
-        "duration": 550337.8598017012,
-        "dram": 4397.976554887551,
-        "iteration": 38
-    },
-    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testFieldAnnotationTakesPrecedenceOverRegisteredTypeAdapter": {
-        "energy": 46603.43080582289,
-        "duration": 1361441.4550774323,
-        "dram": 4462.352242754523,
-        "iteration": 95
-    },
-    "com.google.gson.functional.NullObjectAndFieldTest-testExplicitSerializationOfNulls": {
-        "energy": 43804.123954390576,
-        "duration": 719958.7502097727,
-        "dram": 4376.4061654594325,
-        "iteration": 53
-    },
-    "com.google.gson.functional.ObjectTest-testInnerClassDeserialization": {
-        "energy": 48103.4364645874,
-        "duration": 1263081.779204586,
-        "dram": 4257.064841723177,
-        "iteration": 81
-    },
-    "com.google.gson.functional.InstanceCreatorTest-testInstanceCreatorForCollectionType": {
-        "energy": 64559.136205793635,
-        "duration": 1420496.6394853126,
-        "dram": 4437.388261637202,
-        "iteration": 99
-    },
-    "com.google.gson.functional.ObjectTest-testJsonObjectSerialization": {
-        "energy": 44397.791343688965,
-        "duration": 532884.0021038055,
-        "dram": 3750.518392562866,
-        "iteration": 19
-    },
-    "com.google.gson.functional.TypeAdapterPrecedenceTest-testStreamingFollowedByNonstreaming": {
-        "energy": 44908.50953102112,
-        "duration": 418300.0591340065,
-        "dram": 3726.226061820984,
-        "iteration": 22
+        "energy": 162508.37373737374,
+        "duration": 4386144.323232323,
+        "dram": 15260.717171717171,
+        "iteration": 99,
+        "stdev": 206340.12650434722
     },
     "com.google.gson.functional.CustomTypeAdaptersTest-testCustomTypeAdapterAppliesToSubClassesSerializedAsBaseClass": {
-        "energy": 45132.59986747682,
-        "duration": 704970.9637588481,
-        "dram": 2868.7445897587922,
-        "iteration": 52
+        "energy": 42940.53846153846,
+        "duration": 679921.4423076923,
+        "dram": 3559.4423076923076,
+        "iteration": 52,
+        "stdev": 4240.6129249543565
+    },
+    "com.google.gson.internal.bind.RecursiveTypesResolveTest-testIssue440WeakReference": {
+        "energy": 52629.07777777778,
+        "duration": 1443292.2444444445,
+        "dram": 4551.688888888889,
+        "iteration": 90,
+        "stdev": 25727.136170989135
     },
     "com.google.gson.functional.NamingPolicyTest-testAtSignInSerializedName": {
-        "energy": 38365.04157441057,
-        "duration": 880204.0837121567,
-        "dram": 4220.357183302191,
-        "iteration": 51
+        "energy": 43149.41176470588,
+        "duration": 753249.6274509804,
+        "dram": 3755.450980392157,
+        "iteration": 51,
+        "stdev": 3388.797780788532
+    },
+    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomAdapterInvokedForMapElementDeserialization": {
+        "energy": 43289.140625,
+        "duration": 793422.828125,
+        "dram": 3568.28125,
+        "iteration": 64,
+        "stdev": 3306.1918088791535
+    },
+    "com.google.gson.functional.MapTest-testSerializeMaps": {
+        "energy": 47621.57142857143,
+        "duration": 1170571.844155844,
+        "dram": 4326.207792207792,
+        "iteration": 77,
+        "stdev": 12158.420029819721
+    },
+    "com.google.gson.functional.ReadersWritersTest-testReadWriteTwoObjects": {
+        "energy": 55583.94594594595,
+        "duration": 1319451.5945945946,
+        "dram": 4700.405405405405,
+        "iteration": 74,
+        "stdev": 28723.703736608022
+    },
+    "com.google.gson.functional.MapTest-testInterfaceTypeMapWithSerializer": {
+        "energy": 59984.40404040404,
+        "duration": 1707979.505050505,
+        "dram": 5524.939393939394,
+        "iteration": 99,
+        "stdev": 28037.081581622027
     },
     "com.google.gson.functional.FieldExclusionTest-testDefaultNestedStaticClassIncluded": {
-        "energy": 42231.205713632866,
-        "duration": 530175.8276447738,
-        "dram": 2580.234392590548,
-        "iteration": 41
+        "energy": 43309.560975609755,
+        "duration": 627374.1707317074,
+        "dram": 3209.3414634146343,
+        "iteration": 41,
+        "stdev": 3481.8267426444654
     },
     "com.google.gson.functional.PrimitiveTest-testMoreSpecificSerialization": {
-        "energy": 50936.51587784139,
-        "duration": 761549.731052909,
-        "dram": 5306.654293489366,
-        "iteration": 37
+        "energy": 68111.83783783784,
+        "duration": 1597989.7027027027,
+        "dram": 6120.756756756757,
+        "iteration": 37,
+        "stdev": 37420.36669942786
+    },
+    "com.google.gson.functional.DefaultTypeAdaptersTest-testDateSerializationWithPattern": {
+        "energy": 43193.31764705882,
+        "duration": 1147195.8470588236,
+        "dram": 4003.211764705882,
+        "iteration": 85,
+        "stdev": 4977.0116741858965
+    },
+    "com.google.gson.functional.CustomDeserializerTest-testCustomDeserializerReturnsNullForArrayElementsForArrayField": {
+        "energy": 42709.42465753425,
+        "duration": 977192.205479452,
+        "dram": 3443.7397260273974,
+        "iteration": 73,
+        "stdev": 3972.338784948448
     },
     "com.google.gson.functional.PrimitiveTest-testLongAsStringDeserialization": {
-        "energy": 42978.37052088976,
-        "duration": 459607.8745583147,
-        "dram": 3156.6993608027697,
-        "iteration": 27
+        "energy": 48172.333333333336,
+        "duration": 781241.3703703703,
+        "dram": 3135.4074074074074,
+        "iteration": 27,
+        "stdev": 14490.83714321264
+    },
+    "com.google.gson.JsonParserTest-testReadWriteTwoObjects": {
+        "energy": 79141.21333333333,
+        "duration": 2019996.7333333334,
+        "dram": 7209.306666666666,
+        "iteration": 75,
+        "stdev": 148807.65461909035
+    },
+    "com.google.gson.functional.ObjectTest-testSingletonLists": {
+        "energy": 57331.555555555555,
+        "duration": 1613047.9797979798,
+        "dram": 5247.919191919192,
+        "iteration": 99,
+        "stdev": 22559.51478775718
+    },
+    "com.google.gson.functional.FieldExclusionTest-testDefaultInnerClassExclusion": {
+        "energy": 68990.08108108108,
+        "duration": 1639235.189189189,
+        "dram": 6265.527027027027,
+        "iteration": 74,
+        "stdev": 175265.45554361914
+    },
+    "com.google.gson.functional.CustomDeserializerTest-testCustomDeserializerReturnsNull": {
+        "energy": 85418.91549295775,
+        "duration": 2219101.267605634,
+        "dram": 7903.366197183099,
+        "iteration": 71,
+        "stdev": 76810.27027898606
+    },
+    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testPrimitiveFieldAnnotationTakesPrecedenceOverDefault": {
+        "energy": 52892.74747474748,
+        "duration": 1389848.7878787878,
+        "dram": 4996.242424242424,
+        "iteration": 99,
+        "stdev": 18400.27465064202
+    },
+    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testClassAnnotationAdapterFactoryTakesPrecedenceOverDefault": {
+        "energy": 56383.28571428572,
+        "duration": 1507803.530612245,
+        "dram": 4825.091836734694,
+        "iteration": 98,
+        "stdev": 34835.91785376532
     },
     "com.google.gson.functional.NullObjectAndFieldTest-testCustomTypeAdapterPassesNullDesrialization": {
-        "energy": 46307.75539796072,
-        "duration": 677472.9736464862,
-        "dram": 4332.6588714663085,
-        "iteration": 55
+        "energy": 43743.218181818185,
+        "duration": 787138.3090909091,
+        "dram": 4011.327272727273,
+        "iteration": 55,
+        "stdev": 6681.100597114246
+    },
+    "com.google.gson.functional.EnumTest-testEnumSubclassWithRegisteredTypeAdapter": {
+        "energy": 124437.40404040404,
+        "duration": 3144345.97979798,
+        "dram": 11433.424242424242,
+        "iteration": 99,
+        "stdev": 41046.552612024556
+    },
+    "com.google.gson.functional.VersioningTest-testVersionedUntilSerialization": {
+        "energy": 161225.52525252526,
+        "duration": 4017037.6565656564,
+        "dram": 14859.69696969697,
+        "iteration": 99,
+        "stdev": 94659.80479424045
+    },
+    "com.google.gson.functional.DefaultTypeAdaptersTest-testOverrideBigIntegerTypeAdapter": {
+        "energy": 68781.48484848485,
+        "duration": 1833464.8282828282,
+        "dram": 6698.777777777777,
+        "iteration": 99,
+        "stdev": 21324.419315391897
+    },
+    "com.google.gson.functional.MapAsArrayTypeAdapterTest-testMultipleEnableComplexKeyRegistrationHasNoEffect": {
+        "energy": 43113.782608695656,
+        "duration": 1031772.231884058,
+        "dram": 3655.1304347826085,
+        "iteration": 69,
+        "stdev": 4862.479408307997
     },
     "com.google.gson.functional.ReadersWritersTest-testTopLevelNullObjectDeserializationWithReaderAndSerializeNulls": {
-        "energy": 45762.62550163269,
-        "duration": 428459.05146980286,
-        "dram": 3054.966516494751,
-        "iteration": 20
+        "energy": 45083.55,
+        "duration": 545243.5,
+        "dram": 2892.35,
+        "iteration": 20,
+        "stdev": 5929.957423751033
     },
     "com.google.gson.OverrideCoreTypeAdaptersTest-testOverridePrimitiveBooleanAdapter": {
-        "energy": 44689.80314552784,
-        "duration": 366231.70923629403,
-        "dram": 3211.9789464473724,
-        "iteration": 26
+        "energy": 43654.03846153846,
+        "duration": 429435.3461538461,
+        "dram": 3234.1153846153848,
+        "iteration": 26,
+        "stdev": 3195.6329393621063
+    },
+    "com.google.gson.functional.NamingPolicyTest-testGsonDuplicateNameUsingSerializedNameFieldNamingPolicySerialization": {
+        "energy": 119036.68421052632,
+        "duration": 3252448.0789473685,
+        "dram": 10812.263157894737,
+        "iteration": 76,
+        "stdev": 206122.01843001496
+    },
+    "com.google.gson.LongSerializationPolicyTest-testStringLongSerializationIntegration": {
+        "energy": 44092.94736842105,
+        "duration": 502047.7368421053,
+        "dram": 3476.2105263157896,
+        "iteration": 19,
+        "stdev": 3982.1922350923637
     },
     "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testJsonAdapterWrappedInNullSafeAsRequested": {
-        "energy": 44662.76803415813,
-        "duration": 1013974.6147274133,
-        "dram": 4668.914316843586,
-        "iteration": 69
+        "energy": 44307.86956521739,
+        "duration": 941273.0289855072,
+        "dram": 4027.8695652173915,
+        "iteration": 69,
+        "stdev": 6768.714897216336
     },
     "com.google.gson.functional.VersioningTest-testIgnoreLaterVersionClassSerialization": {
-        "energy": 44297.53179794257,
-        "duration": 855487.9763951097,
-        "dram": 3744.763961964581,
-        "iteration": 52
+        "energy": 43574.269230769234,
+        "duration": 785301.6923076923,
+        "dram": 3984.7884615384614,
+        "iteration": 52,
+        "stdev": 4216.0913000778
+    },
+    "com.google.gson.functional.TypeVariableTest-testAdvancedTypeVariables": {
+        "energy": 99130.71717171717,
+        "duration": 2694572.282828283,
+        "dram": 9184.757575757576,
+        "iteration": 99,
+        "stdev": 191409.06138979428
+    },
+    "com.google.gson.functional.MapTest-testMapSerializationWithNullValuesSerialized": {
+        "energy": 51148.77011494253,
+        "duration": 1363035.4597701149,
+        "dram": 4881.482758620689,
+        "iteration": 87,
+        "stdev": 16197.82494814045
     },
     "com.google.gson.functional.StreamingTypeAdaptersTest-testSerializeWithCustomTypeAdapter": {
-        "energy": 49070.65367101622,
-        "duration": 1688616.0362961008,
-        "dram": 5447.2276101705,
-        "iteration": 91
+        "energy": 55285.593406593405,
+        "duration": 1495699.7142857143,
+        "dram": 5277.186813186813,
+        "iteration": 91,
+        "stdev": 20179.13825906939
     },
     "com.google.gson.functional.MapTest-testMapSubclassDeserialization": {
-        "energy": 44226.62726365717,
-        "duration": 993341.1023348565,
-        "dram": 4101.912701391795,
-        "iteration": 80
+        "energy": 44518.9625,
+        "duration": 1115419.55,
+        "dram": 4067.9125,
+        "iteration": 80,
+        "stdev": 5811.0827572057315
     },
     "com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeWithReaderDeserialization": {
-        "energy": 42499.14398130215,
-        "duration": 820532.6303319313,
-        "dram": 3914.8474841006264,
-        "iteration": 63
+        "energy": 47277.920634920636,
+        "duration": 1032047.6984126985,
+        "dram": 3840.4444444444443,
+        "iteration": 63,
+        "stdev": 31636.847547938127
+    },
+    "com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeWithCustomSerializer": {
+        "energy": 56429.04761904762,
+        "duration": 1498186.5714285714,
+        "dram": 5077.083333333333,
+        "iteration": 84,
+        "stdev": 31303.0062845426
+    },
+    "com.google.gson.functional.CustomDeserializerTest-testJsonTypeFieldBasedDeserialization": {
+        "energy": 75994.73737373737,
+        "duration": 2219582.525252525,
+        "dram": 7276.30303030303,
+        "iteration": 99,
+        "stdev": 51955.95019084971
+    },
+    "com.google.gson.functional.DefaultTypeAdaptersTest-testSqlDateSerialization": {
+        "energy": 45386.98780487805,
+        "duration": 1051923.3780487804,
+        "dram": 3788.4146341463415,
+        "iteration": 82,
+        "stdev": 17627.047319592933
+    },
+    "com.google.gson.functional.ObjectTest-testAnonymousLocalClassesCustomSerialization": {
+        "energy": 46926.10666666667,
+        "duration": 1169073.2666666666,
+        "dram": 4159.24,
+        "iteration": 75,
+        "stdev": 14508.663316858501
     },
     "com.google.gson.functional.ExclusionStrategyFunctionalTest-testExcludeTopLevelClassDeserialization": {
-        "energy": 41845.63220214844,
-        "duration": 370520.4061279297,
-        "dram": 3947.1375732421875,
-        "iteration": 14
+        "energy": 42384.42857142857,
+        "duration": 408705.28571428574,
+        "dram": 3095.0714285714284,
+        "iteration": 14,
+        "stdev": 3722.560960151064
+    },
+    "com.google.gson.functional.MapTest-testCustomSerializerForSpecificMapType": {
+        "energy": 43573.15873015873,
+        "duration": 835623.3968253968,
+        "dram": 3754.126984126984,
+        "iteration": 63,
+        "stdev": 4866.816841147912
+    },
+    "com.google.gson.functional.InstanceCreatorTest-testInstanceCreatorReturnsBaseType": {
+        "energy": 108466.49333333333,
+        "duration": 2775150.04,
+        "dram": 9590.6,
+        "iteration": 75,
+        "stdev": 136995.8752340983
+    },
+    "com.google.gson.functional.MapAsArrayTypeAdapterTest-testMapWithTypeVariableDeserialization": {
+        "energy": 46071.58108108108,
+        "duration": 1094925.7027027027,
+        "dram": 3939.1216216216217,
+        "iteration": 74,
+        "stdev": 18843.503102909817
+    },
+    "com.google.gson.functional.JavaUtilConcurrentAtomicTest-testAtomicLongArrayWithStringSerializationPolicy": {
+        "energy": 48085.63265306123,
+        "duration": 1363412.0408163266,
+        "dram": 4654.530612244898,
+        "iteration": 98,
+        "stdev": 13948.240143098557
+    },
+    "com.google.gson.functional.MapTest-testGeneralMapField": {
+        "energy": 43381.72093023256,
+        "duration": 1084727.7906976745,
+        "dram": 4096.511627906977,
+        "iteration": 86,
+        "stdev": 3351.447554836229
+    },
+    "com.google.gson.functional.VersioningTest-testVersionedClassesDeserialization": {
+        "energy": 43004.91891891892,
+        "duration": 626014.1081081082,
+        "dram": 3390.4594594594596,
+        "iteration": 37,
+        "stdev": 3742.5647253127886
     },
     "com.google.gson.functional.TypeHierarchyAdapterTest-testRegisterSubTypeFirstAllowed": {
-        "energy": 43759.68091392517,
-        "duration": 565064.7604961395,
-        "dram": 1441.5011863708496,
-        "iteration": 21
+        "energy": 44253.28571428572,
+        "duration": 606723.0952380953,
+        "dram": 2845.904761904762,
+        "iteration": 21,
+        "stdev": 8159.159376301651
+    },
+    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testClassAnnotationAdapterTakesPrecedenceOverDefault": {
+        "energy": 108781.01052631579,
+        "duration": 2849129.4105263157,
+        "dram": 9934.431578947368,
+        "iteration": 95,
+        "stdev": 173398.99398715608
     },
     "com.google.gson.functional.NamingPolicyTest-testGsonWithUpperCamelCaseSpacesPolicyDeserialiation": {
-        "energy": 38945.35550248623,
-        "duration": 711094.1851198673,
-        "dram": 2155.296546369791,
-        "iteration": 26
+        "energy": 42017.96153846154,
+        "duration": 558541.5384615385,
+        "dram": 3366.5384615384614,
+        "iteration": 26,
+        "stdev": 4563.968393681173
+    },
+    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testFieldAnnotationWorksForParameterizedType": {
+        "energy": 54129.114583333336,
+        "duration": 1435175.3020833333,
+        "dram": 4996.510416666667,
+        "iteration": 96,
+        "stdev": 31794.164729576605
     },
     "com.google.gson.MixedStreamTest-testWriteClosed": {
-        "energy": 44048.64762496948,
-        "duration": 449732.87213134766,
-        "dram": 2647.271354675293,
-        "iteration": 19
+        "energy": 42987.84210526316,
+        "duration": 469628.2105263158,
+        "dram": 2937.5263157894738,
+        "iteration": 19,
+        "stdev": 3778.8495779752852
+    },
+    "com.google.gson.functional.InstanceCreatorTest-testInstanceCreatorReturnsSubTypeForField": {
+        "energy": 79220.4,
+        "duration": 1936394.7,
+        "dram": 7223.183333333333,
+        "iteration": 60,
+        "stdev": 72359.7039820737
+    },
+    "com.google.gson.functional.MapAsArrayTypeAdapterTest-testSerializeComplexMapWithTypeAdapter": {
+        "energy": 169277.8383838384,
+        "duration": 4887967.191919192,
+        "dram": 15597.020202020201,
+        "iteration": 99,
+        "stdev": 292432.27927631646
+    },
+    "com.google.gson.functional.ExclusionStrategyFunctionalTest-testExcludeTopLevelClassSerialization": {
+        "energy": 44869.380952380954,
+        "duration": 374389.71428571426,
+        "dram": 3011.285714285714,
+        "iteration": 21,
+        "stdev": 2573.584686889003
+    },
+    "com.google.gson.functional.NamingPolicyTest-testGsonWithSerializedNameFieldNamingPolicySerialization": {
+        "energy": 44995.58208955224,
+        "duration": 1001032.0447761194,
+        "dram": 4270.582089552238,
+        "iteration": 67,
+        "stdev": 10105.030235687414
     },
     "com.google.gson.functional.CustomTypeAdaptersTest-testCustomSerializers": {
-        "energy": 72715.74423885747,
-        "duration": 1991331.9760505497,
-        "dram": 7598.162943734345,
-        "iteration": 61
+        "energy": 96149.11475409837,
+        "duration": 2506654.6721311477,
+        "dram": 8413.196721311475,
+        "iteration": 61,
+        "stdev": 206436.6418050365
+    },
+    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomNestedDeserializers": {
+        "energy": 43741.03636363636,
+        "duration": 751326.9818181818,
+        "dram": 3799.7090909090907,
+        "iteration": 55,
+        "stdev": 3296.191504606691
+    },
+    "com.google.gson.functional.ExclusionStrategyFunctionalTest-testExclusionStrategySerializationDoesNotImpactDeserialization": {
+        "energy": 44931.21153846154,
+        "duration": 791208.2307692308,
+        "dram": 3643.730769230769,
+        "iteration": 52,
+        "stdev": 6920.544307563083
     },
     "com.google.gson.functional.NamingPolicyTest-testGsonWithLowerCaseUnderscorePolicySerialization": {
-        "energy": 44066.63843509555,
-        "duration": 665666.4385807812,
-        "dram": 438.23633846640587,
-        "iteration": 26
+        "energy": 44018.07692307692,
+        "duration": 559801.4230769231,
+        "dram": 2758.1153846153848,
+        "iteration": 26,
+        "stdev": 2488.5891882608903
+    },
+    "com.google.gson.functional.EscapingTest-testGsonAcceptsEscapedAndNonEscapedJsonDeserialization": {
+        "energy": 57512.333333333336,
+        "duration": 1419570.9206349207,
+        "dram": 4872.650793650793,
+        "iteration": 63,
+        "stdev": 43968.579847179244
+    },
+    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomTypeAdapterDoesNotAppliesToSubClasses": {
+        "energy": 44881.74444444444,
+        "duration": 1117241.677777778,
+        "dram": 4054.8888888888887,
+        "iteration": 90,
+        "stdev": 8370.60969445557
+    },
+    "com.google.gson.functional.DefaultTypeAdaptersTest-testDefaultDateDeserializationUsingBuilder": {
+        "energy": 388659.70707070705,
+        "duration": 9501971.111111112,
+        "dram": 36876.15151515151,
+        "iteration": 99,
+        "stdev": 63023.66616048396
+    },
+    "com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeDeserialization": {
+        "energy": 89465.0,
+        "duration": 2401376.1616161615,
+        "dram": 8236.0101010101,
+        "iteration": 99,
+        "stdev": 41155.0230771998
+    },
+    "com.google.gson.functional.MapTest-testInterfaceTypeMap": {
+        "energy": 98024.69696969698,
+        "duration": 2582497.5353535353,
+        "dram": 8810.60606060606,
+        "iteration": 99,
+        "stdev": 68345.12681325781
     },
     "com.google.gson.functional.NamingPolicyTest-testComplexFieldNameStrategy": {
-        "energy": 41381.5289475968,
-        "duration": 1143445.3188719067,
-        "dram": 3859.8351776180834,
-        "iteration": 72
+        "energy": 43855.375,
+        "duration": 1043709.7916666666,
+        "dram": 3834.5694444444443,
+        "iteration": 72,
+        "stdev": 6267.423820477287
+    },
+    "com.google.gson.functional.CustomSerializerTest-testSubClassSerializerInvokedForBaseClassFieldsHoldingSubClassInstances": {
+        "energy": 144876.08955223882,
+        "duration": 3813598.6268656715,
+        "dram": 13277.014925373134,
+        "iteration": 67,
+        "stdev": 261992.42547150055
+    },
+    "com.google.gson.functional.VersioningTest-testVersionedClassesSerialization": {
+        "energy": 43175.18461538461,
+        "duration": 951020.2615384615,
+        "dram": 3781.9692307692308,
+        "iteration": 65,
+        "stdev": 2977.1956081174917
+    },
+    "com.google.gson.functional.CustomTypeAdaptersTest-testRegisterHierarchyAdapterForDate": {
+        "energy": 49738.54666666667,
+        "duration": 1155805.3466666667,
+        "dram": 4504.986666666667,
+        "iteration": 75,
+        "stdev": 16319.399970418306
+    },
+    "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest-testRegisteredSerializerOverridesJsonAdapter": {
+        "energy": 43071.8275862069,
+        "duration": 790553.0344827586,
+        "dram": 3532.8275862068967,
+        "iteration": 58,
+        "stdev": 3722.650451501804
+    },
+    "com.google.gson.functional.CollectionTest-testUserCollectionTypeAdapter": {
+        "energy": 50206.188405797104,
+        "duration": 1220607.8695652173,
+        "dram": 4511.231884057971,
+        "iteration": 69,
+        "stdev": 23022.753458688985
+    },
+    "com.google.gson.functional.UncategorizedTest-testReturningDerivedClassesDuringDeserialization": {
+        "energy": 73036.70707070707,
+        "duration": 1999075.191919192,
+        "dram": 7122.434343434344,
+        "iteration": 99,
+        "stdev": 39380.9714992828
     },
     "com.google.gson.functional.NullObjectAndFieldTest-testTopLevelNullObjectSerialization": {
-        "energy": 49768.259353637695,
-        "duration": 559517.4268341064,
-        "dram": 4775.286689758301,
-        "iteration": 18
+        "energy": 204039.88888888888,
+        "duration": 5217339.388888889,
+        "dram": 18439.11111111111,
+        "iteration": 18,
+        "stdev": 357791.7804452889
     },
     "com.google.gson.JsonObjectTest-testPropertyWithQuotes": {
-        "energy": 130170.4778599441,
-        "duration": 3342006.2484343946,
-        "dram": 9955.942443490028,
-        "iteration": 26
+        "energy": 142873.65384615384,
+        "duration": 3644605.4615384615,
+        "dram": 12869.153846153846,
+        "iteration": 26,
+        "stdev": 298217.7654133794
+    },
+    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomAdapterInvokedForCollectionElementSerializationWithType": {
+        "energy": 52328.76666666667,
+        "duration": 1342810.8,
+        "dram": 4733.0,
+        "iteration": 90,
+        "stdev": 22350.77439327078
+    },
+    "com.google.gson.functional.TypeVariableTest-testTypeVariablesViaTypeParameter": {
+        "energy": 52364.63636363636,
+        "duration": 1363426.6363636365,
+        "dram": 4870.125,
+        "iteration": 88,
+        "stdev": 18304.84872127267
     },
     "com.google.gson.functional.NullObjectAndFieldTest-testNullWrappedPrimitiveMemberSerialization": {
-        "energy": 45597.9787383618,
-        "duration": 602086.6946110441,
-        "dram": 4860.204770456339,
-        "iteration": 41
+        "energy": 44424.560975609755,
+        "duration": 689978.8536585366,
+        "dram": 3858.609756097561,
+        "iteration": 41,
+        "stdev": 7387.487744362847
     },
     "com.google.gson.functional.TypeAdapterPrecedenceTest-testStreamingHierarchicalFollowedByNonstreamingHierarchical": {
-        "energy": 66854.94420457631,
-        "duration": 1385238.5503279455,
-        "dram": 5345.863155480474,
-        "iteration": 29
+        "energy": 86619.20689655172,
+        "duration": 2054998.0344827587,
+        "dram": 7620.448275862069,
+        "iteration": 29,
+        "stdev": 186414.06059081806
+    },
+    "com.google.gson.functional.DefaultTypeAdaptersTest-testOverrideBigDecimalTypeAdapter": {
+        "energy": 43969.80808080808,
+        "duration": 1336579.5353535353,
+        "dram": 4200.292929292929,
+        "iteration": 99,
+        "stdev": 10035.620133714585
+    },
+    "com.google.gson.functional.DefaultTypeAdaptersTest-testNullSerialization": {
+        "energy": 1431676.9292929294,
+        "duration": 34082781.62626263,
+        "dram": 127658.33333333333,
+        "iteration": 99,
+        "stdev": 205178.43301425932
+    },
+    "com.google.gson.functional.TypeHierarchyAdapterTest-testTypeHierarchy": {
+        "energy": 166919.0303030303,
+        "duration": 4430507.94949495,
+        "dram": 15216.232323232323,
+        "iteration": 99,
+        "stdev": 222397.25704073216
     },
     "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest-testSuperclassTypeAdapterNotInvoked": {
-        "energy": 43771.422833591234,
-        "duration": 763250.5022988118,
-        "dram": 4432.060788355671,
-        "iteration": 60
+        "energy": 49994.8,
+        "duration": 1099550.7333333334,
+        "dram": 4487.983333333334,
+        "iteration": 60,
+        "stdev": 19375.92152802029
+    },
+    "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest-testNullSafeObjectFromJson": {
+        "energy": 44131.63888888889,
+        "duration": 972464.5694444445,
+        "dram": 3730.972222222222,
+        "iteration": 72,
+        "stdev": 6222.10373343283
     },
     "com.google.gson.functional.InstanceCreatorTest-testInstanceCreatorReturnsSubTypeForTopLevelObject": {
-        "energy": 44371.09637962342,
-        "duration": 674762.5032330479,
-        "dram": 3429.7802390006523,
-        "iteration": 54
+        "energy": 43649.055555555555,
+        "duration": 755674.1666666666,
+        "dram": 3687.574074074074,
+        "iteration": 54,
+        "stdev": 3550.4600506114202
     },
     "com.google.gson.functional.StreamingTypeAdaptersTest-testDeserializeWithCustomTypeAdapter": {
-        "energy": 62094.108365378364,
-        "duration": 1200959.0784564896,
-        "dram": 4944.012387960157,
-        "iteration": 62
+        "energy": 48541.54838709677,
+        "duration": 1154636.2903225806,
+        "dram": 4327.741935483871,
+        "iteration": 62,
+        "stdev": 19735.568030169925
     },
     "com.google.gson.functional.NamingPolicyTest-testDeprecatedNamingStrategy": {
-        "energy": 39113.41469841146,
-        "duration": 936347.6930641877,
-        "dram": 3859.757549431664,
-        "iteration": 66
+        "energy": 43227.606060606064,
+        "duration": 872726.6666666666,
+        "dram": 3686.348484848485,
+        "iteration": 66,
+        "stdev": 3651.1261395952884
+    },
+    "com.google.gson.functional.ReadersWritersTest-testReadWriteTwoStrings": {
+        "energy": 47515.22535211268,
+        "duration": 1189591.9295774647,
+        "dram": 4117.87323943662,
+        "iteration": 71,
+        "stdev": 12656.411171893607
+    },
+    "com.google.gson.GsonTypeAdapterTest-testDeserializerForAbstractClass": {
+        "energy": 64822.21212121212,
+        "duration": 1804218.686868687,
+        "dram": 6422.404040404041,
+        "iteration": 99,
+        "stdev": 25684.87961493673
+    },
+    "com.google.gson.functional.DefaultTypeAdaptersTest-testDateDeserializationWithPattern": {
+        "energy": 42696.60493827161,
+        "duration": 1056169.9259259258,
+        "dram": 3828.456790123457,
+        "iteration": 81,
+        "stdev": 2817.921340888067
     },
     "com.google.gson.functional.PrintFormattingTest-testJsonObjectWithNullValuesSerialized": {
-        "energy": 45126.9786131382,
-        "duration": 435327.67167925835,
-        "dram": 4162.137896299362,
-        "iteration": 23
+        "energy": 47188.13043478261,
+        "duration": 689871.2608695652,
+        "dram": 4436.913043478261,
+        "iteration": 23,
+        "stdev": 13816.931196131758
+    },
+    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomByteArrayDeserializerAndInstanceCreator": {
+        "energy": 44019.106060606064,
+        "duration": 1006178.6818181818,
+        "dram": 3989.6666666666665,
+        "iteration": 66,
+        "stdev": 6740.697102536585
     },
     "com.google.gson.functional.CustomTypeAdaptersTest-testCustomByteArraySerializer": {
-        "energy": 44924.13213746218,
-        "duration": 690750.5457111576,
-        "dram": 4033.311976487596,
-        "iteration": 47
+        "energy": 43228.382978723406,
+        "duration": 727039.0,
+        "dram": 3747.425531914894,
+        "iteration": 47,
+        "stdev": 3658.8638368667876
+    },
+    "com.google.gson.MixedStreamTest-testWriteHtmlSafe": {
+        "energy": 45693.21875,
+        "duration": 1002144.3125,
+        "dram": 4342.578125,
+        "iteration": 64,
+        "stdev": 9366.53080199112
+    },
+    "com.google.gson.internal.bind.RecursiveTypesResolveTest-testRecursiveResolveSimple": {
+        "energy": 94548.10204081633,
+        "duration": 2529276.7959183673,
+        "dram": 8750.65306122449,
+        "iteration": 98,
+        "stdev": 135646.82127085596
+    },
+    "com.google.gson.functional.JsonAdapterSerializerDeserializerTest-testDifferentJsonAdaptersForGenericFieldsOfSameRawType": {
+        "energy": 59069.555555555555,
+        "duration": 1681836.121212121,
+        "dram": 5584.79797979798,
+        "iteration": 99,
+        "stdev": 22201.88994240334
+    },
+    "com.google.gson.functional.CustomTypeAdaptersTest-testEnsureCustomSerializerNotInvokedForNullValues": {
+        "energy": 48171.36708860759,
+        "duration": 1227257.6582278481,
+        "dram": 4528.962025316456,
+        "iteration": 79,
+        "stdev": 18489.02835736435
     },
     "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest-testIncorrectTypeAdapterFails": {
-        "energy": 43014.188169964706,
-        "duration": 680528.756414188,
-        "dram": 4183.851996608333,
-        "iteration": 54
+        "energy": 44199.555555555555,
+        "duration": 967393.1666666666,
+        "dram": 3817.296296296296,
+        "iteration": 54,
+        "stdev": 6295.078482335657
+    },
+    "com.google.gson.functional.DefaultTypeAdaptersTest-testDateSerializationInCollection": {
+        "energy": 51706.454545454544,
+        "duration": 1457858.9393939395,
+        "dram": 4922.19191919192,
+        "iteration": 99,
+        "stdev": 17728.94585178743
+    },
+    "com.google.gson.functional.CustomSerializerTest-testBaseClassSerializerInvokedForBaseClassFieldsHoldingSubClassInstances": {
+        "energy": 43644.24137931035,
+        "duration": 614730.5862068966,
+        "dram": 3617.0,
+        "iteration": 29,
+        "stdev": 2920.890424642889
+    },
+    "com.google.gson.internal.bind.RecursiveTypesResolveTest-testIssue603PrintStream": {
+        "energy": 248990.77777777778,
+        "duration": 6193231.686868687,
+        "dram": 21982.969696969696,
+        "iteration": 99,
+        "stdev": 97619.71848619703
+    },
+    "com.google.gson.MixedStreamTest-testWriteLenient": {
+        "energy": 63501.33802816901,
+        "duration": 1458811.5915492957,
+        "dram": 5981.154929577465,
+        "iteration": 71,
+        "stdev": 30801.509482374062
+    },
+    "com.google.gson.functional.VersioningTest-testIgnoreLaterVersionClassDeserialization": {
+        "energy": 43532.07692307692,
+        "duration": 418540.6538461539,
+        "dram": 3360.1923076923076,
+        "iteration": 26,
+        "stdev": 4104.706894090068
+    },
+    "com.google.gson.functional.ExclusionStrategyFunctionalTest-testExclusionStrategySerialization": {
+        "energy": 112375.9797979798,
+        "duration": 2855078.98989899,
+        "dram": 10542.919191919193,
+        "iteration": 99,
+        "stdev": 126060.70288234754
+    },
+    "com.google.gson.functional.JsonAdapterSerializerDeserializerTest-testJsonSerializerDeserializerBasedJsonAdapterOnClass": {
+        "energy": 46055.01052631579,
+        "duration": 1325905.2,
+        "dram": 4259.0842105263155,
+        "iteration": 95,
+        "stdev": 11246.144676938227
+    },
+    "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest-testJsonAdapterFactoryInvoked": {
+        "energy": 44481.184782608696,
+        "duration": 1146640.7826086956,
+        "dram": 4017.554347826087,
+        "iteration": 92,
+        "stdev": 7576.243739091046
+    },
+    "com.google.gson.functional.NullObjectAndFieldTest-testExplicitSerializationOfNullArrayMembers": {
+        "energy": 49118.22093023256,
+        "duration": 1243543.1162790698,
+        "dram": 4594.058139534884,
+        "iteration": 86,
+        "stdev": 11962.783772631044
+    },
+    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testFieldAnnotationTakesPrecedenceOverClassAnnotation": {
+        "energy": 44405.166666666664,
+        "duration": 1163782.5357142857,
+        "dram": 3972.5,
+        "iteration": 84,
+        "stdev": 7501.94516495132
     },
     "com.google.gson.GsonBuilderTest-testTransientFieldExclusion": {
-        "energy": 583834.5589896052,
-        "duration": 18566323.714980297,
-        "dram": 50705.896886066075,
-        "iteration": 48
+        "energy": 66955.35416666667,
+        "duration": 1600589.0,
+        "dram": 5788.145833333333,
+        "iteration": 48,
+        "stdev": 154125.08733945747
     },
     "com.google.gson.functional.VersioningTest-testVersionedUntilDeserialization": {
-        "energy": 42482.852676901384,
-        "duration": 604704.3335791528,
-        "dram": 3513.036159710842,
-        "iteration": 34
+        "energy": 43015.26470588235,
+        "duration": 617204.5588235294,
+        "dram": 3365.205882352941,
+        "iteration": 34,
+        "stdev": 3105.9511218155485
+    },
+    "com.google.gson.functional.CustomSerializerTest-testSubClassSerializerInvokedForBaseClassFieldsHoldingArrayOfSubClassInstances": {
+        "energy": 43010.818181818184,
+        "duration": 831629.0181818182,
+        "dram": 3778.2363636363634,
+        "iteration": 55,
+        "stdev": 5514.855274095131
+    },
+    "com.google.gson.functional.CircularReferenceTest-testSelfReferenceCustomHandlerSerialization": {
+        "energy": 308915.4747474748,
+        "duration": 7377589.646464647,
+        "dram": 27242.21212121212,
+        "iteration": 99,
+        "stdev": 49009.407069664376
+    },
+    "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest-testIncorrectJsonAdapterType": {
+        "energy": 66113.33783783784,
+        "duration": 1630541.0,
+        "dram": 6068.27027027027,
+        "iteration": 74,
+        "stdev": 45597.66982882238
     },
     "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testJsonAdapterInvokedOnlyForAnnotatedFields": {
-        "energy": 45413.69269060071,
-        "duration": 1140255.1396607151,
-        "dram": 4093.0969855904405,
-        "iteration": 77
+        "energy": 43526.66233766234,
+        "duration": 1076921.5064935065,
+        "dram": 3908.2727272727275,
+        "iteration": 77,
+        "stdev": 6407.719414407622
+    },
+    "com.google.gson.functional.MapAsArrayTypeAdapterTest-testMapWithTypeVariableSerialization": {
+        "energy": 44284.441860465115,
+        "duration": 1291423.1395348837,
+        "dram": 4234.302325581395,
+        "iteration": 86,
+        "stdev": 9050.73172630277
     },
     "com.google.gson.MixedStreamTest-testWriteMixedStreamed": {
-        "energy": 281718.00607711077,
-        "duration": 8467942.35997469,
-        "dram": 27344.34970454499,
-        "iteration": 29
+        "energy": 79250.89655172414,
+        "duration": 1933658.0344827587,
+        "dram": 6748.0,
+        "iteration": 29,
+        "stdev": 173805.37678884802
     },
     "com.google.gson.MixedStreamTest-testWriteNulls": {
-        "energy": 43003.899309277534,
-        "duration": 505264.6074908972,
-        "dram": 1138.6499285399914,
-        "iteration": 26
+        "energy": 43865.230769230766,
+        "duration": 456882.6923076923,
+        "dram": 2250.923076923077,
+        "iteration": 26,
+        "stdev": 4422.0808824987525
+    },
+    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testFieldAnnotationTakesPrecedenceOverRegisteredTypeAdapter": {
+        "energy": 56934.063157894736,
+        "duration": 1497283.7894736843,
+        "dram": 5260.368421052632,
+        "iteration": 95,
+        "stdev": 30026.168000178757
+    },
+    "com.google.gson.functional.ObjectTest-testInnerClassDeserialization": {
+        "energy": 48881.50617283951,
+        "duration": 1275019.8148148148,
+        "dram": 4241.888888888889,
+        "iteration": 81,
+        "stdev": 17092.178454604193
+    },
+    "com.google.gson.functional.InstanceCreatorTest-testInstanceCreatorForCollectionType": {
+        "energy": 52199.06060606061,
+        "duration": 1517271.1313131314,
+        "dram": 5033.888888888889,
+        "iteration": 99,
+        "stdev": 17800.81447337505
     },
     "com.google.gson.MixedStreamTest-testReadMixedStreamed": {
-        "energy": 53087.6482475996,
-        "duration": 883084.0449836254,
-        "dram": 4896.084971308708,
-        "iteration": 25
+        "energy": 44250.4,
+        "duration": 715185.48,
+        "dram": 3450.44,
+        "iteration": 25,
+        "stdev": 6165.843377835671
+    },
+    "com.google.gson.functional.ObjectTest-testJsonObjectSerialization": {
+        "energy": 59428.68421052631,
+        "duration": 1321799.5263157894,
+        "dram": 4925.736842105263,
+        "iteration": 19,
+        "stdev": 20923.382971042436
     },
     "com.google.gson.MixedStreamTest-testReadClosed": {
-        "energy": 47452.735828451165,
-        "duration": 697385.3676925733,
-        "dram": 4401.869009983781,
-        "iteration": 51
+        "energy": 43351.686274509804,
+        "duration": 780806.9607843137,
+        "dram": 3703.549019607843,
+        "iteration": 51,
+        "stdev": 3852.39575314261
     },
     "com.google.gson.LongSerializationPolicyTest-testDefaultLongSerializationIntegration": {
-        "energy": 40601.681600391865,
-        "duration": 667326.7224365771,
-        "dram": 2300.5165722370148,
-        "iteration": 26
+        "energy": 120746.0,
+        "duration": 2920553.923076923,
+        "dram": 10535.307692307691,
+        "iteration": 26,
+        "stdev": 267240.1660691976
+    },
+    "com.google.gson.GsonBuilderTest-testExcludeFieldsWithModifiers": {
+        "energy": 44860.666666666664,
+        "duration": 787438.8235294118,
+        "dram": 3594.607843137255,
+        "iteration": 51,
+        "stdev": 6157.832543516178
+    },
+    "com.google.gson.functional.NullObjectAndFieldTest-testExplicitSerializationOfNullStringMembers": {
+        "energy": 43063.76470588235,
+        "duration": 554510.0588235294,
+        "dram": 3197.235294117647,
+        "iteration": 34,
+        "stdev": 3869.7992656469128
+    },
+    "com.google.gson.functional.VersioningTest-testVersionedGsonMixingSinceAndUntilDeserialization": {
+        "energy": 43106.73809523809,
+        "duration": 719683.1428571428,
+        "dram": 3807.9285714285716,
+        "iteration": 42,
+        "stdev": 3609.5643059827794
     },
     "com.google.gson.functional.PrimitiveTest-testHtmlCharacterSerialization": {
-        "energy": 42576.60477256775,
-        "duration": 484627.8469104767,
-        "dram": 930.6501274108887,
-        "iteration": 21
+        "energy": 42794.28571428572,
+        "duration": 486300.38095238095,
+        "dram": 2934.809523809524,
+        "iteration": 21,
+        "stdev": 2436.6239943405135
     },
     "com.google.gson.functional.TypeVariableTest-testBasicTypeVariables": {
-        "energy": 44276.410956828906,
-        "duration": 738500.3479705167,
-        "dram": 4076.5497605450246,
-        "iteration": 59
+        "energy": 44127.23728813559,
+        "duration": 829461.3559322034,
+        "dram": 3718.2203389830506,
+        "iteration": 59,
+        "stdev": 5589.216531430838
     },
     "com.google.gson.functional.ExclusionStrategyFunctionalTest-testExclusionStrategyWithMode": {
-        "energy": 39655.34467140917,
-        "duration": 784161.1701093321,
-        "dram": 2565.7551874211395,
-        "iteration": 43
+        "energy": 42308.6976744186,
+        "duration": 733140.5116279069,
+        "dram": 3714.4418604651164,
+        "iteration": 43,
+        "stdev": 3723.161731739875
+    },
+    "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest-testRegisteredDeserializerOverridesJsonAdapter": {
+        "energy": 101259.28048780488,
+        "duration": 2704550.6219512196,
+        "dram": 9178.914634146342,
+        "iteration": 82,
+        "stdev": 180567.59331789424
     },
     "com.google.gson.functional.PrimitiveTest-testNegativeInfinitySerialization": {
-        "energy": 42689.84841156006,
-        "duration": 402968.2101421356,
-        "dram": 2952.654815673828,
-        "iteration": 20
+        "energy": 42895.45,
+        "duration": 441205.3,
+        "dram": 3068.25,
+        "iteration": 20,
+        "stdev": 3124.8395234795657
     },
     "com.google.gson.functional.NullObjectAndFieldTest-testCustomSerializationOfNulls": {
-        "energy": 44437.17380793842,
-        "duration": 794697.7258848343,
-        "dram": 3985.939981883758,
-        "iteration": 47
+        "energy": 51337.0,
+        "duration": 1092557.2127659575,
+        "dram": 4410.63829787234,
+        "iteration": 47,
+        "stdev": 23239.673672041496
+    },
+    "com.google.gson.functional.FieldNamingTest-testIdentity": {
+        "energy": 103382.48888888888,
+        "duration": 2727204.6333333333,
+        "dram": 9257.755555555555,
+        "iteration": 90,
+        "stdev": 181171.897189949
+    },
+    "com.google.gson.functional.NullObjectAndFieldTest-testAbsentJsonElementsAreSetToNull": {
+        "energy": 42757.833333333336,
+        "duration": 943378.9090909091,
+        "dram": 4002.818181818182,
+        "iteration": 66,
+        "stdev": 3552.5565808444217
+    },
+    "com.google.gson.functional.MapTest-testMapSerializationWithNullValueButSerializeNulls": {
+        "energy": 50897.333333333336,
+        "duration": 1177563.0952380951,
+        "dram": 4739.523809523809,
+        "iteration": 63,
+        "stdev": 20330.710716892514
+    },
+    "com.google.gson.CommentsTest-testParseComments": {
+        "energy": 120049.16923076923,
+        "duration": 3325279.5846153847,
+        "dram": 10868.36923076923,
+        "iteration": 65,
+        "stdev": 266693.73477695166
+    },
+    "com.google.gson.functional.DefaultTypeAdaptersTest-testTimestampSerialization": {
+        "energy": 43922.74736842105,
+        "duration": 1182114.4210526317,
+        "dram": 4001.684210526316,
+        "iteration": 95,
+        "stdev": 6563.56776050218
+    },
+    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomAdapterInvokedForCollectionElementSerialization": {
+        "energy": 42783.833333333336,
+        "duration": 570423.1111111111,
+        "dram": 3286.472222222222,
+        "iteration": 36,
+        "stdev": 3514.826655279983
+    },
+    "com.google.gson.functional.TypeAdapterPrecedenceTest-testNonstreamingHierarchicalFollowedByNonstreaming": {
+        "energy": 44136.72727272727,
+        "duration": 635454.4545454546,
+        "dram": 3840.909090909091,
+        "iteration": 22,
+        "stdev": 7720.871954889658
+    },
+    "com.google.gson.functional.NullObjectAndFieldTest-testPrintPrintingObjectWithNulls": {
+        "energy": 42601.30909090909,
+        "duration": 782737.5818181818,
+        "dram": 3691.072727272727,
+        "iteration": 55,
+        "stdev": 3414.3431838627585
     },
     "com.google.gson.functional.NullObjectAndFieldTest-testPrintPrintingArraysWithNulls": {
-        "energy": 44680.29977476597,
-        "duration": 459538.06458866596,
-        "dram": 4273.045822143555,
-        "iteration": 24
+        "energy": 42091.25,
+        "duration": 536073.5,
+        "dram": 2973.875,
+        "iteration": 24,
+        "stdev": 3869.2894723493273
     },
     "com.google.gson.MixedStreamTest-testWriteInvalidState": {
-        "energy": 84069.69129657745,
-        "duration": 1602649.8378424048,
-        "dram": 3531.2829599380493,
-        "iteration": 25
+        "energy": 51120.48,
+        "duration": 637222.96,
+        "dram": 3113.88,
+        "iteration": 25,
+        "stdev": 31358.178519958714
+    },
+    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomDeserializers": {
+        "energy": 47235.098039215685,
+        "duration": 859120.4117647059,
+        "dram": 3983.078431372549,
+        "iteration": 51,
+        "stdev": 8047.489413048855
+    },
+    "com.google.gson.functional.VersioningTest-testVersionedGsonMixingSinceAndUntilSerialization": {
+        "energy": 46123.3023255814,
+        "duration": 1170602.7093023255,
+        "dram": 4273.779069767442,
+        "iteration": 86,
+        "stdev": 15983.486920605195
     },
     "com.google.gson.functional.NullObjectAndFieldTest-testExplicitNullSetsFieldToNullDuringDeserialization": {
-        "energy": 43363.101426736874,
-        "duration": 717013.8961208874,
-        "dram": 4195.212192291352,
-        "iteration": 46
+        "energy": 42659.434782608696,
+        "duration": 730655.8478260869,
+        "dram": 3613.478260869565,
+        "iteration": 46,
+        "stdev": 3349.494846093596
     },
     "com.google.gson.functional.CustomDeserializerTest-testCustomDeserializerReturnsNullForArrayElements": {
-        "energy": 42205.527013781466,
-        "duration": 721613.2868921268,
-        "dram": 3484.439433760933,
-        "iteration": 41
+        "energy": 43144.19512195122,
+        "duration": 909568.4634146341,
+        "dram": 2992.878048780488,
+        "iteration": 41,
+        "stdev": 8888.530296960023
     },
     "com.google.gson.functional.ArrayTest-testNullsInArrayWithSerializeNullPropertySetSerialization": {
-        "energy": 65233.16644229181,
-        "duration": 1615131.4235213716,
-        "dram": 6209.915994360112,
-        "iteration": 31
+        "energy": 56538.0,
+        "duration": 1315876.5806451612,
+        "dram": 4918.5161290322585,
+        "iteration": 31,
+        "stdev": 32879.55157256411
+    },
+    "com.google.gson.functional.TypeAdapterPrecedenceTest-testNonstreamingFollowedByNonstreaming": {
+        "energy": 95821.87341772152,
+        "duration": 2608140.8481012657,
+        "dram": 8370.974683544304,
+        "iteration": 79,
+        "stdev": 227338.35052004276
     },
     "com.google.gson.GsonBuilderTest-testCreatingMoreThanOnce": {
-        "energy": 100253.8451538086,
-        "duration": 2164295.1340942383,
-        "dram": 8640.201110839844,
-        "iteration": 16
+        "energy": 104011.3125,
+        "duration": 2083881.6875,
+        "dram": 7727.4375,
+        "iteration": 16,
+        "stdev": 232588.28521733385
+    },
+    "com.google.gson.functional.MapAsArrayTypeAdapterTest-testTwoTypesCollapseToOneDeserialize": {
+        "energy": 70289.09210526316,
+        "duration": 1779786.9210526317,
+        "dram": 6251.815789473684,
+        "iteration": 76,
+        "stdev": 31818.601755302974
+    },
+    "com.google.gson.internal.bind.RecursiveTypesResolveTest-testRecursiveTypeVariablesResolve1": {
+        "energy": 49970.07692307692,
+        "duration": 969090.3846153846,
+        "dram": 4150.115384615385,
+        "iteration": 52,
+        "stdev": 15841.881070132951
+    },
+    "com.google.gson.functional.TypeAdapterPrecedenceTest-testStreamingFollowedByStreaming": {
+        "energy": 42487.64,
+        "duration": 649289.68,
+        "dram": 3047.24,
+        "iteration": 25,
+        "stdev": 4196.825980476198
     },
     "com.google.gson.functional.CustomSerializerTest-testBaseClassSerializerInvokedForBaseClassFields": {
-        "energy": 400331.1546551287,
-        "duration": 11010733.151063412,
-        "dram": 35578.25219011307,
-        "iteration": 26
+        "energy": 98615.96153846153,
+        "duration": 2128251.6153846155,
+        "dram": 8164.884615384615,
+        "iteration": 26,
+        "stdev": 272658.02060322335
+    },
+    "com.google.gson.internal.bind.RecursiveTypesResolveTest-testRecursiveTypeVariablesResolve12": {
+        "energy": 45715.29268292683,
+        "duration": 816341.9756097561,
+        "dram": 3771.243902439024,
+        "iteration": 41,
+        "stdev": 12121.181050569214
     },
     "com.google.gson.functional.VersioningTest-testVersionedGsonWithUnversionedClassesDeserialization": {
-        "energy": 39280.59486601502,
-        "duration": 520522.4691252783,
-        "dram": 4517.860686942935,
-        "iteration": 28
+        "energy": 42425.92857142857,
+        "duration": 576920.6071428572,
+        "dram": 3245.285714285714,
+        "iteration": 28,
+        "stdev": 3743.88666388832
+    },
+    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomDeserializerInvokedForPrimitives": {
+        "energy": 42971.64102564102,
+        "duration": 652017.1025641026,
+        "dram": 3499.358974358974,
+        "iteration": 39,
+        "stdev": 3118.2687133365052
+    },
+    "com.google.gson.functional.NullObjectAndFieldTest-testExplicitSerializationOfNulls": {
+        "energy": 43234.71698113208,
+        "duration": 852724.7358490566,
+        "dram": 3590.5849056603774,
+        "iteration": 53,
+        "stdev": 6069.495793231204
     },
     "com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypesWithCustomDeserializer": {
-        "energy": 44714.84407376814,
-        "duration": 1075132.2935222464,
-        "dram": 3538.604502161977,
-        "iteration": 71
+        "energy": 43827.394366197186,
+        "duration": 1076024.1830985916,
+        "dram": 3865.7323943661972,
+        "iteration": 71,
+        "stdev": 6476.994417902928
+    },
+    "com.google.gson.functional.NullObjectAndFieldTest-testCustomTypeAdapterPassesNullSerialization": {
+        "energy": 42843.22222222222,
+        "duration": 480745.27777777775,
+        "dram": 2999.8333333333335,
+        "iteration": 18,
+        "stdev": 3382.7048440158646
     },
     "com.google.gson.functional.NullObjectAndFieldTest-testExplicitDeserializationOfNulls": {
-        "energy": 42499.23897793889,
-        "duration": 582078.044981543,
-        "dram": 3613.9102816693485,
-        "iteration": 30
+        "energy": 42773.36666666667,
+        "duration": 607592.4,
+        "dram": 3224.6666666666665,
+        "iteration": 30,
+        "stdev": 4232.414744038627
     },
     "com.google.gson.functional.TypeAdapterPrecedenceTest-testSerializeNonstreamingTypeAdapterFollowedByStreamingTypeAdapter": {
-        "energy": 41988.9893450737,
-        "duration": 342819.22851610184,
-        "dram": 2829.7482404708862,
-        "iteration": 22
+        "energy": 44480.63636363636,
+        "duration": 434115.04545454547,
+        "dram": 3591.318181818182,
+        "iteration": 22,
+        "stdev": 2434.488886911556
     },
     "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest-testRegisteredAdapterOverridesJsonAdapter": {
-        "energy": 45269.98922520173,
-        "duration": 776043.8441309279,
-        "dram": 2202.978419908555,
-        "iteration": 40
+        "energy": 44824.25,
+        "duration": 735578.175,
+        "dram": 3222.1,
+        "iteration": 40,
+        "stdev": 8375.09336291244
+    },
+    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomAdapterInvokedForMapElementSerializationWithType": {
+        "energy": 44377.94642857143,
+        "duration": 843703.2857142857,
+        "dram": 3950.625,
+        "iteration": 56,
+        "stdev": 6560.739231594809
+    },
+    "com.google.gson.functional.TypeHierarchyAdapterTest-testRegisterSuperTypeFirst": {
+        "energy": 42781.666666666664,
+        "duration": 744737.125,
+        "dram": 3277.9791666666665,
+        "iteration": 48,
+        "stdev": 4259.411184528783
+    },
+    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomNestedSerializers": {
+        "energy": 44608.318181818184,
+        "duration": 901193.7727272727,
+        "dram": 3644.2727272727275,
+        "iteration": 66,
+        "stdev": 6181.1624266164445
     },
     "com.google.gson.functional.JavaUtilConcurrentAtomicTest-testAtomicLongWithStringSerializationPolicy": {
-        "energy": 45883.406293730965,
-        "duration": 795783.3544418624,
-        "dram": 5072.389872415065,
-        "iteration": 59
+        "energy": 48582.71186440678,
+        "duration": 1047849.0847457628,
+        "dram": 4095.677966101695,
+        "iteration": 59,
+        "stdev": 24610.113679618746
     },
     "com.google.gson.functional.NamingPolicyTest-testGsonWithSerializedNameFieldNamingPolicyDeserialization": {
-        "energy": 38259.43279251456,
-        "duration": 650318.3588286042,
-        "dram": 3757.25610075891,
-        "iteration": 28
+        "energy": 43437.25,
+        "duration": 909097.1428571428,
+        "dram": 3282.1785714285716,
+        "iteration": 28,
+        "stdev": 7293.7254914510495
     },
     "com.google.gson.functional.PrimitiveTest-testFloatInfinitySerialization": {
-        "energy": 44535.52194595337,
-        "duration": 383705.37002182007,
-        "dram": 4266.453395843506,
-        "iteration": 19
+        "energy": 42907.63157894737,
+        "duration": 441637.2105263158,
+        "dram": 2874.7368421052633,
+        "iteration": 19,
+        "stdev": 3678.6234297560463
     },
     "com.google.gson.functional.FieldNamingTest-testLowerCaseWithDashes": {
-        "energy": 45145.009437601504,
-        "duration": 612546.0012241574,
-        "dram": 3939.536029199793,
-        "iteration": 37
+        "energy": 42208.18918918919,
+        "duration": 705077.0810810811,
+        "dram": 3146.4054054054054,
+        "iteration": 37,
+        "stdev": 4312.5802763407355
     },
     "com.google.gson.functional.VersioningTest-testVersionedGsonWithUnversionedClassesSerialization": {
-        "energy": 43910.77114843217,
-        "duration": 655533.1733440034,
-        "dram": 3141.8645795530524,
-        "iteration": 43
+        "energy": 43827.395348837206,
+        "duration": 829435.4418604651,
+        "dram": 3667.0697674418607,
+        "iteration": 43,
+        "stdev": 6160.21284040155
+    },
+    "com.google.gson.functional.ExclusionStrategyFunctionalTest-testExcludeTopLevelClassDeserializationDoesNotImpactSerialization": {
+        "energy": 44860.75,
+        "duration": 493807.6875,
+        "dram": 3490.34375,
+        "iteration": 32,
+        "stdev": 2904.8996217597605
     },
     "com.google.gson.functional.DefaultTypeAdaptersTest-testDefaultCalendarSerialization": {
-        "energy": 40942.39605937898,
-        "duration": 509725.5880770534,
-        "dram": 3427.455757021904,
-        "iteration": 28
+        "energy": 43051.5,
+        "duration": 533753.4642857143,
+        "dram": 3373.25,
+        "iteration": 28,
+        "stdev": 2422.977588187134
+    },
+    "com.google.gson.functional.SecurityTest-testNonExecutableJsonDeserialization": {
+        "energy": 45656.90909090909,
+        "duration": 900155.4090909091,
+        "dram": 4105.272727272727,
+        "iteration": 22,
+        "stdev": 10383.26459833362
+    },
+    "com.google.gson.DefaultMapJsonSerializerTest-testNonEmptyMapSerialization": {
+        "energy": 72308.1,
+        "duration": 1860252.3166666667,
+        "dram": 6344.133333333333,
+        "iteration": 60,
+        "stdev": 53489.107335263434
     },
     "com.google.gson.functional.ArrayTest-testArrayElementsAreArrays": {
-        "energy": 39044.75596451759,
-        "duration": 522122.5730237961,
-        "dram": 3782.9811539649963,
-        "iteration": 23
+        "energy": 42605.17391304348,
+        "duration": 464130.95652173914,
+        "dram": 3189.0434782608695,
+        "iteration": 23,
+        "stdev": 4068.8450091991326
     },
     "com.google.gson.functional.PrimitiveTest-testFloatNaNSerialization": {
-        "energy": 48100.50784492493,
-        "duration": 429918.02906894684,
-        "dram": 5222.867861747742,
-        "iteration": 21
+        "energy": 44372.380952380954,
+        "duration": 427578.90476190473,
+        "dram": 3357.2380952380954,
+        "iteration": 21,
+        "stdev": 4583.0390465819
+    },
+    "com.google.gson.OverrideCoreTypeAdaptersTest-testOverrideWrapperBooleanAdapter": {
+        "energy": 110868.125,
+        "duration": 2714105.03125,
+        "dram": 9684.03125,
+        "iteration": 32,
+        "stdev": 256898.2724940397
     },
     "com.google.gson.functional.PrimitiveTest-testNegativeInfinityFloatSerialization": {
-        "energy": 43160.56150817871,
-        "duration": 340967.99670410156,
-        "dram": 3333.1188201904297,
-        "iteration": 17
+        "energy": 42850.294117647056,
+        "duration": 388073.17647058825,
+        "dram": 2973.3529411764707,
+        "iteration": 17,
+        "stdev": 2546.816762033963
+    },
+    "com.google.gson.functional.DefaultTypeAdaptersTest-testSetSerialization": {
+        "energy": 41661.3870967742,
+        "duration": 725577.9032258064,
+        "dram": 3499.8387096774195,
+        "iteration": 31,
+        "stdev": 2819.6571477399953
     },
     "com.google.gson.functional.DefaultTypeAdaptersTest-testDefaultGregorianCalendarSerialization": {
-        "energy": 44044.21842377633,
-        "duration": 423244.13392520696,
-        "dram": 3923.1735182479024,
-        "iteration": 28
+        "energy": 43256.28571428572,
+        "duration": 425915.53571428574,
+        "dram": 2872.5714285714284,
+        "iteration": 28,
+        "stdev": 2668.6358320463346
+    },
+    "com.google.gson.functional.CustomTypeAdaptersTest-testEnsureCustomDeserializerNotInvokedForNullValues": {
+        "energy": 68940.54385964913,
+        "duration": 1506500.245614035,
+        "dram": 6050.315789473684,
+        "iteration": 57,
+        "stdev": 53278.15310404351
     },
     "com.google.gson.functional.NullObjectAndFieldTest-testNullWrappedPrimitiveMemberDeserialization": {
-        "energy": 41817.3142918963,
-        "duration": 608132.9938778505,
-        "dram": 3325.7364258226007,
-        "iteration": 30
+        "energy": 42401.03333333333,
+        "duration": 492323.9666666667,
+        "dram": 3238.5,
+        "iteration": 30,
+        "stdev": 3614.177734822804
+    },
+    "com.google.gson.functional.CustomTypeAdaptersTest-testCustomAdapterInvokedForCollectionElementDeserialization": {
+        "energy": 43000.49275362319,
+        "duration": 1069700.420289855,
+        "dram": 4255.768115942029,
+        "iteration": 69,
+        "stdev": 3802.697427906717
     },
     "com.google.gson.functional.PrimitiveTest-testDoubleInfinitySerialization": {
-        "energy": 43720.732666015625,
-        "duration": 402262.1492614746,
-        "dram": 4254.8255615234375,
-        "iteration": 16
+        "energy": 42686.375,
+        "duration": 416176.0625,
+        "dram": 3055.0625,
+        "iteration": 16,
+        "stdev": 3890.6971398934406
     },
     "com.google.gson.functional.DefaultTypeAdaptersTest-testBitSetDeserialization": {
-        "energy": 41488.98208924942,
-        "duration": 518299.54717899114,
-        "dram": 4019.85978607554,
-        "iteration": 31
+        "energy": 41442.8064516129,
+        "duration": 556788.8709677419,
+        "dram": 3594.935483870968,
+        "iteration": 31,
+        "stdev": 2615.254942477296
     },
     "com.google.gson.functional.NamingPolicyTest-testGsonWithNonDefaultFieldNamingPolicySerialization": {
-        "energy": 46439.874070719576,
-        "duration": 801466.021546759,
-        "dram": 4627.64747721967,
-        "iteration": 42
+        "energy": 42679.42857142857,
+        "duration": 762916.7857142857,
+        "dram": 3703.690476190476,
+        "iteration": 42,
+        "stdev": 4432.385030028616
     },
     "com.google.gson.functional.NullObjectAndFieldTest-testTopLevelNullObjectDeserialization": {
-        "energy": 52956.16162458062,
-        "duration": 765047.5893721879,
-        "dram": 4773.621963202953,
-        "iteration": 28
+        "energy": 49019.78571428572,
+        "duration": 727019.25,
+        "dram": 3655.0714285714284,
+        "iteration": 28,
+        "stdev": 13374.572322553888
+    },
+    "com.google.gson.MixedStreamTest-testReadInvalidState": {
+        "energy": 43814.818181818184,
+        "duration": 449054.54545454547,
+        "dram": 3043.909090909091,
+        "iteration": 22,
+        "stdev": 2827.72898978481
+    },
+    "com.google.gson.functional.DefaultTypeAdaptersTest-testClassSerialization": {
+        "energy": 42105.706896551725,
+        "duration": 910968.2931034482,
+        "dram": 3807.5862068965516,
+        "iteration": 58,
+        "stdev": 3369.058427803299
     },
     "com.google.gson.functional.SecurityTest-testNonExecutableJsonSerialization": {
-        "energy": 48463.170361864635,
-        "duration": 613443.7195727165,
-        "dram": 3754.694183437602,
-        "iteration": 47
+        "energy": 127344.91489361702,
+        "duration": 3491542.4468085105,
+        "dram": 11795.702127659575,
+        "iteration": 47,
+        "stdev": 264674.46947828156
+    },
+    "com.google.gson.functional.SecurityTest-testJsonWithNonExectuableTokenWithRegularGsonDeserialization": {
+        "energy": 42650.260869565216,
+        "duration": 583441.8260869565,
+        "dram": 3236.782608695652,
+        "iteration": 23,
+        "stdev": 4261.43809383631
     },
     "com.google.gson.MixedStreamTest-testWriteDoesNotMutateState": {
-        "energy": 46279.28685052693,
-        "duration": 519093.7227282822,
-        "dram": 4551.210476726294,
-        "iteration": 27
+        "energy": 43407.07407407407,
+        "duration": 537804.4444444445,
+        "dram": 3053.222222222222,
+        "iteration": 27,
+        "stdev": 3581.4511534967787
     },
     "com.google.gson.functional.ReadersWritersTest-testTopLevelNullObjectSerializationWithWriterAndSerializeNulls": {
-        "energy": 43450.0715637207,
-        "duration": 446712.52334594727,
-        "dram": 1185.1304931640625,
-        "iteration": 16
+        "energy": 47576.875,
+        "duration": 695055.125,
+        "dram": 2643.0625,
+        "iteration": 16,
+        "stdev": 14292.877417069489
     },
     "com.google.gson.functional.ExclusionStrategyFunctionalTest-testExclusionStrategyDeserialization": {
-        "energy": 59062.747520485056,
-        "duration": 1496807.864660406,
-        "dram": 4635.290660096245,
-        "iteration": 38
+        "energy": 51611.52631578947,
+        "duration": 1033508.1052631579,
+        "dram": 3743.7105263157896,
+        "iteration": 38,
+        "stdev": 19026.34873943423
     },
     "com.google.gson.MixedStreamTest-testReadNulls": {
-        "energy": 44449.51583862305,
-        "duration": 489435.58866119385,
-        "dram": 4340.583366394043,
-        "iteration": 19
+        "energy": 43890.63157894737,
+        "duration": 419596.84210526315,
+        "dram": 3452.2105263157896,
+        "iteration": 19,
+        "stdev": 3471.876441084945
+    },
+    "com.google.gson.functional.DefaultTypeAdaptersTest-testBitSetSerialization": {
+        "energy": 42214.913043478264,
+        "duration": 432071.04347826086,
+        "dram": 3076.608695652174,
+        "iteration": 23,
+        "stdev": 2411.037480332688
     },
     "com.google.gson.functional.FieldNamingTest-testUpperCamelCaseWithSpaces": {
-        "energy": 42552.78813971738,
-        "duration": 789056.5002710655,
-        "dram": 3694.4764238634125,
-        "iteration": 40
+        "energy": 46221.8,
+        "duration": 854540.725,
+        "dram": 3989.475,
+        "iteration": 40,
+        "stdev": 19479.011651261986
     },
     "com.google.gson.functional.TypeAdapterPrecedenceTest-testStreamingFollowedByNonstreamingHierarchical": {
-        "energy": 41420.910981178284,
-        "duration": 396054.40885448456,
-        "dram": 3213.035001039505,
-        "iteration": 23
+        "energy": 40946.52173913043,
+        "duration": 737470.0434782609,
+        "dram": 2942.9565217391305,
+        "iteration": 23,
+        "stdev": 4224.451617301198
+    },
+    "com.google.gson.functional.CustomDeserializerTest-testCustomDeserializerReturnsNullForTopLevelObject": {
+        "energy": 42894.76315789474,
+        "duration": 773716.3157894737,
+        "dram": 3259.7105263157896,
+        "iteration": 38,
+        "stdev": 4491.957763511248
     },
     "com.google.gson.functional.CustomTypeAdaptersTest-testCustomSerializerInvokedForPrimitives": {
-        "energy": 48089.75994876447,
-        "duration": 633638.2241996195,
-        "dram": 3961.9620327309312,
-        "iteration": 40
+        "energy": 47587.475,
+        "duration": 774265.55,
+        "dram": 3939.325,
+        "iteration": 40,
+        "stdev": 24006.058027076724
     },
     "com.google.gson.functional.CustomSerializerTest-testSerializerReturnsNull": {
-        "energy": 62082.79233678867,
-        "duration": 8390113.614929367,
-        "dram": 4244.094130582907,
-        "iteration": 46
+        "energy": 44397.717391304344,
+        "duration": 1021119.5869565217,
+        "dram": 3598.0652173913045,
+        "iteration": 46,
+        "stdev": 6900.164247141051
     },
     "com.google.gson.functional.SecurityTest-testJsonWithNonExectuableTokenSerialization": {
-        "energy": 45683.94864654541,
-        "duration": 364324.60610961914,
-        "dram": 4478.340362548828,
-        "iteration": 18
+        "energy": 44023.166666666664,
+        "duration": 414069.1666666667,
+        "dram": 3414.5555555555557,
+        "iteration": 18,
+        "stdev": 3093.5310146964566
     },
     "com.google.gson.functional.DefaultTypeAdaptersTest-testDefaultGregorianCalendarDeserialization": {
-        "energy": 44734.32490503788,
-        "duration": 423874.6860522032,
-        "dram": 4049.179067134857,
-        "iteration": 24
+        "energy": 42928.0,
+        "duration": 429464.7916666667,
+        "dram": 3296.5,
+        "iteration": 24,
+        "stdev": 2969.071249285428
     },
     "com.google.gson.functional.ExclusionStrategyFunctionalTest-testExcludeTopLevelClassSerializationDoesNotImpactDeserialization": {
-        "energy": 45330.14435327434,
-        "duration": 493238.0944177883,
-        "dram": 3951.5161600530264,
-        "iteration": 36
+        "energy": 43965.61111111111,
+        "duration": 522199.72222222225,
+        "dram": 3726.4166666666665,
+        "iteration": 36,
+        "stdev": 3426.0025886817893
+    },
+    "com.google.gson.functional.PrimitiveTest-testDoubleNaNSerialization": {
+        "energy": 42635.044444444444,
+        "duration": 953720.4444444445,
+        "dram": 3613.4222222222224,
+        "iteration": 45,
+        "stdev": 4347.1761406716305
     },
     "com.google.gson.functional.NamingPolicyTest-testGsonWithLowerCaseUnderscorePolicyDeserialiation": {
-        "energy": 44401.32693743706,
-        "duration": 567401.1656951904,
-        "dram": 2549.6904277801514,
-        "iteration": 23
+        "energy": 42318.434782608696,
+        "duration": 594086.6521739131,
+        "dram": 2830.5652173913045,
+        "iteration": 23,
+        "stdev": 3747.4920869027683
+    },
+    "com.google.gson.functional.ExclusionStrategyFunctionalTest-testExclusionStrategySerializationDoesNotImpactSerialization": {
+        "energy": 44465.583333333336,
+        "duration": 551202.5277777778,
+        "dram": 3766.25,
+        "iteration": 36,
+        "stdev": 3698.9265738334293
     },
     "com.google.gson.OverrideCoreTypeAdaptersTest-testOverrideStringAdapter": {
-        "energy": 44735.90901565552,
-        "duration": 423048.4648361206,
-        "dram": 1029.1042022705078,
-        "iteration": 20
+        "energy": 44979.65,
+        "duration": 1163875.5,
+        "dram": 2899.2,
+        "iteration": 20,
+        "stdev": 9923.21460654258
     },
     "com.google.gson.functional.TypeAdapterPrecedenceTest-testStreamingHierarchicalFollowedByNonstreaming": {
-        "energy": 40045.55439376831,
-        "duration": 504400.02072906494,
-        "dram": 409.4164810180664,
-        "iteration": 19
+        "energy": 40883.84210526316,
+        "duration": 500511.3157894737,
+        "dram": 2464.2631578947367,
+        "iteration": 19,
+        "stdev": 4672.528271584182
+    },
+    "com.google.gson.functional.NamingPolicyTest-testGsonWithLowerCaseDashPolicyDeserialiation": {
+        "energy": 43210.93548387097,
+        "duration": 585934.7096774194,
+        "dram": 3595.4193548387098,
+        "iteration": 31,
+        "stdev": 3219.6099937673666
     },
     "com.google.gson.functional.PrimitiveTest-testLongAsStringSerialization": {
-        "energy": 43401.93011841178,
-        "duration": 461508.17486841977,
-        "dram": 3805.5610749721527,
-        "iteration": 27
+        "energy": 43452.2962962963,
+        "duration": 489692.5925925926,
+        "dram": 3588.1481481481483,
+        "iteration": 27,
+        "stdev": 2567.221885327562
+    },
+    "com.google.gson.functional.NamingPolicyTest-testGsonWithNonDefaultFieldNamingPolicyDeserialiation": {
+        "energy": 81279.76190476191,
+        "duration": 1948855.357142857,
+        "dram": 7219.380952380952,
+        "iteration": 42,
+        "stdev": 55675.54818247865
     },
     "com.google.gson.functional.SecurityTest-testJsonWithNonExectuableTokenWithConfiguredGsonDeserialization": {
-        "energy": 41981.46972217783,
-        "duration": 628800.2773629203,
-        "dram": 3494.6056202948093,
-        "iteration": 29
+        "energy": 42408.8275862069,
+        "duration": 534620.724137931,
+        "dram": 3738.0344827586205,
+        "iteration": 29,
+        "stdev": 3456.1519270262525
+    },
+    "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testRegisteredTypeAdapterTakesPrecedenceOverClassAnnotationAdapter": {
+        "energy": 43430.98148148148,
+        "duration": 962118.5185185185,
+        "dram": 3836.9814814814813,
+        "iteration": 54,
+        "stdev": 6621.36636198731
     },
     "com.google.gson.functional.FieldNamingTest-testLowerCaseWithUnderscores": {
-        "energy": 40905.613569200614,
-        "duration": 828524.8005674529,
-        "dram": 3740.003902340213,
-        "iteration": 48
+        "energy": 43237.020833333336,
+        "duration": 703788.2708333334,
+        "dram": 3246.7916666666665,
+        "iteration": 48,
+        "stdev": 3888.4238103288894
     },
     "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest-testNonPrimitiveFieldAnnotationTakesPrecedenceOverDefault": {
-        "energy": 43235.62621593475,
-        "duration": 569495.7258872986,
-        "dram": 2466.2683000564575,
-        "iteration": 21
+        "energy": 43273.71428571428,
+        "duration": 557151.3333333334,
+        "dram": 2729.190476190476,
+        "iteration": 21,
+        "stdev": 1720.5376275720205
     },
     "com.google.gson.functional.NullObjectAndFieldTest-testExplicitSerializationOfNullCollectionMembers": {
-        "energy": 43151.215425033704,
-        "duration": 925959.4734900249,
-        "dram": 2064.4802388331955,
-        "iteration": 39
+        "energy": 42876.230769230766,
+        "duration": 636764.1282051282,
+        "dram": 3592.74358974359,
+        "iteration": 39,
+        "stdev": 3567.2425784367724
     },
     "com.google.gson.functional.FieldNamingTest-testUpperCamelCase": {
-        "energy": 45687.30737007488,
-        "duration": 627268.9792671914,
-        "dram": 4119.402224765053,
-        "iteration": 42
+        "energy": 43769.45238095238,
+        "duration": 672781.380952381,
+        "dram": 3598.4761904761904,
+        "iteration": 42,
+        "stdev": 3411.087825385669
     },
     "com.google.gson.functional.NamingPolicyTest-testGsonWithUpperCamelCaseSpacesPolicySerialiation": {
-        "energy": 44587.69239495695,
-        "duration": 502104.5789655596,
-        "dram": 3446.3902445286512,
-        "iteration": 27
+        "energy": 44401.92592592593,
+        "duration": 517745.0,
+        "dram": 3518.925925925926,
+        "iteration": 27,
+        "stdev": 3299.160734197197
     },
     "com.google.gson.functional.DefaultTypeAdaptersTest-testClassDeserialization": {
-        "energy": 42037.84988169372,
-        "duration": 445750.19560033083,
-        "dram": 3724.8271650224924,
-        "iteration": 27
+        "energy": 41051.59259259259,
+        "duration": 520848.44444444444,
+        "dram": 3370.6296296296296,
+        "iteration": 27,
+        "stdev": 2921.317552308651
+    },
+    "com.google.gson.functional.FieldExclusionTest-testInnerClassExclusion": {
+        "energy": 42785.555555555555,
+        "duration": 410572.6666666667,
+        "dram": 3434.1111111111113,
+        "iteration": 9,
+        "stdev": 2535.607843457357
     },
     "com.google.gson.functional.DefaultTypeAdaptersTest-testDefaultCalendarDeserialization": {
-        "energy": 43390.14192020893,
-        "duration": 449089.0908136368,
-        "dram": 3794.2551925182343,
-        "iteration": 24
+        "energy": 43169.333333333336,
+        "duration": 515931.5833333333,
+        "dram": 3881.7083333333335,
+        "iteration": 24,
+        "stdev": 2757.8061580821004
     },
     "com.google.gson.functional.NamingPolicyTest-testGsonWithLowerCaseDashPolicySerialization": {
-        "energy": 39400.30875349045,
-        "duration": 763647.2028150558,
-        "dram": 1891.7913920879364,
-        "iteration": 23
+        "energy": 42615.82608695652,
+        "duration": 556681.304347826,
+        "dram": 3541.0,
+        "iteration": 23,
+        "stdev": 4423.990866530531
     },
     "com.google.gson.functional.CustomTypeAdaptersTest-testCustomAdapterInvokedForMapElementSerialization": {
-        "energy": 43604.06964111328,
-        "duration": 417979.99334716797,
-        "dram": 1679.9340209960938,
-        "iteration": 15
+        "energy": 44246.26666666667,
+        "duration": 406460.06666666665,
+        "dram": 2699.733333333333,
+        "iteration": 15,
+        "stdev": 2104.501159155986
     },
     "com.google.gson.JsonObjectTest-testWritePropertyWithEmptyStringName": {
-        "energy": 42962.61198425293,
-        "duration": 538685.5755271912,
-        "dram": 3520.4109497070312,
-        "iteration": 19
+        "energy": 43113.10526315789,
+        "duration": 484546.63157894736,
+        "dram": 3250.157894736842,
+        "iteration": 19,
+        "stdev": 3688.0061064959273
     }
 }

@@ -10,36 +10,34 @@ https://github.com/google/gson/commit/ada597
 ![](./gson_delta_energy_0_v.png)
 
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy |
-| --- | --- | --- | --- |
-| 0 | 34898.06370805763 | 41868.050704956055 | 6969.986996898428 |
-| 1 | 97407.30522815775 | 131918.1849806286 | 34510.87975247085 |
-| 2 | 49260.52866858692 | 72193.20407704292 | 22932.675408455994 |
-| 3 | 111442.3116219675 | 49498.22035584751 | -61944.09126611999 |
-| 4 | 50433.003196432604 | 36592.04498900569 | -13840.958207426913 |
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
+| --- | --- | --- | --- | --- | --- |
+| 0 | 36359.75 | 48292.38888888889 | 11932.63888888889 | 2629.7573557269498 | 31172.01159897358 |
+| 1 | 58712.13888888889 | 59563.89743589744 | 851.7585470085469 | 33942.520779132195 | 35199.96355970934 |
+| 2 | 85006.79591836735 | 87609.725 | 2602.929081632654 | 52575.155706380814 | 55142.14971779188 |
+| 3 | 54360.1 | 54640.76271186441 | 280.6627118644101 | 34857.65250515302 | 37050.23607845324 |
+| 4 | 122986.33333333333 | 120769.16417910448 | -2217.1691542288463 | 44325.98468950739 | 35986.41969127973 |
 
 ## Delta Duration per test method
-
-![](./gson_delta_duration_0_v.png)
 
 
 | ID | DurationV1 | DurationsV2 | DeltaDuration |
 | --- | --- | --- | --- |
-| 0 | 644656.639016968 | 919328.8296051025 | 274672.1905881346 |
-| 1 | 3302355.36109436 | 5056723.137745934 | 1754367.7766515738 |
-| 2 | 1570646.3342464948 | 2453647.1361676212 | 883000.8019211264 |
-| 3 | 4377862.815940568 | 1289474.9351751173 | -3088387.880765451 |
-| 4 | 1959192.6991167327 | 1514911.3397915743 | -444281.3593251584 |
+| 0 | 653680.3125 | 1126494.0555555555 | 472813.7430555555 |
+| 1 | 1871058.9166666667 | 1924883.4871794872 | 53824.5705128205 |
+| 2 | 2872323.8775510206 | 2912053.875 | 39729.99744897941 |
+| 3 | 1663423.58 | 1741875.5084745763 | 78451.92847457621 |
+| 4 | 4452965.236111111 | 4533984.835820896 | 81019.59970978461 |
 
 ## Misc.
 
 | ID | Test Class | Test Method |
 | --- | --- | --- |
 | 0 | com.google.gson.stream.JsonWriterTest | testPrettyPrintArray |
-| 1 | com.google.gson.stream.JsonWriterTest | testTopLevelValueTypes |
-| 2 | com.google.gson.stream.JsonWriterTest | testNonFiniteDoubles |
-| 3 | com.google.gson.stream.JsonWriterTest | testPrettyPrintObject |
-| 4 | com.google.gson.stream.JsonWriterTest | testDoubles |
+| 1 | com.google.gson.stream.JsonWriterTest | testNonFiniteDoubles |
+| 2 | com.google.gson.stream.JsonWriterTest | testPrettyPrintObject |
+| 3 | com.google.gson.stream.JsonWriterTest | testDoubles |
+| 4 | com.google.gson.stream.JsonWriterTest | testTopLevelValueTypes |
 
 
 
@@ -47,10 +45,10 @@ https://github.com/google/gson/commit/ada597
 | Test | IterationV1 | IterationV2 | DeltaIteration |
 | --- | --- | --- | --- |
 | 0 | 32 | 18 | -14 |
-| 1 | 72 | 67 | -5 |
-| 2 | 36 | 39 | 3 |
-| 3 | 49 | 40 | -9 |
-| 4 | 50 | 59 | 9 |
+| 1 | 36 | 39 | 3 |
+| 2 | 49 | 40 | -9 |
+| 3 | 50 | 59 | 9 |
+| 4 | 72 | 67 | -5 |
 
 
 
