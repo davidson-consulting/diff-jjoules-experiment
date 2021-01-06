@@ -10,8 +10,8 @@ https://github.com/google/gson/commit/aceada
 ![](./gson_delta_energy_0_v.png)
 
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σ |
-| --- | --- | --- | --- | --- |
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
+| --- | --- | --- | --- | --- | --- |
 | 0 | 73444.0 | 66836.125 | -6607.875 | 80611.69065251728 | 70520.71597084925 |
 | 1 | 142867.3673469388 | 142782.12631578947 | -85.24103114931495 | 42252.75508017267 | 49312.399453888196 |
 | 2 | 38692.255319148935 | 39431.60975609756 | 739.3544369486262 | 19966.548785478608 | 16020.543329719409 |
@@ -22,8 +22,6 @@ https://github.com/google/gson/commit/aceada
 | 7 | 36281.34782608696 | 37026.529411764706 | 745.1815856777466 | 4151.5881781260705 | 11495.363761701532 |
 
 ## Delta Duration per test method
-
-![](./gson_delta_duration_0_v.png)
 
 
 | ID | DurationV1 | DurationsV2 | DeltaDuration |

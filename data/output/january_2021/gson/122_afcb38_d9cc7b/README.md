@@ -9,22 +9,6 @@ https://github.com/google/gson/commit/d9cc7b
 
 ![](./gson_delta_energy_0_v.png)
 
-![](./gson_delta_energy_10_v.png)
-
-![](./gson_delta_energy_11_v.png)
-
-![](./gson_delta_energy_12_v.png)
-
-![](./gson_delta_energy_13_v.png)
-
-![](./gson_delta_energy_14_v.png)
-
-![](./gson_delta_energy_15_v.png)
-
-![](./gson_delta_energy_16_v.png)
-
-![](./gson_delta_energy_17_v.png)
-
 ![](./gson_delta_energy_1_v.png)
 
 ![](./gson_delta_energy_2_v.png)
@@ -43,9 +27,25 @@ https://github.com/google/gson/commit/d9cc7b
 
 ![](./gson_delta_energy_9_v.png)
 
+![](./gson_delta_energy_10_v.png)
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σ |
-| --- | --- | --- | --- | --- |
+![](./gson_delta_energy_11_v.png)
+
+![](./gson_delta_energy_12_v.png)
+
+![](./gson_delta_energy_13_v.png)
+
+![](./gson_delta_energy_14_v.png)
+
+![](./gson_delta_energy_15_v.png)
+
+![](./gson_delta_energy_16_v.png)
+
+![](./gson_delta_energy_17_v.png)
+
+
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
+| --- | --- | --- | --- | --- | --- |
 | 0 | 44475.9746835443 | 43712.0 | -763.9746835443002 | 9830.0774492161 | 8358.533414789574 |
 | 1 | 42390.13043478261 | 42380.153846153844 | -9.976588628764148 | 4273.246315150027 | 3588.9729302796472 |
 | 2 | 42695.98275862069 | 42761.91935483871 | 65.93659621802362 | 3969.801551938296 | 3155.3022824281607 |
@@ -225,42 +225,6 @@ https://github.com/google/gson/commit/d9cc7b
 | 176 | 43038.53571428572 | 42912.6 | -125.93571428571886 | 4366.076675281684 | 3603.8496417026054 |
 
 ## Delta Duration per test method
-
-![](./gson_delta_duration_0_v.png)
-
-![](./gson_delta_duration_10_v.png)
-
-![](./gson_delta_duration_11_v.png)
-
-![](./gson_delta_duration_12_v.png)
-
-![](./gson_delta_duration_13_v.png)
-
-![](./gson_delta_duration_14_v.png)
-
-![](./gson_delta_duration_15_v.png)
-
-![](./gson_delta_duration_16_v.png)
-
-![](./gson_delta_duration_17_v.png)
-
-![](./gson_delta_duration_1_v.png)
-
-![](./gson_delta_duration_2_v.png)
-
-![](./gson_delta_duration_3_v.png)
-
-![](./gson_delta_duration_4_v.png)
-
-![](./gson_delta_duration_5_v.png)
-
-![](./gson_delta_duration_6_v.png)
-
-![](./gson_delta_duration_7_v.png)
-
-![](./gson_delta_duration_8_v.png)
-
-![](./gson_delta_duration_9_v.png)
 
 
 | ID | DurationV1 | DurationsV2 | DeltaDuration |

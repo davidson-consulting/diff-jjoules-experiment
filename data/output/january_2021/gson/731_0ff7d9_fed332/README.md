@@ -7,9 +7,107 @@ https://github.com/google/gson/commit/fed332
 
 ## Delta Energy per test method
 
+![](./gson_delta_energy_0_v.png)
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σ |
-| --- | --- | --- | --- | --- |
+![](./gson_delta_energy_1_v.png)
+
+![](./gson_delta_energy_2_v.png)
+
+![](./gson_delta_energy_3_v.png)
+
+![](./gson_delta_energy_4_v.png)
+
+![](./gson_delta_energy_5_v.png)
+
+![](./gson_delta_energy_6_v.png)
+
+![](./gson_delta_energy_7_v.png)
+
+![](./gson_delta_energy_8_v.png)
+
+![](./gson_delta_energy_9_v.png)
+
+![](./gson_delta_energy_10_v.png)
+
+![](./gson_delta_energy_11_v.png)
+
+![](./gson_delta_energy_12_v.png)
+
+![](./gson_delta_energy_13_v.png)
+
+![](./gson_delta_energy_14_v.png)
+
+![](./gson_delta_energy_15_v.png)
+
+![](./gson_delta_energy_16_v.png)
+
+![](./gson_delta_energy_17_v.png)
+
+![](./gson_delta_energy_18_v.png)
+
+![](./gson_delta_energy_19_v.png)
+
+![](./gson_delta_energy_20_v.png)
+
+![](./gson_delta_energy_21_v.png)
+
+![](./gson_delta_energy_22_v.png)
+
+![](./gson_delta_energy_23_v.png)
+
+![](./gson_delta_energy_24_v.png)
+
+![](./gson_delta_energy_25_v.png)
+
+![](./gson_delta_energy_26_v.png)
+
+![](./gson_delta_energy_27_v.png)
+
+![](./gson_delta_energy_28_v.png)
+
+![](./gson_delta_energy_29_v.png)
+
+![](./gson_delta_energy_30_v.png)
+
+![](./gson_delta_energy_31_v.png)
+
+![](./gson_delta_energy_32_v.png)
+
+![](./gson_delta_energy_33_v.png)
+
+![](./gson_delta_energy_34_v.png)
+
+![](./gson_delta_energy_35_v.png)
+
+![](./gson_delta_energy_36_v.png)
+
+![](./gson_delta_energy_37_v.png)
+
+![](./gson_delta_energy_38_v.png)
+
+![](./gson_delta_energy_39_v.png)
+
+![](./gson_delta_energy_40_v.png)
+
+![](./gson_delta_energy_41_v.png)
+
+![](./gson_delta_energy_42_v.png)
+
+![](./gson_delta_energy_43_v.png)
+
+![](./gson_delta_energy_44_v.png)
+
+![](./gson_delta_energy_45_v.png)
+
+![](./gson_delta_energy_46_v.png)
+
+![](./gson_delta_energy_47_v.png)
+
+![](./gson_delta_energy_48_v.png)
+
+
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
+| --- | --- | --- | --- | --- | --- |
 | 0 | 43018.22641509434 | 38037.10909090909 | -4981.117324185245 | 28622.892906310062 | 9784.403088910482 |
 | 1 | 36435.67857142857 | 37054.58620689655 | 618.9076354679783 | 4235.02190122159 | 4056.5255943653046 |
 | 2 | 36811.0 | 39052.73684210526 | 2241.7368421052597 | 5344.660720964636 | 4314.409026336909 |

@@ -9,18 +9,6 @@ https://github.com/google/gson/commit/dd86d6
 
 ![](./gson_delta_energy_0_v.png)
 
-![](./gson_delta_energy_10_v.png)
-
-![](./gson_delta_energy_11_v.png)
-
-![](./gson_delta_energy_12_v.png)
-
-![](./gson_delta_energy_13_v.png)
-
-![](./gson_delta_energy_14_v.png)
-
-![](./gson_delta_energy_15_v.png)
-
 ![](./gson_delta_energy_1_v.png)
 
 ![](./gson_delta_energy_2_v.png)
@@ -39,9 +27,21 @@ https://github.com/google/gson/commit/dd86d6
 
 ![](./gson_delta_energy_9_v.png)
 
+![](./gson_delta_energy_10_v.png)
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σ |
-| --- | --- | --- | --- | --- |
+![](./gson_delta_energy_11_v.png)
+
+![](./gson_delta_energy_12_v.png)
+
+![](./gson_delta_energy_13_v.png)
+
+![](./gson_delta_energy_14_v.png)
+
+![](./gson_delta_energy_15_v.png)
+
+
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
+| --- | --- | --- | --- | --- | --- |
 | 0 | 40884.72619047619 | 40292.16049382716 | -592.5656966490278 | 11128.472758511525 | 7893.593153657992 |
 | 1 | 38992.470588235294 | 40019.416666666664 | 1026.9460784313706 | 6049.002167277111 | 10415.062416132916 |
 | 2 | 38416.9 | 37417.71052631579 | -999.189473684215 | 4308.297081214339 | 4094.736826630361 |
@@ -268,38 +268,6 @@ https://github.com/google/gson/commit/dd86d6
 | 223 | 38136.23529411765 | 37982.724137931036 | -153.51115618661424 | 5727.492527321099 | 4273.023381687941 |
 
 ## Delta Duration per test method
-
-![](./gson_delta_duration_0_v.png)
-
-![](./gson_delta_duration_10_v.png)
-
-![](./gson_delta_duration_11_v.png)
-
-![](./gson_delta_duration_12_v.png)
-
-![](./gson_delta_duration_13_v.png)
-
-![](./gson_delta_duration_14_v.png)
-
-![](./gson_delta_duration_15_v.png)
-
-![](./gson_delta_duration_1_v.png)
-
-![](./gson_delta_duration_2_v.png)
-
-![](./gson_delta_duration_3_v.png)
-
-![](./gson_delta_duration_4_v.png)
-
-![](./gson_delta_duration_5_v.png)
-
-![](./gson_delta_duration_6_v.png)
-
-![](./gson_delta_duration_7_v.png)
-
-![](./gson_delta_duration_8_v.png)
-
-![](./gson_delta_duration_9_v.png)
 
 
 | ID | DurationV1 | DurationsV2 | DeltaDuration |

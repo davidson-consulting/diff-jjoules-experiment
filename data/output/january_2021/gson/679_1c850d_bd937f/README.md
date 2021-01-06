@@ -7,9 +7,45 @@ https://github.com/google/gson/commit/bd937f
 
 ## Delta Energy per test method
 
+![](./gson_delta_energy_0_v.png)
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σ |
-| --- | --- | --- | --- | --- |
+![](./gson_delta_energy_1_v.png)
+
+![](./gson_delta_energy_2_v.png)
+
+![](./gson_delta_energy_3_v.png)
+
+![](./gson_delta_energy_4_v.png)
+
+![](./gson_delta_energy_5_v.png)
+
+![](./gson_delta_energy_6_v.png)
+
+![](./gson_delta_energy_7_v.png)
+
+![](./gson_delta_energy_8_v.png)
+
+![](./gson_delta_energy_9_v.png)
+
+![](./gson_delta_energy_10_v.png)
+
+![](./gson_delta_energy_11_v.png)
+
+![](./gson_delta_energy_12_v.png)
+
+![](./gson_delta_energy_13_v.png)
+
+![](./gson_delta_energy_14_v.png)
+
+![](./gson_delta_energy_15_v.png)
+
+![](./gson_delta_energy_16_v.png)
+
+![](./gson_delta_energy_17_v.png)
+
+
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
+| --- | --- | --- | --- | --- | --- |
 | 0 | 38557.94117647059 | 35915.318181818184 | -2642.6229946524036 | 9004.869166313421 | 3951.338661383272 |
 | 1 | 36254.78846153846 | 35970.769230769234 | -284.01923076922685 | 3928.859020791085 | 4140.787488349123 |
 | 2 | 40745.232142857145 | 45430.745762711864 | 4685.513619854719 | 13988.390953357246 | 23760.780521758115 |

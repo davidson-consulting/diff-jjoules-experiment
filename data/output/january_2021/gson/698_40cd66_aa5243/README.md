@@ -7,9 +7,19 @@ https://github.com/google/gson/commit/aa5243
 
 ## Delta Energy per test method
 
+![](./gson_delta_energy_0_v.png)
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σ |
-| --- | --- | --- | --- | --- |
+![](./gson_delta_energy_1_v.png)
+
+![](./gson_delta_energy_2_v.png)
+
+![](./gson_delta_energy_3_v.png)
+
+![](./gson_delta_energy_4_v.png)
+
+
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
+| --- | --- | --- | --- | --- | --- |
 | 0 | 41428.333333333336 | 43331.03157894737 | 1902.6982456140322 | 12361.87482243078 | 13522.7572441131 |
 | 1 | 38362.075 | 37434.43636363636 | -927.6386363636339 | 4270.554626670288 | 4005.3515100022973 |
 | 2 | 62278.0404040404 | 68084.18181818182 | 5806.141414141421 | 48492.540515160974 | 58697.82820296439 |

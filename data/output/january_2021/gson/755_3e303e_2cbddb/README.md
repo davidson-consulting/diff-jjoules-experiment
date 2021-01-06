@@ -7,9 +7,61 @@ https://github.com/google/gson/commit/2cbddb
 
 ## Delta Energy per test method
 
+![](./gson_delta_energy_0_v.png)
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σ |
-| --- | --- | --- | --- | --- |
+![](./gson_delta_energy_1_v.png)
+
+![](./gson_delta_energy_2_v.png)
+
+![](./gson_delta_energy_3_v.png)
+
+![](./gson_delta_energy_4_v.png)
+
+![](./gson_delta_energy_5_v.png)
+
+![](./gson_delta_energy_6_v.png)
+
+![](./gson_delta_energy_7_v.png)
+
+![](./gson_delta_energy_8_v.png)
+
+![](./gson_delta_energy_9_v.png)
+
+![](./gson_delta_energy_10_v.png)
+
+![](./gson_delta_energy_11_v.png)
+
+![](./gson_delta_energy_12_v.png)
+
+![](./gson_delta_energy_13_v.png)
+
+![](./gson_delta_energy_14_v.png)
+
+![](./gson_delta_energy_15_v.png)
+
+![](./gson_delta_energy_16_v.png)
+
+![](./gson_delta_energy_17_v.png)
+
+![](./gson_delta_energy_18_v.png)
+
+![](./gson_delta_energy_19_v.png)
+
+![](./gson_delta_energy_20_v.png)
+
+![](./gson_delta_energy_21_v.png)
+
+![](./gson_delta_energy_22_v.png)
+
+![](./gson_delta_energy_23_v.png)
+
+![](./gson_delta_energy_24_v.png)
+
+![](./gson_delta_energy_25_v.png)
+
+
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
+| --- | --- | --- | --- | --- | --- |
 | 0 | 42936.57377049181 | 37758.734375 | -5177.8393954918065 | 18181.281631192964 | 9590.166278932204 |
 | 1 | 38602.166666666664 | 37626.0 | -976.1666666666642 | 5072.6771339752695 | 4738.479685862685 |
 | 2 | 49506.818181818184 | 41036.82608695652 | -8469.992094861664 | 22023.859298297026 | 11492.569624694466 |

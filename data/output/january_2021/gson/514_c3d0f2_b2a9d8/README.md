@@ -9,12 +9,6 @@ https://github.com/google/gson/commit/b2a9d8
 
 ![](./gson_delta_energy_0_v.png)
 
-![](./gson_delta_energy_10_v.png)
-
-![](./gson_delta_energy_11_v.png)
-
-![](./gson_delta_energy_12_v.png)
-
 ![](./gson_delta_energy_1_v.png)
 
 ![](./gson_delta_energy_2_v.png)
@@ -33,9 +27,15 @@ https://github.com/google/gson/commit/b2a9d8
 
 ![](./gson_delta_energy_9_v.png)
 
+![](./gson_delta_energy_10_v.png)
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σ |
-| --- | --- | --- | --- | --- |
+![](./gson_delta_energy_11_v.png)
+
+![](./gson_delta_energy_12_v.png)
+
+
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
+| --- | --- | --- | --- | --- | --- |
 | 0 | 39952.125 | 38599.66129032258 | -1352.4637096774168 | 9304.970201624774 | 6814.239798424844 |
 | 1 | 40052.03571428572 | 38161.125 | -1890.9107142857174 | 10107.03101446196 | 4091.120925957038 |
 | 2 | 38012.25 | 37295.78378378379 | -716.4662162162131 | 3932.2955790267515 | 3892.6856020611003 |
@@ -165,32 +165,6 @@ https://github.com/google/gson/commit/b2a9d8
 | 126 | 53588.61111111111 | 49021.38888888889 | -4567.222222222219 | 28654.78396579781 | 27426.22987546955 |
 
 ## Delta Duration per test method
-
-![](./gson_delta_duration_0_v.png)
-
-![](./gson_delta_duration_10_v.png)
-
-![](./gson_delta_duration_11_v.png)
-
-![](./gson_delta_duration_12_v.png)
-
-![](./gson_delta_duration_1_v.png)
-
-![](./gson_delta_duration_2_v.png)
-
-![](./gson_delta_duration_3_v.png)
-
-![](./gson_delta_duration_4_v.png)
-
-![](./gson_delta_duration_5_v.png)
-
-![](./gson_delta_duration_6_v.png)
-
-![](./gson_delta_duration_7_v.png)
-
-![](./gson_delta_duration_8_v.png)
-
-![](./gson_delta_duration_9_v.png)
 
 
 | ID | DurationV1 | DurationsV2 | DeltaDuration |

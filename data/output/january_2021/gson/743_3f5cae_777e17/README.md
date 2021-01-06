@@ -7,9 +7,95 @@ https://github.com/google/gson/commit/777e17
 
 ## Delta Energy per test method
 
+![](./gson_delta_energy_0_v.png)
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σ |
-| --- | --- | --- | --- | --- |
+![](./gson_delta_energy_1_v.png)
+
+![](./gson_delta_energy_2_v.png)
+
+![](./gson_delta_energy_3_v.png)
+
+![](./gson_delta_energy_4_v.png)
+
+![](./gson_delta_energy_5_v.png)
+
+![](./gson_delta_energy_6_v.png)
+
+![](./gson_delta_energy_7_v.png)
+
+![](./gson_delta_energy_8_v.png)
+
+![](./gson_delta_energy_9_v.png)
+
+![](./gson_delta_energy_10_v.png)
+
+![](./gson_delta_energy_11_v.png)
+
+![](./gson_delta_energy_12_v.png)
+
+![](./gson_delta_energy_13_v.png)
+
+![](./gson_delta_energy_14_v.png)
+
+![](./gson_delta_energy_15_v.png)
+
+![](./gson_delta_energy_16_v.png)
+
+![](./gson_delta_energy_17_v.png)
+
+![](./gson_delta_energy_18_v.png)
+
+![](./gson_delta_energy_19_v.png)
+
+![](./gson_delta_energy_20_v.png)
+
+![](./gson_delta_energy_21_v.png)
+
+![](./gson_delta_energy_22_v.png)
+
+![](./gson_delta_energy_23_v.png)
+
+![](./gson_delta_energy_24_v.png)
+
+![](./gson_delta_energy_25_v.png)
+
+![](./gson_delta_energy_26_v.png)
+
+![](./gson_delta_energy_27_v.png)
+
+![](./gson_delta_energy_28_v.png)
+
+![](./gson_delta_energy_29_v.png)
+
+![](./gson_delta_energy_30_v.png)
+
+![](./gson_delta_energy_31_v.png)
+
+![](./gson_delta_energy_32_v.png)
+
+![](./gson_delta_energy_33_v.png)
+
+![](./gson_delta_energy_34_v.png)
+
+![](./gson_delta_energy_35_v.png)
+
+![](./gson_delta_energy_36_v.png)
+
+![](./gson_delta_energy_37_v.png)
+
+![](./gson_delta_energy_38_v.png)
+
+![](./gson_delta_energy_39_v.png)
+
+![](./gson_delta_energy_40_v.png)
+
+![](./gson_delta_energy_41_v.png)
+
+![](./gson_delta_energy_42_v.png)
+
+
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
+| --- | --- | --- | --- | --- | --- |
 | 0 | 40563.63461538462 | 39883.19402985075 | -680.44058553387 | 14032.269973760269 | 12538.064432304576 |
 | 1 | 42152.03448275862 | 40775.333333333336 | -1376.7011494252874 | 17557.369103211255 | 11207.748216980879 |
 | 2 | 37910.375 | 37099.57894736842 | -810.7960526315801 | 4631.042420561667 | 3309.538611757639 |

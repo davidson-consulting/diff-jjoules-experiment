@@ -14,8 +14,8 @@ https://github.com/google/gson/commit/b0a172
 ![](./gson_delta_energy_2_v.png)
 
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σ |
-| --- | --- | --- | --- | --- |
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
+| --- | --- | --- | --- | --- | --- |
 | 0 | 52817.530303030304 | 52375.45333333333 | -442.0769696969728 | 33462.51524228253 | 27628.027215030914 |
 | 1 | 35183.551020408166 | 36897.36111111111 | 1713.8100907029439 | 4107.658725670937 | 5360.652562643521 |
 | 2 | 262052.5974025974 | 188117.73076923078 | -73934.86663336662 | 583061.6434896159 | 475720.28951037786 |
@@ -45,12 +45,6 @@ https://github.com/google/gson/commit/b0a172
 | 26 | 43587.47222222222 | 37058.8275862069 | -6528.64463601532 | 33614.60574370587 | 5560.3814249530715 |
 
 ## Delta Duration per test method
-
-![](./gson_delta_duration_0_v.png)
-
-![](./gson_delta_duration_1_v.png)
-
-![](./gson_delta_duration_2_v.png)
 
 
 | ID | DurationV1 | DurationsV2 | DeltaDuration |

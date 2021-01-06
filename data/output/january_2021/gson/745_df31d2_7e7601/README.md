@@ -7,9 +7,117 @@ https://github.com/google/gson/commit/7e7601
 
 ## Delta Energy per test method
 
+![](./gson_delta_energy_0_v.png)
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σ |
-| --- | --- | --- | --- | --- |
+![](./gson_delta_energy_1_v.png)
+
+![](./gson_delta_energy_2_v.png)
+
+![](./gson_delta_energy_3_v.png)
+
+![](./gson_delta_energy_4_v.png)
+
+![](./gson_delta_energy_5_v.png)
+
+![](./gson_delta_energy_6_v.png)
+
+![](./gson_delta_energy_7_v.png)
+
+![](./gson_delta_energy_8_v.png)
+
+![](./gson_delta_energy_9_v.png)
+
+![](./gson_delta_energy_10_v.png)
+
+![](./gson_delta_energy_11_v.png)
+
+![](./gson_delta_energy_12_v.png)
+
+![](./gson_delta_energy_13_v.png)
+
+![](./gson_delta_energy_14_v.png)
+
+![](./gson_delta_energy_15_v.png)
+
+![](./gson_delta_energy_16_v.png)
+
+![](./gson_delta_energy_17_v.png)
+
+![](./gson_delta_energy_18_v.png)
+
+![](./gson_delta_energy_19_v.png)
+
+![](./gson_delta_energy_20_v.png)
+
+![](./gson_delta_energy_21_v.png)
+
+![](./gson_delta_energy_22_v.png)
+
+![](./gson_delta_energy_23_v.png)
+
+![](./gson_delta_energy_24_v.png)
+
+![](./gson_delta_energy_25_v.png)
+
+![](./gson_delta_energy_26_v.png)
+
+![](./gson_delta_energy_27_v.png)
+
+![](./gson_delta_energy_28_v.png)
+
+![](./gson_delta_energy_29_v.png)
+
+![](./gson_delta_energy_30_v.png)
+
+![](./gson_delta_energy_31_v.png)
+
+![](./gson_delta_energy_32_v.png)
+
+![](./gson_delta_energy_33_v.png)
+
+![](./gson_delta_energy_34_v.png)
+
+![](./gson_delta_energy_35_v.png)
+
+![](./gson_delta_energy_36_v.png)
+
+![](./gson_delta_energy_37_v.png)
+
+![](./gson_delta_energy_38_v.png)
+
+![](./gson_delta_energy_39_v.png)
+
+![](./gson_delta_energy_40_v.png)
+
+![](./gson_delta_energy_41_v.png)
+
+![](./gson_delta_energy_42_v.png)
+
+![](./gson_delta_energy_43_v.png)
+
+![](./gson_delta_energy_44_v.png)
+
+![](./gson_delta_energy_45_v.png)
+
+![](./gson_delta_energy_46_v.png)
+
+![](./gson_delta_energy_47_v.png)
+
+![](./gson_delta_energy_48_v.png)
+
+![](./gson_delta_energy_49_v.png)
+
+![](./gson_delta_energy_50_v.png)
+
+![](./gson_delta_energy_51_v.png)
+
+![](./gson_delta_energy_52_v.png)
+
+![](./gson_delta_energy_53_v.png)
+
+
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
+| --- | --- | --- | --- | --- | --- |
 | 0 | 38722.7 | 37959.7 | -763.0 | 9089.950942845257 | 7756.075861972127 |
 | 1 | 36859.04081632653 | 36074.28888888889 | -784.7519274376391 | 4515.380368904158 | 4136.844168215521 |
 | 2 | 38092.93023255814 | 35669.89090909091 | -2423.03932346723 | 6989.409920847692 | 3920.4159458020745 |

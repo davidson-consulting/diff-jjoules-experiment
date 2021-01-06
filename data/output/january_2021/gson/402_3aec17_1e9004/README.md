@@ -8,8 +8,8 @@ https://github.com/google/gson/commit/1e9004
 ## Delta Energy per test method
 
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σ |
-| --- | --- | --- | --- | --- |
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
+| --- | --- | --- | --- | --- | --- |
 
 ## Delta Duration per test method
 
