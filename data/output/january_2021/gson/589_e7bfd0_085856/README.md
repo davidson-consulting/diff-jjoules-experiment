@@ -1,0 +1,163 @@
+# gson 085856
+
+
+https://github.com/google/gson/commit/085856
+
+
+
+## Delta Energy per test method
+
+![](./gson_delta_energy_0_v.png)
+
+![](./gson_delta_energy_1_v.png)
+
+![](./gson_delta_energy_2_v.png)
+
+
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σ |
+| --- | --- | --- | --- | --- |
+| 0 | 43821.25 | 40598.88775510204 | -3222.3622448979586 | 12499.076561723803 | 8994.843334369423 |
+| 1 | 47977.67567567567 | 49435.14473684211 | 1457.4690611664337 | 21096.76236022966 | 22430.80267746491 |
+| 2 | 138567.6436781609 | 211092.30681818182 | 72524.66314002092 | 369233.5038893902 | 506592.8909338245 |
+| 3 | 40893.5 | 38300.739130434784 | -2592.760869565216 | 3446.7894119020384 | 3004.607132206071 |
+| 4 | 43127.64646464647 | 47711.1030927835 | 4583.456628137035 | 13868.40356059259 | 27125.37827812987 |
+| 5 | 47538.397849462366 | 42782.31578947369 | -4756.082059988679 | 48976.16635597091 | 13689.450061818188 |
+| 6 | 41749.72448979592 | 41162.551020408166 | -587.1734693877515 | 13145.815603966226 | 12458.95749243962 |
+| 7 | 51584.41414141414 | 61829.707070707074 | 10245.292929292933 | 20730.471703039162 | 58493.89436000171 |
+| 8 | 42491.89473684211 | 45253.46464646464 | 2761.569909622536 | 14084.200245570946 | 48019.55746419194 |
+| 9 | 38312.3023255814 | 38836.87804878049 | 524.5757231990938 | 7587.417158767362 | 7158.392286782652 |
+| 10 | 242945.14141414143 | 307782.2626262626 | 64837.12121212119 | 453629.94880947744 | 551793.0380649078 |
+| 11 | 37761.24 | 39103.11111111111 | 1341.8711111111115 | 5209.087354076528 | 4612.742610970368 |
+| 12 | 188144.29166666666 | 189035.5625 | 891.270833333343 | 440373.0449666112 | 442076.90217478503 |
+| 13 | 107110.20454545454 | 95157.94117647059 | -11952.263368983957 | 314544.5739007994 | 299611.02293659723 |
+| 14 | 217144.64646464647 | 182390.6224489796 | -34754.02401566689 | 484511.6748632317 | 421676.3391762598 |
+| 15 | 39017.76056338028 | 39412.09523809524 | 394.3346747149553 | 6609.857956891036 | 7392.130415933408 |
+| 16 | 265750.1212121212 | 291424.2525252525 | 25674.131313131307 | 443194.130897859 | 523595.22113302397 |
+| 17 | 48237.75 | 46178.4 | -2059.3499999999985 | 15763.047104087516 | 13958.2660000764 |
+| 18 | 39138.166666666664 | 40628.34246575343 | 1490.1757990867627 | 5406.93884319403 | 7489.529166061946 |
+| 19 | 112471.47474747474 | 79691.36363636363 | -32780.11111111111 | 159495.77683097453 | 49929.238577595745 |
+| 20 | 36659.075 | 37417.61538461538 | 758.5403846153858 | 4804.464363420235 | 4733.983174687555 |
+| 21 | 38855.313725490196 | 37874.891304347824 | -980.4224211423716 | 5319.21380557498 | 4614.488460171378 |
+| 22 | 38294.28301886792 | 37740.83720930233 | -553.4458095655937 | 4639.155772162742 | 4507.895011933559 |
+| 23 | 63777.09090909091 | 70441.07936507936 | 6663.988455988452 | 49979.93105356397 | 57186.51657745507 |
+| 24 | 40079.109589041094 | 38723.637681159424 | -1355.4719078816706 | 8272.580440145332 | 7296.772756899212 |
+| 25 | 39896.2 | 39922.553846153845 | 26.35384615384828 | 6720.970786563958 | 10892.774081975022 |
+| 26 | 36933.269230769234 | 42924.2 | 5990.930769230763 | 3886.752941404276 | 32447.60101163103 |
+| 27 | 38514.857142857145 | 35617.333333333336 | -2897.523809523809 | 5027.927611382856 | 4312.085222135917 |
+
+## Delta Duration per test method
+
+![](./gson_delta_duration_0_v.png)
+
+![](./gson_delta_duration_1_v.png)
+
+![](./gson_delta_duration_2_v.png)
+
+
+| ID | DurationV1 | DurationsV2 | DeltaDuration |
+| --- | --- | --- | --- |
+| 0 | 1549302.3958333333 | 1467493.7857142857 | -81808.61011904757 |
+| 1 | 1412577.1621621621 | 1512292.4605263157 | 99715.2983641536 |
+| 2 | 3931028.367816092 | 6097586.8522727275 | 2166558.4844566355 |
+| 3 | 617336.2777777778 | 594157.695652174 | -23178.582125603803 |
+| 4 | 1484198.202020202 | 1552288.5154639175 | 68090.31344371545 |
+| 5 | 1676077.182795699 | 1437343.652631579 | -238733.53016412002 |
+| 6 | 1471303.1530612244 | 1483644.7959183673 | 12341.642857142957 |
+| 7 | 1806405.707070707 | 2110256.303030303 | 303850.5959595961 |
+| 8 | 1431096.0105263158 | 1583635.5353535353 | 152539.52482721955 |
+| 9 | 1256997.9767441861 | 1226516.975609756 | -30481.00113443006 |
+| 10 | 6949214.313131313 | 8671708.191919193 | 1722493.8787878798 |
+| 11 | 640065.8 | 592193.925925926 | -47871.87407407409 |
+| 12 | 5199720.875 | 4948588.104166667 | -251132.77083333302 |
+| 13 | 3116448.9318181816 | 2711863.6 | -404585.33181818156 |
+| 14 | 6386126.888888889 | 5381427.275510204 | -1004699.613378685 |
+| 15 | 1206743.295774648 | 1162501.380952381 | -44241.9148222669 |
+| 16 | 7437785.868686869 | 8562826.747474747 | 1125040.878787878 |
+| 17 | 1724672.8409090908 | 1644691.0 | -79981.84090909082 |
+| 18 | 1082159.878787879 | 1080532.7534246575 | -1627.125363221392 |
+| 19 | 3409323.4545454546 | 2441276.9292929294 | -968046.5252525252 |
+| 20 | 843110.325 | 814079.1538461539 | -29031.17115384608 |
+| 21 | 962100.3137254902 | 980566.4565217391 | 18466.142796248896 |
+| 22 | 819011.2641509434 | 859979.6976744186 | 40968.43352347519 |
+| 23 | 1923159.1818181819 | 2053805.6825396826 | 130646.50072150072 |
+| 24 | 1150795.2602739725 | 1177871.1304347827 | 27075.870160810184 |
+| 25 | 1253095.276923077 | 1277640.4153846153 | 24545.138461538358 |
+| 26 | 842210.9230769231 | 1003799.225 | 161588.30192307686 |
+| 27 | 655341.6857142857 | 933672.925925926 | 278331.24021164025 |
+
+## Misc.
+
+| ID | Test Class | Test Method |
+| --- | --- | --- |
+| 0 | com.google.gson.functional.StreamingTypeAdaptersTest | testNullSafe |
+| 1 | com.google.gson.functional.ReadersWritersTest | testReadWriteTwoObjects |
+| 2 | com.google.gson.JsonParserTest | testReadWriteTwoObjects |
+| 3 | com.google.gson.JsonParserTest | testParseMixedArray |
+| 4 | com.google.gson.functional.ParameterizedTypesTest | testVariableTypeArrayDeserialization |
+| 5 | com.google.gson.functional.ParameterizedTypesTest | testVariableTypeDeserialization |
+| 6 | com.google.gson.functional.ParameterizedTypesTest | testParameterizedTypeGenericArraysDeserialization |
+| 7 | com.google.gson.functional.ParameterizedTypesTest | testVariableTypeFieldsAndGenericArraysDeserialization |
+| 8 | com.google.gson.functional.ParameterizedTypesTest | testParameterizedTypeWithVariableTypeDeserialization |
+| 9 | com.google.gson.functional.MapAsArrayTypeAdapterTest | testMultipleEnableComplexKeyRegistrationHasNoEffect |
+| 10 | com.google.gson.functional.MapAsArrayTypeAdapterTest | testSerializeComplexMapWithTypeAdapter |
+| 11 | com.google.gson.OverrideCoreTypeAdaptersTest | testOverridePrimitiveBooleanAdapter |
+| 12 | com.google.gson.OverrideCoreTypeAdaptersTest | testOverrideWrapperBooleanAdapter |
+| 13 | com.google.gson.functional.TypeVariableTest | testAdvancedTypeVariables |
+| 14 | com.google.gson.functional.TypeVariableTest | testTypeVariablesViaTypeParameter |
+| 15 | com.google.gson.functional.NamingPolicyTest | testComplexFieldNameStrategy |
+| 16 | com.google.gson.functional.TypeHierarchyAdapterTest | testTypeHierarchy |
+| 17 | com.google.gson.functional.CollectionTest | testWildcardCollectionField |
+| 18 | com.google.gson.functional.CollectionTest | testFieldIsArrayList |
+| 19 | com.google.gson.functional.DelegateTypeAdapterTest | testDelegateInvoked |
+| 20 | com.google.gson.functional.DefaultTypeAdaptersTest | testBitSetDeserialization |
+| 21 | com.google.gson.functional.UncategorizedTest | testGsonInstanceReusableForSerializationAndDeserialization |
+| 22 | com.google.gson.functional.EscapingTest | testGsonDoubleDeserialization |
+| 23 | com.google.gson.functional.EscapingTest | testEscapingObjectFields |
+| 24 | com.google.gson.functional.EscapingTest | testGsonAcceptsEscapedAndNonEscapedJsonDeserialization |
+| 25 | com.google.gson.functional.CustomTypeAdaptersTest | testRegisterHierarchyAdapterForDate |
+| 26 | com.google.gson.GsonTypeAdapterTest | testTypeAdapterThrowsException |
+| 27 | com.google.gson.GsonTypeAdapterTest | testTypeAdapterProperlyConvertsTypes |
+
+
+
+
+| Test | IterationV1 | IterationV2 | DeltaIteration |
+| --- | --- | --- | --- |
+| 0 | 96 | 98 | 2 |
+| 1 | 74 | 76 | 2 |
+| 2 | 87 | 88 | 1 |
+| 3 | 18 | 23 | 5 |
+| 4 | 99 | 97 | -2 |
+| 5 | 93 | 95 | 2 |
+| 6 | 98 | 98 | 0 |
+| 7 | 99 | 99 | 0 |
+| 8 | 95 | 99 | 4 |
+| 9 | 86 | 82 | -4 |
+| 10 | 99 | 99 | 0 |
+| 11 | 25 | 27 | 2 |
+| 12 | 48 | 48 | 0 |
+| 13 | 88 | 85 | -3 |
+| 14 | 99 | 98 | -1 |
+| 15 | 71 | 63 | -8 |
+| 16 | 99 | 99 | 0 |
+| 17 | 88 | 90 | 2 |
+| 18 | 66 | 73 | 7 |
+| 19 | 99 | 99 | 0 |
+| 20 | 40 | 39 | -1 |
+| 21 | 51 | 46 | -5 |
+| 22 | 53 | 43 | -10 |
+| 23 | 55 | 63 | 8 |
+| 24 | 73 | 69 | -4 |
+| 25 | 65 | 65 | 0 |
+| 26 | 26 | 40 | 14 |
+| 27 | 35 | 27 | -8 |
+
+
+
+| Time Label | Time (s) |
+| --- | --- |
+| Selection | 27.11716365814209 |
+| Injection | 12.535812139511108 |
+| Total | 1021.3767297267914 |
+
+
