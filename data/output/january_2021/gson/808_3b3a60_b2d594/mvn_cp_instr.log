@@ -1,0 +1,196 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.google.code.gson:gson >----------------------
+[INFO] Building Gson 1.8-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gson ---
+[INFO] Deleting /tmp/v1/gson/target
+[INFO] 
+[INFO] --- cobertura-maven-plugin:2.4:clean (clean) @ gson ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0-beta-1:enforce (enforce-maven) @ gson ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/gson/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ gson ---
+[INFO] Compiling 91 source files to /tmp/v1/gson/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/gson/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ gson ---
+[INFO] Compiling 84 source files to /tmp/v1/gson/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gson ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:build-classpath (default-cli) @ gson ---
+[INFO] Skipped writing classpath file '/tmp/v1/gson/classpath'.  No changes found.
+[INFO] 
+[INFO] --- diff-jjoules:0.0.1-SNAPSHOT:instrument (default-cli) @ gson ---
+[INFO] Running on:
+[INFO] /tmp/v1/gson
+[INFO] /tmp/v2/gson/
+[INFO] Enable JUnit4 mode
+[INFO] Configuration{pathToFirstVersion='/tmp/v1/gson', pathToSecondVersion='/tmp/v2/gson/', pathToTestListAsCSV='/tmp/v1/gson/testsThatExecuteTheChange.csv', classpath=[/home/spino/.m2/repository/junit/junit/3.8.2/junit-3.8.2.jar], junit4=true}
+[INFO] com.google.gson.functional.CustomTypeAdaptersTest:[testCustomAdapterInvokedForMapElementSerialization, testCustomAdapterInvokedForMapElementSerializationWithType, testCustomAdapterInvokedForMapElementDeserialization]
+com.google.gson.functional.MoreSpecificTypeSerializationTest:[testMapOfSubclassFields, testListOfSubclassFields, testListOfParameterizedSubclassFields, testMapOfParameterizedSubclassFields]
+com.google.gson.functional.MapTest:[testWriteMapsWithEmptyStringKey, testInterfaceTypeMapWithSerializer, testMapSerializationWithNullValueButSerializeNulls, testMapStandardSubclassDeserialization, testGeneralMapField, testRawMapSerialization, testMapSerializationWithNullValuesSerialized, testParameterizedMapSubclassDeserialization, testMapDeserializationWithWildcardValues, testMapDeserializationWithIntegerKeys, testMapSerializationWithNullKey, testReadMapsWithEmptyStringKey, testMapDeserializationWithNullKey, testMapOfMapDeserialization, testMapSerialization, testMapDeserializationWithNullValue, testInterfaceTypeMap, testMapSerializationEmpty, testMapSubclassSerialization, testMapSerializationWithNullValue, testMapSerializationWithIntegerKeys, testMapOfMapSerialization, testMapSubclassDeserialization, testMapDeserialization, testMapDeserializationEmpty, testMapSerializationWithWildcardValues, testMapSerializationWithNullValues, testMapWithQuotes, testParameterizedMapSubclassSerialization, testSerializeMaps]
+com.google.gson.DefaultMapJsonSerializerTest:[testNonEmptyMapSerialization, testEmptyMapSerialization, testEmptyMapNoTypeSerialization]
+com.google.gson.functional.TypeVariableTest:[testAdvancedTypeVariables, testTypeVariablesViaTypeParameter]
+com.google.gson.functional.MapAsArrayTypeAdapterTest:[testTwoTypesCollapseToOneDeserialize, testMultipleEnableComplexKeyRegistrationHasNoEffect, testMapWithTypeVariableDeserialization, testSerializeComplexMapWithTypeAdapter, testMapWithTypeVariableSerialization]
+com.google.gson.functional.JsonParserTest:[testExtraCommasInMaps]
+com.google.gson.functional.PrettyPrintingTest:[testEmptyMapField, testMap]
+com.google.gson.functional.DefaultTypeAdaptersTest:[testPropertiesSerialization, testPropertiesDeserialization]
+[INFO] Instrument version before commit...
+[INFO] Run on /tmp/v1/gson
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit4.JJoulesProcessor
+Processing com.google.gson.functional.CustomTypeAdaptersTest#testCustomAdapterInvokedForMapElementSerializationWithType
+Processing com.google.gson.functional.CustomTypeAdaptersTest#testCustomAdapterInvokedForMapElementSerialization
+Processing com.google.gson.functional.CustomTypeAdaptersTest#testCustomAdapterInvokedForMapElementDeserialization
+Processing com.google.gson.functional.DefaultTypeAdaptersTest#testPropertiesSerialization
+Processing com.google.gson.functional.DefaultTypeAdaptersTest#testPropertiesDeserialization
+Processing com.google.gson.functional.JsonParserTest#testExtraCommasInMaps
+Processing com.google.gson.functional.MapAsArrayTypeAdapterTest#testSerializeComplexMapWithTypeAdapter
+Processing com.google.gson.functional.MapAsArrayTypeAdapterTest#testTwoTypesCollapseToOneDeserialize
+Processing com.google.gson.functional.MapAsArrayTypeAdapterTest#testMultipleEnableComplexKeyRegistrationHasNoEffect
+Processing com.google.gson.functional.MapAsArrayTypeAdapterTest#testMapWithTypeVariableSerialization
+Processing com.google.gson.functional.MapAsArrayTypeAdapterTest#testMapWithTypeVariableDeserialization
+Processing com.google.gson.functional.MapTest#testMapSerialization
+Processing com.google.gson.functional.MapTest#testMapDeserialization
+Processing com.google.gson.functional.MapTest#testRawMapSerialization
+Processing com.google.gson.functional.MapTest#testMapSerializationEmpty
+Processing com.google.gson.functional.MapTest#testMapDeserializationEmpty
+Processing com.google.gson.functional.MapTest#testMapSerializationWithNullValue
+Processing com.google.gson.functional.MapTest#testMapDeserializationWithNullValue
+Processing com.google.gson.functional.MapTest#testMapSerializationWithNullValueButSerializeNulls
+Processing com.google.gson.functional.MapTest#testMapSerializationWithNullKey
+Processing com.google.gson.functional.MapTest#testMapDeserializationWithNullKey
+Processing com.google.gson.functional.MapTest#testMapSerializationWithIntegerKeys
+Processing com.google.gson.functional.MapTest#testMapDeserializationWithIntegerKeys
+Processing com.google.gson.functional.MapTest#testParameterizedMapSubclassSerialization
+Processing com.google.gson.functional.MapTest#testParameterizedMapSubclassDeserialization
+Processing com.google.gson.functional.MapTest#testMapSubclassSerialization
+Processing com.google.gson.functional.MapTest#testMapStandardSubclassDeserialization
+Processing com.google.gson.functional.MapTest#testMapSubclassDeserialization
+Processing com.google.gson.functional.MapTest#testMapSerializationWithNullValues
+Processing com.google.gson.functional.MapTest#testMapSerializationWithNullValuesSerialized
+Processing com.google.gson.functional.MapTest#testMapSerializationWithWildcardValues
+Processing com.google.gson.functional.MapTest#testMapDeserializationWithWildcardValues
+Processing com.google.gson.functional.MapTest#testMapOfMapSerialization
+Processing com.google.gson.functional.MapTest#testMapOfMapDeserialization
+Processing com.google.gson.functional.MapTest#testMapWithQuotes
+Processing com.google.gson.functional.MapTest#testWriteMapsWithEmptyStringKey
+Processing com.google.gson.functional.MapTest#testReadMapsWithEmptyStringKey
+Processing com.google.gson.functional.MapTest#testSerializeMaps
+Processing com.google.gson.functional.MapTest#testInterfaceTypeMap
+Processing com.google.gson.functional.MapTest#testInterfaceTypeMapWithSerializer
+Processing com.google.gson.functional.MapTest#testGeneralMapField
+Processing com.google.gson.functional.MoreSpecificTypeSerializationTest#testListOfSubclassFields
+Processing com.google.gson.functional.MoreSpecificTypeSerializationTest#testMapOfSubclassFields
+Processing com.google.gson.functional.MoreSpecificTypeSerializationTest#testListOfParameterizedSubclassFields
+Processing com.google.gson.functional.MoreSpecificTypeSerializationTest#testMapOfParameterizedSubclassFields
+Processing com.google.gson.functional.PrettyPrintingTest#testMap
+Processing com.google.gson.functional.PrettyPrintingTest#testEmptyMapField
+Processing com.google.gson.functional.TypeVariableTest#testAdvancedTypeVariables
+Processing com.google.gson.functional.TypeVariableTest#testTypeVariablesViaTypeParameter
+Processing com.google.gson.DefaultMapJsonSerializerTest#testEmptyMapNoTypeSerialization
+Processing com.google.gson.DefaultMapJsonSerializerTest#testEmptyMapSerialization
+Processing com.google.gson.DefaultMapJsonSerializerTest#testNonEmptyMapSerialization
+[INFO] Printing com.google.gson.functional.CustomTypeAdaptersTest to /tmp/v1/gson/src/test/java//com/google/gson/functional/CustomTypeAdaptersTest.java
+[INFO] Printing com.google.gson.functional.JsonParserTest to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonParserTest.java
+[INFO] Printing com.google.gson.functional.MoreSpecificTypeSerializationTest to /tmp/v1/gson/src/test/java//com/google/gson/functional/MoreSpecificTypeSerializationTest.java
+[INFO] Printing com.google.gson.functional.TypeVariableTest to /tmp/v1/gson/src/test/java//com/google/gson/functional/TypeVariableTest.java
+[INFO] Printing com.google.gson.functional.MapTest to /tmp/v1/gson/src/test/java//com/google/gson/functional/MapTest.java
+[INFO] Printing com.google.gson.DefaultMapJsonSerializerTest to /tmp/v1/gson/src/test/java//com/google/gson/DefaultMapJsonSerializerTest.java
+[INFO] Printing com.google.gson.functional.DefaultTypeAdaptersTest to /tmp/v1/gson/src/test/java//com/google/gson/functional/DefaultTypeAdaptersTest.java
+[INFO] Printing com.google.gson.functional.PrettyPrintingTest to /tmp/v1/gson/src/test/java//com/google/gson/functional/PrettyPrintingTest.java
+[INFO] Printing com.google.gson.functional.MapAsArrayTypeAdapterTest to /tmp/v1/gson/src/test/java//com/google/gson/functional/MapAsArrayTypeAdapterTest.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v1/gson/pom.xml
+[INFO] Output new POM file in /tmp/v1/gson/pom.xml
+[INFO] Instrument version after commit...
+[INFO] Run on /tmp/v2/gson/
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit4.JJoulesProcessor
+Processing com.google.gson.functional.CustomTypeAdaptersTest#testCustomAdapterInvokedForMapElementSerializationWithType
+Processing com.google.gson.functional.CustomTypeAdaptersTest#testCustomAdapterInvokedForMapElementSerialization
+Processing com.google.gson.functional.CustomTypeAdaptersTest#testCustomAdapterInvokedForMapElementDeserialization
+Processing com.google.gson.functional.DefaultTypeAdaptersTest#testPropertiesSerialization
+Processing com.google.gson.functional.DefaultTypeAdaptersTest#testPropertiesDeserialization
+Processing com.google.gson.functional.JsonParserTest#testExtraCommasInMaps
+Processing com.google.gson.functional.MapAsArrayTypeAdapterTest#testSerializeComplexMapWithTypeAdapter
+Processing com.google.gson.functional.MapAsArrayTypeAdapterTest#testTwoTypesCollapseToOneDeserialize
+Processing com.google.gson.functional.MapAsArrayTypeAdapterTest#testMultipleEnableComplexKeyRegistrationHasNoEffect
+Processing com.google.gson.functional.MapAsArrayTypeAdapterTest#testMapWithTypeVariableSerialization
+Processing com.google.gson.functional.MapAsArrayTypeAdapterTest#testMapWithTypeVariableDeserialization
+Processing com.google.gson.functional.MapTest#testMapSerialization
+Processing com.google.gson.functional.MapTest#testMapDeserialization
+Processing com.google.gson.functional.MapTest#testRawMapSerialization
+Processing com.google.gson.functional.MapTest#testMapSerializationEmpty
+Processing com.google.gson.functional.MapTest#testMapDeserializationEmpty
+Processing com.google.gson.functional.MapTest#testMapSerializationWithNullValue
+Processing com.google.gson.functional.MapTest#testMapDeserializationWithNullValue
+Processing com.google.gson.functional.MapTest#testMapSerializationWithNullValueButSerializeNulls
+Processing com.google.gson.functional.MapTest#testMapSerializationWithNullKey
+Processing com.google.gson.functional.MapTest#testMapDeserializationWithNullKey
+Processing com.google.gson.functional.MapTest#testMapSerializationWithIntegerKeys
+Processing com.google.gson.functional.MapTest#testMapDeserializationWithIntegerKeys
+Processing com.google.gson.functional.MapTest#testParameterizedMapSubclassSerialization
+Processing com.google.gson.functional.MapTest#testParameterizedMapSubclassDeserialization
+Processing com.google.gson.functional.MapTest#testMapSubclassSerialization
+Processing com.google.gson.functional.MapTest#testMapStandardSubclassDeserialization
+Processing com.google.gson.functional.MapTest#testMapSubclassDeserialization
+Processing com.google.gson.functional.MapTest#testMapSerializationWithNullValues
+Processing com.google.gson.functional.MapTest#testMapSerializationWithNullValuesSerialized
+Processing com.google.gson.functional.MapTest#testMapSerializationWithWildcardValues
+Processing com.google.gson.functional.MapTest#testMapDeserializationWithWildcardValues
+Processing com.google.gson.functional.MapTest#testMapOfMapSerialization
+Processing com.google.gson.functional.MapTest#testMapOfMapDeserialization
+Processing com.google.gson.functional.MapTest#testMapWithQuotes
+Processing com.google.gson.functional.MapTest#testWriteMapsWithEmptyStringKey
+Processing com.google.gson.functional.MapTest#testReadMapsWithEmptyStringKey
+Processing com.google.gson.functional.MapTest#testSerializeMaps
+Processing com.google.gson.functional.MapTest#testInterfaceTypeMap
+Processing com.google.gson.functional.MapTest#testInterfaceTypeMapWithSerializer
+Processing com.google.gson.functional.MapTest#testGeneralMapField
+Processing com.google.gson.functional.MoreSpecificTypeSerializationTest#testListOfSubclassFields
+Processing com.google.gson.functional.MoreSpecificTypeSerializationTest#testMapOfSubclassFields
+Processing com.google.gson.functional.MoreSpecificTypeSerializationTest#testListOfParameterizedSubclassFields
+Processing com.google.gson.functional.MoreSpecificTypeSerializationTest#testMapOfParameterizedSubclassFields
+Processing com.google.gson.functional.PrettyPrintingTest#testMap
+Processing com.google.gson.functional.PrettyPrintingTest#testEmptyMapField
+Processing com.google.gson.functional.TypeVariableTest#testAdvancedTypeVariables
+Processing com.google.gson.functional.TypeVariableTest#testTypeVariablesViaTypeParameter
+Processing com.google.gson.DefaultMapJsonSerializerTest#testEmptyMapNoTypeSerialization
+Processing com.google.gson.DefaultMapJsonSerializerTest#testEmptyMapSerialization
+Processing com.google.gson.DefaultMapJsonSerializerTest#testNonEmptyMapSerialization
+[INFO] Printing com.google.gson.functional.CustomTypeAdaptersTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/CustomTypeAdaptersTest.java
+[INFO] Printing com.google.gson.functional.JsonParserTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonParserTest.java
+[INFO] Printing com.google.gson.functional.CustomTypeAdaptersTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/CustomTypeAdaptersTest.java
+[INFO] Printing com.google.gson.functional.DefaultTypeAdaptersTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/DefaultTypeAdaptersTest.java
+[INFO] Printing com.google.gson.functional.DefaultTypeAdaptersTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/DefaultTypeAdaptersTest.java
+[INFO] Printing com.google.gson.functional.MoreSpecificTypeSerializationTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/MoreSpecificTypeSerializationTest.java
+[INFO] Printing com.google.gson.functional.MoreSpecificTypeSerializationTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/MoreSpecificTypeSerializationTest.java
+[INFO] Printing com.google.gson.functional.TypeVariableTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/TypeVariableTest.java
+[INFO] Printing com.google.gson.functional.TypeVariableTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/TypeVariableTest.java
+[INFO] Printing com.google.gson.functional.MapTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/MapTest.java
+[INFO] Printing com.google.gson.functional.MapTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/MapTest.java
+[INFO] Printing com.google.gson.DefaultMapJsonSerializerTest to /tmp/v2/gson//src/test/java//com/google/gson/DefaultMapJsonSerializerTest.java
+[INFO] Printing com.google.gson.DefaultMapJsonSerializerTest to /tmp/v2/gson//src/test/java//com/google/gson/DefaultMapJsonSerializerTest.java
+[INFO] Printing com.google.gson.functional.PrettyPrintingTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/PrettyPrintingTest.java
+[INFO] Printing com.google.gson.functional.PrettyPrintingTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/PrettyPrintingTest.java
+[INFO] Printing com.google.gson.functional.MapAsArrayTypeAdapterTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/MapAsArrayTypeAdapterTest.java
+[INFO] Printing com.google.gson.functional.MapAsArrayTypeAdapterTest to /tmp/v2/gson//src/test/java//com/google/gson/functional/MapAsArrayTypeAdapterTest.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v2/gson//pom.xml
+[INFO] Output new POM file in /tmp/v2/gson//pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.403 s
+[INFO] Finished at: 2021-01-06T23:28:35+01:00
+[INFO] ------------------------------------------------------------------------
