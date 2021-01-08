@@ -7,8 +7,6 @@ https://github.com/google/gson/commit/d1de4c
 
 ## Delta Energy per test method
 
-![](./gson_delta_energy_0_v.png)
-
 
 | ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
 | --- | --- | --- | --- | --- | --- |
