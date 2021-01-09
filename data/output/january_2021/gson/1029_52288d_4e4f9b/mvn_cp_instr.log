@@ -1,0 +1,92 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.google.code.gson:gson >----------------------
+[INFO] Building Gson 1.7-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gson ---
+[INFO] Deleting /tmp/v1/gson/target
+[INFO] 
+[INFO] --- cobertura-maven-plugin:2.4:clean (clean) @ gson ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0-beta-1:enforce (enforce-maven) @ gson ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ gson ---
+[INFO] Compiling 87 source files to /tmp/v1/gson/target/classes
+[WARNING] /tmp/v1/gson/src/main/java/com/google/gson/MappedObjectConstructor.java:[27,15] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /tmp/v1/gson/src/main/java/com/google/gson/MappedObjectConstructor.java:[41,23] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /tmp/v1/gson/src/main/java/com/google/gson/MappedObjectConstructor.java:[59,17] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /tmp/v1/gson/src/main/java/com/google/gson/MappedObjectConstructor.java:[61,16] Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /tmp/v1/gson/src/main/java/com/google/gson/MappedObjectConstructor.java:[63,14] Unsafe is internal proprietary API and may be removed in a future release
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/gson/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ gson ---
+[INFO] Compiling 83 source files to /tmp/v1/gson/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gson ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:build-classpath (default-cli) @ gson ---
+[INFO] Skipped writing classpath file '/tmp/v1/gson/classpath'.  No changes found.
+[INFO] 
+[INFO] --- diff-jjoules:0.0.1-SNAPSHOT:instrument (default-cli) @ gson ---
+[INFO] Running on:
+[INFO] /tmp/v1/gson
+[INFO] /tmp/v2/gson/
+[INFO] Enable JUnit4 mode
+[INFO] Configuration{pathToFirstVersion='/tmp/v1/gson', pathToSecondVersion='/tmp/v2/gson/', pathToTestListAsCSV='/tmp/v1/gson/testsThatExecuteTheChange.csv', classpath=[/home/spino/.m2/repository/junit/junit/3.8.2/junit-3.8.2.jar], junit4=true}
+[INFO] com.google.gson.JavaFieldNamingPolicyTest:[testNullField]
+com.google.gson.DisjunctionExclusionStrategyTest:[testBadInstantiation]
+com.google.gson.VersionExclusionStrategyTest:[testDisallowNegativeValuesAndFailFast]
+com.google.gson.CamelCaseSeparatorNamingPolicyTest:[testInvalidInstantiation]
+com.google.gson.ModifyFirstLetterNamingPolicyTest:[testInvalidConstruction]
+com.google.gson.JsonObjectTest:[testAddingNullOrEmptyPropertyName]
+[INFO] Instrument version before commit...
+[INFO] Run on /tmp/v1/gson
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit4.JJoulesProcessor
+Processing com.google.gson.CamelCaseSeparatorNamingPolicyTest#testInvalidInstantiation
+Processing com.google.gson.DisjunctionExclusionStrategyTest#testBadInstantiation
+Processing com.google.gson.JavaFieldNamingPolicyTest#testNullField
+Processing com.google.gson.JsonObjectTest#testAddingNullOrEmptyPropertyName
+Processing com.google.gson.ModifyFirstLetterNamingPolicyTest#testInvalidConstruction
+Processing com.google.gson.VersionExclusionStrategyTest#testDisallowNegativeValuesAndFailFast
+[INFO] Printing com.google.gson.JavaFieldNamingPolicyTest to /tmp/v1/gson/src/test/java//com/google/gson/JavaFieldNamingPolicyTest.java
+[INFO] Printing com.google.gson.JsonObjectTest to /tmp/v1/gson/src/test/java//com/google/gson/JsonObjectTest.java
+[INFO] Printing com.google.gson.ModifyFirstLetterNamingPolicyTest to /tmp/v1/gson/src/test/java//com/google/gson/ModifyFirstLetterNamingPolicyTest.java
+[INFO] Printing com.google.gson.VersionExclusionStrategyTest to /tmp/v1/gson/src/test/java//com/google/gson/VersionExclusionStrategyTest.java
+[INFO] Printing com.google.gson.CamelCaseSeparatorNamingPolicyTest to /tmp/v1/gson/src/test/java//com/google/gson/CamelCaseSeparatorNamingPolicyTest.java
+[INFO] Printing com.google.gson.DisjunctionExclusionStrategyTest to /tmp/v1/gson/src/test/java//com/google/gson/DisjunctionExclusionStrategyTest.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v1/gson/pom.xml
+[INFO] Output new POM file in /tmp/v1/gson/pom.xml
+[INFO] Instrument version after commit...
+[INFO] Run on /tmp/v2/gson/
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit4.JJoulesProcessor
+Processing com.google.gson.CamelCaseSeparatorNamingPolicyTest#testInvalidInstantiation
+Processing com.google.gson.DisjunctionExclusionStrategyTest#testBadInstantiation
+Processing com.google.gson.JavaFieldNamingPolicyTest#testNullField
+Processing com.google.gson.JsonObjectTest#testAddingNullOrEmptyPropertyName
+Processing com.google.gson.ModifyFirstLetterNamingPolicyTest#testInvalidConstruction
+Processing com.google.gson.VersionExclusionStrategyTest#testDisallowNegativeValuesAndFailFast
+[INFO] Printing com.google.gson.JavaFieldNamingPolicyTest to /tmp/v2/gson//src/test/java//com/google/gson/JavaFieldNamingPolicyTest.java
+[INFO] Printing com.google.gson.JsonObjectTest to /tmp/v2/gson//src/test/java//com/google/gson/JsonObjectTest.java
+[INFO] Printing com.google.gson.ModifyFirstLetterNamingPolicyTest to /tmp/v2/gson//src/test/java//com/google/gson/ModifyFirstLetterNamingPolicyTest.java
+[INFO] Printing com.google.gson.VersionExclusionStrategyTest to /tmp/v2/gson//src/test/java//com/google/gson/VersionExclusionStrategyTest.java
+[INFO] Printing com.google.gson.CamelCaseSeparatorNamingPolicyTest to /tmp/v2/gson//src/test/java//com/google/gson/CamelCaseSeparatorNamingPolicyTest.java
+[INFO] Printing com.google.gson.DisjunctionExclusionStrategyTest to /tmp/v2/gson//src/test/java//com/google/gson/DisjunctionExclusionStrategyTest.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v2/gson//pom.xml
+[INFO] Output new POM file in /tmp/v2/gson//pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.534 s
+[INFO] Finished at: 2021-01-08T21:18:11+01:00
+[INFO] ------------------------------------------------------------------------
