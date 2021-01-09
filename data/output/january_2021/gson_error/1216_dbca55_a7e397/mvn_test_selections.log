@@ -1,0 +1,710 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.google.code.gson:gson:jar:1.4
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 53, column 15
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:cobertura-maven-plugin is missing. @ line 198, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 61, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jxr-plugin is missing. @ line 161, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-pmd-plugin is missing. @ line 165, column 15
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:taglist-maven-plugin is missing. @ line 186, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-checkstyle-plugin is missing. @ line 178, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ line 89, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ line 103, column 16
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-eclipse-plugin is missing. @ line 123, column 16
+[WARNING] The expression ${version} is deprecated. Please use ${project.version} instead.
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.google.code.gson:gson >----------------------
+[INFO] Building Gson 1.4
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gson ---
+[INFO] Deleting /tmp/v1/gson/target
+[INFO] 
+[INFO] --- cobertura-maven-plugin:2.7:clean (clean) @ gson ---
+[INFO] 
+[INFO] --- dspot-diff-test-selection:3.1.1-SNAPSHOT:list (default-cli) @ gson ---
+[INFO] Running on:
+[INFO] /tmp/v1/gson
+[INFO] /tmp/v2/gson/
+[WARNING] No path to diff file has been specified.
+[WARNING] I'll compute a diff file using the UNIX diff command
+[WARNING] You may encounter troubles.
+[WARNING] If so, please specify a path to a correct diff file
+[WARNING] or implement a new way to compute a diff file.
+[INFO] Computing the diff with diff commnd line
+[INFO] The diff will be computed between:
+[INFO] /tmp/v1/gson/src and 
+[INFO] /tmp/v2/gson/src
+[INFO] Executing: diff -ru /tmp/v1/gson/src /tmp/v2/gson/src from /tmp/v1/gson/src
+[INFO] Running in enhanced mode...
+[INFO] Computing coverage for /tmp/v1/gson
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for com.google.code.gson:gson:jar:1.4
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 53, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.codehaus.mojo:cobertura-maven-plugin is missing. @ line 198, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 61, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jxr-plugin is missing. @ line 161, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-pmd-plugin is missing. @ line 165, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.codehaus.mojo:taglist-maven-plugin is missing. @ line 186, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-checkstyle-plugin is missing. @ line 178, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ line 89, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ line 103, column 16
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-eclipse-plugin is missing. @ line 123, column 16
+[[1;33mWARNING[m] The expression ${version} is deprecated. Please use ${project.version} instead.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mcom.google.code.gson:gson[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding Gson 1.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcobertura-maven-plugin:2.7:clean[m [1m(clean)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Skipping cobertura execution
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mclover-maven-plugin:4.4.1:setup[m [1m(default-cli)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Creating new database at '/tmp/v1/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.8 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 95 files (3 packages).
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Updating existing database at '/tmp/v1/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.8 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 77 files (4 packages).
+[[1;34mINFO[m] 611 test methods detected.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mgson[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 95 source files to /tmp/v1/gson/target/classes
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-instrumented/com/google/gson/FieldNamingStrategy2Adapter.java: /tmp/v1/gson/target/clover/src-instrumented/com/google/gson/FieldNamingStrategy2Adapter.java uses or overrides a deprecated API.
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-instrumented/com/google/gson/FieldNamingStrategy2Adapter.java: Recompile with -Xlint:deprecation for details.
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-instrumented/com/google/gson/JsonParserJavacc.java: /tmp/v1/gson/target/clover/src-instrumented/com/google/gson/JsonParserJavacc.java uses unchecked or unsafe operations.
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-instrumented/com/google/gson/JsonParserJavacc.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mgson[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /tmp/v1/gson/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 77 source files to /tmp/v1/gson/target/test-classes
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/NamingPolicyTest.java: Some input files use or override a deprecated API.
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/NamingPolicyTest.java: Recompile with -Xlint:deprecation for details.
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/MapTest.java: Some input files use unchecked or unsafe operations.
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/MapTest.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /tmp/v1/gson/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.google.gson.CamelCaseSeparatorNamingPolicyTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec
+Running com.google.gson.DefaultDateTypeAdapterTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.google.gson.GenericArrayTypeImplTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.InnerClassExclusionStrategyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.GsonTypeAdapterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.075 sec
+Running com.google.gson.JsonFieldNameValidatorTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.google.gson.JavaFieldNamingPolicyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.common.TestTypes
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.google.gson.GsonBuilderTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.JsonDeserializerExceptionWrapperTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.LowerCamelCaseSeparatorNamingPolicyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.DisjunctionExclusionStrategyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.ModifyFirstLetterNamingPolicyTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.ExposeAnnotationDeserializationExclusionStrategyTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.NullExclusionStrategyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.FieldAttributesTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.TypeInfoMapTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.LowerCaseNamingPolicyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.TypeInfoFactoryTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Running com.google.gson.MemoryRefStackTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.JsonObjectTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.metrics.PerformanceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.ParameterizedTypeImplTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.ParameterizedTypeHandlerMapTest
+Jan 09, 2021 4:52:45 PM com.google.gson.ParameterizedTypeHandlerMap register
+WARNING: Overriding the existing type handler for class java.lang.String
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.EscaperTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.google.gson.DefaultMapJsonSerializerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.VersionExclusionStrategyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.UpperCaseNamingPolicyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.FunctionWithInternalDependenciesTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.functional.InternationalizationTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.functional.SecurityTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.gson.functional.EnumTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.google.gson.functional.ObjectTest
+Tests run: 39, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 sec
+Running com.google.gson.functional.FieldExclusionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.ExposeFieldsTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
+Running com.google.gson.functional.ParameterizedTypesTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 sec
+Running com.google.gson.functional.PrettyPrintingTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Running com.google.gson.functional.CustomTypeAdaptersTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Running com.google.gson.functional.ReadersWritersTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.CircularReferenceTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.functional.CustomDeserializerTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.google.gson.functional.InterfaceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.functional.ExclusionStrategyFunctionalTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.DefaultTypeAdaptersTest
+Tests run: 40, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 0.05 sec <<< FAILURE!
+testDefaultDateSerialization(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.006 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<"Jan 9, 2021 [7:52:46 A]M"> but was:<"Jan 9, 2021 [4:52:46 P]M">
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_1pcwu268g(DefaultTypeAdaptersTest.java:211)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultDateSerialization(DefaultTypeAdaptersTest.java:208)
+
+testDefaultDateDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<13> but was:<12>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:280)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:198)
+	at junit.framework.Assert.assertEquals(Assert.java:204)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.assertEqualsDate(DefaultTypeAdaptersTest.java:227)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_1yqs62h68k(DefaultTypeAdaptersTest.java:217)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultDateDeserialization(DefaultTypeAdaptersTest.java:214)
+
+testDefaultJavaSqlDateDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<3> but was:<2>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:280)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:198)
+	at junit.framework.Assert.assertEquals(Assert.java:204)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.assertEqualsDate(DefaultTypeAdaptersTest.java:227)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_13jgoad691(DefaultTypeAdaptersTest.java:246)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultJavaSqlDateDeserialization(DefaultTypeAdaptersTest.java:243)
+
+testDefaultJavaSqlTimestampSerialization(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<"Dec 3, 2009 1[]:18:02 PM"> but was:<"Dec 3, 2009 1[0]:18:02 PM">
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_1ba8tvi695(DefaultTypeAdaptersTest.java:252)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultJavaSqlTimestampSerialization(DefaultTypeAdaptersTest.java:249)
+
+testDefaultJavaSqlTimestampDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<13> but was:<4>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:280)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:198)
+	at junit.framework.Assert.assertEquals(Assert.java:204)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.assertEqualsTime(DefaultTypeAdaptersTest.java:232)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_1q5eqtf699(DefaultTypeAdaptersTest.java:259)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultJavaSqlTimestampDeserialization(DefaultTypeAdaptersTest.java:255)
+
+testDefaultJavaSqlTimeSerialization(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<"[01]:18:02 PM"> but was:<"[10]:18:02 PM">
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_14yt6b169e(DefaultTypeAdaptersTest.java:265)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultJavaSqlTimeSerialization(DefaultTypeAdaptersTest.java:262)
+
+testDefaultJavaSqlTimeDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<13> but was:<4>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:280)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:198)
+	at junit.framework.Assert.assertEquals(Assert.java:204)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.assertEqualsTime(DefaultTypeAdaptersTest.java:232)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_1b9dtkc69i(DefaultTypeAdaptersTest.java:271)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultJavaSqlTimeDeserialization(DefaultTypeAdaptersTest.java:268)
+
+testDefaultDateSerializationUsingBuilder(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<"Jan 9, 2021 [7:52:46 A]M"> but was:<"Jan 9, 2021 [4:52:46 P]M">
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_16g7uk169m(DefaultTypeAdaptersTest.java:278)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultDateSerializationUsingBuilder(DefaultTypeAdaptersTest.java:274)
+
+Running com.google.gson.functional.NullObjectAndFieldTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.gson.functional.InstanceCreatorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.functional.MapTest
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+Running com.google.gson.functional.VersioningTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.functional.InheritanceTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.google.gson.functional.CustomSerializerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.EscapingTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.functional.CollectionTest
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
+Running com.google.gson.functional.JsonTreeTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.functional.ArrayTest
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.google.gson.functional.PrintFormattingTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.functional.StringTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.google.gson.functional.UncategorizedTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.JsonParserTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.NamingPolicyTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.functional.ConcurrencyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec
+Running com.google.gson.functional.PrimitiveTest
+Tests run: 65, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 sec
+Running com.google.gson.TypeInfoArrayTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.JsonStreamParserTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.LruCacheTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.JsonParserTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.FieldNamingStrategy2AdapterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.ExposeAnnotationSerializationExclusionStrategyTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.TypeInfoTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.SerializedNameAnnotationInterceptingNamingPolicyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.JsonPrimitiveTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.TypeUtilsTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.LongSerializationPolicyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.StringUnmarshallerTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+
+Results :
+
+Failed tests:   testDefaultDateSerialization(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<"Jan 9, 2021 [7:52:46 A]M"> but was:<"Jan 9, 2021 [4:52:46 P]M">
+  testDefaultDateDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<13> but was:<12>
+  testDefaultJavaSqlDateDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<3> but was:<2>
+  testDefaultJavaSqlTimestampSerialization(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<"Dec 3, 2009 1[]:18:02 PM"> but was:<"Dec 3, 2009 1[0]:18:02 PM">
+  testDefaultJavaSqlTimestampDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<13> but was:<4>
+  testDefaultJavaSqlTimeSerialization(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<"[01]:18:02 PM"> but was:<"[10]:18:02 PM">
+  testDefaultJavaSqlTimeDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<13> but was:<4>
+  testDefaultDateSerializationUsingBuilder(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<"Jan 9, 2021 [7:52:46 A]M"> but was:<"Jan 9, 2021 [4:52:46 P]M">
+
+Tests run: 611, Failures: 8, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  7.373 s
+[[1;34mINFO[m] Finished at: 2021-01-09T16:52:46+01:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.12.4:test[m [1m(default-test)[m on project [36mgson[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /tmp/v1/gson/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Writing HTML report to '/tmp/v1/gson/target/clover/report'
+Done. Processed 6 packages in 3003ms (500ms per package).
+[INFO] Computing coverage for /tmp/v2/gson/
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for com.google.code.gson:gson:jar:1.4
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 53, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.codehaus.mojo:cobertura-maven-plugin is missing. @ line 198, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 61, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jxr-plugin is missing. @ line 161, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-pmd-plugin is missing. @ line 165, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.codehaus.mojo:taglist-maven-plugin is missing. @ line 186, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-checkstyle-plugin is missing. @ line 178, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ line 89, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ line 103, column 16
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-eclipse-plugin is missing. @ line 123, column 16
+[[1;33mWARNING[m] The expression ${version} is deprecated. Please use ${project.version} instead.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mcom.google.code.gson:gson[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding Gson 1.4[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Deleting /tmp/v2/gson/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcobertura-maven-plugin:2.7:clean[m [1m(clean)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Skipping cobertura execution
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mclover-maven-plugin:4.4.1:setup[m [1m(default-cli)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Creating new database at '/tmp/v2/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.8 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 95 files (3 packages).
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Updating existing database at '/tmp/v2/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.8 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 77 files (4 packages).
+[[1;34mINFO[m] 611 test methods detected.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mgson[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 95 source files to /tmp/v2/gson/target/classes
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-instrumented/com/google/gson/FieldNamingStrategy2Adapter.java: /tmp/v2/gson/target/clover/src-instrumented/com/google/gson/FieldNamingStrategy2Adapter.java uses or overrides a deprecated API.
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-instrumented/com/google/gson/FieldNamingStrategy2Adapter.java: Recompile with -Xlint:deprecation for details.
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-instrumented/com/google/gson/JsonParserJavacc.java: /tmp/v2/gson/target/clover/src-instrumented/com/google/gson/JsonParserJavacc.java uses unchecked or unsafe operations.
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-instrumented/com/google/gson/JsonParserJavacc.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mgson[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /tmp/v2/gson/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 77 source files to /tmp/v2/gson/target/test-classes
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/NamingPolicyTest.java: Some input files use or override a deprecated API.
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/NamingPolicyTest.java: Recompile with -Xlint:deprecation for details.
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/ParameterizedTypesTest.java: Some input files use unchecked or unsafe operations.
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/ParameterizedTypesTest.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /tmp/v2/gson/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.google.gson.CamelCaseSeparatorNamingPolicyTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 sec
+Running com.google.gson.DefaultDateTypeAdapterTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Running com.google.gson.GenericArrayTypeImplTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.InnerClassExclusionStrategyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.GsonTypeAdapterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 sec
+Running com.google.gson.JsonFieldNameValidatorTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.JavaFieldNamingPolicyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.common.TestTypes
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.google.gson.GsonBuilderTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.google.gson.JsonDeserializerExceptionWrapperTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.LowerCamelCaseSeparatorNamingPolicyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.DisjunctionExclusionStrategyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.ModifyFirstLetterNamingPolicyTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.ExposeAnnotationDeserializationExclusionStrategyTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.NullExclusionStrategyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.FieldAttributesTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.TypeInfoMapTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.LowerCaseNamingPolicyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.TypeInfoFactoryTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.google.gson.MemoryRefStackTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.JsonObjectTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.metrics.PerformanceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.google.gson.ParameterizedTypeImplTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.ParameterizedTypeHandlerMapTest
+Jan 09, 2021 4:52:57 PM com.google.gson.ParameterizedTypeHandlerMap register
+WARNING: Overriding the existing type handler for class java.lang.String
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.EscaperTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.google.gson.DefaultMapJsonSerializerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.VersionExclusionStrategyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.UpperCaseNamingPolicyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.FunctionWithInternalDependenciesTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.InternationalizationTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.functional.SecurityTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.functional.EnumTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.functional.ObjectTest
+Tests run: 39, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 sec
+Running com.google.gson.functional.FieldExclusionTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.functional.ExposeFieldsTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.google.gson.functional.ParameterizedTypesTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 sec
+Running com.google.gson.functional.PrettyPrintingTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.google.gson.functional.CustomTypeAdaptersTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Running com.google.gson.functional.ReadersWritersTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.CircularReferenceTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.functional.CustomDeserializerTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.google.gson.functional.InterfaceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.functional.ExclusionStrategyFunctionalTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.functional.DefaultTypeAdaptersTest
+Tests run: 40, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec <<< FAILURE!
+testDefaultDateSerialization(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.006 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<"Jan 9, 2021 [7:52:57 A]M"> but was:<"Jan 9, 2021 [4:52:57 P]M">
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_1pcwu268g(DefaultTypeAdaptersTest.java:211)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultDateSerialization(DefaultTypeAdaptersTest.java:208)
+
+testDefaultDateDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<13> but was:<12>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:280)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:198)
+	at junit.framework.Assert.assertEquals(Assert.java:204)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.assertEqualsDate(DefaultTypeAdaptersTest.java:227)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_1yqs62h68k(DefaultTypeAdaptersTest.java:217)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultDateDeserialization(DefaultTypeAdaptersTest.java:214)
+
+testDefaultJavaSqlDateDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.003 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<3> but was:<2>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:280)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:198)
+	at junit.framework.Assert.assertEquals(Assert.java:204)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.assertEqualsDate(DefaultTypeAdaptersTest.java:227)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_13jgoad691(DefaultTypeAdaptersTest.java:246)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultJavaSqlDateDeserialization(DefaultTypeAdaptersTest.java:243)
+
+testDefaultJavaSqlTimestampSerialization(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<"Dec 3, 2009 1[]:18:02 PM"> but was:<"Dec 3, 2009 1[0]:18:02 PM">
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_1ba8tvi695(DefaultTypeAdaptersTest.java:252)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultJavaSqlTimestampSerialization(DefaultTypeAdaptersTest.java:249)
+
+testDefaultJavaSqlTimestampDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<13> but was:<4>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:280)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:198)
+	at junit.framework.Assert.assertEquals(Assert.java:204)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.assertEqualsTime(DefaultTypeAdaptersTest.java:232)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_1q5eqtf699(DefaultTypeAdaptersTest.java:259)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultJavaSqlTimestampDeserialization(DefaultTypeAdaptersTest.java:255)
+
+testDefaultJavaSqlTimeSerialization(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<"[01]:18:02 PM"> but was:<"[10]:18:02 PM">
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_14yt6b169e(DefaultTypeAdaptersTest.java:265)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultJavaSqlTimeSerialization(DefaultTypeAdaptersTest.java:262)
+
+testDefaultJavaSqlTimeDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<13> but was:<4>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:280)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:198)
+	at junit.framework.Assert.assertEquals(Assert.java:204)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.assertEqualsTime(DefaultTypeAdaptersTest.java:232)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_1b9dtkc69i(DefaultTypeAdaptersTest.java:271)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultJavaSqlTimeDeserialization(DefaultTypeAdaptersTest.java:268)
+
+testDefaultDateSerializationUsingBuilder(com.google.gson.functional.DefaultTypeAdaptersTest)  Time elapsed: 0.002 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<"Jan 9, 2021 [7:52:57 A]M"> but was:<"Jan 9, 2021 [4:52:57 P]M">
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.__CLR4_4_16g7uk169m(DefaultTypeAdaptersTest.java:278)
+	at com.google.gson.functional.DefaultTypeAdaptersTest.testDefaultDateSerializationUsingBuilder(DefaultTypeAdaptersTest.java:274)
+
+Running com.google.gson.functional.NullObjectAndFieldTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.InstanceCreatorTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.functional.MapTest
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+Running com.google.gson.functional.VersioningTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Running com.google.gson.functional.InheritanceTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.google.gson.functional.CustomSerializerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.functional.EscapingTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.CollectionTest
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Running com.google.gson.functional.JsonTreeTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.functional.ArrayTest
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.google.gson.functional.PrintFormattingTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.functional.StringTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.google.gson.functional.UncategorizedTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.functional.JsonParserTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.NamingPolicyTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Running com.google.gson.functional.ConcurrencyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 sec
+Running com.google.gson.functional.PrimitiveTest
+Tests run: 65, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 sec
+Running com.google.gson.TypeInfoArrayTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.JsonStreamParserTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.LruCacheTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.JsonParserTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.FieldNamingStrategy2AdapterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.google.gson.ExposeAnnotationSerializationExclusionStrategyTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.TypeInfoTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.SerializedNameAnnotationInterceptingNamingPolicyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.JsonPrimitiveTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.TypeUtilsTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.LongSerializationPolicyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.StringUnmarshallerTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+
+Results :
+
+Failed tests:   testDefaultDateSerialization(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<"Jan 9, 2021 [7:52:57 A]M"> but was:<"Jan 9, 2021 [4:52:57 P]M">
+  testDefaultDateDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<13> but was:<12>
+  testDefaultJavaSqlDateDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<3> but was:<2>
+  testDefaultJavaSqlTimestampSerialization(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<"Dec 3, 2009 1[]:18:02 PM"> but was:<"Dec 3, 2009 1[0]:18:02 PM">
+  testDefaultJavaSqlTimestampDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<13> but was:<4>
+  testDefaultJavaSqlTimeSerialization(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<"[01]:18:02 PM"> but was:<"[10]:18:02 PM">
+  testDefaultJavaSqlTimeDeserialization(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<13> but was:<4>
+  testDefaultDateSerializationUsingBuilder(com.google.gson.functional.DefaultTypeAdaptersTest): expected:<"Jan 9, 2021 [7:52:57 A]M"> but was:<"Jan 9, 2021 [4:52:57 P]M">
+
+Tests run: 611, Failures: 8, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  7.077 s
+[[1;34mINFO[m] Finished at: 2021-01-09T16:52:58+01:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.12.4:test[m [1m(default-test)[m on project [36mgson[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /tmp/v2/gson/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Writing HTML report to '/tmp/v2/gson/target/clover/report'
+Done. Processed 6 packages in 1705ms (284ms per package).
+[INFO] Saving result in /tmp/v1/gson/testsThatExecuteTheChange.csv ...
+[INFO] 
+[INFO] Writing Coverage in /tmp/v1/gson/testsThatExecuteTheChange_coverage.csv
+[INFO] total;0;0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  23.532 s
+[INFO] Finished at: 2021-01-09T16:53:00+01:00
+[INFO] ------------------------------------------------------------------------
