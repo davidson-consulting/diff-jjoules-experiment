@@ -1,0 +1,559 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.google.code.gson:gson:jar:1.2.3
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 53, column 15
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:cobertura-maven-plugin is missing. @ line 182, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 61, column 16
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jxr-plugin is missing. @ line 145, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-pmd-plugin is missing. @ line 149, column 15
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:taglist-maven-plugin is missing. @ line 170, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-checkstyle-plugin is missing. @ line 162, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ line 73, column 16
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ line 87, column 16
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-eclipse-plugin is missing. @ line 107, column 16
+[WARNING] The expression ${version} is deprecated. Please use ${project.version} instead.
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.google.code.gson:gson >----------------------
+[INFO] Building Gson 1.2.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gson ---
+[INFO] Deleting /tmp/v1/gson/target
+[INFO] 
+[INFO] --- cobertura-maven-plugin:2.7:clean (clean) @ gson ---
+[INFO] 
+[INFO] --- dspot-diff-test-selection:3.1.1-SNAPSHOT:list (default-cli) @ gson ---
+[INFO] Running on:
+[INFO] /tmp/v1/gson
+[INFO] /tmp/v2/gson/
+[WARNING] No path to diff file has been specified.
+[WARNING] I'll compute a diff file using the UNIX diff command
+[WARNING] You may encounter troubles.
+[WARNING] If so, please specify a path to a correct diff file
+[WARNING] or implement a new way to compute a diff file.
+[INFO] Computing the diff with diff commnd line
+[INFO] The diff will be computed between:
+[INFO] /tmp/v1/gson/src and 
+[INFO] /tmp/v2/gson/src
+[INFO] Executing: diff -ru /tmp/v1/gson/src /tmp/v2/gson/src from /tmp/v1/gson/src
+[INFO] Running in enhanced mode...
+[INFO] Computing coverage for /tmp/v1/gson
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for com.google.code.gson:gson:jar:1.2.3
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 53, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.codehaus.mojo:cobertura-maven-plugin is missing. @ line 182, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 61, column 16
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jxr-plugin is missing. @ line 145, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-pmd-plugin is missing. @ line 149, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.codehaus.mojo:taglist-maven-plugin is missing. @ line 170, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-checkstyle-plugin is missing. @ line 162, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ line 73, column 16
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ line 87, column 16
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-eclipse-plugin is missing. @ line 107, column 16
+[[1;33mWARNING[m] The expression ${version} is deprecated. Please use ${project.version} instead.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mcom.google.code.gson:gson[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding Gson 1.2.3[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcobertura-maven-plugin:2.7:clean[m [1m(clean)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Skipping cobertura execution
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mclover-maven-plugin:4.4.1:setup[m [1m(default-cli)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Creating new database at '/tmp/v1/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.8 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 84 files (3 packages).
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Updating existing database at '/tmp/v1/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.8 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 55 files (4 packages).
+[[1;34mINFO[m] 383 test methods detected.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mgson[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 84 source files to /tmp/v1/gson/target/classes
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-instrumented/com/google/gson/JsonParser.java: /tmp/v1/gson/target/clover/src-instrumented/com/google/gson/JsonParser.java uses unchecked or unsafe operations.
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-instrumented/com/google/gson/JsonParser.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mgson[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /tmp/v1/gson/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 55 source files to /tmp/v1/gson/target/test-classes
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/DefaultTypeAdaptersTest.java: /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/DefaultTypeAdaptersTest.java uses or overrides a deprecated API.
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/DefaultTypeAdaptersTest.java: Recompile with -Xlint:deprecation for details.
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/MapTest.java: Some input files use unchecked or unsafe operations.
+[[1;33mWARNING[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/MapTest.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /tmp/v1/gson/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.google.gson.CamelCaseSeparatorNamingPolicyTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec
+Running com.google.gson.FunctionalWithInternalDependenciesTest
+Jan 11, 2021 1:28:38 AM com.google.gson.ParameterizedTypeHandlerMap register
+WARNING: Overriding the existing type handler for interface java.util.Collection
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.092 sec
+Running com.google.gson.DefaultDateTypeAdapterTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.GenericArrayTypeImplTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.GsonTypeAdapterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+Running com.google.gson.JsonFieldNameValidatorTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.JavaFieldNamingPolicyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.common.TestTypes
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.google.gson.GsonBuilderTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.google.gson.JsonDeserializerExceptionWrapperTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.LowerCamelCaseSeparatorNamingPolicyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.DisjunctionExclusionStrategyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.ModifyFirstLetterNamingPolicyTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.NullExclusionStrategyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.TypeInfoMapTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.LowerCaseNamingPolicyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.TypeInfoFactoryTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Running com.google.gson.MemoryRefStackTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.PrimitiveTypeAdapterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.metrics.PerformanceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.ParameterizedTypeImplTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.ParameterizedTypeHandlerMapTest
+Jan 11, 2021 1:28:38 AM com.google.gson.ParameterizedTypeHandlerMap register
+WARNING: Overriding the existing type handler for class java.lang.String
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.EscaperTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.DefaultMapJsonSerializerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.VersionExclusionStrategyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.JsonEscapingVisitorTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.UpperCaseNamingPolicyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.functional.InternationalizationTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.ObjectTest
+Tests run: 45, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 sec
+Running com.google.gson.functional.ExposeFieldsTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.functional.ParameterizedTypesTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 sec
+Running com.google.gson.functional.CustomTypeAdaptersTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.functional.ReadersWritersTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.functional.DefaultTypeAdaptersTest
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Running com.google.gson.functional.NullObjectAndFieldTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.MapTest
+Tests run: 8, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.014 sec <<< FAILURE!
+testMapSubclassDeserialization(com.google.gson.functional.MapTest)  Time elapsed: 0.006 sec  <<< ERROR!
+com.google.gson.JsonParseException: The JsonDeserializer MapTypeAdapter failed to deserialized json object {"a":1,"b":2} given the type class com.google.gson.functional.MapTest$MyMap
+	at com.google.gson.JsonDeserializerExceptionWrapper.deserialize(JsonDeserializerExceptionWrapper.java:63)
+	at com.google.gson.JsonDeserializationVisitor.visitUsingCustomHandler(JsonDeserializationVisitor.java:83)
+	at com.google.gson.ObjectNavigator.accept(ObjectNavigator.java:130)
+	at com.google.gson.JsonDeserializationContextDefault.fromJsonObject(JsonDeserializationContextDefault.java:79)
+	at com.google.gson.JsonDeserializationContextDefault.deserialize(JsonDeserializationContextDefault.java:51)
+	at com.google.gson.Gson.fromJson(Gson.java:378)
+	at com.google.gson.Gson.fromJson(Gson.java:326)
+	at com.google.gson.Gson.fromJson(Gson.java:302)
+	at com.google.gson.functional.MapTest.__CLR4_4_1jy8ck44ze(MapTest.java:120)
+	at com.google.gson.functional.MapTest.testMapSubclassDeserialization(MapTest.java:113)
+Caused by: java.lang.IllegalArgumentException: Map objects need to be parameterized unless you use a custom serializer. Use the com.google.gson.reflect.TypeToken to extract the ParameterizedType.
+	at com.google.gson.TypeInfoMap.<init>(TypeInfoMap.java:34)
+	at com.google.gson.DefaultTypeAdapters$MapTypeAdapter.deserialize(DefaultTypeAdapters.java:405)
+	at com.google.gson.DefaultTypeAdapters$MapTypeAdapter.deserialize(DefaultTypeAdapters.java:379)
+	at com.google.gson.JsonDeserializerExceptionWrapper.deserialize(JsonDeserializerExceptionWrapper.java:50)
+	... 36 more
+
+Running com.google.gson.functional.VersioningTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.functional.EscapingTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.functional.CollectionTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+Running com.google.gson.functional.ArrayTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.PrintFormattingTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.google.gson.functional.StringTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.functional.UncategorizedTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.NamingPolicyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.functional.ConcurrencyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec
+Running com.google.gson.functional.PrimitiveTest
+Tests run: 31, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
+Running com.google.gson.TypeInfoArrayTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.ExposeAnnotationBasedExclusionStrategyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.TypeInfoTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.SerializedNameAnnotationInterceptingNamingPolicyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.TypeUtilsTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.StringUnmarshallerTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+
+Results :
+
+Tests in error: 
+  testMapSubclassDeserialization(com.google.gson.functional.MapTest): The JsonDeserializer MapTypeAdapter failed to deserialized json object {"a":1,"b":2} given the type class com.google.gson.functional.MapTest$MyMap
+
+Tests run: 383, Failures: 0, Errors: 1, Skipped: 0
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  6.014 s
+[[1;34mINFO[m] Finished at: 2021-01-11T01:28:39+01:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.12.4:test[m [1m(default-test)[m on project [36mgson[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /tmp/v1/gson/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Writing HTML report to '/tmp/v1/gson/target/clover/report'
+Done. Processed 6 packages in 2375ms (395ms per package).
+[INFO] Computing coverage for /tmp/v2/gson/
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for com.google.code.gson:gson:jar:1.2.3
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 53, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.codehaus.mojo:cobertura-maven-plugin is missing. @ line 182, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 61, column 16
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jxr-plugin is missing. @ line 145, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-pmd-plugin is missing. @ line 149, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.codehaus.mojo:taglist-maven-plugin is missing. @ line 170, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-checkstyle-plugin is missing. @ line 162, column 15
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ line 73, column 16
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ line 87, column 16
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-eclipse-plugin is missing. @ line 107, column 16
+[[1;33mWARNING[m] The expression ${version} is deprecated. Please use ${project.version} instead.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mcom.google.code.gson:gson[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding Gson 1.2.3[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Deleting /tmp/v2/gson/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcobertura-maven-plugin:2.7:clean[m [1m(clean)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Skipping cobertura execution
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mclover-maven-plugin:4.4.1:setup[m [1m(default-cli)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Creating new database at '/tmp/v2/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.8 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 84 files (3 packages).
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Updating existing database at '/tmp/v2/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.8 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 55 files (4 packages).
+[[1;34mINFO[m] 383 test methods detected.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mgson[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:compile[m [1m(default-compile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 84 source files to /tmp/v2/gson/target/classes
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-instrumented/com/google/gson/JsonParser.java: /tmp/v2/gson/target/clover/src-instrumented/com/google/gson/JsonParser.java uses unchecked or unsafe operations.
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-instrumented/com/google/gson/JsonParser.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mgson[0;1m ---[m
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /tmp/v2/gson/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.1:testCompile[m [1m(default-testCompile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 55 source files to /tmp/v2/gson/target/test-classes
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/DefaultTypeAdaptersTest.java: /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/DefaultTypeAdaptersTest.java uses or overrides a deprecated API.
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/DefaultTypeAdaptersTest.java: Recompile with -Xlint:deprecation for details.
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/ParameterizedTypesTest.java: Some input files use unchecked or unsafe operations.
+[[1;33mWARNING[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/ParameterizedTypesTest.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /tmp/v2/gson/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.google.gson.CamelCaseSeparatorNamingPolicyTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 sec
+Running com.google.gson.FunctionalWithInternalDependenciesTest
+Jan 11, 2021 1:28:48 AM com.google.gson.ParameterizedTypeHandlerMap register
+WARNING: Overriding the existing type handler for interface java.util.Collection
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.098 sec
+Running com.google.gson.DefaultDateTypeAdapterTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.GenericArrayTypeImplTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.GsonTypeAdapterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.google.gson.JsonFieldNameValidatorTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.JavaFieldNamingPolicyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.common.TestTypes
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Running com.google.gson.GsonBuilderTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.JsonDeserializerExceptionWrapperTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.LowerCamelCaseSeparatorNamingPolicyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.DisjunctionExclusionStrategyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.ModifyFirstLetterNamingPolicyTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.NullExclusionStrategyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.TypeInfoMapTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.LowerCaseNamingPolicyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.TypeInfoFactoryTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Running com.google.gson.MemoryRefStackTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.PrimitiveTypeAdapterTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.metrics.PerformanceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.ParameterizedTypeImplTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.ParameterizedTypeHandlerMapTest
+Jan 11, 2021 1:28:48 AM com.google.gson.ParameterizedTypeHandlerMap register
+WARNING: Overriding the existing type handler for class java.lang.String
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.EscaperTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.DefaultMapJsonSerializerTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.VersionExclusionStrategyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.gson.JsonEscapingVisitorTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.UpperCaseNamingPolicyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.functional.InternationalizationTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.functional.ObjectTest
+Tests run: 45, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 sec
+Running com.google.gson.functional.ExposeFieldsTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.functional.ParameterizedTypesTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 sec
+Running com.google.gson.functional.CustomTypeAdaptersTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Running com.google.gson.functional.ReadersWritersTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.functional.DefaultTypeAdaptersTest
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec
+Running com.google.gson.functional.NullObjectAndFieldTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.MapTest
+Tests run: 8, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.013 sec <<< FAILURE!
+testMapSubclassDeserialization(com.google.gson.functional.MapTest)  Time elapsed: 0.006 sec  <<< ERROR!
+com.google.gson.JsonParseException: The JsonDeserializer MapTypeAdapter failed to deserialized json object {"a":1,"b":2} given the type class com.google.gson.functional.MapTest$MyMap
+	at com.google.gson.JsonDeserializerExceptionWrapper.deserialize(JsonDeserializerExceptionWrapper.java:63)
+	at com.google.gson.JsonDeserializationVisitor.visitUsingCustomHandler(JsonDeserializationVisitor.java:83)
+	at com.google.gson.ObjectNavigator.accept(ObjectNavigator.java:125)
+	at com.google.gson.JsonDeserializationContextDefault.fromJsonObject(JsonDeserializationContextDefault.java:79)
+	at com.google.gson.JsonDeserializationContextDefault.deserialize(JsonDeserializationContextDefault.java:51)
+	at com.google.gson.Gson.fromJson(Gson.java:378)
+	at com.google.gson.Gson.fromJson(Gson.java:326)
+	at com.google.gson.Gson.fromJson(Gson.java:302)
+	at com.google.gson.functional.MapTest.__CLR4_4_1jy8ck44y8(MapTest.java:120)
+	at com.google.gson.functional.MapTest.testMapSubclassDeserialization(MapTest.java:113)
+Caused by: java.lang.IllegalArgumentException: Map objects need to be parameterized unless you use a custom serializer. Use the com.google.gson.reflect.TypeToken to extract the ParameterizedType.
+	at com.google.gson.TypeInfoMap.<init>(TypeInfoMap.java:34)
+	at com.google.gson.DefaultTypeAdapters$MapTypeAdapter.deserialize(DefaultTypeAdapters.java:405)
+	at com.google.gson.DefaultTypeAdapters$MapTypeAdapter.deserialize(DefaultTypeAdapters.java:379)
+	at com.google.gson.JsonDeserializerExceptionWrapper.deserialize(JsonDeserializerExceptionWrapper.java:50)
+	... 36 more
+
+Running com.google.gson.functional.VersioningTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.functional.EscapingTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.functional.CollectionTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+Running com.google.gson.functional.ArrayTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.functional.PrintFormattingTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Running com.google.gson.functional.StringTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.functional.UncategorizedTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.functional.NamingPolicyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Running com.google.gson.functional.ConcurrencyTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 sec
+Running com.google.gson.functional.PrimitiveTest
+Tests run: 31, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 sec
+Running com.google.gson.TypeInfoArrayTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.ExposeAnnotationBasedExclusionStrategyTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.TypeInfoTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.SerializedNameAnnotationInterceptingNamingPolicyTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.TypeUtilsTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.StringUnmarshallerTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+
+Results :
+
+Tests in error: 
+  testMapSubclassDeserialization(com.google.gson.functional.MapTest): The JsonDeserializer MapTypeAdapter failed to deserialized json object {"a":1,"b":2} given the type class com.google.gson.functional.MapTest$MyMap
+
+Tests run: 383, Failures: 0, Errors: 1, Skipped: 0
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  5.938 s
+[[1;34mINFO[m] Finished at: 2021-01-11T01:28:48+01:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.12.4:test[m [1m(default-test)[m on project [36mgson[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /tmp/v2/gson/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Writing HTML report to '/tmp/v2/gson/target/clover/report'
+Done. Processed 6 packages in 1013ms (168ms per package).
+[INFO] /tmp/v1/gson/src/main/java/com/google/gson/JsonArrayDeserializationVisitor.java
+[INFO] /tmp/v2/gson/src/main/java/com/google/gson/JsonArrayDeserializationVisitor.java
+[INFO] com.google.gson.JsonArrayDeserializationVisitor:[109, 110, 110] are modified.
+[INFO] /tmp/v1/gson/src/main/java/com/google/gson/JsonObjectDeserializationVisitor.java
+[INFO] /tmp/v2/gson/src/main/java/com/google/gson/JsonObjectDeserializationVisitor.java
+[INFO] com.google.gson.JsonObjectDeserializationVisitor:[80, 82, 82, 82, 83, 83, 84, 84, 85, 86, 86, 86, 87, 88, 88, 89, 89, 90, 90, 90, 91, 92, 92, 92, 95, 98, 98, 100, 101, 101, 101, 81] are modified.
+[INFO] com.google.gson.JsonObjectDeserializationVisitor:98 covered.
+[INFO] com.google.gson.JsonObjectDeserializationVisitor:100 covered.
+[INFO] com.google.gson.JsonObjectDeserializationVisitor:101 covered.
+[INFO] com.google.gson.JsonObjectDeserializationVisitor:80 covered.
+[INFO] com.google.gson.JsonObjectDeserializationVisitor:82 covered.
+[INFO] com.google.gson.JsonObjectDeserializationVisitor:83 covered.
+[INFO] com.google.gson.JsonObjectDeserializationVisitor:84 covered.
+[INFO] com.google.gson.JsonObjectDeserializationVisitor:88 covered.
+[INFO] com.google.gson.JsonObjectDeserializationVisitor:81 covered.
+[INFO] com.google.gson.JsonObjectDeserializationVisitor:85 covered.
+[INFO] com.google.gson.JsonObjectDeserializationVisitor:86 covered.
+[INFO] /tmp/v1/gson/src/main/java/com/google/gson/JsonPrimitiveDeserializationVisitor.java
+[INFO] /tmp/v2/gson/src/main/java/com/google/gson/JsonPrimitiveDeserializationVisitor.java
+[INFO] com.google.gson.JsonPrimitiveDeserializationVisitor:[74, 76, 76] are modified.
+[INFO] /tmp/v1/gson/src/main/java/com/google/gson/JsonSerializationVisitor.java
+[INFO] /tmp/v2/gson/src/main/java/com/google/gson/JsonSerializationVisitor.java
+[INFO] com.google.gson.JsonSerializationVisitor:[80, 81, 81, 82, 83, 83, 82, 86, 87, 87, 87, 86, 89, 89, 90, 81] are modified.
+[INFO] com.google.gson.JsonSerializationVisitor:82 covered.
+[INFO] com.google.gson.JsonSerializationVisitor:83 covered.
+[INFO] com.google.gson.JsonSerializationVisitor:86 covered.
+[INFO] com.google.gson.JsonSerializationVisitor:90 covered.
+[INFO] /tmp/v1/gson/src/main/java/com/google/gson/ObjectNavigator.java
+[INFO] /tmp/v2/gson/src/main/java/com/google/gson/ObjectNavigator.java
+[INFO] com.google.gson.ObjectNavigator:[60, 168, 168, 172, 172, 171, 169] are modified.
+[INFO] com.google.gson.ObjectNavigator:168 covered.
+[INFO] com.google.gson.ObjectNavigator:169 covered.
+[INFO] Saving result in /tmp/v1/gson/testsThatExecuteTheChange.csv ...
+[INFO] com.google.gson.functional.NamingPolicyTest;testGsonWithNonDefaultFieldNamingPolicyDeserialiation;testGsonWithSerializedNameFieldNamingPolicySerialization;testGsonWithNonDefaultFieldNamingPolicySerialization;testGsonWithSerializedNameFieldNamingPolicyDeserialization
+com.google.gson.functional.ParameterizedTypesTest;testParameterizedTypeWithReaderDeserialization;testVariableTypeFieldsAndGenericArraysSerialization;testTypesWithMultipleParametersSerialization;testParameterizedTypeGenericArraysSerialization;testParameterizedTypeWithVariableTypeDeserialization;testVariableTypeArrayDeserialization;testParameterizedTypeDeserialization;testParameterizedTypeGenericArraysDeserialization;testVariableTypeFieldsAndGenericArraysDeserialization;testVariableTypeDeserialization;testParameterizedTypesWithWriterSerialization;testParameterizedTypesSerialization;testTypesWithMultipleParametersDeserialization
+com.google.gson.functional.ExposeFieldsTest;testExposeAnnotationSerialization;testNullExposeFieldSerialization;testArrayWithOneNullExposeFieldObjectSerialization;testExposeAnnotationDeserialization
+com.google.gson.functional.EscapingTest;testEscapingObjectFields
+com.google.gson.functional.NullObjectAndFieldTest;testExplicitSerializationOfNullStringMembers;testExplicitSerializationOfNulls;testNullWrappedPrimitiveMemberDeserialization;testNullWrappedPrimitiveMemberSerialization;testExplicitSerializationOfNullArrayMembers;testExplicitDeserializationOfNulls;testExplicitSerializationOfNullCollectionMembers
+com.google.gson.functional.VersioningTest;testVersionedClassesDeserialization;testVersionedClassesSerialization;testVersionedGsonWithUnversionedClassesDeserialization;testVersionedGsonWithUnversionedClassesSerialization
+com.google.gson.functional.ObjectTest;testNullArraysDeserialization;testInnerClassSerialization;testArrayOfArraysDeserialization;testInheritenceDeserialization;testNullPrimitiveFieldsDeserialization;testClassWithObjectFieldSerialization;testArrayOfArraysSerialization;testClassWithTransientFieldsSerialization;testBagOfPrimitiveWrappersDeserialization;testPrimitiveArrayFieldSerialization;testBagOfPrimitiveWrappersSerialization;testClassWithEnumFieldDeserialization;testSelfReferenceSerialization;testClassWithTransientFieldsDeserialization;testPrivateNoArgConstructorDeserialization;testClassWithEnumFieldSerialization;testBagOfPrimitivesSerialization;testInheritenceSerialization;testNullObjectFieldsDeserialization;testNestedDeserialization;testNullFieldsSerialization;testJsonInMixedQuotesDeserialization;testArrayOfObjectsDeserialization;testClassWithTransientFieldsDeserializationTransientFieldsPassedInJsonAreIgnored;testInnerClassDeserialization;testNullFieldsDeserialization;testPrimitiveArrayInAnObjectDeserialization;testTopLevelEnumSerialization;testBagOfPrimitivesDeserialization;testJsonInSingleQuotesDeserialization;testArrayOfObjectsSerialization;testNestedSerialization
+com.google.gson.functional.CustomTypeAdaptersTest;testCustomTypeAdapterDoesNotAppliesToSubClasses;testCustomNestedSerializers;testCustomNestedDeserializers
+com.google.gson.functional.ConcurrencyTest;testSingleThreadSerialization;testMultiThreadSerialization;testSingleThreadDeserialization;testMultiThreadDeserialization
+com.google.gson.functional.ReadersWritersTest;testWriterForSerialization;testReaderForDeserialization
+com.google.gson.functional.CollectionTest;testRawCollectionSerialization;testCollectionOfEnumsSerialization;testCollectionOfBagOfPrimitivesSerialization
+com.google.gson.FunctionalWithInternalDependenciesTest;testPrettyPrintArrayOfObjects;testPrettyPrintList
+com.google.gson.functional.UncategorizedTest;testStaticFieldsAreNotSerialized;testObjectEqualButNotSameSerialization
+com.google.gson.functional.PrintFormattingTest;testCompactFormattingLeavesNoWhiteSpace
+[INFO] Writing Coverage in /tmp/v1/gson/testsThatExecuteTheChange_coverage.csv
+[INFO] com.google.gson.JsonObjectDeserializationVisitor;11;17
+
+[INFO] com.google.gson.JsonSerializationVisitor;4;8
+
+[INFO] com.google.gson.ObjectNavigator;2;5
+
+[INFO] total;17;30
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.741 s
+[INFO] Finished at: 2021-01-11T01:28:51+01:00
+[INFO] ------------------------------------------------------------------------
