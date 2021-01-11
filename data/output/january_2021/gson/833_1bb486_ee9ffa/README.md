@@ -7,10 +7,12 @@ https://github.com/google/gson/commit/ee9ffa
 
 ## Delta Energy per test method
 
+![](./gson_delta_energy_0_v.png)
+
 
 | ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
 | --- | --- | --- | --- | --- | --- |
-| 0 | 128669.4125 | 131568.0987654321 | 2898.686265432101 | 132249.17863872484 | 133935.75447958228 |
+| 0 | 42725 | 39734 | -2991 | 132249.17863872484 | 133935.75447958228 |
 
 ## Delta Duration per test method
 

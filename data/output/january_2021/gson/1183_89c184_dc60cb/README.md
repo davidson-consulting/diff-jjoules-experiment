@@ -7,10 +7,12 @@ https://github.com/google/gson/commit/dc60cb
 
 ## Delta Energy per test method
 
+![](./gson_delta_energy_0_v.png)
+
 
 | ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
 | --- | --- | --- | --- | --- | --- |
-| 0 | 55654.88421052632 | 40156.642857142855 | -15498.241353383462 | 145299.10151074128 | 25197.344947697675 |
+| 0 | 30762 | 30457 | -305 | 145299.10151074128 | 25197.344947697675 |
 
 ## Delta Duration per test method
 
