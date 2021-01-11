@@ -127,7 +127,7 @@ def result_dir_exists_or_error_dir_exists(commit_sha_v1, commit_sha_v2, cursor_c
             os.path.isdir(error_output_path + '/' + '_'.join([str(cursor_commits), commit_sha_v1[:6], commit_sha_v2[:6]]))
 
 def list_and_get_max(folder):
-    commits_folders = sorted([subfolder for subfolder in os.listdir(folder) if not subfolder.endswith('.png')], key=lambda folder_name: int(folder_name.split('_')[0]))
+    commits_folders = sorted([subfolder for subfolder in os.listdir(folder) if not subfolder.endswith('.png')  and not subfolder == 'README.md'], key=lambda folder_name: int(folder_name.split('_')[0]))
     return int(commits_folders[-1].split('_')[0]) + 1
 
 def get_cursor_to_continue(folder_success, folder_error):
