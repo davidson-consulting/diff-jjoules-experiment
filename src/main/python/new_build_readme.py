@@ -53,6 +53,18 @@ def run_for_per_class(data_v1, data_v2, path_to_readme):
         row = construct_row_markdown([labels[i], done_test_class_names[i], str(counter[i])])
         print_to_file(row, path_to_readme)
 
+def print_array_long(array_v1, array_v2, stdev_v1, stdev_v2, path_to_readme):
+    for index in range(0, len(array_v1)):
+        row = construct_row_markdown([
+                str(index),
+                str(array_v1[index]),
+                str(array_v2[index]),
+                str(array_v2[index] - array_v1[index]),
+                str(stdev_v1[index]),
+                str(stdev_v2[index]),
+        ])
+        print_to_file(row, path_to_readme)
+
 def print_array(array_v1, array_v2, path_to_readme):
     for index in range(0, len(array_v1)):
         row = construct_row_markdown([
@@ -63,14 +75,19 @@ def print_array(array_v1, array_v2, path_to_readme):
         ])
         print_to_file(row, path_to_readme)
 
+def check_is_delta_graph(file):
+    return file.startswith(project_name + '_delta_energy_') and file.endswith('_v.png')
+
 def run_per_test(data_v1, data_v2, path_to_readme, path_to_commit_folder):
-    test_per_test_classes, energies_v1, durations_v1, energies_v2, durations_v2, valid_iteration_v1, valid_iteration_v2 = build_data_per_test(data_v1, data_v2)
+    test_per_test_classes, energies_v1, durations_v1, energies_v2, durations_v2, valid_iteration_v1, valid_iteration_v2, stdev_v1, stdev_v2 = build_data_per_test(data_v1, data_v2)
     current_energies_v1 = []
     current_durations_v1 = []
     current_energies_v2 = []
     current_durations_v2 = []
     current_iteration_v1 = []
     current_iteration_v2 = []
+    current_stdev_v1 = []
+    current_stdev_v2 = []
     labels = []
     for test_class_name in test_per_test_classes:
         for test in test_per_test_classes[test_class_name]:
@@ -81,15 +98,17 @@ def run_per_test(data_v1, data_v2, path_to_readme, path_to_commit_folder):
             current_durations_v2.append(durations_v2[test_class_name + '-' + test])
             current_iteration_v1.append(valid_iteration_v1[test_class_name + '-' + test])
             current_iteration_v2.append(valid_iteration_v2[test_class_name + '-' + test])
+            current_stdev_v1.append(stdev_v1[test_class_name + '-' + test])
+            current_stdev_v2.append(stdev_v2[test_class_name + '-' + test])
         
     print_to_file('\n## Delta Energy per test method\n', path_to_readme)
-    files = sorted(os.listdir(path_to_commit_folder))
+    files = sorted([file for file in os.listdir(path_to_commit_folder) if check_is_delta_graph(file)], key=lambda folder_name: int(folder_name.split('_')[-2]))
     for file in files:
-        if file.startswith(project_name + '_delta_energy_') and file.endswith('_v.png'):
+        if check_is_delta_graph(file):
             print_to_file('![](./' + file + ')\n', path_to_readme)
-    print_to_file('\n' + construct_row_markdown(['ID', 'EnergyV1', 'EnergyV2', 'DeltaEnergy']), path_to_readme)
-    print_to_file(construct_row_markdown(['---', '---', '---', '---']), path_to_readme)
-    print_array(current_energies_v1, current_energies_v2, path_to_readme)
+    print_to_file('\n' + construct_row_markdown(['ID', 'EnergyV1', 'EnergyV2', 'DeltaEnergy', 'σV1', 'σV2']), path_to_readme)
+    print_to_file(construct_row_markdown(['---', '---', '---', '---', '---', '---']), path_to_readme)
+    print_array_long(current_energies_v1, current_energies_v2, current_stdev_v1, current_stdev_v2, path_to_readme)
     
     print_to_file('\n## Delta Duration per test method\n', path_to_readme)
     for file in files:
@@ -145,8 +164,8 @@ def run_commit(input_file_path, commit_folder):
     print_to_file('# ' + project_name + ' ' + commit_sha_v2 + '\n\n', path_to_readme)
     print_to_file(construct_url(input_file_path, commit_sha_v2) + '\n\n', path_to_readme)
 
-    data_v1 = read_json(path_to_commit_folder  + '/avg_v1.json')
-    data_v2 = read_json(path_to_commit_folder  + '/avg_v2.json')
+    data_v1 = read_json(path_to_commit_folder  + '/data_v1.json')
+    data_v2 = read_json(path_to_commit_folder  + '/data_v2.json')
     
     run_per_test(data_v1, data_v2, path_to_readme, path_to_commit_folder)
     run_for_time(path_to_commit_folder, path_to_readme)
@@ -163,7 +182,6 @@ if __name__ == '__main__':
     path_to_data_project = data_path + '/' + project_name + '/'
 
     nb_commit_measured = 0
-    nb_commit_error = len(os.listdir(data_path + '/' + project_name + '_error/'))
 
     for commit_folder in os.listdir(path_to_data_project):
         if not commit_folder.endswith('.png') and not commit_folder == 'README.md':
@@ -176,6 +194,7 @@ if __name__ == '__main__':
     print_to_file('# ' + project_name, path_to_readme)
     with open(commits_file_path, 'r') as commits_file:
         lines = commits_file.readlines()
+        nb_commit_total = len(lines) - 1
         repo_url = lines[0]
         print_to_file('\n' + repo_url, path_to_readme)
     
@@ -185,8 +204,8 @@ if __name__ == '__main__':
     print_to_file(construct_row_markdown(['Nb total commit', 'Nb commit measured', 'Nb commit errord', 'perc']), path_to_readme)
     print_to_file(construct_row_markdown(['---','---', '---', '---']), path_to_readme)
     print_to_file(construct_row_markdown([
-        str(int(nb_commit_measured + nb_commit_error)),
+        str(int(nb_commit_total)),
         str(nb_commit_measured),
-        str(nb_commit_error),
-        '{:.2f}'.format(float(float(nb_commit_measured) / float((nb_commit_measured + nb_commit_error))) * 100
+        str(nb_commit_total - nb_commit_measured),
+        '{:.2f}'.format(float(float(nb_commit_measured) / float((nb_commit_total))) * 100
     )]), path_to_readme)

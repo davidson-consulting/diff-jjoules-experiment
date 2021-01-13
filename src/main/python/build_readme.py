@@ -141,8 +141,8 @@ def run_commit(input_file_path, commit_folder):
     print_to_file('# ' + project_name + ' ' + commit_sha_v2 + '\n\n', path_to_readme)
     print_to_file(construct_url(input_file_path, commit_sha_v2) + '\n\n', path_to_readme)
 
-    data_v1 = read_json(path_to_commit_folder  + '/avg_v1.json')
-    data_v2 = read_json(path_to_commit_folder  + '/avg_v2.json')
+    data_v1 = read_json(path_to_commit_folder  + '/data_v1.json')
+    data_v2 = read_json(path_to_commit_folder  + '/data_v2.json')
     
     run_for_per_class(data_v1, data_v2, path_to_readme)
     run_for_time(path_to_commit_folder, path_to_readme)

@@ -122,6 +122,24 @@ def run_mvn_build_classpath_and_instrument(path_first_version, path_second_versi
         ])
     )
 
+CMD_JJOULES_LOCATE = 'fr.davidson:diff-jjoules:locate'
+DIFF_JJOULES_OUTPUT_PATH_OPT = '-Doutput-path='
+DIFF_JJOULES_PATH_TO_JSON_DATA_V1_OPT = '-Dpath-data-json-first-version='
+DIFF_JJOULES_PATH_TO_JSON_DATA_V2_OPT = '-Dpath-data-json-second-version='
+
+def run_mvn_locate_jjoules(path_first_version, path_second_version, output_path, path_data_json_v1, path_data_json_v2):
+    run_command(
+        ' '.join([
+            MVN_CMD,
+            path_first_version + '/' + POM_FILE,
+            OPT_PATH_DIR_SECOND_VERSION  + path_second_version,
+            CMD_JJOULES_LOCATE,
+            DIFF_JJOULES_OUTPUT_PATH_OPT +  output_path,
+            DIFF_JJOULES_PATH_TO_JSON_DATA_V1_OPT + path_data_json_v1,
+            DIFF_JJOULES_PATH_TO_JSON_DATA_V2_OPT + path_data_json_v2,
+        ])
+    )
+
 JJOULES_REPORT_FOLDER = 'jjoules-reports'
 
 def move_directory(src_dir, dst):

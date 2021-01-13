@@ -150,19 +150,19 @@ def build_data_per_test(data_v1, data_v2):
             
             delta_energy = energy_v2 - energy_v1
             if delta_energy < 0:
-                delta_energies_v1.append(0)
-                delta_energies_v2.append(delta_energy)
-            else:
                 delta_energies_v1.append(delta_energy)
                 delta_energies_v2.append(0)
+            else:
+                delta_energies_v1.append(0)
+                delta_energies_v2.append(delta_energy)
                 
             delta_duration = duration_v2 - duration_v1
             if delta_duration < 0:
-                delta_durations_v1.append(0)
-                delta_durations_v2.append(delta_duration)
-            else:
-                delta_durations_v1.append(delta_duration)
                 delta_durations_v2.append(0)
+                delta_durations_v1.append(delta_duration)
+            else:
+                delta_durations_v2.append(delta_duration)
+                delta_durations_v1.append(0)
 
             fullqualified_name_test.append(test_class_name + '-' + test)
     return fullqualified_name_test, delta_energies_v1, delta_energies_v2, delta_durations_v1, delta_durations_v2
@@ -217,12 +217,14 @@ if __name__ == '__main__':
     path_to_commit_folders = path_to_data + '/' + project_name + '/'
 
     for file in os.listdir(path_to_commit_folders):
+        #if not file.startswith('118_'):
+        #    continue
         path_to_file = path_to_commit_folders + file
         if file == 'input' or file.endswith('.png') or file == 'README.md':
             continue
         print('generate', mode, 'for', file)
-        data_v1 = read_json(path_to_file  + '/avg_v1.json')
-        data_v2 = read_json(path_to_file  + '/avg_v2.json')
+        data_v1 = read_json(path_to_file  + '/data_v1.json')
+        data_v2 = read_json(path_to_file  + '/data_v2.json')
 
         if mode == mode.per_class:
             energies_v1, durations_v1, energies_v2, durations_v2, labels, delta_energies_v1_1, delta_energies_v2_1 = build_data_per_class(data_v1, data_v2)
