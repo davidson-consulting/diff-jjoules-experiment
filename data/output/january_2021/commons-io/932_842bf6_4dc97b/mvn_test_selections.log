@@ -1,0 +1,794 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< commons-io:commons-io >------------------------
+[INFO] Building Apache Commons IO 2.6-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ commons-io ---
+[INFO] Deleting /tmp/v1/target
+[INFO] 
+[INFO] --- dspot-diff-test-selection:3.1.1-SNAPSHOT:list (default-cli) @ commons-io ---
+[INFO] Running on:
+[INFO] /tmp/v1
+[INFO] /tmp/v2/
+[WARNING] No path to diff file has been specified.
+[WARNING] I'll compute a diff file using the UNIX diff command
+[WARNING] You may encounter troubles.
+[WARNING] If so, please specify a path to a correct diff file
+[WARNING] or implement a new way to compute a diff file.
+[INFO] Computing the diff with diff commnd line
+[INFO] The diff will be computed between:
+[INFO] /tmp/v1/src and 
+[INFO] /tmp/v2/src
+[INFO] Executing: diff -ru /tmp/v1/src /tmp/v2/src from /tmp/v1/src
+[INFO] Running in enhanced mode...
+[INFO] Computing coverage for /tmp/v1
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------------< [0;36mcommons-io:commons-io[0;1m >------------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Commons IO 2.6-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.0.0:clean[m [1m(default-clean)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mclover-maven-plugin:4.4.1:setup[m [1m(default-cli)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Creating new database at '/tmp/v1/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.9 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 116 files (7 packages).
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Updating existing database at '/tmp/v1/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.9 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 112 files (9 packages).
+[[1;34mINFO[m] 1001 test methods detected.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-3)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Skipping Rule Enforcement.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuild-helper-maven-plugin:1.10:parse-version[m [1m(parse-version)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-antrun-plugin:1.8:run[m [1m(javadoc.resources)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Executing tasks
+
+main:
+     [copy] Copying 2 files to /tmp/v1/target/apidocs/META-INF
+[[1;34mINFO[m] Executed tasks
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.5:process[m [1m(default)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuildnumber-maven-plugin:1.4:create[m [1m(default)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Executing: /bin/sh -c cd '/tmp/v1' && 'svn' '--non-interactive' 'info'
+[[1;34mINFO[m] Working directory: /tmp/v1
+[[1;33mWARNING[m] Cannot get the revision information from the scm repository, proceeding with revision of ?????? : 
+Exception while executing SCM command.
+[[1;34mINFO[m] Storing buildNumber: ?????? at timestamp: 1610514924944
+[[1;34mINFO[m] Executing: /bin/sh -c cd '/tmp/v1' && 'svn' '--non-interactive' 'info'
+[[1;34mINFO[m] Working directory: /tmp/v1
+[[1;33mWARNING[m] Cannot get the branch information from the scm repository, proceeding with UNKNOWN_BRANCH : 
+Exception while executing SCM command.
+[[1;34mINFO[m] Storing buildScmBranch: UNKNOWN_BRANCH
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.7:resources[m [1m(default-resources)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Using 'iso-8859-1' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /tmp/v1/src/main/resources
+[[1;34mINFO[m] Copying 2 resources to META-INF
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.5.1:compile[m [1m(default-compile)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 116 source files to /tmp/v1/target/classes
+[[1;34mINFO[m] /tmp/v1/target/clover/src-instrumented/org/apache/commons/io/input/ClassLoaderObjectInputStream.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /tmp/v1/target/clover/src-instrumented/org/apache/commons/io/input/ClassLoaderObjectInputStream.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:3.0.1:manifest[m [1m(bundle-manifest)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32manimal-sniffer-maven-plugin:1.15:check[m [1m(checkAPIcompatibility)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Signature checking is skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.7:testResources[m [1m(default-testResources)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Using 'iso-8859-1' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 19 resources
+[[1;34mINFO[m] Copying 2 resources to META-INF
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.5.1:testCompile[m [1m(default-testCompile)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 112 source files to /tmp/v1/target/test-classes
+[[1;34mINFO[m] /tmp/v1/target/clover/src-test-instrumented/org/apache/commons/io/input/BOMInputStreamTest.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /tmp/v1/target/clover/src-test-instrumented/org/apache/commons/io/input/BOMInputStreamTest.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.19.1:test[m [1m(default-test)[m @ [36mcommons-io[0;1m ---[m
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.apache.commons.io.FileUtilsFileNewerTestCase
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.096 sec - in org.apache.commons.io.FileUtilsFileNewerTestCase
+Running org.apache.commons.io.serialization.ValidatingObjectInputStreamTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.132 sec - in org.apache.commons.io.serialization.ValidatingObjectInputStreamTest
+Running org.apache.commons.io.serialization.MoreComplexObjectTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.143 sec - in org.apache.commons.io.serialization.MoreComplexObjectTest
+Running org.apache.commons.io.serialization.WildcardClassNameMatcherTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.079 sec - in org.apache.commons.io.serialization.WildcardClassNameMatcherTest
+Running org.apache.commons.io.serialization.RegexpClassNameMatcherTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.085 sec - in org.apache.commons.io.serialization.RegexpClassNameMatcherTest
+Running org.apache.commons.io.serialization.FullClassNameMatcherTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.081 sec - in org.apache.commons.io.serialization.FullClassNameMatcherTest
+Running org.apache.commons.io.CopyUtilsTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 sec - in org.apache.commons.io.CopyUtilsTest
+Running org.apache.commons.io.LineIteratorTestCase
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.138 sec - in org.apache.commons.io.LineIteratorTestCase
+Running org.apache.commons.io.ThreadMonitorTestCase
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.479 sec - in org.apache.commons.io.ThreadMonitorTestCase
+Running org.apache.commons.io.FileUtilsCleanSymlinksTestCase
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.128 sec - in org.apache.commons.io.FileUtilsCleanSymlinksTestCase
+Running org.apache.commons.io.EndianUtilsTest
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.101 sec - in org.apache.commons.io.EndianUtilsTest
+Running org.apache.commons.io.HexDumpTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.095 sec - in org.apache.commons.io.HexDumpTest
+Running org.apache.commons.io.DirectoryWalkerTestCase
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.11 sec - in org.apache.commons.io.DirectoryWalkerTestCase
+Running org.apache.commons.io.IOUtilsCopyTestCase
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.459 sec - in org.apache.commons.io.IOUtilsCopyTestCase
+Running org.apache.commons.io.FilenameUtilsWildcardTestCase
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.185 sec - in org.apache.commons.io.FilenameUtilsWildcardTestCase
+Running org.apache.commons.io.FileUtilsCleanDirectoryTestCase
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.111 sec - in org.apache.commons.io.FileUtilsCleanDirectoryTestCase
+Running org.apache.commons.io.FilenameUtilsTestCase
+Tests run: 37, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.176 sec - in org.apache.commons.io.FilenameUtilsTestCase
+Running org.apache.commons.io.CharsetsTestCase
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.09 sec - in org.apache.commons.io.CharsetsTestCase
+Running org.apache.commons.io.FileUtilsWaitForTestCase
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.093 sec - in org.apache.commons.io.FileUtilsWaitForTestCase
+Running org.apache.commons.io.DirectoryWalkerTestCaseJava4
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.109 sec - in org.apache.commons.io.DirectoryWalkerTestCaseJava4
+Running org.apache.commons.io.IOUtilsWriteTestCase
+Tests run: 53, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.184 sec - in org.apache.commons.io.IOUtilsWriteTestCase
+Running org.apache.commons.io.FileUtilsTestCase
+Tests run: 135, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 2.406 sec - in org.apache.commons.io.FileUtilsTestCase
+Running org.apache.commons.io.DemuxTestCase
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.292 sec - in org.apache.commons.io.DemuxTestCase
+Running org.apache.commons.io.IOCaseTestCase
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 sec - in org.apache.commons.io.IOCaseTestCase
+Running org.apache.commons.io.filefilter.OrFileFilterTestCase
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 sec - in org.apache.commons.io.filefilter.OrFileFilterTestCase
+Running org.apache.commons.io.filefilter.RegexFileFilterTestCase
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.089 sec - in org.apache.commons.io.filefilter.RegexFileFilterTestCase
+Running org.apache.commons.io.filefilter.AndFileFilterTestCase
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 sec - in org.apache.commons.io.filefilter.AndFileFilterTestCase
+Running org.apache.commons.io.filefilter.FileFilterTestCase
+Tests run: 47, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.221 sec - in org.apache.commons.io.filefilter.FileFilterTestCase
+Running org.apache.commons.io.ByteOrderMarkTestCase
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 sec - in org.apache.commons.io.ByteOrderMarkTestCase
+Running org.apache.commons.io.monitor.FileAlterationObserverTestCase
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.668 sec - in org.apache.commons.io.monitor.FileAlterationObserverTestCase
+Running org.apache.commons.io.monitor.FileAlterationMonitorTestCase
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.715 sec - in org.apache.commons.io.monitor.FileAlterationMonitorTestCase
+Running org.apache.commons.io.IOUtilsTestCase
+Tests run: 80, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.255 sec - in org.apache.commons.io.IOUtilsTestCase
+Running org.apache.commons.io.FileCleaningTrackerTestCase
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.205 sec - in org.apache.commons.io.FileCleaningTrackerTestCase
+Running org.apache.commons.io.FileDeleteStrategyTestCase
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.092 sec - in org.apache.commons.io.FileDeleteStrategyTestCase
+Running org.apache.commons.io.Java7SupportTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.09 sec - in org.apache.commons.io.Java7SupportTest
+Running org.apache.commons.io.FileSystemUtilsTestCase
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.146 sec - in org.apache.commons.io.FileSystemUtilsTestCase
+Running org.apache.commons.io.IOExceptionWithCauseTestCase
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.101 sec - in org.apache.commons.io.IOExceptionWithCauseTestCase
+Running org.apache.commons.io.FileCleanerTestCase
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.214 sec - in org.apache.commons.io.FileCleanerTestCase
+Running org.apache.commons.io.comparator.LastModifiedFileComparatorTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.321 sec - in org.apache.commons.io.comparator.LastModifiedFileComparatorTest
+Running org.apache.commons.io.comparator.CompositeFileComparatorTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.12 sec - in org.apache.commons.io.comparator.CompositeFileComparatorTest
+Running org.apache.commons.io.comparator.SizeFileComparatorTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.107 sec - in org.apache.commons.io.comparator.SizeFileComparatorTest
+Running org.apache.commons.io.comparator.PathFileComparatorTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.11 sec - in org.apache.commons.io.comparator.PathFileComparatorTest
+Running org.apache.commons.io.comparator.DefaultFileComparatorTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 sec - in org.apache.commons.io.comparator.DefaultFileComparatorTest
+Running org.apache.commons.io.comparator.DirectoryFileComparatorTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 sec - in org.apache.commons.io.comparator.DirectoryFileComparatorTest
+Running org.apache.commons.io.comparator.NameFileComparatorTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.108 sec - in org.apache.commons.io.comparator.NameFileComparatorTest
+Running org.apache.commons.io.comparator.ExtensionFileComparatorTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.107 sec - in org.apache.commons.io.comparator.ExtensionFileComparatorTest
+Running org.apache.commons.io.FileUtilsListFilesTestCase
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.126 sec - in org.apache.commons.io.FileUtilsListFilesTestCase
+Running org.apache.commons.io.TaggedIOExceptionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.11 sec - in org.apache.commons.io.TaggedIOExceptionTest
+Running org.apache.commons.io.input.CharSequenceInputStreamTest
+Tests run: 30, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.452 sec - in org.apache.commons.io.input.CharSequenceInputStreamTest
+Running org.apache.commons.io.input.XmlStreamReaderTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.477 sec - in org.apache.commons.io.input.XmlStreamReaderTest
+Running org.apache.commons.io.input.WindowsLineEndingInputStreamTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 sec - in org.apache.commons.io.input.WindowsLineEndingInputStreamTest
+Running org.apache.commons.io.input.BoundedInputStreamTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.089 sec - in org.apache.commons.io.input.BoundedInputStreamTest
+Running org.apache.commons.io.input.TeeInputStreamTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.081 sec - in org.apache.commons.io.input.TeeInputStreamTest
+Running org.apache.commons.io.input.BoundedReaderTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 sec - in org.apache.commons.io.input.BoundedReaderTest
+Running org.apache.commons.io.input.AutoCloseInputStreamTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.085 sec - in org.apache.commons.io.input.AutoCloseInputStreamTest
+Running org.apache.commons.io.input.SwappedDataInputStreamTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.116 sec - in org.apache.commons.io.input.SwappedDataInputStreamTest
+Running org.apache.commons.io.input.BOMInputStreamTest
+Tests run: 44, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.239 sec - in org.apache.commons.io.input.BOMInputStreamTest
+Running org.apache.commons.io.input.TailerTest
+Elapsed: 317
+testMultiByteBreak() Default charset: UTF-8
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.959 sec - in org.apache.commons.io.input.TailerTest
+Running org.apache.commons.io.input.CharSequenceReaderTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 sec - in org.apache.commons.io.input.CharSequenceReaderTest
+Running org.apache.commons.io.input.NullReaderTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 sec - in org.apache.commons.io.input.NullReaderTest
+Running org.apache.commons.io.input.CountingInputStreamTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.297 sec - in org.apache.commons.io.input.CountingInputStreamTest
+Running org.apache.commons.io.input.NullInputStreamTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.079 sec - in org.apache.commons.io.input.NullInputStreamTest
+Running org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.116 sec - in org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest
+Running org.apache.commons.io.input.ReaderInputStreamTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.103 sec - in org.apache.commons.io.input.ReaderInputStreamTest
+Running org.apache.commons.io.input.ReversedLinesFileReaderTestParamBlockSize
+Tests run: 85, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.498 sec - in org.apache.commons.io.input.ReversedLinesFileReaderTestParamBlockSize
+Running org.apache.commons.io.input.CloseShieldInputStreamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.085 sec - in org.apache.commons.io.input.CloseShieldInputStreamTest
+Running org.apache.commons.io.input.ReversedLinesFileReaderTestSimple
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.14 sec - in org.apache.commons.io.input.ReversedLinesFileReaderTestSimple
+Running org.apache.commons.io.input.ClassLoaderObjectInputStreamTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 sec - in org.apache.commons.io.input.ClassLoaderObjectInputStreamTest
+Running org.apache.commons.io.input.TaggedInputStreamTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.101 sec - in org.apache.commons.io.input.TaggedInputStreamTest
+Running org.apache.commons.io.input.ProxyReaderTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 sec - in org.apache.commons.io.input.ProxyReaderTest
+Running org.apache.commons.io.input.BrokenInputStreamTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.09 sec - in org.apache.commons.io.input.BrokenInputStreamTest
+Running org.apache.commons.io.input.ClosedInputStreamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.075 sec - in org.apache.commons.io.input.ClosedInputStreamTest
+Running org.apache.commons.io.input.UnixLineEndingInputStreamTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 sec - in org.apache.commons.io.input.UnixLineEndingInputStreamTest
+Running org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.119 sec - in org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Running org.apache.commons.io.input.ReversedLinesFileReaderTestParamFile
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.248 sec - in org.apache.commons.io.input.ReversedLinesFileReaderTestParamFile
+Running org.apache.commons.io.FileUtilsDirectoryContainsTestCase
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.116 sec - in org.apache.commons.io.FileUtilsDirectoryContainsTestCase
+Running org.apache.commons.io.output.ThresholdingOutputStreamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 sec - in org.apache.commons.io.output.ThresholdingOutputStreamTest
+Running org.apache.commons.io.output.WriterOutputStreamTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.113 sec - in org.apache.commons.io.output.WriterOutputStreamTest
+Running org.apache.commons.io.output.ClosedOutputStreamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.083 sec - in org.apache.commons.io.output.ClosedOutputStreamTest
+Running org.apache.commons.io.output.ByteArrayOutputStreamTestCase
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.096 sec - in org.apache.commons.io.output.ByteArrayOutputStreamTestCase
+Running org.apache.commons.io.output.ChunkedOutputStreamTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.078 sec - in org.apache.commons.io.output.ChunkedOutputStreamTest
+Running org.apache.commons.io.output.AppendableOutputStreamTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.097 sec - in org.apache.commons.io.output.AppendableOutputStreamTest
+Running org.apache.commons.io.output.CountingOutputStreamTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.304 sec - in org.apache.commons.io.output.CountingOutputStreamTest
+Running org.apache.commons.io.output.CloseShieldOutputStreamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.083 sec - in org.apache.commons.io.output.CloseShieldOutputStreamTest
+Running org.apache.commons.io.output.FileWriterWithEncodingTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.143 sec - in org.apache.commons.io.output.FileWriterWithEncodingTest
+Running org.apache.commons.io.output.LockableFileWriterTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.125 sec - in org.apache.commons.io.output.LockableFileWriterTest
+Running org.apache.commons.io.output.TaggedOutputStreamTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.106 sec - in org.apache.commons.io.output.TaggedOutputStreamTest
+Running org.apache.commons.io.output.ChunkedWriterTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 sec - in org.apache.commons.io.output.ChunkedWriterTest
+Running org.apache.commons.io.output.DeferredFileOutputStreamTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.132 sec - in org.apache.commons.io.output.DeferredFileOutputStreamTest
+Running org.apache.commons.io.output.NullOutputStreamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.077 sec - in org.apache.commons.io.output.NullOutputStreamTest
+Running org.apache.commons.io.output.XmlStreamWriterTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.141 sec - in org.apache.commons.io.output.XmlStreamWriterTest
+Running org.apache.commons.io.output.StringBuilderWriterTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.098 sec - in org.apache.commons.io.output.StringBuilderWriterTest
+Running org.apache.commons.io.output.NullWriterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.079 sec - in org.apache.commons.io.output.NullWriterTest
+Running org.apache.commons.io.output.BrokenOutputStreamTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.079 sec - in org.apache.commons.io.output.BrokenOutputStreamTest
+Running org.apache.commons.io.output.ProxyWriterTest
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.133 sec - in org.apache.commons.io.output.ProxyWriterTest
+Running org.apache.commons.io.output.ProxyOutputStreamTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.089 sec - in org.apache.commons.io.output.ProxyOutputStreamTest
+Running org.apache.commons.io.output.TeeOutputStreamTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 sec - in org.apache.commons.io.output.TeeOutputStreamTest
+
+Results :
+
+Tests run: 1157, Failures: 0, Errors: 0, Skipped: 4
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  02:08 min
+[[1;34mINFO[m] Finished at: 2021-01-13T06:17:29+01:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+Writing HTML report to '/tmp/v1/target/clover/report'
+Done. Processed 9 packages in 3611ms (401ms per package).
+[INFO] Computing coverage for /tmp/v2/
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------------< [0;36mcommons-io:commons-io[0;1m >------------------------[m
+[[1;34mINFO[m] [1mBuilding Apache Commons IO 2.6-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.0.0:clean[m [1m(default-clean)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Deleting /tmp/v2/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mclover-maven-plugin:4.4.1:setup[m [1m(default-cli)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Creating new database at '/tmp/v2/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.9 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 116 files (7 packages).
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Updating existing database at '/tmp/v2/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.9 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 112 files (9 packages).
+[[1;34mINFO[m] 1001 test methods detected.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.4.1:enforce[m [1m(enforce-maven-3)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Skipping Rule Enforcement.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuild-helper-maven-plugin:1.10:parse-version[m [1m(parse-version)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-antrun-plugin:1.8:run[m [1m(javadoc.resources)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Executing tasks
+
+main:
+     [copy] Copying 2 files to /tmp/v2/target/apidocs/META-INF
+[[1;34mINFO[m] Executed tasks
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-remote-resources-plugin:1.5:process[m [1m(default)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbuildnumber-maven-plugin:1.4:create[m [1m(default)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Executing: /bin/sh -c cd '/tmp/v2' && 'svn' '--non-interactive' 'info'
+[[1;34mINFO[m] Working directory: /tmp/v2
+[[1;33mWARNING[m] Cannot get the revision information from the scm repository, proceeding with revision of ?????? : 
+Exception while executing SCM command.
+[[1;34mINFO[m] Storing buildNumber: ?????? at timestamp: 1610515060571
+[[1;34mINFO[m] Executing: /bin/sh -c cd '/tmp/v2' && 'svn' '--non-interactive' 'info'
+[[1;34mINFO[m] Working directory: /tmp/v2
+[[1;33mWARNING[m] Cannot get the branch information from the scm repository, proceeding with UNKNOWN_BRANCH : 
+Exception while executing SCM command.
+[[1;34mINFO[m] Storing buildScmBranch: UNKNOWN_BRANCH
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.7:resources[m [1m(default-resources)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Using 'iso-8859-1' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /tmp/v2/src/main/resources
+[[1;34mINFO[m] Copying 2 resources to META-INF
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.5.1:compile[m [1m(default-compile)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 116 source files to /tmp/v2/target/classes
+[[1;34mINFO[m] /tmp/v2/target/clover/src-instrumented/org/apache/commons/io/input/AutoCloseInputStream.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /tmp/v2/target/clover/src-instrumented/org/apache/commons/io/input/AutoCloseInputStream.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-bundle-plugin:3.0.1:manifest[m [1m(bundle-manifest)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32manimal-sniffer-maven-plugin:1.15:check[m [1m(checkAPIcompatibility)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Signature checking is skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.7:testResources[m [1m(default-testResources)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Using 'iso-8859-1' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 19 resources
+[[1;34mINFO[m] Copying 2 resources to META-INF
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.5.1:testCompile[m [1m(default-testCompile)[m @ [36mcommons-io[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 112 source files to /tmp/v2/target/test-classes
+[[1;34mINFO[m] /tmp/v2/target/clover/src-test-instrumented/org/apache/commons/io/input/BOMInputStreamTest.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /tmp/v2/target/clover/src-test-instrumented/org/apache/commons/io/input/BOMInputStreamTest.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.19.1:test[m [1m(default-test)[m @ [36mcommons-io[0;1m ---[m
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.apache.commons.io.FileUtilsFileNewerTestCase
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.103 sec - in org.apache.commons.io.FileUtilsFileNewerTestCase
+Running org.apache.commons.io.serialization.ValidatingObjectInputStreamTest
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.121 sec - in org.apache.commons.io.serialization.ValidatingObjectInputStreamTest
+Running org.apache.commons.io.serialization.MoreComplexObjectTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.114 sec - in org.apache.commons.io.serialization.MoreComplexObjectTest
+Running org.apache.commons.io.serialization.WildcardClassNameMatcherTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.089 sec - in org.apache.commons.io.serialization.WildcardClassNameMatcherTest
+Running org.apache.commons.io.serialization.RegexpClassNameMatcherTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 sec - in org.apache.commons.io.serialization.RegexpClassNameMatcherTest
+Running org.apache.commons.io.serialization.FullClassNameMatcherTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.089 sec - in org.apache.commons.io.serialization.FullClassNameMatcherTest
+Running org.apache.commons.io.CopyUtilsTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.117 sec - in org.apache.commons.io.CopyUtilsTest
+Running org.apache.commons.io.LineIteratorTestCase
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.152 sec - in org.apache.commons.io.LineIteratorTestCase
+Running org.apache.commons.io.ThreadMonitorTestCase
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.492 sec - in org.apache.commons.io.ThreadMonitorTestCase
+Running org.apache.commons.io.FileUtilsCleanSymlinksTestCase
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.147 sec - in org.apache.commons.io.FileUtilsCleanSymlinksTestCase
+Running org.apache.commons.io.EndianUtilsTest
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.095 sec - in org.apache.commons.io.EndianUtilsTest
+Running org.apache.commons.io.HexDumpTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 sec - in org.apache.commons.io.HexDumpTest
+Running org.apache.commons.io.DirectoryWalkerTestCase
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 sec - in org.apache.commons.io.DirectoryWalkerTestCase
+Running org.apache.commons.io.IOUtilsCopyTestCase
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.485 sec - in org.apache.commons.io.IOUtilsCopyTestCase
+Running org.apache.commons.io.FilenameUtilsWildcardTestCase
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.185 sec - in org.apache.commons.io.FilenameUtilsWildcardTestCase
+Running org.apache.commons.io.FileUtilsCleanDirectoryTestCase
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.126 sec - in org.apache.commons.io.FileUtilsCleanDirectoryTestCase
+Running org.apache.commons.io.FilenameUtilsTestCase
+Tests run: 37, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.166 sec - in org.apache.commons.io.FilenameUtilsTestCase
+Running org.apache.commons.io.CharsetsTestCase
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.089 sec - in org.apache.commons.io.CharsetsTestCase
+Running org.apache.commons.io.FileUtilsWaitForTestCase
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.097 sec - in org.apache.commons.io.FileUtilsWaitForTestCase
+Running org.apache.commons.io.DirectoryWalkerTestCaseJava4
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.131 sec - in org.apache.commons.io.DirectoryWalkerTestCaseJava4
+Running org.apache.commons.io.IOUtilsWriteTestCase
+Tests run: 53, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.203 sec - in org.apache.commons.io.IOUtilsWriteTestCase
+Running org.apache.commons.io.FileUtilsTestCase
+Tests run: 135, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 2.489 sec - in org.apache.commons.io.FileUtilsTestCase
+Running org.apache.commons.io.DemuxTestCase
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.278 sec - in org.apache.commons.io.DemuxTestCase
+Running org.apache.commons.io.IOCaseTestCase
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.141 sec - in org.apache.commons.io.IOCaseTestCase
+Running org.apache.commons.io.filefilter.OrFileFilterTestCase
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.099 sec - in org.apache.commons.io.filefilter.OrFileFilterTestCase
+Running org.apache.commons.io.filefilter.RegexFileFilterTestCase
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.109 sec - in org.apache.commons.io.filefilter.RegexFileFilterTestCase
+Running org.apache.commons.io.filefilter.AndFileFilterTestCase
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 sec - in org.apache.commons.io.filefilter.AndFileFilterTestCase
+Running org.apache.commons.io.filefilter.FileFilterTestCase
+Tests run: 47, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.227 sec - in org.apache.commons.io.filefilter.FileFilterTestCase
+Running org.apache.commons.io.ByteOrderMarkTestCase
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.095 sec - in org.apache.commons.io.ByteOrderMarkTestCase
+Running org.apache.commons.io.monitor.FileAlterationObserverTestCase
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.71 sec - in org.apache.commons.io.monitor.FileAlterationObserverTestCase
+Running org.apache.commons.io.monitor.FileAlterationMonitorTestCase
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.723 sec - in org.apache.commons.io.monitor.FileAlterationMonitorTestCase
+Running org.apache.commons.io.IOUtilsTestCase
+Tests run: 80, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.304 sec - in org.apache.commons.io.IOUtilsTestCase
+Running org.apache.commons.io.FileCleaningTrackerTestCase
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.239 sec - in org.apache.commons.io.FileCleaningTrackerTestCase
+Running org.apache.commons.io.FileDeleteStrategyTestCase
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 sec - in org.apache.commons.io.FileDeleteStrategyTestCase
+Running org.apache.commons.io.Java7SupportTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.092 sec - in org.apache.commons.io.Java7SupportTest
+Running org.apache.commons.io.FileSystemUtilsTestCase
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.157 sec - in org.apache.commons.io.FileSystemUtilsTestCase
+Running org.apache.commons.io.IOExceptionWithCauseTestCase
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 sec - in org.apache.commons.io.IOExceptionWithCauseTestCase
+Running org.apache.commons.io.FileCleanerTestCase
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.213 sec - in org.apache.commons.io.FileCleanerTestCase
+Running org.apache.commons.io.comparator.LastModifiedFileComparatorTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.323 sec - in org.apache.commons.io.comparator.LastModifiedFileComparatorTest
+Running org.apache.commons.io.comparator.CompositeFileComparatorTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.131 sec - in org.apache.commons.io.comparator.CompositeFileComparatorTest
+Running org.apache.commons.io.comparator.SizeFileComparatorTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.111 sec - in org.apache.commons.io.comparator.SizeFileComparatorTest
+Running org.apache.commons.io.comparator.PathFileComparatorTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.114 sec - in org.apache.commons.io.comparator.PathFileComparatorTest
+Running org.apache.commons.io.comparator.DefaultFileComparatorTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 sec - in org.apache.commons.io.comparator.DefaultFileComparatorTest
+Running org.apache.commons.io.comparator.DirectoryFileComparatorTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.1 sec - in org.apache.commons.io.comparator.DirectoryFileComparatorTest
+Running org.apache.commons.io.comparator.NameFileComparatorTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.112 sec - in org.apache.commons.io.comparator.NameFileComparatorTest
+Running org.apache.commons.io.comparator.ExtensionFileComparatorTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.123 sec - in org.apache.commons.io.comparator.ExtensionFileComparatorTest
+Running org.apache.commons.io.FileUtilsListFilesTestCase
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.204 sec - in org.apache.commons.io.FileUtilsListFilesTestCase
+Running org.apache.commons.io.TaggedIOExceptionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.211 sec - in org.apache.commons.io.TaggedIOExceptionTest
+Running org.apache.commons.io.input.CharSequenceInputStreamTest
+Tests run: 30, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.74 sec - in org.apache.commons.io.input.CharSequenceInputStreamTest
+Running org.apache.commons.io.input.XmlStreamReaderTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.024 sec - in org.apache.commons.io.input.XmlStreamReaderTest
+Running org.apache.commons.io.input.WindowsLineEndingInputStreamTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 sec - in org.apache.commons.io.input.WindowsLineEndingInputStreamTest
+Running org.apache.commons.io.input.BoundedInputStreamTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.148 sec - in org.apache.commons.io.input.BoundedInputStreamTest
+Running org.apache.commons.io.input.TeeInputStreamTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.147 sec - in org.apache.commons.io.input.TeeInputStreamTest
+Running org.apache.commons.io.input.BoundedReaderTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.141 sec - in org.apache.commons.io.input.BoundedReaderTest
+Running org.apache.commons.io.input.AutoCloseInputStreamTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.193 sec - in org.apache.commons.io.input.AutoCloseInputStreamTest
+Running org.apache.commons.io.input.SwappedDataInputStreamTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.192 sec - in org.apache.commons.io.input.SwappedDataInputStreamTest
+Running org.apache.commons.io.input.BOMInputStreamTest
+Tests run: 44, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.58 sec - in org.apache.commons.io.input.BOMInputStreamTest
+Running org.apache.commons.io.input.TailerTest
+Elapsed: 683
+testMultiByteBreak() Default charset: UTF-8
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.872 sec - in org.apache.commons.io.input.TailerTest
+Running org.apache.commons.io.input.CharSequenceReaderTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.181 sec - in org.apache.commons.io.input.CharSequenceReaderTest
+Running org.apache.commons.io.input.NullReaderTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.19 sec - in org.apache.commons.io.input.NullReaderTest
+Running org.apache.commons.io.input.CountingInputStreamTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.623 sec - in org.apache.commons.io.input.CountingInputStreamTest
+Running org.apache.commons.io.input.NullInputStreamTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.168 sec - in org.apache.commons.io.input.NullInputStreamTest
+Running org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.208 sec - in org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest
+Running org.apache.commons.io.input.ReaderInputStreamTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.2 sec - in org.apache.commons.io.input.ReaderInputStreamTest
+Running org.apache.commons.io.input.ReversedLinesFileReaderTestParamBlockSize
+Tests run: 85, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.156 sec - in org.apache.commons.io.input.ReversedLinesFileReaderTestParamBlockSize
+Running org.apache.commons.io.input.CloseShieldInputStreamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.147 sec - in org.apache.commons.io.input.CloseShieldInputStreamTest
+Running org.apache.commons.io.input.ReversedLinesFileReaderTestSimple
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.15 sec - in org.apache.commons.io.input.ReversedLinesFileReaderTestSimple
+Running org.apache.commons.io.input.ClassLoaderObjectInputStreamTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 sec - in org.apache.commons.io.input.ClassLoaderObjectInputStreamTest
+Running org.apache.commons.io.input.TaggedInputStreamTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.164 sec - in org.apache.commons.io.input.TaggedInputStreamTest
+Running org.apache.commons.io.input.ProxyReaderTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 sec - in org.apache.commons.io.input.ProxyReaderTest
+Running org.apache.commons.io.input.BrokenInputStreamTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 sec - in org.apache.commons.io.input.BrokenInputStreamTest
+Running org.apache.commons.io.input.ClosedInputStreamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 sec - in org.apache.commons.io.input.ClosedInputStreamTest
+Running org.apache.commons.io.input.UnixLineEndingInputStreamTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.093 sec - in org.apache.commons.io.input.UnixLineEndingInputStreamTest
+Running org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.119 sec - in org.apache.commons.io.input.XmlStreamReaderUtilitiesTest
+Running org.apache.commons.io.input.ReversedLinesFileReaderTestParamFile
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.228 sec - in org.apache.commons.io.input.ReversedLinesFileReaderTestParamFile
+Running org.apache.commons.io.FileUtilsDirectoryContainsTestCase
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.113 sec - in org.apache.commons.io.FileUtilsDirectoryContainsTestCase
+Running org.apache.commons.io.output.ThresholdingOutputStreamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 sec - in org.apache.commons.io.output.ThresholdingOutputStreamTest
+Running org.apache.commons.io.output.WriterOutputStreamTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.119 sec - in org.apache.commons.io.output.WriterOutputStreamTest
+Running org.apache.commons.io.output.ClosedOutputStreamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 sec - in org.apache.commons.io.output.ClosedOutputStreamTest
+Running org.apache.commons.io.output.ByteArrayOutputStreamTestCase
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 sec - in org.apache.commons.io.output.ByteArrayOutputStreamTestCase
+Running org.apache.commons.io.output.ChunkedOutputStreamTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.096 sec - in org.apache.commons.io.output.ChunkedOutputStreamTest
+Running org.apache.commons.io.output.AppendableOutputStreamTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 sec - in org.apache.commons.io.output.AppendableOutputStreamTest
+Running org.apache.commons.io.output.CountingOutputStreamTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.281 sec - in org.apache.commons.io.output.CountingOutputStreamTest
+Running org.apache.commons.io.output.CloseShieldOutputStreamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.09 sec - in org.apache.commons.io.output.CloseShieldOutputStreamTest
+Running org.apache.commons.io.output.FileWriterWithEncodingTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.157 sec - in org.apache.commons.io.output.FileWriterWithEncodingTest
+Running org.apache.commons.io.output.LockableFileWriterTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.135 sec - in org.apache.commons.io.output.LockableFileWriterTest
+Running org.apache.commons.io.output.TaggedOutputStreamTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.11 sec - in org.apache.commons.io.output.TaggedOutputStreamTest
+Running org.apache.commons.io.output.ChunkedWriterTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.096 sec - in org.apache.commons.io.output.ChunkedWriterTest
+Running org.apache.commons.io.output.DeferredFileOutputStreamTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 sec - in org.apache.commons.io.output.DeferredFileOutputStreamTest
+Running org.apache.commons.io.output.NullOutputStreamTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 sec - in org.apache.commons.io.output.NullOutputStreamTest
+Running org.apache.commons.io.output.XmlStreamWriterTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.158 sec - in org.apache.commons.io.output.XmlStreamWriterTest
+Running org.apache.commons.io.output.StringBuilderWriterTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 sec - in org.apache.commons.io.output.StringBuilderWriterTest
+Running org.apache.commons.io.output.NullWriterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.081 sec - in org.apache.commons.io.output.NullWriterTest
+Running org.apache.commons.io.output.BrokenOutputStreamTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 sec - in org.apache.commons.io.output.BrokenOutputStreamTest
+Running org.apache.commons.io.output.ProxyWriterTest
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.132 sec - in org.apache.commons.io.output.ProxyWriterTest
+Running org.apache.commons.io.output.ProxyOutputStreamTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.085 sec - in org.apache.commons.io.output.ProxyOutputStreamTest
+Running org.apache.commons.io.output.TeeOutputStreamTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 sec - in org.apache.commons.io.output.TeeOutputStreamTest
+
+Results :
+
+Tests run: 1157, Failures: 0, Errors: 0, Skipped: 4
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  02:19 min
+[[1;34mINFO[m] Finished at: 2021-01-13T06:19:55+01:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+Writing HTML report to '/tmp/v2/target/clover/report'
+Done. Processed 9 packages in 2362ms (262ms per package).
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/filefilter/MagicNumberFileFilter.java
+[INFO] /tmp/v2/src/main/java/org/apache/commons/io/filefilter/MagicNumberFileFilter.java
+[INFO] org.apache.commons.io.filefilter.MagicNumberFileFilter:[237, 237, 240, 240, 250, 250] are modified.
+[INFO] org.apache.commons.io.filefilter.MagicNumberFileFilter:237 covered.
+[INFO] org.apache.commons.io.filefilter.MagicNumberFileFilter:240 covered.
+[INFO] org.apache.commons.io.filefilter.MagicNumberFileFilter:250 covered.
+[INFO] org.apache.commons.io.filefilter.MagicNumberFileFilter:[236, 236, 236] are modified.
+[INFO] org.apache.commons.io.filefilter.MagicNumberFileFilter:236 covered.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/FileUtils.java
+[INFO] /tmp/v2/src/main/java/org/apache/commons/io/FileUtils.java
+[INFO] org.apache.commons.io.FileUtils:[435, 435, 436, 748, 748, 749, 751, 751, 752, 756, 756, 757, 801, 801, 802, 806, 806, 807, 804, 809, 809, 810, 804, 815, 815, 816, 1136, 1136, 1137, 1138, 1139, 1141, 1141, 1142, 1143, 1144, 1158, 1159, 1161, 1162, 1164, 1165, 1167, 1168, 1170, 1170, 1540, 1542, 1542, 1539, 1566, 1566, 1567, 1569, 1565, 1775, 1775, 1777, 1777, 1780, 1780, 1825, 1827, 1845, 1847, 1924, 1925, 1921, 1920, 1991, 1991, 1993, 1993, 1995, 1997, 2203, 2205, 2323, 2320, 2320, 2322, 2322, 2325, 2326, 2328, 2328, 2883, 2885, 2885] are modified.
+[INFO] org.apache.commons.io.FileUtils:1845 covered.
+[INFO] org.apache.commons.io.FileUtils:1847 covered.
+[INFO] org.apache.commons.io.FileUtils:435 covered.
+[INFO] org.apache.commons.io.FileUtils:436 covered.
+[INFO] org.apache.commons.io.FileUtils:2320 covered.
+[INFO] org.apache.commons.io.FileUtils:1136 covered.
+[INFO] org.apache.commons.io.FileUtils:1137 covered.
+[INFO] org.apache.commons.io.FileUtils:1138 covered.
+[INFO] org.apache.commons.io.FileUtils:1139 covered.
+[INFO] org.apache.commons.io.FileUtils:1141 covered.
+[INFO] org.apache.commons.io.FileUtils:1142 covered.
+[INFO] org.apache.commons.io.FileUtils:1143 covered.
+[INFO] org.apache.commons.io.FileUtils:1144 covered.
+[INFO] org.apache.commons.io.FileUtils:1158 covered.
+[INFO] org.apache.commons.io.FileUtils:1159 covered.
+[INFO] org.apache.commons.io.FileUtils:1161 covered.
+[INFO] org.apache.commons.io.FileUtils:1162 covered.
+[INFO] org.apache.commons.io.FileUtils:1164 covered.
+[INFO] org.apache.commons.io.FileUtils:1165 covered.
+[INFO] org.apache.commons.io.FileUtils:1167 covered.
+[INFO] org.apache.commons.io.FileUtils:1168 covered.
+[INFO] org.apache.commons.io.FileUtils:1170 covered.
+[INFO] org.apache.commons.io.FileUtils:1780 covered.
+[INFO] org.apache.commons.io.FileUtils:1825 covered.
+[INFO] org.apache.commons.io.FileUtils:1827 covered.
+[INFO] org.apache.commons.io.FileUtils:1540 covered.
+[INFO] org.apache.commons.io.FileUtils:1542 covered.
+[INFO] org.apache.commons.io.FileUtils:1539 covered.
+[INFO] org.apache.commons.io.FileUtils:1566 covered.
+[INFO] org.apache.commons.io.FileUtils:1567 covered.
+[INFO] org.apache.commons.io.FileUtils:1569 covered.
+[INFO] org.apache.commons.io.FileUtils:1565 covered.
+[INFO] org.apache.commons.io.FileUtils:1991 covered.
+[INFO] org.apache.commons.io.FileUtils:1993 covered.
+[INFO] org.apache.commons.io.FileUtils:1995 covered.
+[INFO] org.apache.commons.io.FileUtils:1997 covered.
+[INFO] org.apache.commons.io.FileUtils:1775 covered.
+[INFO] org.apache.commons.io.FileUtils:1777 covered.
+[INFO] org.apache.commons.io.FileUtils:2323 covered.
+[INFO] org.apache.commons.io.FileUtils:2322 covered.
+[INFO] org.apache.commons.io.FileUtils:2325 covered.
+[INFO] org.apache.commons.io.FileUtils:2326 covered.
+[INFO] org.apache.commons.io.FileUtils:2328 covered.
+[INFO] org.apache.commons.io.FileUtils:2883 covered.
+[INFO] org.apache.commons.io.FileUtils:2885 covered.
+[INFO] org.apache.commons.io.FileUtils:748 covered.
+[INFO] org.apache.commons.io.FileUtils:749 covered.
+[INFO] org.apache.commons.io.FileUtils:751 covered.
+[INFO] org.apache.commons.io.FileUtils:752 covered.
+[INFO] org.apache.commons.io.FileUtils:756 covered.
+[INFO] org.apache.commons.io.FileUtils:757 covered.
+[INFO] org.apache.commons.io.FileUtils:801 covered.
+[INFO] org.apache.commons.io.FileUtils:802 covered.
+[INFO] org.apache.commons.io.FileUtils:806 covered.
+[INFO] org.apache.commons.io.FileUtils:807 covered.
+[INFO] org.apache.commons.io.FileUtils:804 covered.
+[INFO] org.apache.commons.io.FileUtils:815 covered.
+[INFO] org.apache.commons.io.FileUtils:816 covered.
+[INFO] org.apache.commons.io.FileUtils:2203 covered.
+[INFO] org.apache.commons.io.FileUtils:2205 covered.
+[INFO] org.apache.commons.io.FileUtils:1924 covered.
+[INFO] org.apache.commons.io.FileUtils:1925 covered.
+[INFO] org.apache.commons.io.FileUtils:1921 covered.
+[INFO] org.apache.commons.io.FileUtils:[747, 793, 1119, 1503, 1526, 1734, 1780, 1796, 1942, 2149, 2261, 2817, 747, 793, 1119, 1503, 1504, 1526, 1528, 1734, 1780, 1796, 1867, 1942, 2149, 2261, 2262, 2817, 793, 796, 1503, 1528, 1734, 1868, 1869, 1869, 1874, 1870, 1874] are modified.
+[INFO] org.apache.commons.io.FileUtils:1796 covered.
+[INFO] org.apache.commons.io.FileUtils:1119 covered.
+[INFO] org.apache.commons.io.FileUtils:1503 covered.
+[INFO] org.apache.commons.io.FileUtils:1526 covered.
+[INFO] org.apache.commons.io.FileUtils:1504 covered.
+[INFO] org.apache.commons.io.FileUtils:1528 covered.
+[INFO] org.apache.commons.io.FileUtils:1942 covered.
+[INFO] org.apache.commons.io.FileUtils:1734 covered.
+[INFO] org.apache.commons.io.FileUtils:2261 covered.
+[INFO] org.apache.commons.io.FileUtils:2262 covered.
+[INFO] org.apache.commons.io.FileUtils:2817 covered.
+[INFO] org.apache.commons.io.FileUtils:747 covered.
+[INFO] org.apache.commons.io.FileUtils:793 covered.
+[INFO] org.apache.commons.io.FileUtils:796 covered.
+[INFO] org.apache.commons.io.FileUtils:2149 covered.
+[INFO] org.apache.commons.io.FileUtils:1868 covered.
+[INFO] org.apache.commons.io.FileUtils:1869 covered.
+[INFO] org.apache.commons.io.FileUtils:1870 covered.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/input/Tailer.java
+[INFO] /tmp/v2/src/main/java/org/apache/commons/io/input/Tailer.java
+[INFO] org.apache.commons.io.input.Tailer:[448, 448, 435, 475, 489, 497, 517, 550] are modified.
+[INFO] org.apache.commons.io.input.Tailer:489 covered.
+[INFO] org.apache.commons.io.input.Tailer:517 covered.
+[INFO] org.apache.commons.io.input.Tailer:550 covered.
+[INFO] org.apache.commons.io.input.Tailer:448 covered.
+[INFO] org.apache.commons.io.input.Tailer:435 covered.
+[INFO] org.apache.commons.io.input.Tailer:[512, 485, 512, 486, 490, 470, 481, 486, 491, 435, 487, 491, 487] are modified.
+[INFO] org.apache.commons.io.input.Tailer:512 covered.
+[INFO] org.apache.commons.io.input.Tailer:485 covered.
+[INFO] org.apache.commons.io.input.Tailer:486 covered.
+[INFO] org.apache.commons.io.input.Tailer:470 covered.
+[INFO] org.apache.commons.io.input.Tailer:487 covered.
+[INFO] org.apache.commons.io.input.Tailer:481 covered.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/IOUtils.java
+[INFO] /tmp/v2/src/main/java/org/apache/commons/io/IOUtils.java
+[INFO] org.apache.commons.io.IOUtils:[220] are modified.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/output/DeferredFileOutputStream.java
+[INFO] /tmp/v2/src/main/java/org/apache/commons/io/output/DeferredFileOutputStream.java
+[INFO] org.apache.commons.io.output.DeferredFileOutputStream:[285, 285, 282] are modified.
+[INFO] org.apache.commons.io.output.DeferredFileOutputStream:285 covered.
+[INFO] org.apache.commons.io.output.DeferredFileOutputStream:282 covered.
+[INFO] org.apache.commons.io.output.DeferredFileOutputStream:[277] are modified.
+[INFO] org.apache.commons.io.output.DeferredFileOutputStream:277 covered.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/output/FileWriterWithEncoding.java
+[INFO] /tmp/v2/src/main/java/org/apache/commons/io/output/FileWriterWithEncoding.java
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding:[235, 235, 239, 239, 241, 241, 243, 243, 245, 246, 246, 247, 256, 253, 258, 260] are modified.
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding:235 covered.
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding:239 covered.
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding:241 covered.
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding:260 covered.
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding:243 covered.
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding:245 covered.
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding:246 covered.
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding:247 covered.
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding:[244, 237, 245, 248, 249, 239, 241, 249] are modified.
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding:237 covered.
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding:244 covered.
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding:248 covered.
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding:249 covered.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/output/LockableFileWriter.java
+[INFO] /tmp/v2/src/main/java/org/apache/commons/io/output/LockableFileWriter.java
+[INFO] org.apache.commons.io.output.LockableFileWriter:[270, 270, 271, 273, 273, 274, 274, 276, 276, 277, 283, 284, 286, 287, 288, 288, 290, 292] are modified.
+[INFO] org.apache.commons.io.output.LockableFileWriter:270 covered.
+[INFO] org.apache.commons.io.output.LockableFileWriter:271 covered.
+[INFO] org.apache.commons.io.output.LockableFileWriter:273 covered.
+[INFO] org.apache.commons.io.output.LockableFileWriter:274 covered.
+[INFO] org.apache.commons.io.output.LockableFileWriter:290 covered.
+[INFO] org.apache.commons.io.output.LockableFileWriter:292 covered.
+[INFO] org.apache.commons.io.output.LockableFileWriter:[269, 269] are modified.
+[INFO] org.apache.commons.io.output.LockableFileWriter:269 covered.
+[INFO] Saving result in /tmp/v1/testsThatExecuteTheChange.csv ...
+[INFO] org.apache.commons.io.filefilter.FileFilterTestCase;testMagicNumberFileFilterStringOffset;testMagicNumberFileFilterBytesOffset;testMagicNumberFileFilterBytes;testEmpty;testMagicNumberFileFilterString
+org.apache.commons.io.input.TailerTest;testTailerEof;testStopWithNoFileUsingExecutor;testBufferBreak;testLongFile;testMultiByteBreak;testInterrupt;testStopWithNoFile;testIO335;testTailerEndOfFileReached;testTailer
+org.apache.commons.io.monitor.FileAlterationObserverTestCase;testDirectory;testFileUpdate;testObserveSingleFile;testFileDelete;testFileCreate
+org.apache.commons.io.monitor.FileAlterationMonitorTestCase;testMonitor;testThreadFactory
+org.apache.commons.io.FileUtilsTestCase;testCopyFile1;testCopyFile2;testReadFileToByteArray;testCopyURLToFile;testCopyDirectoryToDirectory_NonExistingDest;testContentEquals;testCopyDirectoryToNonExistingDest;testWriteLines_5argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines;testChecksumOnNullChecksum;testCopyDirectoryToGrandChild;testMoveFile_CopyDelete;testCopyToSelf;testForceDeleteAFile2;testMoveToDirectory_Errors;testForceDeleteAFile1;testWriteStringToFileWithEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines;testForceDeleteAFile3;testWriteLines_3arg_nullSeparator;testReadFileToStringWithDefaultEncoding;testWrite_WithAppendOptionFalse_ShouldDeletePreviousFileLines;testCopyURLToFileWithTimeout;testMoveDirectoryToDirectory_Errors;testWriteLinesEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines;testWriteLines_3argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines;testWriteWithEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines;testMoveFile_CopyDelete_Failed;testWriteByteArrayToFile_WithAppendOptionFalse_ShouldDeletePreviousFileLines;testWriteByteArrayToFile_WithOffsetAndLength_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines;testReadFileToStringWithEncoding;testWriteStringToFile_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines;testChecksumDouble;testCopyFileToOutputStream;testCopyFile2WithoutFileDatePreservation;testChecksumCRC32;testCopyDirectoryFiltered;testTouch;testFileUtils;testCopyDirectoryPreserveDates;testMoveDirectory_Rename;testContentEqualsIgnoreEOL;testCopyFile1ToDir;testWriteByteArrayToFile;testWriteLinesEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines;testWriteByteArrayToFile_WithOffsetAndLength_WithAppendOptionTrue_ShouldDeletePreviousFileLines;testWriteLines_3argsWithAppendOptionFalse_ShouldDeletePreviousFileLines;testWriteLines_4arg;testWriteCharSequence1;testWriteLines_4argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines;testChecksum;testWriteCharSequence2;testWriteByteArrayToFile_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines;testCopyDirectoryToExistingDest;testCopyFile2ToDir;testDeleteQuietlyDir;testMoveDirectoryToDirectory;testIsFileNewerOlder;testCopyDirectoryToChild;testWrite_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines;testWriteByteArrayToFile_WithOffsetAndLength;testWriteStringToFileWithEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines;testIncorrectOutputSize;testReadLines;testWriteLines_4arg_Writer_nullData;testWriteWithEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines;testWriteLines_5argsWithAppendOptionFalse_ShouldDeletePreviousFileLines;testWriteLines_4arg_nullSeparator;testWriteStringToFile_WithAppendOptionFalse_ShouldDeletePreviousFileLines;testMoveDirectory_CopyDelete;testForceDeleteDir;testWriteStringToFile2;testWriteLines_4argsWithAppendOptionFalse_ShouldDeletePreviousFileLines;testWriteStringToFile1;testWriteStringToFile3
+org.apache.commons.io.FileUtilsCleanSymlinksTestCase;testCleanDirWithSymlinkFile;testCleanDirWithASymlinkDir;testIdentifiesSymlinkFile;testStillClearsIfGivenDirectoryIsASymlink;testCleanDirWithParentSymlinks
+org.apache.commons.io.FileDeleteStrategyTestCase;testDeleteForce
+org.apache.commons.io.LineIteratorTestCase;testNextLineOnlyDefaultEncoding;testCloseEarly;testValidEncoding;testThreeLines;testTwoLines;testNextOnly;testZeroLines;testFilteringBufferedReader;testFilteringFileReader;testNextLineOnlyUtf8Encoding;testInvalidEncoding;testMissingFile;testOneLines;testNextLineOnlyNullEncoding
+org.apache.commons.io.FileCleaningTrackerTestCase;testFileCleanerDirectory_ForceStrategy
+org.apache.commons.io.FileUtilsCleanDirectoryTestCase;testDeletesRegular;testThrowsOnCannotDeleteFile;testDeletesNested
+org.apache.commons.io.FileCleanerTestCase;testFileCleanerDirectory_ForceStrategy
+org.apache.commons.io.output.DeferredFileOutputStreamTest;testWriteToLarge;testWriteToSmall
+org.apache.commons.io.output.FileWriterWithEncodingTest;sameEncoding_string_CharsetEncoder_constructor;sameEncoding_string_constructor;sameEncoding_Charset_constructor;sameEncoding_string_Charset_constructor;constructor_File_encoding_badEncoding;testDifferentEncoding;sameEncoding_CharsetEncoder_constructor;sameEncoding_string_string_constructor;constructor_File_directory
+org.apache.commons.io.output.LockableFileWriterTest;testAlternateLockDir;testFileNotLocked;testFileLocked
+[INFO] Writing Coverage in /tmp/v1/testsThatExecuteTheChange_coverage.csv
+[INFO] org.apache.commons.io.filefilter.MagicNumberFileFilter;4;4
+
+[INFO] org.apache.commons.io.FileUtils;81;86
+
+[INFO] org.apache.commons.io.input.Tailer;11;15
+
+[INFO] org.apache.commons.io.output.DeferredFileOutputStream;3;3
+
+[INFO] org.apache.commons.io.output.FileWriterWithEncoding;12;15
+
+[INFO] org.apache.commons.io.output.LockableFileWriter;7;14
+
+[INFO] total;118;137
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  04:42 min
+[INFO] Finished at: 2021-01-13T06:20:01+01:00
+[INFO] ------------------------------------------------------------------------

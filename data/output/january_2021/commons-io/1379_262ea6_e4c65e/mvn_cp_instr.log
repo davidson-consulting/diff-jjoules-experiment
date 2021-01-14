@@ -1,0 +1,177 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< commons-io:commons-io >------------------------
+[INFO] Building Commons IO 2.4-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ commons-io ---
+[INFO] Deleting /tmp/v1/target
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (javadoc.resources) @ commons-io ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 2 files to /tmp/v1/target/apidocs/META-INF
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.2.1:process (default) @ commons-io ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.0:create (default) @ commons-io ---
+[INFO] Checking for local modifications: skipped.
+[INFO] Updating project files from SCM: skipped.
+[INFO] Executing: /bin/sh -c cd /tmp/v1 && svn --non-interactive info
+[INFO] Working directory: /tmp/v1
+[INFO] Storing buildNumber: ?????? at timestamp: 1610571067762
+[INFO] Executing: /bin/sh -c cd /tmp/v1 && svn --non-interactive info
+[INFO] Working directory: /tmp/v1
+[INFO] Storing buildScmBranch: UNKNOWN_BRANCH
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ commons-io ---
+[debug] execute contextualize
+[INFO] Using 'iso-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/src/main/resources
+[INFO] Copying 2 resources to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ commons-io ---
+[INFO] Compiling 103 source files to /tmp/v1/target/classes
+[INFO] 
+[INFO] --- maven-bundle-plugin:2.3.7:manifest (bundle-manifest) @ commons-io ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ commons-io ---
+[debug] execute contextualize
+[INFO] Using 'iso-8859-1' encoding to copy filtered resources.
+[INFO] Copying 15 resources
+[INFO] Copying 2 resources to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ commons-io ---
+[INFO] Compiling 95 source files to /tmp/v1/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12:test (default-test) @ commons-io ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:build-classpath (default-cli) @ commons-io ---
+[INFO] Skipped writing classpath file '/tmp/v1/classpath'.  No changes found.
+[INFO] 
+[INFO] --- diff-jjoules:0.0.1-SNAPSHOT:instrument (default-cli) @ commons-io ---
+[INFO] Running on:
+[INFO] /tmp/v1
+[INFO] /tmp/v2/
+[INFO] Enable JUnit4 mode
+[INFO] Configuration{pathToFirstVersion='/tmp/v1', pathToSecondVersion='/tmp/v2/', pathToTestListAsCSV='/tmp/v1/testsThatExecuteTheChange.csv', classpath=[/home/spino/.m2/repository/junit/junit/4.10/junit-4.10.jar, /home/spino/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar], junit4=true}
+[INFO] org.apache.commons.io.input.XmlStreamReaderUtilitiesTest:[testCalculateHttpEncoding, testCalculateRawEncodingStandard, testCalculateRawEncodingAdditonalkUTF16, testContentTypeEncoding, testCalculateRawEncodingAdditonalUTF16, testCalculateRawEncodingNoBOM]
+org.apache.commons.io.input.XmlStreamReaderTest:[testRawNoBomIso8859_1, testRawNoBomUtf16BE, testHttpContent, testRawNoBomUsAscii, testRawContent, testRawBomUtf16, testRawNoBomCp1047, testRawNoBomUtf8, testRawNoBomUtf16LE, testEncodingAttributeXML]
+org.apache.commons.io.input.compatibility.XmlStreamReaderUtilitiesCompatibilityTest:[testCalculateHttpEncoding, testContentTypeEncoding]
+org.apache.commons.io.input.BOMInputStreamTest:[testReadWithMultipleBOM, testSmallBufferWithoutBOM, testEmptyBufferWithoutBOM, testGetBOMFirstThenRead, testReadWithBOM, testLargeBufferWithBOM, testReadTwiceWithoutBOM, testLeadingNonBOMBufferedRead, testSkipWithBOM, testSmallBufferWithBOM, testReadWithoutBOM, testClose, testLargeBufferWithoutBOM, testMarkResetBeforeReadWithBOM, testGetBOMFirstThenReadInclude, testAvailableWithoutBOM, testMarkResetBeforeReadWithoutBOM, testMarkResetAfterReadWithoutBOM, testMarkResetAfterReadWithBOM, testReadTwiceWithBOM, testAvailableWithBOM, testEmptyBufferWithBOM, testReadWithBOMInclude, testLeadingNonBOMSingleRead, testSkipWithoutBOM, testReadEmpty, testReadSmall]
+[INFO] Instrument version before commit...
+[INFO] Run on /tmp/v1
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit4.JJoulesProcessor
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadEmpty
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadSmall
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testGetBOMFirstThenRead
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadWithBOMInclude
+Processing org.apache.commons.io.input.BOMInputStreamTest#testGetBOMFirstThenReadInclude
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadWithMultipleBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testEmptyBufferWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testEmptyBufferWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testLargeBufferWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testLargeBufferWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testSmallBufferWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testSmallBufferWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testLeadingNonBOMSingleRead
+Processing org.apache.commons.io.input.BOMInputStreamTest#testLeadingNonBOMBufferedRead
+Processing org.apache.commons.io.input.BOMInputStreamTest#testSkipWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testSkipWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testMarkResetAfterReadWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testMarkResetAfterReadWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testMarkResetBeforeReadWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testMarkResetBeforeReadWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testAvailableWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testAvailableWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadTwiceWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadTwiceWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testClose
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawNoBomUsAscii
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawNoBomUtf8
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawNoBomUtf16BE
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawNoBomUtf16LE
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawNoBomIso8859_1
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawNoBomCp1047
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawBomUtf16
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawContent
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testHttpContent
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testEncodingAttributeXML
+Processing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testContentTypeEncoding
+Processing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateRawEncodingNoBOM
+Processing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateRawEncodingStandard
+Processing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateRawEncodingStandard
+Processing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateRawEncodingAdditonalkUTF16
+Processing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateHttpEncoding
+[INFO] Printing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest to /tmp/v1/src/test/java//org/apache/commons/io/input/XmlStreamReaderUtilitiesTest.java
+[INFO] Printing org.apache.commons.io.input.BOMInputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/input/BOMInputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.XmlStreamReaderTest to /tmp/v1/src/test/java//org/apache/commons/io/input/XmlStreamReaderTest.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v1/pom.xml
+[INFO] Output new POM file in /tmp/v1/pom.xml
+[INFO] Instrument version after commit...
+[INFO] Run on /tmp/v2/
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit4.JJoulesProcessor
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadEmpty
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadSmall
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testGetBOMFirstThenRead
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadWithBOMInclude
+Processing org.apache.commons.io.input.BOMInputStreamTest#testGetBOMFirstThenReadInclude
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadWithMultipleBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testEmptyBufferWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testEmptyBufferWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testLargeBufferWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testLargeBufferWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testSmallBufferWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testSmallBufferWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testLeadingNonBOMSingleRead
+Processing org.apache.commons.io.input.BOMInputStreamTest#testLeadingNonBOMBufferedRead
+Processing org.apache.commons.io.input.BOMInputStreamTest#testSkipWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testSkipWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testMarkResetAfterReadWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testMarkResetAfterReadWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testMarkResetBeforeReadWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testMarkResetBeforeReadWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testAvailableWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testAvailableWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadTwiceWithoutBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testReadTwiceWithBOM
+Processing org.apache.commons.io.input.BOMInputStreamTest#testClose
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawNoBomUsAscii
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawNoBomUtf8
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawNoBomUtf16BE
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawNoBomUtf16LE
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawNoBomIso8859_1
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawNoBomCp1047
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawBomUtf16
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testRawContent
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testHttpContent
+Processing org.apache.commons.io.input.XmlStreamReaderTest#testEncodingAttributeXML
+Processing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testContentTypeEncoding
+Processing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateRawEncodingNoBOM
+Processing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateRawEncodingStandard
+Processing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateRawEncodingStandard
+Processing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateRawEncodingAdditonalUTF16
+Processing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest#testCalculateHttpEncoding
+[INFO] Printing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest to /tmp/v2//src/test/java//org/apache/commons/io/input/XmlStreamReaderUtilitiesTest.java
+[INFO] Printing org.apache.commons.io.input.XmlStreamReaderUtilitiesTest to /tmp/v2//src/test/java//org/apache/commons/io/input/XmlStreamReaderUtilitiesTest.java
+[INFO] Printing org.apache.commons.io.input.BOMInputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/input/BOMInputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.BOMInputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/input/BOMInputStreamTest.java
+[INFO] Printing org.apache.commons.io.input.XmlStreamReaderTest to /tmp/v2//src/test/java//org/apache/commons/io/input/XmlStreamReaderTest.java
+[INFO] Printing org.apache.commons.io.input.XmlStreamReaderTest to /tmp/v2//src/test/java//org/apache/commons/io/input/XmlStreamReaderTest.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v2//pom.xml
+[INFO] Output new POM file in /tmp/v2//pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.701 s
+[INFO] Finished at: 2021-01-13T21:51:19+01:00
+[INFO] ------------------------------------------------------------------------
