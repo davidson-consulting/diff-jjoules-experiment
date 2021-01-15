@@ -148,8 +148,6 @@ https://github.com/google/gson/commit/55acc2
 ### Selected Tests
 | Test class | test method |
 | --- | --- |
-| com.google.gson.internal.bind.JsonTreeWriterTest | testObject |
-| com.google.gson.functional.InheritanceTest | testClassWithBaseCollectionFieldSerialization |
 | com.google.gson.functional.InheritanceTest | testClassWithBaseFieldSerialization |
 
 ### Suspected lines
