@@ -1,20 +1,22 @@
 {
   "negative": {
-    "com.google.gson.functional.MapTest-testInterfaceTypeMapWithSerializer": -3601.0,
     "com.google.gson.functional.MoreSpecificTypeSerializationTest-testMapOfSubclassFields": -5311.0,
     "com.google.gson.functional.MapAsArrayTypeAdapterTest-testSerializeComplexMapWithTypeAdapter": -6715.0,
     "com.google.gson.functional.TypeHierarchyAdapterTest-testTypeHierarchy": -6470.0,
-    "com.google.gson.functional.CustomSerializerTest-testSubClassSerializerInvokedForBaseClassFieldsHoldingSubClassInstances": -7447.0,
-    "com.google.gson.functional.JsonTreeTest-testJsonTreeToString": -4639.0
+    "com.google.gson.functional.CustomSerializerTest-testSubClassSerializerInvokedForBaseClassFieldsHoldingSubClassInstances": -7447.0
   },
   "neutral": {
     "com.google.gson.functional.MapAsArrayTypeAdapterTest-testMapWithTypeVariableSerialization": 1221.0,
     "com.google.gson.functional.CustomSerializerTest-testSubClassSerializerInvokedForBaseClassFieldsHoldingArrayOfSubClassInstances": 305.0,
     "com.google.gson.functional.CustomSerializerTest-testBaseClassSerializerInvokedForBaseClassFields": 672.0,
+    "com.google.gson.functional.InheritanceTest-testClassWithBaseCollectionFieldSerialization": 3602.0,
     "com.google.gson.internal.bind.JsonTreeWriterTest-testNestedObject": 1770.0,
     "com.google.gson.internal.bind.JsonTreeWriterTest-testSerializeNullsTrue": -1771.0,
     "com.google.gson.functional.JsonTreeTest-testToJsonTreeObjectType": 672.0,
     "com.google.gson.functional.InheritanceTest-testBaseSerializedAsBaseWhenSpecifiedWithExplicitType": 549.0,
+    "com.google.gson.functional.JsonTreeTest-testJsonTreeToString": -4639.0,
+    "com.google.gson.internal.bind.JsonTreeWriterTest-testObject": 3480.0,
+    "com.google.gson.functional.MapTest-testInterfaceTypeMapWithSerializer": -3601.0,
     "com.google.gson.functional.CustomSerializerTest-testBaseClassSerializerInvokedForBaseClassFieldsHoldingSubClassInstances": 1282.0,
     "com.google.gson.internal.bind.JsonTreeWriterTest-testSerializeNullsFalse": -1038.0,
     "com.google.gson.functional.MapAsArrayTypeAdapterTest-testMultipleEnableComplexKeyRegistrationHasNoEffect": 977.0,
@@ -28,8 +30,6 @@
     "com.google.gson.functional.JsonTreeTest-testJsonTreeNull": 244.0
   },
   "positive": {
-    "com.google.gson.internal.bind.JsonTreeWriterTest-testObject": 3480.0,
-    "com.google.gson.functional.InheritanceTest-testClassWithBaseCollectionFieldSerialization": 3602.0,
     "com.google.gson.functional.InheritanceTest-testClassWithBaseFieldSerialization": 31556.0
   }
 }
