@@ -144,6 +144,21 @@ https://github.com/google/gson/commit/55acc2
 
 
 
+## Localization of Green Regression
+### Selected Tests
+| Test class | test method |
+| --- | --- |
+| com.google.gson.internal.bind.JsonTreeWriterTest | testObject |
+| com.google.gson.functional.InheritanceTest | testClassWithBaseCollectionFieldSerialization |
+| com.google.gson.functional.InheritanceTest | testClassWithBaseFieldSerialization |
+
+### Suspected lines
+| Class | line |
+| --- | --- |
+| com.google.gson.internal.bind.JsonTreeWriter | [133](https://github.com/google/gson/tree/55acc2/gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java#L133) |
+
+
+
 | Time Label | Time (s) |
 | --- | --- |
 | Selection | 36.45126223564148 |

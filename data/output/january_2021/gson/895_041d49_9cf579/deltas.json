@@ -1,0 +1,579 @@
+{
+  "com.google.gson.functional.CollectionTest": [
+    {
+      "name": "testRawCollectionSerialization",
+      "delta": 1037.0,
+      "globalPercentage": -4.007110011978825,
+      "categoryPercentage": 3.2365792759051186,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testRawCollectionOfBagOfPrimitivesNotAllowed",
+      "delta": 794.0,
+      "globalPercentage": -3.068124734340585,
+      "categoryPercentage": 2.478152309612984,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testRawCollectionDeserializationNotAlllowed",
+      "delta": -732.0,
+      "globalPercentage": 2.828548243749758,
+      "categoryPercentage": 1.2638339750340992,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testWildcardCollectionField",
+      "delta": -1221.0,
+      "globalPercentage": 4.718111209861277,
+      "categoryPercentage": 2.108116507536387,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testCollectionOfBagOfPrimitivesSerialization",
+      "delta": -488.0,
+      "globalPercentage": 1.8856988291665058,
+      "categoryPercentage": 0.8425559833560662,
+      "category": "NEGATIVE"
+    }
+  ],
+  "com.google.gson.functional.ParameterizedTypesTest": [
+    {
+      "name": "testParameterizedTypeDeserialization",
+      "delta": 244.0,
+      "globalPercentage": -0.9428494145832529,
+      "categoryPercentage": 0.7615480649188514,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testTypesWithMultipleParametersDeserialization",
+      "delta": 243.0,
+      "globalPercentage": -0.9389852776382395,
+      "categoryPercentage": 0.7584269662921348,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testTypesWithMultipleParametersSerialization",
+      "delta": 1405.0,
+      "globalPercentage": -5.42911240774373,
+      "categoryPercentage": 4.38514357053683,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testParameterizedTypeWithReaderDeserialization",
+      "delta": 1587.0,
+      "globalPercentage": -6.132385331736156,
+      "categoryPercentage": 4.953183520599251,
+      "category": "POSITIVE"
+    }
+  ],
+  "com.google.gson.functional.EscapingTest": [
+    {
+      "name": "testEscapingObjectFields",
+      "delta": 1588.0,
+      "globalPercentage": -6.13624946868117,
+      "categoryPercentage": 4.956304619225968,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testGsonAcceptsEscapedAndNonEscapedJsonDeserialization",
+      "delta": 2136.0,
+      "globalPercentage": -8.253796514548476,
+      "categoryPercentage": 6.666666666666667,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testGsonDoubleDeserialization",
+      "delta": 1038.0,
+      "globalPercentage": -4.010974148923838,
+      "categoryPercentage": 3.239700374531835,
+      "category": "POSITIVE"
+    }
+  ],
+  "com.google.gson.functional.UncategorizedTest": [
+    {
+      "name": "testGsonInstanceReusableForSerializationAndDeserialization",
+      "delta": 2503.0,
+      "globalPercentage": -9.671934773368369,
+      "categoryPercentage": 7.812109862671661,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testStaticFieldsAreNotSerialized",
+      "delta": -1343.0,
+      "globalPercentage": 5.189535917152903,
+      "categoryPercentage": 2.3187555033754035,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testInvalidJsonDeserializationFails",
+      "delta": -854.0,
+      "globalPercentage": 3.2999729510413847,
+      "categoryPercentage": 1.474472970873116,
+      "category": "NEGATIVE"
+    }
+  ],
+  "global": [
+    {
+      "name": "",
+      "delta": -25879.0,
+      "globalPercentage": 100.0,
+      "categoryPercentage": 0.0,
+      "category": "NEGATIVE"
+    }
+  ],
+  "com.google.gson.functional.InheritanceTest": [
+    {
+      "name": "testSubClassDeserialization",
+      "delta": 671.0,
+      "globalPercentage": -2.592835890103945,
+      "categoryPercentage": 2.094257178526841,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testSubClassSerialization",
+      "delta": -915.0,
+      "globalPercentage": 3.535685304687198,
+      "categoryPercentage": 1.5797924687926241,
+      "category": "NEGATIVE"
+    }
+  ],
+  "com.google.gson.functional.PrettyPrintingTest": [
+    {
+      "name": "testPrettyPrintArrayOfObjects",
+      "delta": -976.0,
+      "globalPercentage": 3.7713976583330115,
+      "categoryPercentage": 1.6851119667121324,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testPrettyPrintList",
+      "delta": -3051.0,
+      "globalPercentage": 11.789481819235673,
+      "categoryPercentage": 5.267701445121635,
+      "category": "NEGATIVE"
+    }
+  ],
+  "com.google.gson.functional.JsonTreeTest": [
+    {
+      "name": "testToJsonTreeObjectType",
+      "delta": -183.0,
+      "globalPercentage": 0.7071370609374396,
+      "categoryPercentage": 0.3159584937585248,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testJsonTreeToString",
+      "delta": 671.0,
+      "globalPercentage": -2.592835890103945,
+      "categoryPercentage": 2.094257178526841,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testToJsonTree",
+      "delta": 1404.0,
+      "globalPercentage": -5.4252482707987175,
+      "categoryPercentage": 4.382022471910112,
+      "category": "POSITIVE"
+    }
+  ],
+  "com.google.gson.functional.ObjectTest": [
+    {
+      "name": "testArrayOfArraysDeserialization",
+      "delta": -916.0,
+      "globalPercentage": 3.5395494416322117,
+      "categoryPercentage": 1.5815190179388456,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testNullFieldsSerialization",
+      "delta": -793.0,
+      "globalPercentage": 3.0642605973955717,
+      "categoryPercentage": 1.3691534729536077,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testArrayOfArraysSerialization",
+      "delta": -13794.0,
+      "globalPercentage": 53.301905019513896,
+      "categoryPercentage": 23.816018922978643,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testNestedDeserialization",
+      "delta": -1220.0,
+      "globalPercentage": 4.7142470729162635,
+      "categoryPercentage": 2.1063899583901655,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testStringFieldWithNumberValueDeserialization",
+      "delta": -366.0,
+      "globalPercentage": 1.414274121874879,
+      "categoryPercentage": 0.6319169875170496,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testBagOfPrimitivesSerialization",
+      "delta": 244.0,
+      "globalPercentage": -0.9428494145832529,
+      "categoryPercentage": 0.7615480649188514,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testArrayOfObjectsAsFields",
+      "delta": 366.0,
+      "globalPercentage": -1.414274121874879,
+      "categoryPercentage": 1.142322097378277,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testArrayOfObjectsDeserialization",
+      "delta": -428.0,
+      "globalPercentage": 1.6538506124657057,
+      "categoryPercentage": 0.7389630345827793,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testNestedSerialization",
+      "delta": 121.0,
+      "globalPercentage": -0.4675605703466131,
+      "categoryPercentage": 0.3776529338327091,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testNullFieldsDeserialization",
+      "delta": -1403.0,
+      "globalPercentage": 5.421384133853704,
+      "categoryPercentage": 2.4223484521486904,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testObjectFieldNamesWithoutQuotesDeserialization",
+      "delta": -61.0,
+      "globalPercentage": 0.23571235364581322,
+      "categoryPercentage": 0.10531949791950827,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testArrayOfObjectsSerialization",
+      "delta": -305.0,
+      "globalPercentage": 1.1785617682290659,
+      "categoryPercentage": 0.5265974895975414,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testBagOfPrimitivesDeserialization",
+      "delta": -61.0,
+      "globalPercentage": 0.23571235364581322,
+      "categoryPercentage": 0.10531949791950827,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testBagOfPrimitiveWrappersDeserialization",
+      "delta": 1831.0,
+      "globalPercentage": -7.07523474631941,
+      "categoryPercentage": 5.714731585518102,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testBagOfPrimitiveWrappersSerialization",
+      "delta": -366.0,
+      "globalPercentage": 1.414274121874879,
+      "categoryPercentage": 0.6319169875170496,
+      "category": "NEGATIVE"
+    }
+  ],
+  "com.google.gson.functional.SecurityTest": [
+    {
+      "name": "testNonExecutableJsonSerialization",
+      "delta": -733.0,
+      "globalPercentage": 2.832412380694772,
+      "categoryPercentage": 1.2655605241803207,
+      "category": "NEGATIVE"
+    }
+  ],
+  "com.google.gson.functional.VersioningTest": [
+    {
+      "name": "testVersionedGsonWithUnversionedClassesDeserialization",
+      "delta": 2563.0,
+      "globalPercentage": -9.903782990069168,
+      "categoryPercentage": 7.999375780274656,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testVersionedGsonWithUnversionedClassesSerialization",
+      "delta": 1405.0,
+      "globalPercentage": -5.42911240774373,
+      "categoryPercentage": 4.38514357053683,
+      "category": "POSITIVE"
+    }
+  ],
+  "com.google.gson.functional.JsonParserTest": [
+    {
+      "name": "testBadFieldTypeForDeserializingCustomTree",
+      "delta": 1647.0,
+      "globalPercentage": -6.364233548436957,
+      "categoryPercentage": 5.140449438202247,
+      "category": "POSITIVE"
+    }
+  ],
+  "com.google.gson.functional.PrintFormattingTest": [
+    {
+      "name": "testCompactFormattingLeavesNoWhiteSpace",
+      "delta": 305.0,
+      "globalPercentage": -1.1785617682290659,
+      "categoryPercentage": 0.9519350811485644,
+      "category": "POSITIVE"
+    }
+  ],
+  "com.google.gson.JsonParserTest": [
+    {
+      "name": "testParseMixedArray",
+      "delta": -1038.0,
+      "globalPercentage": 4.010974148923838,
+      "categoryPercentage": 1.792158013777862,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testReadWriteTwoObjects",
+      "delta": -1526.0,
+      "globalPercentage": 5.8966729780903435,
+      "categoryPercentage": 2.6347139971339284,
+      "category": "NEGATIVE"
+    }
+  ],
+  "com.google.gson.JsonDeserializerExceptionWrapperTest": [
+    {
+      "name": "testWrappedExceptionPropagation",
+      "delta": -2564.0,
+      "globalPercentage": 9.907647127014181,
+      "categoryPercentage": 4.426872010911791,
+      "category": "NEGATIVE"
+    }
+  ],
+  "com.google.gson.GsonTypeAdapterTest": [
+    {
+      "name": "testTypeAdapterThrowsException",
+      "delta": -549.0,
+      "globalPercentage": 2.1214111828123188,
+      "categoryPercentage": 0.9478754812755745,
+      "category": "NEGATIVE"
+    }
+  ],
+  "com.google.gson.JsonPrimitiveTest": [
+    {
+      "name": "testBoolean",
+      "delta": 61.0,
+      "globalPercentage": -0.23571235364581322,
+      "categoryPercentage": 0.19038701622971285,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testValidJsonOnToString",
+      "delta": -1465.0,
+      "globalPercentage": 5.66096062444453,
+      "categoryPercentage": 2.5293944992144204,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testEquals",
+      "delta": -793.0,
+      "globalPercentage": 3.0642605973955717,
+      "categoryPercentage": 1.3691534729536077,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testEqualsDoesNotEquateStringAndNonStringTypes",
+      "delta": 1525.0,
+      "globalPercentage": -5.89280884114533,
+      "categoryPercentage": 4.759675405742821,
+      "category": "POSITIVE"
+    }
+  ],
+  "com.google.gson.MixedStreamTest": [
+    {
+      "name": "testReadNulls",
+      "delta": -2137.0,
+      "globalPercentage": 8.257660651493488,
+      "categoryPercentage": 3.689635525475233,
+      "category": "NEGATIVE"
+    }
+  ],
+  "com.google.gson.functional.TypeVariableTest": [
+    {
+      "name": "testBasicTypeVariables",
+      "delta": 793.0,
+      "globalPercentage": -3.0642605973955717,
+      "categoryPercentage": 2.475031210986267,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testTypeVariablesViaTypeParameter",
+      "delta": -611.0,
+      "globalPercentage": 2.3609876734031454,
+      "categoryPercentage": 1.0549215283413043,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testAdvancedTypeVariables",
+      "delta": -2808.0,
+      "globalPercentage": 10.850496541597435,
+      "categoryPercentage": 4.848150002589824,
+      "category": "NEGATIVE"
+    }
+  ],
+  "com.google.gson.functional.ReadersWritersTest": [
+    {
+      "name": "testReaderForDeserialization",
+      "delta": -244.0,
+      "globalPercentage": 0.9428494145832529,
+      "categoryPercentage": 0.4212779916780331,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testReadWriteTwoObjects",
+      "delta": -1159.0,
+      "globalPercentage": 4.478534719270451,
+      "categoryPercentage": 2.0010704604706575,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testWriterForSerialization",
+      "delta": -1160.0,
+      "globalPercentage": 4.482398856215465,
+      "categoryPercentage": 2.0027970096168786,
+      "category": "NEGATIVE"
+    }
+  ],
+  "com.google.gson.JsonObjectTest": [
+    {
+      "name": "testWritePropertyWithEmptyStringName",
+      "delta": 2137.0,
+      "globalPercentage": -8.257660651493488,
+      "categoryPercentage": 6.669787765293384,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testAddingBooleanProperties",
+      "delta": 183.0,
+      "globalPercentage": -0.7071370609374396,
+      "categoryPercentage": 0.5711610486891385,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testReadPropertyWithEmptyStringName",
+      "delta": -610.0,
+      "globalPercentage": 2.3571235364581318,
+      "categoryPercentage": 1.0531949791950828,
+      "category": "NEGATIVE"
+    }
+  ],
+  "com.google.gson.functional.ArrayTest": [
+    {
+      "name": "testArrayOfObjectsWithoutTypeInfoDeserialization",
+      "delta": 245.0,
+      "globalPercentage": -0.9467135515282662,
+      "categoryPercentage": 0.764669163545568,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testObjectArrayWithNonPrimitivesSerialization",
+      "delta": 121.0,
+      "globalPercentage": -0.4675605703466131,
+      "categoryPercentage": 0.3776529338327091,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testArrayWithoutTypeInfoDeserialization",
+      "delta": 855.0,
+      "globalPercentage": -3.3038370879863983,
+      "categoryPercentage": 2.6685393258426964,
+      "category": "POSITIVE"
+    }
+  ],
+  "com.google.gson.functional.MapTest": [
+    {
+      "name": "testReadMapsWithEmptyStringKey",
+      "delta": -1708.0,
+      "globalPercentage": 6.599945902082769,
+      "categoryPercentage": 2.948945941746232,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testWriteMapsWithEmptyStringKey",
+      "delta": -672.0,
+      "globalPercentage": 2.5967000270489584,
+      "categoryPercentage": 1.1602410262608125,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testInterfaceTypeMapWithSerializer",
+      "delta": 793.0,
+      "globalPercentage": -3.0642605973955717,
+      "categoryPercentage": 2.475031210986267,
+      "category": "POSITIVE"
+    }
+  ],
+  "com.google.gson.functional.MapAsArrayTypeAdapterTest": [
+    {
+      "name": "testTwoTypesCollapseToOneSerialize",
+      "delta": -2380.0,
+      "globalPercentage": 9.196645929131728,
+      "categoryPercentage": 4.109186968007044,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testTwoTypesCollapseToOneDeserialize",
+      "delta": -672.0,
+      "globalPercentage": 2.5967000270489584,
+      "categoryPercentage": 1.1602410262608125,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testSerializeComplexMapWithTypeAdapter",
+      "delta": -4882.0,
+      "globalPercentage": 18.864716565555085,
+      "categoryPercentage": 8.429012931853105,
+      "category": "NEGATIVE"
+    }
+  ],
+  "com.google.gson.functional.PrimitiveTest": [
+    {
+      "name": "testPrimitiveBooleanAutoboxedInASingleElementArraySerialization",
+      "delta": 426.0,
+      "globalPercentage": -1.6461223385756791,
+      "categoryPercentage": 1.3295880149812735,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testPrimitiveBooleanAutoboxedSerialization",
+      "delta": -610.0,
+      "globalPercentage": 2.3571235364581318,
+      "categoryPercentage": 1.0531949791950828,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testPrimitiveBooleanAutoboxedInASingleElementArrayDeserialization",
+      "delta": -122.0,
+      "globalPercentage": 0.47142470729162644,
+      "categoryPercentage": 0.21063899583901655,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testPrimitiveBooleanAutoboxedDeserialization",
+      "delta": 366.0,
+      "globalPercentage": -1.414274121874879,
+      "categoryPercentage": 1.142322097378277,
+      "category": "POSITIVE"
+    }
+  ],
+  "com.google.gson.functional.DefaultTypeAdaptersTest": [
+    {
+      "name": "testBitSetDeserialization",
+      "delta": 732.0,
+      "globalPercentage": -2.828548243749758,
+      "categoryPercentage": 2.284644194756554,
+      "category": "POSITIVE"
+    }
+  ]
+}
