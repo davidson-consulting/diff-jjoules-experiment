@@ -1,0 +1,408 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< commons-io:commons-io >------------------------
+[INFO] Building Apache Commons IO 2.6-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ commons-io ---
+[INFO] Deleting /tmp/v1/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-3) @ commons-io ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.10:parse-version (parse-version) @ commons-io ---
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.8:run (javadoc.resources) @ commons-io ---
+[INFO] Executing tasks
+
+main:
+     [copy] Copying 2 files to /tmp/v1/target/apidocs/META-INF
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (default) @ commons-io ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ commons-io ---
+[INFO] Executing: /bin/sh -c cd '/tmp/v1' && 'svn' '--non-interactive' 'info'
+[INFO] Working directory: /tmp/v1
+[WARNING] Cannot get the revision information from the scm repository, proceeding with revision of ?????? : 
+Exception while executing SCM command.
+[INFO] Storing buildNumber: ?????? at timestamp: 1610515211448
+[INFO] Executing: /bin/sh -c cd '/tmp/v1' && 'svn' '--non-interactive' 'info'
+[INFO] Working directory: /tmp/v1
+[WARNING] Cannot get the branch information from the scm repository, proceeding with UNKNOWN_BRANCH : 
+Exception while executing SCM command.
+[INFO] Storing buildScmBranch: UNKNOWN_BRANCH
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ commons-io ---
+[INFO] Using 'iso-8859-1' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/src/main/resources
+[INFO] Copying 2 resources to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ commons-io ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 116 source files to /tmp/v1/target/classes
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/input/ClassLoaderObjectInputStream.java: Some input files use or override a deprecated API.
+[INFO] /tmp/v1/src/main/java/org/apache/commons/io/input/ClassLoaderObjectInputStream.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-bundle-plugin:3.0.1:manifest (bundle-manifest) @ commons-io ---
+[INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.15:check (checkAPIcompatibility) @ commons-io ---
+[INFO] Signature checking is skipped.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ commons-io ---
+[INFO] Using 'iso-8859-1' encoding to copy filtered resources.
+[INFO] Copying 19 resources
+[INFO] Copying 2 resources to META-INF
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:testCompile (default-testCompile) @ commons-io ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 112 source files to /tmp/v1/target/test-classes
+[INFO] /tmp/v1/src/test/java/org/apache/commons/io/FileSystemUtilsTestCase.java: Some input files use or override a deprecated API.
+[INFO] /tmp/v1/src/test/java/org/apache/commons/io/FileSystemUtilsTestCase.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ commons-io ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:build-classpath (default-cli) @ commons-io ---
+[INFO] Skipped writing classpath file '/tmp/v1/classpath'.  No changes found.
+[INFO] 
+[INFO] --- diff-jjoules:0.0.1-SNAPSHOT:instrument (default-cli) @ commons-io ---
+[INFO] Running on:
+[INFO] /tmp/v1
+[INFO] /tmp/v2/
+[INFO] Enable JUnit4 mode
+[INFO] Configuration{pathToFirstVersion='/tmp/v1', pathToSecondVersion='/tmp/v2/', pathToTestListAsCSV='/tmp/v1/testsThatExecuteTheChange.csv', classpath=[/home/spino/.m2/repository/junit/junit/4.12/junit-4.12.jar, /home/spino/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar], junit4=true}
+[INFO] org.apache.commons.io.FileUtilsCleanSymlinksTestCase:[testCleanDirWithSymlinkFile, testCleanDirWithASymlinkDir, testIdentifiesSymlinkFile, testStillClearsIfGivenDirectoryIsASymlink, testCleanDirWithParentSymlinks]
+org.apache.commons.io.FileUtilsCleanDirectoryTestCase:[testDeletesRegular, testThrowsOnCannotDeleteFile, testDeletesNested]
+org.apache.commons.io.FileCleaningTrackerTestCase:[testFileCleanerDirectory_ForceStrategy]
+org.apache.commons.io.output.FileWriterWithEncodingTest:[sameEncoding_string_CharsetEncoder_constructor, sameEncoding_string_constructor, sameEncoding_Charset_constructor, sameEncoding_string_Charset_constructor, constructor_File_encoding_badEncoding, testDifferentEncoding, sameEncoding_CharsetEncoder_constructor, sameEncoding_string_string_constructor, constructor_File_directory]
+org.apache.commons.io.LineIteratorTestCase:[testNextLineOnlyDefaultEncoding, testCloseEarly, testValidEncoding, testThreeLines, testTwoLines, testNextOnly, testZeroLines, testFilteringBufferedReader, testFilteringFileReader, testNextLineOnlyUtf8Encoding, testInvalidEncoding, testMissingFile, testOneLines, testNextLineOnlyNullEncoding]
+org.apache.commons.io.FileDeleteStrategyTestCase:[testDeleteForce]
+org.apache.commons.io.filefilter.FileFilterTestCase:[testMagicNumberFileFilterStringOffset, testMagicNumberFileFilterBytesOffset, testMagicNumberFileFilterBytes, testEmpty, testMagicNumberFileFilterString]
+org.apache.commons.io.output.LockableFileWriterTest:[testAlternateLockDir, testFileNotLocked, testFileLocked]
+org.apache.commons.io.FileUtilsTestCase:[testCopyFile1, testCopyFile2, testReadFileToByteArray, testCopyURLToFile, testCopyDirectoryToDirectory_NonExistingDest, testContentEquals, testCopyDirectoryToNonExistingDest, testWriteLines_5argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines, testChecksumOnNullChecksum, testCopyDirectoryToGrandChild, testMoveFile_CopyDelete, testCopyToSelf, testForceDeleteAFile2, testMoveToDirectory_Errors, testForceDeleteAFile1, testWriteStringToFileWithEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines, testForceDeleteAFile3, testWriteLines_3arg_nullSeparator, testReadFileToStringWithDefaultEncoding, testWrite_WithAppendOptionFalse_ShouldDeletePreviousFileLines, testCopyURLToFileWithTimeout, testMoveDirectoryToDirectory_Errors, testWriteLinesEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines, testWriteLines_3argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines, testWriteWithEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines, testMoveFile_CopyDelete_Failed, testWriteByteArrayToFile_WithAppendOptionFalse_ShouldDeletePreviousFileLines, testWriteByteArrayToFile_WithOffsetAndLength_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines, testReadFileToStringWithEncoding, testWriteStringToFile_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines, testChecksumDouble, testCopyFileToOutputStream, testCopyFile2WithoutFileDatePreservation, testChecksumCRC32, testCopyDirectoryFiltered, testTouch, testFileUtils, testCopyDirectoryPreserveDates, testMoveDirectory_Rename, testContentEqualsIgnoreEOL, testCopyFile1ToDir, testWriteByteArrayToFile, testWriteLinesEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines, testWriteByteArrayToFile_WithOffsetAndLength_WithAppendOptionTrue_ShouldDeletePreviousFileLines, testWriteLines_3argsWithAppendOptionFalse_ShouldDeletePreviousFileLines, testWriteLines_4arg, testWriteCharSequence1, testWriteLines_4argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines, testChecksum, testWriteCharSequence2, testWriteByteArrayToFile_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines, testCopyDirectoryToExistingDest, testCopyFile2ToDir, testDeleteQuietlyDir, testMoveDirectoryToDirectory, testIsFileNewerOlder, testCopyDirectoryToChild, testWrite_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines, testWriteByteArrayToFile_WithOffsetAndLength, testWriteStringToFileWithEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines, testIncorrectOutputSize, testReadLines, testWriteLines_4arg_Writer_nullData, testWriteWithEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines, testWriteLines_5argsWithAppendOptionFalse_ShouldDeletePreviousFileLines, testWriteLines_4arg_nullSeparator, testWriteStringToFile_WithAppendOptionFalse_ShouldDeletePreviousFileLines, testMoveDirectory_CopyDelete, testForceDeleteDir, testWriteStringToFile2, testWriteLines_4argsWithAppendOptionFalse_ShouldDeletePreviousFileLines, testWriteStringToFile1, testWriteStringToFile3]
+org.apache.commons.io.monitor.FileAlterationObserverTestCase:[testDirectory, testFileUpdate, testObserveSingleFile, testFileDelete, testFileCreate]
+org.apache.commons.io.FileCleanerTestCase:[testFileCleanerDirectory_ForceStrategy]
+org.apache.commons.io.input.TailerTest:[testTailerEof, testStopWithNoFileUsingExecutor, testBufferBreak, testLongFile, testMultiByteBreak, testInterrupt, testStopWithNoFile, testIO335, testTailerEndOfFileReached, testTailer]
+org.apache.commons.io.monitor.FileAlterationMonitorTestCase:[testMonitor, testThreadFactory]
+org.apache.commons.io.output.DeferredFileOutputStreamTest:[testWriteToLarge, testWriteToSmall]
+[INFO] Instrument version before commit...
+[INFO] Run on /tmp/v1
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit4.JJoulesProcessor
+Processing org.apache.commons.io.filefilter.FileFilterTestCase#testEmpty
+Processing org.apache.commons.io.filefilter.FileFilterTestCase#testMagicNumberFileFilterBytes
+Processing org.apache.commons.io.filefilter.FileFilterTestCase#testMagicNumberFileFilterBytesOffset
+Processing org.apache.commons.io.filefilter.FileFilterTestCase#testMagicNumberFileFilterString
+Processing org.apache.commons.io.filefilter.FileFilterTestCase#testMagicNumberFileFilterStringOffset
+Processing org.apache.commons.io.input.TailerTest#testLongFile
+Processing org.apache.commons.io.input.TailerTest#testBufferBreak
+Processing org.apache.commons.io.input.TailerTest#testMultiByteBreak
+Processing org.apache.commons.io.input.TailerTest#testTailerEof
+Processing org.apache.commons.io.input.TailerTest#testTailer
+Processing org.apache.commons.io.input.TailerTest#testTailerEndOfFileReached
+Processing org.apache.commons.io.input.TailerTest#testStopWithNoFile
+Processing org.apache.commons.io.input.TailerTest#testInterrupt
+Processing org.apache.commons.io.input.TailerTest#testStopWithNoFileUsingExecutor
+Processing org.apache.commons.io.input.TailerTest#testIO335
+Processing org.apache.commons.io.monitor.FileAlterationMonitorTestCase#testMonitor
+Processing org.apache.commons.io.monitor.FileAlterationMonitorTestCase#testThreadFactory
+Processing org.apache.commons.io.monitor.FileAlterationObserverTestCase#testDirectory
+Processing org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileCreate
+Processing org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileUpdate
+Processing org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileDelete
+Processing org.apache.commons.io.monitor.FileAlterationObserverTestCase#testObserveSingleFile
+Processing org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall
+Processing org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_string_constructor
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_string_string_constructor
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_Charset_constructor
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_string_Charset_constructor
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_CharsetEncoder_constructor
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_string_CharsetEncoder_constructor
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#testDifferentEncoding
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_encoding_badEncoding
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_directory
+Processing org.apache.commons.io.output.LockableFileWriterTest#testFileLocked
+Processing org.apache.commons.io.output.LockableFileWriterTest#testAlternateLockDir
+Processing org.apache.commons.io.output.LockableFileWriterTest#testFileNotLocked
+Processing org.apache.commons.io.FileCleaningTrackerTestCase#testFileCleanerDirectory_ForceStrategy
+Processing org.apache.commons.io.FileDeleteStrategyTestCase#testDeleteForce
+Processing org.apache.commons.io.FileUtilsCleanDirectoryTestCase#testDeletesRegular
+Processing org.apache.commons.io.FileUtilsCleanDirectoryTestCase#testDeletesNested
+Processing org.apache.commons.io.FileUtilsCleanDirectoryTestCase#testThrowsOnCannotDeleteFile
+Processing org.apache.commons.io.FileUtilsCleanSymlinksTestCase#testCleanDirWithSymlinkFile
+Processing org.apache.commons.io.FileUtilsCleanSymlinksTestCase#testCleanDirWithASymlinkDir
+Processing org.apache.commons.io.FileUtilsCleanSymlinksTestCase#testCleanDirWithParentSymlinks
+Processing org.apache.commons.io.FileUtilsCleanSymlinksTestCase#testStillClearsIfGivenDirectoryIsASymlink
+Processing org.apache.commons.io.FileUtilsCleanSymlinksTestCase#testIdentifiesSymlinkFile
+Processing org.apache.commons.io.FileUtilsTestCase#testContentEquals
+Processing org.apache.commons.io.FileUtilsTestCase#testContentEqualsIgnoreEOL
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyURLToFile
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyURLToFileWithTimeout
+Processing org.apache.commons.io.FileUtilsTestCase#testIsFileNewerOlder
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile1
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFileToOutputStream
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile2
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyToSelf
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile2WithoutFileDatePreservation
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToDirectory_NonExistingDest
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToNonExistingDest
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToExistingDest
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryFiltered
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryPreserveDates
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToChild
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToGrandChild
+Processing org.apache.commons.io.FileUtilsTestCase#testForceDeleteAFile1
+Processing org.apache.commons.io.FileUtilsTestCase#testForceDeleteAFile2
+Processing org.apache.commons.io.FileUtilsTestCase#testForceDeleteAFile3
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile1ToDir
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile2ToDir
+Processing org.apache.commons.io.FileUtilsTestCase#testForceDeleteDir
+Processing org.apache.commons.io.FileUtilsTestCase#testFileUtils
+Processing org.apache.commons.io.FileUtilsTestCase#testTouch
+Processing org.apache.commons.io.FileUtilsTestCase#testReadFileToStringWithDefaultEncoding
+Processing org.apache.commons.io.FileUtilsTestCase#testReadFileToStringWithEncoding
+Processing org.apache.commons.io.FileUtilsTestCase#testReadFileToByteArray
+Processing org.apache.commons.io.FileUtilsTestCase#testReadLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteStringToFile1
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteStringToFile2
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteStringToFile3
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteCharSequence1
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteCharSequence2
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteByteArrayToFile
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteByteArrayToFile_WithOffsetAndLength
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4arg
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4arg_Writer_nullData
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4arg_nullSeparator
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_3arg_nullSeparator
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_5argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_5argsWithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4argsWithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLinesEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLinesEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_3argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_3argsWithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteStringToFileWithEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteStringToFileWithEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteStringToFile_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteStringToFile_WithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteWithEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteWithEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWrite_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWrite_WithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteByteArrayToFile_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteByteArrayToFile_WithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteByteArrayToFile_WithOffsetAndLength_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteByteArrayToFile_WithOffsetAndLength_WithAppendOptionTrue_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksumCRC32
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksum
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksumOnNullChecksum
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksumDouble
+Processing org.apache.commons.io.FileUtilsTestCase#testDeleteQuietlyDir
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveFile_CopyDelete
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveFile_CopyDelete_Failed
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveDirectory_Rename
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveDirectory_CopyDelete
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveDirectoryToDirectory
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveDirectoryToDirectory_Errors
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveToDirectory_Errors
+Processing org.apache.commons.io.FileUtilsTestCase#testIncorrectOutputSize
+Processing org.apache.commons.io.LineIteratorTestCase#testZeroLines
+Processing org.apache.commons.io.LineIteratorTestCase#testOneLines
+Processing org.apache.commons.io.LineIteratorTestCase#testTwoLines
+Processing org.apache.commons.io.LineIteratorTestCase#testThreeLines
+Processing org.apache.commons.io.LineIteratorTestCase#testMissingFile
+Processing org.apache.commons.io.LineIteratorTestCase#testValidEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testInvalidEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyDefaultEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyNullEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyUtf8Encoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextOnly
+Processing org.apache.commons.io.LineIteratorTestCase#testCloseEarly
+Processing org.apache.commons.io.LineIteratorTestCase#testFilteringFileReader
+Processing org.apache.commons.io.LineIteratorTestCase#testFilteringBufferedReader
+[INFO] Printing org.apache.commons.io.output.DeferredFileOutputStreamTest to /tmp/v1/src/test/java//org/apache/commons/io/output/DeferredFileOutputStreamTest.java
+[INFO] Printing org.apache.commons.io.output.FileWriterWithEncodingTest to /tmp/v1/src/test/java//org/apache/commons/io/output/FileWriterWithEncodingTest.java
+[INFO] Printing org.apache.commons.io.output.LockableFileWriterTest to /tmp/v1/src/test/java//org/apache/commons/io/output/LockableFileWriterTest.java
+[INFO] Printing org.apache.commons.io.monitor.FileAlterationObserverTestCase to /tmp/v1/src/test/java//org/apache/commons/io/monitor/FileAlterationObserverTestCase.java
+[INFO] Printing org.apache.commons.io.FileUtilsTestCase to /tmp/v1/src/test/java//org/apache/commons/io/FileUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.FileCleaningTrackerTestCase to /tmp/v1/src/test/java//org/apache/commons/io/FileCleaningTrackerTestCase.java
+[INFO] Printing org.apache.commons.io.FileDeleteStrategyTestCase to /tmp/v1/src/test/java//org/apache/commons/io/FileDeleteStrategyTestCase.java
+[INFO] Printing org.apache.commons.io.FileUtilsCleanDirectoryTestCase to /tmp/v1/src/test/java//org/apache/commons/io/FileUtilsCleanDirectoryTestCase.java
+[INFO] Printing org.apache.commons.io.FileUtilsCleanSymlinksTestCase to /tmp/v1/src/test/java//org/apache/commons/io/FileUtilsCleanSymlinksTestCase.java
+[INFO] Printing org.apache.commons.io.monitor.FileAlterationMonitorTestCase to /tmp/v1/src/test/java//org/apache/commons/io/monitor/FileAlterationMonitorTestCase.java
+[INFO] Printing org.apache.commons.io.input.TailerTest to /tmp/v1/src/test/java//org/apache/commons/io/input/TailerTest.java
+[INFO] Printing org.apache.commons.io.filefilter.FileFilterTestCase to /tmp/v1/src/test/java//org/apache/commons/io/filefilter/FileFilterTestCase.java
+[INFO] Printing org.apache.commons.io.LineIteratorTestCase to /tmp/v1/src/test/java//org/apache/commons/io/LineIteratorTestCase.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v1/pom.xml
+[INFO] Output new POM file in /tmp/v1/pom.xml
+[INFO] Instrument version after commit...
+[INFO] Run on /tmp/v2/
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.process.junit4.JJoulesProcessor
+Processing org.apache.commons.io.filefilter.FileFilterTestCase#testEmpty
+Processing org.apache.commons.io.filefilter.FileFilterTestCase#testMagicNumberFileFilterBytes
+Processing org.apache.commons.io.filefilter.FileFilterTestCase#testMagicNumberFileFilterBytesOffset
+Processing org.apache.commons.io.filefilter.FileFilterTestCase#testMagicNumberFileFilterString
+Processing org.apache.commons.io.filefilter.FileFilterTestCase#testMagicNumberFileFilterStringOffset
+Processing org.apache.commons.io.input.TailerTest#testLongFile
+Processing org.apache.commons.io.input.TailerTest#testBufferBreak
+Processing org.apache.commons.io.input.TailerTest#testMultiByteBreak
+Processing org.apache.commons.io.input.TailerTest#testTailerEof
+Processing org.apache.commons.io.input.TailerTest#testTailer
+Processing org.apache.commons.io.input.TailerTest#testTailerEndOfFileReached
+Processing org.apache.commons.io.input.TailerTest#testStopWithNoFile
+Processing org.apache.commons.io.input.TailerTest#testInterrupt
+Processing org.apache.commons.io.input.TailerTest#testStopWithNoFileUsingExecutor
+Processing org.apache.commons.io.input.TailerTest#testIO335
+Processing org.apache.commons.io.monitor.FileAlterationMonitorTestCase#testMonitor
+Processing org.apache.commons.io.monitor.FileAlterationMonitorTestCase#testThreadFactory
+Processing org.apache.commons.io.monitor.FileAlterationObserverTestCase#testDirectory
+Processing org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileCreate
+Processing org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileUpdate
+Processing org.apache.commons.io.monitor.FileAlterationObserverTestCase#testFileDelete
+Processing org.apache.commons.io.monitor.FileAlterationObserverTestCase#testObserveSingleFile
+Processing org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToSmall
+Processing org.apache.commons.io.output.DeferredFileOutputStreamTest#testWriteToLarge
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_string_constructor
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_string_string_constructor
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_Charset_constructor
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_string_Charset_constructor
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_CharsetEncoder_constructor
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#sameEncoding_string_CharsetEncoder_constructor
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#testDifferentEncoding
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_encoding_badEncoding
+Processing org.apache.commons.io.output.FileWriterWithEncodingTest#constructor_File_directory
+Processing org.apache.commons.io.output.LockableFileWriterTest#testFileLocked
+Processing org.apache.commons.io.output.LockableFileWriterTest#testAlternateLockDir
+Processing org.apache.commons.io.output.LockableFileWriterTest#testFileNotLocked
+Processing org.apache.commons.io.FileCleaningTrackerTestCase#testFileCleanerDirectory_ForceStrategy
+Processing org.apache.commons.io.FileDeleteStrategyTestCase#testDeleteForce
+Processing org.apache.commons.io.FileUtilsCleanDirectoryTestCase#testDeletesRegular
+Processing org.apache.commons.io.FileUtilsCleanDirectoryTestCase#testDeletesNested
+Processing org.apache.commons.io.FileUtilsCleanDirectoryTestCase#testThrowsOnCannotDeleteFile
+Processing org.apache.commons.io.FileUtilsCleanSymlinksTestCase#testCleanDirWithSymlinkFile
+Processing org.apache.commons.io.FileUtilsCleanSymlinksTestCase#testCleanDirWithASymlinkDir
+Processing org.apache.commons.io.FileUtilsCleanSymlinksTestCase#testCleanDirWithParentSymlinks
+Processing org.apache.commons.io.FileUtilsCleanSymlinksTestCase#testStillClearsIfGivenDirectoryIsASymlink
+Processing org.apache.commons.io.FileUtilsCleanSymlinksTestCase#testIdentifiesSymlinkFile
+Processing org.apache.commons.io.FileUtilsTestCase#testContentEquals
+Processing org.apache.commons.io.FileUtilsTestCase#testContentEqualsIgnoreEOL
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyURLToFile
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyURLToFileWithTimeout
+Processing org.apache.commons.io.FileUtilsTestCase#testIsFileNewerOlder
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile1
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFileToOutputStream
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile2
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyToSelf
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile2WithoutFileDatePreservation
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToDirectory_NonExistingDest
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToNonExistingDest
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToExistingDest
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryFiltered
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryPreserveDates
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToChild
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyDirectoryToGrandChild
+Processing org.apache.commons.io.FileUtilsTestCase#testForceDeleteAFile1
+Processing org.apache.commons.io.FileUtilsTestCase#testForceDeleteAFile2
+Processing org.apache.commons.io.FileUtilsTestCase#testForceDeleteAFile3
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile1ToDir
+Processing org.apache.commons.io.FileUtilsTestCase#testCopyFile2ToDir
+Processing org.apache.commons.io.FileUtilsTestCase#testForceDeleteDir
+Processing org.apache.commons.io.FileUtilsTestCase#testFileUtils
+Processing org.apache.commons.io.FileUtilsTestCase#testTouch
+Processing org.apache.commons.io.FileUtilsTestCase#testReadFileToStringWithDefaultEncoding
+Processing org.apache.commons.io.FileUtilsTestCase#testReadFileToStringWithEncoding
+Processing org.apache.commons.io.FileUtilsTestCase#testReadFileToByteArray
+Processing org.apache.commons.io.FileUtilsTestCase#testReadLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteStringToFile1
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteStringToFile2
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteStringToFile3
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteCharSequence1
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteCharSequence2
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteByteArrayToFile
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteByteArrayToFile_WithOffsetAndLength
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4arg
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4arg_Writer_nullData
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4arg_nullSeparator
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_3arg_nullSeparator
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_5argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_5argsWithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_4argsWithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLinesEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLinesEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_3argsWithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteLines_3argsWithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteStringToFileWithEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteStringToFileWithEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteStringToFile_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteStringToFile_WithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteWithEncoding_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteWithEncoding_WithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWrite_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWrite_WithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteByteArrayToFile_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteByteArrayToFile_WithAppendOptionFalse_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteByteArrayToFile_WithOffsetAndLength_WithAppendOptionTrue_ShouldNotDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testWriteByteArrayToFile_WithOffsetAndLength_WithAppendOptionTrue_ShouldDeletePreviousFileLines
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksumCRC32
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksum
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksumOnNullChecksum
+Processing org.apache.commons.io.FileUtilsTestCase#testChecksumDouble
+Processing org.apache.commons.io.FileUtilsTestCase#testDeleteQuietlyDir
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveFile_CopyDelete
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveFile_CopyDelete_Failed
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveDirectory_Rename
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveDirectory_CopyDelete
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveDirectoryToDirectory
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveDirectoryToDirectory_Errors
+Processing org.apache.commons.io.FileUtilsTestCase#testMoveToDirectory_Errors
+Processing org.apache.commons.io.FileUtilsTestCase#testIncorrectOutputSize
+Processing org.apache.commons.io.LineIteratorTestCase#testZeroLines
+Processing org.apache.commons.io.LineIteratorTestCase#testOneLines
+Processing org.apache.commons.io.LineIteratorTestCase#testTwoLines
+Processing org.apache.commons.io.LineIteratorTestCase#testThreeLines
+Processing org.apache.commons.io.LineIteratorTestCase#testMissingFile
+Processing org.apache.commons.io.LineIteratorTestCase#testValidEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testInvalidEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyDefaultEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyNullEncoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextLineOnlyUtf8Encoding
+Processing org.apache.commons.io.LineIteratorTestCase#testNextOnly
+Processing org.apache.commons.io.LineIteratorTestCase#testCloseEarly
+Processing org.apache.commons.io.LineIteratorTestCase#testFilteringFileReader
+Processing org.apache.commons.io.LineIteratorTestCase#testFilteringBufferedReader
+[INFO] Printing org.apache.commons.io.output.DeferredFileOutputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/output/DeferredFileOutputStreamTest.java
+[INFO] Printing org.apache.commons.io.output.DeferredFileOutputStreamTest to /tmp/v2//src/test/java//org/apache/commons/io/output/DeferredFileOutputStreamTest.java
+[INFO] Printing org.apache.commons.io.output.FileWriterWithEncodingTest to /tmp/v2//src/test/java//org/apache/commons/io/output/FileWriterWithEncodingTest.java
+[INFO] Printing org.apache.commons.io.output.FileWriterWithEncodingTest to /tmp/v2//src/test/java//org/apache/commons/io/output/FileWriterWithEncodingTest.java
+[INFO] Printing org.apache.commons.io.output.LockableFileWriterTest to /tmp/v2//src/test/java//org/apache/commons/io/output/LockableFileWriterTest.java
+[INFO] Printing org.apache.commons.io.output.LockableFileWriterTest to /tmp/v2//src/test/java//org/apache/commons/io/output/LockableFileWriterTest.java
+[INFO] Printing org.apache.commons.io.monitor.FileAlterationObserverTestCase to /tmp/v2//src/test/java//org/apache/commons/io/monitor/FileAlterationObserverTestCase.java
+[INFO] Printing org.apache.commons.io.monitor.FileAlterationObserverTestCase to /tmp/v2//src/test/java//org/apache/commons/io/monitor/FileAlterationObserverTestCase.java
+[INFO] Printing org.apache.commons.io.FileUtilsTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.FileUtilsTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsTestCase.java
+[INFO] Printing org.apache.commons.io.FileCleaningTrackerTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileCleaningTrackerTestCase.java
+[INFO] Printing org.apache.commons.io.FileDeleteStrategyTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileDeleteStrategyTestCase.java
+[INFO] Printing org.apache.commons.io.FileUtilsCleanDirectoryTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsCleanDirectoryTestCase.java
+[INFO] Printing org.apache.commons.io.FileUtilsCleanSymlinksTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsCleanSymlinksTestCase.java
+[INFO] Printing org.apache.commons.io.FileUtilsCleanDirectoryTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsCleanDirectoryTestCase.java
+[INFO] Printing org.apache.commons.io.FileUtilsCleanSymlinksTestCase to /tmp/v2//src/test/java//org/apache/commons/io/FileUtilsCleanSymlinksTestCase.java
+[INFO] Printing org.apache.commons.io.monitor.FileAlterationMonitorTestCase to /tmp/v2//src/test/java//org/apache/commons/io/monitor/FileAlterationMonitorTestCase.java
+[INFO] Printing org.apache.commons.io.monitor.FileAlterationMonitorTestCase to /tmp/v2//src/test/java//org/apache/commons/io/monitor/FileAlterationMonitorTestCase.java
+[INFO] Printing org.apache.commons.io.input.TailerTest to /tmp/v2//src/test/java//org/apache/commons/io/input/TailerTest.java
+[INFO] Printing org.apache.commons.io.input.TailerTest to /tmp/v2//src/test/java//org/apache/commons/io/input/TailerTest.java
+[INFO] Printing org.apache.commons.io.filefilter.FileFilterTestCase to /tmp/v2//src/test/java//org/apache/commons/io/filefilter/FileFilterTestCase.java
+[INFO] Printing org.apache.commons.io.LineIteratorTestCase to /tmp/v2//src/test/java//org/apache/commons/io/LineIteratorTestCase.java
+[INFO] Printing org.apache.commons.io.filefilter.FileFilterTestCase to /tmp/v2//src/test/java//org/apache/commons/io/filefilter/FileFilterTestCase.java
+[INFO] Printing org.apache.commons.io.LineIteratorTestCase to /tmp/v2//src/test/java//org/apache/commons/io/LineIteratorTestCase.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v2//pom.xml
+[INFO] Output new POM file in /tmp/v2//pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.591 s
+[INFO] Finished at: 2021-01-13T06:20:25+01:00
+[INFO] ------------------------------------------------------------------------

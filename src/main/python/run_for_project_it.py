@@ -145,7 +145,7 @@ if __name__ == '__main__':
     nb_iteration = int(args.iteration)
     nb_commits = int(args.nb_commits)
     mode = args.mode
-    main_module_name = read_module_name(args.commits + '/' + project_name)
+    main_module_name = read_module_name(args.commits + '/' + project_name).split('\n')[0]
     
     commits, repo_url = init_commits(commits_file_path)
     init_repositories(repo_url[:-1])
