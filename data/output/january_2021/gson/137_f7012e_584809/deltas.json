@@ -1,0 +1,94 @@
+{
+  "com.google.gson.functional.StreamingTypeAdaptersTest": [
+    {
+      "name": "testNullSafe",
+      "delta": 11902.0,
+      "globalPercentage": 86.29014717610382,
+      "categoryPercentage": 71.1714405310052,
+      "category": "POSITIVE"
+    }
+  ],
+  "com.google.gson.functional.TypeAdapterPrecedenceTest": [
+    {
+      "name": "testStreamingFollowedByNonstreamingHierarchical",
+      "delta": 671.0,
+      "globalPercentage": 4.8647864858986445,
+      "categoryPercentage": 4.012437959696227,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testNonstreamingFollowedByNonstreaming",
+      "delta": 1892.0,
+      "globalPercentage": 13.717102878271586,
+      "categoryPercentage": 11.31375949291395,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testStreamingFollowedByStreaming",
+      "delta": 366.0,
+      "globalPercentage": 2.6535199013992603,
+      "categoryPercentage": 2.188602523470669,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testSerializeNonstreamingTypeAdapterFollowedByStreamingTypeAdapter",
+      "delta": -794.0,
+      "globalPercentage": -5.756543174073806,
+      "categoryPercentage": 27.098976109215016,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testStreamingHierarchicalFollowedByNonstreaming",
+      "delta": 488.0,
+      "globalPercentage": 3.538026535199014,
+      "categoryPercentage": 2.9181366979608923,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testStreamingFollowedByNonstreaming",
+      "delta": -488.0,
+      "globalPercentage": -3.538026535199014,
+      "categoryPercentage": 16.655290102389078,
+      "category": "NEGATIVE"
+    },
+    {
+      "name": "testNonstreamingHierarchicalFollowedByNonstreaming",
+      "delta": 428.0,
+      "globalPercentage": 3.103023272674545,
+      "categoryPercentage": 2.5593493990312743,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testStreamingHierarchicalFollowedByNonstreamingHierarchical",
+      "delta": -61.0,
+      "globalPercentage": -0.44225331689987674,
+      "categoryPercentage": 2.0819112627986347,
+      "category": "NEGATIVE"
+    }
+  ],
+  "global": [
+    {
+      "name": "",
+      "delta": 13793.0,
+      "globalPercentage": 100.0,
+      "categoryPercentage": 0.0,
+      "category": "POSITIVE"
+    }
+  ],
+  "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest": [
+    {
+      "name": "testRegisteredDeserializerOverridesJsonAdapter",
+      "delta": 976.0,
+      "globalPercentage": 7.076053070398028,
+      "categoryPercentage": 5.8362733959217845,
+      "category": "POSITIVE"
+    },
+    {
+      "name": "testRegisteredSerializerOverridesJsonAdapter",
+      "delta": -1587.0,
+      "globalPercentage": -11.505836293772203,
+      "categoryPercentage": 54.16382252559727,
+      "category": "NEGATIVE"
+    }
+  ]
+}

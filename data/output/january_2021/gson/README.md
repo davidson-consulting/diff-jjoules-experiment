@@ -8,4 +8,4 @@ https://github.com/google/gson
 
 | Nb total commit | Nb commit measured | Nb commit errord | perc |
 | --- | --- | --- | --- |
-| 1485 | 453 | 1032 | 30.51 |
+| 1485 | 1 | 1484 | 0.07 |
