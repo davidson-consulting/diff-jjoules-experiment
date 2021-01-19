@@ -38,8 +38,22 @@ def run_mvn_test(path, tests_to_execute, output_path_file, jjouled=False):
         ])
     )
 
+def run_mvn_test_class(path, tests_to_execute, output_path_file, jjouled=False):
+    return run_command(
+        ' '.join([
+            MVN_CMD,
+            path + (JJOULED_POM_FILE if jjouled else POM_FILE),
+            MVN_LOG_OPT,
+            output_path_file,
+            MVN_CLEAN_GOAL,
+            MVN_TEST,
+            OPT_TEST + ','.join(tests_to_execute),
+        ])
+    )
+
 CMD_DIFF_TEST_SELECTION = 'eu.stamp-project:dspot-diff-test-selection:3.1.1-SNAPSHOT:list'
 CMD_DIFF_INSTRUMENT = 'fr.davidson:diff-jjoules:instrument'
+CMD_DIFF_CLASS_INSTRUMENT = 'fr.davidson:diff-jjoules:class-instrument'
 OPT_PATH_DIR_SECOND_VERSION = '-Dpath-dir-second-version='
 OPT_TEST_LISTS = '-Dtests-list='
 VALUE_TEST_LISTS = 'testsThatExecuteTheChange.csv'
@@ -122,6 +136,27 @@ def run_mvn_build_classpath_and_instrument(path_first_version, path_second_versi
         ])
     )
 
+def run_mvn_build_classpath_and_instrument(path_first_version, path_second_version, output_path_file):
+    return run_command(
+         ' '.join([
+            MVN_CMD,
+            path_first_version + POM_FILE,
+            MVN_CLEAN_GOAL,
+            MVN_LOG_OPT,
+            output_path_file,
+            MVN_TEST,
+            MVN_SKIP_TEST,
+            BUILD_CLASSPATH_GOAL,
+            OPT_OUTPUT_CP_FILE,
+            CMD_DIFF_CLASS_INSTRUMENT,
+            #OPT_TEST_LISTS + path_first_version + '/' + VALUE_TEST_LISTS,
+            OPT_TEST_LISTS + VALUE_TEST_LISTS,
+            OPT_PATH_DIR_SECOND_VERSION + path_second_version,
+            OPT_CP_V2,
+            OPT_CP_V1,
+        ])
+    )
+
 CMD_JJOULES_LOCATE = 'fr.davidson:diff-jjoules:locate'
 DIFF_JJOULES_OUTPUT_PATH_OPT = '-Doutput-path='
 DIFF_JJOULES_PATH_TO_JSON_DATA_V1_OPT = '-Dpath-data-json-first-version='
@@ -134,6 +169,35 @@ def run_mvn_locate_jjoules(path_first_version, path_second_version, output_path,
             path_first_version + '/' + POM_FILE,
             OPT_PATH_DIR_SECOND_VERSION  + path_second_version,
             CMD_JJOULES_LOCATE,
+            DIFF_JJOULES_OUTPUT_PATH_OPT +  output_path,
+            DIFF_JJOULES_PATH_TO_JSON_DATA_V1_OPT + path_data_json_v1,
+            DIFF_JJOULES_PATH_TO_JSON_DATA_V2_OPT + path_data_json_v2,
+        ])
+    )
+
+CMD_JJOULES_ANALYZE = 'fr.davidson:diff-jjoules:analyze'
+
+def run_mvn_analyze_jjoules(path_first_version, path_second_version, output_path, path_data_json_v1, path_data_json_v2):
+    run_command(
+        ' '.join([
+            MVN_CMD,
+            path_first_version + '/' + POM_FILE,
+            OPT_PATH_DIR_SECOND_VERSION  + path_second_version,
+            CMD_JJOULES_ANALYZE,
+            DIFF_JJOULES_OUTPUT_PATH_OPT +  output_path,
+            DIFF_JJOULES_PATH_TO_JSON_DATA_V1_OPT + path_data_json_v1,
+            DIFF_JJOULES_PATH_TO_JSON_DATA_V2_OPT + path_data_json_v2,
+        ])
+    )
+
+def run_mvn_locate_and_analyze_jjoules(path_first_version, path_second_version, output_path, path_data_json_v1, path_data_json_v2):
+    run_command(
+        ' '.join([
+            MVN_CMD,
+            path_first_version + '/' + POM_FILE,
+            OPT_PATH_DIR_SECOND_VERSION  + path_second_version,
+            CMD_JJOULES_LOCATE,
+            CMD_JJOULES_ANALYZE,
             DIFF_JJOULES_OUTPUT_PATH_OPT +  output_path,
             DIFF_JJOULES_PATH_TO_JSON_DATA_V1_OPT + path_data_json_v1,
             DIFF_JJOULES_PATH_TO_JSON_DATA_V2_OPT + path_data_json_v2,
