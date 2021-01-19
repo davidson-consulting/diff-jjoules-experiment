@@ -115,6 +115,8 @@ def run_mvn_clean_test_build_cp(path):
         ])
     )
 
+
+
 def run_mvn_build_classpath_and_instrument(path_first_version, path_second_version, output_path_file):
     return run_command(
          ' '.join([
@@ -136,7 +138,9 @@ def run_mvn_build_classpath_and_instrument(path_first_version, path_second_versi
         ])
     )
 
-def run_mvn_build_classpath_and_instrument(path_first_version, path_second_version, output_path_file):
+OPT_NB_DUPLICATION = '-Dnb-duplication=100'
+
+def run_mvn_build_classpath_and_instrument_class(path_first_version, path_second_version, output_path_file):
     return run_command(
          ' '.join([
             MVN_CMD,
@@ -149,6 +153,7 @@ def run_mvn_build_classpath_and_instrument(path_first_version, path_second_versi
             BUILD_CLASSPATH_GOAL,
             OPT_OUTPUT_CP_FILE,
             CMD_DIFF_CLASS_INSTRUMENT,
+            OPT_NB_DUPLICATION,
             #OPT_TEST_LISTS + path_first_version + '/' + VALUE_TEST_LISTS,
             OPT_TEST_LISTS + VALUE_TEST_LISTS,
             OPT_PATH_DIR_SECOND_VERSION + path_second_version,

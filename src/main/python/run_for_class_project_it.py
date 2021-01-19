@@ -118,7 +118,7 @@ def run(nb_iteration, output_path, output_path_log):
 
     run_mvn_clean_test_build_cp(PATH_V2)
     start_time = time.time()
-    code = run_mvn_build_classpath_and_instrument(PATH_V1, PATH_V2, output_path + '/mvn_cp_instr.log')
+    code = run_mvn_build_classpath_and_instrument_class(PATH_V1, PATH_V2, output_path + '/mvn_cp_instr.log')
     elasped_time = time.time() - start_time
     print_to_file(elasped_time, output_path + '/time_injection')
 
