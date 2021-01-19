@@ -71,8 +71,8 @@ com.google.gson.functional.MapTest:[testInterfaceTypeMapWithSerializer]
 com.google.gson.DefaultMapJsonSerializerTest:[testNonEmptyMapSerialization]
 com.google.gson.functional.MapAsArrayTypeAdapterTest:[testMultipleEnableComplexKeyRegistrationHasNoEffect, testSerializeComplexMapWithTypeAdapter, testMapWithTypeVariableSerialization]
 com.google.gson.functional.TypeHierarchyAdapterTest:[testTypeHierarchy]
-com.google.gson.functional.CustomSerializerTest:[testSubClassSerializerInvokedForBaseClassFieldsHoldingSubClassInstances, testBaseClassSerializerInvokedForBaseClassFieldsHoldingSubClassInstances, testBaseClassSerializerInvokedForBaseClassFields, testSubClassSerializerInvokedForBaseClassFieldsHoldingArrayOfSubClassInstances]
 com.google.gson.functional.InheritanceTest:[testClassWithBaseFieldSerialization, testBaseSerializedAsBaseWhenSpecifiedWithExplicitType, testClassWithBaseCollectionFieldSerialization, testClassWithBaseArrayFieldSerialization, testBaseSerializedAsSubWhenSpecifiedWithExplicitType, testBaseSerializedAsSub]
+com.google.gson.functional.CustomSerializerTest:[testSubClassSerializerInvokedForBaseClassFieldsHoldingSubClassInstances, testBaseClassSerializerInvokedForBaseClassFieldsHoldingSubClassInstances, testBaseClassSerializerInvokedForBaseClassFields, testSubClassSerializerInvokedForBaseClassFieldsHoldingArrayOfSubClassInstances]
 com.google.gson.functional.ExclusionStrategyFunctionalTest:[testExclusionStrategyWithMode]
 com.google.gson.functional.JsonTreeTest:[testToJsonTreeObjectType, testToJsonTree, testJsonTreeToString, testJsonTreeNull]
 [INFO] Instrument version before commit...
@@ -200,6 +200,6 @@ Processing com.google.gson.DefaultMapJsonSerializerTest#testNonEmptyMapSerializa
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14:55 min
-[INFO] Finished at: 2021-01-19T18:11:04+01:00
+[INFO] Total time:  28.829 s
+[INFO] Finished at: 2021-01-19T19:32:29+01:00
 [INFO] ------------------------------------------------------------------------
