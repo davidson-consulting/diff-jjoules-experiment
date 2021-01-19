@@ -23,8 +23,6 @@ def get_tests_to_execute(output_path):
             test_class = line[0]
             for test_method in line[1:]:
                 tests_to_execute.append(test_class + '_' + test_method)
-    print(path)
-    print(tests_to_execute)
     return tests_to_execute
 
 def run_tests(nb_iteration, output_path, tests_to_execute):
@@ -89,12 +87,8 @@ def delete_java_files(tests_to_execute):
     for test_to_execute in tests_to_execute:
         java_file_path = test_to_execute.replace('.', '/') + '.java'
         full_java_file_path = PATH_V1 + '/src/test/java/' + java_file_path
-        print(java_file_path)
-        print(full_java_file_path)
         delete_file(full_java_file_path)
         full_java_file_path = PATH_V2 + '/src/test/java/' + java_file_path
-        print(java_file_path)
-        print(full_java_file_path)
         delete_file(full_java_file_path)
 
 def run(nb_iteration, output_path, output_path_log):
@@ -186,9 +180,6 @@ if __name__ == '__main__':
 
     while current_nb_completed_commits < nb_commits and cursor_commits < len(commits) - 1:
         commit_sha_v1 = commits[cursor_commits]
-        if not commit_sha_v1.startswith('fa9472') and not commit_sha_v1.startswith('f0aa11'):
-            cursor_commits = cursor_commits + 1
-            continue
         commit_sha_v2 = commits[cursor_commits - 1]
 
         current_output_path, current_err_output_path, current_output_path_log, current_output_path_time = init_current_paths(
@@ -233,5 +224,3 @@ if __name__ == '__main__':
         else:
             move_directory(current_output_path, current_err_output_path)
             cursor_commits = cursor_commits + 1
-
-        #sys.exit(-1)
