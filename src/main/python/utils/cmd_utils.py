@@ -219,4 +219,5 @@ def zip_folder(path_to_folder):
 
 def read_module_name(input_path):
     with open(input_path + '/module') as module_file:
-        return module_file.readlines()[0]
+        lines = module_file.readlines()
+        return lines[0] if len(lines) > 0 else ''
