@@ -138,7 +138,7 @@ def run_mvn_build_classpath_and_instrument(path_first_version, path_second_versi
         ])
     )
 
-OPT_NB_DUPLICATION = '-Dnb-duplication=100'
+OPT_NB_DUPLICATION = '-Dnb-duplication=10'
 
 def run_mvn_build_classpath_and_instrument_class(path_first_version, path_second_version, output_path_file):
     return run_command(

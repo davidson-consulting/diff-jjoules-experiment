@@ -4,6 +4,7 @@ from enum import Enum
 class Mode(Enum):
     restart_mode = 'restart'
     continue_mode = 'continue'
+    redo_mode = 'redo'
 
     def __str__(self):
         return self.value
