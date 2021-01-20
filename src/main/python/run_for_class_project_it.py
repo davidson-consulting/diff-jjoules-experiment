@@ -160,7 +160,7 @@ if __name__ == '__main__':
     main_module_name = read_module_name(args.commits + '/' + project_name).split('\n')[0]
     
     commits, repo_url = init_commits(commits_file_path)
-    #init_repositories(repo_url[:-1])
+    init_repositories(repo_url[:-1])
     create_if_does_not_exist(output_path + project_name)
 
     current_nb_completed_commits = 0
@@ -175,10 +175,10 @@ if __name__ == '__main__':
     
     if mode == mode.redo_mode:
         commits_folders = sorted([subfolder for subfolder in os.listdir('data/output/january_2021/' + project_name) if not subfolder.endswith('.png') and not subfolder.endswith('.md')], key=lambda folder_name: int(folder_name.split('_')[0]))
-        filtered_commits = []
+        filtered_commits_cursor = []
         for commit_folder in commits_folders:
-            filtered_commits.append(commits[int(commit_folder.split('_')[0])])
-        commits = filtered_commits
+            filtered_commits_cursor.append(int(commit_folder.split('_')[0]))
+        cursor_filtered_commits = 0
 
     PATH_V1 = PATH_V1 + '/' + main_module_name
     PATH_V2 = PATH_V2 + '/' + main_module_name
@@ -227,8 +227,11 @@ if __name__ == '__main__':
             delete_directory(current_output_path + '/v1')
             zip_folder(current_output_path + '/v2')
             delete_directory(current_output_path + '/v2')
-            cursor_commits = cursor_commits + (25 if mode == mode.continue_mode else 1)
+            if mode == mode.redo_mode:
+                cursor_commits = filtered_commits_cursor[cursor_filtered_commits]
+                cursor_filtered_commits = cursor_filtered_commits + 1
+            else:
+                cursor_commits = cursor_commits + 25
         else:
             move_directory(current_output_path, current_err_output_path)
             cursor_commits = cursor_commits + 1
-        sys.exit(-1)
