@@ -10,32 +10,17 @@ https://github.com/google/gson/commit/7a9fd5
 ![](./gson_delta_energy_0_v.png)
 
 
-| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | σV2 |
-| --- | --- | --- | --- | --- | --- |
-| 0 | 74706 | 73852 | -854 | 15120.548077084146 | 15785.535726681857 |
-| 1 | 37231 | 37170 | -61 | 6488.190535347723 | 2416.700446864804 |
-| 2 | 36804 | 37292 | 488 | 6681.9888618238265 | 9825.752504564593 |
-| 3 | 73914 | 74462 | 548 | 20067.817827896364 | 22100.463837426698 |
-| 4 | 74401 | 76477 | 2076 | 17261.853345038646 | 16852.860260613903 |
-| 5 | 961118 | 978635 | 17517 | 499866.48921608453 | 503860.7733982037 |
-| 6 | 364928 | 364867 | -61 | 145163.27917373244 | 144183.34779317645 |
-| 7 | 36132 | 36560 | 428 | 3980.0743292985026 | 5202.098670268241 |
-| 8 | 35949 | 36804 | 855 | 322238.9363737657 | 502478.52482222655 |
-
-## Delta Duration per test method
-
-
-| ID | DurationV1 | DurationsV2 | DeltaDuration |
-| --- | --- | --- | --- |
-| 0 | 2619919.0303030303 | 2600121.0808080807 | -19797.949494949542 |
-| 1 | 1278929.0705882353 | 1273365.4666666666 | -5563.60392156872 |
-| 2 | 1389057.8041237113 | 1397095.6451612904 | 8037.841037579114 |
-| 3 | 2507453.3131313133 | 2485156.6464646463 | -22296.666666666977 |
-| 4 | 2714001.6464646463 | 2671684.4646464647 | -42317.18181818165 |
-| 5 | 17948993.87912088 | 18812435.923076924 | 863442.0439560451 |
-| 6 | 11330875.313131314 | 11070617.646464646 | -260257.6666666679 |
-| 7 | 1060430.014925373 | 1028094.7272727273 | -32335.287652645726 |
-| 8 | 3358394.9811320757 | 7390851.246153846 | 4032456.2650217707 |
+| ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | %σV1 | σV2 | %σV2 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0 | 74706 | 73852 | -854 | 15120.55 | 20.24 | 15785.54 | 21.37 |
+| 1 | 37231 | 37170 | -61 | 6488.19 | 17.43 | 2416.70 | 6.50 |
+| 2 | 36804 | 37292 | 488 | 6681.99 | 18.16 | 9825.75 | 26.35 |
+| 3 | 73914 | 74462 | 548 | 20067.82 | 27.15 | 22100.46 | 29.68 |
+| 4 | 74401 | 76477 | 2076 | 17261.85 | 23.20 | 16852.86 | 22.04 |
+| 5 | 961118 | 978635 | 17517 | 499866.49 | 52.01 | 503860.77 | 51.49 |
+| 6 | 364928 | 364867 | -61 | 145163.28 | 39.78 | 144183.35 | 39.52 |
+| 7 | 36132 | 36560 | 428 | 3980.07 | 11.02 | 5202.10 | 14.23 |
+| 8 | 35949 | 36804 | 855 | 322238.94 | 896.38 | 502478.52 | 1365.28 |
 
 ## Misc.
 
@@ -53,18 +38,42 @@ https://github.com/google/gson/commit/7a9fd5
 
 
 
+## Classifications
 
-| Test | IterationV1 | IterationV2 | DeltaIteration |
+### Tests
+| ID | Class | Delta | Share |
 | --- | --- | --- | --- |
-| 0 | 99 | 99 | 0 |
-| 1 | 85 | 90 | 5 |
-| 2 | 97 | 93 | -4 |
-| 3 | 99 | 99 | 0 |
-| 4 | 99 | 99 | 0 |
-| 5 | 91 | 91 | 0 |
-| 6 | 99 | 99 | 0 |
-| 7 | 67 | 55 | -12 |
-| 8 | 53 | 65 | 12 |
+| G | NEUTRAL | 20936.0 | - |
+| N | NEGATIVE | -976.0 | 33.33 |
+| P | POSITIVE | 21912.0 | 16.67 |
+| 0 | NEGATIVE | -854.0 | 87.50 |
+| 5 | POSITIVE | 17517.0 | 79.94 |
+
+### Lines
+| Class | Java Class | Line |
+| --- | --- | --- |
+| negative | com.google.gson.DefaultDateTypeAdapter | 87 |
+| negative | com.google.gson.DefaultDateTypeAdapter | 88 |
+| positive | com.google.gson.DefaultDateTypeAdapter | 87 |
+| positive | com.google.gson.DefaultDateTypeAdapter | 88 |
+| unknown | com.google.gson.DefaultDateTypeAdapter | 100 |
+| unknown | com.google.gson.DefaultDateTypeAdapter | 101 |
+| unknown | com.google.gson.DefaultDateTypeAdapter | 87 |
+| unknown | com.google.gson.DefaultDateTypeAdapter | 88 |
+
+
+
+## Localization of Green Regression
+### Selected Tests
+| Test class | test method |
+| --- | --- |
+| com.google.gson.functional.DefaultTypeAdaptersTest | testDateSerializationWithPattern |
+
+### Suspected lines
+| Class | line |
+| --- | --- |
+| com.google.gson.DefaultDateTypeAdapter | [87](https://github.com/google/gson/tree/7a9fd5/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java#L87) |
+| com.google.gson.DefaultDateTypeAdapter | [88](https://github.com/google/gson/tree/7a9fd5/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java#L87#L88) |
 
 
 
