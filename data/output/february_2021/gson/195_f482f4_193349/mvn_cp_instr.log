@@ -1,0 +1,155 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.google.code.gson:gson >----------------------
+[INFO] Building Gson 2.7.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gson ---
+[INFO] Deleting /tmp/v1/gson/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ gson ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/gson/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ gson ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 67 source files to /tmp/v1/gson/target/classes
+[WARNING] /tmp/v1/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java: /tmp/v1/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java uses or overrides a deprecated API.
+[WARNING] /tmp/v1/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- bnd-maven-plugin:3.1.0:bnd-process (default) @ gson ---
+[WARNING] Export com.google.gson,  has 1,  private references [com.google.gson.internal], 
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/gson/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ gson ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 95 source files to /tmp/v1/gson/target/test-classes
+[WARNING] /tmp/v1/gson/src/test/java/com/google/gson/common/MoreAsserts.java: Some input files use or override a deprecated API.
+[WARNING] /tmp/v1/gson/src/test/java/com/google/gson/common/MoreAsserts.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gson ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:build-classpath (default-cli) @ gson ---
+[INFO] Skipped writing classpath file '/tmp/v1/gson/classpath'.  No changes found.
+[INFO] 
+[INFO] --- diff-jjoules:0.0.1-SNAPSHOT:class-instrument (default-cli) @ gson ---
+[INFO] Running on:
+[INFO] /tmp/v1/gson
+[INFO] /tmp/v2/gson/
+[INFO] Enable JUnit4 mode
+[INFO] Configuration{pathToFirstVersion='/tmp/v1/gson', pathToSecondVersion='/tmp/v2/gson/', pathToTestListAsCSV='/tmp/v1/gson/testsThatExecuteTheChange.csv'}
+[INFO] com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest:[testFieldAnnotationTakesPrecedenceOverClassAnnotation, testClassAnnotationAdapterFactoryTakesPrecedenceOverDefault, testNonPrimitiveFieldAnnotationTakesPrecedenceOverDefault, testFieldAnnotationWorksForParameterizedType, testJsonAdapterWrappedInNullSafeAsRequested, testPrimitiveFieldAnnotationTakesPrecedenceOverDefault, testFieldAnnotationTakesPrecedenceOverRegisteredTypeAdapter, testClassAnnotationAdapterTakesPrecedenceOverDefault, testJsonAdapterInvokedOnlyForAnnotatedFields]
+com.google.gson.functional.RuntimeTypeAdapterFactoryFunctionalTest:[testSubclassesAutomaticallySerialized]
+com.google.gson.functional.JsonAdapterSerializerDeserializerTest:[testJsonSerializerDeserializerBasedJsonAdapterOnFields, testDifferentJsonAdaptersForGenericFieldsOfSameRawType, testJsonSerializerDeserializerBasedJsonAdapterOnClass]
+com.google.gson.regression.JsonAdapterNullSafeTest:[testNullSafeBugDeserialize, testNullSafeBugSerialize]
+com.google.gson.functional.JsonAdapterAnnotationOnClassesTest:[testJsonAdapterInvoked, testIncorrectTypeAdapterFails, testNullSafeObjectFromJson, testRegisteredDeserializerOverridesJsonAdapter, testRegisteredSerializerOverridesJsonAdapter, testJsonAdapterFactoryInvoked]
+[INFO] Instrument version before commit...
+[INFO] Run on /tmp/v1/gson
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.class_instrumentation.process.JJoulesProcessor
+Processing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testJsonAdapterInvoked
+Processing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testJsonAdapterFactoryInvoked
+Processing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testRegisteredSerializerOverridesJsonAdapter
+Processing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testRegisteredDeserializerOverridesJsonAdapter
+Processing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testIncorrectTypeAdapterFails
+Processing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testNullSafeObjectFromJson
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testClassAnnotationAdapterTakesPrecedenceOverDefault
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testClassAnnotationAdapterFactoryTakesPrecedenceOverDefault
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testFieldAnnotationTakesPrecedenceOverRegisteredTypeAdapter
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testFieldAnnotationTakesPrecedenceOverClassAnnotation
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testJsonAdapterInvokedOnlyForAnnotatedFields
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testJsonAdapterWrappedInNullSafeAsRequested
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testNonPrimitiveFieldAnnotationTakesPrecedenceOverDefault
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testPrimitiveFieldAnnotationTakesPrecedenceOverDefault
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testFieldAnnotationWorksForParameterizedType
+Processing com.google.gson.functional.JsonAdapterSerializerDeserializerTest#testJsonSerializerDeserializerBasedJsonAdapterOnFields
+Processing com.google.gson.functional.JsonAdapterSerializerDeserializerTest#testJsonSerializerDeserializerBasedJsonAdapterOnClass
+Processing com.google.gson.functional.JsonAdapterSerializerDeserializerTest#testDifferentJsonAdaptersForGenericFieldsOfSameRawType
+Processing com.google.gson.functional.RuntimeTypeAdapterFactoryFunctionalTest#testSubclassesAutomaticallySerialized
+Processing com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize
+Processing com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugDeserialize
+[INFO] Processing Done...
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest_testRegisteredSerializerOverridesJsonAdapter to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnClassesTest_testRegisteredSerializerOverridesJsonAdapter.java
+[INFO] Printing com.google.gson.regression.JsonAdapterNullSafeTest_testNullSafeBugDeserialize to /tmp/v1/gson/src/test/java//com/google/gson/regression/JsonAdapterNullSafeTest_testNullSafeBugDeserialize.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testJsonAdapterWrappedInNullSafeAsRequested to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testJsonAdapterWrappedInNullSafeAsRequested.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testFieldAnnotationWorksForParameterizedType to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testFieldAnnotationWorksForParameterizedType.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest_testJsonAdapterInvoked to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnClassesTest_testJsonAdapterInvoked.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testClassAnnotationAdapterFactoryTakesPrecedenceOverDefault to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testClassAnnotationAdapterFactoryTakesPrecedenceOverDefault.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testNonPrimitiveFieldAnnotationTakesPrecedenceOverDefault to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testNonPrimitiveFieldAnnotationTakesPrecedenceOverDefault.java
+[INFO] Printing com.google.gson.functional.JsonAdapterSerializerDeserializerTest_testJsonSerializerDeserializerBasedJsonAdapterOnClass to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterSerializerDeserializerTest_testJsonSerializerDeserializerBasedJsonAdapterOnClass.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testPrimitiveFieldAnnotationTakesPrecedenceOverDefault to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testPrimitiveFieldAnnotationTakesPrecedenceOverDefault.java
+[INFO] Printing com.google.gson.functional.RuntimeTypeAdapterFactoryFunctionalTest_testSubclassesAutomaticallySerialized to /tmp/v1/gson/src/test/java//com/google/gson/functional/RuntimeTypeAdapterFactoryFunctionalTest_testSubclassesAutomaticallySerialized.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest_testRegisteredDeserializerOverridesJsonAdapter to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnClassesTest_testRegisteredDeserializerOverridesJsonAdapter.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testJsonAdapterInvokedOnlyForAnnotatedFields to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testJsonAdapterInvokedOnlyForAnnotatedFields.java
+[INFO] Printing com.google.gson.functional.JsonAdapterSerializerDeserializerTest_testDifferentJsonAdaptersForGenericFieldsOfSameRawType to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterSerializerDeserializerTest_testDifferentJsonAdaptersForGenericFieldsOfSameRawType.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest_testNullSafeObjectFromJson to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnClassesTest_testNullSafeObjectFromJson.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testClassAnnotationAdapterTakesPrecedenceOverDefault to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testClassAnnotationAdapterTakesPrecedenceOverDefault.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest_testJsonAdapterFactoryInvoked to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnClassesTest_testJsonAdapterFactoryInvoked.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testFieldAnnotationTakesPrecedenceOverClassAnnotation to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testFieldAnnotationTakesPrecedenceOverClassAnnotation.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testFieldAnnotationTakesPrecedenceOverRegisteredTypeAdapter to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testFieldAnnotationTakesPrecedenceOverRegisteredTypeAdapter.java
+[INFO] Printing com.google.gson.regression.JsonAdapterNullSafeTest_testNullSafeBugSerialize to /tmp/v1/gson/src/test/java//com/google/gson/regression/JsonAdapterNullSafeTest_testNullSafeBugSerialize.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest_testIncorrectTypeAdapterFails to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnClassesTest_testIncorrectTypeAdapterFails.java
+[INFO] Printing com.google.gson.functional.JsonAdapterSerializerDeserializerTest_testJsonSerializerDeserializerBasedJsonAdapterOnFields to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonAdapterSerializerDeserializerTest_testJsonSerializerDeserializerBasedJsonAdapterOnFields.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v1/gson/pom.xml
+[INFO] Output new POM file in /tmp/v1/gson/pom.xml
+[INFO] Instrument version after commit...
+[INFO] Run on /tmp/v2/gson/
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.class_instrumentation.process.JJoulesProcessor
+Processing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testJsonAdapterInvoked
+Processing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testJsonAdapterFactoryInvoked
+Processing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testRegisteredSerializerOverridesJsonAdapter
+Processing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testRegisteredDeserializerOverridesJsonAdapter
+Processing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testIncorrectTypeAdapterFails
+Processing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testNullSafeObjectFromJson
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testClassAnnotationAdapterTakesPrecedenceOverDefault
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testClassAnnotationAdapterFactoryTakesPrecedenceOverDefault
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testFieldAnnotationTakesPrecedenceOverRegisteredTypeAdapter
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testFieldAnnotationTakesPrecedenceOverClassAnnotation
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testJsonAdapterInvokedOnlyForAnnotatedFields
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testJsonAdapterWrappedInNullSafeAsRequested
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testNonPrimitiveFieldAnnotationTakesPrecedenceOverDefault
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testPrimitiveFieldAnnotationTakesPrecedenceOverDefault
+Processing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testFieldAnnotationWorksForParameterizedType
+Processing com.google.gson.functional.JsonAdapterSerializerDeserializerTest#testJsonSerializerDeserializerBasedJsonAdapterOnFields
+Processing com.google.gson.functional.JsonAdapterSerializerDeserializerTest#testJsonSerializerDeserializerBasedJsonAdapterOnClass
+Processing com.google.gson.functional.JsonAdapterSerializerDeserializerTest#testDifferentJsonAdaptersForGenericFieldsOfSameRawType
+Processing com.google.gson.functional.RuntimeTypeAdapterFactoryFunctionalTest#testSubclassesAutomaticallySerialized
+Processing com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize
+Processing com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugDeserialize
+[INFO] Processing Done...
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest_testRegisteredSerializerOverridesJsonAdapter to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnClassesTest_testRegisteredSerializerOverridesJsonAdapter.java
+[INFO] Printing com.google.gson.regression.JsonAdapterNullSafeTest_testNullSafeBugDeserialize to /tmp/v2/gson//src/test/java//com/google/gson/regression/JsonAdapterNullSafeTest_testNullSafeBugDeserialize.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testJsonAdapterWrappedInNullSafeAsRequested to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testJsonAdapterWrappedInNullSafeAsRequested.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testFieldAnnotationWorksForParameterizedType to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testFieldAnnotationWorksForParameterizedType.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest_testJsonAdapterInvoked to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnClassesTest_testJsonAdapterInvoked.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testClassAnnotationAdapterFactoryTakesPrecedenceOverDefault to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testClassAnnotationAdapterFactoryTakesPrecedenceOverDefault.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testNonPrimitiveFieldAnnotationTakesPrecedenceOverDefault to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testNonPrimitiveFieldAnnotationTakesPrecedenceOverDefault.java
+[INFO] Printing com.google.gson.functional.JsonAdapterSerializerDeserializerTest_testJsonSerializerDeserializerBasedJsonAdapterOnClass to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterSerializerDeserializerTest_testJsonSerializerDeserializerBasedJsonAdapterOnClass.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testPrimitiveFieldAnnotationTakesPrecedenceOverDefault to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testPrimitiveFieldAnnotationTakesPrecedenceOverDefault.java
+[INFO] Printing com.google.gson.functional.RuntimeTypeAdapterFactoryFunctionalTest_testSubclassesAutomaticallySerialized to /tmp/v2/gson//src/test/java//com/google/gson/functional/RuntimeTypeAdapterFactoryFunctionalTest_testSubclassesAutomaticallySerialized.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest_testRegisteredDeserializerOverridesJsonAdapter to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnClassesTest_testRegisteredDeserializerOverridesJsonAdapter.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testJsonAdapterInvokedOnlyForAnnotatedFields to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testJsonAdapterInvokedOnlyForAnnotatedFields.java
+[INFO] Printing com.google.gson.functional.JsonAdapterSerializerDeserializerTest_testDifferentJsonAdaptersForGenericFieldsOfSameRawType to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterSerializerDeserializerTest_testDifferentJsonAdaptersForGenericFieldsOfSameRawType.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest_testNullSafeObjectFromJson to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnClassesTest_testNullSafeObjectFromJson.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testClassAnnotationAdapterTakesPrecedenceOverDefault to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testClassAnnotationAdapterTakesPrecedenceOverDefault.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest_testJsonAdapterFactoryInvoked to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnClassesTest_testJsonAdapterFactoryInvoked.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testFieldAnnotationTakesPrecedenceOverClassAnnotation to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testFieldAnnotationTakesPrecedenceOverClassAnnotation.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest_testFieldAnnotationTakesPrecedenceOverRegisteredTypeAdapter to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnFieldsTest_testFieldAnnotationTakesPrecedenceOverRegisteredTypeAdapter.java
+[INFO] Printing com.google.gson.regression.JsonAdapterNullSafeTest_testNullSafeBugSerialize to /tmp/v2/gson//src/test/java//com/google/gson/regression/JsonAdapterNullSafeTest_testNullSafeBugSerialize.java
+[INFO] Printing com.google.gson.functional.JsonAdapterAnnotationOnClassesTest_testIncorrectTypeAdapterFails to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterAnnotationOnClassesTest_testIncorrectTypeAdapterFails.java
+[INFO] Printing com.google.gson.functional.JsonAdapterSerializerDeserializerTest_testJsonSerializerDeserializerBasedJsonAdapterOnFields to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonAdapterSerializerDeserializerTest_testJsonSerializerDeserializerBasedJsonAdapterOnFields.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v2/gson//pom.xml
+[INFO] Output new POM file in /tmp/v2/gson//pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.364 s
+[INFO] Finished at: 2021-01-20T23:07:49+01:00
+[INFO] ------------------------------------------------------------------------

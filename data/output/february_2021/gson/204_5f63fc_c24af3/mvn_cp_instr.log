@@ -1,0 +1,242 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.google.code.gson:gson >----------------------
+[INFO] Building Gson 2.6.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gson ---
+[INFO] Deleting /tmp/v1/gson/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ gson ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/gson/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ gson ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 67 source files to /tmp/v1/gson/target/classes
+[WARNING] /tmp/v1/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java: /tmp/v1/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java uses or overrides a deprecated API.
+[WARNING] /tmp/v1/gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- bnd-maven-plugin:3.1.0:bnd-process (default) @ gson ---
+[WARNING] Export com.google.gson,  has 1,  private references [com.google.gson.internal], 
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/gson/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ gson ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 94 source files to /tmp/v1/gson/target/test-classes
+[WARNING] /tmp/v1/gson/src/test/java/com/google/gson/functional/MapAsArrayTypeAdapterTest.java: Some input files use or override a deprecated API.
+[WARNING] /tmp/v1/gson/src/test/java/com/google/gson/functional/MapAsArrayTypeAdapterTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gson ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:build-classpath (default-cli) @ gson ---
+[INFO] Wrote classpath file '/tmp/v1/gson/classpath'.
+[INFO] 
+[INFO] --- diff-jjoules:0.0.1-SNAPSHOT:class-instrument (default-cli) @ gson ---
+[INFO] Running on:
+[INFO] /tmp/v1/gson
+[INFO] /tmp/v2/gson/
+[INFO] Enable JUnit4 mode
+[INFO] Configuration{pathToFirstVersion='/tmp/v1/gson', pathToSecondVersion='/tmp/v2/gson/', pathToTestListAsCSV='/tmp/v1/gson/testsThatExecuteTheChange.csv'}
+[INFO] com.google.gson.internal.bind.JsonElementReaderTest:[testStrings, testNumbers, testNulls, testArray, testNumbersFromStrings, testWrongType, testLenientNansAndInfinities, testNestedArrays, testEmptyArray, testStrictNansAndInfinities, testObject, testStringsFromNumbers, testNestedObjects, testEarlyClose, testEmptyObject, testBooleans, testSkipValue]
+com.google.gson.functional.StreamingTypeAdaptersTest:[testFromJsonTree]
+com.google.gson.functional.RuntimeTypeAdapterFactoryFunctionalTest:[testSubclassesAutomaticallySerialzed]
+com.google.gson.functional.MapTest:[testMapNamePromotionWithJsonElementReader]
+com.google.gson.functional.JsonParserTest:[testBadFieldTypeForCustomDeserializerCustomTree, testBadTypeForDeserializingCustomTree, testChangingCustomTreeAndDeserializing, testDeserializingCustomTree, testBadFieldTypeForDeserializingCustomTree]
+com.google.gson.functional.PrimitiveTest:[testPrimitiveClassLiteral]
+com.google.gson.JsonParserTest:[testReadWriteTwoObjects]
+com.google.gson.functional.ReadersWritersTest:[testReadWriteTwoStrings, testReadWriteTwoObjects]
+com.google.gson.functional.TypeHierarchyAdapterTest:[testTypeHierarchy]
+com.google.gson.functional.CustomDeserializerTest:[testJsonTypeFieldBasedDeserialization]
+com.google.gson.functional.ExclusionStrategyFunctionalTest:[testExclusionStrategyWithMode, testExclusionStrategyDeserialization]
+[INFO] Instrument version before commit...
+[INFO] Run on /tmp/v1/gson
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.class_instrumentation.process.JJoulesProcessor
+Processing com.google.gson.functional.CustomDeserializerTest#testJsonTypeFieldBasedDeserialization
+Processing com.google.gson.functional.ExclusionStrategyFunctionalTest#testExclusionStrategyDeserialization
+Processing com.google.gson.functional.ExclusionStrategyFunctionalTest#testExclusionStrategyWithMode
+Processing com.google.gson.functional.JsonParserTest#testDeserializingCustomTree
+Processing com.google.gson.functional.JsonParserTest#testBadTypeForDeserializingCustomTree
+Processing com.google.gson.functional.JsonParserTest#testBadFieldTypeForCustomDeserializerCustomTree
+Processing com.google.gson.functional.JsonParserTest#testBadFieldTypeForDeserializingCustomTree
+Processing com.google.gson.functional.JsonParserTest#testChangingCustomTreeAndDeserializing
+Processing com.google.gson.functional.MapTest#testMapNamePromotionWithJsonElementReader
+Processing com.google.gson.functional.PrimitiveTest#testPrimitiveClassLiteral
+Processing com.google.gson.functional.ReadersWritersTest#testReadWriteTwoStrings
+Processing com.google.gson.functional.ReadersWritersTest#testReadWriteTwoObjects
+Processing com.google.gson.functional.RuntimeTypeAdapterFactoryFunctionalTest#testSubclassesAutomaticallySerialzed
+Processing com.google.gson.functional.StreamingTypeAdaptersTest#testFromJsonTree
+Processing com.google.gson.functional.TypeHierarchyAdapterTest#testTypeHierarchy
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNumbers
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testLenientNansAndInfinities
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testStrictNansAndInfinities
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNumbersFromStrings
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testStringsFromNumbers
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testBooleans
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNulls
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testStrings
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testArray
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testObject
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testEmptyArray
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNestedArrays
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNestedObjects
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testEmptyObject
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testSkipValue
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testWrongType
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testEarlyClose
+Processing com.google.gson.JsonParserTest#testReadWriteTwoObjects
+[INFO] Processing Done...
+[INFO] Printing com.google.gson.functional.JsonParserTest_testChangingCustomTreeAndDeserializing to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonParserTest_testChangingCustomTreeAndDeserializing.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testWrongType to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testWrongType.java
+[INFO] Printing com.google.gson.functional.PrimitiveTest_testPrimitiveClassLiteral to /tmp/v1/gson/src/test/java//com/google/gson/functional/PrimitiveTest_testPrimitiveClassLiteral.java
+[INFO] Printing com.google.gson.functional.StreamingTypeAdaptersTest_testFromJsonTree to /tmp/v1/gson/src/test/java//com/google/gson/functional/StreamingTypeAdaptersTest_testFromJsonTree.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testStringsFromNumbers to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testStringsFromNumbers.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNestedArrays to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNestedArrays.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testLenientNansAndInfinities to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testLenientNansAndInfinities.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testStrictNansAndInfinities to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testStrictNansAndInfinities.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testBooleans to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testBooleans.java
+[INFO] Printing com.google.gson.functional.ExclusionStrategyFunctionalTest_testExclusionStrategyDeserialization to /tmp/v1/gson/src/test/java//com/google/gson/functional/ExclusionStrategyFunctionalTest_testExclusionStrategyDeserialization.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testSkipValue to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testSkipValue.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testArray to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testArray.java
+[INFO] Printing com.google.gson.functional.JsonParserTest_testBadFieldTypeForCustomDeserializerCustomTree to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonParserTest_testBadFieldTypeForCustomDeserializerCustomTree.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNumbers to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNumbers.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNestedObjects to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNestedObjects.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNumbersFromStrings to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNumbersFromStrings.java
+[INFO] Printing com.google.gson.functional.ReadersWritersTest_testReadWriteTwoStrings to /tmp/v1/gson/src/test/java//com/google/gson/functional/ReadersWritersTest_testReadWriteTwoStrings.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testObject to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testObject.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testStrings to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testStrings.java
+[INFO] Printing com.google.gson.functional.ReadersWritersTest_testReadWriteTwoObjects to /tmp/v1/gson/src/test/java//com/google/gson/functional/ReadersWritersTest_testReadWriteTwoObjects.java
+[INFO] Printing com.google.gson.functional.ExclusionStrategyFunctionalTest_testExclusionStrategyWithMode to /tmp/v1/gson/src/test/java//com/google/gson/functional/ExclusionStrategyFunctionalTest_testExclusionStrategyWithMode.java
+[INFO] Printing com.google.gson.functional.JsonParserTest_testDeserializingCustomTree to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonParserTest_testDeserializingCustomTree.java
+[INFO] Printing com.google.gson.functional.JsonParserTest_testBadTypeForDeserializingCustomTree to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonParserTest_testBadTypeForDeserializingCustomTree.java
+[INFO] Printing com.google.gson.functional.RuntimeTypeAdapterFactoryFunctionalTest_testSubclassesAutomaticallySerialzed to /tmp/v1/gson/src/test/java//com/google/gson/functional/RuntimeTypeAdapterFactoryFunctionalTest_testSubclassesAutomaticallySerialzed.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testEmptyArray to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testEmptyArray.java
+[INFO] Printing com.google.gson.functional.JsonParserTest_testBadFieldTypeForDeserializingCustomTree to /tmp/v1/gson/src/test/java//com/google/gson/functional/JsonParserTest_testBadFieldTypeForDeserializingCustomTree.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testEarlyClose to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testEarlyClose.java
+[INFO] Printing com.google.gson.JsonParserTest_testReadWriteTwoObjects to /tmp/v1/gson/src/test/java//com/google/gson/JsonParserTest_testReadWriteTwoObjects.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testEmptyObject to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testEmptyObject.java
+[INFO] Printing com.google.gson.functional.MapTest_testMapNamePromotionWithJsonElementReader to /tmp/v1/gson/src/test/java//com/google/gson/functional/MapTest_testMapNamePromotionWithJsonElementReader.java
+[INFO] Printing com.google.gson.functional.CustomDeserializerTest_testJsonTypeFieldBasedDeserialization to /tmp/v1/gson/src/test/java//com/google/gson/functional/CustomDeserializerTest_testJsonTypeFieldBasedDeserialization.java
+[INFO] Printing com.google.gson.functional.TypeHierarchyAdapterTest_testTypeHierarchy to /tmp/v1/gson/src/test/java//com/google/gson/functional/TypeHierarchyAdapterTest_testTypeHierarchy.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNulls to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNulls.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v1/gson/pom.xml
+[INFO] Output new POM file in /tmp/v1/gson/pom.xml
+[INFO] Instrument version after commit...
+[INFO] Run on /tmp/v2/gson/
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.class_instrumentation.process.JJoulesProcessor
+Processing com.google.gson.functional.CustomDeserializerTest#testJsonTypeFieldBasedDeserialization
+Processing com.google.gson.functional.ExclusionStrategyFunctionalTest#testExclusionStrategyDeserialization
+Processing com.google.gson.functional.ExclusionStrategyFunctionalTest#testExclusionStrategyWithMode
+Processing com.google.gson.functional.JsonParserTest#testDeserializingCustomTree
+Processing com.google.gson.functional.JsonParserTest#testBadTypeForDeserializingCustomTree
+Processing com.google.gson.functional.JsonParserTest#testBadFieldTypeForCustomDeserializerCustomTree
+Processing com.google.gson.functional.JsonParserTest#testBadFieldTypeForDeserializingCustomTree
+Processing com.google.gson.functional.JsonParserTest#testChangingCustomTreeAndDeserializing
+Processing com.google.gson.functional.MapTest#testMapNamePromotionWithJsonElementReader
+Processing com.google.gson.functional.PrimitiveTest#testPrimitiveClassLiteral
+Processing com.google.gson.functional.ReadersWritersTest#testReadWriteTwoStrings
+Processing com.google.gson.functional.ReadersWritersTest#testReadWriteTwoObjects
+Processing com.google.gson.functional.RuntimeTypeAdapterFactoryFunctionalTest#testSubclassesAutomaticallySerialzed
+Processing com.google.gson.functional.StreamingTypeAdaptersTest#testFromJsonTree
+Processing com.google.gson.functional.TypeHierarchyAdapterTest#testTypeHierarchy
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNumbers
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testLenientNansAndInfinities
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testStrictNansAndInfinities
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNumbersFromStrings
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testStringsFromNumbers
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testBooleans
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNulls
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testStrings
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testArray
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testObject
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testEmptyArray
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNestedArrays
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testNestedObjects
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testEmptyObject
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testSkipValue
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testWrongType
+Processing com.google.gson.internal.bind.JsonElementReaderTest#testEarlyClose
+Processing com.google.gson.JsonParserTest#testReadWriteTwoObjects
+[INFO] Processing Done...
+[INFO] Printing com.google.gson.functional.JsonParserTest_testChangingCustomTreeAndDeserializing to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonParserTest_testChangingCustomTreeAndDeserializing.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testWrongType to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testWrongType.java
+[INFO] Printing com.google.gson.functional.JsonParserTest_testChangingCustomTreeAndDeserializing to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonParserTest_testChangingCustomTreeAndDeserializing.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testWrongType to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testWrongType.java
+[INFO] Printing com.google.gson.functional.PrimitiveTest_testPrimitiveClassLiteral to /tmp/v2/gson//src/test/java//com/google/gson/functional/PrimitiveTest_testPrimitiveClassLiteral.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testStringsFromNumbers to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testStringsFromNumbers.java
+[INFO] Printing com.google.gson.functional.PrimitiveTest_testPrimitiveClassLiteral to /tmp/v2/gson//src/test/java//com/google/gson/functional/PrimitiveTest_testPrimitiveClassLiteral.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testStringsFromNumbers to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testStringsFromNumbers.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNestedArrays to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNestedArrays.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNestedArrays to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNestedArrays.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testStrictNansAndInfinities to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testStrictNansAndInfinities.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testStrictNansAndInfinities to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testStrictNansAndInfinities.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testBooleans to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testBooleans.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testBooleans to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testBooleans.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testArray to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testArray.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testArray to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testArray.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNumbers to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNumbers.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNumbers to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNumbers.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNumbersFromStrings to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNumbersFromStrings.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNumbersFromStrings to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNumbersFromStrings.java
+[INFO] Printing com.google.gson.functional.ReadersWritersTest_testReadWriteTwoStrings to /tmp/v2/gson//src/test/java//com/google/gson/functional/ReadersWritersTest_testReadWriteTwoStrings.java
+[INFO] Printing com.google.gson.functional.ReadersWritersTest_testReadWriteTwoStrings to /tmp/v2/gson//src/test/java//com/google/gson/functional/ReadersWritersTest_testReadWriteTwoStrings.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testStrings to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testStrings.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testStrings to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testStrings.java
+[INFO] Printing com.google.gson.functional.ReadersWritersTest_testReadWriteTwoObjects to /tmp/v2/gson//src/test/java//com/google/gson/functional/ReadersWritersTest_testReadWriteTwoObjects.java
+[INFO] Printing com.google.gson.functional.ReadersWritersTest_testReadWriteTwoObjects to /tmp/v2/gson//src/test/java//com/google/gson/functional/ReadersWritersTest_testReadWriteTwoObjects.java
+[INFO] Printing com.google.gson.functional.ExclusionStrategyFunctionalTest_testExclusionStrategyWithMode to /tmp/v2/gson//src/test/java//com/google/gson/functional/ExclusionStrategyFunctionalTest_testExclusionStrategyWithMode.java
+[INFO] Printing com.google.gson.functional.ExclusionStrategyFunctionalTest_testExclusionStrategyWithMode to /tmp/v2/gson//src/test/java//com/google/gson/functional/ExclusionStrategyFunctionalTest_testExclusionStrategyWithMode.java
+[INFO] Printing com.google.gson.functional.JsonParserTest_testBadFieldTypeForDeserializingCustomTree to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonParserTest_testBadFieldTypeForDeserializingCustomTree.java
+[INFO] Printing com.google.gson.functional.JsonParserTest_testBadFieldTypeForDeserializingCustomTree to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonParserTest_testBadFieldTypeForDeserializingCustomTree.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testEarlyClose to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testEarlyClose.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testEarlyClose to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testEarlyClose.java
+[INFO] Printing com.google.gson.functional.TypeHierarchyAdapterTest_testTypeHierarchy to /tmp/v2/gson//src/test/java//com/google/gson/functional/TypeHierarchyAdapterTest_testTypeHierarchy.java
+[INFO] Printing com.google.gson.functional.TypeHierarchyAdapterTest_testTypeHierarchy to /tmp/v2/gson//src/test/java//com/google/gson/functional/TypeHierarchyAdapterTest_testTypeHierarchy.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNulls to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNulls.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNulls to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNulls.java
+[INFO] Printing com.google.gson.functional.StreamingTypeAdaptersTest_testFromJsonTree to /tmp/v2/gson//src/test/java//com/google/gson/functional/StreamingTypeAdaptersTest_testFromJsonTree.java
+[INFO] Printing com.google.gson.functional.StreamingTypeAdaptersTest_testFromJsonTree to /tmp/v2/gson//src/test/java//com/google/gson/functional/StreamingTypeAdaptersTest_testFromJsonTree.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testLenientNansAndInfinities to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testLenientNansAndInfinities.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testLenientNansAndInfinities to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testLenientNansAndInfinities.java
+[INFO] Printing com.google.gson.functional.ExclusionStrategyFunctionalTest_testExclusionStrategyDeserialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/ExclusionStrategyFunctionalTest_testExclusionStrategyDeserialization.java
+[INFO] Printing com.google.gson.functional.ExclusionStrategyFunctionalTest_testExclusionStrategyDeserialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/ExclusionStrategyFunctionalTest_testExclusionStrategyDeserialization.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testSkipValue to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testSkipValue.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testSkipValue to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testSkipValue.java
+[INFO] Printing com.google.gson.functional.JsonParserTest_testBadFieldTypeForCustomDeserializerCustomTree to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonParserTest_testBadFieldTypeForCustomDeserializerCustomTree.java
+[INFO] Printing com.google.gson.functional.JsonParserTest_testBadFieldTypeForCustomDeserializerCustomTree to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonParserTest_testBadFieldTypeForCustomDeserializerCustomTree.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNestedObjects to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNestedObjects.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testNestedObjects to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testNestedObjects.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testObject to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testObject.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testObject to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testObject.java
+[INFO] Printing com.google.gson.functional.JsonParserTest_testDeserializingCustomTree to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonParserTest_testDeserializingCustomTree.java
+[INFO] Printing com.google.gson.functional.JsonParserTest_testDeserializingCustomTree to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonParserTest_testDeserializingCustomTree.java
+[INFO] Printing com.google.gson.functional.JsonParserTest_testBadTypeForDeserializingCustomTree to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonParserTest_testBadTypeForDeserializingCustomTree.java
+[INFO] Printing com.google.gson.functional.JsonParserTest_testBadTypeForDeserializingCustomTree to /tmp/v2/gson//src/test/java//com/google/gson/functional/JsonParserTest_testBadTypeForDeserializingCustomTree.java
+[INFO] Printing com.google.gson.functional.RuntimeTypeAdapterFactoryFunctionalTest_testSubclassesAutomaticallySerialzed to /tmp/v2/gson//src/test/java//com/google/gson/functional/RuntimeTypeAdapterFactoryFunctionalTest_testSubclassesAutomaticallySerialzed.java
+[INFO] Printing com.google.gson.functional.RuntimeTypeAdapterFactoryFunctionalTest_testSubclassesAutomaticallySerialzed to /tmp/v2/gson//src/test/java//com/google/gson/functional/RuntimeTypeAdapterFactoryFunctionalTest_testSubclassesAutomaticallySerialzed.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testEmptyArray to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testEmptyArray.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testEmptyArray to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testEmptyArray.java
+[INFO] Printing com.google.gson.JsonParserTest_testReadWriteTwoObjects to /tmp/v2/gson//src/test/java//com/google/gson/JsonParserTest_testReadWriteTwoObjects.java
+[INFO] Printing com.google.gson.JsonParserTest_testReadWriteTwoObjects to /tmp/v2/gson//src/test/java//com/google/gson/JsonParserTest_testReadWriteTwoObjects.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testEmptyObject to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testEmptyObject.java
+[INFO] Printing com.google.gson.internal.bind.JsonElementReaderTest_testEmptyObject to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementReaderTest_testEmptyObject.java
+[INFO] Printing com.google.gson.functional.MapTest_testMapNamePromotionWithJsonElementReader to /tmp/v2/gson//src/test/java//com/google/gson/functional/MapTest_testMapNamePromotionWithJsonElementReader.java
+[INFO] Printing com.google.gson.functional.MapTest_testMapNamePromotionWithJsonElementReader to /tmp/v2/gson//src/test/java//com/google/gson/functional/MapTest_testMapNamePromotionWithJsonElementReader.java
+[INFO] Printing com.google.gson.functional.CustomDeserializerTest_testJsonTypeFieldBasedDeserialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/CustomDeserializerTest_testJsonTypeFieldBasedDeserialization.java
+[INFO] Printing com.google.gson.functional.CustomDeserializerTest_testJsonTypeFieldBasedDeserialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/CustomDeserializerTest_testJsonTypeFieldBasedDeserialization.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v2/gson//pom.xml
+[INFO] Output new POM file in /tmp/v2/gson//pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  28.860 s
+[INFO] Finished at: 2021-01-20T23:11:39+01:00
+[INFO] ------------------------------------------------------------------------
