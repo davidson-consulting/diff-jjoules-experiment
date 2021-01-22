@@ -1,7 +1,7 @@
-# gson 2
+# gson 7a9fd5
 
 
-https://github.com/google/gson/commit/2
+https://github.com/google/gson/commit/7a9fd5
 
 
 
@@ -12,20 +12,20 @@ https://github.com/google/gson/commit/2
 
 | ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | %σV1 | σV2 | %σV2 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0 | 6244613 | 6286483 | 41870 | 561053.63 | 8.98 | 684865.27 | 10.89 |
-| 1 | 5715928 | 5736802 | 20874 | 435756.08 | 7.62 | 568614.29 | 9.91 |
-| 2 | 1846492 | 1804073 | -42419 | 115563.61 | 6.26 | 106646.80 | 5.91 |
-| 3 | 3123100 | 3172904 | 49804 | 331598.57 | 10.62 | 377889.97 | 11.91 |
-| 4 | 1490230 | 1488033 | -2197 | 103124.13 | 6.92 | 132664.35 | 8.92 |
-| 5 | 836790 | 836973 | 183 | 91367.12 | 10.92 | 82826.41 | 9.90 |
-| 6 | 18022475 | 17945328 | -77147 | 1707343.81 | 9.47 | 1812983.16 | 10.10 |
-| 7 | 12532683 | 12630095 | 97412 | 1338149.71 | 10.68 | 1236954.44 | 9.79 |
-| 8 | 3012261 | 3013359 | 1098 | 306532.33 | 10.18 | 300084.58 | 9.96 |
-| 9 | 1238034 | 1217160 | -20874 | 79641.82 | 6.43 | 95112.13 | 7.81 |
-| 10 | 1340451 | 1321225 | -19226 | 125773.72 | 9.38 | 112032.04 | 8.48 |
-| 11 | 1365170 | 1365414 | 244 | 127731.78 | 9.36 | 120988.40 | 8.86 |
-| 12 | 1781795 | 1721858 | -59937 | 177845.37 | 9.98 | 192986.66 | 11.21 |
-| 13 | 3015068 | 2993034 | -22034 | 405972.55 | 13.46 | 445509.29 | 14.88 |
+| 0 | 6288070 | 6199996 | -88074 | 510540.88 | 8.12 | 553952.59 | 8.93 |
+| 1 | 5681321 | 5705735 | 24414 | 508297.63 | 8.95 | 539941.20 | 9.46 |
+| 2 | 1826778 | 1806270 | -20508 | 104575.85 | 5.72 | 96447.66 | 5.34 |
+| 3 | 3120048 | 3158927 | 38879 | 348950.54 | 11.18 | 291433.29 | 9.23 |
+| 4 | 1489071 | 1510006 | 20935 | 109548.77 | 7.36 | 115835.23 | 7.67 |
+| 5 | 837706 | 817747 | -19959 | 87142.10 | 10.40 | 83353.31 | 10.19 |
+| 6 | 17983474 | 18080520 | 97046 | 1587657.77 | 8.83 | 1412778.71 | 7.81 |
+| 7 | 12733305 | 12596526 | -136779 | 1160280.66 | 9.11 | 1253979.77 | 9.95 |
+| 8 | 2989311 | 2992363 | 3052 | 283625.02 | 9.49 | 285408.89 | 9.54 |
+| 9 | 1234433 | 1236386 | 1953 | 103055.33 | 8.35 | 85933.13 | 6.95 |
+| 10 | 1319576 | 1341061 | 21485 | 119605.51 | 9.06 | 104990.17 | 7.83 |
+| 11 | 1364377 | 1383359 | 18982 | 119464.17 | 8.76 | 89527.46 | 6.47 |
+| 12 | 1740840 | 1784053 | 43213 | 176321.15 | 10.13 | 161349.25 | 9.04 |
+| 13 | 2972587 | 3009697 | 37110 | 380379.04 | 12.80 | 403398.48 | 13.40 |
 
 ## Misc.
 
@@ -53,13 +53,11 @@ https://github.com/google/gson/commit/2
 ### Tests
 | ID | Class | Delta | Share |
 | --- | --- | --- | --- |
-| G | NEUTRAL | -32349.0 | - |
-| N | NEGATIVE | -243834.0 | 14.29 |
-| P | POSITIVE | 211485.0 | 14.29 |
-| 3 | POSITIVE | 49804.0 | 23.55 |
-| 6 | NEGATIVE | -77147.0 | 31.64 |
-| 7 | POSITIVE | 97412.0 | 46.06 |
-| 12 | NEGATIVE | -59937.0 | 24.58 |
+| G | NEUTRAL | 41749.0 | - |
+| N | NEGATIVE | -265320.0 | 25.00 |
+| P | POSITIVE | 307069.0 | 10.00 |
+| 6 | POSITIVE | 97046.0 | 31.60 |
+| 7 | NEGATIVE | -136779.0 | 51.55 |
 
 ### Lines
 | Class | Java Class | Line |
@@ -75,22 +73,23 @@ https://github.com/google/gson/commit/2
 ### Selected Tests
 | Test class | test method |
 | --- | --- |
+| com.google.gson.DefaultDateTypeAdapterTest | testParsingDatesFormattedWithUsLocale |
 | com.google.gson.DefaultDateTypeAdapterTest | testParsingDatesFormattedWithSystemLocale |
 | com.google.gson.DefaultDateTypeAdapterTest | testFormattingInFr |
 
 ### Suspected lines
 | Class | line |
 | --- | --- |
-| com.google.gson.DefaultDateTypeAdapter | [87](https://github.com/google/gson/tree/2/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java#L87) |
-| com.google.gson.DefaultDateTypeAdapter | [88](https://github.com/google/gson/tree/2/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java#L87#L88) |
-| com.google.gson.DefaultDateTypeAdapter | [100](https://github.com/google/gson/tree/2/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java#L87#L88#L100) |
+| com.google.gson.DefaultDateTypeAdapter | [100](https://github.com/google/gson/tree/7a9fd5/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java#L100) |
+| com.google.gson.DefaultDateTypeAdapter | [87](https://github.com/google/gson/tree/7a9fd5/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java#L100#L87) |
+| com.google.gson.DefaultDateTypeAdapter | [88](https://github.com/google/gson/tree/7a9fd5/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java#L100#L87#L88) |
 
 
 
 | Time Label | Time (s) |
 | --- | --- |
-| Selection | 101.48251843452454 |
-| Injection | 54.04417324066162 |
-| Total | 4857.010319471359 |
+| Selection | 97.22190856933594 |
+| Injection | 53.430015087127686 |
+| Total | 4845.886991024017 |
 
 
