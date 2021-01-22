@@ -47,7 +47,6 @@ def run_mvn_test_class(path, tests_to_execute, output_path_file, jjouled=False):
             path + (JJOULED_POM_FILE if jjouled else POM_FILE),
             MVN_LOG_OPT,
             output_path_file,
-            MVN_CLEAN_GOAL,
             MVN_DATE_FORMAT_OPT,
             MVN_TEST,
             OPT_TEST + ','.join(tests_to_execute),
