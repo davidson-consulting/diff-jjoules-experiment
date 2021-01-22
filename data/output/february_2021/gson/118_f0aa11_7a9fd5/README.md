@@ -1,7 +1,7 @@
-# gson 2
+# gson 7a9fd5
 
 
-https://github.com/google/gson/commit/2
+https://github.com/google/gson/commit/7a9fd5
 
 
 
@@ -12,20 +12,20 @@ https://github.com/google/gson/commit/2
 
 | ID | EnergyV1 | EnergyV2 | DeltaEnergy | σV1 | %σV1 | σV2 | %σV2 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0 | 4415822 | 4299000 | -116822 | 344686.13 | 7.81 | 316201.95 | 7.36 |
-| 1 | 3520621 | 3580130 | 59509 | 190303.44 | 5.41 | 109759.01 | 3.07 |
-| 2 | 827207 | 875731 | 48524 | 66412.24 | 8.03 | 90850.51 | 10.37 |
-| 3 | 1884150 | 1935236 | 51086 | 74795.67 | 3.97 | 113353.09 | 5.86 |
-| 4 | 751768 | 760557 | 8789 | 71643.44 | 9.53 | 69194.65 | 9.10 |
-| 5 | 328002 | 339354 | 11352 | 20144.15 | 6.14 | 88519.63 | 26.08 |
-| 6 | 10311191 | 10140904 | -170287 | 169604.07 | 1.64 | 258009.18 | 2.54 |
-| 7 | 6473372 | 6508406 | 35034 | 160353.06 | 2.48 | 248389.65 | 3.82 |
-| 8 | 1866695 | 1951411 | 84716 | 118515.59 | 6.35 | 198996.73 | 10.20 |
-| 9 | 485411 | 480528 | -4883 | 75176.82 | 15.49 | 86203.54 | 17.94 |
-| 10 | 631285 | 775694 | 144409 | 45260.50 | 7.17 | 96010.08 | 12.38 |
-| 11 | 651671 | 736876 | 85205 | 65434.04 | 10.04 | 109876.67 | 14.91 |
-| 12 | 896360 | 957090 | 60730 | 79094.65 | 8.82 | 67072.25 | 7.01 |
-| 13 | 2065730 | 2025385 | -40345 | 45072.83 | 2.18 | 64399.83 | 3.18 |
+| 0 | 4332752 | 4314869 | -17883 | 180480.28 | 4.17 | 372177.10 | 8.63 |
+| 1 | 3444754 | 3482780 | 38026 | 148652.51 | 4.32 | 133635.30 | 3.84 |
+| 2 | 814268 | 950864 | 136596 | 41410.47 | 5.09 | 105340.86 | 11.08 |
+| 3 | 1837215 | 1881709 | 44494 | 100081.24 | 5.45 | 64632.44 | 3.43 |
+| 4 | 735228 | 738035 | 2807 | 94241.95 | 12.82 | 53191.44 | 7.21 |
+| 5 | 295837 | 442870 | 147033 | 16117.81 | 5.45 | 93892.66 | 21.20 |
+| 6 | 9904699 | 9952855 | 48156 | 311916.02 | 3.15 | 236980.16 | 2.38 |
+| 7 | 6565108 | 6453475 | -111633 | 238670.47 | 3.64 | 359038.72 | 5.56 |
+| 8 | 1815242 | 1824764 | 9522 | 50704.56 | 2.79 | 94148.66 | 5.16 |
+| 9 | 483763 | 490355 | 6592 | 90834.62 | 18.78 | 52662.93 | 10.74 |
+| 10 | 642149 | 765562 | 123413 | 74930.84 | 11.67 | 75018.98 | 9.80 |
+| 11 | 652159 | 616087 | -36072 | 74807.18 | 11.47 | 88448.65 | 14.36 |
+| 12 | 890135 | 932737 | 42602 | 32898.19 | 3.70 | 22921.56 | 2.46 |
+| 13 | 2037593 | 2065852 | 28259 | 51335.55 | 2.52 | 30229.50 | 1.46 |
 
 ## Misc.
 
@@ -53,11 +53,13 @@ https://github.com/google/gson/commit/2
 ### Tests
 | ID | Class | Delta | Share |
 | --- | --- | --- | --- |
-| G | NEUTRAL | 257017.0 | - |
-| N | NEGATIVE | -332337.0 | 25.00 |
-| P | POSITIVE | 589354.0 | 10.00 |
-| 6 | NEGATIVE | -170287.0 | 51.24 |
-| 10 | POSITIVE | 144409.0 | 24.50 |
+| G | NEUTRAL | 461912.0 | - |
+| N | NEGATIVE | -165588.0 | 33.33 |
+| P | POSITIVE | 627500.0 | 9.09 |
+| 2 | POSITIVE | 136596.0 | 21.77 |
+| 5 | POSITIVE | 147033.0 | 23.43 |
+| 7 | NEGATIVE | -111633.0 | 67.42 |
+| 10 | POSITIVE | 123413.0 | 19.67 |
 
 ### Lines
 | Class | Java Class | Line |
@@ -73,20 +75,20 @@ https://github.com/google/gson/commit/2
 ### Selected Tests
 | Test class | test method |
 | --- | --- |
-| com.google.gson.DefaultDateTypeAdapterTest | testParsingDatesFormattedWithUsLocale |
-| com.google.gson.DefaultDateTypeAdapterTest | testParsingDatesFormattedWithSystemLocale |
+| com.google.gson.DefaultDateTypeAdapterTest | testFormattingInFr |
 
 ### Suspected lines
 | Class | line |
 | --- | --- |
-| com.google.gson.DefaultDateTypeAdapter | [100](https://github.com/google/gson/tree/2/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java#L100) |
+| com.google.gson.DefaultDateTypeAdapter | [87](https://github.com/google/gson/tree/7a9fd5/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java#L87) |
+| com.google.gson.DefaultDateTypeAdapter | [88](https://github.com/google/gson/tree/7a9fd5/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java#L87#L88) |
 
 
 
 | Time Label | Time (s) |
 | --- | --- |
-| Selection | 35.93367862701416 |
-| Injection | 23.177075147628784 |
-| Total | 256.29953479766846 |
+| Selection | 34.447208642959595 |
+| Injection | 23.202263832092285 |
+| Total | 254.4712688922882 |
 
 
