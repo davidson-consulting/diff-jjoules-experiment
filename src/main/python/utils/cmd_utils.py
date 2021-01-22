@@ -10,6 +10,7 @@ MVN_TEST = 'test'
 OPT_TEST = '-Dtest='
 
 MVN_LOG_OPT = '--log-file'
+MVN_DATE_FORMAT_OPT = '-Djava.locale.providers=COMPAT,CLDR,SPI'
 
 def print_to_file(text, filepath):
     with open(filepath, 'a') as file:
@@ -33,6 +34,7 @@ def run_mvn_test(path, tests_to_execute, output_path_file, jjouled=False):
             MVN_LOG_OPT,
             output_path_file,
             MVN_CLEAN_GOAL,
+            MVN_DATE_FORMAT_OPT,
             MVN_TEST,
             OPT_TEST + ','.join([test + '#' + '+'.join(tests_to_execute[test]) for test in tests_to_execute]),
         ])
@@ -46,6 +48,7 @@ def run_mvn_test_class(path, tests_to_execute, output_path_file, jjouled=False):
             MVN_LOG_OPT,
             output_path_file,
             MVN_CLEAN_GOAL,
+            MVN_DATE_FORMAT_OPT,
             MVN_TEST,
             OPT_TEST + ','.join(tests_to_execute),
         ])
@@ -109,6 +112,7 @@ def run_mvn_clean_test_build_cp(path):
             path + POM_FILE,
             MVN_CLEAN_GOAL,
             MVN_TEST,
+            MVN_DATE_FORMAT_OPT,
             MVN_SKIP_TEST,
              BUILD_CLASSPATH_GOAL,
             OPT_OUTPUT_CP_FILE,
@@ -149,6 +153,7 @@ def run_mvn_build_classpath_and_instrument_class(path_first_version, path_second
             MVN_LOG_OPT,
             output_path_file,
             MVN_TEST,
+            MVN_DATE_FORMAT_OPT,
             MVN_SKIP_TEST,
             BUILD_CLASSPATH_GOAL,
             OPT_OUTPUT_CP_FILE,

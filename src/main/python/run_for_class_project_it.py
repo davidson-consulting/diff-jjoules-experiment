@@ -179,6 +179,7 @@ if __name__ == '__main__':
         for commit_folder in commits_folders:
             filtered_commits_cursor.append(int(commit_folder.split('_')[0]))
         cursor_filtered_commits = 0
+        cursor_commits = filtered_commits_cursor[cursor_filtered_commits]
 
     PATH_V1 = PATH_V1 + '/' + main_module_name
     PATH_V2 = PATH_V2 + '/' + main_module_name
@@ -186,6 +187,10 @@ if __name__ == '__main__':
     last_cursor_commit = cursor_commits
 
     while current_nb_completed_commits < nb_commits and cursor_commits < len(commits) - 1:
+        print(cursor_commits)
+        if not commits[cursor_commits].startswith('f0aa11'):
+            cursor_commits = cursor_commits + 1
+            continue
         commit_sha_v1 = commits[cursor_commits]
         commit_sha_v2 = commits[cursor_commits - 1]
 
@@ -235,3 +240,4 @@ if __name__ == '__main__':
         else:
             move_directory(current_output_path, current_err_output_path)
             cursor_commits = cursor_commits + 1
+        sys.exit(-1)
