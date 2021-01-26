@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="100" failures="0" name="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" time="0.041" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.275-b01"/>
+    <property name="animal.sniffer.skip" value="true"/>
+    <property name="java.locale.providers" value="COMPAT,CLDR,SPI"/>
+    <property name="java.vm.vendor" value="Private Build"/>
+    <property name="maven.multiModuleProjectDirectory" value="/tmp/v2/gson"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="test" value="com.google.gson.functional.CustomTypeAdaptersTest_testCustomAdapterInvokedForCollectionElementSerializationWithType,com.google.gson.functional.CustomTypeAdaptersTest_testCustomTypeAdapterDoesNotAppliesToSubClasses,com.google.gson.functional.MapTest_testMapSerializationWithIntegerKeys,com.google.gson.functional.EnumTest_testEnumSubclass,com.google.gson.functional.ExposeFieldsTest_testExposeAnnotationSerialization,com.google.gson.functional.DefaultTypeAdaptersTest_testDefaultDateSerializationUsingBuilder,com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization,com.google.gson.functional.DefaultTypeAdaptersTest_testBigDecimalFieldSerialization,com.google.gson.functional.CustomSerializerTest_testSerializerReturnsNull,com.google.gson.functional.ArrayTest_testArrayOfPrimitivesAsObjectsSerialization,com.google.gson.functional.ArrayTest_testEmptyArraySerialization,com.google.gson.functional.PrimitiveTest_testSmallValueForBigIntegerSerialization,com.google.gson.functional.PrimitiveTest_testPrimitiveBooleanAutoboxedSerialization,com.google.gson.functional.PrimitiveTest_testLongAsStringSerialization,com.google.gson.MixedStreamTest_testWriteDoesNotMutateState,com.google.gson.functional.PrettyPrintingTest_testMap,com.google.gson.functional.NullObjectAndFieldTest_testCustomSerializationOfNulls,com.google.gson.functional.InheritanceTest_testBaseSerializedAsBaseWhenSpecifiedWithExplicitTypeForToJsonMethod,com.google.gson.functional.RawSerializationTest_testTwoLevelParameterizedObject,com.google.gson.functional.ObjectTest_testAnonymousLocalClassesSerialization,com.google.gson.functional.CollectionTest_testWildcardCollectionField,com.google.gson.GsonTypeAdapterTest_testTypeAdapterProperlyConvertsTypes"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/spino/workspace/diff-jjoules-experiment"/>
+    <property name="java.runtime.version" value="1.8.0_275-8u275-b01-0ubuntu1~18.04-b01"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/usr/share/maven/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="5.4.0-62-generic"/>
+    <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
+    <property name="user.home" value="/home/spino"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="jacoco.skip" value="true"/>
+    <property name="user.name" value="spino"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Drat.skip=true -Djacoco.skip=true -Danimal.sniffer.skip=true -f /tmp/v2/gson/pom.xml --log-file data/output/gson_flaky/794_d26c81_364de8//v2/1/mvn_test.log -Djava.locale.providers=COMPAT,CLDR,SPI test -Dtest=com.google.gson.functional.CustomTypeAdaptersTest_testCustomAdapterInvokedForCollectionElementSerializationWithType,com.google.gson.functional.CustomTypeAdaptersTest_testCustomTypeAdapterDoesNotAppliesToSubClasses,com.google.gson.functional.MapTest_testMapSerializationWithIntegerKeys,com.google.gson.functional.EnumTest_testEnumSubclass,com.google.gson.functional.ExposeFieldsTest_testExposeAnnotationSerialization,com.google.gson.functional.DefaultTypeAdaptersTest_testDefaultDateSerializationUsingBuilder,com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization,com.google.gson.functional.DefaultTypeAdaptersTest_testBigDecimalFieldSerialization,com.google.gson.functional.CustomSerializerTest_testSerializerReturnsNull,com.google.gson.functional.ArrayTest_testArrayOfPrimitivesAsObjectsSerialization,com.google.gson.functional.ArrayTest_testEmptyArraySerialization,com.google.gson.functional.PrimitiveTest_testSmallValueForBigIntegerSerialization,com.google.gson.functional.PrimitiveTest_testPrimitiveBooleanAutoboxedSerialization,com.google.gson.functional.PrimitiveTest_testLongAsStringSerialization,com.google.gson.MixedStreamTest_testWriteDoesNotMutateState,com.google.gson.functional.PrettyPrintingTest_testMap,com.google.gson.functional.NullObjectAndFieldTest_testCustomSerializationOfNulls,com.google.gson.functional.InheritanceTest_testBaseSerializedAsBaseWhenSpecifiedWithExplicitTypeForToJsonMethod,com.google.gson.functional.RawSerializationTest_testTwoLevelParameterizedObject,com.google.gson.functional.ObjectTest_testAnonymousLocalClassesSerialization,com.google.gson.functional.CollectionTest_testWildcardCollectionField,com.google.gson.GsonTypeAdapterTest_testTypeAdapterProperlyConvertsTypes"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_275"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes"/>
+    <property name="java.vendor" value="Private Build"/>
+    <property name="rat.skip" value="true"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_99" time="0.02"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_98" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_97" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_96" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_95" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_94" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_93" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_92" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_91" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_90" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_89" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_88" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_87" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_86" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_85" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_84" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_83" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_82" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_81" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_80" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_79" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_78" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_77" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_76" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_75" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_74" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_73" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_72" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_71" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_70" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_69" time="0.005"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_68" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_67" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_66" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_65" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_64" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_63" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_62" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_61" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_60" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_59" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_58" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_57" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_56" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_55" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_54" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_53" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_52" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_51" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_50" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_49" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_48" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_47" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_46" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_45" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_44" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_43" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_42" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_41" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_40" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_39" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_38" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_37" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_36" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_35" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_34" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_33" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_32" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_31" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_30" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_29" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_28" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_27" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_26" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_25" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_24" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_23" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_22" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_21" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_20" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_19" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_18" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_17" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_16" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_15" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_14" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_13" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_12" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_11" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_10" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_9" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_8" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_7" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_6" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_5" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_4" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_3" time="0.001"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_2" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_1" time="0"/>
+  <testcase classname="com.google.gson.functional.DefaultTypeAdaptersTest_testBitSetSerialization" name="testBitSetSerialization_0" time="0"/>
+</testsuite>
