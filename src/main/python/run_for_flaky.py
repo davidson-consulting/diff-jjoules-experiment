@@ -127,7 +127,7 @@ if __name__ == '__main__':
     delete_module_info_java(PATH_V1)
     delete_module_info_java(PATH_V2)
 
-    nb_duplication = '-Dnb-duplication=100'
+    nb_duplication = '-Dnb-duplication=1'
 
     run_mvn_clean_test_build_cp(PATH_V2)
     run_command(
@@ -149,4 +149,4 @@ if __name__ == '__main__':
         ])
     )
 
-    run_tests(PATH_V1, PATH_V2, 100, 'data/output/gson_flaky/794_d26c81_364de8/', selected_not_flaky_tests_value)
+    run_tests(PATH_V1, PATH_V2, 1, 'data/output/gson_flaky/794_d26c81_364de8/', selected_not_flaky_tests_value)
