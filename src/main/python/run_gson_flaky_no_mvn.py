@@ -21,9 +21,14 @@ def write_test_list_in_csv(test_list, path_to_csv):
                 tests_values.append(test_class + '_' + test_method)
     return tests_values
 
+def read_classpath(path):
+    with open(path + '/classpath') as classpath_file:
+        classpath = classpath_file.read()
+    return classpath
+
 def run_test_command(PATH_V1, PATH_V2, nb_iteration, output_path, tests_to_execute):
-    classpath = '~/workspace/test-runner/target/test-runner-2.3.0-SNAPSHOT-jar-with-dependencies.jar:/home/spino/.m2/repository/junit/junit/3.8.2/junit-3.8.2.jar:/home/spino/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/spino/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/spino/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/spino/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/spino/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/spino/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/home/spino/.m2/repository/org/apache/maven/maven-plugin-api/3.3.9/maven-plugin-api-3.3.9.jar:/home/spino/.m2/repository/org/apache/maven/maven-model/3.3.9/maven-model-3.3.9.jar:/home/spino/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/home/spino/.m2/repository/org/apache/maven/maven-artifact/3.3.9/maven-artifact-3.3.9.jar:/home/spino/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.3.2/org.eclipse.sisu.plexus-0.3.2.jar:/home/spino/.m2/repository/javax/enterprise/cdi-api/1.0/cdi-api-1.0.jar:/home/spino/.m2/repository/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar:/home/spino/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/spino/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.2/org.eclipse.sisu.inject-0.3.2.jar:/home/spino/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar:/home/spino/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.5.2/plexus-classworlds-2.5.2.jar:/home/spino/.m2/repository/org/apache/maven/plugin-tools/maven-plugin-annotations/3.6.0/maven-plugin-annotations-3.6.0.jar:/home/spino/.m2/repository/org/apache/maven/maven-project/2.2.1/maven-project-2.2.1.jar:/home/spino/.m2/repository/org/apache/maven/maven-settings/2.2.1/maven-settings-2.2.1.jar:/home/spino/.m2/repository/org/apache/maven/maven-profile/2.2.1/maven-profile-2.2.1.jar:/home/spino/.m2/repository/org/apache/maven/maven-artifact-manager/2.2.1/maven-artifact-manager-2.2.1.jar:/home/spino/.m2/repository/org/apache/maven/maven-repository-metadata/2.2.1/maven-repository-metadata-2.2.1.jar:/home/spino/.m2/repository/org/apache/maven/wagon/wagon-provider-api/1.0-beta-6/wagon-provider-api-1.0-beta-6.jar:/home/spino/.m2/repository/backport-util-concurrent/backport-util-concurrent/3.1/backport-util-concurrent-3.1.jar:/home/spino/.m2/repository/org/apache/maven/maven-plugin-registry/2.2.1/maven-plugin-registry-2.2.1.jar:/home/spino/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.11/plexus-interpolation-1.11.jar:/home/spino/.m2/repository/org/codehaus/plexus/plexus-utils/1.5.15/plexus-utils-1.5.15.jar:/home/spino/.m2/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar:/home/spino/.m2/repository/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar:/home/spino/.m2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar'
-    classpath = classpath + ':' + path + '/target/classes/' + ':' + path + '/target/test-classes/'
+    classpath = '~/workspace/test-runner/target/test-runner-2.3.0-SNAPSHOT-jar-with-dependencies.jar:' + read_classpath(PATH_V1)
+    classpath = classpath + ':' + PATH_V1 + '/target/classes/' + ':' + PATH_V1 + '/target/test-classes/'
     mkdir(output_path + '/v1/')
     for i in range(nb_iteration):
         print(i)
@@ -34,9 +39,10 @@ def run_test_command(PATH_V1, PATH_V2, nb_iteration, output_path, tests_to_execu
             classpath,
             'eu.stamp_project.testrunner.runner.JUnit4Runner',
             '--class',
-            tests_to_execute
+            ':'.join(tests_to_execute)
         ]))
-        copy_jjoules_result(PATH_V1, v1_result_folder)
+        run_command('ls target/')
+        copy_jjoules_result('.', v1_result_folder)
 
 if __name__ == '__main__':
 
@@ -63,6 +69,23 @@ if __name__ == '__main__':
         'com.google.gson.functional.PrimitiveTest-testLongAsStringSerialization',
         'com.google.gson.functional.CollectionTest-testWildcardCollectionField',
         'com.google.gson.GsonTypeAdapterTest-testTypeAdapterProperlyConvertsTypes'
+    ]
+
+    selected_not_flaky_tests = [
+        'com.google.gson.functional.CollectionTest-testWildcardCollectionField',
+        'com.google.gson.functional.CustomSerializerTest-testSerializerReturnsNull',
+        'com.google.gson.functional.DefaultTypeAdaptersTest-testBitSetSerialization',
+        'com.google.gson.functional.EnumTest-testEnumSubclass',
+        'com.google.gson.functional.ExposeFieldsTest-testExposeAnnotationSerialization',
+        'com.google.gson.functional.InheritanceTest-testBaseSerializedAsBaseWhenSpecifiedWithExplicitTypeForToJsonMethod',
+        'com.google.gson.functional.MapTest-testMapSerializationWithIntegerKeys',
+        'com.google.gson.functional.NullObjectAndFieldTest-testCustomSerializationOfNulls',
+        'com.google.gson.functional.ObjectTest-testAnonymousLocalClassesSerialization',
+        'com.google.gson.functional.PrettyPrintingTest-testMap',
+        'com.google.gson.functional.PrimitiveTest-testPrimitiveBooleanAutoboxedSerialization',
+        'com.google.gson.functional.RawSerializationTest-testTwoLevelParameterizedObject',
+        'com.google.gson.GsonTypeAdapterTest-testTypeAdapterProperlyConvertsTypes',
+        'com.google.gson.MixedStreamTest-testWriteDoesNotMutateState',
     ]
 
     selected_flaky_tests = [
@@ -110,12 +133,10 @@ if __name__ == '__main__':
     commit_sha_v1 = 'd26c8189182fa96691cc8e0d0f312469ee0627bb'
     commit_sha_v2 = '364de8061173b4b91f4477a55059f68e765fc3d1'
 
-    '''
     delete_directory(PATH_V1)
     delete_directory(PATH_V2)
     clone(repo_url, PATH_V1)
     clone(repo_url, PATH_V2)
-    '''
 
     PATH_V1 = '/tmp/v1/gson'
     PATH_V2 = '/tmp/v2/gson'
@@ -126,13 +147,12 @@ if __name__ == '__main__':
     selected_not_flaky_tests_value = write_test_list_in_csv(selected_not_flaky_tests, path_to_not_flaky_csv)
     selected_flaky_tests_value = write_test_list_in_csv(selected_flaky_tests, path_to_flaky_csv)
 
-    '''
     reset_hard(commit_sha_v1, PATH_V1)
     reset_hard(commit_sha_v2, PATH_V2)
     delete_module_info_java(PATH_V1)
     delete_module_info_java(PATH_V2)
 
-    nb_duplication = '-Dnb-duplication=1'
+    nb_duplication = '-Dnb-duplication=1000'
 
     run_mvn_clean_test_build_cp(PATH_V2)
     run_command(
@@ -153,6 +173,6 @@ if __name__ == '__main__':
             OPT_CP_V1,
         ])
     )
-    '''
 
-    run_test_command(PATH_V1, PATH_V2, 1, 'data/output/gson_flaky/794_d26c81_364de8/', selected_not_flaky_tests_value)
+    run_mvn_clean_test_build_cp(PATH_V1)
+    run_test_command(PATH_V1, PATH_V2, 100, 'data/output/gson_flaky/794_d26c81_364de8/', selected_not_flaky_tests_value)
