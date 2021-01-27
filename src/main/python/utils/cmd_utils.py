@@ -140,7 +140,7 @@ def run_mvn_build_classpath_and_instrument(path_first_version, path_second_versi
         ])
     )
 
-OPT_NB_DUPLICATION = '-Dnb-duplication=100'
+OPT_NB_DUPLICATION = '-Dnb-duplication=2'
 
 def run_mvn_build_classpath_and_instrument_class(path_first_version, path_second_version, output_path_file):
     return run_command(
@@ -224,9 +224,9 @@ def copy_jjoules_result(src_dir, dst):
             if subdir == JJOULES_REPORT_FOLDER:
                 print('copy dir', dirName + '/' + subdir,  dst)
                 copy_directory(dirName + '/' + subdir, dst)
-            if subdir == 'surefire-reports':
-                print('copy dir', dirName + '/' + subdir,  dst + '_surefire')
-                copy_directory(dirName + '/' + subdir, dst + '_surefire')
+            #if subdir == 'surefire-reports':
+            #    print('copy dir', dirName + '/' + subdir,  dst + '_surefire')
+            #    copy_directory(dirName + '/' + subdir, dst + '_surefire')
 
 def copy(src, dst):
     try:
