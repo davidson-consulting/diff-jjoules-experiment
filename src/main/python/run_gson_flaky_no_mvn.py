@@ -38,22 +38,6 @@ def run_test_command(PATH_V1, PATH_V2, nb_iteration, output_path, tests_to_execu
         ]))
         copy_jjoules_result(PATH_V1, v1_result_folder)
 
-
-def run_tests(PATH_V1, PATH_V2, nb_iteration, output_path, tests_to_execute):
-    mkdir(output_path + '/v1/')
-    mkdir(output_path + '/v2/')
-    for i in range(nb_iteration):
-        print(i)
-        v1_result_folder = output_path + '/v1/' + str(i)
-        delete_directory(v1_result_folder)
-        run_mvn_test_class(PATH_V1, tests_to_execute, v1_result_folder + '/mvn_test.log', True)
-        copy_jjoules_result(PATH_V1, v1_result_folder)
-
-        v2_result_folder = output_path + '/v2/' + str(i)
-        delete_directory(v2_result_folder)
-        run_mvn_test_class(PATH_V2, tests_to_execute, v2_result_folder + '/mvn_test.log', True)
-        copy_jjoules_result(PATH_V2, v2_result_folder)
-
 if __name__ == '__main__':
 
     selected_not_flaky_tests = [
@@ -171,4 +155,4 @@ if __name__ == '__main__':
     )
     '''
 
-    run_tests(PATH_V1, PATH_V2, 1, 'data/output/gson_flaky/794_d26c81_364de8/', selected_not_flaky_tests_value)
+    run_test_command(PATH_V1, PATH_V2, 1, 'data/output/gson_flaky/794_d26c81_364de8/', selected_not_flaky_tests_value)
