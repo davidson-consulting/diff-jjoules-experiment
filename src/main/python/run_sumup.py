@@ -112,7 +112,8 @@ if __name__ == '__main__':
     delete_directory(PATH_V1)
     clone(repo_url, PATH_V1)
 
-    commit_sha = '83c0c1d1852fab6ea636acb7c596c0fcb78a80c3'
+    #commit_sha = '83c0c1d1852fab6ea636acb7c596c0fcb78a80c3'
+    commit_sha = 'af8a45aecd5132207b8beda58cf3f0e7ae158129'
     PATH_V1 = '/tmp/v1/gson'
     reset_hard(commit_sha, PATH_V1)
     delete_module_info_java(PATH_V1)
