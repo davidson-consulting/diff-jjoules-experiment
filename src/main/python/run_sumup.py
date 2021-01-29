@@ -44,7 +44,9 @@ def run_test_command(PATH_V1, nb_iteration, output_path, tests_to_execute):
         result_folder = output_path + '/' + str(i)
         delete_directory(result_folder)
         run_command(' '.join([
-            'java', '-classpath',
+            'java',
+            '-Djava.locale.providers=COMPAT,CLDR,SPI',
+            '-classpath',
             classpath,
             'eu.stamp_project.testrunner.runner.JUnit4Runner',
             '--class',
@@ -97,9 +99,9 @@ def run_sumup(PATH_V1, nb_iteration, output_path):
     test_list_100 = get_test_list('100')
     test_list_1000 = get_test_list('1000')
 
-    run_test_command(PATH_V1, nb_iteration, output_path + '_java_10', test_list_10)
-    run_test_command(PATH_V1, nb_iteration, output_path + '_java_100', test_list_100)
-    run_test_command(PATH_V1, nb_iteration, output_path + '_java_1000', test_list_1000)
+    #run_test_command(PATH_V1, nb_iteration, output_path + '_java_10', test_list_10)
+    #run_test_command(PATH_V1, nb_iteration, output_path + '_java_100', test_list_100)
+    #run_test_command(PATH_V1, nb_iteration, output_path + '_java_1000', test_list_1000)
 
     run_tests(PATH_V1, nb_iteration, output_path + '_mvn_10', test_list_10)
     run_tests(PATH_V1, nb_iteration, output_path + '_mvn_100', test_list_100)
@@ -119,4 +121,4 @@ if __name__ == '__main__':
     delete_module_info_java(PATH_V1)
 
     run_mvn_clean_test_build_cp(PATH_V1)
-    run_sumup(PATH_V1, 1000, 'data/output/sumup')
+    run_sumup(PATH_V1, 1000, 'data/output/sumup_v2')
