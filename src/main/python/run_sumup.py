@@ -95,17 +95,19 @@ def get_test_list(duplication):
 
 def run_sumup(PATH_V1, nb_iteration, output_path):
     
-    test_list_10 = get_test_list('10')
-    test_list_100 = get_test_list('100')
-    test_list_1000 = get_test_list('1000')
+    # test_list_10 = get_test_list('10')
+    # test_list_100 = get_test_list('100')
+    # test_list_1000 = get_test_list('1000')
+    test_list_2000 = get_test_list('2000')
 
     #run_test_command(PATH_V1, nb_iteration, output_path + '_java_10', test_list_10)
     #run_test_command(PATH_V1, nb_iteration, output_path + '_java_100', test_list_100)
     #run_test_command(PATH_V1, nb_iteration, output_path + '_java_1000', test_list_1000)
 
-    run_tests(PATH_V1, nb_iteration, output_path + '_mvn_10', test_list_10)
-    run_tests(PATH_V1, nb_iteration, output_path + '_mvn_100', test_list_100)
-    run_tests(PATH_V1, nb_iteration, output_path + '_mvn_1000', test_list_1000)
+    #run_tests(PATH_V1, nb_iteration, output_path + '_mvn_10', test_list_10)
+    #run_tests(PATH_V1, nb_iteration, output_path + '_mvn_100', test_list_100)
+    #run_tests(PATH_V1, nb_iteration, output_path + '_mvn_1000', test_list_1000)
+    run_tests(PATH_V1, nb_iteration, output_path + '_mvn_2000', test_list_2000)
 
 if __name__ == '__main__':
 
@@ -115,10 +117,11 @@ if __name__ == '__main__':
     clone(repo_url, PATH_V1)
 
     #commit_sha = '83c0c1d1852fab6ea636acb7c596c0fcb78a80c3'
-    commit_sha = 'af8a45aecd5132207b8beda58cf3f0e7ae158129'
+    commit_sha = '1a4942c624b3ddcd3d3b2e79ef07326afd071ab1'
+    #commit_sha = 'af8a45aecd5132207b8beda58cf3f0e7ae158129'
     PATH_V1 = '/tmp/v1/gson'
     reset_hard(commit_sha, PATH_V1)
     delete_module_info_java(PATH_V1)
 
     run_mvn_clean_test_build_cp(PATH_V1)
-    run_sumup(PATH_V1, 1000, 'data/output/sumup_v2')
+    run_sumup(PATH_V1, 100, 'data/output/sumup')
