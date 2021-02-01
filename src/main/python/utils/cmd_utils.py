@@ -140,9 +140,35 @@ def run_mvn_build_classpath_and_instrument(path_first_version, path_second_versi
         ])
     )
 
-OPT_NB_DUPLICATION = '-Dnb-duplication=2'
+OPT_NB_DUPLICATION = '-Dnb-duplication=2000'
 
 def run_mvn_build_classpath_and_instrument_class(path_first_version, path_second_version, output_path_file):
+    return run_command(
+         ' '.join([
+            MVN_CMD,
+            path_first_version + POM_FILE,
+            MVN_CLEAN_GOAL,
+            #MVN_LOG_OPT,
+            #output_path_file,
+            MVN_TEST,
+            MVN_DATE_FORMAT_OPT,
+            MVN_SKIP_TEST,
+            BUILD_CLASSPATH_GOAL,
+            OPT_OUTPUT_CP_FILE,
+            CMD_DIFF_CLASS_INSTRUMENT,
+            OPT_NB_DUPLICATION,
+            #OPT_TEST_LISTS + path_first_version + '/' + VALUE_TEST_LISTS,
+            OPT_TEST_LISTS + VALUE_TEST_LISTS,
+            OPT_PATH_DIR_SECOND_VERSION + path_second_version,
+            OPT_CP_V2,
+            OPT_CP_V1,
+        ])
+    )
+
+OPT_NB_DUPLICATION_DYN = '-Dnb-duplication=-1'
+OPT_EXEC_TIME_TO_REACH = '-Dexec-time-in-ms=2000'
+
+def run_mvn_build_classpath_and_instrument_class_dynamic(path_first_version, path_second_version, output_path_file):
     return run_command(
          ' '.join([
             MVN_CMD,
@@ -156,8 +182,8 @@ def run_mvn_build_classpath_and_instrument_class(path_first_version, path_second
             BUILD_CLASSPATH_GOAL,
             OPT_OUTPUT_CP_FILE,
             CMD_DIFF_CLASS_INSTRUMENT,
-            OPT_NB_DUPLICATION,
-            #OPT_TEST_LISTS + path_first_version + '/' + VALUE_TEST_LISTS,
+            OPT_NB_DUPLICATION_DYN,
+            OPT_EXEC_TIME_TO_REACH,
             OPT_TEST_LISTS + VALUE_TEST_LISTS,
             OPT_PATH_DIR_SECOND_VERSION + path_second_version,
             OPT_CP_V2,
