@@ -188,7 +188,7 @@ if __name__ == '__main__':
 
     while current_nb_completed_commits < nb_commits and cursor_commits < len(commits) - 1:
         print(cursor_commits)
-        if not commits[cursor_commits].startswith('f0aa11'):
+        if not commits[cursor_commits].startswith('d26c8189182fa96691cc8e0d0f312469ee0627bb'):
             cursor_commits = cursor_commits + 1
             continue
         commit_sha_v1 = commits[cursor_commits]

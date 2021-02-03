@@ -178,7 +178,7 @@ def run_mvn_build_classpath_and_instrument_class_dynamic(path_first_version, pat
             output_path_file,
             MVN_TEST,
             MVN_DATE_FORMAT_OPT,
-            MVN_SKIP_TEST,
+            #MVN_SKIP_TEST,
             BUILD_CLASSPATH_GOAL,
             OPT_OUTPUT_CP_FILE,
             CMD_DIFF_CLASS_INSTRUMENT,

@@ -35,7 +35,7 @@ if __name__ == '__main__':
     path_to_data_project = data_path + '/' + project_name
 
     commits, repo_url = init_commits(commits_file_path)
-    #init_repositories(repo_url[:-1])
+    init_repositories(repo_url[:-1])
 
     main_module_name = read_module_name(args.commit_path + '/' + project_name)
     PATH_V1 = PATH_V1 + '/' + main_module_name
@@ -45,9 +45,9 @@ if __name__ == '__main__':
     commits_folders = sorted([subfolder for subfolder in os.listdir(path_to_data_project) if not subfolder.endswith('.png') and not subfolder == 'README.md'], key=lambda folder_name: int(folder_name.split('_')[0]))
     commits_folders = commits_folders
     for i in range(len(commits_folders)):
-        if not commits_folders[i].startswith('3_'):
-            continue
         print(i, '/', len(commits_folders), commits_folders[i])
+        if not commits_folders[i].startswith('118_'):
+            continue
 
         commit_sha_v1 = commits_folders[i].split('_')[1]
         commit_sha_v2 = commits_folders[i].split('_')[2]

@@ -291,8 +291,11 @@ if __name__ == '__main__':
 
     nb_commit_measured = 0
 
-    for commit_folder in os.listdir(path_to_data_project):
-        if commit_folder.startswith('3_') and not commit_folder.endswith('.png') and not commit_folder == 'README.md':
+    commit_folders = sorted([subfolder for subfolder in os.listdir(path_to_data_project) if not subfolder.endswith('.png') and not subfolder == 'README.md'], key=lambda folder_name: int(folder_name.split('_')[0]))
+
+    for commit_folder in commit_folders:
+        if commit_folder.startswith('118_') and not commit_folder.endswith('.png') and not commit_folder == 'README.md':
+            print(commit_folder)
             run_commit(commits_file_path, commit_folder, main_module_name)
             nb_commit_measured = nb_commit_measured + 1
     
