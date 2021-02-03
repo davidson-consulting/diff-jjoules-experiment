@@ -151,7 +151,7 @@ def run_mvn_build_classpath_and_instrument_class(path_first_version, path_second
             #MVN_LOG_OPT,
             #output_path_file,
             MVN_TEST,
-            MVN_DATE_FORMAT_OPT,
+            #MVN_DATE_FORMAT_OPT,
             MVN_SKIP_TEST,
             BUILD_CLASSPATH_GOAL,
             OPT_OUTPUT_CP_FILE,
@@ -166,7 +166,8 @@ def run_mvn_build_classpath_and_instrument_class(path_first_version, path_second
     )
 
 OPT_NB_DUPLICATION_DYN = '-Dnb-duplication=-1'
-OPT_EXEC_TIME_TO_REACH = '-Dexec-time-in-ms=2000'
+OPT_VALUE_EXEC_TIME_TO_REACH = '-Dexec-time-in-ms=2000'
+OPT_EXEC_TIME_TO_REACH = '-Dexec-time-in-ms='
 
 def run_mvn_build_classpath_and_instrument_class_dynamic(path_first_version, path_second_version, output_path_file):
     return run_command(
@@ -176,18 +177,51 @@ def run_mvn_build_classpath_and_instrument_class_dynamic(path_first_version, pat
             MVN_CLEAN_GOAL,
             MVN_LOG_OPT,
             output_path_file,
+            #MVN_DATE_FORMAT_OPT,
             MVN_TEST,
-            MVN_DATE_FORMAT_OPT,
             #MVN_SKIP_TEST,
             BUILD_CLASSPATH_GOAL,
             OPT_OUTPUT_CP_FILE,
             CMD_DIFF_CLASS_INSTRUMENT,
             OPT_NB_DUPLICATION_DYN,
-            OPT_EXEC_TIME_TO_REACH,
+            OPT_VALUE_EXEC_TIME_TO_REACH,
             OPT_TEST_LISTS + VALUE_TEST_LISTS,
             OPT_PATH_DIR_SECOND_VERSION + path_second_version,
             OPT_CP_V2,
             OPT_CP_V1,
+        ])
+    )
+
+def run_mvn_build_classpath_and_instrument_class_dynamic_no_test(path_first_version, path_second_version, output_path_file, time_to_reach):
+    return run_command(
+         ' '.join([
+            MVN_CMD,
+            path_first_version + POM_FILE,
+            MVN_LOG_OPT,
+            output_path_file,
+            BUILD_CLASSPATH_GOAL,
+            OPT_OUTPUT_CP_FILE,
+            CMD_DIFF_CLASS_INSTRUMENT,
+            OPT_NB_DUPLICATION_DYN,
+            OPT_EXEC_TIME_TO_REACH + str(time_to_reach),
+            OPT_TEST_LISTS + VALUE_TEST_LISTS,
+            OPT_PATH_DIR_SECOND_VERSION + path_second_version,
+            OPT_CP_V2,
+            OPT_CP_V1,
+        ])
+    )
+
+def run_optimized_compile(path):
+    return run_command(
+        ' '.join([
+            MVN_CMD,
+            path + POM_FILE,
+            MVN_CLEAN_GOAL,
+            '-nsu',
+            'compiler:compile',
+            'compiler:testCompile',
+            '-T',
+            '1C'
         ])
     )
 
