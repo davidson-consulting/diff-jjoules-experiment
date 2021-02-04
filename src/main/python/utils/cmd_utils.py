@@ -185,7 +185,6 @@ def run_mvn_build_classpath_and_instrument_class_dynamic(path_first_version, pat
             OPT_OUTPUT_CP_FILE,
             CMD_DIFF_CLASS_INSTRUMENT,
             OPT_NB_DUPLICATION_DYN,
-            OPT_NB_TEST_TO_PROCESS,
             OPT_VALUE_EXEC_TIME_TO_REACH,
             OPT_TEST_LISTS + VALUE_TEST_LISTS,
             OPT_PATH_DIR_SECOND_VERSION + path_second_version,
@@ -204,8 +203,9 @@ def run_mvn_build_classpath_and_instrument_class_dynamic_no_test(path_first_vers
             BUILD_CLASSPATH_GOAL,
             OPT_OUTPUT_CP_FILE,
             CMD_DIFF_CLASS_INSTRUMENT,
-            OPT_NB_DUPLICATION_DYN,
+            OPT_NB_DUPLICATION_DYN,0
             OPT_EXEC_TIME_TO_REACH + str(time_to_reach),
+            OPT_NB_TEST_TO_PROCESS,
             OPT_TEST_LISTS + VALUE_TEST_LISTS,
             OPT_PATH_DIR_SECOND_VERSION + path_second_version,
             OPT_CP_V2,
