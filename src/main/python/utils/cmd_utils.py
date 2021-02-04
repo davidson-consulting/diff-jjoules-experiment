@@ -168,6 +168,7 @@ def run_mvn_build_classpath_and_instrument_class(path_first_version, path_second
 OPT_NB_DUPLICATION_DYN = '-Dnb-duplication=-1'
 OPT_VALUE_EXEC_TIME_TO_REACH = '-Dexec-time-in-ms=2000'
 OPT_EXEC_TIME_TO_REACH = '-Dexec-time-in-ms='
+OPT_NB_TEST_TO_PROCESS = '-Dnb-method-to-process=10'
 
 def run_mvn_build_classpath_and_instrument_class_dynamic(path_first_version, path_second_version, output_path_file):
     return run_command(
@@ -184,6 +185,7 @@ def run_mvn_build_classpath_and_instrument_class_dynamic(path_first_version, pat
             OPT_OUTPUT_CP_FILE,
             CMD_DIFF_CLASS_INSTRUMENT,
             OPT_NB_DUPLICATION_DYN,
+            OPT_NB_TEST_TO_PROCESS,
             OPT_VALUE_EXEC_TIME_TO_REACH,
             OPT_TEST_LISTS + VALUE_TEST_LISTS,
             OPT_PATH_DIR_SECOND_VERSION + path_second_version,
