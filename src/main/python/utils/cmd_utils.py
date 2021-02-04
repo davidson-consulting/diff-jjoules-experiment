@@ -225,6 +225,22 @@ def run_optimized_compile(path):
         ])
     )
 
+def run_optimized_compile_test(path):
+    return run_command(
+        ' '.join([
+            MVN_CMD,
+            path + POM_FILE,
+            MVN_CLEAN_GOAL,
+            '-nsu',
+            'compiler:compile',
+            'compiler:testCompile',
+            '-T',
+            '1C',
+            MVN_TEST
+        ])
+    )
+
+
 CMD_JJOULES_LOCATE = 'fr.davidson:diff-jjoules:locate'
 DIFF_JJOULES_OUTPUT_PATH_OPT = '-Doutput-path='
 DIFF_JJOULES_PATH_TO_JSON_DATA_V1_OPT = '-Dpath-data-json-first-version='

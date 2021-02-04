@@ -52,17 +52,18 @@ if __name__ == '__main__':
     copy_test_list(output_path_root)
     tests_to_execute = get_tests_to_execute(output_path_root)
 
-    run_mvn_clean_test_build_cp(PATH_V2)
-
-    times_to_reach = [10, 12] #1000, 2000, 4000]
+    times_to_reach = [1000, 2000, 4000]
     for time in times_to_reach:
         output_path = output_path_root + str(time)
+        mkdir(output_path)
+        run_optimized_compile_test(PATH_V1)
+        run_mvn_clean_test_build_cp(PATH_V2)
         run_mvn_build_classpath_and_instrument_class_dynamic_no_test(PATH_V1, PATH_V2, output_path + '/mvn_cp_instr.log', time)
         run_optimized_compile(PATH_V1)
         run_optimized_compile(PATH_V2)
         mkdir(output_path + '/v1/')
         mkdir(output_path + '/v2/')
-        for i in range(3):
+        for i in range(100):
             print(i)
             v1_result_folder = output_path + '/v1/' + str(i)
             delete_directory(v1_result_folder)
