@@ -45,7 +45,7 @@ if __name__ == '__main__':
     reset_hard(commit_sha_v2, PATH_V2)
     delete_module_info_java(PATH_V2)
 
-    output_path_root = 'data/sumup_dyn/'
+    output_path_root = 'data/sumup_dyn_sorted/'
     mkdir(output_path_root)
 
     run_mvn_diff_select(PATH_V1, PATH_V2, output_path_root + '/mvn_test_selections.log')
@@ -59,6 +59,8 @@ if __name__ == '__main__':
         run_optimized_compile_test(PATH_V1)
         run_mvn_clean_test_build_cp(PATH_V2)
         run_mvn_build_classpath_and_instrument_class_dynamic_no_test(PATH_V1, PATH_V2, output_path + '/mvn_cp_instr.log', time)
+        copy(PATH_V1 + '/duplications.json', output_path + '/duplications.json')
+        
         run_optimized_compile(PATH_V1)
         run_optimized_compile(PATH_V2)
         mkdir(output_path + '/v1/')
