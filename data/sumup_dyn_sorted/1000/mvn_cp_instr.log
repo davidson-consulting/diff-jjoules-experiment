@@ -19,71 +19,72 @@
 [INFO] fr.davidson.diff.jjoules.class_instrumentation.process.JJoulesProcessor
 [INFO] Processing com.google.gson.functional.CircularReferenceTest#testCircularSerialization
 [INFO] Printing com.google.gson.functional.CircularReferenceTest_testCircularSerialization to /tmp/v1/gson/src/test/java//com/google/gson/functional/CircularReferenceTest_testCircularSerialization.java
-[INFO] Printed com.google.gson.functional.CircularReferenceTest#testCircularSerialization with 45 duplication in 75 ms
+[INFO] Printed com.google.gson.functional.CircularReferenceTest#testCircularSerialization with 58 duplication in 72 ms
 [INFO] 1/15
-[INFO] Processing com.google.gson.functional.CircularReferenceTest#testSelfReferenceArrayFieldSerialization
-[INFO] Printing com.google.gson.functional.CircularReferenceTest_testSelfReferenceArrayFieldSerialization to /tmp/v1/gson/src/test/java//com/google/gson/functional/CircularReferenceTest_testSelfReferenceArrayFieldSerialization.java
-[INFO] Printed com.google.gson.functional.CircularReferenceTest#testSelfReferenceArrayFieldSerialization with 90 duplication in 60 ms
-[INFO] 2/15
 [INFO] Processing com.google.gson.functional.CircularReferenceTest#testSelfReferenceCustomHandlerSerialization
 [INFO] Printing com.google.gson.functional.CircularReferenceTest_testSelfReferenceCustomHandlerSerialization to /tmp/v1/gson/src/test/java//com/google/gson/functional/CircularReferenceTest_testSelfReferenceCustomHandlerSerialization.java
 [WARNING] Cannot load class: 1 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
-[INFO] Printed com.google.gson.functional.CircularReferenceTest#testSelfReferenceCustomHandlerSerialization with 50 duplication in 85 ms
-[INFO] 3/15
+[INFO] Printed com.google.gson.functional.CircularReferenceTest#testSelfReferenceCustomHandlerSerialization with 37 duplication in 66 ms
+[INFO] 2/15
 [INFO] Processing com.google.gson.functional.ConcurrencyTest#testMultiThreadSerialization
 [INFO] Printing com.google.gson.functional.ConcurrencyTest_testMultiThreadSerialization to /tmp/v1/gson/src/test/java//com/google/gson/functional/ConcurrencyTest_testMultiThreadSerialization.java
 [WARNING] Cannot load class: 1 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
-[INFO] Printed com.google.gson.functional.ConcurrencyTest#testMultiThreadSerialization with 22 duplication in 51 ms
-[INFO] 4/15
+[INFO] Printed com.google.gson.functional.ConcurrencyTest#testMultiThreadSerialization with 33 duplication in 51 ms
+[INFO] 3/15
 [INFO] Processing com.google.gson.functional.CustomTypeAdaptersTest#testCustomTypeAdapterDoesNotAppliesToSubClasses
 [INFO] Printing com.google.gson.functional.CustomTypeAdaptersTest_testCustomTypeAdapterDoesNotAppliesToSubClasses to /tmp/v1/gson/src/test/java//com/google/gson/functional/CustomTypeAdaptersTest_testCustomTypeAdapterDoesNotAppliesToSubClasses.java
 [WARNING] Cannot load class: 5 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
-[INFO] Printed com.google.gson.functional.CustomTypeAdaptersTest#testCustomTypeAdapterDoesNotAppliesToSubClasses with 90 duplication in 194 ms
-[INFO] 5/15
-[INFO] Processing com.google.gson.functional.FieldExclusionTest#testDefaultInnerClassExclusion
-[INFO] Printing com.google.gson.functional.FieldExclusionTest_testDefaultInnerClassExclusion to /tmp/v1/gson/src/test/java//com/google/gson/functional/FieldExclusionTest_testDefaultInnerClassExclusion.java
-[INFO] Printed com.google.gson.functional.FieldExclusionTest#testDefaultInnerClassExclusion with 142 duplication in 56 ms
-[INFO] 6/15
-[INFO] Processing com.google.gson.functional.MapAsArrayTypeAdapterTest#testSerializeComplexMapWithTypeAdapter
-[INFO] Printing com.google.gson.functional.MapAsArrayTypeAdapterTest_testSerializeComplexMapWithTypeAdapter to /tmp/v1/gson/src/test/java//com/google/gson/functional/MapAsArrayTypeAdapterTest_testSerializeComplexMapWithTypeAdapter.java
-[WARNING] Cannot load class: 1 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
-[WARNING] Cannot load class: 2 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
+[INFO] Printed com.google.gson.functional.CustomTypeAdaptersTest#testCustomTypeAdapterDoesNotAppliesToSubClasses with 111 duplication in 156 ms
+[INFO] 4/15
+[INFO] Processing com.google.gson.functional.EnumTest#testEnumSubclass
+[INFO] Printing com.google.gson.functional.EnumTest_testEnumSubclass to /tmp/v1/gson/src/test/java//com/google/gson/functional/EnumTest_testEnumSubclass.java
 [WARNING] Cannot load class: 3 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
-[INFO] Printed com.google.gson.functional.MapAsArrayTypeAdapterTest#testSerializeComplexMapWithTypeAdapter with 125 duplication in 94 ms
+[INFO] Printed com.google.gson.functional.EnumTest#testEnumSubclass with 111 duplication in 96 ms
+[INFO] 5/15
+[INFO] Processing com.google.gson.functional.ExclusionStrategyFunctionalTest#testExclusionStrategySerialization
+[INFO] Printing com.google.gson.functional.ExclusionStrategyFunctionalTest_testExclusionStrategySerialization to /tmp/v1/gson/src/test/java//com/google/gson/functional/ExclusionStrategyFunctionalTest_testExclusionStrategySerialization.java
+[INFO] Printed com.google.gson.functional.ExclusionStrategyFunctionalTest#testExclusionStrategySerialization with 83 duplication in 43 ms
+[INFO] 6/15
+[INFO] Processing com.google.gson.functional.MapTest#testInterfaceTypeMapWithSerializer
+[INFO] Printing com.google.gson.functional.MapTest_testInterfaceTypeMapWithSerializer to /tmp/v1/gson/src/test/java//com/google/gson/functional/MapTest_testInterfaceTypeMapWithSerializer.java
+[WARNING] Cannot load class: 21 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
+[INFO] Printed com.google.gson.functional.MapTest#testInterfaceTypeMapWithSerializer with 125 duplication in 65 ms
 [INFO] 7/15
-[INFO] Processing com.google.gson.functional.MapTest#testMapSerializationWithNullValuesSerialized
-[INFO] Printing com.google.gson.functional.MapTest_testMapSerializationWithNullValuesSerialized to /tmp/v1/gson/src/test/java//com/google/gson/functional/MapTest_testMapSerializationWithNullValuesSerialized.java
-[INFO] Printed com.google.gson.functional.MapTest#testMapSerializationWithNullValuesSerialized with 111 duplication in 36 ms
+[INFO] Processing com.google.gson.functional.ObjectTest#testArrayOfObjectsAsFields
+[INFO] Printing com.google.gson.functional.ObjectTest_testArrayOfObjectsAsFields to /tmp/v1/gson/src/test/java//com/google/gson/functional/ObjectTest_testArrayOfObjectsAsFields.java
+[INFO] Printed com.google.gson.functional.ObjectTest#testArrayOfObjectsAsFields with 83 duplication in 129 ms
 [INFO] 8/15
-[INFO] Processing com.google.gson.functional.ObjectTest#testAnonymousLocalClassesSerialization
-[INFO] Printing com.google.gson.functional.ObjectTest_testAnonymousLocalClassesSerialization to /tmp/v1/gson/src/test/java//com/google/gson/functional/ObjectTest_testAnonymousLocalClassesSerialization.java
-[WARNING] Cannot load class: 2 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
-[INFO] Printed com.google.gson.functional.ObjectTest#testAnonymousLocalClassesSerialization with 111 duplication in 117 ms
-[INFO] 9/15
 [INFO] Processing com.google.gson.functional.ObjectTest#testSingletonLists
 [INFO] Printing com.google.gson.functional.ObjectTest_testSingletonLists to /tmp/v1/gson/src/test/java//com/google/gson/functional/ObjectTest_testSingletonLists.java
-[INFO] Printed com.google.gson.functional.ObjectTest#testSingletonLists with 76 duplication in 89 ms
+[INFO] Printed com.google.gson.functional.ObjectTest#testSingletonLists with 90 duplication in 92 ms
+[INFO] 9/15
+[INFO] Processing com.google.gson.functional.ParameterizedTypesTest#testTypesWithMultipleParametersSerialization
+[INFO] Printing com.google.gson.functional.ParameterizedTypesTest_testTypesWithMultipleParametersSerialization to /tmp/v1/gson/src/test/java//com/google/gson/functional/ParameterizedTypesTest_testTypesWithMultipleParametersSerialization.java
+[WARNING] Cannot load class: 3 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
+[INFO] Printed com.google.gson.functional.ParameterizedTypesTest#testTypesWithMultipleParametersSerialization with 83 duplication in 141 ms
 [INFO] 10/15
+[INFO] Processing com.google.gson.functional.ParameterizedTypesTest#testVariableTypeFieldsAndGenericArraysSerialization
+[INFO] Printing com.google.gson.functional.ParameterizedTypesTest_testVariableTypeFieldsAndGenericArraysSerialization to /tmp/v1/gson/src/test/java//com/google/gson/functional/ParameterizedTypesTest_testVariableTypeFieldsAndGenericArraysSerialization.java
+[WARNING] Cannot load class: 11 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
+[INFO] Printed com.google.gson.functional.ParameterizedTypesTest#testVariableTypeFieldsAndGenericArraysSerialization with 125 duplication in 155 ms
+[INFO] 11/15
 [INFO] Processing com.google.gson.functional.ParameterizedTypesTest#testVariableTypeFieldsAndGenericArraysDeserialization
 [INFO] Printing com.google.gson.functional.ParameterizedTypesTest_testVariableTypeFieldsAndGenericArraysDeserialization to /tmp/v1/gson/src/test/java//com/google/gson/functional/ParameterizedTypesTest_testVariableTypeFieldsAndGenericArraysDeserialization.java
 [WARNING] Cannot load class: 12 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
-[INFO] Printed com.google.gson.functional.ParameterizedTypesTest#testVariableTypeFieldsAndGenericArraysDeserialization with 142 duplication in 198 ms
-[INFO] 11/15
-[INFO] Processing com.google.gson.functional.SecurityTest#testNonExecutableJsonSerialization
-[INFO] Printing com.google.gson.functional.SecurityTest_testNonExecutableJsonSerialization to /tmp/v1/gson/src/test/java//com/google/gson/functional/SecurityTest_testNonExecutableJsonSerialization.java
-[INFO] Printed com.google.gson.functional.SecurityTest#testNonExecutableJsonSerialization with 100 duplication in 10 ms
+[INFO] Printed com.google.gson.functional.ParameterizedTypesTest#testVariableTypeFieldsAndGenericArraysDeserialization with 111 duplication in 168 ms
 [INFO] 12/15
+[INFO] Processing com.google.gson.functional.PrettyPrintingTest#testPrettyPrintList
+[INFO] Printing com.google.gson.functional.PrettyPrintingTest_testPrettyPrintList to /tmp/v1/gson/src/test/java//com/google/gson/functional/PrettyPrintingTest_testPrettyPrintList.java
+[WARNING] Cannot load class: 1 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
+[INFO] Printed com.google.gson.functional.PrettyPrintingTest#testPrettyPrintList with 90 duplication in 31 ms
+[INFO] 13/15
 [INFO] Processing com.google.gson.functional.VersioningTest#testVersionedUntilSerialization
 [INFO] Printing com.google.gson.functional.VersioningTest_testVersionedUntilSerialization to /tmp/v1/gson/src/test/java//com/google/gson/functional/VersioningTest_testVersionedUntilSerialization.java
-[INFO] Printed com.google.gson.functional.VersioningTest#testVersionedUntilSerialization with 142 duplication in 29 ms
-[INFO] 13/15
-[INFO] Processing com.google.gson.internal.bind.JsonElementWriterTest#testObject
-[INFO] Printing com.google.gson.internal.bind.JsonElementWriterTest_testObject to /tmp/v1/gson/src/test/java//com/google/gson/internal/bind/JsonElementWriterTest_testObject.java
-[INFO] Printed com.google.gson.internal.bind.JsonElementWriterTest#testObject with 111 duplication in 9 ms
+[INFO] Printed com.google.gson.functional.VersioningTest#testVersionedUntilSerialization with 90 duplication in 27 ms
 [INFO] 14/15
 [INFO] Processing com.google.gson.DefaultInetAddressTypeAdapterTest#testInetAddressSerializationAndDeserialization
 [INFO] Printing com.google.gson.DefaultInetAddressTypeAdapterTest_testInetAddressSerializationAndDeserialization to /tmp/v1/gson/src/test/java//com/google/gson/DefaultInetAddressTypeAdapterTest_testInetAddressSerializationAndDeserialization.java
-[INFO] Printed com.google.gson.DefaultInetAddressTypeAdapterTest#testInetAddressSerializationAndDeserialization with 111 duplication in 11 ms
+[INFO] Printed com.google.gson.DefaultInetAddressTypeAdapterTest#testInetAddressSerializationAndDeserialization with 76 duplication in 6 ms
 [INFO] 15/15
 [INFO] Processing Done...
 [INFO] Injecting JUnit-Jjoules in /tmp/v1/gson/pom.xml
@@ -94,71 +95,72 @@
 [INFO] fr.davidson.diff.jjoules.class_instrumentation.process.JJoulesProcessor
 [INFO] Processing com.google.gson.functional.CircularReferenceTest#testCircularSerialization
 [INFO] Printing com.google.gson.functional.CircularReferenceTest_testCircularSerialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/CircularReferenceTest_testCircularSerialization.java
-[INFO] Printed com.google.gson.functional.CircularReferenceTest#testCircularSerialization with 45 duplication in 27 ms
+[INFO] Printed com.google.gson.functional.CircularReferenceTest#testCircularSerialization with 58 duplication in 20 ms
 [INFO] 1/15
-[INFO] Processing com.google.gson.functional.CircularReferenceTest#testSelfReferenceArrayFieldSerialization
-[INFO] Printing com.google.gson.functional.CircularReferenceTest_testSelfReferenceArrayFieldSerialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/CircularReferenceTest_testSelfReferenceArrayFieldSerialization.java
-[INFO] Printed com.google.gson.functional.CircularReferenceTest#testSelfReferenceArrayFieldSerialization with 90 duplication in 28 ms
-[INFO] 2/15
 [INFO] Processing com.google.gson.functional.CircularReferenceTest#testSelfReferenceCustomHandlerSerialization
 [INFO] Printing com.google.gson.functional.CircularReferenceTest_testSelfReferenceCustomHandlerSerialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/CircularReferenceTest_testSelfReferenceCustomHandlerSerialization.java
 [WARNING] Cannot load class: 1 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
-[INFO] Printed com.google.gson.functional.CircularReferenceTest#testSelfReferenceCustomHandlerSerialization with 50 duplication in 41 ms
-[INFO] 3/15
+[INFO] Printed com.google.gson.functional.CircularReferenceTest#testSelfReferenceCustomHandlerSerialization with 37 duplication in 35 ms
+[INFO] 2/15
 [INFO] Processing com.google.gson.functional.ConcurrencyTest#testMultiThreadSerialization
 [INFO] Printing com.google.gson.functional.ConcurrencyTest_testMultiThreadSerialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/ConcurrencyTest_testMultiThreadSerialization.java
 [WARNING] Cannot load class: 1 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
-[INFO] Printed com.google.gson.functional.ConcurrencyTest#testMultiThreadSerialization with 22 duplication in 25 ms
-[INFO] 4/15
+[INFO] Printed com.google.gson.functional.ConcurrencyTest#testMultiThreadSerialization with 33 duplication in 23 ms
+[INFO] 3/15
 [INFO] Processing com.google.gson.functional.CustomTypeAdaptersTest#testCustomTypeAdapterDoesNotAppliesToSubClasses
 [INFO] Printing com.google.gson.functional.CustomTypeAdaptersTest_testCustomTypeAdapterDoesNotAppliesToSubClasses to /tmp/v2/gson//src/test/java//com/google/gson/functional/CustomTypeAdaptersTest_testCustomTypeAdapterDoesNotAppliesToSubClasses.java
 [WARNING] Cannot load class: 5 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
-[INFO] Printed com.google.gson.functional.CustomTypeAdaptersTest#testCustomTypeAdapterDoesNotAppliesToSubClasses with 90 duplication in 131 ms
-[INFO] 5/15
-[INFO] Processing com.google.gson.functional.FieldExclusionTest#testDefaultInnerClassExclusion
-[INFO] Printing com.google.gson.functional.FieldExclusionTest_testDefaultInnerClassExclusion to /tmp/v2/gson//src/test/java//com/google/gson/functional/FieldExclusionTest_testDefaultInnerClassExclusion.java
-[INFO] Printed com.google.gson.functional.FieldExclusionTest#testDefaultInnerClassExclusion with 142 duplication in 38 ms
-[INFO] 6/15
-[INFO] Processing com.google.gson.functional.MapAsArrayTypeAdapterTest#testSerializeComplexMapWithTypeAdapter
-[INFO] Printing com.google.gson.functional.MapAsArrayTypeAdapterTest_testSerializeComplexMapWithTypeAdapter to /tmp/v2/gson//src/test/java//com/google/gson/functional/MapAsArrayTypeAdapterTest_testSerializeComplexMapWithTypeAdapter.java
-[WARNING] Cannot load class: 1 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
-[WARNING] Cannot load class: 2 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
+[INFO] Printed com.google.gson.functional.CustomTypeAdaptersTest#testCustomTypeAdapterDoesNotAppliesToSubClasses with 111 duplication in 125 ms
+[INFO] 4/15
+[INFO] Processing com.google.gson.functional.EnumTest#testEnumSubclass
+[INFO] Printing com.google.gson.functional.EnumTest_testEnumSubclass to /tmp/v2/gson//src/test/java//com/google/gson/functional/EnumTest_testEnumSubclass.java
 [WARNING] Cannot load class: 3 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
-[INFO] Printed com.google.gson.functional.MapAsArrayTypeAdapterTest#testSerializeComplexMapWithTypeAdapter with 125 duplication in 66 ms
+[INFO] Printed com.google.gson.functional.EnumTest#testEnumSubclass with 111 duplication in 76 ms
+[INFO] 5/15
+[INFO] Processing com.google.gson.functional.ExclusionStrategyFunctionalTest#testExclusionStrategySerialization
+[INFO] Printing com.google.gson.functional.ExclusionStrategyFunctionalTest_testExclusionStrategySerialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/ExclusionStrategyFunctionalTest_testExclusionStrategySerialization.java
+[INFO] Printed com.google.gson.functional.ExclusionStrategyFunctionalTest#testExclusionStrategySerialization with 83 duplication in 21 ms
+[INFO] 6/15
+[INFO] Processing com.google.gson.functional.MapTest#testInterfaceTypeMapWithSerializer
+[INFO] Printing com.google.gson.functional.MapTest_testInterfaceTypeMapWithSerializer to /tmp/v2/gson//src/test/java//com/google/gson/functional/MapTest_testInterfaceTypeMapWithSerializer.java
+[WARNING] Cannot load class: 21 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
+[INFO] Printed com.google.gson.functional.MapTest#testInterfaceTypeMapWithSerializer with 125 duplication in 50 ms
 [INFO] 7/15
-[INFO] Processing com.google.gson.functional.MapTest#testMapSerializationWithNullValuesSerialized
-[INFO] Printing com.google.gson.functional.MapTest_testMapSerializationWithNullValuesSerialized to /tmp/v2/gson//src/test/java//com/google/gson/functional/MapTest_testMapSerializationWithNullValuesSerialized.java
-[INFO] Printed com.google.gson.functional.MapTest#testMapSerializationWithNullValuesSerialized with 111 duplication in 26 ms
+[INFO] Processing com.google.gson.functional.ObjectTest#testArrayOfObjectsAsFields
+[INFO] Printing com.google.gson.functional.ObjectTest_testArrayOfObjectsAsFields to /tmp/v2/gson//src/test/java//com/google/gson/functional/ObjectTest_testArrayOfObjectsAsFields.java
+[INFO] Printed com.google.gson.functional.ObjectTest#testArrayOfObjectsAsFields with 83 duplication in 93 ms
 [INFO] 8/15
-[INFO] Processing com.google.gson.functional.ObjectTest#testAnonymousLocalClassesSerialization
-[INFO] Printing com.google.gson.functional.ObjectTest_testAnonymousLocalClassesSerialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/ObjectTest_testAnonymousLocalClassesSerialization.java
-[WARNING] Cannot load class: 2 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
-[INFO] Printed com.google.gson.functional.ObjectTest#testAnonymousLocalClassesSerialization with 111 duplication in 60 ms
-[INFO] 9/15
 [INFO] Processing com.google.gson.functional.ObjectTest#testSingletonLists
 [INFO] Printing com.google.gson.functional.ObjectTest_testSingletonLists to /tmp/v2/gson//src/test/java//com/google/gson/functional/ObjectTest_testSingletonLists.java
-[INFO] Printed com.google.gson.functional.ObjectTest#testSingletonLists with 76 duplication in 76 ms
+[INFO] Printed com.google.gson.functional.ObjectTest#testSingletonLists with 90 duplication in 75 ms
+[INFO] 9/15
+[INFO] Processing com.google.gson.functional.ParameterizedTypesTest#testTypesWithMultipleParametersSerialization
+[INFO] Printing com.google.gson.functional.ParameterizedTypesTest_testTypesWithMultipleParametersSerialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/ParameterizedTypesTest_testTypesWithMultipleParametersSerialization.java
+[WARNING] Cannot load class: 3 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
+[INFO] Printed com.google.gson.functional.ParameterizedTypesTest#testTypesWithMultipleParametersSerialization with 83 duplication in 162 ms
 [INFO] 10/15
+[INFO] Processing com.google.gson.functional.ParameterizedTypesTest#testVariableTypeFieldsAndGenericArraysSerialization
+[INFO] Printing com.google.gson.functional.ParameterizedTypesTest_testVariableTypeFieldsAndGenericArraysSerialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/ParameterizedTypesTest_testVariableTypeFieldsAndGenericArraysSerialization.java
+[WARNING] Cannot load class: 11 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
+[INFO] Printed com.google.gson.functional.ParameterizedTypesTest#testVariableTypeFieldsAndGenericArraysSerialization with 125 duplication in 143 ms
+[INFO] 11/15
 [INFO] Processing com.google.gson.functional.ParameterizedTypesTest#testVariableTypeFieldsAndGenericArraysDeserialization
 [INFO] Printing com.google.gson.functional.ParameterizedTypesTest_testVariableTypeFieldsAndGenericArraysDeserialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/ParameterizedTypesTest_testVariableTypeFieldsAndGenericArraysDeserialization.java
 [WARNING] Cannot load class: 12 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
-[INFO] Printed com.google.gson.functional.ParameterizedTypesTest#testVariableTypeFieldsAndGenericArraysDeserialization with 142 duplication in 146 ms
-[INFO] 11/15
-[INFO] Processing com.google.gson.functional.SecurityTest#testNonExecutableJsonSerialization
-[INFO] Printing com.google.gson.functional.SecurityTest_testNonExecutableJsonSerialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/SecurityTest_testNonExecutableJsonSerialization.java
-[INFO] Printed com.google.gson.functional.SecurityTest#testNonExecutableJsonSerialization with 100 duplication in 14 ms
+[INFO] Printed com.google.gson.functional.ParameterizedTypesTest#testVariableTypeFieldsAndGenericArraysDeserialization with 111 duplication in 152 ms
 [INFO] 12/15
+[INFO] Processing com.google.gson.functional.PrettyPrintingTest#testPrettyPrintList
+[INFO] Printing com.google.gson.functional.PrettyPrintingTest_testPrettyPrintList to /tmp/v2/gson//src/test/java//com/google/gson/functional/PrettyPrintingTest_testPrettyPrintList.java
+[WARNING] Cannot load class: 1 with class loader ClassRealm[plugin>fr.davidson:diff-jjoules:0.0.1-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@1b6d3586]
+[INFO] Printed com.google.gson.functional.PrettyPrintingTest#testPrettyPrintList with 90 duplication in 23 ms
+[INFO] 13/15
 [INFO] Processing com.google.gson.functional.VersioningTest#testVersionedUntilSerialization
 [INFO] Printing com.google.gson.functional.VersioningTest_testVersionedUntilSerialization to /tmp/v2/gson//src/test/java//com/google/gson/functional/VersioningTest_testVersionedUntilSerialization.java
-[INFO] Printed com.google.gson.functional.VersioningTest#testVersionedUntilSerialization with 142 duplication in 30 ms
-[INFO] 13/15
-[INFO] Processing com.google.gson.internal.bind.JsonElementWriterTest#testObject
-[INFO] Printing com.google.gson.internal.bind.JsonElementWriterTest_testObject to /tmp/v2/gson//src/test/java//com/google/gson/internal/bind/JsonElementWriterTest_testObject.java
-[INFO] Printed com.google.gson.internal.bind.JsonElementWriterTest#testObject with 111 duplication in 8 ms
+[INFO] Printed com.google.gson.functional.VersioningTest#testVersionedUntilSerialization with 90 duplication in 23 ms
 [INFO] 14/15
 [INFO] Processing com.google.gson.DefaultInetAddressTypeAdapterTest#testInetAddressSerializationAndDeserialization
 [INFO] Printing com.google.gson.DefaultInetAddressTypeAdapterTest_testInetAddressSerializationAndDeserialization to /tmp/v2/gson//src/test/java//com/google/gson/DefaultInetAddressTypeAdapterTest_testInetAddressSerializationAndDeserialization.java
-[INFO] Printed com.google.gson.DefaultInetAddressTypeAdapterTest#testInetAddressSerializationAndDeserialization with 111 duplication in 8 ms
+[INFO] Printed com.google.gson.DefaultInetAddressTypeAdapterTest#testInetAddressSerializationAndDeserialization with 76 duplication in 4 ms
 [INFO] 15/15
 [INFO] Processing Done...
 [INFO] Injecting JUnit-Jjoules in /tmp/v2/gson//pom.xml
@@ -166,6 +168,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.114 s
-[INFO] Finished at: 2021-02-05T10:02:27+01:00
+[INFO] Total time:  22.305 s
+[INFO] Finished at: 2021-02-05T13:17:10+01:00
 [INFO] ------------------------------------------------------------------------
