@@ -17,18 +17,8 @@ def reduce_sha(sha):
 def run_tests(path_v1, path_v2, output_path, nb_iteration, tests_to_execute):
     mkdir(output_path + '/v1/')
     mkdir(output_path + '/v2/')
-    i = 0
-    print(i)
-    v1_result_folder = output_path + '/v1/' + str(i)
-    delete_directory(v1_result_folder)
-    mvn_clean_test(path_v1, tests_to_execute, v1_result_folder + '/mvn_test.log')
-    copy_jjoules_result(path_v1, v1_result_folder)
 
-    v2_result_folder = output_path + '/v2/' + str(i)
-    delete_directory(v2_result_folder)
-    mvn_clean_test(path_v2, tests_to_execute, v2_result_folder + '/mvn_test.log')
-    copy_jjoules_result(path_v2, v2_result_folder)
-    for i in range(1, nb_iteration):
+    for i in range(nb_iteration):
         print(i)
         v1_result_folder = output_path + '/v1/' + str(i)
         delete_directory(v1_result_folder)
@@ -63,6 +53,8 @@ def run(path_v1, path_v2, output_path, nb_iteration):
     if len(tests_to_execute) < 1:
         log('no test could be selected!')
         return -1
+
+    mvn_clean_test_skip_test(path_v2)
 
     start_time = time.time()
     code = mvn_diff_jjoules_instrument(path_v1, path_v2,  output_path + '/mvn_diff_jjoules_instrument.log')
@@ -121,10 +113,10 @@ if __name__ == '__main__':
         if code == 0:
             log('Success! ' + str(cursor_commits) + ' / ' + str(len(commits) - 1))
             print('zipping v1 and v2 result folders... and delete them')
-            zip_folder(success_commit_folder + '/v1')
-            delete_directory(success_commit_folder + '/v1')
-            zip_folder(success_commit_folder + '/v2')
-            delete_directory(success_commit_folder + '/v2')
+            #zip_folder(success_commit_folder + '/v1')
+            #delete_directory(success_commit_folder + '/v1')
+            #zip_folder(success_commit_folder + '/v2')
+            #delete_directory(success_commit_folder + '/v2')
         else:
             move_directory(success_commit_folder, error_commit_folder)
         cursor_commits = cursor_commits + 1

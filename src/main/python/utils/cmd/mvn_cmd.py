@@ -24,6 +24,15 @@ def mvn_install_skip_test_build_classpath(path):
         '-Dmdep.outputFile=classpath'
     ]))
 
+def mvn_clean_test_skip_test(path):
+    return run_cmd(' '.join([
+        MVN_CMD_WITH_SKIPS_F,
+        path + POM_FILE,
+        CLEAN_GOAL,
+        TEST_GOAL,
+        SKIP_TESTS
+    ]))
+
 CMD_DIFF_TEST_SELECTION = 'eu.stamp-project:dspot-diff-test-selection:3.1.1-SNAPSHOT:list'
 OPT_PATH_DIR_SECOND_VERSION = '-Dpath-dir-second-version='
 
