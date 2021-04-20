@@ -1,0 +1,81 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.google.code.gson:gson:jar:2.8.2-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ com.google.code.gson:gson:[unknown-version], /tmp/v1/gson/pom.xml, line 46, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.google.code.gson:gson >----------------------
+[INFO] Building Gson 2.8.2-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gson ---
+[INFO] Deleting /tmp/v1/gson/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ gson ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/gson/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:compile (default-compile) @ gson ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 67 source files to /tmp/v1/gson/target/classes
+[INFO] 
+[INFO] --- bnd-maven-plugin:3.1.0:bnd-process (default) @ gson ---
+[WARNING] Export com.google.gson,  has 1,  private references [com.google.gson.internal], 
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gson ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /tmp/v1/gson/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.0:testCompile (default-testCompile) @ gson ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 97 source files to /tmp/v1/gson/target/test-classes
+[WARNING] /tmp/v1/gson/src/test/java/com/google/gson/common/MoreAsserts.java: Some input files use or override a deprecated API.
+[WARNING] /tmp/v1/gson/src/test/java/com/google/gson/common/MoreAsserts.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gson ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- diff-jjoules:0.0.1-SNAPSHOT:instrument (default-cli) @ gson ---
+[INFO] Running on:
+[INFO] /tmp/v1/gson
+[INFO] /tmp/v2/gson/
+[INFO] Enable JUnit4 mode
+[INFO] Configuration{pathToFirstVersion='/tmp/v1/gson', pathToSecondVersion='/tmp/v2/gson/', pathToTestListAsCSV='/tmp/v1/gson/testsThatExecuteTheChange.csv', classpath=[/home/spino/.m2/repository/junit/junit/4.12/junit-4.12.jar, /home/spino/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar], junit4=true}
+[INFO] com.google.gson.stream.JsonWriterTest:[testDoubles, testPrettyPrintObject, testPrettyPrintArray, testNonFiniteDoubles, testTopLevelValueTypes]
+[INFO] Instrument version before commit...
+[INFO] Run on /tmp/v1/gson
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.instrumentation.process.junit4.JJoulesProcessor
+Processing com.google.gson.stream.JsonWriterTest#testTopLevelValueTypes
+Processing com.google.gson.stream.JsonWriterTest#testNonFiniteDoubles
+Processing com.google.gson.stream.JsonWriterTest#testDoubles
+Processing com.google.gson.stream.JsonWriterTest#testPrettyPrintObject
+Processing com.google.gson.stream.JsonWriterTest#testPrettyPrintArray
+[INFO] Printing com.google.gson.stream.JsonWriterTest to /tmp/v1/gson/src/test/java//com/google/gson/stream/JsonWriterTest.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v1/gson/pom.xml
+[INFO] Output new POM file in /tmp/v1/gson/pom.xml
+[INFO] Instrument version after commit...
+[INFO] Run on /tmp/v2/gson/
+[INFO] Running in NOCLASSPATH mode (doc: http://spoon.gforge.inria.fr/launcher.html).
+[INFO] fr.davidson.diff.jjoules.instrumentation.process.junit4.JJoulesProcessor
+Processing com.google.gson.stream.JsonWriterTest#testTopLevelValueTypes
+Processing com.google.gson.stream.JsonWriterTest#testNonFiniteDoubles
+Processing com.google.gson.stream.JsonWriterTest#testDoubles
+Processing com.google.gson.stream.JsonWriterTest#testPrettyPrintObject
+Processing com.google.gson.stream.JsonWriterTest#testPrettyPrintArray
+[INFO] Printing com.google.gson.stream.JsonWriterTest to /tmp/v2/gson//src/test/java//com/google/gson/stream/JsonWriterTest.java
+[INFO] Printing com.google.gson.stream.JsonWriterTest to /tmp/v2/gson//src/test/java//com/google/gson/stream/JsonWriterTest.java
+[INFO] Injecting JUnit-Jjoules in /tmp/v2/gson//pom.xml
+[INFO] Output new POM file in /tmp/v2/gson//pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  28.591 s
+[INFO] Finished at: 2021-04-20T06:39:16+02:00
+[INFO] ------------------------------------------------------------------------
