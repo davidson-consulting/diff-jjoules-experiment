@@ -113,10 +113,10 @@ if __name__ == '__main__':
         if code == 0:
             log('Success! ' + str(cursor_commits) + ' / ' + str(len(commits) - 1))
             print('zipping v1 and v2 result folders... and delete them')
-            #zip_folder(success_commit_folder + '/v1')
-            #delete_directory(success_commit_folder + '/v1')
-            #zip_folder(success_commit_folder + '/v2')
-            #delete_directory(success_commit_folder + '/v2')
+            zip_folder(success_commit_folder + '/v1')
+            delete_directory(success_commit_folder + '/v1')
+            zip_folder(success_commit_folder + '/v2')
+            delete_directory(success_commit_folder + '/v2')
         else:
             move_directory(success_commit_folder, error_commit_folder)
         cursor_commits = cursor_commits + 1
