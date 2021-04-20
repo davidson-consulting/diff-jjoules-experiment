@@ -12,7 +12,7 @@ from utils.logs.log import *
 import clone
 
 def reduce_sha(sha):
-    return sha[:5]
+    return sha[:7]
 
 def run_tests(path_v1, path_v2, output_path, nb_iteration, tests_to_execute):
     mkdir(output_path + '/v1/')
@@ -72,6 +72,8 @@ if __name__ == '__main__':
     #   commit_sha_v1 = 'd26c8189182fa96691cc8e0d0f312469ee0627bb'
     #   commit_sha_v2 = '364de8061173b4b91f4477a55059f68e765fc3d1'
 
+    #   switch to Java 9 commit : 5bbc768fa6cd3e8a3a7bebf52b0ac1e4c6e0bd12 gson 
+
     args = RunArgs().build_parser().parse_args()
     project = args.project
     input_folder_path = args.input
@@ -88,9 +90,10 @@ if __name__ == '__main__':
     success_output_path = '/'.join([output_folder_path, project])
     error_output_path = '/'.join([output_folder_path, project + '_error/'])
     
-    cursor_commits = 2
+    cursor_commits = args.begin
+    end_commits = args.end
 
-    while cursor_commits < len(commits):
+    while (end_commits == -1 and cursor_commits < len(commits)) or (end_commits != -1 and cursor_commits != end_commits):
         sha_v1 = reduce_sha(commits[cursor_commits])
         sha_v2 = reduce_sha(commits[cursor_commits-1])
 
@@ -118,6 +121,6 @@ if __name__ == '__main__':
             zip_folder(success_commit_folder + '/v2')
             delete_directory(success_commit_folder + '/v2')
         else:
-            move_directory(success_commit_folder, error_commit_folder)
+            move_directory(success_commit_folder, error_output_path)
         cursor_commits = cursor_commits + 1
         
