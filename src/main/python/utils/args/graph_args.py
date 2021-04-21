@@ -1,0 +1,12 @@
+import argparse
+
+class RunArgs():
+
+    def build_parser(self):
+        parser = argparse.ArgumentParser()
+
+        parser.add_argument('-p', '--project', type=str, help='Specify the project name')
+        parser.add_argument('-i', '--input', type=str, help='Specify the path to the input folder')
+        parser.add_argument('-o', '--output', type=str, help='Specify the path to the output folder')
+
+        return parser

@@ -1,5 +1,8 @@
 import os
 
+def reduce_sha(sha):
+    return sha[:7]
+
 def run_cmd(command):
     print(command)
     os.system(command)

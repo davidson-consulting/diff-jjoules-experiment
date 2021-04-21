@@ -11,9 +11,6 @@ from utils.logs.log import *
 
 import clone
 
-def reduce_sha(sha):
-    return sha[:7]
-
 def run_tests(path_v1, path_v2, output_path, nb_iteration, tests_to_execute):
     mkdir(output_path + '/v1/')
     mkdir(output_path + '/v2/')

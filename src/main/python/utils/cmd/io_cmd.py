@@ -86,8 +86,9 @@ def zip_folder(path_to_folder):
     ))
 
 def move_directory(src_dir, dst):
-    print('move', src_dir, 'to', dst)
-    move(src_dir, dst)
+    full_dst = os.path.join(os.getcwd(), dst)
+    print('move', src_dir, 'to', full_dst)
+    move(src_dir, full_dst))
 
 def copy_jjoules_result(src_dir, dst):
     for dirName, subdirList, fileList in os.walk(src_dir):
