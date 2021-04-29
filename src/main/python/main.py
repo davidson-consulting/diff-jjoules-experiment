@@ -118,6 +118,6 @@ if __name__ == '__main__':
             zip_folder(success_commit_folder + '/v2')
             delete_directory(success_commit_folder + '/v2')
         else:
-            move_directory(success_commit_folder, error_output_path)
+            move_directory(success_commit_folder, error_commit_folder)
         cursor_commits = cursor_commits + 1
         
