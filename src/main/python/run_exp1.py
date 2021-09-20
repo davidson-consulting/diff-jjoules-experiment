@@ -19,7 +19,7 @@ if __name__ == '__main__':
     if not args.no_clone:
         clone.remove_and_clone_both(commits[0])
 
-    for i in range(1, len(commits) - 1):
+    for i in range(1, 3):#len(commits) - 1):
         
         commit_v1 = commits[i+1]
         commit_v2 = commits[i]
@@ -32,6 +32,9 @@ if __name__ == '__main__':
 
         path_module_v1 = PATH_V1 + '/' + module + '/'
         path_module_v2 = PATH_V2 + '/' + module + '/'
+
+        delete_module_info_java(path_module_v1)
+        delete_module_info_java(path_module_v2)
 
         mvn_install_skip_test_build_classpath(path_module_v1)
         mvn_install_skip_test_build_classpath(path_module_v2)

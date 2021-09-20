@@ -21,8 +21,8 @@ def copy(src, dst):
     print(src, 'to', dst)
     try:
         copyfile(src, dst)
-    except (SameFileError):
-       print('src and dst same file... passing', src)
+    except (FileNotFoundError, SameFileError):
+       print('Error...', src, dst)
 
 def copy_directory(src, dst):
     try:
