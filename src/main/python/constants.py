@@ -8,3 +8,20 @@ COMMITS_FILE_PATH = 'input'
 MODULE_FILE_PATH = 'module'
 
 VALUE_TEST_LISTS = 'testsThatExecuteTheChange.csv'
+
+DIRECTORIES_TO_COPY = [
+    'diff-jjoules',
+]
+
+FILES_TO_COPY = [
+    'classpath',
+    'srcpatch.diff',
+    'logs',
+#    'methodNames.csv',
+    'testsThatExecuteTheChange_coverage.csv',
+    'testsThatExecuteTheChange.csv'
+]
+
+FILES_TO_COPY_SUSPECT = [
+    'TODO'
+]
