@@ -1,0 +1,14 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-22 14:47:49.894980398 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-22 14:47:49.898980436 +0200
+@@ -797,10 +797,6 @@
+         }
+       } catch (IllegalAccessException e) {
+         throw new AssertionError(e);
+-      } catch (NullPointerException e) {
+-        throw new AssertionError(e);
+-      } catch (ExceptionInInitializerError e) {
+-        throw new AssertionError(e);
+       }
+     }
+     @Override public T read(JsonReader in) throws IOException {

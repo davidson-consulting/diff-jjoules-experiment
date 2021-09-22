@@ -1,0 +1,33 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java	2021-09-22 13:47:23.911956915 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java	2021-09-22 13:47:23.919956952 +0200
+@@ -249,6 +249,15 @@
+     return result;
+   }
+ 
++  JsonElement nextJsonElement() throws IOException {
++    if (peek() == JsonToken.NAME) {
++      throw new IllegalStateException("Can't turn a name into a JsonElement");
++    }
++    final JsonElement element = (JsonElement) peekStack();
++    skipValue();
++    return element;
++  }
++
+   @Override public void close() throws IOException {
+     stack = new Object[] { SENTINEL_CLOSED };
+     stackSize = 1;
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-22 13:47:23.911956915 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-22 13:20:57.530041680 +0200
+@@ -677,6 +677,10 @@
+ 
+   public static final TypeAdapter<JsonElement> JSON_ELEMENT = new TypeAdapter<JsonElement>() {
+     @Override public JsonElement read(JsonReader in) throws IOException {
++      if (in instanceof JsonTreeReader) {
++        return ((JsonTreeReader) in).nextJsonElement();
++      }
++
+       switch (in.peek()) {
+       case STRING:
+         return new JsonPrimitive(in.nextString());

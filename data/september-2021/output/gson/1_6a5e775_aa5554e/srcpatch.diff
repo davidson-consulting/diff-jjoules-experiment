@@ -1,0 +1,32 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/Excluder.java /tmp/v2/gson/src/main/java/com/google/gson/internal/Excluder.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/Excluder.java	2021-09-22 13:20:57.550051982 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/Excluder.java	2021-09-22 13:20:57.530041680 +0200
+@@ -173,7 +173,7 @@
+       return true;
+     }
+ 
+-    if (isAnonymousOrLocal(field.getType())) {
++    if (isAnonymousOrNonStaticLocal(field.getType())) {
+       return true;
+     }
+ 
+@@ -199,7 +199,7 @@
+           return true;
+       }
+ 
+-      if (isAnonymousOrLocal(clazz)) {
++      if (isAnonymousOrNonStaticLocal(clazz)) {
+           return true;
+       }
+ 
+@@ -221,8 +221,8 @@
+       return false;
+   }
+ 
+-  private boolean isAnonymousOrLocal(Class<?> clazz) {
+-    return !Enum.class.isAssignableFrom(clazz)
++  private boolean isAnonymousOrNonStaticLocal(Class<?> clazz) {
++    return !Enum.class.isAssignableFrom(clazz) && !isStatic(clazz)
+         && (clazz.isAnonymousClass() || clazz.isLocalClass());
+   }
+ 

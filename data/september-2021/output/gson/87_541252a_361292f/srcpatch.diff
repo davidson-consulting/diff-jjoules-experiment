@@ -1,0 +1,103 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-22 16:08:22.657236348 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-22 16:08:22.665236409 +0200
+@@ -334,11 +334,11 @@
+   }
+ 
+   public static Type resolve(Type context, Class<?> contextRawType, Type toResolve) {
+-    return resolve(context, contextRawType, toResolve, new HashSet<TypeVariable>());
++    return resolve(context, contextRawType, toResolve, new HashSet<TypeVariable<?>>());
+   }
+ 
+   private static Type resolve(Type context, Class<?> contextRawType, Type toResolve,
+-                              Collection<TypeVariable> visitedTypeVariables) {
++                              Collection<TypeVariable<?>> visitedTypeVariables) {
+     // this implementation is made a little more complicated in an attempt to avoid object-creation
+     while (true) {
+       if (toResolve instanceof TypeVariable) {
+diff -ru /tmp/v1/gson/src/test/java/com/google/gson/functional/CollectionTest.java /tmp/v2/gson/src/test/java/com/google/gson/functional/CollectionTest.java
+--- /tmp/v1/gson/src/test/java/com/google/gson/functional/CollectionTest.java	2021-09-22 16:08:22.657236348 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/functional/CollectionTest.java	2021-09-22 16:08:22.665236409 +0200
+@@ -37,7 +37,6 @@
+ import com.google.gson.JsonPrimitive;
+ import com.google.gson.JsonSerializationContext;
+ import com.google.gson.JsonSerializer;
+-import com.google.gson.common.MoreAsserts;
+ import com.google.gson.common.TestTypes.BagOfPrimitives;
+ import com.google.gson.reflect.TypeToken;
+ 
+diff -ru /tmp/v1/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersTest.java /tmp/v2/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersTest.java
+--- /tmp/v1/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersTest.java	2021-09-22 16:08:22.657236348 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersTest.java	2021-09-22 16:08:22.665236409 +0200
+@@ -172,6 +172,7 @@
+     int numClasses;
+   }
+ 
++  @SafeVarargs
+   private static <T> List<T> createList(T ...items) {
+     return Arrays.asList(items);
+   }
+diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypesResolveTest.java /tmp/v2/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypesResolveTest.java
+--- /tmp/v1/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypesResolveTest.java	2021-09-22 16:08:22.657236348 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypesResolveTest.java	2021-09-22 16:08:22.665236409 +0200
+@@ -36,7 +36,7 @@
+ 
+   @SuppressWarnings("unused")
+   private static class Foo1<A> {
+-	public Foo2<? extends A> foo2;
++    public Foo2<? extends A> foo2;
+   }
+   @SuppressWarnings("unused")
+   private static class Foo2<B> {
+@@ -48,6 +48,7 @@
+    */
+ 
+   public void testRecursiveResolveSimple() {
++    @SuppressWarnings("rawtypes")
+     TypeAdapter<Foo1> adapter = new Gson().getAdapter(Foo1.class);
+     assertNotNull(adapter);
+   }
+@@ -62,6 +63,7 @@
+   }
+ 
+   public void testIssue440WeakReference() throws Exception {
++    @SuppressWarnings("rawtypes")
+     TypeAdapter<WeakReference> adapter = new Gson().getAdapter(WeakReference.class);
+     assertNotNull(adapter);
+   }
+@@ -105,11 +107,13 @@
+   }
+ 
+   public void testRecursiveTypeVariablesResolve1() throws Exception {
++    @SuppressWarnings("rawtypes")
+     TypeAdapter<TestType> adapter = new Gson().getAdapter(TestType.class);
+     assertNotNull(adapter);
+   }
+ 
+   public void testRecursiveTypeVariablesResolve12() throws Exception {
++    @SuppressWarnings("rawtypes")
+     TypeAdapter<TestType2> adapter = new Gson().getAdapter(TestType2.class);
+     assertNotNull(adapter);
+   }
+diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTest.java /tmp/v2/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTest.java
+--- /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTest.java	2021-09-22 16:08:22.657236348 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTest.java	2021-09-22 16:08:22.665236409 +0200
+@@ -280,6 +280,7 @@
+     }
+   }
+ 
++  @SafeVarargs
+   private <T> void assertIterationOrder(Iterable<T> actual, T... expected) {
+     ArrayList<T> actualList = new ArrayList<T>();
+     for (T t : actual) {
+diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedTreeMapTest.java /tmp/v2/gson/src/test/java/com/google/gson/internal/LinkedTreeMapTest.java
+--- /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedTreeMapTest.java	2021-09-22 16:08:22.657236348 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/internal/LinkedTreeMapTest.java	2021-09-22 16:08:22.665236409 +0200
+@@ -140,6 +140,7 @@
+     MoreAsserts.assertEqualsAndHashCode(map1, map2);
+   }
+ 
++  @SafeVarargs
+   private <T> void assertIterationOrder(Iterable<T> actual, T... expected) {
+     ArrayList<T> actualList = new ArrayList<T>();
+     for (T t : actual) {

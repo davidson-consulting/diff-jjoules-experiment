@@ -1,0 +1,31 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-22 14:46:13.234063535 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-22 14:31:11.551503512 +0200
+@@ -24,6 +24,8 @@
+ import java.net.URI;
+ import java.net.URISyntaxException;
+ import java.net.URL;
++import java.security.AccessController;
++import java.security.PrivilegedAction;
+ import java.sql.Timestamp;
+ import java.util.ArrayList;
+ import java.util.BitSet;
+@@ -777,11 +779,16 @@
+ 
+     public EnumTypeAdapter(Class<T> classOfT) {
+       try {
+-        for (Field field : classOfT.getDeclaredFields()) {
++        for (final Field field : classOfT.getDeclaredFields()) {
+           if (!field.isEnumConstant()) {
+             continue;
+           }
+-          field.setAccessible(true);
++          AccessController.doPrivileged(new PrivilegedAction<Void>() {
++            @Override public Void run() {
++              field.setAccessible(true);
++              return null;
++            }
++          });
+           @SuppressWarnings("unchecked")
+           T constant = (T)(field.get(null));
+           String name = constant.name();
