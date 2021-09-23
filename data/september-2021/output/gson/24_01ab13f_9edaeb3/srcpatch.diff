@@ -1,6 +1,6 @@
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
---- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-22 14:25:26.660375617 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-22 14:19:41.284351820 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-23 09:05:30.518495587 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-23 09:05:30.546496597 +0200
 @@ -25,7 +25,12 @@
  import java.lang.reflect.Type;
  import java.lang.reflect.TypeVariable;
@@ -134,8 +134,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java /t
  
    static Type resolveTypeVariable(Type context, Class<?> contextRawType, TypeVariable<?> unknown) {
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java
---- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-22 14:25:26.660375617 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-22 14:19:41.284351820 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-23 09:05:30.518495587 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-23 09:05:30.546496597 +0200
 @@ -17,12 +17,15 @@
  package com.google.gson.internal.bind;
  
@@ -185,8 +185,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.j
        }
      }
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java /tmp/v2/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java
---- /tmp/v1/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java	2021-09-22 14:25:26.660375617 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java	2021-09-22 14:19:41.248352177 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java	2021-09-23 09:05:30.518495587 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java	2021-09-23 09:05:30.470493856 +0200
 @@ -79,7 +79,7 @@
    private static Field getOverrideField() {
      try {
@@ -199,8 +199,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/reflect/UnsafeRefle
 Only in /tmp/v2/gson/src/test/java/com/google/gson/functional: EnumWithObfuscatedTest.java
 Only in /tmp/v2/gson/src/test/java/com/google/gson/functional: ReusedTypeVariablesFullyResolveTest.java
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java /tmp/v2/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java	2021-09-22 14:25:26.660375617 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java	2021-09-22 14:19:41.252352137 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java	2021-09-23 09:05:30.518495587 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java	2021-09-23 09:05:30.494494722 +0200
 @@ -15,10 +15,12 @@
   */
  package com.google.gson.internal.reflect;

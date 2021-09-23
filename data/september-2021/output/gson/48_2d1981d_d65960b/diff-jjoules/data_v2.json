@@ -1,106 +1,210 @@
 {
-  "com.google.gson.functional.CollectionTest#testLinkedListDeserialization": [
+  "com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize": [
     {
-      "energy": 127014.0,
-      "instructions": 1.0940866E7,
-      "durations": 1.0594391E7,
-      "cycles": 1.347554E7,
-      "caches": 1758129.0,
-      "cacheMisses": 212449.0,
-      "branches": 3969059.0,
-      "branchMisses": 119108.0
-    },
-    {
-      "energy": 139099.0,
-      "instructions": 1.1590505E7,
-      "durations": 1.1103568E7,
-      "cycles": 1.397406E7,
-      "caches": 1669217.0,
-      "cacheMisses": 244154.0,
-      "branches": 4009688.0,
-      "branchMisses": 130663.0
-    },
-    {
-      "energy": 141357.0,
-      "instructions": 1.2281648E7,
-      "durations": 1.1430085E7,
-      "cycles": 1.9752175E7,
-      "caches": 1903215.0,
-      "cacheMisses": 259256.0,
-      "branches": 3991583.0,
-      "branchMisses": 49830.0
-    },
-    {
-      "energy": 138122.0,
-      "instructions": 1.2330274E7,
-      "durations": 1.1084955E7,
-      "cycles": 1.8224904E7,
-      "caches": 1887072.0,
-      "cacheMisses": 235146.0,
-      "branches": 3975393.0,
-      "branchMisses": 58568.0
-    },
-    {
-      "energy": 135559.0,
-      "instructions": 1.1222448E7,
-      "durations": 1.0891607E7,
-      "cycles": 1.3425144E7,
-      "caches": 1588355.0,
-      "cacheMisses": 227189.0,
-      "branches": 3993223.0,
-      "branchMisses": 140094.0
-    }
-  ],
-  "com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization": [
-    {
-      "energy": 119324.0,
-      "instructions": 7688754.0,
-      "durations": 7117080.0,
-      "cycles": 1.5919549E7,
-      "caches": 1419269.0,
-      "cacheMisses": 161870.0,
-      "branches": 2553323.0,
+      "energy": 49011.0,
+      "instructions": 3094094.0,
+      "durations": 4060958.0,
+      "cycles": 8438150.0,
+      "caches": 736077.0,
+      "cacheMisses": 124333.0,
+      "branches": 1118348.0,
       "branchMisses": 0.0
     },
     {
-      "energy": 100708.0,
-      "instructions": 7485421.0,
-      "durations": 7022498.0,
-      "cycles": 1.5205796E7,
-      "caches": 1431257.0,
-      "cacheMisses": 155350.0,
-      "branches": 2554654.0,
-      "branchMisses": 10064.0
+      "energy": 46448.0,
+      "instructions": 791211.0,
+      "durations": 4694382.0,
+      "cycles": 8557987.0,
+      "caches": 749847.0,
+      "cacheMisses": 151145.0,
+      "branches": 1115757.0,
+      "branchMisses": 2602.0
     },
     {
-      "energy": 118103.0,
-      "instructions": 6273581.0,
-      "durations": 8289522.0,
-      "cycles": 1.1745948E7,
-      "caches": 1456734.0,
-      "cacheMisses": 197828.0,
-      "branches": 2572805.0,
-      "branchMisses": 55043.0
+      "energy": 78614.0,
+      "instructions": 6208804.0,
+      "durations": 6397614.0,
+      "cycles": 1.2208413E7,
+      "caches": 791091.0,
+      "cacheMisses": 160910.0,
+      "branches": 1128231.0,
+      "branchMisses": 0.0
     },
     {
-      "energy": 130859.0,
-      "instructions": 6591839.0,
-      "durations": 8919826.0,
-      "cycles": 1.3741163E7,
-      "caches": 1459142.0,
-      "cacheMisses": 160795.0,
-      "branches": 2564584.0,
-      "branchMisses": 71633.0
+      "energy": 78552.0,
+      "instructions": 1664672.0,
+      "durations": 6646201.0,
+      "cycles": 8568122.0,
+      "caches": 820706.0,
+      "cacheMisses": 163339.0,
+      "branches": 1120519.0,
+      "branchMisses": 33552.0
     },
     {
-      "energy": 106201.0,
-      "instructions": 6821947.0,
-      "durations": 6861239.0,
-      "cycles": 1.5166538E7,
-      "caches": 1419426.0,
-      "cacheMisses": 142484.0,
-      "branches": 2555683.0,
-      "branchMisses": 7833.0
+      "energy": 46997.0,
+      "instructions": 3144280.0,
+      "durations": 4274628.0,
+      "cycles": 9053510.0,
+      "caches": 745131.0,
+      "cacheMisses": 132613.0,
+      "branches": 1215381.0,
+      "branchMisses": 0.0
+    }
+  ],
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testBadValueForBigDecimalDeserialization": [
+    {
+      "energy": 31799.0,
+      "instructions": 3769749.0,
+      "durations": 2651898.0,
+      "cycles": 5975523.0,
+      "caches": 540537.0,
+      "cacheMisses": 75905.0,
+      "branches": 857214.0,
+      "branchMisses": 0.0
+    },
+    {
+      "energy": 32227.0,
+      "instructions": 4541236.0,
+      "durations": 3139680.0,
+      "cycles": 6151223.0,
+      "caches": 553611.0,
+      "cacheMisses": 92069.0,
+      "branches": 860953.0,
+      "branchMisses": 0.0
+    },
+    {
+      "energy": 29297.0,
+      "instructions": 4036812.0,
+      "durations": 3995370.0,
+      "cycles": 8852342.0,
+      "caches": 561278.0,
+      "cacheMisses": 101734.0,
+      "branches": 864395.0,
+      "branchMisses": 0.0
+    },
+    {
+      "energy": 47058.0,
+      "instructions": 4031845.0,
+      "durations": 4592093.0,
+      "cycles": 9092438.0,
+      "caches": 593945.0,
+      "cacheMisses": 103725.0,
+      "branches": 902476.0,
+      "branchMisses": 0.0
+    },
+    {
+      "energy": 28992.0,
+      "instructions": 3746956.0,
+      "durations": 2763126.0,
+      "cycles": 5973978.0,
+      "caches": 508394.0,
+      "cacheMisses": 84934.0,
+      "branches": 839668.0,
+      "branchMisses": 0.0
+    }
+  ],
+  "com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization": [
+    {
+      "energy": 191711.0,
+      "instructions": 1.4290069E7,
+      "durations": 1.440203E7,
+      "cycles": 1.8539999E7,
+      "caches": 1473027.0,
+      "cacheMisses": 436409.0,
+      "branches": 4310012.0,
+      "branchMisses": 157443.0
+    },
+    {
+      "energy": 239013.0,
+      "instructions": 1.7826136E7,
+      "durations": 1.8284751E7,
+      "cycles": 2.3710633E7,
+      "caches": 1648664.0,
+      "cacheMisses": 459969.0,
+      "branches": 4301024.0,
+      "branchMisses": 151949.0
+    },
+    {
+      "energy": 303649.0,
+      "instructions": 1.7210741E7,
+      "durations": 2.2251271E7,
+      "cycles": 3.0930226E7,
+      "caches": 1948678.0,
+      "cacheMisses": 446459.0,
+      "branches": 4089722.0,
+      "branchMisses": 190995.0
+    },
+    {
+      "energy": 320678.0,
+      "instructions": 1.9103155E7,
+      "durations": 2.3617699E7,
+      "cycles": 3.2769685E7,
+      "caches": 2076304.0,
+      "cacheMisses": 523182.0,
+      "branches": 4266446.0,
+      "branchMisses": 162841.0
+    },
+    {
+      "energy": 192931.0,
+      "instructions": 1.4952108E7,
+      "durations": 1.4365642E7,
+      "cycles": 1.8269604E7,
+      "caches": 1500043.0,
+      "cacheMisses": 394082.0,
+      "branches": 4411311.0,
+      "branchMisses": 159799.0
+    }
+  ],
+  "com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization": [
+    {
+      "energy": 99243.0,
+      "instructions": 5869418.0,
+      "durations": 7338064.0,
+      "cycles": 1.4093804E7,
+      "caches": 1449548.0,
+      "cacheMisses": 199037.0,
+      "branches": 2255108.0,
+      "branchMisses": 17709.0
+    },
+    {
+      "energy": 112610.0,
+      "instructions": 5574598.0,
+      "durations": 7909400.0,
+      "cycles": 1.3017024E7,
+      "caches": 1412667.0,
+      "cacheMisses": 223081.0,
+      "branches": 2215941.0,
+      "branchMisses": 30684.0
+    },
+    {
+      "energy": 175964.0,
+      "instructions": 7427196.0,
+      "durations": 1.1907003E7,
+      "cycles": 1.4383828E7,
+      "caches": 1214152.0,
+      "cacheMisses": 314140.0,
+      "branches": 2229040.0,
+      "branchMisses": 82307.0
+    },
+    {
+      "energy": 176697.0,
+      "instructions": 7472600.0,
+      "durations": 1.1849412E7,
+      "cycles": 1.4855076E7,
+      "caches": 1425540.0,
+      "cacheMisses": 289915.0,
+      "branches": 2254385.0,
+      "branchMisses": 67542.0
+    },
+    {
+      "energy": 102356.0,
+      "instructions": 6389795.0,
+      "durations": 7353581.0,
+      "cycles": 1.422689E7,
+      "caches": 1393807.0,
+      "cacheMisses": 216288.0,
+      "branches": 2193260.0,
+      "branchMisses": 14907.0
     }
   ]
 }

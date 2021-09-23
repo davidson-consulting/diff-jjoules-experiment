@@ -31,8 +31,8 @@
 [INFO] /tmp/v2/gson/src
 [INFO] Executing: diff -ru /tmp/v1/gson/src /tmp/v2/gson/src from /tmp/v1/gson/src
 [INFO] Run DiffJJoules - Configuration{pathToFirstVersion='/tmp/v1/gson', pathToSecondVersion='/tmp/v2/gson/', pathToTestListAsCSV='/tmp/v1/gson/testsThatExecuteTheChange.csv', junit4=true, iterations=5, output='/tmp/v1/gson/diff-jjoules', pathToJSONDelta='deltas.json', pathToJSONDataV1='data_v1.json', pathToJSONDataV2='data_v2.json', diff='diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
---- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-22 15:04:57.177759063 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-22 15:04:57.181759107 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-23 10:21:34.965329756 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-23 10:21:35.021330042 +0200
 @@ -25,7 +25,12 @@
  import java.lang.reflect.Type;
  import java.lang.reflect.TypeVariable;
@@ -167,8 +167,8 @@
    static Type resolveTypeVariable(Type context, Class<?> contextRawType, TypeVariable<?> unknown) {
 Only in /tmp/v2/gson/src/test/java/com/google/gson/functional: ReusedTypeVariablesFullyResolveTest.java
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-22 15:04:57.177759063 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-22 14:31:11.551503512 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-23 10:21:34.965329756 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-23 10:21:35.021330042 +0200
 @@ -20,9 +20,6 @@
  
  import com.google.gson.common.MoreAsserts;
@@ -384,63 +384,63 @@ WARNING: All illegal access operations will be denied in a future release
  T E S T S
 -------------------------------------------------------
 Running com.google.gson.stream.JsonReaderTest
-Tests run: 120, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.209 sec
+Tests run: 120, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.224 sec
 Running com.google.gson.stream.JsonReaderPathTest
-Tests run: 20, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.094 sec
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.087 sec
 Running com.google.gson.stream.JsonWriterTest
-Tests run: 39, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 sec
+Tests run: 39, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 sec
 Running com.google.gson.GsonTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 sec
 Running com.google.gson.InnerClassExclusionStrategyTest
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.ObjectTypeAdapterTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
 Running com.google.gson.VersionExclusionStrategyTest
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.JsonArrayTest
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
 Running com.google.gson.JavaSerializationTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 sec
 Running com.google.gson.ParameterizedTypeTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.GsonBuilderTest
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
 Running com.google.gson.JsonNullTest
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
 Running com.google.gson.GsonTypeAdapterTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
 Running com.google.gson.CommentsTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.JsonParserTest
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
 Running com.google.gson.reflect.TypeTokenTest
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
 Running com.google.gson.JsonPrimitiveTest
-Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
 Running com.google.gson.ExposeAnnotationExclusionStrategyTest
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
-Running com.google.gson.GenericArrayTypeTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
-Running com.google.gson.FieldAttributesTest
 Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.GenericArrayTypeTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.FieldAttributesTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.JsonStreamParserTest
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.regression.JsonAdapterNullSafeTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.MixedStreamTest
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
 Running com.google.gson.DefaultDateTypeAdapterTest
-Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.231 sec
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.186 sec
 Running com.google.gson.DefaultInetAddressTypeAdapterTest
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.LongSerializationPolicyTest
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.internal.LazilyParsedNumberTest
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
 Running com.google.gson.internal.GsonTypesTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.internal.LinkedHashTreeMapTest
-Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.045 sec
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 sec
 Running com.google.gson.internal.bind.JsonTreeReaderTest
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
 Running com.google.gson.internal.bind.JsonTreeWriterTest
@@ -448,39 +448,39 @@ Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
 Running com.google.gson.internal.bind.util.ISO8601UtilsTest
 Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
 Running com.google.gson.internal.bind.RecursiveTypesResolveTest
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
 Running com.google.gson.internal.bind.JsonElementReaderTest
-Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
 Running com.google.gson.internal.GsonBuildConfigTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
 Running com.google.gson.internal.JavaVersionTest
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.internal.reflect.UnsafeReflectionAccessorTest
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
 Running com.google.gson.internal.LinkedTreeMapTest
-Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
 Running com.google.gson.internal.UnsafeAllocatorInstantiationTest
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.DefaultMapJsonSerializerTest
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.OverrideCoreTypeAdaptersTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.functional.MoreSpecificTypeSerializationTest
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
 Running com.google.gson.functional.JavaUtilTest
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.functional.CircularReferenceTest
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 sec
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 sec
 Running com.google.gson.functional.NullObjectAndFieldTest
-Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
 Running com.google.gson.functional.ConcurrencyTest
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
 Running com.google.gson.functional.PrimitiveCharacterTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.functional.CustomDeserializerTest
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
 Running com.google.gson.functional.MapTest
-Tests run: 48, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 sec
+Tests run: 48, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 sec
 Running com.google.gson.functional.ExclusionStrategyFunctionalTest
 Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
 Running com.google.gson.functional.TypeHierarchyAdapterTest
@@ -488,95 +488,95 @@ Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
 Running com.google.gson.functional.InternationalizationTest
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.functional.CustomSerializerTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
 Running com.google.gson.functional.JsonArrayTest
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
 Running com.google.gson.functional.JsonTreeTest
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
 Running com.google.gson.functional.TreeTypeAdaptersTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.functional.FieldNamingTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
 Running com.google.gson.functional.LeniencyTest
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
 Running com.google.gson.functional.GsonVersionDiagnosticsTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.functional.RuntimeTypeAdapterFactoryFunctionalTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.functional.SecurityTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.functional.InheritanceTest
-Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 sec
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
 Running com.google.gson.functional.SerializedNameTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.functional.JsonAdapterSerializerDeserializerTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
-Running com.google.gson.functional.ExposeFieldsTest
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
-Running com.google.gson.functional.ParameterizedTypesTest
-Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 sec
-Running com.google.gson.functional.MapAsArrayTypeAdapterTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
-Running com.google.gson.functional.NamingPolicyTest
-Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
-Running com.google.gson.functional.VersioningTest
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
-Running com.google.gson.functional.DelegateTypeAdapterTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
-Running com.google.gson.functional.ArrayTest
-Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 sec
-Running com.google.gson.functional.PrettyPrintingTest
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
-Running com.google.gson.functional.CollectionTest
-Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 sec
-Running com.google.gson.functional.ThrowableFunctionalTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
-Running com.google.gson.functional.JsonParserTest
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
-Running com.google.gson.functional.EnumTest
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
-Running com.google.gson.functional.InterfaceTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
-Running com.google.gson.functional.RawSerializationTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
-Running com.google.gson.functional.TypeVariableTest
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
-Running com.google.gson.functional.UncategorizedTest
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
-Running com.google.gson.functional.PrimitiveTest
-Tests run: 99, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.104 sec
-Running com.google.gson.functional.EscapingTest
+Running com.google.gson.functional.ExposeFieldsTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.gson.functional.ParameterizedTypesTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 sec
+Running com.google.gson.functional.MapAsArrayTypeAdapterTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Running com.google.gson.functional.NamingPolicyTest
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Running com.google.gson.functional.VersioningTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Running com.google.gson.functional.DelegateTypeAdapterTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Running com.google.gson.functional.ArrayTest
+Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Running com.google.gson.functional.PrettyPrintingTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.CollectionTest
+Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 sec
+Running com.google.gson.functional.ThrowableFunctionalTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.JsonParserTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Running com.google.gson.functional.EnumTest
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Running com.google.gson.functional.InterfaceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Running com.google.gson.functional.RawSerializationTest
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.functional.TypeVariableTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Running com.google.gson.functional.UncategorizedTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Running com.google.gson.functional.PrimitiveTest
+Tests run: 99, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 sec
+Running com.google.gson.functional.EscapingTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.functional.JsonAdapterAnnotationOnClassesTest
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
 Running com.google.gson.functional.ReadersWritersTest
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
 Running com.google.gson.functional.InstanceCreatorTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
 Running com.google.gson.functional.CustomTypeAdaptersTest
-Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 sec
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
 Running com.google.gson.functional.TypeAdapterPrecedenceTest
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
 Running com.google.gson.functional.FieldExclusionTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
-Running com.google.gson.functional.StreamingTypeAdaptersTest
-Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 sec
-Running com.google.gson.functional.PrintFormattingTest
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Running com.google.gson.functional.StreamingTypeAdaptersTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec
+Running com.google.gson.functional.PrintFormattingTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.functional.JavaUtilConcurrentAtomicTest
 Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
 Running com.google.gson.functional.StringTest
-Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
 Running com.google.gson.functional.ObjectTest
-Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 sec
+Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 sec
 Running com.google.gson.functional.DefaultTypeAdaptersTest
-Tests run: 65, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 sec
+Tests run: 65, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 sec
 Running com.google.gson.metrics.PerformanceTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
 Running com.google.gson.JsonObjectTest
-Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
 
 Results :
 
@@ -585,8 +585,8 @@ Tests run: 1064, Failures: 0, Errors: 0, Skipped: 1
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 [[1;34mINFO[m] [1;32mBUILD SUCCESS[m
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
-[[1;34mINFO[m] Total time:  14.751 s
-[[1;34mINFO[m] Finished at: 2021-09-22T15:05:54+02:00
+[[1;34mINFO[m] Total time:  14.890 s
+[[1;34mINFO[m] Finished at: 2021-09-23T10:22:43+02:00
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 Reading Clover data /tmp/v1/gson/target/clover
 Writing HTML report to '/tmp/v1/gson/target/clover/report'
@@ -637,7 +637,7 @@ ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v1/gson/src/
 ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v1/gson/src/test/java/com/google/gson/functional/TypeVariableTest.java
 ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v1/gson/src/test/java/com/google/gson/functional/UncategorizedTest.java
 ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v1/gson/src/test/java/com/google/gson/common/TestTypes.java
-Done. Processed 12 packages in 6841ms (570ms per package).
+Done. Processed 12 packages in 7084ms (590ms per package).
 [[1;34mINFO[m] Computing coverage for /tmp/v2/gson/
 [WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
 WARNING: An illegal reflective access operation has occurred
@@ -722,201 +722,201 @@ WARNING: All illegal access operations will be denied in a future release
  T E S T S
 -------------------------------------------------------
 Running com.google.gson.stream.JsonReaderTest
-Tests run: 120, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.266 sec
+Tests run: 120, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.285 sec
 Running com.google.gson.stream.JsonReaderPathTest
-Tests run: 20, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.099 sec
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.122 sec
 Running com.google.gson.stream.JsonWriterTest
-Tests run: 39, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 sec
+Tests run: 39, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec
 Running com.google.gson.GsonTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 sec
 Running com.google.gson.InnerClassExclusionStrategyTest
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.ObjectTypeAdapterTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
 Running com.google.gson.VersionExclusionStrategyTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
 Running com.google.gson.JsonArrayTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
 Running com.google.gson.JavaSerializationTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 sec
 Running com.google.gson.ParameterizedTypeTest
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.GsonBuilderTest
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
 Running com.google.gson.JsonNullTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
 Running com.google.gson.GsonTypeAdapterTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
 Running com.google.gson.CommentsTest
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.JsonParserTest
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
 Running com.google.gson.reflect.TypeTokenTest
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
 Running com.google.gson.JsonPrimitiveTest
-Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Tests run: 25, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
 Running com.google.gson.ExposeAnnotationExclusionStrategyTest
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
 Running com.google.gson.GenericArrayTypeTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.FieldAttributesTest
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
 Running com.google.gson.JsonStreamParserTest
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.regression.JsonAdapterNullSafeTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
 Running com.google.gson.MixedStreamTest
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
 Running com.google.gson.DefaultDateTypeAdapterTest
-Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.171 sec
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.162 sec
 Running com.google.gson.DefaultInetAddressTypeAdapterTest
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.LongSerializationPolicyTest
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.internal.LazilyParsedNumberTest
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.internal.GsonTypesTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.internal.LinkedHashTreeMapTest
-Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 sec
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
 Running com.google.gson.internal.bind.JsonTreeReaderTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
 Running com.google.gson.internal.bind.JsonTreeWriterTest
-Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
 Running com.google.gson.internal.bind.util.ISO8601UtilsTest
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
 Running com.google.gson.internal.bind.RecursiveTypesResolveTest
 Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec
 Running com.google.gson.internal.bind.JsonElementReaderTest
-Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
 Running com.google.gson.internal.GsonBuildConfigTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
 Running com.google.gson.internal.JavaVersionTest
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.internal.reflect.UnsafeReflectionAccessorTest
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
 Running com.google.gson.internal.LinkedTreeMapTest
-Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 sec
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
 Running com.google.gson.internal.UnsafeAllocatorInstantiationTest
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.DefaultMapJsonSerializerTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.OverrideCoreTypeAdaptersTest
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.functional.MoreSpecificTypeSerializationTest
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
 Running com.google.gson.functional.JavaUtilTest
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
 Running com.google.gson.functional.CircularReferenceTest
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 sec
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec
 Running com.google.gson.functional.NullObjectAndFieldTest
-Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
 Running com.google.gson.functional.ConcurrencyTest
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
 Running com.google.gson.functional.PrimitiveCharacterTest
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
 Running com.google.gson.functional.CustomDeserializerTest
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
 Running com.google.gson.functional.MapTest
-Tests run: 48, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 sec
+Tests run: 48, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 sec
 Running com.google.gson.functional.ExclusionStrategyFunctionalTest
 Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
 Running com.google.gson.functional.TypeHierarchyAdapterTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
 Running com.google.gson.functional.ReusedTypeVariablesFullyResolveTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.functional.InternationalizationTest
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
 Running com.google.gson.functional.CustomSerializerTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.functional.JsonArrayTest
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.functional.JsonTreeTest
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 sec
 Running com.google.gson.functional.TreeTypeAdaptersTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
 Running com.google.gson.functional.FieldNamingTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
 Running com.google.gson.functional.LeniencyTest
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec
 Running com.google.gson.functional.GsonVersionDiagnosticsTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.functional.RuntimeTypeAdapterFactoryFunctionalTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.functional.SecurityTest
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.functional.InheritanceTest
-Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
 Running com.google.gson.functional.SerializedNameTest
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
 Running com.google.gson.functional.JsonAdapterSerializerDeserializerTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
 Running com.google.gson.functional.ExposeFieldsTest
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
 Running com.google.gson.functional.ParameterizedTypesTest
-Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 sec
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 sec
 Running com.google.gson.functional.MapAsArrayTypeAdapterTest
 Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
 Running com.google.gson.functional.NamingPolicyTest
-Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
 Running com.google.gson.functional.VersioningTest
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
 Running com.google.gson.functional.DelegateTypeAdapterTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.functional.ArrayTest
-Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 sec
+Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
 Running com.google.gson.functional.PrettyPrintingTest
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec
 Running com.google.gson.functional.CollectionTest
-Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 sec
+Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 sec
 Running com.google.gson.functional.ThrowableFunctionalTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
 Running com.google.gson.functional.JsonParserTest
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
 Running com.google.gson.functional.EnumTest
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
 Running com.google.gson.functional.InterfaceTest
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.functional.RawSerializationTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
 Running com.google.gson.functional.TypeVariableTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
 Running com.google.gson.functional.UncategorizedTest
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 sec
 Running com.google.gson.functional.PrimitiveTest
-Tests run: 99, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 sec
+Tests run: 99, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.092 sec
 Running com.google.gson.functional.EscapingTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 sec
 Running com.google.gson.functional.JsonAdapterAnnotationOnClassesTest
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
 Running com.google.gson.functional.ReadersWritersTest
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 sec
 Running com.google.gson.functional.InstanceCreatorTest
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
 Running com.google.gson.functional.CustomTypeAdaptersTest
-Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 sec
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 sec
 Running com.google.gson.functional.TypeAdapterPrecedenceTest
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
 Running com.google.gson.functional.FieldExclusionTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.functional.StreamingTypeAdaptersTest
-Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 sec
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 sec
 Running com.google.gson.functional.PrintFormattingTest
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
 Running com.google.gson.functional.JavaUtilConcurrentAtomicTest
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
 Running com.google.gson.functional.StringTest
-Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
 Running com.google.gson.functional.ObjectTest
-Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 sec
+Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 sec
 Running com.google.gson.functional.DefaultTypeAdaptersTest
-Tests run: 65, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 sec
+Tests run: 65, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.076 sec
 Running com.google.gson.metrics.PerformanceTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
 Running com.google.gson.JsonObjectTest
-Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec
 
 Results :
 
@@ -925,8 +925,8 @@ Tests run: 1064, Failures: 0, Errors: 0, Skipped: 1
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 [[1;34mINFO[m] [1;32mBUILD SUCCESS[m
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
-[[1;34mINFO[m] Total time:  15.172 s
-[[1;34mINFO[m] Finished at: 2021-09-22T15:06:18+02:00
+[[1;34mINFO[m] Total time:  14.727 s
+[[1;34mINFO[m] Finished at: 2021-09-23T10:23:07+02:00
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 Reading Clover data /tmp/v2/gson/target/clover
 Writing HTML report to '/tmp/v2/gson/target/clover/report'
@@ -939,7 +939,6 @@ ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/
 ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java
 ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java
 ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/test/java/com/google/gson/stream/JsonReaderPathTest.java
-ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/test/java/com/google/gson/stream/JsonReaderTest.java
 ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/main/java/com/google/gson/Gson.java
 ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/test/java/com/google/gson/GsonTypeAdapterTest.java
 ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/test/java/com/google/gson/MixedStreamTest.java
@@ -978,44 +977,43 @@ ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/
 ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/test/java/com/google/gson/functional/TypeVariableTest.java
 ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/test/java/com/google/gson/functional/UncategorizedTest.java
 ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/test/java/com/google/gson/common/TestTypes.java
-Done. Processed 12 packages in 2825ms (235ms per package).
+Done. Processed 12 packages in 3467ms (288ms per package).
 [[1;34mINFO[m] /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
 [[1;34mINFO[m] /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
 [[1;34mINFO[m] com.google.gson.internal.$Gson$Types:[343, 347, 343, 365, 360, 366, 353, 373, 391, 396, 417, 423, 348, 350, 361, 369, 377, 391, 403, 408, 411, 411] are modified.
 [[1;34mINFO[m] com.google.gson.internal.$Gson$Types:343 covered.
 [[1;34mINFO[m] com.google.gson.internal.$Gson$Types:365 covered.
-[[1;34mINFO[m] com.google.gson.internal.$Gson$Types:353 covered.
 [[1;34mINFO[m] com.google.gson.internal.$Gson$Types:373 covered.
-[[1;34mINFO[m] com.google.gson.internal.$Gson$Types:423 covered.
-[[1;34mINFO[m] com.google.gson.internal.$Gson$Types:350 covered.
+[[1;34mINFO[m] com.google.gson.internal.$Gson$Types:391 covered.
+[[1;34mINFO[m] com.google.gson.internal.$Gson$Types:377 covered.
 [[1;34mINFO[m] com.google.gson.internal.$Gson$Types:[348, 415, 338, 342, 348, 436, 338, 353, 437, 437, 352, 353, 347, 351, 360, 354, 347, 361, 366, 373, 355, 361, 361, 373, 363, 372, 382, 373, 382, 405, 377, 391, 405, 392, 391, 382, 396, 428, 391, 396, 428, 396, 383, 402, 418, 418, 404, 407, 424, 424, 409] are modified.
 [[1;34mINFO[m] com.google.gson.internal.$Gson$Types:348 covered.
 [[1;34mINFO[m] com.google.gson.internal.$Gson$Types:342 covered.
 [[1;34mINFO[m] com.google.gson.internal.$Gson$Types:436 covered.
+[[1;34mINFO[m] com.google.gson.internal.$Gson$Types:353 covered.
 [[1;34mINFO[m] com.google.gson.internal.$Gson$Types:437 covered.
 [[1;34mINFO[m] com.google.gson.internal.$Gson$Types:352 covered.
 [[1;34mINFO[m] com.google.gson.internal.$Gson$Types:351 covered.
 [[1;34mINFO[m] com.google.gson.internal.$Gson$Types:360 covered.
 [[1;34mINFO[m] com.google.gson.internal.$Gson$Types:361 covered.
-[[1;34mINFO[m] com.google.gson.internal.$Gson$Types:405 covered.
-[[1;34mINFO[m] com.google.gson.internal.$Gson$Types:391 covered.
-[[1;34mINFO[m] com.google.gson.internal.$Gson$Types:396 covered.
 [[1;34mINFO[m] /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java
 [[1;34mINFO[m] /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java
 [[1;34mINFO[m] Build modified Tests /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java
 [[1;34mINFO[m] Saving result in /tmp/v1/gson/testsThatExecuteTheChange.csv ...
-[[1;34mINFO[m] com.google.gson.functional.ParameterizedTypesTest;testParameterizedTypeWithReaderDeserialization
-com.google.gson.functional.CollectionTest;testLinkedListDeserialization
+[[1;34mINFO[m] com.google.gson.functional.CircularReferenceTest;testDirectedAcyclicGraphDeserialization
+com.google.gson.functional.ParameterizedTypesTest;testParameterizedTypesSerialization
+com.google.gson.regression.JsonAdapterNullSafeTest;testNullSafeBugSerialize
+com.google.gson.functional.DefaultTypeAdaptersTest;testBadValueForBigDecimalDeserialization
 [[1;34mINFO[m] Writing Coverage in /tmp/v1/gson/testsThatExecuteTheChange_coverage.csv
-[[1;34mINFO[m] com.google.gson.internal.$Gson$Types;17;41
+[[1;34mINFO[m] com.google.gson.internal.$Gson$Types;14;41
 
-[[1;34mINFO[m] total;17;41
+[[1;34mINFO[m] total;14;41
 
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 [[1;34mINFO[m] [1;32mBUILD SUCCESS[m
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
-[[1;34mINFO[m] Total time:  46.949 s
-[[1;34mINFO[m] Finished at: 2021-09-22T15:06:24+02:00
+[[1;34mINFO[m] Total time:  47.971 s
+[[1;34mINFO[m] Finished at: 2021-09-23T10:23:14+02:00
 [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
 [INFO] mvn -f /tmp/v1/gson clean test -DskipTests dependency:build-classpath --quiet -Dcobertura.skip=true -Dlicense.skip=true -Dfindbugs.skip=true -Danimal.sniffer.skip=true -Djacoco.skip=true -Dcheckstyle.skip=true -Dproguard.skip=true -Dmdep.outputFile=classpath -DskipITs=true -Drat.skip=true -Denforcer.skip=true -Dgpg.skip=true
 [WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
@@ -1032,8 +1030,8 @@ WARNING: Please consider reporting this to the maintainers of com.google.inject.
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
 [info] Run Instrumentation - Configuration{pathToFirstVersion='/tmp/v1/gson', pathToSecondVersion='/tmp/v2/gson/', pathToTestListAsCSV='/tmp/v1/gson/testsThatExecuteTheChange.csv', junit4=true, iterations=5, output='/tmp/v1/gson/diff-jjoules', pathToJSONDelta='deltas.json', pathToJSONDataV1='data_v1.json', pathToJSONDataV2='data_v2.json', diff='diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
---- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-22 15:04:57.177759063 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-22 15:04:57.181759107 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-23 10:21:34.965329756 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-23 10:21:35.021330042 +0200
 @@ -25,7 +25,12 @@
  import java.lang.reflect.Type;
  import java.lang.reflect.TypeVariable;
@@ -1168,8 +1166,8 @@ WARNING: All illegal access operations will be denied in a future release
    static Type resolveTypeVariable(Type context, Class<?> contextRawType, TypeVariable<?> unknown) {
 Only in /tmp/v2/gson/src/test/java/com/google/gson/functional: ReusedTypeVariablesFullyResolveTest.java
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-22 15:04:57.177759063 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-22 14:31:11.551503512 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-23 10:21:34.965329756 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-23 10:21:35.021330042 +0200
 @@ -20,9 +20,6 @@
  
  import com.google.gson.common.MoreAsserts;
@@ -1249,17 +1247,17 @@ diff -ru /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java /tmp/v2/g
 -    }
 -  }
  }
-', pathToJSONDeltaOmega='deltaOmega.json', pathToRepositoryV1='/tmp/v1', pathToRepositoryV2='/tmp/v2', pathToJSONConsideredTestMethodNames='consideredTestMethods.json', pathToExecLinesAdditions='exec_additions.json', pathToExecLinesDeletions='exec_deletions.json', pathToJSONSuspiciousV1='suspicious_v1.json', pathToJSONSuspiciousV2='suspicious_v2.json', pathToReport='.github/workflows/template.md', classpathV1=[/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar, /home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar], classpathV2=[/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar, /home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar], classpathV1AsString='/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar', classpathV2AsString='/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar', testsList={com.google.gson.functional.CollectionTest=[testLinkedListDeserialization], com.google.gson.functional.ParameterizedTypesTest=[testParameterizedTypeWithReaderDeserialization]}, dataV1=null, dataV2=null, deltas=null, consideredTestsNames=null, execLinesAdditions=null, execLinesDeletions=null, deltaOmega=null, scorePerLineV1=null, scorePerLineV2=null, ownConsumptionReports={selection={package-0/uncore|uJ=25573, instructions=61872, package-0/dram|uJ=82090916, uncore|uJ=25573, cycles=4011445, dram|mW=1680, cache-misses=119515, package|uJ=768469407, branch-misses=0, package-0/core|mW=13599, device|uJ=850560323, core|uJ=664406319, psys|mW=42611, psys|uJ=2081716718, package-0|uJ=768469407, duration|ns=48853523982, branches=534530, core|mW=13599, device|mW=17410, package-0/dram|mW=1680, dram|uJ=82090916, package-0/core|uJ=664406319, cache-reference=345566, package-0/uncore|mW=0, package-0|mW=15730, package|mW=15730, uncore|mW=0}}, reportEnum=NONE}
+', pathToJSONDeltaOmega='deltaOmega.json', pathToRepositoryV1='/tmp/v1', pathToRepositoryV2='/tmp/v2', pathToJSONConsideredTestMethodNames='consideredTestMethods.json', pathToExecLinesAdditions='exec_additions.json', pathToExecLinesDeletions='exec_deletions.json', pathToJSONSuspiciousV1='suspicious_v1.json', pathToJSONSuspiciousV2='suspicious_v2.json', pathToReport='.github/workflows/template.md', classpathV1=[/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar, /home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar], classpathV2=[/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar, /home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar], classpathV1AsString='/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar', classpathV2AsString='/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar', testsList={com.google.gson.functional.CircularReferenceTest=[testDirectedAcyclicGraphDeserialization], com.google.gson.functional.ParameterizedTypesTest=[testParameterizedTypesSerialization], com.google.gson.regression.JsonAdapterNullSafeTest=[testNullSafeBugSerialize], com.google.gson.functional.DefaultTypeAdaptersTest=[testBadValueForBigDecimalDeserialization]}, dataV1=null, dataV2=null, deltas=null, consideredTestsNames=null, execLinesAdditions=null, execLinesDeletions=null, deltaOmega=null, scorePerLineV1=null, scorePerLineV2=null, ownConsumptionReports={selection={package-0/uncore|uJ=4669849, instructions=58222, package-0/dram|uJ=84813199, uncore|uJ=4669849, cycles=4394033, dram|mW=1680, cache-misses=113243, package|uJ=789355889, branch-misses=0, package-0/core|mW=13139, device|uJ=874169088, core|uJ=663045788, psys|mW=36694, psys|uJ=1851702902, package-0|uJ=789355889, duration|ns=50462412328, branches=546687, core|mW=13139, device|mW=17323, package-0/dram|mW=1680, dram|uJ=84813199, package-0/core|uJ=663045788, cache-reference=354728, package-0/uncore|mW=92, package-0|mW=15642, package|mW=15642, uncore|mW=92}}, reportEnum=NONE}
 [info] Instrument version before commit...
 [info] Run on /tmp/v1/gson
 [INFO] fr.davidson.diff.jjoules.instrumentation.process.junit4.JJoulesProcessor
-[INFO] 2 instrumented test classes have been printed!
+[INFO] 4 instrumented test classes have been printed!
 [INFO] Injecting JUnit-Jjoules in /tmp/v1/gson/pom.xml
 [INFO] Output new POM file in /tmp/v1/gson/pom.xml
 [info] Instrument version after commit...
 [info] Run on /tmp/v2/gson/
 [INFO] fr.davidson.diff.jjoules.instrumentation.process.junit4.JJoulesProcessor
-[INFO] 2 instrumented test classes have been printed!
+[INFO] 4 instrumented test classes have been printed!
 [INFO] Injecting JUnit-Jjoules in /tmp/v2/gson//pom.xml
 [INFO] Output new POM file in /tmp/v2/gson//pom.xml
 [INFO] mvn -f /tmp/v2/gson/ clean test -DskipTests dependency:build-classpath --quiet -Dcobertura.skip=true -Dlicense.skip=true -Dfindbugs.skip=true -Danimal.sniffer.skip=true -Djacoco.skip=true -Dcheckstyle.skip=true -Dproguard.skip=true -Dmdep.outputFile=classpath -DskipITs=true -Drat.skip=true -Denforcer.skip=true -Dgpg.skip=true
@@ -1278,8 +1276,8 @@ WARNING: Please consider reporting this to the maintainers of com.google.inject.
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
 [info] Run Delta - Configuration{pathToFirstVersion='/tmp/v1/gson', pathToSecondVersion='/tmp/v2/gson/', pathToTestListAsCSV='/tmp/v1/gson/testsThatExecuteTheChange.csv', junit4=true, iterations=5, output='/tmp/v1/gson/diff-jjoules', pathToJSONDelta='deltas.json', pathToJSONDataV1='data_v1.json', pathToJSONDataV2='data_v2.json', diff='diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
---- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-22 15:04:57.177759063 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-22 15:04:57.181759107 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-23 10:21:34.965329756 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-23 10:21:35.021330042 +0200
 @@ -25,7 +25,12 @@
  import java.lang.reflect.Type;
  import java.lang.reflect.TypeVariable;
@@ -1414,8 +1412,8 @@ WARNING: All illegal access operations will be denied in a future release
    static Type resolveTypeVariable(Type context, Class<?> contextRawType, TypeVariable<?> unknown) {
 Only in /tmp/v2/gson/src/test/java/com/google/gson/functional: ReusedTypeVariablesFullyResolveTest.java
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-22 15:04:57.177759063 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-22 14:31:11.551503512 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-23 10:21:34.965329756 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-23 10:21:35.021330042 +0200
 @@ -20,9 +20,6 @@
  
  import com.google.gson.common.MoreAsserts;
@@ -1495,7 +1493,7 @@ diff -ru /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java /tmp/v2/g
 -    }
 -  }
  }
-', pathToJSONDeltaOmega='deltaOmega.json', pathToRepositoryV1='/tmp/v1', pathToRepositoryV2='/tmp/v2', pathToJSONConsideredTestMethodNames='consideredTestMethods.json', pathToExecLinesAdditions='exec_additions.json', pathToExecLinesDeletions='exec_deletions.json', pathToJSONSuspiciousV1='suspicious_v1.json', pathToJSONSuspiciousV2='suspicious_v2.json', pathToReport='.github/workflows/template.md', classpathV1=[/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar, /home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar, /home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar, /home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar, /home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar, /home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar, /home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar, /home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar], classpathV2=[/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar, /home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar, /home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar, /home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar, /home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar, /home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar, /home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar, /home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar], classpathV1AsString='/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar', classpathV2AsString='/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar', testsList={com.google.gson.functional.CollectionTest=[testLinkedListDeserialization], com.google.gson.functional.ParameterizedTypesTest=[testParameterizedTypeWithReaderDeserialization]}, dataV1=null, dataV2=null, deltas=null, consideredTestsNames=null, execLinesAdditions=null, execLinesDeletions=null, deltaOmega=null, scorePerLineV1=null, scorePerLineV2=null, ownConsumptionReports={selection={package-0/uncore|uJ=25573, instructions=61872, package-0/dram|uJ=82090916, uncore|uJ=25573, cycles=4011445, dram|mW=1680, cache-misses=119515, package|uJ=768469407, branch-misses=0, package-0/core|mW=13599, device|uJ=850560323, core|uJ=664406319, psys|mW=42611, psys|uJ=2081716718, package-0|uJ=768469407, duration|ns=48853523982, branches=534530, core|mW=13599, device|mW=17410, package-0/dram|mW=1680, dram|uJ=82090916, package-0/core|uJ=664406319, cache-reference=345566, package-0/uncore|mW=0, package-0|mW=15730, package|mW=15730, uncore|mW=0}, instrumentation={package-0/uncore|uJ=0, instructions=15047086882, package-0/dram|uJ=13335598, uncore|uJ=0, cycles=13849712983, dram|mW=1715, cache-misses=182048048, package|uJ=122596488, branch-misses=59657530, package-0/core|mW=13688, device|uJ=135932086, core|uJ=106385165, psys|mW=42666, psys|uJ=331596928, package-0|uJ=122596488, duration|ns=7771891796, branches=2700775709, core|mW=13688, device|mW=17490, package-0/dram|mW=1715, dram|uJ=13335598, package-0/core|uJ=106385165, cache-reference=939623813, package-0/uncore|mW=0, package-0|mW=15774, package|mW=15774, uncore|mW=0}}, reportEnum=NONE}
+', pathToJSONDeltaOmega='deltaOmega.json', pathToRepositoryV1='/tmp/v1', pathToRepositoryV2='/tmp/v2', pathToJSONConsideredTestMethodNames='consideredTestMethods.json', pathToExecLinesAdditions='exec_additions.json', pathToExecLinesDeletions='exec_deletions.json', pathToJSONSuspiciousV1='suspicious_v1.json', pathToJSONSuspiciousV2='suspicious_v2.json', pathToReport='.github/workflows/template.md', classpathV1=[/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar, /home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar, /home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar, /home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar, /home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar, /home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar, /home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar, /home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar], classpathV2=[/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar, /home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar, /home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar, /home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar, /home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar, /home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar, /home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar, /home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar], classpathV1AsString='/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar', classpathV2AsString='/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar', testsList={com.google.gson.functional.CircularReferenceTest=[testDirectedAcyclicGraphDeserialization], com.google.gson.functional.ParameterizedTypesTest=[testParameterizedTypesSerialization], com.google.gson.regression.JsonAdapterNullSafeTest=[testNullSafeBugSerialize], com.google.gson.functional.DefaultTypeAdaptersTest=[testBadValueForBigDecimalDeserialization]}, dataV1=null, dataV2=null, deltas=null, consideredTestsNames=null, execLinesAdditions=null, execLinesDeletions=null, deltaOmega=null, scorePerLineV1=null, scorePerLineV2=null, ownConsumptionReports={selection={package-0/uncore|uJ=4669849, instructions=58222, package-0/dram|uJ=84813199, uncore|uJ=4669849, cycles=4394033, dram|mW=1680, cache-misses=113243, package|uJ=789355889, branch-misses=0, package-0/core|mW=13139, device|uJ=874169088, core|uJ=663045788, psys|mW=36694, psys|uJ=1851702902, package-0|uJ=789355889, duration|ns=50462412328, branches=546687, core|mW=13139, device|mW=17323, package-0/dram|mW=1680, dram|uJ=84813199, package-0/core|uJ=663045788, cache-reference=354728, package-0/uncore|mW=92, package-0|mW=15642, package|mW=15642, uncore|mW=92}, instrumentation={package-0/uncore|uJ=1325741, instructions=16699185492, package-0/dram|uJ=15372641, uncore|uJ=1325741, cycles=15182392508, dram|mW=1791, cache-misses=214893183, package|uJ=136261064, branch-misses=61995257, package-0/core|mW=13338, device|uJ=151633705, core|uJ=114441540, psys|mW=37209, psys|uJ=319257726, package-0|uJ=136261064, duration|ns=8579920821, branches=2909483262, core|mW=13338, device|mW=17673, package-0/dram|mW=1791, dram|uJ=15372641, package-0/core|uJ=114441540, cache-reference=1064751956, package-0/uncore|mW=154, package-0|mW=15881, package|mW=15881, uncore|mW=154}}, reportEnum=NONE}
 [INFO] Path to runner Classes: /home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar
 [INFO] /home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar
 [INFO] /home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar
@@ -1509,45 +1507,45 @@ diff -ru /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java /tmp/v2/g
 [INFO] /home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2.jar
 [INFO] /home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar
 [INFO] /tmp/v1/gson
-[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v1/gson/target/classes:/tmp/v1/gson/target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CollectionTest:com.google.gson.functional.ParameterizedTypesTest, --tests, testLinkedListDeserialization:testParameterizedTypeWithReaderDeserialization]
-[INFO] Test has been run: com.google.gson.functional.CollectionTest#testLinkedListDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization
-[INFO] Reading json file from /tmp/v1/gson/target/jjoules-reports(/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeWithReaderDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.CollectionTest-testLinkedListDeserialization.json)
+[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v1/gson/target/classes:/tmp/v1/gson/target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CircularReferenceTest:com.google.gson.functional.ParameterizedTypesTest:com.google.gson.regression.JsonAdapterNullSafeTest:com.google.gson.functional.DefaultTypeAdaptersTest, --tests, testDirectedAcyclicGraphDeserialization:testParameterizedTypesSerialization:testNullSafeBugSerialize:testBadValueForBigDecimalDeserialization]
+[INFO] Test has been run: com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize,com.google.gson.functional.DefaultTypeAdaptersTest#testBadValueForBigDecimalDeserialization,com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization
+[INFO] Reading json file from /tmp/v1/gson/target/jjoules-reports(/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.DefaultTypeAdaptersTest-testBadValueForBigDecimalDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypesSerialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.CircularReferenceTest-testDirectedAcyclicGraphDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.regression.JsonAdapterNullSafeTest-testNullSafeBugSerialize.json)
 [INFO] /tmp/v2/gson
-[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v2/gson//target/classes:/tmp/v2/gson//target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CollectionTest:com.google.gson.functional.ParameterizedTypesTest, --tests, testLinkedListDeserialization:testParameterizedTypeWithReaderDeserialization]
-[INFO] Test has been run: com.google.gson.functional.CollectionTest#testLinkedListDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization
-[INFO] Reading json file from /tmp/v2/gson/target/jjoules-reports(/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeWithReaderDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.CollectionTest-testLinkedListDeserialization.json)
+[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v2/gson//target/classes:/tmp/v2/gson//target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CircularReferenceTest:com.google.gson.functional.ParameterizedTypesTest:com.google.gson.regression.JsonAdapterNullSafeTest:com.google.gson.functional.DefaultTypeAdaptersTest, --tests, testDirectedAcyclicGraphDeserialization:testParameterizedTypesSerialization:testNullSafeBugSerialize:testBadValueForBigDecimalDeserialization]
+[INFO] Test has been run: com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize,com.google.gson.functional.DefaultTypeAdaptersTest#testBadValueForBigDecimalDeserialization,com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization
+[INFO] Reading json file from /tmp/v2/gson/target/jjoules-reports(/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.DefaultTypeAdaptersTest-testBadValueForBigDecimalDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypesSerialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.CircularReferenceTest-testDirectedAcyclicGraphDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.regression.JsonAdapterNullSafeTest-testNullSafeBugSerialize.json)
 [INFO] /tmp/v1/gson
-[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v1/gson/target/classes:/tmp/v1/gson/target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CollectionTest:com.google.gson.functional.ParameterizedTypesTest, --tests, testLinkedListDeserialization:testParameterizedTypeWithReaderDeserialization]
-[INFO] Test has been run: com.google.gson.functional.CollectionTest#testLinkedListDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization
-[INFO] Reading json file from /tmp/v1/gson/target/jjoules-reports(/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeWithReaderDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.CollectionTest-testLinkedListDeserialization.json)
+[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v1/gson/target/classes:/tmp/v1/gson/target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CircularReferenceTest:com.google.gson.functional.ParameterizedTypesTest:com.google.gson.regression.JsonAdapterNullSafeTest:com.google.gson.functional.DefaultTypeAdaptersTest, --tests, testDirectedAcyclicGraphDeserialization:testParameterizedTypesSerialization:testNullSafeBugSerialize:testBadValueForBigDecimalDeserialization]
+[INFO] Test has been run: com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize,com.google.gson.functional.DefaultTypeAdaptersTest#testBadValueForBigDecimalDeserialization,com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization
+[INFO] Reading json file from /tmp/v1/gson/target/jjoules-reports(/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.DefaultTypeAdaptersTest-testBadValueForBigDecimalDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypesSerialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.CircularReferenceTest-testDirectedAcyclicGraphDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.regression.JsonAdapterNullSafeTest-testNullSafeBugSerialize.json)
 [INFO] /tmp/v2/gson
-[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v2/gson//target/classes:/tmp/v2/gson//target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CollectionTest:com.google.gson.functional.ParameterizedTypesTest, --tests, testLinkedListDeserialization:testParameterizedTypeWithReaderDeserialization]
-[INFO] Test has been run: com.google.gson.functional.CollectionTest#testLinkedListDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization
-[INFO] Reading json file from /tmp/v2/gson/target/jjoules-reports(/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeWithReaderDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.CollectionTest-testLinkedListDeserialization.json)
+[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v2/gson//target/classes:/tmp/v2/gson//target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CircularReferenceTest:com.google.gson.functional.ParameterizedTypesTest:com.google.gson.regression.JsonAdapterNullSafeTest:com.google.gson.functional.DefaultTypeAdaptersTest, --tests, testDirectedAcyclicGraphDeserialization:testParameterizedTypesSerialization:testNullSafeBugSerialize:testBadValueForBigDecimalDeserialization]
+[INFO] Test has been run: com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize,com.google.gson.functional.DefaultTypeAdaptersTest#testBadValueForBigDecimalDeserialization,com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization
+[INFO] Reading json file from /tmp/v2/gson/target/jjoules-reports(/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.DefaultTypeAdaptersTest-testBadValueForBigDecimalDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypesSerialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.CircularReferenceTest-testDirectedAcyclicGraphDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.regression.JsonAdapterNullSafeTest-testNullSafeBugSerialize.json)
 [INFO] /tmp/v1/gson
-[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v1/gson/target/classes:/tmp/v1/gson/target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CollectionTest:com.google.gson.functional.ParameterizedTypesTest, --tests, testLinkedListDeserialization:testParameterizedTypeWithReaderDeserialization]
-[INFO] Test has been run: com.google.gson.functional.CollectionTest#testLinkedListDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization
-[INFO] Reading json file from /tmp/v1/gson/target/jjoules-reports(/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeWithReaderDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.CollectionTest-testLinkedListDeserialization.json)
+[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v1/gson/target/classes:/tmp/v1/gson/target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CircularReferenceTest:com.google.gson.functional.ParameterizedTypesTest:com.google.gson.regression.JsonAdapterNullSafeTest:com.google.gson.functional.DefaultTypeAdaptersTest, --tests, testDirectedAcyclicGraphDeserialization:testParameterizedTypesSerialization:testNullSafeBugSerialize:testBadValueForBigDecimalDeserialization]
+[INFO] Test has been run: com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize,com.google.gson.functional.DefaultTypeAdaptersTest#testBadValueForBigDecimalDeserialization,com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization
+[INFO] Reading json file from /tmp/v1/gson/target/jjoules-reports(/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.DefaultTypeAdaptersTest-testBadValueForBigDecimalDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypesSerialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.CircularReferenceTest-testDirectedAcyclicGraphDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.regression.JsonAdapterNullSafeTest-testNullSafeBugSerialize.json)
 [INFO] /tmp/v2/gson
-[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v2/gson//target/classes:/tmp/v2/gson//target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CollectionTest:com.google.gson.functional.ParameterizedTypesTest, --tests, testLinkedListDeserialization:testParameterizedTypeWithReaderDeserialization]
-[INFO] Test has been run: com.google.gson.functional.CollectionTest#testLinkedListDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization
-[INFO] Reading json file from /tmp/v2/gson/target/jjoules-reports(/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeWithReaderDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.CollectionTest-testLinkedListDeserialization.json)
+[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v2/gson//target/classes:/tmp/v2/gson//target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CircularReferenceTest:com.google.gson.functional.ParameterizedTypesTest:com.google.gson.regression.JsonAdapterNullSafeTest:com.google.gson.functional.DefaultTypeAdaptersTest, --tests, testDirectedAcyclicGraphDeserialization:testParameterizedTypesSerialization:testNullSafeBugSerialize:testBadValueForBigDecimalDeserialization]
+[INFO] Test has been run: com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize,com.google.gson.functional.DefaultTypeAdaptersTest#testBadValueForBigDecimalDeserialization,com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization
+[INFO] Reading json file from /tmp/v2/gson/target/jjoules-reports(/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.DefaultTypeAdaptersTest-testBadValueForBigDecimalDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypesSerialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.CircularReferenceTest-testDirectedAcyclicGraphDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.regression.JsonAdapterNullSafeTest-testNullSafeBugSerialize.json)
 [INFO] /tmp/v1/gson
-[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v1/gson/target/classes:/tmp/v1/gson/target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CollectionTest:com.google.gson.functional.ParameterizedTypesTest, --tests, testLinkedListDeserialization:testParameterizedTypeWithReaderDeserialization]
-[INFO] Test has been run: com.google.gson.functional.CollectionTest#testLinkedListDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization
-[INFO] Reading json file from /tmp/v1/gson/target/jjoules-reports(/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeWithReaderDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.CollectionTest-testLinkedListDeserialization.json)
+[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v1/gson/target/classes:/tmp/v1/gson/target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CircularReferenceTest:com.google.gson.functional.ParameterizedTypesTest:com.google.gson.regression.JsonAdapterNullSafeTest:com.google.gson.functional.DefaultTypeAdaptersTest, --tests, testDirectedAcyclicGraphDeserialization:testParameterizedTypesSerialization:testNullSafeBugSerialize:testBadValueForBigDecimalDeserialization]
+[INFO] Test has been run: com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize,com.google.gson.functional.DefaultTypeAdaptersTest#testBadValueForBigDecimalDeserialization,com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization
+[INFO] Reading json file from /tmp/v1/gson/target/jjoules-reports(/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.DefaultTypeAdaptersTest-testBadValueForBigDecimalDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypesSerialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.CircularReferenceTest-testDirectedAcyclicGraphDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.regression.JsonAdapterNullSafeTest-testNullSafeBugSerialize.json)
 [INFO] /tmp/v2/gson
-[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v2/gson//target/classes:/tmp/v2/gson//target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CollectionTest:com.google.gson.functional.ParameterizedTypesTest, --tests, testLinkedListDeserialization:testParameterizedTypeWithReaderDeserialization]
-[INFO] Test has been run: com.google.gson.functional.CollectionTest#testLinkedListDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization
-[INFO] Reading json file from /tmp/v2/gson/target/jjoules-reports(/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeWithReaderDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.CollectionTest-testLinkedListDeserialization.json)
+[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v2/gson//target/classes:/tmp/v2/gson//target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CircularReferenceTest:com.google.gson.functional.ParameterizedTypesTest:com.google.gson.regression.JsonAdapterNullSafeTest:com.google.gson.functional.DefaultTypeAdaptersTest, --tests, testDirectedAcyclicGraphDeserialization:testParameterizedTypesSerialization:testNullSafeBugSerialize:testBadValueForBigDecimalDeserialization]
+[INFO] Test has been run: com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize,com.google.gson.functional.DefaultTypeAdaptersTest#testBadValueForBigDecimalDeserialization,com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization
+[INFO] Reading json file from /tmp/v2/gson/target/jjoules-reports(/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.DefaultTypeAdaptersTest-testBadValueForBigDecimalDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypesSerialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.CircularReferenceTest-testDirectedAcyclicGraphDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.regression.JsonAdapterNullSafeTest-testNullSafeBugSerialize.json)
 [INFO] /tmp/v1/gson
-[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v1/gson/target/classes:/tmp/v1/gson/target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CollectionTest:com.google.gson.functional.ParameterizedTypesTest, --tests, testLinkedListDeserialization:testParameterizedTypeWithReaderDeserialization]
-[INFO] Test has been run: com.google.gson.functional.CollectionTest#testLinkedListDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization
-[INFO] Reading json file from /tmp/v1/gson/target/jjoules-reports(/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeWithReaderDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.CollectionTest-testLinkedListDeserialization.json)
+[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v1/gson/target/classes:/tmp/v1/gson/target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CircularReferenceTest:com.google.gson.functional.ParameterizedTypesTest:com.google.gson.regression.JsonAdapterNullSafeTest:com.google.gson.functional.DefaultTypeAdaptersTest, --tests, testDirectedAcyclicGraphDeserialization:testParameterizedTypesSerialization:testNullSafeBugSerialize:testBadValueForBigDecimalDeserialization]
+[INFO] Test has been run: com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize,com.google.gson.functional.DefaultTypeAdaptersTest#testBadValueForBigDecimalDeserialization,com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization
+[INFO] Reading json file from /tmp/v1/gson/target/jjoules-reports(/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.DefaultTypeAdaptersTest-testBadValueForBigDecimalDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypesSerialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.functional.CircularReferenceTest-testDirectedAcyclicGraphDeserialization.json,/tmp/v1/gson/target/jjoules-reports/com.google.gson.regression.JsonAdapterNullSafeTest-testNullSafeBugSerialize.json)
 [INFO] /tmp/v2/gson
-[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v2/gson//target/classes:/tmp/v2/gson//target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CollectionTest:com.google.gson.functional.ParameterizedTypesTest, --tests, testLinkedListDeserialization:testParameterizedTypeWithReaderDeserialization]
-[INFO] Test has been run: com.google.gson.functional.CollectionTest#testLinkedListDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization
-[INFO] Reading json file from /tmp/v2/gson/target/jjoules-reports(/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypeWithReaderDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.CollectionTest-testLinkedListDeserialization.json)
+[INFO] Run: [java, -classpath, /home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/junit-jjoules/1.0-SNAPSHOT/junit-jjoules-1.0-SNAPSHOT.jar:/home/benjamin/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/benjamin/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/benjamin/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/benjamin/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/benjamin/.m2/repository/org/powerapi/jjoules/j-joules/1.0-SNAPSHOT/j-joules-1.0-SNAPSHOT.jar:/tmp/v2/gson//target/classes:/tmp/v2/gson//target/test-classes:/home/benjamin/.m2/repository/com/github/spoonlabs/flacoco/1.0.0/flacoco-1.0.0-jar-with-dependencies.jar, eu.stamp_project.testrunner.runner.JUnit4Runner, --class, com.google.gson.functional.CircularReferenceTest:com.google.gson.functional.ParameterizedTypesTest:com.google.gson.regression.JsonAdapterNullSafeTest:com.google.gson.functional.DefaultTypeAdaptersTest, --tests, testDirectedAcyclicGraphDeserialization:testParameterizedTypesSerialization:testNullSafeBugSerialize:testBadValueForBigDecimalDeserialization]
+[INFO] Test has been run: com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize,com.google.gson.functional.DefaultTypeAdaptersTest#testBadValueForBigDecimalDeserialization,com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization,com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization
+[INFO] Reading json file from /tmp/v2/gson/target/jjoules-reports(/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.DefaultTypeAdaptersTest-testBadValueForBigDecimalDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.ParameterizedTypesTest-testParameterizedTypesSerialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.functional.CircularReferenceTest-testDirectedAcyclicGraphDeserialization.json,/tmp/v2/gson/target/jjoules-reports/com.google.gson.regression.JsonAdapterNullSafeTest-testNullSafeBugSerialize.json)
 [INFO] mvn -f /tmp/v1/gson clean test -DskipTests dependency:build-classpath --quiet -Dcobertura.skip=true -Dlicense.skip=true -Dfindbugs.skip=true -Danimal.sniffer.skip=true -Djacoco.skip=true -Dcheckstyle.skip=true -Dproguard.skip=true -Dmdep.outputFile=classpath -DskipITs=true -Drat.skip=true -Denforcer.skip=true -Dgpg.skip=true
 [WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
 WARNING: An illegal reflective access operation has occurred
@@ -1563,8 +1561,8 @@ WARNING: Please consider reporting this to the maintainers of com.google.inject.
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
 [info] Run Mark - Configuration{pathToFirstVersion='/tmp/v1/gson', pathToSecondVersion='/tmp/v2/gson/', pathToTestListAsCSV='/tmp/v1/gson/testsThatExecuteTheChange.csv', junit4=true, iterations=5, output='/tmp/v1/gson/diff-jjoules', pathToJSONDelta='deltas.json', pathToJSONDataV1='data_v1.json', pathToJSONDataV2='data_v2.json', diff='diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
---- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-22 15:04:57.177759063 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-22 15:04:57.181759107 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-23 10:21:34.965329756 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-23 10:21:35.021330042 +0200
 @@ -25,7 +25,12 @@
  import java.lang.reflect.Type;
  import java.lang.reflect.TypeVariable;
@@ -1699,8 +1697,8 @@ WARNING: All illegal access operations will be denied in a future release
    static Type resolveTypeVariable(Type context, Class<?> contextRawType, TypeVariable<?> unknown) {
 Only in /tmp/v2/gson/src/test/java/com/google/gson/functional: ReusedTypeVariablesFullyResolveTest.java
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-22 15:04:57.177759063 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-22 14:31:11.551503512 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-23 10:21:34.965329756 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-23 10:21:35.021330042 +0200
 @@ -20,9 +20,6 @@
  
  import com.google.gson.common.MoreAsserts;
@@ -1780,7 +1778,213 @@ diff -ru /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java /tmp/v2/g
 -    }
 -  }
  }
-', pathToJSONDeltaOmega='deltaOmega.json', pathToRepositoryV1='/tmp/v1', pathToRepositoryV2='/tmp/v2', pathToJSONConsideredTestMethodNames='consideredTestMethods.json', pathToExecLinesAdditions='exec_additions.json', pathToExecLinesDeletions='exec_deletions.json', pathToJSONSuspiciousV1='suspicious_v1.json', pathToJSONSuspiciousV2='suspicious_v2.json', pathToReport='.github/workflows/template.md', classpathV1=[/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar, /home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar], classpathV2=[/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar, /home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar], classpathV1AsString='/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar', classpathV2AsString='/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar', testsList={com.google.gson.functional.CollectionTest=[testLinkedListDeserialization], com.google.gson.functional.ParameterizedTypesTest=[testParameterizedTypeWithReaderDeserialization]}, dataV1={com.google.gson.functional.CollectionTest#testLinkedListDeserialization=[Data{energy=139587.0, instructions=1.183734E7, durations=1.0996508E7, cycles=1.7788523E7, caches=1893407.0, cacheMisses=223104.0, branches=4008597.0, branchMisses=59865.0}, Data{energy=137878.0, instructions=1.1710833E7, durations=1.1005506E7, cycles=1.9761877E7, caches=1992019.0, cacheMisses=226081.0, branches=4012400.0, branchMisses=47977.0}, Data{energy=164428.0, instructions=1.4944742E7, durations=1.2853807E7, cycles=1.8926056E7, caches=2109150.0, cacheMisses=303170.0, branches=4011595.0, branchMisses=82669.0}, Data{energy=140014.0, instructions=1.1660556E7, durations=1.1265837E7, cycles=2.0684568E7, caches=1908152.0, cacheMisses=233773.0, branches=4016618.0, branchMisses=38866.0}, Data{energy=139526.0, instructions=1.1540055E7, durations=1.1089071E7, cycles=1.497531E7, caches=1922075.0, cacheMisses=236211.0, branches=4016306.0, branchMisses=94287.0}], com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization=[Data{energy=99609.0, instructions=4534972.0, durations=6740767.0, cycles=1.2238761E7, caches=1428054.0, cacheMisses=153384.0, branches=2561346.0, branchMisses=39863.0}, Data{energy=103211.0, instructions=4962012.0, durations=7154585.0, cycles=1.3695053E7, caches=1455638.0, cacheMisses=160779.0, branches=2567120.0, branchMisses=31712.0}, Data{energy=121399.0, instructions=8251715.0, durations=8657124.0, cycles=1.7648892E7, caches=1638389.0, cacheMisses=157454.0, branches=2565576.0, branchMisses=29623.0}, Data{energy=103271.0, instructions=5270797.0, durations=7383400.0, cycles=1.2969775E7, caches=1427908.0, cacheMisses=159240.0, branches=2555498.0, branchMisses=34419.0}, Data{energy=118896.0, instructions=5188456.0, durations=7657218.0, cycles=9448157.0, caches=1467833.0, cacheMisses=176873.0, branches=2571577.0, branchMisses=67225.0}]}, dataV2={com.google.gson.functional.CollectionTest#testLinkedListDeserialization=[Data{energy=127014.0, instructions=1.0940866E7, durations=1.0594391E7, cycles=1.347554E7, caches=1758129.0, cacheMisses=212449.0, branches=3969059.0, branchMisses=119108.0}, Data{energy=139099.0, instructions=1.1590505E7, durations=1.1103568E7, cycles=1.397406E7, caches=1669217.0, cacheMisses=244154.0, branches=4009688.0, branchMisses=130663.0}, Data{energy=141357.0, instructions=1.2281648E7, durations=1.1430085E7, cycles=1.9752175E7, caches=1903215.0, cacheMisses=259256.0, branches=3991583.0, branchMisses=49830.0}, Data{energy=138122.0, instructions=1.2330274E7, durations=1.1084955E7, cycles=1.8224904E7, caches=1887072.0, cacheMisses=235146.0, branches=3975393.0, branchMisses=58568.0}, Data{energy=135559.0, instructions=1.1222448E7, durations=1.0891607E7, cycles=1.3425144E7, caches=1588355.0, cacheMisses=227189.0, branches=3993223.0, branchMisses=140094.0}], com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization=[Data{energy=119324.0, instructions=7688754.0, durations=7117080.0, cycles=1.5919549E7, caches=1419269.0, cacheMisses=161870.0, branches=2553323.0, branchMisses=0.0}, Data{energy=100708.0, instructions=7485421.0, durations=7022498.0, cycles=1.5205796E7, caches=1431257.0, cacheMisses=155350.0, branches=2554654.0, branchMisses=10064.0}, Data{energy=118103.0, instructions=6273581.0, durations=8289522.0, cycles=1.1745948E7, caches=1456734.0, cacheMisses=197828.0, branches=2572805.0, branchMisses=55043.0}, Data{energy=130859.0, instructions=6591839.0, durations=8919826.0, cycles=1.3741163E7, caches=1459142.0, cacheMisses=160795.0, branches=2564584.0, branchMisses=71633.0}, Data{energy=106201.0, instructions=6821947.0, durations=6861239.0, cycles=1.5166538E7, caches=1419426.0, cacheMisses=142484.0, branches=2555683.0, branchMisses=7833.0}]}, deltas={com.google.gson.functional.CollectionTest#testLinkedListDeserialization=Data{energy=-1465.0, instructions=-120328.0, durations=-4116.0, cycles=-4951996.0, caches=-163946.0, cacheMisses=1373.0, branches=-20817.0, branchMisses=59243.0}, com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization=Data{energy=14832.0, instructions=1633491.0, durations=-266320.0, cycles=2196763.0, caches=-24381.0, cacheMisses=1555.0, branches=-9893.0, branchMisses=-24355.0}}, consideredTestsNames={}, execLinesAdditions=null, execLinesDeletions=null, deltaOmega=null, scorePerLineV1=null, scorePerLineV2=null, ownConsumptionReports={selection={package-0/uncore|uJ=25573, instructions=61872, package-0/dram|uJ=82090916, uncore|uJ=25573, cycles=4011445, dram|mW=1680, cache-misses=119515, package|uJ=768469407, branch-misses=0, package-0/core|mW=13599, device|uJ=850560323, core|uJ=664406319, psys|mW=42611, psys|uJ=2081716718, package-0|uJ=768469407, duration|ns=48853523982, branches=534530, core|mW=13599, device|mW=17410, package-0/dram|mW=1680, dram|uJ=82090916, package-0/core|uJ=664406319, cache-reference=345566, package-0/uncore|mW=0, package-0|mW=15730, package|mW=15730, uncore|mW=0}, instrumentation={package-0/uncore|uJ=0, instructions=15047086882, package-0/dram|uJ=13335598, uncore|uJ=0, cycles=13849712983, dram|mW=1715, cache-misses=182048048, package|uJ=122596488, branch-misses=59657530, package-0/core|mW=13688, device|uJ=135932086, core|uJ=106385165, psys|mW=42666, psys|uJ=331596928, package-0|uJ=122596488, duration|ns=7771891796, branches=2700775709, core|mW=13688, device|mW=17490, package-0/dram|mW=1715, dram|uJ=13335598, package-0/core|uJ=106385165, cache-reference=939623813, package-0/uncore|mW=0, package-0|mW=15774, package|mW=15774, uncore|mW=0}, delta={package-0/uncore|uJ=2869, instructions=79175730, package-0/dram|uJ=2629021, uncore|uJ=2869, cycles=107173999, dram|mW=920, cache-misses=1611915, package|uJ=39348471, branch-misses=791121, package-0/core|mW=11180, device|uJ=41977492, core|uJ=31943339, psys|mW=39168, psys|uJ=111901812, package-0|uJ=39348471, duration|ns=2856944903, branches=15914838, core|mW=11180, device|mW=14693, package-0/dram|mW=920, dram|uJ=2629021, package-0/core|uJ=31943339, cache-reference=8129023, package-0/uncore|mW=1, package-0|mW=13772, package|mW=13772, uncore|mW=1}}, reportEnum=NONE}
+', pathToJSONDeltaOmega='deltaOmega.json', pathToRepositoryV1='/tmp/v1', pathToRepositoryV2='/tmp/v2', pathToJSONConsideredTestMethodNames='consideredTestMethods.json', pathToExecLinesAdditions='exec_additions.json', pathToExecLinesDeletions='exec_deletions.json', pathToJSONSuspiciousV1='suspicious_v1.json', pathToJSONSuspiciousV2='suspicious_v2.json', pathToReport='.github/workflows/template.md', classpathV1=[/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar, /home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar], classpathV2=[/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar, /home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar], classpathV1AsString='/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar', classpathV2AsString='/home/benjamin/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/benjamin/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar', testsList={com.google.gson.functional.CircularReferenceTest=[testDirectedAcyclicGraphDeserialization], com.google.gson.functional.ParameterizedTypesTest=[testParameterizedTypesSerialization], com.google.gson.regression.JsonAdapterNullSafeTest=[testNullSafeBugSerialize], com.google.gson.functional.DefaultTypeAdaptersTest=[testBadValueForBigDecimalDeserialization]}, dataV1={com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize=[Data{energy=44128.0, instructions=2356973.0, durations=4182981.0, cycles=8763293.0, caches=743978.0, cacheMisses=119050.0, branches=1133115.0, branchMisses=0.0}, Data{energy=63354.0, instructions=3417697.0, durations=4668881.0, cycles=8930988.0, caches=737667.0, cacheMisses=147226.0, branches=1129921.0, branchMisses=0.0}, Data{energy=45410.0, instructions=4748856.0, durations=4809185.0, cycles=1.0180268E7, caches=893374.0, cacheMisses=168180.0, branches=1204390.0, branchMisses=0.0}, Data{energy=91980.0, instructions=2536520.0, durations=7133092.0, cycles=1.0749119E7, caches=970529.0, cacheMisses=188826.0, branches=1203680.0, branchMisses=26125.0}, Data{energy=50904.0, instructions=6137716.0, durations=4322452.0, cycles=8952543.0, caches=741008.0, cacheMisses=131999.0, branches=1206034.0, branchMisses=0.0}], com.google.gson.functional.DefaultTypeAdaptersTest#testBadValueForBigDecimalDeserialization=[Data{energy=11475.0, instructions=4383123.0, durations=2632278.0, cycles=5760810.0, caches=504787.0, cacheMisses=69412.0, branches=831133.0, branchMisses=0.0}, Data{energy=24170.0, instructions=3413113.0, durations=3131089.0, cycles=6053389.0, caches=524514.0, cacheMisses=70464.0, branches=857124.0, branchMisses=0.0}, Data{energy=24292.0, instructions=3810545.0, durations=2899532.0, cycles=6013027.0, caches=570291.0, cacheMisses=77270.0, branches=844391.0, branchMisses=0.0}, Data{energy=50415.0, instructions=3365905.0, durations=5152657.0, cycles=8895820.0, caches=592131.0, cacheMisses=132177.0, branches=834774.0, branchMisses=0.0}, Data{energy=34118.0, instructions=515477.0, durations=3126275.0, cycles=6344503.0, caches=534860.0, cacheMisses=100806.0, branches=862459.0, branchMisses=0.0}], com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization=[Data{energy=189636.0, instructions=1.6548091E7, durations=1.5294125E7, cycles=2.0515784E7, caches=1548937.0, cacheMisses=371533.0, branches=4288414.0, branchMisses=153642.0}, Data{energy=221984.0, instructions=1.6547961E7, durations=1.6142353E7, cycles=2.0913033E7, caches=1581149.0, cacheMisses=444292.0, branches=4317870.0, branchMisses=187896.0}, Data{energy=207031.0, instructions=1.654726E7, durations=1.5384754E7, cycles=2.132432E7, caches=1893955.0, cacheMisses=389007.0, branches=4417051.0, branchMisses=142019.0}, Data{energy=205566.0, instructions=1.7086103E7, durations=1.484508E7, cycles=1.9111534E7, caches=1598182.0, cacheMisses=452499.0, branches=4438987.0, branchMisses=148601.0}, Data{energy=225586.0, instructions=1.5090161E7, durations=1.6061832E7, cycles=2.1554201E7, caches=1664485.0, cacheMisses=454539.0, branches=4419435.0, branchMisses=179436.0}], com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization=[Data{energy=116393.0, instructions=6380443.0, durations=8019156.0, cycles=1.3837536E7, caches=1397518.0, cacheMisses=215102.0, branches=2172421.0, branchMisses=15767.0}, Data{energy=112792.0, instructions=7021517.0, durations=8267847.0, cycles=1.5781838E7, caches=1449910.0, cacheMisses=227094.0, branches=2265546.0, branchMisses=5063.0}, Data{energy=148437.0, instructions=6427727.0, durations=9037151.0, cycles=1.2899467E7, caches=1632560.0, cacheMisses=269398.0, branches=2188482.0, branchMisses=54113.0}, Data{energy=125610.0, instructions=5891090.0, durations=9458045.0, cycles=1.2271381E7, caches=1590178.0, cacheMisses=274802.0, branches=2224049.0, branchMisses=54811.0}, Data{energy=131225.0, instructions=5485345.0, durations=8940655.0, cycles=1.3366391E7, caches=1430404.0, cacheMisses=258185.0, branches=2208500.0, branchMisses=36545.0}]}, dataV2={com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize=[Data{energy=49011.0, instructions=3094094.0, durations=4060958.0, cycles=8438150.0, caches=736077.0, cacheMisses=124333.0, branches=1118348.0, branchMisses=0.0}, Data{energy=46448.0, instructions=791211.0, durations=4694382.0, cycles=8557987.0, caches=749847.0, cacheMisses=151145.0, branches=1115757.0, branchMisses=2602.0}, Data{energy=78614.0, instructions=6208804.0, durations=6397614.0, cycles=1.2208413E7, caches=791091.0, cacheMisses=160910.0, branches=1128231.0, branchMisses=0.0}, Data{energy=78552.0, instructions=1664672.0, durations=6646201.0, cycles=8568122.0, caches=820706.0, cacheMisses=163339.0, branches=1120519.0, branchMisses=33552.0}, Data{energy=46997.0, instructions=3144280.0, durations=4274628.0, cycles=9053510.0, caches=745131.0, cacheMisses=132613.0, branches=1215381.0, branchMisses=0.0}], com.google.gson.functional.DefaultTypeAdaptersTest#testBadValueForBigDecimalDeserialization=[Data{energy=31799.0, instructions=3769749.0, durations=2651898.0, cycles=5975523.0, caches=540537.0, cacheMisses=75905.0, branches=857214.0, branchMisses=0.0}, Data{energy=32227.0, instructions=4541236.0, durations=3139680.0, cycles=6151223.0, caches=553611.0, cacheMisses=92069.0, branches=860953.0, branchMisses=0.0}, Data{energy=29297.0, instructions=4036812.0, durations=3995370.0, cycles=8852342.0, caches=561278.0, cacheMisses=101734.0, branches=864395.0, branchMisses=0.0}, Data{energy=47058.0, instructions=4031845.0, durations=4592093.0, cycles=9092438.0, caches=593945.0, cacheMisses=103725.0, branches=902476.0, branchMisses=0.0}, Data{energy=28992.0, instructions=3746956.0, durations=2763126.0, cycles=5973978.0, caches=508394.0, cacheMisses=84934.0, branches=839668.0, branchMisses=0.0}], com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization=[Data{energy=191711.0, instructions=1.4290069E7, durations=1.440203E7, cycles=1.8539999E7, caches=1473027.0, cacheMisses=436409.0, branches=4310012.0, branchMisses=157443.0}, Data{energy=239013.0, instructions=1.7826136E7, durations=1.8284751E7, cycles=2.3710633E7, caches=1648664.0, cacheMisses=459969.0, branches=4301024.0, branchMisses=151949.0}, Data{energy=303649.0, instructions=1.7210741E7, durations=2.2251271E7, cycles=3.0930226E7, caches=1948678.0, cacheMisses=446459.0, branches=4089722.0, branchMisses=190995.0}, Data{energy=320678.0, instructions=1.9103155E7, durations=2.3617699E7, cycles=3.2769685E7, caches=2076304.0, cacheMisses=523182.0, branches=4266446.0, branchMisses=162841.0}, Data{energy=192931.0, instructions=1.4952108E7, durations=1.4365642E7, cycles=1.8269604E7, caches=1500043.0, cacheMisses=394082.0, branches=4411311.0, branchMisses=159799.0}], com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization=[Data{energy=99243.0, instructions=5869418.0, durations=7338064.0, cycles=1.4093804E7, caches=1449548.0, cacheMisses=199037.0, branches=2255108.0, branchMisses=17709.0}, Data{energy=112610.0, instructions=5574598.0, durations=7909400.0, cycles=1.3017024E7, caches=1412667.0, cacheMisses=223081.0, branches=2215941.0, branchMisses=30684.0}, Data{energy=175964.0, instructions=7427196.0, durations=1.1907003E7, cycles=1.4383828E7, caches=1214152.0, cacheMisses=314140.0, branches=2229040.0, branchMisses=82307.0}, Data{energy=176697.0, instructions=7472600.0, durations=1.1849412E7, cycles=1.4855076E7, caches=1425540.0, cacheMisses=289915.0, branches=2254385.0, branchMisses=67542.0}, Data{energy=102356.0, instructions=6389795.0, durations=7353581.0, cycles=1.422689E7, caches=1393807.0, cacheMisses=216288.0, branches=2193260.0, branchMisses=14907.0}]}, deltas={com.google.gson.regression.JsonAdapterNullSafeTest#testNullSafeBugSerialize=Data{energy=-1893.0, instructions=-323603.0, durations=25501.0, cycles=-384421.0, caches=5869.0, cacheMisses=3919.0, branches=-83161.0, branchMisses=0.0}, com.google.gson.functional.DefaultTypeAdaptersTest#testBadValueForBigDecimalDeserialization=Data{energy=7507.0, instructions=618732.0, durations=13405.0, cycles=97834.0, caches=18751.0, cacheMisses=14799.0, branches=16562.0, branchMisses=0.0}, com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization=Data{energy=31982.0, instructions=662780.0, durations=2899997.0, cycles=2797600.0, caches=50482.0, cacheMisses=2167.0, branches=-116027.0, branchMisses=6157.0}, com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization=Data{energy=-13000.0, instructions=9352.0, durations=-1031255.0, cycles=860499.0, caches=-37243.0, cacheMisses=-35104.0, branches=20540.0, branchMisses=-5861.0}}, consideredTestsNames={com.google.gson.functional.CircularReferenceTest=[testDirectedAcyclicGraphDeserialization]}, execLinesAdditions=null, execLinesDeletions=null, deltaOmega=null, scorePerLineV1=null, scorePerLineV2=null, ownConsumptionReports={selection={package-0/uncore|uJ=4669849, instructions=58222, package-0/dram|uJ=84813199, uncore|uJ=4669849, cycles=4394033, dram|mW=1680, cache-misses=113243, package|uJ=789355889, branch-misses=0, package-0/core|mW=13139, device|uJ=874169088, core|uJ=663045788, psys|mW=36694, psys|uJ=1851702902, package-0|uJ=789355889, duration|ns=50462412328, branches=546687, core|mW=13139, device|mW=17323, package-0/dram|mW=1680, dram|uJ=84813199, package-0/core|uJ=663045788, cache-reference=354728, package-0/uncore|mW=92, package-0|mW=15642, package|mW=15642, uncore|mW=92}, instrumentation={package-0/uncore|uJ=1325741, instructions=16699185492, package-0/dram|uJ=15372641, uncore|uJ=1325741, cycles=15182392508, dram|mW=1791, cache-misses=214893183, package|uJ=136261064, branch-misses=61995257, package-0/core|mW=13338, device|uJ=151633705, core|uJ=114441540, psys|mW=37209, psys|uJ=319257726, package-0|uJ=136261064, duration|ns=8579920821, branches=2909483262, core|mW=13338, device|mW=17673, package-0/dram|mW=1791, dram|uJ=15372641, package-0/core|uJ=114441540, cache-reference=1064751956, package-0/uncore|mW=154, package-0|mW=15881, package|mW=15881, uncore|mW=154}, delta={package-0/uncore|uJ=1034360, instructions=91749060, package-0/dram|uJ=5042651, uncore|uJ=1034360, cycles=138088544, dram|mW=1252, cache-misses=2361535, package|uJ=61402980, branch-misses=877824, package-0/core|mW=12308, device|uJ=66445631, core|uJ=49549922, psys|mW=36299, psys|uJ=146133658, package-0|uJ=61402980, duration|ns=4025813976, branches=18849534, core|mW=12308, device|mW=16504, package-0/dram|mW=1252, dram|uJ=5042651, package-0/core|uJ=49549922, cache-reference=8607979, package-0/uncore|mW=256, package-0|mW=15252, package|mW=15252, uncore|mW=256}}, reportEnum=NONE}
+com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for com.google.code.gson:gson:jar:2.8.8-SNAPSHOT
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 46, column 15
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mcom.google.code.gson:gson[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding Gson 2.8.8-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Deleting /tmp/v1/gson/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mclover-maven-plugin:4.4.1:setup[m [1m(default-cli)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Creating new database at '/tmp/v1/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.9 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 72 files (8 packages).
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Updating existing database at '/tmp/v1/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.9 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 102 files (11 packages).
+[[1;34mINFO[m] 1054 test methods detected.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.0:enforce[m [1m(enforce-maven)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Skipping Rule Enforcement.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtemplating-maven-plugin:1.0.0:filter-sources[m [1m(filtering-java-templates)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Coping files with filtering to temporary directory.
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copied 1 files to output directory: /tmp/v1/gson/target/generated-sources/java-templates
+[[1;34mINFO[m] Source directory: /tmp/v1/gson/target/generated-sources/java-templates added.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /tmp/v1/gson/src/main/resources
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 73 source files to /tmp/v1/gson/target/classes
+[[1;34mINFO[m] /tmp/v1/gson/target/clover/src-instrumented/com/google/gson/JsonPrimitive.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /tmp/v1/gson/target/clover/src-instrumented/com/google/gson/JsonPrimitive.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(base-compile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 73 source files to /tmp/v1/gson/target/classes
+[[1;34mINFO[m] /tmp/v1/gson/target/clover/src-instrumented/com/google/gson/JsonPrimitive.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /tmp/v1/gson/target/clover/src-instrumented/com/google/gson/JsonPrimitive.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbnd-maven-plugin:5.3.0:bnd-process[m [1m(default)[m @ [36mgson[0;1m ---[m
+[[1;33mWARNING[m] /tmp/v1/gson/bnd.bnd [0:0]: Export com.google.gson,  has 1,  private references [com.google.gson.internal]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /tmp/v1/gson/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 102 source files to /tmp/v1/gson/target/test-classes
+[[1;34mINFO[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/DefaultTypeAdaptersTest.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/DefaultTypeAdaptersTest.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/MapTest.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /tmp/v1/gson/target/clover/src-test-instrumented/com/google/gson/functional/MapTest.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /tmp/v1/gson/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.google.gson.functional.CircularReferenceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.14 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  13.342 s
+[[1;34mINFO[m] Finished at: 2021-09-23T10:24:40+02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+Reading Clover data /tmp/v1/gson/target/clover
+Writing HTML report to '/tmp/v1/gson/target/clover/report'
+ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
+ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java
+ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java
+ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v1/gson/src/main/java/com/google/gson/Gson.java
+Done. Processed 12 packages in 3557ms (296ms per package).
+com.google.gson.functional.CircularReferenceTest#testDirectedAcyclicGraphDeserialization
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] Some problems were encountered while building the effective model for com.google.code.gson:gson:jar:2.8.8-SNAPSHOT
+[[1;33mWARNING[m] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 46, column 15
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] It is highly recommended to fix these problems because they threaten the stability of your build.
+[[1;33mWARNING[m] 
+[[1;33mWARNING[m] For this reason, future Maven versions might no longer support building such malformed projects.
+[[1;33mWARNING[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mcom.google.code.gson:gson[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding Gson 2.8.8-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Deleting /tmp/v2/gson/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mclover-maven-plugin:4.4.1:setup[m [1m(default-cli)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Creating new database at '/tmp/v2/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.9 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 72 files (8 packages).
+[[1;34mINFO[m] OpenClover Version 4.4.1, built on October 11 2019 (build-1020)
+[[1;34mINFO[m] Updating existing database at '/tmp/v2/gson/target/clover/clover.db'.
+[[1;34mINFO[m] Processing files at 1.9 source level.
+[[1;34mINFO[m] Clover all over. Instrumented 103 files (11 packages).
+[[1;34mINFO[m] 1054 test methods detected.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:1.0:enforce[m [1m(enforce-maven)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Skipping Rule Enforcement.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mtemplating-maven-plugin:1.0.0:filter-sources[m [1m(filtering-java-templates)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Coping files with filtering to temporary directory.
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] Copied 1 files to output directory: /tmp/v2/gson/target/generated-sources/java-templates
+[[1;34mINFO[m] Source directory: /tmp/v2/gson/target/generated-sources/java-templates added.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /tmp/v2/gson/src/main/resources
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(default-compile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 73 source files to /tmp/v2/gson/target/classes
+[[1;34mINFO[m] /tmp/v2/gson/target/clover/src-instrumented/com/google/gson/JsonArray.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /tmp/v2/gson/target/clover/src-instrumented/com/google/gson/JsonArray.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:compile[m [1m(base-compile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 73 source files to /tmp/v2/gson/target/classes
+[[1;34mINFO[m] /tmp/v2/gson/target/clover/src-instrumented/com/google/gson/JsonArray.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /tmp/v2/gson/target/clover/src-instrumented/com/google/gson/JsonArray.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mbnd-maven-plugin:5.3.0:bnd-process[m [1m(default)[m @ [36mgson[0;1m ---[m
+[[1;33mWARNING[m] /tmp/v2/gson/bnd.bnd [0:0]: Export com.google.gson,  has 1,  private references [com.google.gson.internal]
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /tmp/v2/gson/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.1:testCompile[m [1m(default-testCompile)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 103 source files to /tmp/v2/gson/target/test-classes
+[[1;34mINFO[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/internal/bind/util/ISO8601UtilsTest.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/internal/bind/util/ISO8601UtilsTest.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/ParameterizedTypesTest.java: Some input files use unchecked or unsafe operations.
+[[1;34mINFO[m] /tmp/v2/gson/target/clover/src-test-instrumented/com/google/gson/functional/ParameterizedTypesTest.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mgson[0;1m ---[m
+[[1;34mINFO[m] Surefire report directory: /tmp/v2/gson/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.google.gson.functional.CircularReferenceTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.18 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  13.209 s
+[[1;34mINFO[m] Finished at: 2021-09-23T10:24:59+02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+Reading Clover data /tmp/v2/gson/target/clover
+Writing HTML report to '/tmp/v2/gson/target/clover/report'
+ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
+ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java
+ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java
+ERROR: Invalid Java source found or Clover failed to parse it: /tmp/v2/gson/src/main/java/com/google/gson/Gson.java
+Done. Processed 12 packages in 1431ms (119ms per package).
 [INFO] /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
 [INFO] /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
 {com.google.gson.internal.$Gson$Types=[343, 347, 343, 365, 360, 366, 353, 373, 391, 396, 417, 423, 348, 350, 361, 369, 377, 391, 403, 408, 411, 411]}
@@ -1788,7 +1992,7 @@ diff -ru /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java /tmp/v2/g
 [INFO] /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java
 [INFO] /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java
 [INFO] Build modified Tests /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java
-[info] DeltaOmega Data{energy=0.0, instructions=0.0, durations=0.0, cycles=0.0, caches=0.0, cacheMisses=0.0, branches=0.0, branchMisses=0.0}
+[info] DeltaOmega Data{energy=191027.62162162163, instructions=3958767.0270270268, durations=1.73216037027027E7, cycles=1.6709989189189188E7, caches=301527.6216216216, cacheMisses=12943.432432432432, branches=-693026.1351351351, branchMisses=36775.59459459459}
 [INFO] mvn -f /tmp/v1/gson clean test -DskipTests dependency:build-classpath --quiet -Dcobertura.skip=true -Dlicense.skip=true -Dfindbugs.skip=true -Danimal.sniffer.skip=true -Djacoco.skip=true -Dcheckstyle.skip=true -Dproguard.skip=true -Dmdep.outputFile=classpath -DskipITs=true -Drat.skip=true -Denforcer.skip=true -Dgpg.skip=true
 [WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
 WARNING: An illegal reflective access operation has occurred
@@ -1806,6 +2010,6 @@ WARNING: All illegal access operations will be denied in a future release
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  02:27 min
-[INFO] Finished at: 2021-09-22T15:07:44+02:00
+[INFO] Total time:  03:18 min
+[INFO] Finished at: 2021-09-23T10:25:18+02:00
 [INFO] ------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
---- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-22 15:04:57.177759063 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-22 15:04:57.181759107 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-23 10:21:34.965329756 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-23 10:21:35.021330042 +0200
 @@ -25,7 +25,12 @@
  import java.lang.reflect.Type;
  import java.lang.reflect.TypeVariable;
@@ -135,8 +135,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java /t
    static Type resolveTypeVariable(Type context, Class<?> contextRawType, TypeVariable<?> unknown) {
 Only in /tmp/v2/gson/src/test/java/com/google/gson/functional: ReusedTypeVariablesFullyResolveTest.java
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-22 15:04:57.177759063 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-22 14:31:11.551503512 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-23 10:21:34.965329756 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/JsonArrayTest.java	2021-09-23 10:21:35.021330042 +0200
 @@ -20,9 +20,6 @@
  
  import com.google.gson.common.MoreAsserts;

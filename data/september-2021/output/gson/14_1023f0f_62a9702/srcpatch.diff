@@ -1,6 +1,6 @@
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java
---- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java	2021-09-22 13:47:23.911956915 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java	2021-09-22 13:47:23.919956952 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java	2021-09-22 17:07:03.991970089 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java	2021-09-22 17:07:04.011970265 +0200
 @@ -249,6 +249,15 @@
      return result;
    }
@@ -18,8 +18,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader
      stack = new Object[] { SENTINEL_CLOSED };
      stackSize = 1;
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java
---- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-22 13:47:23.911956915 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-22 13:20:57.530041680 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-22 17:07:03.991970089 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-22 17:07:03.963969842 +0200
 @@ -677,6 +677,10 @@
  
    public static final TypeAdapter<JsonElement> JSON_ELEMENT = new TypeAdapter<JsonElement>() {
