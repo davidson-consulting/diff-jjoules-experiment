@@ -19,7 +19,11 @@ if __name__ == '__main__':
     if not args.no_clone:
         clone.remove_and_clone_both(commits[0])
 
-    for i in range(1, 3):#len(commits) - 1):
+    begin = args.begin if args.begin != -1 else 0
+    end = args.end if args.end != -1 else 0
+
+
+    for i in range(begin, end):#len(commits) - 1):
         
         commit_v1 = commits[i+1]
         commit_v2 = commits[i]
@@ -52,9 +56,11 @@ if __name__ == '__main__':
                 path_module_v1 + file,
                 output_path + file
             )
+            delete_file(path_module_v1 + file)
         
         for dir in DIRECTORIES_TO_COPY:
             copy_directory(
                 path_module_v1 + dir,
                 output_path + dir
             )
+            delete_directory(path_module_v1 + dir)
