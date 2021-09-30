@@ -33,6 +33,7 @@ OPT_SUSPECT = "-Dsuspect="
 OPT_REPO_V1 = '-Dpath-repo-v1='
 OPT_REPO_V2 = '-Dpath-repo-v2='
 OPT_NO_REPORT = '-Dreport=NONE'
+OPT_ITERATION = '-Diterations='
 
 def mvn_diff_jjoules_no_suspect(
     path_first_repository, path_first_version, 
@@ -50,6 +51,7 @@ def mvn_diff_jjoules_no_suspect(
             OPT_PATH_DIR_SECOND_VERSION + path_second_version,
             OPT_REPO_V1 + path_first_repository,
             OPT_REPO_V2 + path_second_repository,
-            OPT_NO_REPORT
+            OPT_NO_REPORT,
+            OPT_ITERATION + 100
         ])
     )

@@ -48,7 +48,7 @@ if __name__ == '__main__':
             path_module_v1,
             PATH_V2,
             path_module_v2,
-            path_module_v1 + 'logs'
+            path_module_v1 + 'logs',
         )
 
         for file in FILES_TO_COPY:
