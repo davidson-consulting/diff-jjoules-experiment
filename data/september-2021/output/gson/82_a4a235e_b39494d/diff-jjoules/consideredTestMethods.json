@@ -1,0 +1,24 @@
+{
+  "com.google.gson.functional.ObjectTest": [
+    "testJsonObjectSerialization",
+    "testStringFieldWithNumberValueDeserialization",
+    "testInnerClassDeserialization",
+    "testAnonymousLocalClassesCustomSerialization"
+  ],
+  "com.google.gson.functional.VersioningTest": [
+    "testVersionedUntilDeserialization"
+  ],
+  "com.google.gson.functional.CustomTypeAdaptersTest": [
+    "testRegisterHierarchyAdapterForDate"
+  ],
+  "com.google.gson.functional.TypeAdapterPrecedenceTest": [
+    "testSerializeNonstreamingTypeAdapterFollowedByStreamingTypeAdapter"
+  ],
+  "com.google.gson.functional.ExclusionStrategyFunctionalTest": [
+    "testExclusionStrategySerialization",
+    "testExcludeTopLevelClassDeserializationDoesNotImpactSerialization"
+  ],
+  "com.google.gson.functional.InstanceCreatorTest": [
+    "testInstanceCreatorReturnsBaseType"
+  ]
+}

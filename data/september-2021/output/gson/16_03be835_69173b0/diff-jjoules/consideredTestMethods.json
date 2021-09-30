@@ -1,28 +1,32 @@
 {
+  "com.google.gson.functional.CircularReferenceTest": [
+    "testSelfReferenceCustomHandlerSerialization"
+  ],
   "com.google.gson.functional.ParameterizedTypesTest": [
-    "testParameterizedTypeWithReaderDeserialization"
+    "testParameterizedTypeWithCustomSerializer"
+  ],
+  "com.google.gson.functional.CustomTypeAdaptersTest": [
+    "testRegisterHierarchyAdapterForDate",
+    "testCustomSerializers",
+    "testCustomAdapterInvokedForMapElementSerializationWithType"
   ],
   "com.google.gson.functional.NullObjectAndFieldTest": [
-    "testExplicitSerializationOfNullCollectionMembers",
-    "testExplicitSerializationOfNullArrayMembers"
+    "testCustomTypeAdapterPassesNullSerialization"
+  ],
+  "com.google.gson.functional.TypeAdapterPrecedenceTest": [
+    "testStreamingFollowedByNonstreamingHierarchical"
   ],
   "com.google.gson.functional.NamingPolicyTest": [
-    "testGsonWithNonDefaultFieldNamingPolicySerialization"
+    "testGsonDuplicateNameUsingSerializedNameFieldNamingPolicySerialization",
+    "testGsonWithLowerCaseDashPolicySerialization"
   ],
-  "com.google.gson.functional.MapTest": [
-    "testMapDeserializationWithNullKey"
+  "com.google.gson.functional.CustomSerializerTest": [
+    "testBaseClassSerializerInvokedForBaseClassFields"
   ],
-  "com.google.gson.functional.ReadersWritersTest": [
-    "testReadWriteTwoStrings"
+  "com.google.gson.functional.GsonVersionDiagnosticsTest": [
+    "testAssertionErrorInDeserializationPrintsVersion"
   ],
-  "com.google.gson.functional.FieldNamingTest": [
-    "testIdentity"
-  ],
-  "com.google.gson.functional.ExclusionStrategyFunctionalTest": [
-    "testExcludeTopLevelClassDeserializationDoesNotImpactSerialization",
-    "testExcludeTopLevelClassDeserialization"
-  ],
-  "com.google.gson.functional.InstanceCreatorTest": [
-    "testInstanceCreatorReturnsBaseType"
+  "com.google.gson.functional.DefaultTypeAdaptersTest": [
+    "testClassSerialization"
   ]
 }

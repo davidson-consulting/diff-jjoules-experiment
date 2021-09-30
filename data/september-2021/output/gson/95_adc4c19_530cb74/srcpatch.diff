@@ -1,6 +1,6 @@
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/Expose.java /tmp/v2/gson/src/main/java/com/google/gson/annotations/Expose.java
---- /tmp/v1/gson/src/main/java/com/google/gson/annotations/Expose.java	2021-09-22 16:23:04.084731755 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/Expose.java	2021-09-22 14:19:41.244352216 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/annotations/Expose.java	2021-09-24 19:06:50.411522077 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/Expose.java	2021-09-24 13:30:28.997718922 +0200
 @@ -34,9 +34,9 @@
   * <p>Here is an example of how this annotation is meant to be used:
   * <p><pre>
@@ -15,8 +15,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/Expose.java /tmp
   * }
   * </pre></p>
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/JsonAdapter.java /tmp/v2/gson/src/main/java/com/google/gson/annotations/JsonAdapter.java
---- /tmp/v1/gson/src/main/java/com/google/gson/annotations/JsonAdapter.java	2021-09-22 16:23:04.084731755 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/JsonAdapter.java	2021-09-22 14:19:41.244352216 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/annotations/JsonAdapter.java	2021-09-24 19:06:50.411522077 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/JsonAdapter.java	2021-09-24 13:30:28.997718922 +0200
 @@ -31,7 +31,7 @@
   *
   * <p>Here is an example of how this annotation is used:</p>
@@ -61,8 +61,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/JsonAdapter.java
   *   Gadget(User user) {
   *     this.user = user;
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/SerializedName.java /tmp/v2/gson/src/main/java/com/google/gson/annotations/SerializedName.java
---- /tmp/v1/gson/src/main/java/com/google/gson/annotations/SerializedName.java	2021-09-22 16:23:04.084731755 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/SerializedName.java	2021-09-22 14:19:41.244352216 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/annotations/SerializedName.java	2021-09-24 19:06:50.411522077 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/SerializedName.java	2021-09-24 13:30:28.997718922 +0200
 @@ -35,8 +35,8 @@
   * <p>Here is an example of how this annotation is meant to be used:</p>
   * <pre>
@@ -75,8 +75,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/SerializedName.j
   *
   *   public MyClass(String a, String b, String c) {
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/Since.java /tmp/v2/gson/src/main/java/com/google/gson/annotations/Since.java
---- /tmp/v1/gson/src/main/java/com/google/gson/annotations/Since.java	2021-09-22 16:23:04.084731755 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/Since.java	2021-09-22 14:19:41.244352216 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/annotations/Since.java	2021-09-24 19:06:50.411522077 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/Since.java	2021-09-24 13:30:28.997718922 +0200
 @@ -36,9 +36,9 @@
   * public class User {
   *   private String firstName;
@@ -91,8 +91,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/Since.java /tmp/
   * </pre>
   *
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/Until.java /tmp/v2/gson/src/main/java/com/google/gson/annotations/Until.java
---- /tmp/v1/gson/src/main/java/com/google/gson/annotations/Until.java	2021-09-22 16:23:04.084731755 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/Until.java	2021-09-22 14:19:41.244352216 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/annotations/Until.java	2021-09-24 19:06:50.411522077 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/Until.java	2021-09-24 13:30:28.997718922 +0200
 @@ -38,8 +38,8 @@
   * public class User {
   *   private String firstName;
@@ -105,8 +105,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/Until.java /tmp/
   * </pre>
   *
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/ExclusionStrategy.java /tmp/v2/gson/src/main/java/com/google/gson/ExclusionStrategy.java
---- /tmp/v1/gson/src/main/java/com/google/gson/ExclusionStrategy.java	2021-09-22 16:23:04.084731755 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/ExclusionStrategy.java	2021-09-22 14:19:41.240352256 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/ExclusionStrategy.java	2021-09-24 19:06:50.411522077 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/ExclusionStrategy.java	2021-09-24 13:30:28.993718941 +0200
 @@ -46,11 +46,11 @@
   *
   * <p><strong>Excludes fields and objects based on a particular annotation:</strong>
@@ -122,8 +122,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/ExclusionStrategy.java /tmp/
   *   public boolean shouldSkipClass(Class&lt;?&gt; clazz) {
   *     return clazz.getAnnotation(FooAnnotation.class) != null;
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/FieldNamingPolicy.java /tmp/v2/gson/src/main/java/com/google/gson/FieldNamingPolicy.java
---- /tmp/v1/gson/src/main/java/com/google/gson/FieldNamingPolicy.java	2021-09-22 16:23:04.084731755 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/FieldNamingPolicy.java	2021-09-22 14:19:41.240352256 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/FieldNamingPolicy.java	2021-09-24 19:06:50.411522077 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/FieldNamingPolicy.java	2021-09-24 13:30:28.993718941 +0200
 @@ -44,10 +44,10 @@
     * Using this naming policy with Gson will ensure that the first "letter" of the Java
     * field name is capitalized when serialized to its JSON form.
@@ -207,8 +207,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/FieldNamingPolicy.java /tmp/
     * Using dots in JavaScript is not recommended since dot is also used for a member sign in
     * expressions. This requires that a field named with dots is always accessed as a quoted
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/stream/JsonReader.java /tmp/v2/gson/src/main/java/com/google/gson/stream/JsonReader.java
---- /tmp/v1/gson/src/main/java/com/google/gson/stream/JsonReader.java	2021-09-22 16:23:04.084731755 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/stream/JsonReader.java	2021-09-22 14:19:41.248352177 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/stream/JsonReader.java	2021-09-24 19:06:50.411522077 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/stream/JsonReader.java	2021-09-24 13:30:29.001718904 +0200
 @@ -170,7 +170,7 @@
   * precision loss, extremely large values should be written and read as strings
   * in JSON.

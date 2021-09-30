@@ -1,6 +1,6 @@
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java /tmp/v2/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java
---- /tmp/v1/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java	2021-09-22 15:52:19.260465588 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java	2021-09-22 15:02:05.171884062 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java	2021-09-24 17:56:58.194211117 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java	2021-09-24 16:11:31.695398511 +0200
 @@ -79,7 +79,7 @@
    private static Field getOverrideField() {
      try {
@@ -11,8 +11,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/reflect/UnsafeRefle
      }
    }
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/JsonStreamParser.java /tmp/v2/gson/src/main/java/com/google/gson/JsonStreamParser.java
---- /tmp/v1/gson/src/main/java/com/google/gson/JsonStreamParser.java	2021-09-22 15:52:19.260465588 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/JsonStreamParser.java	2021-09-22 15:52:19.264465665 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/JsonStreamParser.java	2021-09-24 17:56:58.194211117 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/JsonStreamParser.java	2021-09-24 17:56:58.198211100 +0200
 @@ -29,8 +29,9 @@
  
  /**
@@ -51,8 +51,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/JsonStreamParser.java /tmp/v
     */
    public boolean hasNext() {
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java /tmp/v2/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java	2021-09-22 15:52:19.260465588 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java	2021-09-22 15:02:05.171884062 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java	2021-09-24 17:56:58.194211117 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java	2021-09-24 16:11:31.695398511 +0200
 @@ -15,12 +15,10 @@
   */
  package com.google.gson.internal.reflect;

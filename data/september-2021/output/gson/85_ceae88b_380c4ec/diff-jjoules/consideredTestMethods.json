@@ -1,25 +1,33 @@
 {
-  "com.google.gson.functional.ParameterizedTypesTest": [
-    "testParameterizedTypeDeserialization"
+  "com.google.gson.functional.ObjectTest": [
+    "testArrayOfArraysSerialization"
   ],
-  "com.google.gson.ObjectTypeAdapterTest": [
-    "testSerializeNullValue"
+  "com.google.gson.functional.StreamingTypeAdaptersTest": [
+    "testSerializeRecursive"
+  ],
+  "com.google.gson.functional.SecurityTest": [
+    "testNonExecutableJsonSerialization"
+  ],
+  "com.google.gson.functional.ParameterizedTypesTest": [
+    "testVariableTypeArrayDeserialization"
   ],
   "com.google.gson.functional.CustomTypeAdaptersTest": [
-    "testCustomAdapterInvokedForMapElementSerializationWithType",
-    "testEnsureCustomSerializerNotInvokedForNullValues"
+    "testRegisterHierarchyAdapterForDate",
+    "testEnsureCustomDeserializerNotInvokedForNullValues"
   ],
-  "com.google.gson.functional.FieldExclusionTest": [
-    "testDefaultNestedStaticClassIncluded"
+  "com.google.gson.functional.EscapingTest": [
+    "testEscapingQuotesInStringArray"
   ],
-  "com.google.gson.functional.CustomDeserializerTest": [
-    "testCustomDeserializerReturnsNullForTopLevelObject"
+  "com.google.gson.functional.MapTest": [
+    "testMapSubclassDeserialization"
   ],
-  "com.google.gson.functional.InstanceCreatorTest": [
-    "testInstanceCreatorReturnsSubTypeForField",
-    "testInstanceCreatorReturnsBaseType"
+  "com.google.gson.functional.PrimitiveTest": [
+    "testNegativeInfinityFloatSerialization"
   ],
-  "com.google.gson.functional.ExclusionStrategyFunctionalTest": [
-    "testExcludeTopLevelClassSerialization"
+  "com.google.gson.functional.TypeHierarchyAdapterTest": [
+    "testTypeHierarchy"
+  ],
+  "com.google.gson.functional.DefaultTypeAdaptersTest": [
+    "testDefaultJavaSqlTimestampSerialization"
   ]
 }

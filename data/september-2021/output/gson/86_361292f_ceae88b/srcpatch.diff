@@ -1,6 +1,6 @@
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java /tmp/v2/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java
---- /tmp/v1/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java	2021-09-23 11:15:16.790115509 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java	2021-09-23 11:15:16.818116047 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java	2021-09-24 18:36:27.458966732 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java	2021-09-24 18:36:27.470966675 +0200
 @@ -41,52 +41,11 @@
   * @author Inderjeet Singh
   * @author Joel Leitch
@@ -138,8 +138,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java 
  
    private Date deserializeToDate(String s) {
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/GsonBuilder.java /tmp/v2/gson/src/main/java/com/google/gson/GsonBuilder.java
---- /tmp/v1/gson/src/main/java/com/google/gson/GsonBuilder.java	2021-09-23 11:15:16.794115586 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/GsonBuilder.java	2021-09-23 11:15:16.818116047 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/GsonBuilder.java	2021-09-24 18:36:27.458966732 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/GsonBuilder.java	2021-09-24 18:36:27.470966675 +0200
 @@ -602,19 +602,20 @@
          this.factories, this.hierarchyFactories, factories);
    }
@@ -169,8 +169,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/GsonBuilder.java /tmp/v2/gso
        return;
      }
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
---- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-23 11:15:16.794115586 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-23 11:15:16.818116047 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-24 18:36:27.458966732 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-24 18:36:27.470966675 +0200
 @@ -334,11 +334,11 @@
    }
  
@@ -186,8 +186,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java /t
      while (true) {
        if (toResolve instanceof TypeVariable) {
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/DefaultDateTypeAdapterTest.java /tmp/v2/gson/src/test/java/com/google/gson/DefaultDateTypeAdapterTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/DefaultDateTypeAdapterTest.java	2021-09-23 11:15:16.794115586 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/DefaultDateTypeAdapterTest.java	2021-09-23 11:15:16.818116047 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/DefaultDateTypeAdapterTest.java	2021-09-24 18:36:27.458966732 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/DefaultDateTypeAdapterTest.java	2021-09-24 18:36:27.474966657 +0200
 @@ -23,7 +23,6 @@
  import java.util.Locale;
  import java.util.TimeZone;
@@ -358,8 +358,8 @@ diff -ru /tmp/v1/gson/src/test/java/com/google/gson/DefaultDateTypeAdapterTest.j
      assertEquals("ISO 8601", new Date(0), adapter.fromJson(toLiteral("1970-01-01T00:00:00Z")));
    }
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/functional/CollectionTest.java /tmp/v2/gson/src/test/java/com/google/gson/functional/CollectionTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/functional/CollectionTest.java	2021-09-23 11:15:14.886078903 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/functional/CollectionTest.java	2021-09-23 11:15:16.818116047 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/functional/CollectionTest.java	2021-09-24 18:36:27.462966714 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/functional/CollectionTest.java	2021-09-24 18:36:27.474966657 +0200
 @@ -37,6 +37,7 @@
  import com.google.gson.JsonPrimitive;
  import com.google.gson.JsonSerializationContext;
@@ -369,8 +369,8 @@ diff -ru /tmp/v1/gson/src/test/java/com/google/gson/functional/CollectionTest.ja
  import com.google.gson.reflect.TypeToken;
  
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersTest.java /tmp/v2/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersTest.java	2021-09-23 11:15:14.890078979 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersTest.java	2021-09-23 11:15:16.818116047 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersTest.java	2021-09-24 18:36:27.462966714 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersTest.java	2021-09-24 18:36:27.478966637 +0200
 @@ -172,7 +172,6 @@
      int numClasses;
    }
@@ -380,8 +380,8 @@ diff -ru /tmp/v1/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersT
      return Arrays.asList(items);
    }
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypesResolveTest.java /tmp/v2/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypesResolveTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypesResolveTest.java	2021-09-23 11:15:14.890078979 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypesResolveTest.java	2021-09-23 11:15:16.818116047 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypesResolveTest.java	2021-09-24 18:36:27.466966694 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypesResolveTest.java	2021-09-24 18:36:27.478966637 +0200
 @@ -36,7 +36,7 @@
  
    @SuppressWarnings("unused")
@@ -422,8 +422,8 @@ diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypes
      assertNotNull(adapter);
    }
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTest.java /tmp/v2/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTest.java	2021-09-23 11:15:14.890078979 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTest.java	2021-09-23 11:15:16.818116047 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTest.java	2021-09-24 18:36:27.466966694 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTest.java	2021-09-24 18:36:27.478966637 +0200
 @@ -280,7 +280,6 @@
      }
    }
@@ -433,8 +433,8 @@ diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTe
      ArrayList<T> actualList = new ArrayList<T>();
      for (T t : actual) {
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedTreeMapTest.java /tmp/v2/gson/src/test/java/com/google/gson/internal/LinkedTreeMapTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedTreeMapTest.java	2021-09-23 11:15:14.890078979 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/internal/LinkedTreeMapTest.java	2021-09-23 11:15:16.818116047 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedTreeMapTest.java	2021-09-24 18:36:27.466966694 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/internal/LinkedTreeMapTest.java	2021-09-24 18:36:27.478966637 +0200
 @@ -140,7 +140,6 @@
      MoreAsserts.assertEqualsAndHashCode(map1, map2);
    }

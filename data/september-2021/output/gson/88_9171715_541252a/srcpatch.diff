@@ -1,6 +1,6 @@
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java /tmp/v2/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java
---- /tmp/v1/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java	2021-09-22 16:10:11.174186100 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java	2021-09-22 16:08:22.665236409 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java	2021-09-24 18:43:15.789036113 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java	2021-09-24 18:40:14.953887272 +0200
 @@ -41,11 +41,52 @@
   * @author Inderjeet Singh
   * @author Joel Leitch
@@ -138,8 +138,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java 
  
    private Date deserializeToDate(String s) {
 diff -ru /tmp/v1/gson/src/main/java/com/google/gson/GsonBuilder.java /tmp/v2/gson/src/main/java/com/google/gson/GsonBuilder.java
---- /tmp/v1/gson/src/main/java/com/google/gson/GsonBuilder.java	2021-09-22 16:10:11.174186100 +0200
-+++ /tmp/v2/gson/src/main/java/com/google/gson/GsonBuilder.java	2021-09-22 16:08:22.665236409 +0200
+--- /tmp/v1/gson/src/main/java/com/google/gson/GsonBuilder.java	2021-09-24 18:43:15.789036113 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/GsonBuilder.java	2021-09-24 18:40:14.953887272 +0200
 @@ -602,20 +602,19 @@
          this.factories, this.hierarchyFactories, factories);
    }
@@ -169,8 +169,8 @@ diff -ru /tmp/v1/gson/src/main/java/com/google/gson/GsonBuilder.java /tmp/v2/gso
        return;
      }
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/DefaultDateTypeAdapterTest.java /tmp/v2/gson/src/test/java/com/google/gson/DefaultDateTypeAdapterTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/DefaultDateTypeAdapterTest.java	2021-09-22 16:10:11.174186100 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/DefaultDateTypeAdapterTest.java	2021-09-22 16:08:22.665236409 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/DefaultDateTypeAdapterTest.java	2021-09-24 18:43:15.789036113 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/DefaultDateTypeAdapterTest.java	2021-09-24 18:40:14.953887272 +0200
 @@ -23,6 +23,7 @@
  import java.util.Locale;
  import java.util.TimeZone;
@@ -341,8 +341,8 @@ diff -ru /tmp/v1/gson/src/test/java/com/google/gson/DefaultDateTypeAdapterTest.j
      assertEquals("ISO 8601", new Date(0), adapter.fromJson(toLiteral("1970-01-01T00:00:00Z")));
    }
 diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/bind/util/ISO8601UtilsTest.java /tmp/v2/gson/src/test/java/com/google/gson/internal/bind/util/ISO8601UtilsTest.java
---- /tmp/v1/gson/src/test/java/com/google/gson/internal/bind/util/ISO8601UtilsTest.java	2021-09-22 16:10:11.174186100 +0200
-+++ /tmp/v2/gson/src/test/java/com/google/gson/internal/bind/util/ISO8601UtilsTest.java	2021-09-22 15:24:33.406770214 +0200
+--- /tmp/v1/gson/src/test/java/com/google/gson/internal/bind/util/ISO8601UtilsTest.java	2021-09-24 18:43:15.789036113 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/internal/bind/util/ISO8601UtilsTest.java	2021-09-24 16:58:22.239532423 +0200
 @@ -15,25 +15,9 @@
      @Rule
      public final ExpectedException exception = ExpectedException.none();
