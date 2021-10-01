@@ -1,0 +1,59 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java /tmp/v2/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java	2021-09-30 15:12:35.650427295 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/reflect/UnsafeReflectionAccessor.java	2021-09-30 14:14:09.315594041 +0200
+@@ -79,7 +79,7 @@
+   private static Field getOverrideField() {
+     try {
+       return AccessibleObject.class.getDeclaredField("override");
+-    } catch (NoSuchFieldException e) {
++    } catch (Exception e) {
+       return null;
+     }
+   }
+diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java /tmp/v2/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java
+--- /tmp/v1/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java	2021-09-30 15:12:35.654427271 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/internal/reflect/UnsafeReflectionAccessorTest.java	2021-09-30 14:14:09.315594041 +0200
+@@ -15,10 +15,12 @@
+  */
+ package com.google.gson.internal.reflect;
+ 
++import static org.junit.Assert.assertFalse;
+ import static org.junit.Assert.assertTrue;
+ import static org.junit.Assert.fail;
+ 
+ import java.lang.reflect.Field;
++import java.security.Permission;
+ 
+ import org.junit.Test;
+ 
+@@ -41,6 +43,30 @@
+     }
+   }
+ 
++  @Test
++  public void testMakeAccessibleWithRestrictiveSecurityManager() throws Exception {
++    final Permission accessDeclaredMembers = new RuntimePermission("accessDeclaredMembers");
++    final SecurityManager original = System.getSecurityManager();
++    SecurityManager restrictiveManager = new SecurityManager() {
++      @Override
++      public void checkPermission(Permission perm) {
++        if (accessDeclaredMembers.equals(perm)) {
++          throw new SecurityException("nope");
++        }
++      }
++    };
++    System.setSecurityManager(restrictiveManager);
++
++    try {
++      UnsafeReflectionAccessor accessor = new UnsafeReflectionAccessor();
++      Field field = ClassWithPrivateFinalFields.class.getDeclaredField("a");
++      assertFalse("override field should have been inaccessible", accessor.makeAccessibleWithUnsafe(field));
++      accessor.makeAccessible(field);
++    } finally {
++      System.setSecurityManager(original);
++    }
++  }
++
+   @SuppressWarnings("unused")
+   private static final class ClassWithPrivateFinalFields {
+     private final String a;

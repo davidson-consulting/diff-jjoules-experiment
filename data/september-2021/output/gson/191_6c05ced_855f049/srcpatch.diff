@@ -1,0 +1,12 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java	2021-10-01 03:02:54.306399723 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java	2021-09-30 11:43:34.418619203 +0200
+@@ -266,7 +266,7 @@
+         } catch (IllegalArgumentException e) {
+             fail = e;
+         }
+-        String input = (date == null) ? null : ('"' + date + "'");
++        String input = (date == null) ? null : ('"' + date + '"');
+         String msg = fail.getMessage();
+         if (msg == null || msg.isEmpty()) {
+             msg = "("+fail.getClass().getName()+")";

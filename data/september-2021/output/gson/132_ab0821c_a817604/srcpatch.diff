@@ -1,0 +1,33 @@
+diff -ru /tmp/v1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java /tmp/v2/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java
+--- /tmp/v1/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java	2021-09-30 21:36:03.750643321 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/JsonPrimitiveTest.java	2021-09-30 21:36:03.762643249 +0200
+@@ -30,6 +30,29 @@
+  */
+ public class JsonPrimitiveTest extends TestCase {
+ 
++  public void testNulls() {
++    try {
++      new JsonPrimitive((Boolean) null);
++      fail();
++    } catch (NullPointerException ignored) {
++    }
++    try {
++      new JsonPrimitive((Number) null);
++      fail();
++    } catch (NullPointerException ignored) {
++    }
++    try {
++      new JsonPrimitive((String) null);
++      fail();
++    } catch (NullPointerException ignored) {
++    }
++    try {
++      new JsonPrimitive((Character) null);
++      fail();
++    } catch (NullPointerException ignored) {
++    }
++  }
++
+   public void testBoolean() throws Exception {
+     JsonPrimitive json = new JsonPrimitive(Boolean.TRUE);
+ 

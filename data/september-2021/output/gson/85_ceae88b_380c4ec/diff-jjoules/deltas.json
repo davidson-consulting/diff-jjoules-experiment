@@ -1,0 +1,6212 @@
+{
+  "com.google.gson.functional.MapTest#testInterfaceTypeMapWithSerializer": {
+    "dataV1": {
+      "energy": 121826.0,
+      "instructions": 4375250.0,
+      "durations": 6217216.0,
+      "cycles": 6429694.0,
+      "caches": 260596.0,
+      "cacheMisses": 5576.0,
+      "branches": 834010.0,
+      "branchMisses": 56842.0
+    },
+    "dataV2": {
+      "energy": 122314.0,
+      "instructions": 4376392.0,
+      "durations": 7274896.0,
+      "cycles": 6437084.0,
+      "caches": 262278.0,
+      "cacheMisses": 5598.0,
+      "branches": 835478.0,
+      "branchMisses": 57558.0
+    },
+    "energy": 488.0,
+    "instructions": 1142.0,
+    "durations": 1057680.0,
+    "cycles": 7390.0,
+    "caches": 1682.0,
+    "cacheMisses": 22.0,
+    "branches": 1468.0,
+    "branchMisses": 716.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomTypeAdapterAppliesToSubClassesSerializedAsBaseClass": {
+    "dataV1": {
+      "energy": 79590.0,
+      "instructions": 2336138.0,
+      "durations": 3264912.0,
+      "cycles": 3393338.0,
+      "caches": 145156.0,
+      "cacheMisses": 4086.0,
+      "branches": 470246.0,
+      "branchMisses": 30296.0
+    },
+    "dataV2": {
+      "energy": 40772.0,
+      "instructions": 2347664.0,
+      "durations": 1839492.0,
+      "cycles": 3343168.0,
+      "caches": 141726.0,
+      "cacheMisses": 3994.0,
+      "branches": 471926.0,
+      "branchMisses": 28966.0
+    },
+    "energy": -38818.0,
+    "instructions": 11526.0,
+    "durations": -1425420.0,
+    "cycles": -50170.0,
+    "caches": -3430.0,
+    "cacheMisses": -92.0,
+    "branches": 1680.0,
+    "branchMisses": -1330.0
+  },
+  "com.google.gson.functional.NamingPolicyTest#testGsonWithLowerCaseUnderscorePolicySerialization": {
+    "dataV1": {
+      "energy": 40772.0,
+      "instructions": 985362.0,
+      "durations": 2050596.0,
+      "cycles": 1609794.0,
+      "caches": 70446.0,
+      "cacheMisses": 3396.0,
+      "branches": 195246.0,
+      "branchMisses": 14170.0
+    },
+    "dataV2": {
+      "energy": 41382.0,
+      "instructions": 993916.0,
+      "durations": 2065206.0,
+      "cycles": 1630194.0,
+      "caches": 71276.0,
+      "cacheMisses": 3442.0,
+      "branches": 197486.0,
+      "branchMisses": 14450.0
+    },
+    "energy": 610.0,
+    "instructions": 8554.0,
+    "durations": 14610.0,
+    "cycles": 20400.0,
+    "caches": 830.0,
+    "cacheMisses": 46.0,
+    "branches": 2240.0,
+    "branchMisses": 280.0
+  },
+  "com.google.gson.functional.StreamingTypeAdaptersTest#testSerializeWithCustomTypeAdapter": {
+    "dataV1": {
+      "energy": 43578.0,
+      "instructions": 2411590.0,
+      "durations": 3209416.0,
+      "cycles": 3628028.0,
+      "caches": 146232.0,
+      "cacheMisses": 4572.0,
+      "branches": 473546.0,
+      "branchMisses": 35316.0
+    },
+    "dataV2": {
+      "energy": 41870.0,
+      "instructions": 2418170.0,
+      "durations": 2882070.0,
+      "cycles": 3637542.0,
+      "caches": 145138.0,
+      "cacheMisses": 4572.0,
+      "branches": 474194.0,
+      "branchMisses": 35726.0
+    },
+    "energy": -1708.0,
+    "instructions": 6580.0,
+    "durations": -327346.0,
+    "cycles": 9514.0,
+    "caches": -1094.0,
+    "cacheMisses": 0.0,
+    "branches": 648.0,
+    "branchMisses": 410.0
+  },
+  "com.google.gson.functional.TypeAdapterPrecedenceTest#testNonstreamingHierarchicalFollowedByNonstreaming": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 664454.0,
+      "durations": 701108.0,
+      "cycles": 989234.0,
+      "caches": 43356.0,
+      "cacheMisses": 2924.0,
+      "branches": 136016.0,
+      "branchMisses": 8110.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 663600.0,
+      "durations": 696666.0,
+      "cycles": 985404.0,
+      "caches": 43636.0,
+      "cacheMisses": 2960.0,
+      "branches": 135990.0,
+      "branchMisses": 8124.0
+    },
+    "energy": 0.0,
+    "instructions": -854.0,
+    "durations": -4442.0,
+    "cycles": -3830.0,
+    "caches": 280.0,
+    "cacheMisses": 36.0,
+    "branches": -26.0,
+    "branchMisses": 14.0
+  },
+  "com.google.gson.functional.InstanceCreatorTest#testInstanceCreatorForParametrizedType": {
+    "dataV1": {
+      "energy": 246580.0,
+      "instructions": 8872578.0,
+      "durations": 1.2312124E7,
+      "cycles": 1.0659994E7,
+      "caches": 335528.0,
+      "cacheMisses": 13220.0,
+      "branches": 1758686.0,
+      "branchMisses": 100040.0
+    },
+    "dataV2": {
+      "energy": 121948.0,
+      "instructions": 8569236.0,
+      "durations": 5667666.0,
+      "cycles": 1.0082356E7,
+      "caches": 311110.0,
+      "cacheMisses": 12810.0,
+      "branches": 1704260.0,
+      "branchMisses": 93650.0
+    },
+    "energy": -124632.0,
+    "instructions": -303342.0,
+    "durations": -6644458.0,
+    "cycles": -577638.0,
+    "caches": -24418.0,
+    "cacheMisses": -410.0,
+    "branches": -54426.0,
+    "branchMisses": -6390.0
+  },
+  "com.google.gson.functional.VersioningTest#testVersionedUntilDeserialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1197734.0,
+      "durations": 920142.0,
+      "cycles": 1498578.0,
+      "caches": 60538.0,
+      "cacheMisses": 3140.0,
+      "branches": 224414.0,
+      "branchMisses": 12314.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1085484.0,
+      "durations": 920054.0,
+      "cycles": 1492072.0,
+      "caches": 60872.0,
+      "cacheMisses": 3144.0,
+      "branches": 211544.0,
+      "branchMisses": 12270.0
+    },
+    "energy": 0.0,
+    "instructions": -112250.0,
+    "durations": -88.0,
+    "cycles": -6506.0,
+    "caches": 334.0,
+    "cacheMisses": 4.0,
+    "branches": -12870.0,
+    "branchMisses": -44.0
+  },
+  "com.google.gson.functional.UncategorizedTest#testReturningDerivedClassesDuringDeserialization": {
+    "dataV1": {
+      "energy": 81786.0,
+      "instructions": 4840720.0,
+      "durations": 1.0829622E7,
+      "cycles": 6775076.0,
+      "caches": 263580.0,
+      "cacheMisses": 6144.0,
+      "branches": 950978.0,
+      "branchMisses": 61466.0
+    },
+    "dataV2": {
+      "energy": 83374.0,
+      "instructions": 4916186.0,
+      "durations": 1.1518558E7,
+      "cycles": 7010938.0,
+      "caches": 269822.0,
+      "cacheMisses": 6018.0,
+      "branches": 963538.0,
+      "branchMisses": 66110.0
+    },
+    "energy": 1588.0,
+    "instructions": 75466.0,
+    "durations": 688936.0,
+    "cycles": 235862.0,
+    "caches": 6242.0,
+    "cacheMisses": -126.0,
+    "branches": 12560.0,
+    "branchMisses": 4644.0
+  },
+  "com.google.gson.functional.CustomSerializerTest#testSubClassSerializerInvokedForBaseClassFieldsHoldingArrayOfSubClassInstances": {
+    "dataV1": {
+      "energy": 411498.0,
+      "instructions": 1.509195E7,
+      "durations": 2.1207116E7,
+      "cycles": 1.839449E7,
+      "caches": 677782.0,
+      "cacheMisses": 13408.0,
+      "branches": 2905888.0,
+      "branchMisses": 156068.0
+    },
+    "dataV2": {
+      "energy": 410278.0,
+      "instructions": 1.4905496E7,
+      "durations": 2.1828062E7,
+      "cycles": 1.8261784E7,
+      "caches": 668182.0,
+      "cacheMisses": 13060.0,
+      "branches": 2873706.0,
+      "branchMisses": 156506.0
+    },
+    "energy": -1220.0,
+    "instructions": -186454.0,
+    "durations": 620946.0,
+    "cycles": -132706.0,
+    "caches": -9600.0,
+    "cacheMisses": -348.0,
+    "branches": -32182.0,
+    "branchMisses": 438.0
+  },
+  "com.google.gson.functional.MapTest#testSerializeMaps": {
+    "dataV1": {
+      "energy": 163208.0,
+      "instructions": 2624154.0,
+      "durations": 7820270.0,
+      "cycles": 4501118.0,
+      "caches": 199094.0,
+      "cacheMisses": 6298.0,
+      "branches": 483100.0,
+      "branchMisses": 38698.0
+    },
+    "dataV2": {
+      "energy": 163696.0,
+      "instructions": 2578996.0,
+      "durations": 8600852.0,
+      "cycles": 4472886.0,
+      "caches": 196388.0,
+      "cacheMisses": 6262.0,
+      "branches": 473344.0,
+      "branchMisses": 38276.0
+    },
+    "energy": 488.0,
+    "instructions": -45158.0,
+    "durations": 780582.0,
+    "cycles": -28232.0,
+    "caches": -2706.0,
+    "cacheMisses": -36.0,
+    "branches": -9756.0,
+    "branchMisses": -422.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomNestedSerializers": {
+    "dataV1": {
+      "energy": 41870.0,
+      "instructions": 1612500.0,
+      "durations": 2562696.0,
+      "cycles": 2505550.0,
+      "caches": 107632.0,
+      "cacheMisses": 3486.0,
+      "branches": 325784.0,
+      "branchMisses": 22692.0
+    },
+    "dataV2": {
+      "energy": 41504.0,
+      "instructions": 1621742.0,
+      "durations": 2597222.0,
+      "cycles": 2528386.0,
+      "caches": 108698.0,
+      "cacheMisses": 3476.0,
+      "branches": 327234.0,
+      "branchMisses": 23126.0
+    },
+    "energy": -366.0,
+    "instructions": 9242.0,
+    "durations": 34526.0,
+    "cycles": 22836.0,
+    "caches": 1066.0,
+    "cacheMisses": -10.0,
+    "branches": 1450.0,
+    "branchMisses": 434.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testStringBufferDeserialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 521056.0,
+      "durations": 650042.0,
+      "cycles": 809340.0,
+      "caches": 37524.0,
+      "cacheMisses": 3126.0,
+      "branches": 114006.0,
+      "branchMisses": 5608.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 518890.0,
+      "durations": 645790.0,
+      "cycles": 805736.0,
+      "caches": 36992.0,
+      "cacheMisses": 3154.0,
+      "branches": 113672.0,
+      "branchMisses": 5596.0
+    },
+    "energy": 0.0,
+    "instructions": -2166.0,
+    "durations": -4252.0,
+    "cycles": -3604.0,
+    "caches": -532.0,
+    "cacheMisses": 28.0,
+    "branches": -334.0,
+    "branchMisses": -12.0
+  },
+  "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testRegisteredTypeAdapterTakesPrecedenceOverClassAnnotationAdapter": {
+    "dataV1": {
+      "energy": 41382.0,
+      "instructions": 3581636.0,
+      "durations": 2510316.0,
+      "cycles": 4863072.0,
+      "caches": 195238.0,
+      "cacheMisses": 5342.0,
+      "branches": 721262.0,
+      "branchMisses": 41898.0
+    },
+    "dataV2": {
+      "energy": 41260.0,
+      "instructions": 3623398.0,
+      "durations": 2584036.0,
+      "cycles": 4992138.0,
+      "caches": 199952.0,
+      "cacheMisses": 5330.0,
+      "branches": 729046.0,
+      "branchMisses": 43862.0
+    },
+    "energy": -122.0,
+    "instructions": 41762.0,
+    "durations": 73720.0,
+    "cycles": 129066.0,
+    "caches": 4714.0,
+    "cacheMisses": -12.0,
+    "branches": 7784.0,
+    "branchMisses": 1964.0
+  },
+  "com.google.gson.functional.RuntimeTypeAdapterFactoryFunctionalTest#testSubclassesAutomaticallySerialized": {
+    "dataV1": {
+      "energy": 164794.0,
+      "instructions": 1.146036E7,
+      "durations": 8991442.0,
+      "cycles": 1.4200034E7,
+      "caches": 495758.0,
+      "cacheMisses": 13914.0,
+      "branches": 2383396.0,
+      "branchMisses": 130510.0
+    },
+    "dataV2": {
+      "energy": 202758.0,
+      "instructions": 1.1515456E7,
+      "durations": 9129914.0,
+      "cycles": 1.444278E7,
+      "caches": 503948.0,
+      "cacheMisses": 14126.0,
+      "branches": 2392246.0,
+      "branchMisses": 134450.0
+    },
+    "energy": 37964.0,
+    "instructions": 55096.0,
+    "durations": 138472.0,
+    "cycles": 242746.0,
+    "caches": 8190.0,
+    "cacheMisses": 212.0,
+    "branches": 8850.0,
+    "branchMisses": 3940.0
+  },
+  "com.google.gson.functional.CustomSerializerTest#testBaseClassSerializerInvokedForBaseClassFields": {
+    "dataV1": {
+      "energy": 41382.0,
+      "instructions": 1225010.0,
+      "durations": 2914118.0,
+      "cycles": 2305712.0,
+      "caches": 91104.0,
+      "cacheMisses": 1792.0,
+      "branches": 229070.0,
+      "branchMisses": 23806.0
+    },
+    "dataV2": {
+      "energy": 41016.0,
+      "instructions": 1180750.0,
+      "durations": 1253802.0,
+      "cycles": 2135984.0,
+      "caches": 83028.0,
+      "cacheMisses": 1664.0,
+      "branches": 221986.0,
+      "branchMisses": 21840.0
+    },
+    "energy": -366.0,
+    "instructions": -44260.0,
+    "durations": -1660316.0,
+    "cycles": -169728.0,
+    "caches": -8076.0,
+    "cacheMisses": -128.0,
+    "branches": -7084.0,
+    "branchMisses": -1966.0
+  },
+  "com.google.gson.functional.VersioningTest#testVersionedGsonWithUnversionedClassesDeserialization": {
+    "dataV1": {
+      "energy": 41260.0,
+      "instructions": 1168640.0,
+      "durations": 2806564.0,
+      "cycles": 1793346.0,
+      "caches": 75406.0,
+      "cacheMisses": 3326.0,
+      "branches": 230454.0,
+      "branchMisses": 15418.0
+    },
+    "dataV2": {
+      "energy": 41992.0,
+      "instructions": 1158992.0,
+      "durations": 2895474.0,
+      "cycles": 1795084.0,
+      "caches": 76212.0,
+      "cacheMisses": 3340.0,
+      "branches": 228386.0,
+      "branchMisses": 15410.0
+    },
+    "energy": 732.0,
+    "instructions": -9648.0,
+    "durations": 88910.0,
+    "cycles": 1738.0,
+    "caches": 806.0,
+    "cacheMisses": 14.0,
+    "branches": -2068.0,
+    "branchMisses": -8.0
+  },
+  "com.google.gson.functional.JavaUtilConcurrentAtomicTest#testAtomicBoolean": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 573868.0,
+      "durations": 700442.0,
+      "cycles": 939878.0,
+      "caches": 44684.0,
+      "cacheMisses": 3336.0,
+      "branches": 122708.0,
+      "branchMisses": 6526.0
+    },
+    "dataV2": {
+      "energy": 40406.0,
+      "instructions": 573738.0,
+      "durations": 1970682.0,
+      "cycles": 1004352.0,
+      "caches": 49166.0,
+      "cacheMisses": 3364.0,
+      "branches": 122568.0,
+      "branchMisses": 7456.0
+    },
+    "energy": 40406.0,
+    "instructions": -130.0,
+    "durations": 1270240.0,
+    "cycles": 64474.0,
+    "caches": 4482.0,
+    "cacheMisses": 28.0,
+    "branches": -140.0,
+    "branchMisses": 930.0
+  },
+  "com.google.gson.functional.NullObjectAndFieldTest#testTopLevelNullObjectSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 802010.0,
+      "durations": 1341952.0,
+      "cycles": 1554976.0,
+      "caches": 60326.0,
+      "cacheMisses": 596.0,
+      "branches": 141452.0,
+      "branchMisses": 15040.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 785502.0,
+      "durations": 1651616.0,
+      "cycles": 1577102.0,
+      "caches": 62294.0,
+      "cacheMisses": 610.0,
+      "branches": 138486.0,
+      "branchMisses": 14736.0
+    },
+    "energy": 0.0,
+    "instructions": -16508.0,
+    "durations": 309664.0,
+    "cycles": 22126.0,
+    "caches": 1968.0,
+    "cacheMisses": 14.0,
+    "branches": -2966.0,
+    "branchMisses": -304.0
+  },
+  "com.google.gson.functional.NullObjectAndFieldTest#testExplicitSerializationOfNulls": {
+    "dataV1": {
+      "energy": 38574.0,
+      "instructions": 1619552.0,
+      "durations": 1431270.0,
+      "cycles": 2619298.0,
+      "caches": 85276.0,
+      "cacheMisses": 884.0,
+      "branches": 295318.0,
+      "branchMisses": 26412.0
+    },
+    "dataV2": {
+      "energy": 38330.0,
+      "instructions": 1619324.0,
+      "durations": 1458012.0,
+      "cycles": 2617878.0,
+      "caches": 86928.0,
+      "cacheMisses": 858.0,
+      "branches": 294418.0,
+      "branchMisses": 26380.0
+    },
+    "energy": -244.0,
+    "instructions": -228.0,
+    "durations": 26742.0,
+    "cycles": -1420.0,
+    "caches": 1652.0,
+    "cacheMisses": -26.0,
+    "branches": -900.0,
+    "branchMisses": -32.0
+  },
+  "com.google.gson.functional.CircularReferenceTest#testSelfReferenceCustomHandlerSerialization": {
+    "dataV1": {
+      "energy": 496092.0,
+      "instructions": 3.0406118E7,
+      "durations": 2.480088E7,
+      "cycles": 1.9799334E7,
+      "caches": 247930.0,
+      "cacheMisses": 8424.0,
+      "branches": 6194446.0,
+      "branchMisses": 64860.0
+    },
+    "dataV2": {
+      "energy": 578856.0,
+      "instructions": 3.2296724E7,
+      "durations": 2.8490178E7,
+      "cycles": 2.1634546E7,
+      "caches": 248922.0,
+      "cacheMisses": 9060.0,
+      "branches": 6520530.0,
+      "branchMisses": 71392.0
+    },
+    "energy": 82764.0,
+    "instructions": 1890606.0,
+    "durations": 3689298.0,
+    "cycles": 1835212.0,
+    "caches": 992.0,
+    "cacheMisses": 636.0,
+    "branches": 326084.0,
+    "branchMisses": 6532.0
+  },
+  "com.google.gson.functional.EscapingTest#testGsonAcceptsEscapedAndNonEscapedJsonDeserialization": {
+    "dataV1": {
+      "energy": 120850.0,
+      "instructions": 3280880.0,
+      "durations": 7110668.0,
+      "cycles": 5703312.0,
+      "caches": 193312.0,
+      "cacheMisses": 4098.0,
+      "branches": 604920.0,
+      "branchMisses": 59084.0
+    },
+    "dataV2": {
+      "energy": 84108.0,
+      "instructions": 3254560.0,
+      "durations": 7053102.0,
+      "cycles": 5611912.0,
+      "caches": 190028.0,
+      "cacheMisses": 4042.0,
+      "branches": 600752.0,
+      "branchMisses": 58104.0
+    },
+    "energy": -36742.0,
+    "instructions": -26320.0,
+    "durations": -57566.0,
+    "cycles": -91400.0,
+    "caches": -3284.0,
+    "cacheMisses": -56.0,
+    "branches": -4168.0,
+    "branchMisses": -980.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testOverrideBigDecimalTypeAdapter": {
+    "dataV1": {
+      "energy": 40894.0,
+      "instructions": 2054760.0,
+      "durations": 1554936.0,
+      "cycles": 2800256.0,
+      "caches": 97262.0,
+      "cacheMisses": 5980.0,
+      "branches": 433780.0,
+      "branchMisses": 22434.0
+    },
+    "dataV2": {
+      "energy": 40526.0,
+      "instructions": 2054448.0,
+      "durations": 1547074.0,
+      "cycles": 2794050.0,
+      "caches": 96972.0,
+      "cacheMisses": 5946.0,
+      "branches": 433674.0,
+      "branchMisses": 22368.0
+    },
+    "energy": -368.0,
+    "instructions": -312.0,
+    "durations": -7862.0,
+    "cycles": -6206.0,
+    "caches": -290.0,
+    "cacheMisses": -34.0,
+    "branches": -106.0,
+    "branchMisses": -66.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testDateSerializationWithPatternNotOverridenByTypeAdapter": {
+    "dataV1": {
+      "energy": 41992.0,
+      "instructions": 2464506.0,
+      "durations": 2673086.0,
+      "cycles": 3545434.0,
+      "caches": 108768.0,
+      "cacheMisses": 5532.0,
+      "branches": 482076.0,
+      "branchMisses": 44448.0
+    },
+    "dataV2": {
+      "energy": 41748.0,
+      "instructions": 2466862.0,
+      "durations": 2659164.0,
+      "cycles": 3595332.0,
+      "caches": 111200.0,
+      "cacheMisses": 5576.0,
+      "branches": 482232.0,
+      "branchMisses": 44796.0
+    },
+    "energy": -244.0,
+    "instructions": 2356.0,
+    "durations": -13922.0,
+    "cycles": 49898.0,
+    "caches": 2432.0,
+    "cacheMisses": 44.0,
+    "branches": 156.0,
+    "branchMisses": 348.0
+  },
+  "com.google.gson.functional.VersioningTest#testIgnoreLaterVersionClassDeserialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 645278.0,
+      "durations": 753498.0,
+      "cycles": 990316.0,
+      "caches": 45796.0,
+      "cacheMisses": 2998.0,
+      "branches": 132488.0,
+      "branchMisses": 7874.0
+    },
+    "dataV2": {
+      "energy": 38452.0,
+      "instructions": 645204.0,
+      "durations": 766558.0,
+      "cycles": 972558.0,
+      "caches": 45112.0,
+      "cacheMisses": 2984.0,
+      "branches": 132382.0,
+      "branchMisses": 7868.0
+    },
+    "energy": 38452.0,
+    "instructions": -74.0,
+    "durations": 13060.0,
+    "cycles": -17758.0,
+    "caches": -684.0,
+    "cacheMisses": -14.0,
+    "branches": -106.0,
+    "branchMisses": -6.0
+  },
+  "com.google.gson.functional.PrimitiveTest#testDoubleInfinitySerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 533826.0,
+      "durations": 592170.0,
+      "cycles": 726888.0,
+      "caches": 34678.0,
+      "cacheMisses": 2824.0,
+      "branches": 113132.0,
+      "branchMisses": 4910.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 533940.0,
+      "durations": 589024.0,
+      "cycles": 732274.0,
+      "caches": 34718.0,
+      "cacheMisses": 2844.0,
+      "branches": 113272.0,
+      "branchMisses": 4956.0
+    },
+    "energy": 0.0,
+    "instructions": 114.0,
+    "durations": -3146.0,
+    "cycles": 5386.0,
+    "caches": 40.0,
+    "cacheMisses": 20.0,
+    "branches": 140.0,
+    "branchMisses": 46.0
+  },
+  "com.google.gson.functional.PrintFormattingTest#testJsonObjectWithNullValuesSerialized": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 730486.0,
+      "durations": 754636.0,
+      "cycles": 1087976.0,
+      "caches": 43930.0,
+      "cacheMisses": 4080.0,
+      "branches": 148658.0,
+      "branchMisses": 7724.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 731360.0,
+      "durations": 754660.0,
+      "cycles": 1093718.0,
+      "caches": 44212.0,
+      "cacheMisses": 4104.0,
+      "branches": 148822.0,
+      "branchMisses": 7822.0
+    },
+    "energy": 0.0,
+    "instructions": 874.0,
+    "durations": 24.0,
+    "cycles": 5742.0,
+    "caches": 282.0,
+    "cacheMisses": 24.0,
+    "branches": 164.0,
+    "branchMisses": 98.0
+  },
+  "com.google.gson.functional.MapAsArrayTypeAdapterTest#testMapWithTypeVariableSerialization": {
+    "dataV1": {
+      "energy": 41626.0,
+      "instructions": 3781578.0,
+      "durations": 2819312.0,
+      "cycles": 5519436.0,
+      "caches": 224820.0,
+      "cacheMisses": 5948.0,
+      "branches": 741712.0,
+      "branchMisses": 48178.0
+    },
+    "dataV2": {
+      "energy": 42358.0,
+      "instructions": 3783406.0,
+      "durations": 2812236.0,
+      "cycles": 5552994.0,
+      "caches": 227846.0,
+      "cacheMisses": 6004.0,
+      "branches": 742412.0,
+      "branchMisses": 48870.0
+    },
+    "energy": 732.0,
+    "instructions": 1828.0,
+    "durations": -7076.0,
+    "cycles": 33558.0,
+    "caches": 3026.0,
+    "cacheMisses": 56.0,
+    "branches": 700.0,
+    "branchMisses": 692.0
+  },
+  "com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesWithCustomDeserializer": {
+    "dataV1": {
+      "energy": 80810.0,
+      "instructions": 4480938.0,
+      "durations": 4114000.0,
+      "cycles": 7092130.0,
+      "caches": 251420.0,
+      "cacheMisses": 2850.0,
+      "branches": 854192.0,
+      "branchMisses": 74784.0
+    },
+    "dataV2": {
+      "energy": 121338.0,
+      "instructions": 4490786.0,
+      "durations": 6565776.0,
+      "cycles": 7044786.0,
+      "caches": 248090.0,
+      "cacheMisses": 2964.0,
+      "branches": 855638.0,
+      "branchMisses": 74052.0
+    },
+    "energy": 40528.0,
+    "instructions": 9848.0,
+    "durations": 2451776.0,
+    "cycles": -47344.0,
+    "caches": -3330.0,
+    "cacheMisses": 114.0,
+    "branches": 1446.0,
+    "branchMisses": -732.0
+  },
+  "com.google.gson.functional.InstanceCreatorTest#testInstanceCreatorForCollectionType": {
+    "dataV1": {
+      "energy": 123536.0,
+      "instructions": 3488148.0,
+      "durations": 7319708.0,
+      "cycles": 5409072.0,
+      "caches": 215486.0,
+      "cacheMisses": 5990.0,
+      "branches": 660828.0,
+      "branchMisses": 50332.0
+    },
+    "dataV2": {
+      "energy": 208130.0,
+      "instructions": 3321088.0,
+      "durations": 1.1755222E7,
+      "cycles": 5070800.0,
+      "caches": 196536.0,
+      "cacheMisses": 5876.0,
+      "branches": 632562.0,
+      "branchMisses": 48292.0
+    },
+    "energy": 84594.0,
+    "instructions": -167060.0,
+    "durations": 4435514.0,
+    "cycles": -338272.0,
+    "caches": -18950.0,
+    "cacheMisses": -114.0,
+    "branches": -28266.0,
+    "branchMisses": -2040.0
+  },
+  "com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeGenericArraysDeserialization": {
+    "dataV1": {
+      "energy": 495238.0,
+      "instructions": 1.534921E7,
+      "durations": 2.6106072E7,
+      "cycles": 2.1737464E7,
+      "caches": 747308.0,
+      "cacheMisses": 11990.0,
+      "branches": 2946566.0,
+      "branchMisses": 214958.0
+    },
+    "dataV2": {
+      "energy": 578856.0,
+      "instructions": 1.5449024E7,
+      "durations": 2.9155778E7,
+      "cycles": 2.1678464E7,
+      "caches": 738758.0,
+      "cacheMisses": 12248.0,
+      "branches": 2963964.0,
+      "branchMisses": 213196.0
+    },
+    "energy": 83618.0,
+    "instructions": 99814.0,
+    "durations": 3049706.0,
+    "cycles": -59000.0,
+    "caches": -8550.0,
+    "cacheMisses": 258.0,
+    "branches": 17398.0,
+    "branchMisses": -1762.0
+  },
+  "com.google.gson.functional.TypeAdapterPrecedenceTest#testStreamingFollowedByNonstreaming": {
+    "dataV1": {
+      "energy": 40894.0,
+      "instructions": 3053384.0,
+      "durations": 2065302.0,
+      "cycles": 3885004.0,
+      "caches": 152234.0,
+      "cacheMisses": 5420.0,
+      "branches": 634292.0,
+      "branchMisses": 32882.0
+    },
+    "dataV2": {
+      "energy": 41380.0,
+      "instructions": 3180608.0,
+      "durations": 2160922.0,
+      "cycles": 4096336.0,
+      "caches": 159294.0,
+      "cacheMisses": 5760.0,
+      "branches": 655182.0,
+      "branchMisses": 34464.0
+    },
+    "energy": 486.0,
+    "instructions": 127224.0,
+    "durations": 95620.0,
+    "cycles": 211332.0,
+    "caches": 7060.0,
+    "cacheMisses": 340.0,
+    "branches": 20890.0,
+    "branchMisses": 1582.0
+  },
+  "com.google.gson.functional.VersioningTest#testVersionedGsonMixingSinceAndUntilDeserialization": {
+    "dataV1": {
+      "energy": 41748.0,
+      "instructions": 1743702.0,
+      "durations": 2720222.0,
+      "cycles": 3072634.0,
+      "caches": 122104.0,
+      "cacheMisses": 3608.0,
+      "branches": 337292.0,
+      "branchMisses": 32636.0
+    },
+    "dataV2": {
+      "energy": 41870.0,
+      "instructions": 1732888.0,
+      "durations": 2973772.0,
+      "cycles": 3055034.0,
+      "caches": 123718.0,
+      "cacheMisses": 3594.0,
+      "branches": 334614.0,
+      "branchMisses": 32246.0
+    },
+    "energy": 122.0,
+    "instructions": -10814.0,
+    "durations": 253550.0,
+    "cycles": -17600.0,
+    "caches": 1614.0,
+    "cacheMisses": -14.0,
+    "branches": -2678.0,
+    "branchMisses": -390.0
+  },
+  "com.google.gson.functional.TypeHierarchyAdapterTest#testRegisterSubTypeFirstAllowed": {
+    "dataV1": {
+      "energy": 41014.0,
+      "instructions": 585842.0,
+      "durations": 3223622.0,
+      "cycles": 1005176.0,
+      "caches": 55458.0,
+      "cacheMisses": 2902.0,
+      "branches": 123862.0,
+      "branchMisses": 6832.0
+    },
+    "dataV2": {
+      "energy": 40894.0,
+      "instructions": 585736.0,
+      "durations": 3213562.0,
+      "cycles": 1008056.0,
+      "caches": 55396.0,
+      "cacheMisses": 2938.0,
+      "branches": 123830.0,
+      "branchMisses": 6842.0
+    },
+    "energy": -120.0,
+    "instructions": -106.0,
+    "durations": -10060.0,
+    "cycles": 2880.0,
+    "caches": -62.0,
+    "cacheMisses": 36.0,
+    "branches": -32.0,
+    "branchMisses": 10.0
+  },
+  "com.google.gson.functional.MapAsArrayTypeAdapterTest#testTwoTypesCollapseToOneDeserialize": {
+    "dataV1": {
+      "energy": 39672.0,
+      "instructions": 1628034.0,
+      "durations": 1379234.0,
+      "cycles": 2536458.0,
+      "caches": 103892.0,
+      "cacheMisses": 5556.0,
+      "branches": 325984.0,
+      "branchMisses": 22428.0
+    },
+    "dataV2": {
+      "energy": 40162.0,
+      "instructions": 1630436.0,
+      "durations": 1397828.0,
+      "cycles": 2558256.0,
+      "caches": 105358.0,
+      "cacheMisses": 5608.0,
+      "branches": 326362.0,
+      "branchMisses": 22898.0
+    },
+    "energy": 490.0,
+    "instructions": 2402.0,
+    "durations": 18594.0,
+    "cycles": 21798.0,
+    "caches": 1466.0,
+    "cacheMisses": 52.0,
+    "branches": 378.0,
+    "branchMisses": 470.0
+  },
+  "com.google.gson.functional.NamingPolicyTest#testGsonWithSerializedNameFieldNamingPolicySerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 869406.0,
+      "durations": 843200.0,
+      "cycles": 1303346.0,
+      "caches": 56112.0,
+      "cacheMisses": 2954.0,
+      "branches": 173298.0,
+      "branchMisses": 10976.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 869604.0,
+      "durations": 834040.0,
+      "cycles": 1284092.0,
+      "caches": 55840.0,
+      "cacheMisses": 2954.0,
+      "branches": 173186.0,
+      "branchMisses": 10822.0
+    },
+    "energy": 0.0,
+    "instructions": 198.0,
+    "durations": -9160.0,
+    "cycles": -19254.0,
+    "caches": -272.0,
+    "cacheMisses": 0.0,
+    "branches": -112.0,
+    "branchMisses": -154.0
+  },
+  "com.google.gson.functional.SecurityTest#testNonExecutableJsonSerialization": {
+    "dataV1": {
+      "energy": 38208.0,
+      "instructions": 1475890.0,
+      "durations": 1623862.0,
+      "cycles": 2350440.0,
+      "caches": 95070.0,
+      "cacheMisses": 3788.0,
+      "branches": 284758.0,
+      "branchMisses": 20350.0
+    },
+    "dataV2": {
+      "energy": 40160.0,
+      "instructions": 1394468.0,
+      "durations": 1625224.0,
+      "cycles": 2242404.0,
+      "caches": 91316.0,
+      "cacheMisses": 3766.0,
+      "branches": 268760.0,
+      "branchMisses": 20008.0
+    },
+    "energy": 1952.0,
+    "instructions": -81422.0,
+    "durations": 1362.0,
+    "cycles": -108036.0,
+    "caches": -3754.0,
+    "cacheMisses": -22.0,
+    "branches": -15998.0,
+    "branchMisses": -342.0
+  },
+  "com.google.gson.functional.JavaUtilConcurrentAtomicTest#testAtomicLongWithStringSerializationPolicy": {
+    "dataV1": {
+      "energy": 38818.0,
+      "instructions": 1253686.0,
+      "durations": 1305172.0,
+      "cycles": 2292728.0,
+      "caches": 97244.0,
+      "cacheMisses": 11306.0,
+      "branches": 251318.0,
+      "branchMisses": 18934.0
+    },
+    "dataV2": {
+      "energy": 39918.0,
+      "instructions": 1258646.0,
+      "durations": 1310480.0,
+      "cycles": 2317428.0,
+      "caches": 98428.0,
+      "cacheMisses": 11350.0,
+      "branches": 252074.0,
+      "branchMisses": 19248.0
+    },
+    "energy": 1100.0,
+    "instructions": 4960.0,
+    "durations": 5308.0,
+    "cycles": 24700.0,
+    "caches": 1184.0,
+    "cacheMisses": 44.0,
+    "branches": 756.0,
+    "branchMisses": 314.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testDefaultGregorianCalendarSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 766940.0,
+      "durations": 773624.0,
+      "cycles": 1134654.0,
+      "caches": 45722.0,
+      "cacheMisses": 3452.0,
+      "branches": 158714.0,
+      "branchMisses": 8934.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 768332.0,
+      "durations": 771834.0,
+      "cycles": 1147010.0,
+      "caches": 46358.0,
+      "cacheMisses": 3506.0,
+      "branches": 159216.0,
+      "branchMisses": 9136.0
+    },
+    "energy": 0.0,
+    "instructions": 1392.0,
+    "durations": -1790.0,
+    "cycles": 12356.0,
+    "caches": 636.0,
+    "cacheMisses": 54.0,
+    "branches": 502.0,
+    "branchMisses": 202.0
+  },
+  "com.google.gson.functional.PrimitiveTest#testHtmlCharacterSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 681578.0,
+      "durations": 702068.0,
+      "cycles": 989410.0,
+      "caches": 46244.0,
+      "cacheMisses": 3344.0,
+      "branches": 139678.0,
+      "branchMisses": 6824.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 683220.0,
+      "durations": 701486.0,
+      "cycles": 991640.0,
+      "caches": 46632.0,
+      "cacheMisses": 3366.0,
+      "branches": 139844.0,
+      "branchMisses": 6770.0
+    },
+    "energy": 0.0,
+    "instructions": 1642.0,
+    "durations": -582.0,
+    "cycles": 2230.0,
+    "caches": 388.0,
+    "cacheMisses": 22.0,
+    "branches": 166.0,
+    "branchMisses": -54.0
+  },
+  "com.google.gson.functional.VersioningTest#testIgnoreLaterVersionClassSerialization": {
+    "dataV1": {
+      "energy": 206176.0,
+      "instructions": 8175740.0,
+      "durations": 9808790.0,
+      "cycles": 9598856.0,
+      "caches": 299474.0,
+      "cacheMisses": 12262.0,
+      "branches": 1509514.0,
+      "branchMisses": 86062.0
+    },
+    "dataV2": {
+      "energy": 205810.0,
+      "instructions": 8252984.0,
+      "durations": 9867524.0,
+      "cycles": 9741496.0,
+      "caches": 304044.0,
+      "cacheMisses": 12342.0,
+      "branches": 1522738.0,
+      "branchMisses": 88308.0
+    },
+    "energy": -366.0,
+    "instructions": 77244.0,
+    "durations": 58734.0,
+    "cycles": 142640.0,
+    "caches": 4570.0,
+    "cacheMisses": 80.0,
+    "branches": 13224.0,
+    "branchMisses": 2246.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomAdapterInvokedForMapElementDeserialization": {
+    "dataV1": {
+      "energy": 38820.0,
+      "instructions": 1655444.0,
+      "durations": 1382708.0,
+      "cycles": 2460534.0,
+      "caches": 96698.0,
+      "cacheMisses": 4048.0,
+      "branches": 325568.0,
+      "branchMisses": 22122.0
+    },
+    "dataV2": {
+      "energy": 40528.0,
+      "instructions": 1679820.0,
+      "durations": 1444316.0,
+      "cycles": 2553584.0,
+      "caches": 100672.0,
+      "cacheMisses": 4136.0,
+      "branches": 329868.0,
+      "branchMisses": 23492.0
+    },
+    "energy": 1708.0,
+    "instructions": 24376.0,
+    "durations": 61608.0,
+    "cycles": 93050.0,
+    "caches": 3974.0,
+    "cacheMisses": 88.0,
+    "branches": 4300.0,
+    "branchMisses": 1370.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomDeserializerInvokedForPrimitives": {
+    "dataV1": {
+      "energy": 38452.0,
+      "instructions": 1237494.0,
+      "durations": 1146562.0,
+      "cycles": 1917068.0,
+      "caches": 83802.0,
+      "cacheMisses": 3492.0,
+      "branches": 251102.0,
+      "branchMisses": 17126.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1244496.0,
+      "durations": 1144886.0,
+      "cycles": 1939166.0,
+      "caches": 84340.0,
+      "cacheMisses": 3456.0,
+      "branches": 252138.0,
+      "branchMisses": 17578.0
+    },
+    "energy": -38452.0,
+    "instructions": 7002.0,
+    "durations": -1676.0,
+    "cycles": 22098.0,
+    "caches": 538.0,
+    "cacheMisses": -36.0,
+    "branches": 1036.0,
+    "branchMisses": 452.0
+  },
+  "com.google.gson.functional.NullObjectAndFieldTest#testExplicitSerializationOfNullStringMembers": {
+    "dataV1": {
+      "energy": 38574.0,
+      "instructions": 1746304.0,
+      "durations": 1632400.0,
+      "cycles": 3085278.0,
+      "caches": 107636.0,
+      "cacheMisses": 1206.0,
+      "branches": 315810.0,
+      "branchMisses": 31934.0
+    },
+    "dataV2": {
+      "energy": 36986.0,
+      "instructions": 1682258.0,
+      "durations": 1708142.0,
+      "cycles": 2876766.0,
+      "caches": 95470.0,
+      "cacheMisses": 1010.0,
+      "branches": 303214.0,
+      "branchMisses": 29768.0
+    },
+    "energy": -1588.0,
+    "instructions": -64046.0,
+    "durations": 75742.0,
+    "cycles": -208512.0,
+    "caches": -12166.0,
+    "cacheMisses": -196.0,
+    "branches": -12596.0,
+    "branchMisses": -2166.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testDateSerializationWithPattern": {
+    "dataV1": {
+      "energy": 41870.0,
+      "instructions": 1494642.0,
+      "durations": 1670964.0,
+      "cycles": 2450678.0,
+      "caches": 69778.0,
+      "cacheMisses": 3474.0,
+      "branches": 296988.0,
+      "branchMisses": 33284.0
+    },
+    "dataV2": {
+      "energy": 121704.0,
+      "instructions": 1486958.0,
+      "durations": 5559180.0,
+      "cycles": 2487544.0,
+      "caches": 73526.0,
+      "cacheMisses": 3536.0,
+      "branches": 294358.0,
+      "branchMisses": 34598.0
+    },
+    "energy": 79834.0,
+    "instructions": -7684.0,
+    "durations": 3888216.0,
+    "cycles": 36866.0,
+    "caches": 3748.0,
+    "cacheMisses": 62.0,
+    "branches": -2630.0,
+    "branchMisses": 1314.0
+  },
+  "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testRegisteredAdapterOverridesJsonAdapter": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1369074.0,
+      "durations": 1102222.0,
+      "cycles": 1805754.0,
+      "caches": 76558.0,
+      "cacheMisses": 3244.0,
+      "branches": 284412.0,
+      "branchMisses": 16078.0
+    },
+    "dataV2": {
+      "energy": 40404.0,
+      "instructions": 1379654.0,
+      "durations": 1138746.0,
+      "cycles": 1848576.0,
+      "caches": 77874.0,
+      "cacheMisses": 3278.0,
+      "branches": 285984.0,
+      "branchMisses": 16980.0
+    },
+    "energy": 40404.0,
+    "instructions": 10580.0,
+    "durations": 36524.0,
+    "cycles": 42822.0,
+    "caches": 1316.0,
+    "cacheMisses": 34.0,
+    "branches": 1572.0,
+    "branchMisses": 902.0
+  },
+  "com.google.gson.functional.MapAsArrayTypeAdapterTest#testSerializeComplexMapWithTypeAdapter": {
+    "dataV1": {
+      "energy": 83252.0,
+      "instructions": 3772252.0,
+      "durations": 4698950.0,
+      "cycles": 6046278.0,
+      "caches": 246686.0,
+      "cacheMisses": 5276.0,
+      "branches": 720650.0,
+      "branchMisses": 59842.0
+    },
+    "dataV2": {
+      "energy": 121460.0,
+      "instructions": 3779382.0,
+      "durations": 5271672.0,
+      "cycles": 6053584.0,
+      "caches": 246618.0,
+      "cacheMisses": 5224.0,
+      "branches": 721864.0,
+      "branchMisses": 60050.0
+    },
+    "energy": 38208.0,
+    "instructions": 7130.0,
+    "durations": 572722.0,
+    "cycles": 7306.0,
+    "caches": -68.0,
+    "cacheMisses": -52.0,
+    "branches": 1214.0,
+    "branchMisses": 208.0
+  },
+  "com.google.gson.functional.ReadersWritersTest#testTopLevelNullObjectSerializationWithWriterAndSerializeNulls": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 572352.0,
+      "durations": 589366.0,
+      "cycles": 892416.0,
+      "caches": 44510.0,
+      "cacheMisses": 2980.0,
+      "branches": 120470.0,
+      "branchMisses": 6010.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 558098.0,
+      "durations": 585252.0,
+      "cycles": 766916.0,
+      "caches": 36962.0,
+      "cacheMisses": 2918.0,
+      "branches": 117268.0,
+      "branchMisses": 4604.0
+    },
+    "energy": 0.0,
+    "instructions": -14254.0,
+    "durations": -4114.0,
+    "cycles": -125500.0,
+    "caches": -7548.0,
+    "cacheMisses": -62.0,
+    "branches": -3202.0,
+    "branchMisses": -1406.0
+  },
+  "com.google.gson.functional.JsonAdapterAnnotationOnFieldsTest#testFieldAnnotationTakesPrecedenceOverRegisteredTypeAdapter": {
+    "dataV1": {
+      "energy": 369872.0,
+      "instructions": 1.029944E7,
+      "durations": 1.7905984E7,
+      "cycles": 1.260593E7,
+      "caches": 393422.0,
+      "cacheMisses": 16602.0,
+      "branches": 1927374.0,
+      "branchMisses": 114406.0
+    },
+    "dataV2": {
+      "energy": 370360.0,
+      "instructions": 1.0300044E7,
+      "durations": 1.8306776E7,
+      "cycles": 1.2741282E7,
+      "caches": 397566.0,
+      "cacheMisses": 16552.0,
+      "branches": 1930198.0,
+      "branchMisses": 116534.0
+    },
+    "energy": 488.0,
+    "instructions": 604.0,
+    "durations": 400792.0,
+    "cycles": 135352.0,
+    "caches": 4144.0,
+    "cacheMisses": -50.0,
+    "branches": 2824.0,
+    "branchMisses": 2128.0
+  },
+  "com.google.gson.functional.ReadersWritersTest#testTypeMismatchThrowsJsonSyntaxExceptionForStrings": {
+    "dataV1": {
+      "energy": 38818.0,
+      "instructions": 1450258.0,
+      "durations": 1355774.0,
+      "cycles": 2148836.0,
+      "caches": 89204.0,
+      "cacheMisses": 3994.0,
+      "branches": 287830.0,
+      "branchMisses": 19084.0
+    },
+    "dataV2": {
+      "energy": 39428.0,
+      "instructions": 1471730.0,
+      "durations": 1399854.0,
+      "cycles": 2237242.0,
+      "caches": 93444.0,
+      "cacheMisses": 4150.0,
+      "branches": 291954.0,
+      "branchMisses": 20000.0
+    },
+    "energy": 610.0,
+    "instructions": 21472.0,
+    "durations": 44080.0,
+    "cycles": 88406.0,
+    "caches": 4240.0,
+    "cacheMisses": 156.0,
+    "branches": 4124.0,
+    "branchMisses": 916.0
+  },
+  "com.google.gson.functional.MapTest#testMapSubclassDeserialization": {
+    "dataV1": {
+      "energy": 41870.0,
+      "instructions": 2281322.0,
+      "durations": 1907274.0,
+      "cycles": 3435184.0,
+      "caches": 127796.0,
+      "cacheMisses": 7702.0,
+      "branches": 446968.0,
+      "branchMisses": 31934.0
+    },
+    "dataV2": {
+      "energy": 41260.0,
+      "instructions": 2262244.0,
+      "durations": 1815298.0,
+      "cycles": 3390930.0,
+      "caches": 125568.0,
+      "cacheMisses": 7746.0,
+      "branches": 442192.0,
+      "branchMisses": 30738.0
+    },
+    "energy": -610.0,
+    "instructions": -19078.0,
+    "durations": -91976.0,
+    "cycles": -44254.0,
+    "caches": -2228.0,
+    "cacheMisses": 44.0,
+    "branches": -4776.0,
+    "branchMisses": -1196.0
+  },
+  "com.google.gson.functional.ReadersWritersTest#testTopLevelNullObjectDeserializationWithReaderAndSerializeNulls": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 610904.0,
+      "durations": 672404.0,
+      "cycles": 908286.0,
+      "caches": 43316.0,
+      "cacheMisses": 2962.0,
+      "branches": 127236.0,
+      "branchMisses": 6394.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 611006.0,
+      "durations": 684460.0,
+      "cycles": 917176.0,
+      "caches": 43408.0,
+      "cacheMisses": 3000.0,
+      "branches": 127332.0,
+      "branchMisses": 6616.0
+    },
+    "energy": 0.0,
+    "instructions": 102.0,
+    "durations": 12056.0,
+    "cycles": 8890.0,
+    "caches": 92.0,
+    "cacheMisses": 38.0,
+    "branches": 96.0,
+    "branchMisses": 222.0
+  },
+  "com.google.gson.MixedStreamTest#testWriteHtmlSafe": {
+    "dataV1": {
+      "energy": 38940.0,
+      "instructions": 1708146.0,
+      "durations": 1458756.0,
+      "cycles": 2600550.0,
+      "caches": 103996.0,
+      "cacheMisses": 3560.0,
+      "branches": 330486.0,
+      "branchMisses": 24162.0
+    },
+    "dataV2": {
+      "energy": 38698.0,
+      "instructions": 1703198.0,
+      "durations": 1449592.0,
+      "cycles": 2616594.0,
+      "caches": 104726.0,
+      "cacheMisses": 3572.0,
+      "branches": 329236.0,
+      "branchMisses": 24668.0
+    },
+    "energy": -242.0,
+    "instructions": -4948.0,
+    "durations": -9164.0,
+    "cycles": 16044.0,
+    "caches": 730.0,
+    "cacheMisses": 12.0,
+    "branches": -1250.0,
+    "branchMisses": 506.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testRegisterHierarchyAdapterForDate": {
+    "dataV1": {
+      "energy": 41138.0,
+      "instructions": 2753582.0,
+      "durations": 1827770.0,
+      "cycles": 3544094.0,
+      "caches": 122790.0,
+      "cacheMisses": 6106.0,
+      "branches": 567556.0,
+      "branchMisses": 30344.0
+    },
+    "dataV2": {
+      "energy": 40528.0,
+      "instructions": 1737166.0,
+      "durations": 1375928.0,
+      "cycles": 2540236.0,
+      "caches": 99056.0,
+      "cacheMisses": 4236.0,
+      "branches": 356394.0,
+      "branchMisses": 23948.0
+    },
+    "energy": -610.0,
+    "instructions": -1016416.0,
+    "durations": -451842.0,
+    "cycles": -1003858.0,
+    "caches": -23734.0,
+    "cacheMisses": -1870.0,
+    "branches": -211162.0,
+    "branchMisses": -6396.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testDefaultCalendarSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 679764.0,
+      "durations": 725362.0,
+      "cycles": 1014708.0,
+      "caches": 43622.0,
+      "cacheMisses": 2948.0,
+      "branches": 140380.0,
+      "branchMisses": 8712.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 679596.0,
+      "durations": 723372.0,
+      "cycles": 1014116.0,
+      "caches": 43320.0,
+      "cacheMisses": 2974.0,
+      "branches": 140222.0,
+      "branchMisses": 8726.0
+    },
+    "energy": 0.0,
+    "instructions": -168.0,
+    "durations": -1990.0,
+    "cycles": -592.0,
+    "caches": -302.0,
+    "cacheMisses": 26.0,
+    "branches": -158.0,
+    "branchMisses": 14.0
+  },
+  "com.google.gson.functional.MapTest#testMapSerializationWithNullValuesSerialized": {
+    "dataV1": {
+      "energy": 41382.0,
+      "instructions": 3151206.0,
+      "durations": 2680136.0,
+      "cycles": 4761252.0,
+      "caches": 183190.0,
+      "cacheMisses": 9760.0,
+      "branches": 616754.0,
+      "branchMisses": 41832.0
+    },
+    "dataV2": {
+      "energy": 41260.0,
+      "instructions": 2939048.0,
+      "durations": 2610678.0,
+      "cycles": 4540548.0,
+      "caches": 176804.0,
+      "cacheMisses": 9564.0,
+      "branches": 581676.0,
+      "branchMisses": 40478.0
+    },
+    "energy": -122.0,
+    "instructions": -212158.0,
+    "durations": -69458.0,
+    "cycles": -220704.0,
+    "caches": -6386.0,
+    "cacheMisses": -196.0,
+    "branches": -35078.0,
+    "branchMisses": -1354.0
+  },
+  "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testRegisteredDeserializerOverridesJsonAdapter": {
+    "dataV1": {
+      "energy": 41260.0,
+      "instructions": 3105914.0,
+      "durations": 2282610.0,
+      "cycles": 4336414.0,
+      "caches": 174812.0,
+      "cacheMisses": 6572.0,
+      "branches": 617320.0,
+      "branchMisses": 38678.0
+    },
+    "dataV2": {
+      "energy": 41626.0,
+      "instructions": 3120308.0,
+      "durations": 2301280.0,
+      "cycles": 4408256.0,
+      "caches": 177648.0,
+      "cacheMisses": 6188.0,
+      "branches": 618904.0,
+      "branchMisses": 40292.0
+    },
+    "energy": 366.0,
+    "instructions": 14394.0,
+    "durations": 18670.0,
+    "cycles": 71842.0,
+    "caches": 2836.0,
+    "cacheMisses": -384.0,
+    "branches": 1584.0,
+    "branchMisses": 1614.0
+  },
+  "com.google.gson.functional.VersioningTest#testVersionedClassesSerialization": {
+    "dataV1": {
+      "energy": 38940.0,
+      "instructions": 1389470.0,
+      "durations": 1206478.0,
+      "cycles": 2095024.0,
+      "caches": 81620.0,
+      "cacheMisses": 3104.0,
+      "branches": 270802.0,
+      "branchMisses": 18974.0
+    },
+    "dataV2": {
+      "energy": 38208.0,
+      "instructions": 1416076.0,
+      "durations": 1277542.0,
+      "cycles": 2190962.0,
+      "caches": 86792.0,
+      "cacheMisses": 3202.0,
+      "branches": 274780.0,
+      "branchMisses": 19932.0
+    },
+    "energy": -732.0,
+    "instructions": 26606.0,
+    "durations": 71064.0,
+    "cycles": 95938.0,
+    "caches": 5172.0,
+    "cacheMisses": 98.0,
+    "branches": 3978.0,
+    "branchMisses": 958.0
+  },
+  "com.google.gson.functional.CollectionTest#testUserCollectionTypeAdapter": {
+    "dataV1": {
+      "energy": 371826.0,
+      "instructions": 1.449928E7,
+      "durations": 2.4490802E7,
+      "cycles": 1.7311292E7,
+      "caches": 514078.0,
+      "cacheMisses": 20188.0,
+      "branches": 2890406.0,
+      "branchMisses": 155226.0
+    },
+    "dataV2": {
+      "energy": 243896.0,
+      "instructions": 1.444153E7,
+      "durations": 1.4110116E7,
+      "cycles": 1.7456926E7,
+      "caches": 513806.0,
+      "cacheMisses": 20310.0,
+      "branches": 2879726.0,
+      "branchMisses": 157344.0
+    },
+    "energy": -127930.0,
+    "instructions": -57750.0,
+    "durations": -1.0380686E7,
+    "cycles": 145634.0,
+    "caches": -272.0,
+    "cacheMisses": 122.0,
+    "branches": -10680.0,
+    "branchMisses": 2118.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testDefaultCalendarDeserialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 817722.0,
+      "durations": 785718.0,
+      "cycles": 1178442.0,
+      "caches": 42456.0,
+      "cacheMisses": 3338.0,
+      "branches": 168694.0,
+      "branchMisses": 11390.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 817796.0,
+      "durations": 789202.0,
+      "cycles": 1181356.0,
+      "caches": 42500.0,
+      "cacheMisses": 3336.0,
+      "branches": 168686.0,
+      "branchMisses": 11462.0
+    },
+    "energy": 0.0,
+    "instructions": 74.0,
+    "durations": 3484.0,
+    "cycles": 2914.0,
+    "caches": 44.0,
+    "cacheMisses": -2.0,
+    "branches": -8.0,
+    "branchMisses": 72.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomSerializers": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 842746.0,
+      "durations": 826116.0,
+      "cycles": 1279322.0,
+      "caches": 53910.0,
+      "cacheMisses": 2974.0,
+      "branches": 176526.0,
+      "branchMisses": 10738.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 843704.0,
+      "durations": 829548.0,
+      "cycles": 1274988.0,
+      "caches": 53806.0,
+      "cacheMisses": 2968.0,
+      "branches": 176712.0,
+      "branchMisses": 10858.0
+    },
+    "energy": 0.0,
+    "instructions": 958.0,
+    "durations": 3432.0,
+    "cycles": -4334.0,
+    "caches": -104.0,
+    "cacheMisses": -6.0,
+    "branches": 186.0,
+    "branchMisses": 120.0
+  },
+  "com.google.gson.functional.MapTest#testGeneralMapField": {
+    "dataV1": {
+      "energy": 41016.0,
+      "instructions": 2308620.0,
+      "durations": 1768984.0,
+      "cycles": 3406950.0,
+      "caches": 139738.0,
+      "cacheMisses": 4018.0,
+      "branches": 439322.0,
+      "branchMisses": 30172.0
+    },
+    "dataV2": {
+      "energy": 40894.0,
+      "instructions": 2311954.0,
+      "durations": 1765224.0,
+      "cycles": 3434022.0,
+      "caches": 141832.0,
+      "cacheMisses": 4020.0,
+      "branches": 440118.0,
+      "branchMisses": 30540.0
+    },
+    "energy": -122.0,
+    "instructions": 3334.0,
+    "durations": -3760.0,
+    "cycles": 27072.0,
+    "caches": 2094.0,
+    "cacheMisses": 2.0,
+    "branches": 796.0,
+    "branchMisses": 368.0
+  },
+  "com.google.gson.functional.MapTest#testCustomSerializerForSpecificMapType": {
+    "dataV1": {
+      "energy": 41382.0,
+      "instructions": 1751682.0,
+      "durations": 2021590.0,
+      "cycles": 2571040.0,
+      "caches": 97864.0,
+      "cacheMisses": 5962.0,
+      "branches": 353240.0,
+      "branchMisses": 22538.0
+    },
+    "dataV2": {
+      "energy": 41016.0,
+      "instructions": 1754964.0,
+      "durations": 1995946.0,
+      "cycles": 2571922.0,
+      "caches": 98336.0,
+      "cacheMisses": 6060.0,
+      "branches": 353746.0,
+      "branchMisses": 22682.0
+    },
+    "energy": -366.0,
+    "instructions": 3282.0,
+    "durations": -25644.0,
+    "cycles": 882.0,
+    "caches": 472.0,
+    "cacheMisses": 98.0,
+    "branches": 506.0,
+    "branchMisses": 144.0
+  },
+  "com.google.gson.functional.ExclusionStrategyFunctionalTest#testExclusionStrategyWithMode": {
+    "dataV1": {
+      "energy": 165648.0,
+      "instructions": 1241476.0,
+      "durations": 8103422.0,
+      "cycles": 2264144.0,
+      "caches": 97258.0,
+      "cacheMisses": 3982.0,
+      "branches": 245084.0,
+      "branchMisses": 20958.0
+    },
+    "dataV2": {
+      "energy": 165162.0,
+      "instructions": 1240798.0,
+      "durations": 8087666.0,
+      "cycles": 2255438.0,
+      "caches": 97732.0,
+      "cacheMisses": 4006.0,
+      "branches": 244788.0,
+      "branchMisses": 20856.0
+    },
+    "energy": -486.0,
+    "instructions": -678.0,
+    "durations": -15756.0,
+    "cycles": -8706.0,
+    "caches": 474.0,
+    "cacheMisses": 24.0,
+    "branches": -296.0,
+    "branchMisses": -102.0
+  },
+  "com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeDeserialization": {
+    "dataV1": {
+      "energy": 41748.0,
+      "instructions": 3261490.0,
+      "durations": 4051362.0,
+      "cycles": 5493360.0,
+      "caches": 184318.0,
+      "cacheMisses": 1672.0,
+      "branches": 596464.0,
+      "branchMisses": 63048.0
+    },
+    "dataV2": {
+      "energy": 41382.0,
+      "instructions": 3277026.0,
+      "durations": 3581522.0,
+      "cycles": 5542236.0,
+      "caches": 186434.0,
+      "cacheMisses": 1790.0,
+      "branches": 598044.0,
+      "branchMisses": 64166.0
+    },
+    "energy": -366.0,
+    "instructions": 15536.0,
+    "durations": -469840.0,
+    "cycles": 48876.0,
+    "caches": 2116.0,
+    "cacheMisses": 118.0,
+    "branches": 1580.0,
+    "branchMisses": 1118.0
+  },
+  "com.google.gson.functional.VersioningTest#testVersionedClassesDeserialization": {
+    "dataV1": {
+      "energy": 165404.0,
+      "instructions": 2029390.0,
+      "durations": 7596932.0,
+      "cycles": 3716152.0,
+      "caches": 150996.0,
+      "cacheMisses": 3978.0,
+      "branches": 387406.0,
+      "branchMisses": 38998.0
+    },
+    "dataV2": {
+      "energy": 167724.0,
+      "instructions": 2086736.0,
+      "durations": 8808706.0,
+      "cycles": 3794676.0,
+      "caches": 152050.0,
+      "cacheMisses": 4002.0,
+      "branches": 394952.0,
+      "branchMisses": 38744.0
+    },
+    "energy": 2320.0,
+    "instructions": 57346.0,
+    "durations": 1211774.0,
+    "cycles": 78524.0,
+    "caches": 1054.0,
+    "cacheMisses": 24.0,
+    "branches": 7546.0,
+    "branchMisses": -254.0
+  },
+  "com.google.gson.GsonBuilderTest#testExcludeFieldsWithModifiers": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1223994.0,
+      "durations": 1109236.0,
+      "cycles": 1882492.0,
+      "caches": 86216.0,
+      "cacheMisses": 3248.0,
+      "branches": 246040.0,
+      "branchMisses": 15508.0
+    },
+    "dataV2": {
+      "energy": 37964.0,
+      "instructions": 1361256.0,
+      "durations": 1197312.0,
+      "cycles": 2046692.0,
+      "caches": 91946.0,
+      "cacheMisses": 3606.0,
+      "branches": 269238.0,
+      "branchMisses": 16980.0
+    },
+    "energy": 37964.0,
+    "instructions": 137262.0,
+    "durations": 88076.0,
+    "cycles": 164200.0,
+    "caches": 5730.0,
+    "cacheMisses": 358.0,
+    "branches": 23198.0,
+    "branchMisses": 1472.0
+  },
+  "com.google.gson.functional.InstanceCreatorTest#testInstanceCreatorReturnsSubTypeForField": {
+    "dataV1": {
+      "energy": 41504.0,
+      "instructions": 2325432.0,
+      "durations": 2033734.0,
+      "cycles": 3825548.0,
+      "caches": 142362.0,
+      "cacheMisses": 4690.0,
+      "branches": 438688.0,
+      "branchMisses": 36254.0
+    },
+    "dataV2": {
+      "energy": 82884.0,
+      "instructions": 2205750.0,
+      "durations": 4359888.0,
+      "cycles": 3787738.0,
+      "caches": 145418.0,
+      "cacheMisses": 4444.0,
+      "branches": 419586.0,
+      "branchMisses": 37348.0
+    },
+    "energy": 41380.0,
+    "instructions": -119682.0,
+    "durations": 2326154.0,
+    "cycles": -37810.0,
+    "caches": 3056.0,
+    "cacheMisses": -246.0,
+    "branches": -19102.0,
+    "branchMisses": 1094.0
+  },
+  "com.google.gson.functional.PrimitiveTest#testNegativeInfinitySerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 544874.0,
+      "durations": 607376.0,
+      "cycles": 778714.0,
+      "caches": 37350.0,
+      "cacheMisses": 2994.0,
+      "branches": 115468.0,
+      "branchMisses": 4888.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 544964.0,
+      "durations": 612354.0,
+      "cycles": 785724.0,
+      "caches": 37588.0,
+      "cacheMisses": 2996.0,
+      "branches": 115494.0,
+      "branchMisses": 5074.0
+    },
+    "energy": 0.0,
+    "instructions": 90.0,
+    "durations": 4978.0,
+    "cycles": 7010.0,
+    "caches": 238.0,
+    "cacheMisses": 2.0,
+    "branches": 26.0,
+    "branchMisses": 186.0
+  },
+  "com.google.gson.functional.NullObjectAndFieldTest#testPrintPrintingObjectWithNulls": {
+    "dataV1": {
+      "energy": 41260.0,
+      "instructions": 2568336.0,
+      "durations": 2759742.0,
+      "cycles": 4534832.0,
+      "caches": 165340.0,
+      "cacheMisses": 1450.0,
+      "branches": 463426.0,
+      "branchMisses": 46464.0
+    },
+    "dataV2": {
+      "energy": 41624.0,
+      "instructions": 2564980.0,
+      "durations": 2746698.0,
+      "cycles": 4495078.0,
+      "caches": 164872.0,
+      "cacheMisses": 1436.0,
+      "branches": 462410.0,
+      "branchMisses": 45608.0
+    },
+    "energy": 364.0,
+    "instructions": -3356.0,
+    "durations": -13044.0,
+    "cycles": -39754.0,
+    "caches": -468.0,
+    "cacheMisses": -14.0,
+    "branches": -1016.0,
+    "branchMisses": -856.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testDateDeserializationWithPattern": {
+    "dataV1": {
+      "energy": 41382.0,
+      "instructions": 2056098.0,
+      "durations": 1862792.0,
+      "cycles": 3158098.0,
+      "caches": 77624.0,
+      "cacheMisses": 4308.0,
+      "branches": 404988.0,
+      "branchMisses": 43672.0
+    },
+    "dataV2": {
+      "energy": 41138.0,
+      "instructions": 2058440.0,
+      "durations": 1893724.0,
+      "cycles": 3185732.0,
+      "caches": 78236.0,
+      "cacheMisses": 4322.0,
+      "branches": 405778.0,
+      "branchMisses": 44062.0
+    },
+    "energy": -244.0,
+    "instructions": 2342.0,
+    "durations": 30932.0,
+    "cycles": 27634.0,
+    "caches": 612.0,
+    "cacheMisses": 14.0,
+    "branches": 790.0,
+    "branchMisses": 390.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomSerializerInvokedForPrimitives": {
+    "dataV1": {
+      "energy": 40648.0,
+      "instructions": 1285544.0,
+      "durations": 1649114.0,
+      "cycles": 1920722.0,
+      "caches": 84076.0,
+      "cacheMisses": 3246.0,
+      "branches": 264486.0,
+      "branchMisses": 17604.0
+    },
+    "dataV2": {
+      "energy": 41260.0,
+      "instructions": 1296416.0,
+      "durations": 1669724.0,
+      "cycles": 1971922.0,
+      "caches": 85912.0,
+      "cacheMisses": 3300.0,
+      "branches": 266336.0,
+      "branchMisses": 18392.0
+    },
+    "energy": 612.0,
+    "instructions": 10872.0,
+    "durations": 20610.0,
+    "cycles": 51200.0,
+    "caches": 1836.0,
+    "cacheMisses": 54.0,
+    "branches": 1850.0,
+    "branchMisses": 788.0
+  },
+  "com.google.gson.GsonTypeAdapterTest#testDeserializerForAbstractClass": {
+    "dataV1": {
+      "energy": 123412.0,
+      "instructions": 5168486.0,
+      "durations": 6205130.0,
+      "cycles": 7929914.0,
+      "caches": 307508.0,
+      "cacheMisses": 6444.0,
+      "branches": 978336.0,
+      "branchMisses": 76292.0
+    },
+    "dataV2": {
+      "energy": 123778.0,
+      "instructions": 5170934.0,
+      "durations": 6316712.0,
+      "cycles": 7941502.0,
+      "caches": 306998.0,
+      "cacheMisses": 6470.0,
+      "branches": 978320.0,
+      "branchMisses": 77172.0
+    },
+    "energy": 366.0,
+    "instructions": 2448.0,
+    "durations": 111582.0,
+    "cycles": 11588.0,
+    "caches": -510.0,
+    "cacheMisses": 26.0,
+    "branches": -16.0,
+    "branchMisses": 880.0
+  },
+  "com.google.gson.functional.ExclusionStrategyFunctionalTest#testExclusionStrategyDeserialization": {
+    "dataV1": {
+      "energy": 41260.0,
+      "instructions": 994500.0,
+      "durations": 1919396.0,
+      "cycles": 1638470.0,
+      "caches": 74944.0,
+      "cacheMisses": 3264.0,
+      "branches": 198392.0,
+      "branchMisses": 13426.0
+    },
+    "dataV2": {
+      "energy": 41136.0,
+      "instructions": 993778.0,
+      "durations": 1909692.0,
+      "cycles": 1645610.0,
+      "caches": 75020.0,
+      "cacheMisses": 3322.0,
+      "branches": 198430.0,
+      "branchMisses": 13468.0
+    },
+    "energy": -124.0,
+    "instructions": -722.0,
+    "durations": -9704.0,
+    "cycles": 7140.0,
+    "caches": 76.0,
+    "cacheMisses": 58.0,
+    "branches": 38.0,
+    "branchMisses": 42.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testTimestampSerialization": {
+    "dataV1": {
+      "energy": 41504.0,
+      "instructions": 2814016.0,
+      "durations": 2385260.0,
+      "cycles": 3777890.0,
+      "caches": 97466.0,
+      "cacheMisses": 4736.0,
+      "branches": 573696.0,
+      "branchMisses": 48932.0
+    },
+    "dataV2": {
+      "energy": 42114.0,
+      "instructions": 2851504.0,
+      "durations": 3244738.0,
+      "cycles": 3932970.0,
+      "caches": 105000.0,
+      "cacheMisses": 4900.0,
+      "branches": 579916.0,
+      "branchMisses": 51022.0
+    },
+    "energy": 610.0,
+    "instructions": 37488.0,
+    "durations": 859478.0,
+    "cycles": 155080.0,
+    "caches": 7534.0,
+    "cacheMisses": 164.0,
+    "branches": 6220.0,
+    "branchMisses": 2090.0
+  },
+  "com.google.gson.functional.EnumTest#testClassWithEnumFieldDeserialization": {
+    "dataV1": {
+      "energy": 41138.0,
+      "instructions": 2718830.0,
+      "durations": 2110030.0,
+      "cycles": 3986292.0,
+      "caches": 172534.0,
+      "cacheMisses": 4382.0,
+      "branches": 549988.0,
+      "branchMisses": 34140.0
+    },
+    "dataV2": {
+      "energy": 40894.0,
+      "instructions": 2737984.0,
+      "durations": 2128326.0,
+      "cycles": 4076530.0,
+      "caches": 176984.0,
+      "cacheMisses": 4432.0,
+      "branches": 553962.0,
+      "branchMisses": 35798.0
+    },
+    "energy": -244.0,
+    "instructions": 19154.0,
+    "durations": 18296.0,
+    "cycles": 90238.0,
+    "caches": 4450.0,
+    "cacheMisses": 50.0,
+    "branches": 3974.0,
+    "branchMisses": 1658.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomByteArrayDeserializerAndInstanceCreator": {
+    "dataV1": {
+      "energy": 41016.0,
+      "instructions": 3460582.0,
+      "durations": 2045910.0,
+      "cycles": 3154944.0,
+      "caches": 93418.0,
+      "cacheMisses": 4504.0,
+      "branches": 682812.0,
+      "branchMisses": 21430.0
+    },
+    "dataV2": {
+      "energy": 40772.0,
+      "instructions": 3471510.0,
+      "durations": 2068974.0,
+      "cycles": 3198340.0,
+      "caches": 95342.0,
+      "cacheMisses": 4474.0,
+      "branches": 684514.0,
+      "branchMisses": 22062.0
+    },
+    "energy": -244.0,
+    "instructions": 10928.0,
+    "durations": 23064.0,
+    "cycles": 43396.0,
+    "caches": 1924.0,
+    "cacheMisses": -30.0,
+    "branches": 1702.0,
+    "branchMisses": 632.0
+  },
+  "com.google.gson.functional.NamingPolicyTest#testGsonWithNonDefaultFieldNamingPolicySerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1155842.0,
+      "durations": 1076772.0,
+      "cycles": 1879782.0,
+      "caches": 78990.0,
+      "cacheMisses": 3940.0,
+      "branches": 232348.0,
+      "branchMisses": 15542.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1156800.0,
+      "durations": 1077876.0,
+      "cycles": 1874470.0,
+      "caches": 79406.0,
+      "cacheMisses": 3924.0,
+      "branches": 232428.0,
+      "branchMisses": 15580.0
+    },
+    "energy": 0.0,
+    "instructions": 958.0,
+    "durations": 1104.0,
+    "cycles": -5312.0,
+    "caches": 416.0,
+    "cacheMisses": -16.0,
+    "branches": 80.0,
+    "branchMisses": 38.0
+  },
+  "com.google.gson.GsonBuilderTest#testCreatingMoreThanOnce": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 550516.0,
+      "durations": 547248.0,
+      "cycles": 645612.0,
+      "caches": 29048.0,
+      "cacheMisses": 2778.0,
+      "branches": 115346.0,
+      "branchMisses": 3860.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 550438.0,
+      "durations": 544274.0,
+      "cycles": 642930.0,
+      "caches": 28940.0,
+      "cacheMisses": 2796.0,
+      "branches": 115386.0,
+      "branchMisses": 3912.0
+    },
+    "energy": 0.0,
+    "instructions": -78.0,
+    "durations": -2974.0,
+    "cycles": -2682.0,
+    "caches": -108.0,
+    "cacheMisses": 18.0,
+    "branches": 40.0,
+    "branchMisses": 52.0
+  },
+  "com.google.gson.functional.StreamingTypeAdaptersTest#testDeserializeWithCustomTypeAdapter": {
+    "dataV1": {
+      "energy": 40894.0,
+      "instructions": 2264872.0,
+      "durations": 2050854.0,
+      "cycles": 3199056.0,
+      "caches": 110658.0,
+      "cacheMisses": 4350.0,
+      "branches": 450702.0,
+      "branchMisses": 30594.0
+    },
+    "dataV2": {
+      "energy": 41260.0,
+      "instructions": 2264844.0,
+      "durations": 2072392.0,
+      "cycles": 3216126.0,
+      "caches": 111640.0,
+      "cacheMisses": 4376.0,
+      "branches": 450770.0,
+      "branchMisses": 30846.0
+    },
+    "energy": 366.0,
+    "instructions": -28.0,
+    "durations": 21538.0,
+    "cycles": 17070.0,
+    "caches": 982.0,
+    "cacheMisses": 26.0,
+    "branches": 68.0,
+    "branchMisses": 252.0
+  },
+  "com.google.gson.functional.InstanceCreatorTest#testInstanceCreatorReturnsSubTypeForTopLevelObject": {
+    "dataV1": {
+      "energy": 40772.0,
+      "instructions": 1848406.0,
+      "durations": 1453428.0,
+      "cycles": 3107436.0,
+      "caches": 130958.0,
+      "cacheMisses": 2464.0,
+      "branches": 351954.0,
+      "branchMisses": 29546.0
+    },
+    "dataV2": {
+      "energy": 41504.0,
+      "instructions": 1833388.0,
+      "durations": 2827446.0,
+      "cycles": 3276360.0,
+      "caches": 141430.0,
+      "cacheMisses": 2572.0,
+      "branches": 351526.0,
+      "branchMisses": 32040.0
+    },
+    "energy": 732.0,
+    "instructions": -15018.0,
+    "durations": 1374018.0,
+    "cycles": 168924.0,
+    "caches": 10472.0,
+    "cacheMisses": 108.0,
+    "branches": -428.0,
+    "branchMisses": 2494.0
+  },
+  "com.google.gson.functional.NamingPolicyTest#testDeprecatedNamingStrategy": {
+    "dataV1": {
+      "energy": 39794.0,
+      "instructions": 1851746.0,
+      "durations": 1465804.0,
+      "cycles": 2653890.0,
+      "caches": 109226.0,
+      "cacheMisses": 4314.0,
+      "branches": 360366.0,
+      "branchMisses": 23726.0
+    },
+    "dataV2": {
+      "energy": 38818.0,
+      "instructions": 1858730.0,
+      "durations": 1479196.0,
+      "cycles": 2681314.0,
+      "caches": 110426.0,
+      "cacheMisses": 4286.0,
+      "branches": 361876.0,
+      "branchMisses": 24252.0
+    },
+    "energy": -976.0,
+    "instructions": 6984.0,
+    "durations": 13392.0,
+    "cycles": 27424.0,
+    "caches": 1200.0,
+    "cacheMisses": -28.0,
+    "branches": 1510.0,
+    "branchMisses": 526.0
+  },
+  "com.google.gson.functional.ExclusionStrategyFunctionalTest#testExcludeTopLevelClassDeserializationDoesNotImpactSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1438144.0,
+      "durations": 1003418.0,
+      "cycles": 1701406.0,
+      "caches": 67806.0,
+      "cacheMisses": 3426.0,
+      "branches": 270584.0,
+      "branchMisses": 12742.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1436310.0,
+      "durations": 1002822.0,
+      "cycles": 1694980.0,
+      "caches": 67922.0,
+      "cacheMisses": 3416.0,
+      "branches": 270418.0,
+      "branchMisses": 12750.0
+    },
+    "energy": 0.0,
+    "instructions": -1834.0,
+    "durations": -596.0,
+    "cycles": -6426.0,
+    "caches": 116.0,
+    "cacheMisses": -10.0,
+    "branches": -166.0,
+    "branchMisses": 8.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomDeserializers": {
+    "dataV1": {
+      "energy": 37962.0,
+      "instructions": 1606324.0,
+      "durations": 1293958.0,
+      "cycles": 2233922.0,
+      "caches": 86962.0,
+      "cacheMisses": 4186.0,
+      "branches": 334864.0,
+      "branchMisses": 20582.0
+    },
+    "dataV2": {
+      "energy": 41626.0,
+      "instructions": 1625632.0,
+      "durations": 2729440.0,
+      "cycles": 2369978.0,
+      "caches": 93924.0,
+      "cacheMisses": 4146.0,
+      "branches": 339470.0,
+      "branchMisses": 22664.0
+    },
+    "energy": 3664.0,
+    "instructions": 19308.0,
+    "durations": 1435482.0,
+    "cycles": 136056.0,
+    "caches": 6962.0,
+    "cacheMisses": -40.0,
+    "branches": 4606.0,
+    "branchMisses": 2082.0
+  },
+  "com.google.gson.functional.PrimitiveTest#testPrimitiveDoubleAutoboxedInASingleElementArraySerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 701850.0,
+      "durations": 783878.0,
+      "cycles": 1176606.0,
+      "caches": 49460.0,
+      "cacheMisses": 4432.0,
+      "branches": 143682.0,
+      "branchMisses": 9910.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 702162.0,
+      "durations": 778560.0,
+      "cycles": 1175380.0,
+      "caches": 49672.0,
+      "cacheMisses": 4412.0,
+      "branches": 143776.0,
+      "branchMisses": 9936.0
+    },
+    "energy": 0.0,
+    "instructions": 312.0,
+    "durations": -5318.0,
+    "cycles": -1226.0,
+    "caches": 212.0,
+    "cacheMisses": -20.0,
+    "branches": 94.0,
+    "branchMisses": 26.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testPropertiesSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 640650.0,
+      "durations": 770146.0,
+      "cycles": 1129894.0,
+      "caches": 48244.0,
+      "cacheMisses": 5528.0,
+      "branches": 137002.0,
+      "branchMisses": 7390.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 638646.0,
+      "durations": 761782.0,
+      "cycles": 1109694.0,
+      "caches": 47864.0,
+      "cacheMisses": 5526.0,
+      "branches": 136610.0,
+      "branchMisses": 7228.0
+    },
+    "energy": 0.0,
+    "instructions": -2004.0,
+    "durations": -8364.0,
+    "cycles": -20200.0,
+    "caches": -380.0,
+    "cacheMisses": -2.0,
+    "branches": -392.0,
+    "branchMisses": -162.0
+  },
+  "com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypesSerialization": {
+    "dataV1": {
+      "energy": 41260.0,
+      "instructions": 2255332.0,
+      "durations": 4445452.0,
+      "cycles": 4142436.0,
+      "caches": 145744.0,
+      "cacheMisses": 1490.0,
+      "branches": 411334.0,
+      "branchMisses": 47904.0
+    },
+    "dataV2": {
+      "energy": 41260.0,
+      "instructions": 2275058.0,
+      "durations": 2813510.0,
+      "cycles": 4093954.0,
+      "caches": 145580.0,
+      "cacheMisses": 1534.0,
+      "branches": 414558.0,
+      "branchMisses": 46954.0
+    },
+    "energy": 0.0,
+    "instructions": 19726.0,
+    "durations": -1631942.0,
+    "cycles": -48482.0,
+    "caches": -164.0,
+    "cacheMisses": 44.0,
+    "branches": 3224.0,
+    "branchMisses": -950.0
+  },
+  "com.google.gson.functional.ObjectTest#testAnonymousLocalClassesCustomSerialization": {
+    "dataV1": {
+      "energy": 40284.0,
+      "instructions": 2380464.0,
+      "durations": 1784268.0,
+      "cycles": 3291774.0,
+      "caches": 133718.0,
+      "cacheMisses": 4816.0,
+      "branches": 483686.0,
+      "branchMisses": 28134.0
+    },
+    "dataV2": {
+      "energy": 40040.0,
+      "instructions": 2386854.0,
+      "durations": 1808584.0,
+      "cycles": 3335450.0,
+      "caches": 134968.0,
+      "cacheMisses": 4678.0,
+      "branches": 485050.0,
+      "branchMisses": 28932.0
+    },
+    "energy": -244.0,
+    "instructions": 6390.0,
+    "durations": 24316.0,
+    "cycles": 43676.0,
+    "caches": 1250.0,
+    "cacheMisses": -138.0,
+    "branches": 1364.0,
+    "branchMisses": 798.0
+  },
+  "com.google.gson.functional.PrimitiveTest#testDoubleNaNSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 534834.0,
+      "durations": 597582.0,
+      "cycles": 737620.0,
+      "caches": 35018.0,
+      "cacheMisses": 2914.0,
+      "branches": 113348.0,
+      "branchMisses": 5110.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 534928.0,
+      "durations": 601000.0,
+      "cycles": 742916.0,
+      "caches": 34938.0,
+      "cacheMisses": 2936.0,
+      "branches": 113388.0,
+      "branchMisses": 5140.0
+    },
+    "energy": 0.0,
+    "instructions": 94.0,
+    "durations": 3418.0,
+    "cycles": 5296.0,
+    "caches": -80.0,
+    "cacheMisses": 22.0,
+    "branches": 40.0,
+    "branchMisses": 30.0
+  },
+  "com.google.gson.OverrideCoreTypeAdaptersTest#testOverridePrimitiveBooleanAdapter": {
+    "dataV1": {
+      "energy": 41260.0,
+      "instructions": 833816.0,
+      "durations": 2323762.0,
+      "cycles": 1574294.0,
+      "caches": 73554.0,
+      "cacheMisses": 3416.0,
+      "branches": 168110.0,
+      "branchMisses": 13496.0
+    },
+    "dataV2": {
+      "energy": 41016.0,
+      "instructions": 834228.0,
+      "durations": 2313492.0,
+      "cycles": 1576942.0,
+      "caches": 73748.0,
+      "cacheMisses": 3422.0,
+      "branches": 168182.0,
+      "branchMisses": 13470.0
+    },
+    "energy": -244.0,
+    "instructions": 412.0,
+    "durations": -10270.0,
+    "cycles": 2648.0,
+    "caches": 194.0,
+    "cacheMisses": 6.0,
+    "branches": 72.0,
+    "branchMisses": -26.0
+  },
+  "com.google.gson.functional.StreamingTypeAdaptersTest#testSerialize2dArray": {
+    "dataV1": {
+      "energy": 123780.0,
+      "instructions": 1.1494504E7,
+      "durations": 6659960.0,
+      "cycles": 9731712.0,
+      "caches": 194712.0,
+      "cacheMisses": 10088.0,
+      "branches": 2284010.0,
+      "branchMisses": 57852.0
+    },
+    "dataV2": {
+      "energy": 126098.0,
+      "instructions": 1.1492394E7,
+      "durations": 6933482.0,
+      "cycles": 9736814.0,
+      "caches": 196546.0,
+      "cacheMisses": 10250.0,
+      "branches": 2284270.0,
+      "branchMisses": 58360.0
+    },
+    "energy": 2318.0,
+    "instructions": -2110.0,
+    "durations": 273522.0,
+    "cycles": 5102.0,
+    "caches": 1834.0,
+    "cacheMisses": 162.0,
+    "branches": 260.0,
+    "branchMisses": 508.0
+  },
+  "com.google.gson.functional.CustomSerializerTest#testSerializerReturnsNull": {
+    "dataV1": {
+      "energy": 36864.0,
+      "instructions": 1334922.0,
+      "durations": 1267804.0,
+      "cycles": 2106282.0,
+      "caches": 85516.0,
+      "cacheMisses": 1758.0,
+      "branches": 257872.0,
+      "branchMisses": 19850.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1431718.0,
+      "durations": 1277134.0,
+      "cycles": 2168966.0,
+      "caches": 86672.0,
+      "cacheMisses": 1930.0,
+      "branches": 274138.0,
+      "branchMisses": 20038.0
+    },
+    "energy": -36864.0,
+    "instructions": 96796.0,
+    "durations": 9330.0,
+    "cycles": 62684.0,
+    "caches": 1156.0,
+    "cacheMisses": 172.0,
+    "branches": 16266.0,
+    "branchMisses": 188.0
+  },
+  "com.google.gson.functional.CustomDeserializerTest#testCustomDeserializerReturnsNull": {
+    "dataV1": {
+      "energy": 39794.0,
+      "instructions": 1443174.0,
+      "durations": 1256974.0,
+      "cycles": 2194614.0,
+      "caches": 93274.0,
+      "cacheMisses": 3912.0,
+      "branches": 294238.0,
+      "branchMisses": 19560.0
+    },
+    "dataV2": {
+      "energy": 38330.0,
+      "instructions": 1453662.0,
+      "durations": 1299232.0,
+      "cycles": 2245734.0,
+      "caches": 96156.0,
+      "cacheMisses": 3972.0,
+      "branches": 296278.0,
+      "branchMisses": 20350.0
+    },
+    "energy": -1464.0,
+    "instructions": 10488.0,
+    "durations": 42258.0,
+    "cycles": 51120.0,
+    "caches": 2882.0,
+    "cacheMisses": 60.0,
+    "branches": 2040.0,
+    "branchMisses": 790.0
+  },
+  "com.google.gson.functional.PrettyPrintingTest#testPrettyPrintArrayOfObjects": {
+    "dataV1": {
+      "energy": 81786.0,
+      "instructions": 2533888.0,
+      "durations": 4014954.0,
+      "cycles": 3853238.0,
+      "caches": 126442.0,
+      "cacheMisses": 2146.0,
+      "branches": 471804.0,
+      "branchMisses": 36062.0
+    },
+    "dataV2": {
+      "energy": 122560.0,
+      "instructions": 2593416.0,
+      "durations": 6704064.0,
+      "cycles": 4012006.0,
+      "caches": 134882.0,
+      "cacheMisses": 2234.0,
+      "branches": 483246.0,
+      "branchMisses": 37770.0
+    },
+    "energy": 40774.0,
+    "instructions": 59528.0,
+    "durations": 2689110.0,
+    "cycles": 158768.0,
+    "caches": 8440.0,
+    "cacheMisses": 88.0,
+    "branches": 11442.0,
+    "branchMisses": 1708.0
+  },
+  "com.google.gson.functional.ExclusionStrategyFunctionalTest#testExclusionStrategySerializationDoesNotImpactDeserialization": {
+    "dataV1": {
+      "energy": 38574.0,
+      "instructions": 930072.0,
+      "durations": 1442754.0,
+      "cycles": 1470252.0,
+      "caches": 66958.0,
+      "cacheMisses": 3042.0,
+      "branches": 185802.0,
+      "branchMisses": 12086.0
+    },
+    "dataV2": {
+      "energy": 38940.0,
+      "instructions": 929884.0,
+      "durations": 1440862.0,
+      "cycles": 1471972.0,
+      "caches": 67130.0,
+      "cacheMisses": 3068.0,
+      "branches": 185924.0,
+      "branchMisses": 12164.0
+    },
+    "energy": 366.0,
+    "instructions": -188.0,
+    "durations": -1892.0,
+    "cycles": 1720.0,
+    "caches": 172.0,
+    "cacheMisses": 26.0,
+    "branches": 122.0,
+    "branchMisses": 78.0
+  },
+  "com.google.gson.functional.PrimitiveTest#testFloatNaNSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 595236.0,
+      "durations": 677300.0,
+      "cycles": 914148.0,
+      "caches": 41792.0,
+      "cacheMisses": 3426.0,
+      "branches": 126020.0,
+      "branchMisses": 5924.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 596508.0,
+      "durations": 679024.0,
+      "cycles": 905950.0,
+      "caches": 41890.0,
+      "cacheMisses": 3450.0,
+      "branches": 126244.0,
+      "branchMisses": 5888.0
+    },
+    "energy": 0.0,
+    "instructions": 1272.0,
+    "durations": 1724.0,
+    "cycles": -8198.0,
+    "caches": 98.0,
+    "cacheMisses": 24.0,
+    "branches": 224.0,
+    "branchMisses": -36.0
+  },
+  "com.google.gson.functional.SecurityTest#testNonExecutableJsonDeserialization": {
+    "dataV1": {
+      "energy": 164916.0,
+      "instructions": 1200428.0,
+      "durations": 7894912.0,
+      "cycles": 2050052.0,
+      "caches": 91146.0,
+      "cacheMisses": 3696.0,
+      "branches": 237820.0,
+      "branchMisses": 18078.0
+    },
+    "dataV2": {
+      "energy": 166504.0,
+      "instructions": 1214550.0,
+      "durations": 8931778.0,
+      "cycles": 2077540.0,
+      "caches": 93254.0,
+      "cacheMisses": 3696.0,
+      "branches": 238602.0,
+      "branchMisses": 18504.0
+    },
+    "energy": 1588.0,
+    "instructions": 14122.0,
+    "durations": 1036866.0,
+    "cycles": 27488.0,
+    "caches": 2108.0,
+    "cacheMisses": 0.0,
+    "branches": 782.0,
+    "branchMisses": 426.0
+  },
+  "com.google.gson.functional.NamingPolicyTest#testGsonWithSerializedNameFieldNamingPolicyDeserialization": {
+    "dataV1": {
+      "energy": 79590.0,
+      "instructions": 1466412.0,
+      "durations": 3207280.0,
+      "cycles": 2641058.0,
+      "caches": 110422.0,
+      "cacheMisses": 3722.0,
+      "branches": 289852.0,
+      "branchMisses": 26574.0
+    },
+    "dataV2": {
+      "energy": 79102.0,
+      "instructions": 1412228.0,
+      "durations": 3198532.0,
+      "cycles": 2445140.0,
+      "caches": 101090.0,
+      "cacheMisses": 3688.0,
+      "branches": 280244.0,
+      "branchMisses": 25310.0
+    },
+    "energy": -488.0,
+    "instructions": -54184.0,
+    "durations": -8748.0,
+    "cycles": -195918.0,
+    "caches": -9332.0,
+    "cacheMisses": -34.0,
+    "branches": -9608.0,
+    "branchMisses": -1264.0
+  },
+  "com.google.gson.functional.ExclusionStrategyFunctionalTest#testExcludeTopLevelClassDeserialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 600644.0,
+      "durations": 644926.0,
+      "cycles": 873374.0,
+      "caches": 40038.0,
+      "cacheMisses": 2928.0,
+      "branches": 125618.0,
+      "branchMisses": 6584.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 600590.0,
+      "durations": 644606.0,
+      "cycles": 871248.0,
+      "caches": 40056.0,
+      "cacheMisses": 2952.0,
+      "branches": 125652.0,
+      "branchMisses": 6600.0
+    },
+    "energy": 0.0,
+    "instructions": -54.0,
+    "durations": -320.0,
+    "cycles": -2126.0,
+    "caches": 18.0,
+    "cacheMisses": 24.0,
+    "branches": 34.0,
+    "branchMisses": 16.0
+  },
+  "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest#testRegisteredSerializerOverridesJsonAdapter": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1484076.0,
+      "durations": 1262550.0,
+      "cycles": 2135152.0,
+      "caches": 90054.0,
+      "cacheMisses": 3484.0,
+      "branches": 301072.0,
+      "branchMisses": 19322.0
+    },
+    "dataV2": {
+      "energy": 37720.0,
+      "instructions": 1493274.0,
+      "durations": 1289076.0,
+      "cycles": 2184768.0,
+      "caches": 92586.0,
+      "cacheMisses": 3536.0,
+      "branches": 302990.0,
+      "branchMisses": 20096.0
+    },
+    "energy": 37720.0,
+    "instructions": 9198.0,
+    "durations": 26526.0,
+    "cycles": 49616.0,
+    "caches": 2532.0,
+    "cacheMisses": 52.0,
+    "branches": 1918.0,
+    "branchMisses": 774.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomByteArraySerializer": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1408098.0,
+      "durations": 1902802.0,
+      "cycles": 2039898.0,
+      "caches": 87894.0,
+      "cacheMisses": 3562.0,
+      "branches": 286984.0,
+      "branchMisses": 18518.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1422294.0,
+      "durations": 1250648.0,
+      "cycles": 2064024.0,
+      "caches": 86518.0,
+      "cacheMisses": 3558.0,
+      "branches": 289302.0,
+      "branchMisses": 19008.0
+    },
+    "energy": 0.0,
+    "instructions": 14196.0,
+    "durations": -652154.0,
+    "cycles": 24126.0,
+    "caches": -1376.0,
+    "cacheMisses": -4.0,
+    "branches": 2318.0,
+    "branchMisses": 490.0
+  },
+  "com.google.gson.functional.StreamingTypeAdaptersTest#testNullSafe": {
+    "dataV1": {
+      "energy": 168334.0,
+      "instructions": 4802810.0,
+      "durations": 8747312.0,
+      "cycles": 7174382.0,
+      "caches": 240258.0,
+      "cacheMisses": 8078.0,
+      "branches": 961236.0,
+      "branchMisses": 72124.0
+    },
+    "dataV2": {
+      "energy": 203370.0,
+      "instructions": 4766922.0,
+      "durations": 8745688.0,
+      "cycles": 7142852.0,
+      "caches": 239242.0,
+      "cacheMisses": 8118.0,
+      "branches": 955220.0,
+      "branchMisses": 72346.0
+    },
+    "energy": 35036.0,
+    "instructions": -35888.0,
+    "durations": -1624.0,
+    "cycles": -31530.0,
+    "caches": -1016.0,
+    "cacheMisses": 40.0,
+    "branches": -6016.0,
+    "branchMisses": 222.0
+  },
+  "com.google.gson.functional.SecurityTest#testJsonWithNonExectuableTokenWithRegularGsonDeserialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1100516.0,
+      "durations": 953138.0,
+      "cycles": 1570648.0,
+      "caches": 63262.0,
+      "cacheMisses": 3174.0,
+      "branches": 217332.0,
+      "branchMisses": 13528.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1111784.0,
+      "durations": 957412.0,
+      "cycles": 1625120.0,
+      "caches": 66906.0,
+      "cacheMisses": 3208.0,
+      "branches": 219188.0,
+      "branchMisses": 13972.0
+    },
+    "energy": 0.0,
+    "instructions": 11268.0,
+    "durations": 4274.0,
+    "cycles": 54472.0,
+    "caches": 3644.0,
+    "cacheMisses": 34.0,
+    "branches": 1856.0,
+    "branchMisses": 444.0
+  },
+  "com.google.gson.functional.NullObjectAndFieldTest#testTopLevelNullObjectDeserialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 821918.0,
+      "durations": 911364.0,
+      "cycles": 1677926.0,
+      "caches": 66718.0,
+      "cacheMisses": 740.0,
+      "branches": 144502.0,
+      "branchMisses": 16496.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 807632.0,
+      "durations": 894406.0,
+      "cycles": 1636856.0,
+      "caches": 65922.0,
+      "cacheMisses": 732.0,
+      "branches": 141628.0,
+      "branchMisses": 15722.0
+    },
+    "energy": 0.0,
+    "instructions": -14286.0,
+    "durations": -16958.0,
+    "cycles": -41070.0,
+    "caches": -796.0,
+    "cacheMisses": -8.0,
+    "branches": -2874.0,
+    "branchMisses": -774.0
+  },
+  "com.google.gson.functional.ObjectTest#testJsonObjectSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 648484.0,
+      "durations": 679260.0,
+      "cycles": 927506.0,
+      "caches": 42952.0,
+      "cacheMisses": 3180.0,
+      "branches": 133330.0,
+      "branchMisses": 6078.0
+    },
+    "dataV2": {
+      "energy": 40404.0,
+      "instructions": 782654.0,
+      "durations": 1622090.0,
+      "cycles": 1239936.0,
+      "caches": 57090.0,
+      "cacheMisses": 3280.0,
+      "branches": 156332.0,
+      "branchMisses": 8998.0
+    },
+    "energy": 40404.0,
+    "instructions": 134170.0,
+    "durations": 942830.0,
+    "cycles": 312430.0,
+    "caches": 14138.0,
+    "cacheMisses": 100.0,
+    "branches": 23002.0,
+    "branchMisses": 2920.0
+  },
+  "com.google.gson.functional.PrimitiveTest#testQuotedStringSerializationAndDeserialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 564128.0,
+      "durations": 655992.0,
+      "cycles": 847698.0,
+      "caches": 40308.0,
+      "cacheMisses": 2994.0,
+      "branches": 120256.0,
+      "branchMisses": 5962.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 565030.0,
+      "durations": 662266.0,
+      "cycles": 850320.0,
+      "caches": 40754.0,
+      "cacheMisses": 3028.0,
+      "branches": 120454.0,
+      "branchMisses": 6002.0
+    },
+    "energy": 0.0,
+    "instructions": 902.0,
+    "durations": 6274.0,
+    "cycles": 2622.0,
+    "caches": 446.0,
+    "cacheMisses": 34.0,
+    "branches": 198.0,
+    "branchMisses": 40.0
+  },
+  "com.google.gson.functional.SecurityTest#testJsonWithNonExectuableTokenSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 768100.0,
+      "durations": 695958.0,
+      "cycles": 1218494.0,
+      "caches": 58868.0,
+      "cacheMisses": 3174.0,
+      "branches": 154540.0,
+      "branchMisses": 9108.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 760086.0,
+      "durations": 699584.0,
+      "cycles": 1144826.0,
+      "caches": 52304.0,
+      "cacheMisses": 3136.0,
+      "branches": 152404.0,
+      "branchMisses": 8834.0
+    },
+    "energy": 0.0,
+    "instructions": -8014.0,
+    "durations": 3626.0,
+    "cycles": -73668.0,
+    "caches": -6564.0,
+    "cacheMisses": -38.0,
+    "branches": -2136.0,
+    "branchMisses": -274.0
+  },
+  "com.google.gson.LongSerializationPolicyTest#testDefaultLongSerializationIntegration": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 769260.0,
+      "durations": 774230.0,
+      "cycles": 1133594.0,
+      "caches": 48144.0,
+      "cacheMisses": 2940.0,
+      "branches": 154246.0,
+      "branchMisses": 9430.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 766684.0,
+      "durations": 755774.0,
+      "cycles": 1108870.0,
+      "caches": 46944.0,
+      "cacheMisses": 2894.0,
+      "branches": 153462.0,
+      "branchMisses": 9204.0
+    },
+    "energy": 0.0,
+    "instructions": -2576.0,
+    "durations": -18456.0,
+    "cycles": -24724.0,
+    "caches": -1200.0,
+    "cacheMisses": -46.0,
+    "branches": -784.0,
+    "branchMisses": -226.0
+  },
+  "com.google.gson.functional.CustomDeserializerTest#testCustomDeserializerReturnsNullForTopLevelObject": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1197114.0,
+      "durations": 1047468.0,
+      "cycles": 1688972.0,
+      "caches": 73100.0,
+      "cacheMisses": 3174.0,
+      "branches": 247560.0,
+      "branchMisses": 15282.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1215874.0,
+      "durations": 1070686.0,
+      "cycles": 1732732.0,
+      "caches": 75234.0,
+      "cacheMisses": 3176.0,
+      "branches": 250648.0,
+      "branchMisses": 15740.0
+    },
+    "energy": 0.0,
+    "instructions": 18760.0,
+    "durations": 23218.0,
+    "cycles": 43760.0,
+    "caches": 2134.0,
+    "cacheMisses": 2.0,
+    "branches": 3088.0,
+    "branchMisses": 458.0
+  },
+  "com.google.gson.functional.ExclusionStrategyFunctionalTest#testExclusionStrategySerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 931182.0,
+      "durations": 843790.0,
+      "cycles": 1339756.0,
+      "caches": 61930.0,
+      "cacheMisses": 3006.0,
+      "branches": 185274.0,
+      "branchMisses": 9642.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 931424.0,
+      "durations": 842424.0,
+      "cycles": 1338512.0,
+      "caches": 61620.0,
+      "cacheMisses": 3032.0,
+      "branches": 185200.0,
+      "branchMisses": 9576.0
+    },
+    "energy": 0.0,
+    "instructions": 242.0,
+    "durations": -1366.0,
+    "cycles": -1244.0,
+    "caches": -310.0,
+    "cacheMisses": 26.0,
+    "branches": -74.0,
+    "branchMisses": -66.0
+  },
+  "com.google.gson.functional.TypeAdapterPrecedenceTest#testStreamingFollowedByNonstreamingHierarchical": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 608740.0,
+      "durations": 1489950.0,
+      "cycles": 918326.0,
+      "caches": 42282.0,
+      "cacheMisses": 2968.0,
+      "branches": 125886.0,
+      "branchMisses": 7502.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 607428.0,
+      "durations": 723598.0,
+      "cycles": 903620.0,
+      "caches": 41446.0,
+      "cacheMisses": 2918.0,
+      "branches": 125520.0,
+      "branchMisses": 7456.0
+    },
+    "energy": 0.0,
+    "instructions": -1312.0,
+    "durations": -766352.0,
+    "cycles": -14706.0,
+    "caches": -836.0,
+    "cacheMisses": -50.0,
+    "branches": -366.0,
+    "branchMisses": -46.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testEnsureCustomDeserializerNotInvokedForNullValues": {
+    "dataV1": {
+      "energy": 41992.0,
+      "instructions": 2597674.0,
+      "durations": 2636926.0,
+      "cycles": 3821132.0,
+      "caches": 165448.0,
+      "cacheMisses": 5152.0,
+      "branches": 518574.0,
+      "branchMisses": 33400.0
+    },
+    "dataV2": {
+      "energy": 79222.0,
+      "instructions": 2634266.0,
+      "durations": 2688004.0,
+      "cycles": 3927400.0,
+      "caches": 169466.0,
+      "cacheMisses": 5212.0,
+      "branches": 525198.0,
+      "branchMisses": 35110.0
+    },
+    "energy": 37230.0,
+    "instructions": 36592.0,
+    "durations": 51078.0,
+    "cycles": 106268.0,
+    "caches": 4018.0,
+    "cacheMisses": 60.0,
+    "branches": 6624.0,
+    "branchMisses": 1710.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomAdapterInvokedForCollectionElementDeserialization": {
+    "dataV1": {
+      "energy": 42358.0,
+      "instructions": 2722736.0,
+      "durations": 3224164.0,
+      "cycles": 3934054.0,
+      "caches": 144552.0,
+      "cacheMisses": 6432.0,
+      "branches": 539836.0,
+      "branchMisses": 36880.0
+    },
+    "dataV2": {
+      "energy": 79468.0,
+      "instructions": 2731548.0,
+      "durations": 3209718.0,
+      "cycles": 3972654.0,
+      "caches": 145610.0,
+      "cacheMisses": 6430.0,
+      "branches": 541578.0,
+      "branchMisses": 38056.0
+    },
+    "energy": 37110.0,
+    "instructions": 8812.0,
+    "durations": -14446.0,
+    "cycles": 38600.0,
+    "caches": 1058.0,
+    "cacheMisses": -2.0,
+    "branches": 1742.0,
+    "branchMisses": 1176.0
+  },
+  "com.google.gson.functional.TypeVariableTest#testAdvancedTypeVariables": {
+    "dataV1": {
+      "energy": 81910.0,
+      "instructions": 4595426.0,
+      "durations": 3575450.0,
+      "cycles": 6494998.0,
+      "caches": 233892.0,
+      "cacheMisses": 7654.0,
+      "branches": 879560.0,
+      "branchMisses": 60698.0
+    },
+    "dataV2": {
+      "energy": 82398.0,
+      "instructions": 4642816.0,
+      "durations": 4790966.0,
+      "cycles": 6698858.0,
+      "caches": 243888.0,
+      "cacheMisses": 7692.0,
+      "branches": 886860.0,
+      "branchMisses": 63458.0
+    },
+    "energy": 488.0,
+    "instructions": 47390.0,
+    "durations": 1215516.0,
+    "cycles": 203860.0,
+    "caches": 9996.0,
+    "cacheMisses": 38.0,
+    "branches": 7300.0,
+    "branchMisses": 2760.0
+  },
+  "com.google.gson.functional.TypeHierarchyAdapterTest#testTypeHierarchy": {
+    "dataV1": {
+      "energy": 285644.0,
+      "instructions": 9611852.0,
+      "durations": 1.4378362E7,
+      "cycles": 1.2757896E7,
+      "caches": 382426.0,
+      "cacheMisses": 9588.0,
+      "branches": 1779696.0,
+      "branchMisses": 112172.0
+    },
+    "dataV2": {
+      "energy": 287962.0,
+      "instructions": 9710908.0,
+      "durations": 1.4729162E7,
+      "cycles": 1.3142476E7,
+      "caches": 400066.0,
+      "cacheMisses": 9744.0,
+      "branches": 1797470.0,
+      "branchMisses": 117326.0
+    },
+    "energy": 2318.0,
+    "instructions": 99056.0,
+    "durations": 350800.0,
+    "cycles": 384580.0,
+    "caches": 17640.0,
+    "cacheMisses": 156.0,
+    "branches": 17774.0,
+    "branchMisses": 5154.0
+  },
+  "com.google.gson.functional.NamingPolicyTest#testGsonWithLowerCaseDotPolicySerialization": {
+    "dataV1": {
+      "energy": 38452.0,
+      "instructions": 900764.0,
+      "durations": 1296438.0,
+      "cycles": 1409168.0,
+      "caches": 63956.0,
+      "cacheMisses": 2962.0,
+      "branches": 179432.0,
+      "branchMisses": 12168.0
+    },
+    "dataV2": {
+      "energy": 37352.0,
+      "instructions": 900378.0,
+      "durations": 1303156.0,
+      "cycles": 1417332.0,
+      "caches": 64586.0,
+      "cacheMisses": 2990.0,
+      "branches": 179412.0,
+      "branchMisses": 12324.0
+    },
+    "energy": -1100.0,
+    "instructions": -386.0,
+    "durations": 6718.0,
+    "cycles": 8164.0,
+    "caches": 630.0,
+    "cacheMisses": 28.0,
+    "branches": -20.0,
+    "branchMisses": 156.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testOverrideBigIntegerTypeAdapter": {
+    "dataV1": {
+      "energy": 83494.0,
+      "instructions": 6948026.0,
+      "durations": 3996956.0,
+      "cycles": 6308428.0,
+      "caches": 146996.0,
+      "cacheMisses": 11946.0,
+      "branches": 1460120.0,
+      "branchMisses": 47824.0
+    },
+    "dataV2": {
+      "energy": 82154.0,
+      "instructions": 6950988.0,
+      "durations": 3939398.0,
+      "cycles": 6324416.0,
+      "caches": 147606.0,
+      "cacheMisses": 11942.0,
+      "branches": 1460530.0,
+      "branchMisses": 47988.0
+    },
+    "energy": -1340.0,
+    "instructions": 2962.0,
+    "durations": -57558.0,
+    "cycles": 15988.0,
+    "caches": 610.0,
+    "cacheMisses": -4.0,
+    "branches": 410.0,
+    "branchMisses": 164.0
+  },
+  "com.google.gson.functional.FieldExclusionTest#testDefaultInnerClassExclusion": {
+    "dataV1": {
+      "energy": 41138.0,
+      "instructions": 2391226.0,
+      "durations": 2220100.0,
+      "cycles": 3584872.0,
+      "caches": 147996.0,
+      "cacheMisses": 5008.0,
+      "branches": 471150.0,
+      "branchMisses": 31394.0
+    },
+    "dataV2": {
+      "energy": 41138.0,
+      "instructions": 2402634.0,
+      "durations": 2260088.0,
+      "cycles": 3660064.0,
+      "caches": 151494.0,
+      "cacheMisses": 4960.0,
+      "branches": 473068.0,
+      "branchMisses": 32572.0
+    },
+    "energy": 0.0,
+    "instructions": 11408.0,
+    "durations": 39988.0,
+    "cycles": 75192.0,
+    "caches": 3498.0,
+    "cacheMisses": -48.0,
+    "branches": 1918.0,
+    "branchMisses": 1178.0
+  },
+  "com.google.gson.functional.NullObjectAndFieldTest#testPrintPrintingArraysWithNulls": {
+    "dataV1": {
+      "energy": 40894.0,
+      "instructions": 1345802.0,
+      "durations": 2127328.0,
+      "cycles": 2479670.0,
+      "caches": 82368.0,
+      "cacheMisses": 756.0,
+      "branches": 236042.0,
+      "branchMisses": 28126.0
+    },
+    "dataV2": {
+      "energy": 39062.0,
+      "instructions": 1315380.0,
+      "durations": 2155016.0,
+      "cycles": 2364138.0,
+      "caches": 74668.0,
+      "cacheMisses": 770.0,
+      "branches": 230424.0,
+      "branchMisses": 26280.0
+    },
+    "energy": -1832.0,
+    "instructions": -30422.0,
+    "durations": 27688.0,
+    "cycles": -115532.0,
+    "caches": -7700.0,
+    "cacheMisses": 14.0,
+    "branches": -5618.0,
+    "branchMisses": -1846.0
+  },
+  "com.google.gson.functional.MapTest#testDeerializeMapOfMaps": {
+    "dataV1": {
+      "energy": 40650.0,
+      "instructions": 1778536.0,
+      "durations": 1365082.0,
+      "cycles": 2445078.0,
+      "caches": 90726.0,
+      "cacheMisses": 4126.0,
+      "branches": 343936.0,
+      "branchMisses": 22246.0
+    },
+    "dataV2": {
+      "energy": 40528.0,
+      "instructions": 1794404.0,
+      "durations": 1362362.0,
+      "cycles": 2442328.0,
+      "caches": 91568.0,
+      "cacheMisses": 4092.0,
+      "branches": 346736.0,
+      "branchMisses": 22006.0
+    },
+    "energy": -122.0,
+    "instructions": 15868.0,
+    "durations": -2720.0,
+    "cycles": -2750.0,
+    "caches": 842.0,
+    "cacheMisses": -34.0,
+    "branches": 2800.0,
+    "branchMisses": -240.0
+  },
+  "com.google.gson.MixedStreamTest#testWriteLenient": {
+    "dataV1": {
+      "energy": 41382.0,
+      "instructions": 1963140.0,
+      "durations": 1721184.0,
+      "cycles": 3179024.0,
+      "caches": 123598.0,
+      "cacheMisses": 6188.0,
+      "branches": 383460.0,
+      "branchMisses": 28844.0
+    },
+    "dataV2": {
+      "energy": 41748.0,
+      "instructions": 1971700.0,
+      "durations": 1695474.0,
+      "cycles": 3243186.0,
+      "caches": 125562.0,
+      "cacheMisses": 6244.0,
+      "branches": 385200.0,
+      "branchMisses": 29674.0
+    },
+    "energy": 366.0,
+    "instructions": 8560.0,
+    "durations": -25710.0,
+    "cycles": 64162.0,
+    "caches": 1964.0,
+    "cacheMisses": 56.0,
+    "branches": 1740.0,
+    "branchMisses": 830.0
+  },
+  "com.google.gson.functional.NullObjectAndFieldTest#testCustomSerializationOfNulls": {
+    "dataV1": {
+      "energy": 41014.0,
+      "instructions": 1683876.0,
+      "durations": 1584720.0,
+      "cycles": 2729092.0,
+      "caches": 99714.0,
+      "cacheMisses": 1452.0,
+      "branches": 318526.0,
+      "branchMisses": 27744.0
+    },
+    "dataV2": {
+      "energy": 38696.0,
+      "instructions": 1659388.0,
+      "durations": 1763096.0,
+      "cycles": 2694762.0,
+      "caches": 99886.0,
+      "cacheMisses": 1424.0,
+      "branches": 313882.0,
+      "branchMisses": 27178.0
+    },
+    "energy": -2318.0,
+    "instructions": -24488.0,
+    "durations": 178376.0,
+    "cycles": -34330.0,
+    "caches": 172.0,
+    "cacheMisses": -28.0,
+    "branches": -4644.0,
+    "branchMisses": -566.0
+  },
+  "com.google.gson.functional.FieldExclusionTest#testInnerClassExclusion": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 708118.0,
+      "durations": 694824.0,
+      "cycles": 977656.0,
+      "caches": 45346.0,
+      "cacheMisses": 3086.0,
+      "branches": 142158.0,
+      "branchMisses": 6612.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 711264.0,
+      "durations": 697102.0,
+      "cycles": 987280.0,
+      "caches": 45900.0,
+      "cacheMisses": 3094.0,
+      "branches": 142678.0,
+      "branchMisses": 6686.0
+    },
+    "energy": 0.0,
+    "instructions": 3146.0,
+    "durations": 2278.0,
+    "cycles": 9624.0,
+    "caches": 554.0,
+    "cacheMisses": 8.0,
+    "branches": 520.0,
+    "branchMisses": 74.0
+  },
+  "com.google.gson.functional.NamingPolicyTest#testGsonWithLowerCaseDashPolicyDeserialiation": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 888252.0,
+      "durations": 846206.0,
+      "cycles": 1332590.0,
+      "caches": 59700.0,
+      "cacheMisses": 2996.0,
+      "branches": 177866.0,
+      "branchMisses": 10888.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 888548.0,
+      "durations": 849024.0,
+      "cycles": 1334320.0,
+      "caches": 60002.0,
+      "cacheMisses": 3004.0,
+      "branches": 178082.0,
+      "branchMisses": 10918.0
+    },
+    "energy": 0.0,
+    "instructions": 296.0,
+    "durations": 2818.0,
+    "cycles": 1730.0,
+    "caches": 302.0,
+    "cacheMisses": 8.0,
+    "branches": 216.0,
+    "branchMisses": 30.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testDefaultDateSerializationUsingBuilder": {
+    "dataV1": {
+      "energy": 82276.0,
+      "instructions": 6156760.0,
+      "durations": 4090866.0,
+      "cycles": 8543848.0,
+      "caches": 240586.0,
+      "cacheMisses": 14080.0,
+      "branches": 1234572.0,
+      "branchMisses": 90852.0
+    },
+    "dataV2": {
+      "energy": 83252.0,
+      "instructions": 6142326.0,
+      "durations": 4186414.0,
+      "cycles": 8530868.0,
+      "caches": 239440.0,
+      "cacheMisses": 14200.0,
+      "branches": 1230868.0,
+      "branchMisses": 91224.0
+    },
+    "energy": 976.0,
+    "instructions": -14434.0,
+    "durations": 95548.0,
+    "cycles": -12980.0,
+    "caches": -1146.0,
+    "cacheMisses": 120.0,
+    "branches": -3704.0,
+    "branchMisses": 372.0
+  },
+  "com.google.gson.functional.InstanceCreatorTest#testInstanceCreatorReturnsBaseType": {
+    "dataV1": {
+      "energy": 41016.0,
+      "instructions": 1601136.0,
+      "durations": 2063056.0,
+      "cycles": 2526520.0,
+      "caches": 108266.0,
+      "cacheMisses": 3402.0,
+      "branches": 318614.0,
+      "branchMisses": 24628.0
+    },
+    "dataV2": {
+      "energy": 82152.0,
+      "instructions": 1775182.0,
+      "durations": 4697540.0,
+      "cycles": 2694068.0,
+      "caches": 112118.0,
+      "cacheMisses": 3626.0,
+      "branches": 349078.0,
+      "branchMisses": 26120.0
+    },
+    "energy": 41136.0,
+    "instructions": 174046.0,
+    "durations": 2634484.0,
+    "cycles": 167548.0,
+    "caches": 3852.0,
+    "cacheMisses": 224.0,
+    "branches": 30464.0,
+    "branchMisses": 1492.0
+  },
+  "com.google.gson.functional.TypeHierarchyAdapterTest#testRegisterSuperTypeFirst": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1514574.0,
+      "durations": 1202872.0,
+      "cycles": 2037786.0,
+      "caches": 83152.0,
+      "cacheMisses": 3532.0,
+      "branches": 313442.0,
+      "branchMisses": 18792.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1522872.0,
+      "durations": 1214620.0,
+      "cycles": 2064616.0,
+      "caches": 84598.0,
+      "cacheMisses": 3482.0,
+      "branches": 314770.0,
+      "branchMisses": 19266.0
+    },
+    "energy": 0.0,
+    "instructions": 8298.0,
+    "durations": 11748.0,
+    "cycles": 26830.0,
+    "caches": 1446.0,
+    "cacheMisses": -50.0,
+    "branches": 1328.0,
+    "branchMisses": 474.0
+  },
+  "com.google.gson.functional.ReadersWritersTest#testTopLevelNullObjectDeserializationWithReader": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 525650.0,
+      "durations": 1537052.0,
+      "cycles": 796126.0,
+      "caches": 41166.0,
+      "cacheMisses": 2820.0,
+      "branches": 111474.0,
+      "branchMisses": 5668.0
+    },
+    "dataV2": {
+      "energy": 38696.0,
+      "instructions": 528786.0,
+      "durations": 1549902.0,
+      "cycles": 808688.0,
+      "caches": 41536.0,
+      "cacheMisses": 2840.0,
+      "branches": 112098.0,
+      "branchMisses": 5712.0
+    },
+    "energy": 38696.0,
+    "instructions": 3136.0,
+    "durations": 12850.0,
+    "cycles": 12562.0,
+    "caches": 370.0,
+    "cacheMisses": 20.0,
+    "branches": 624.0,
+    "branchMisses": 44.0
+  },
+  "com.google.gson.functional.ExclusionStrategyFunctionalTest#testExclusionStrategySerializationDoesNotImpactSerialization": {
+    "dataV1": {
+      "energy": 124024.0,
+      "instructions": 8155836.0,
+      "durations": 7214152.0,
+      "cycles": 1.0328294E7,
+      "caches": 318186.0,
+      "cacheMisses": 20046.0,
+      "branches": 1555856.0,
+      "branchMisses": 93182.0
+    },
+    "dataV2": {
+      "energy": 164916.0,
+      "instructions": 8242512.0,
+      "durations": 8874794.0,
+      "cycles": 1.0600088E7,
+      "caches": 333008.0,
+      "cacheMisses": 20332.0,
+      "branches": 1573162.0,
+      "branchMisses": 96866.0
+    },
+    "energy": 40892.0,
+    "instructions": 86676.0,
+    "durations": 1660642.0,
+    "cycles": 271794.0,
+    "caches": 14822.0,
+    "cacheMisses": 286.0,
+    "branches": 17306.0,
+    "branchMisses": 3684.0
+  },
+  "com.google.gson.functional.VersioningTest#testVersionedGsonMixingSinceAndUntilSerialization": {
+    "dataV1": {
+      "energy": 325926.0,
+      "instructions": 8081024.0,
+      "durations": 1.564606E7,
+      "cycles": 1.0706E7,
+      "caches": 359506.0,
+      "cacheMisses": 6424.0,
+      "branches": 1487488.0,
+      "branchMisses": 108870.0
+    },
+    "dataV2": {
+      "energy": 326658.0,
+      "instructions": 8076814.0,
+      "durations": 1.5909156E7,
+      "cycles": 1.079754E7,
+      "caches": 362814.0,
+      "cacheMisses": 6392.0,
+      "branches": 1486782.0,
+      "branchMisses": 110186.0
+    },
+    "energy": 732.0,
+    "instructions": -4210.0,
+    "durations": 263096.0,
+    "cycles": 91540.0,
+    "caches": 3308.0,
+    "cacheMisses": -32.0,
+    "branches": -706.0,
+    "branchMisses": 1316.0
+  },
+  "com.google.gson.functional.TypeAdapterPrecedenceTest#testSerializeNonstreamingTypeAdapterFollowedByStreamingTypeAdapter": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 693568.0,
+      "durations": 740558.0,
+      "cycles": 1075780.0,
+      "caches": 48858.0,
+      "cacheMisses": 3036.0,
+      "branches": 143314.0,
+      "branchMisses": 8246.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 692210.0,
+      "durations": 749662.0,
+      "cycles": 1075468.0,
+      "caches": 49034.0,
+      "cacheMisses": 3074.0,
+      "branches": 143126.0,
+      "branchMisses": 8526.0
+    },
+    "energy": 0.0,
+    "instructions": -1358.0,
+    "durations": 9104.0,
+    "cycles": -312.0,
+    "caches": 176.0,
+    "cacheMisses": 38.0,
+    "branches": -188.0,
+    "branchMisses": 280.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomAdapterInvokedForMapElementSerializationWithType": {
+    "dataV1": {
+      "energy": 40406.0,
+      "instructions": 1595896.0,
+      "durations": 1612210.0,
+      "cycles": 2354254.0,
+      "caches": 98010.0,
+      "cacheMisses": 3454.0,
+      "branches": 311086.0,
+      "branchMisses": 21816.0
+    },
+    "dataV2": {
+      "energy": 38330.0,
+      "instructions": 1554822.0,
+      "durations": 1602604.0,
+      "cycles": 2343110.0,
+      "caches": 98820.0,
+      "cacheMisses": 3462.0,
+      "branches": 303926.0,
+      "branchMisses": 21774.0
+    },
+    "energy": -2076.0,
+    "instructions": -41074.0,
+    "durations": -9606.0,
+    "cycles": -11144.0,
+    "caches": 810.0,
+    "cacheMisses": 8.0,
+    "branches": -7160.0,
+    "branchMisses": -42.0
+  },
+  "com.google.gson.functional.NullObjectAndFieldTest#testCustomTypeAdapterPassesNullDesrialization": {
+    "dataV1": {
+      "energy": 246582.0,
+      "instructions": 2339296.0,
+      "durations": 1.1674586E7,
+      "cycles": 3829428.0,
+      "caches": 135480.0,
+      "cacheMisses": 1416.0,
+      "branches": 441046.0,
+      "branchMisses": 43962.0
+    },
+    "dataV2": {
+      "energy": 41016.0,
+      "instructions": 2365826.0,
+      "durations": 2046976.0,
+      "cycles": 3756852.0,
+      "caches": 131386.0,
+      "cacheMisses": 1652.0,
+      "branches": 445232.0,
+      "branchMisses": 40550.0
+    },
+    "energy": -205566.0,
+    "instructions": 26530.0,
+    "durations": -9627610.0,
+    "cycles": -72576.0,
+    "caches": -4094.0,
+    "cacheMisses": 236.0,
+    "branches": 4186.0,
+    "branchMisses": -3412.0
+  },
+  "com.google.gson.functional.FieldNamingTest#testIdentity": {
+    "dataV1": {
+      "energy": 40526.0,
+      "instructions": 1455168.0,
+      "durations": 1428958.0,
+      "cycles": 1884020.0,
+      "caches": 73170.0,
+      "cacheMisses": 3084.0,
+      "branches": 281470.0,
+      "branchMisses": 13254.0
+    },
+    "dataV2": {
+      "energy": 40038.0,
+      "instructions": 1458806.0,
+      "durations": 1423738.0,
+      "cycles": 1885542.0,
+      "caches": 73288.0,
+      "cacheMisses": 3100.0,
+      "branches": 283178.0,
+      "branchMisses": 13384.0
+    },
+    "energy": -488.0,
+    "instructions": 3638.0,
+    "durations": -5220.0,
+    "cycles": 1522.0,
+    "caches": 118.0,
+    "cacheMisses": 16.0,
+    "branches": 1708.0,
+    "branchMisses": 130.0
+  },
+  "com.google.gson.functional.EnumTest#testEnumSubclassWithRegisteredTypeAdapter": {
+    "dataV1": {
+      "energy": 122924.0,
+      "instructions": 6064466.0,
+      "durations": 6482686.0,
+      "cycles": 8937014.0,
+      "caches": 341078.0,
+      "cacheMisses": 9504.0,
+      "branches": 1208520.0,
+      "branchMisses": 82206.0
+    },
+    "dataV2": {
+      "energy": 122560.0,
+      "instructions": 6110758.0,
+      "durations": 6574462.0,
+      "cycles": 9132404.0,
+      "caches": 352504.0,
+      "cacheMisses": 9578.0,
+      "branches": 1217830.0,
+      "branchMisses": 84984.0
+    },
+    "energy": -364.0,
+    "instructions": 46292.0,
+    "durations": 91776.0,
+    "cycles": 195390.0,
+    "caches": 11426.0,
+    "cacheMisses": 74.0,
+    "branches": 9310.0,
+    "branchMisses": 2778.0
+  },
+  "com.google.gson.functional.TypeAdapterPrecedenceTest#testStreamingFollowedByStreaming": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 624736.0,
+      "durations": 727088.0,
+      "cycles": 919870.0,
+      "caches": 41838.0,
+      "cacheMisses": 2942.0,
+      "branches": 129118.0,
+      "branchMisses": 7156.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 625810.0,
+      "durations": 729260.0,
+      "cycles": 932062.0,
+      "caches": 42248.0,
+      "cacheMisses": 2954.0,
+      "branches": 129314.0,
+      "branchMisses": 7202.0
+    },
+    "energy": 0.0,
+    "instructions": 1074.0,
+    "durations": 2172.0,
+    "cycles": 12192.0,
+    "caches": 410.0,
+    "cacheMisses": 12.0,
+    "branches": 196.0,
+    "branchMisses": 46.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testDefaultGregorianCalendarDeserialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 756590.0,
+      "durations": 788564.0,
+      "cycles": 1108118.0,
+      "caches": 41574.0,
+      "cacheMisses": 2956.0,
+      "branches": 155742.0,
+      "branchMisses": 10906.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 741616.0,
+      "durations": 804524.0,
+      "cycles": 1089584.0,
+      "caches": 41552.0,
+      "cacheMisses": 2958.0,
+      "branches": 152630.0,
+      "branchMisses": 10826.0
+    },
+    "energy": 0.0,
+    "instructions": -14974.0,
+    "durations": 15960.0,
+    "cycles": -18534.0,
+    "caches": -22.0,
+    "cacheMisses": 2.0,
+    "branches": -3112.0,
+    "branchMisses": -80.0
+  },
+  "com.google.gson.functional.TypeAdapterPrecedenceTest#testStreamingHierarchicalFollowedByNonstreamingHierarchical": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 876244.0,
+      "durations": 838372.0,
+      "cycles": 1292204.0,
+      "caches": 54628.0,
+      "cacheMisses": 3566.0,
+      "branches": 185876.0,
+      "branchMisses": 10846.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 875564.0,
+      "durations": 838634.0,
+      "cycles": 1296176.0,
+      "caches": 55206.0,
+      "cacheMisses": 3578.0,
+      "branches": 185884.0,
+      "branchMisses": 10882.0
+    },
+    "energy": 0.0,
+    "instructions": -680.0,
+    "durations": 262.0,
+    "cycles": 3972.0,
+    "caches": 578.0,
+    "cacheMisses": 12.0,
+    "branches": 8.0,
+    "branchMisses": 36.0
+  },
+  "com.google.gson.functional.NullObjectAndFieldTest#testExplicitDeserializationOfNulls": {
+    "dataV1": {
+      "energy": 41748.0,
+      "instructions": 2674076.0,
+      "durations": 3601808.0,
+      "cycles": 4473354.0,
+      "caches": 155710.0,
+      "cacheMisses": 1502.0,
+      "branches": 494692.0,
+      "branchMisses": 48032.0
+    },
+    "dataV2": {
+      "energy": 41504.0,
+      "instructions": 2747304.0,
+      "durations": 2867278.0,
+      "cycles": 4505260.0,
+      "caches": 152378.0,
+      "cacheMisses": 1644.0,
+      "branches": 507544.0,
+      "branchMisses": 48410.0
+    },
+    "energy": -244.0,
+    "instructions": 73228.0,
+    "durations": -734530.0,
+    "cycles": 31906.0,
+    "caches": -3332.0,
+    "cacheMisses": 142.0,
+    "branches": 12852.0,
+    "branchMisses": 378.0
+  },
+  "com.google.gson.functional.PrimitiveTest#testDeserializeJsonObjectAsLongPrimitive": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 580096.0,
+      "durations": 655208.0,
+      "cycles": 864172.0,
+      "caches": 37476.0,
+      "cacheMisses": 4234.0,
+      "branches": 124254.0,
+      "branchMisses": 5430.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 580418.0,
+      "durations": 655962.0,
+      "cycles": 864724.0,
+      "caches": 37600.0,
+      "cacheMisses": 4256.0,
+      "branches": 124356.0,
+      "branchMisses": 5426.0
+    },
+    "energy": 0.0,
+    "instructions": 322.0,
+    "durations": 754.0,
+    "cycles": 552.0,
+    "caches": 124.0,
+    "cacheMisses": 22.0,
+    "branches": 102.0,
+    "branchMisses": -4.0
+  },
+  "com.google.gson.functional.EscapingTest#testGsonDoubleDeserialization": {
+    "dataV1": {
+      "energy": 41016.0,
+      "instructions": 1963272.0,
+      "durations": 2894808.0,
+      "cycles": 3270924.0,
+      "caches": 112306.0,
+      "cacheMisses": 1930.0,
+      "branches": 358736.0,
+      "branchMisses": 34062.0
+    },
+    "dataV2": {
+      "energy": 41504.0,
+      "instructions": 1949570.0,
+      "durations": 2900716.0,
+      "cycles": 3258118.0,
+      "caches": 114440.0,
+      "cacheMisses": 1930.0,
+      "branches": 355986.0,
+      "branchMisses": 33764.0
+    },
+    "energy": 488.0,
+    "instructions": -13702.0,
+    "durations": 5908.0,
+    "cycles": -12806.0,
+    "caches": 2134.0,
+    "cacheMisses": 0.0,
+    "branches": -2750.0,
+    "branchMisses": -298.0
+  },
+  "com.google.gson.OverrideCoreTypeAdaptersTest#testOverrideStringAdapter": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 758330.0,
+      "durations": 789604.0,
+      "cycles": 1188786.0,
+      "caches": 51632.0,
+      "cacheMisses": 3690.0,
+      "branches": 155336.0,
+      "branchMisses": 8832.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 755582.0,
+      "durations": 783982.0,
+      "cycles": 1178066.0,
+      "caches": 51236.0,
+      "cacheMisses": 3716.0,
+      "branches": 154406.0,
+      "branchMisses": 8854.0
+    },
+    "energy": 0.0,
+    "instructions": -2748.0,
+    "durations": -5622.0,
+    "cycles": -10720.0,
+    "caches": -396.0,
+    "cacheMisses": 26.0,
+    "branches": -930.0,
+    "branchMisses": 22.0
+  },
+  "com.google.gson.functional.ObjectTest#testStringFieldWithNumberValueDeserialization": {
+    "dataV1": {
+      "energy": 38940.0,
+      "instructions": 1274218.0,
+      "durations": 2579362.0,
+      "cycles": 1945622.0,
+      "caches": 73276.0,
+      "cacheMisses": 3482.0,
+      "branches": 250016.0,
+      "branchMisses": 18660.0
+    },
+    "dataV2": {
+      "energy": 40160.0,
+      "instructions": 1282668.0,
+      "durations": 1168806.0,
+      "cycles": 1947720.0,
+      "caches": 74058.0,
+      "cacheMisses": 3498.0,
+      "branches": 252278.0,
+      "branchMisses": 18490.0
+    },
+    "energy": 1220.0,
+    "instructions": 8450.0,
+    "durations": -1410556.0,
+    "cycles": 2098.0,
+    "caches": 782.0,
+    "cacheMisses": 16.0,
+    "branches": 2262.0,
+    "branchMisses": -170.0
+  },
+  "com.google.gson.functional.NullObjectAndFieldTest#testExplicitSerializationOfNullCollectionMembers": {
+    "dataV1": {
+      "energy": 40404.0,
+      "instructions": 1778222.0,
+      "durations": 1600478.0,
+      "cycles": 3134232.0,
+      "caches": 100726.0,
+      "cacheMisses": 1496.0,
+      "branches": 321582.0,
+      "branchMisses": 33886.0
+    },
+    "dataV2": {
+      "energy": 40284.0,
+      "instructions": 1759898.0,
+      "durations": 1713402.0,
+      "cycles": 3079790.0,
+      "caches": 100906.0,
+      "cacheMisses": 1434.0,
+      "branches": 316566.0,
+      "branchMisses": 32870.0
+    },
+    "energy": -120.0,
+    "instructions": -18324.0,
+    "durations": 112924.0,
+    "cycles": -54442.0,
+    "caches": 180.0,
+    "cacheMisses": -62.0,
+    "branches": -5016.0,
+    "branchMisses": -1016.0
+  },
+  "com.google.gson.functional.VersioningTest#testVersionedUntilSerialization": {
+    "dataV1": {
+      "energy": 41138.0,
+      "instructions": 1411096.0,
+      "durations": 1419092.0,
+      "cycles": 2451924.0,
+      "caches": 105528.0,
+      "cacheMisses": 3454.0,
+      "branches": 273086.0,
+      "branchMisses": 21350.0
+    },
+    "dataV2": {
+      "energy": 41870.0,
+      "instructions": 1410062.0,
+      "durations": 2572870.0,
+      "cycles": 2488680.0,
+      "caches": 111662.0,
+      "cacheMisses": 3520.0,
+      "branches": 273006.0,
+      "branchMisses": 23138.0
+    },
+    "energy": 732.0,
+    "instructions": -1034.0,
+    "durations": 1153778.0,
+    "cycles": 36756.0,
+    "caches": 6134.0,
+    "cacheMisses": 66.0,
+    "branches": -80.0,
+    "branchMisses": 1788.0
+  },
+  "com.google.gson.LongSerializationPolicyTest#testStringLongSerializationIntegration": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1035314.0,
+      "durations": 1002098.0,
+      "cycles": 1605576.0,
+      "caches": 67802.0,
+      "cacheMisses": 4030.0,
+      "branches": 211478.0,
+      "branchMisses": 13378.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1027852.0,
+      "durations": 1014744.0,
+      "cycles": 1584570.0,
+      "caches": 66610.0,
+      "cacheMisses": 3978.0,
+      "branches": 209814.0,
+      "branchMisses": 13328.0
+    },
+    "energy": 0.0,
+    "instructions": -7462.0,
+    "durations": 12646.0,
+    "cycles": -21006.0,
+    "caches": -1192.0,
+    "cacheMisses": -52.0,
+    "branches": -1664.0,
+    "branchMisses": -50.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomNestedDeserializers": {
+    "dataV1": {
+      "energy": 39794.0,
+      "instructions": 2172878.0,
+      "durations": 1713738.0,
+      "cycles": 3196520.0,
+      "caches": 123660.0,
+      "cacheMisses": 5532.0,
+      "branches": 440508.0,
+      "branchMisses": 29242.0
+    },
+    "dataV2": {
+      "energy": 41138.0,
+      "instructions": 2181528.0,
+      "durations": 1733028.0,
+      "cycles": 3215456.0,
+      "caches": 124028.0,
+      "cacheMisses": 5558.0,
+      "branches": 442238.0,
+      "branchMisses": 30166.0
+    },
+    "energy": 1344.0,
+    "instructions": 8650.0,
+    "durations": 19290.0,
+    "cycles": 18936.0,
+    "caches": 368.0,
+    "cacheMisses": 26.0,
+    "branches": 1730.0,
+    "branchMisses": 924.0
+  },
+  "com.google.gson.functional.CustomSerializerTest#testSubClassSerializerInvokedForBaseClassFieldsHoldingSubClassInstances": {
+    "dataV1": {
+      "energy": 81422.0,
+      "instructions": 1125136.0,
+      "durations": 4693154.0,
+      "cycles": 2153658.0,
+      "caches": 87868.0,
+      "cacheMisses": 1654.0,
+      "branches": 207656.0,
+      "branchMisses": 22244.0
+    },
+    "dataV2": {
+      "energy": 41992.0,
+      "instructions": 1091886.0,
+      "durations": 1983544.0,
+      "cycles": 2036008.0,
+      "caches": 82966.0,
+      "cacheMisses": 1638.0,
+      "branches": 201598.0,
+      "branchMisses": 21036.0
+    },
+    "energy": -39430.0,
+    "instructions": -33250.0,
+    "durations": -2709610.0,
+    "cycles": -117650.0,
+    "caches": -4902.0,
+    "cacheMisses": -16.0,
+    "branches": -6058.0,
+    "branchMisses": -1208.0
+  },
+  "com.google.gson.GsonTest#testClonedTypeAdapterFactoryListsAreIndependent": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1260424.0,
+      "durations": 1080864.0,
+      "cycles": 1758606.0,
+      "caches": 74646.0,
+      "cacheMisses": 3772.0,
+      "branches": 256694.0,
+      "branchMisses": 13844.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1270628.0,
+      "durations": 1100118.0,
+      "cycles": 1794976.0,
+      "caches": 75880.0,
+      "cacheMisses": 3820.0,
+      "branches": 258514.0,
+      "branchMisses": 14560.0
+    },
+    "energy": 0.0,
+    "instructions": 10204.0,
+    "durations": 19254.0,
+    "cycles": 36370.0,
+    "caches": 1234.0,
+    "cacheMisses": 48.0,
+    "branches": 1820.0,
+    "branchMisses": 716.0
+  },
+  "com.google.gson.functional.ThrowableFunctionalTest#testExceptionWithCause": {
+    "dataV1": {
+      "energy": 41748.0,
+      "instructions": 3732730.0,
+      "durations": 2378110.0,
+      "cycles": 4939428.0,
+      "caches": 171418.0,
+      "cacheMisses": 15888.0,
+      "branches": 720948.0,
+      "branchMisses": 33510.0
+    },
+    "dataV2": {
+      "energy": 41626.0,
+      "instructions": 3727984.0,
+      "durations": 2387214.0,
+      "cycles": 4956920.0,
+      "caches": 171604.0,
+      "cacheMisses": 16130.0,
+      "branches": 720800.0,
+      "branchMisses": 33754.0
+    },
+    "energy": -122.0,
+    "instructions": -4746.0,
+    "durations": 9104.0,
+    "cycles": 17492.0,
+    "caches": 186.0,
+    "cacheMisses": 242.0,
+    "branches": -148.0,
+    "branchMisses": 244.0
+  },
+  "com.google.gson.functional.PrimitiveTest#testNegativeInfinityFloatSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 566980.0,
+      "durations": 596570.0,
+      "cycles": 857250.0,
+      "caches": 41118.0,
+      "cacheMisses": 3094.0,
+      "branches": 119970.0,
+      "branchMisses": 5760.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 567274.0,
+      "durations": 592932.0,
+      "cycles": 885888.0,
+      "caches": 44884.0,
+      "cacheMisses": 3118.0,
+      "branches": 120086.0,
+      "branchMisses": 6244.0
+    },
+    "energy": 0.0,
+    "instructions": 294.0,
+    "durations": -3638.0,
+    "cycles": 28638.0,
+    "caches": 3766.0,
+    "cacheMisses": 24.0,
+    "branches": 116.0,
+    "branchMisses": 484.0
+  },
+  "com.google.gson.functional.NullObjectAndFieldTest#testNullWrappedPrimitiveMemberDeserialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 999570.0,
+      "durations": 5400866.0,
+      "cycles": 1858442.0,
+      "caches": 66066.0,
+      "cacheMisses": 942.0,
+      "branches": 178636.0,
+      "branchMisses": 18862.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 982308.0,
+      "durations": 5373788.0,
+      "cycles": 1816382.0,
+      "caches": 65104.0,
+      "cacheMisses": 892.0,
+      "branches": 174984.0,
+      "branchMisses": 18304.0
+    },
+    "energy": 0.0,
+    "instructions": -17262.0,
+    "durations": -27078.0,
+    "cycles": -42060.0,
+    "caches": -962.0,
+    "cacheMisses": -50.0,
+    "branches": -3652.0,
+    "branchMisses": -558.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomAdapterInvokedForCollectionElementSerialization": {
+    "dataV1": {
+      "energy": 41382.0,
+      "instructions": 2746894.0,
+      "durations": 1971562.0,
+      "cycles": 3624670.0,
+      "caches": 136492.0,
+      "cacheMisses": 5360.0,
+      "branches": 557052.0,
+      "branchMisses": 32972.0
+    },
+    "dataV2": {
+      "energy": 41382.0,
+      "instructions": 2773708.0,
+      "durations": 2021034.0,
+      "cycles": 3728928.0,
+      "caches": 140032.0,
+      "cacheMisses": 5540.0,
+      "branches": 562074.0,
+      "branchMisses": 34116.0
+    },
+    "energy": 0.0,
+    "instructions": 26814.0,
+    "durations": 49472.0,
+    "cycles": 104258.0,
+    "caches": 3540.0,
+    "cacheMisses": 180.0,
+    "branches": 5022.0,
+    "branchMisses": 1144.0
+  },
+  "com.google.gson.functional.PrimitiveTest#testFloatInfinitySerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 536960.0,
+      "durations": 590654.0,
+      "cycles": 736380.0,
+      "caches": 35038.0,
+      "cacheMisses": 2826.0,
+      "branches": 113826.0,
+      "branchMisses": 4638.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 536524.0,
+      "durations": 592544.0,
+      "cycles": 736280.0,
+      "caches": 35224.0,
+      "cacheMisses": 2816.0,
+      "branches": 113776.0,
+      "branchMisses": 4722.0
+    },
+    "energy": 0.0,
+    "instructions": -436.0,
+    "durations": 1890.0,
+    "cycles": -100.0,
+    "caches": 186.0,
+    "cacheMisses": -10.0,
+    "branches": -50.0,
+    "branchMisses": 84.0
+  },
+  "com.google.gson.functional.StreamingTypeAdaptersTest#testSerializeRecursive": {
+    "dataV1": {
+      "energy": 40528.0,
+      "instructions": 1816360.0,
+      "durations": 1451960.0,
+      "cycles": 2669580.0,
+      "caches": 102158.0,
+      "cacheMisses": 3530.0,
+      "branches": 354872.0,
+      "branchMisses": 23712.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1827178.0,
+      "durations": 1463146.0,
+      "cycles": 2699498.0,
+      "caches": 102686.0,
+      "cacheMisses": 3596.0,
+      "branches": 357092.0,
+      "branchMisses": 24516.0
+    },
+    "energy": -40528.0,
+    "instructions": 10818.0,
+    "durations": 11186.0,
+    "cycles": 29918.0,
+    "caches": 528.0,
+    "cacheMisses": 66.0,
+    "branches": 2220.0,
+    "branchMisses": 804.0
+  },
+  "com.google.gson.functional.NamingPolicyTest#testGsonWithUpperCamelCaseSpacesPolicyDeserialiation": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 924970.0,
+      "durations": 901456.0,
+      "cycles": 1439658.0,
+      "caches": 65292.0,
+      "cacheMisses": 3084.0,
+      "branches": 184432.0,
+      "branchMisses": 12150.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 925802.0,
+      "durations": 904368.0,
+      "cycles": 1448274.0,
+      "caches": 65794.0,
+      "cacheMisses": 3068.0,
+      "branches": 184900.0,
+      "branchMisses": 12122.0
+    },
+    "energy": 0.0,
+    "instructions": 832.0,
+    "durations": 2912.0,
+    "cycles": 8616.0,
+    "caches": 502.0,
+    "cacheMisses": -16.0,
+    "branches": 468.0,
+    "branchMisses": -28.0
+  },
+  "com.google.gson.OverrideCoreTypeAdaptersTest#testOverrideWrapperBooleanAdapter": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 770166.0,
+      "durations": 783384.0,
+      "cycles": 1164460.0,
+      "caches": 48112.0,
+      "cacheMisses": 3108.0,
+      "branches": 153906.0,
+      "branchMisses": 10306.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 772050.0,
+      "durations": 781954.0,
+      "cycles": 1182352.0,
+      "caches": 49148.0,
+      "cacheMisses": 3156.0,
+      "branches": 154280.0,
+      "branchMisses": 10506.0
+    },
+    "energy": 0.0,
+    "instructions": 1884.0,
+    "durations": -1430.0,
+    "cycles": 17892.0,
+    "caches": 1036.0,
+    "cacheMisses": 48.0,
+    "branches": 374.0,
+    "branchMisses": 200.0
+  },
+  "com.google.gson.functional.ObjectTest#testInnerClassDeserialization": {
+    "dataV1": {
+      "energy": 41016.0,
+      "instructions": 2538930.0,
+      "durations": 2582938.0,
+      "cycles": 3645630.0,
+      "caches": 153838.0,
+      "cacheMisses": 4278.0,
+      "branches": 506646.0,
+      "branchMisses": 32752.0
+    },
+    "dataV2": {
+      "energy": 41260.0,
+      "instructions": 2568006.0,
+      "durations": 2598084.0,
+      "cycles": 3731112.0,
+      "caches": 157554.0,
+      "cacheMisses": 4308.0,
+      "branches": 512018.0,
+      "branchMisses": 34012.0
+    },
+    "energy": 244.0,
+    "instructions": 29076.0,
+    "durations": 15146.0,
+    "cycles": 85482.0,
+    "caches": 3716.0,
+    "cacheMisses": 30.0,
+    "branches": 5372.0,
+    "branchMisses": 1260.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testEnsureCustomSerializerNotInvokedForNullValues": {
+    "dataV1": {
+      "energy": 37842.0,
+      "instructions": 1666934.0,
+      "durations": 1375778.0,
+      "cycles": 2434858.0,
+      "caches": 100478.0,
+      "cacheMisses": 3802.0,
+      "branches": 339280.0,
+      "branchMisses": 22058.0
+    },
+    "dataV2": {
+      "energy": 38452.0,
+      "instructions": 1690110.0,
+      "durations": 1386608.0,
+      "cycles": 2508842.0,
+      "caches": 102790.0,
+      "cacheMisses": 3748.0,
+      "branches": 343160.0,
+      "branchMisses": 23294.0
+    },
+    "energy": 610.0,
+    "instructions": 23176.0,
+    "durations": 10830.0,
+    "cycles": 73984.0,
+    "caches": 2312.0,
+    "cacheMisses": -54.0,
+    "branches": 3880.0,
+    "branchMisses": 1236.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testSqlDateSerialization": {
+    "dataV1": {
+      "energy": 2831046.0,
+      "instructions": 1.07480634E8,
+      "durations": 1.37400174E8,
+      "cycles": 1.08610346E8,
+      "caches": 1745324.0,
+      "cacheMisses": 87830.0,
+      "branches": 1.9795406E7,
+      "branchMisses": 1009744.0
+    },
+    "dataV2": {
+      "energy": 2824332.0,
+      "instructions": 1.07749718E8,
+      "durations": 1.36891976E8,
+      "cycles": 1.08600192E8,
+      "caches": 1726406.0,
+      "cacheMisses": 87720.0,
+      "branches": 1.9850312E7,
+      "branchMisses": 1019056.0
+    },
+    "energy": -6714.0,
+    "instructions": 269084.0,
+    "durations": -508198.0,
+    "cycles": -10154.0,
+    "caches": -18918.0,
+    "cacheMisses": -110.0,
+    "branches": 54906.0,
+    "branchMisses": 9312.0
+  },
+  "com.google.gson.functional.NullObjectAndFieldTest#testNullWrappedPrimitiveMemberSerialization": {
+    "dataV1": {
+      "energy": 40284.0,
+      "instructions": 1775428.0,
+      "durations": 1668156.0,
+      "cycles": 3055642.0,
+      "caches": 111750.0,
+      "cacheMisses": 1722.0,
+      "branches": 328872.0,
+      "branchMisses": 32060.0
+    },
+    "dataV2": {
+      "energy": 40404.0,
+      "instructions": 1764320.0,
+      "durations": 1665588.0,
+      "cycles": 2992018.0,
+      "caches": 109490.0,
+      "cacheMisses": 1436.0,
+      "branches": 326330.0,
+      "branchMisses": 31554.0
+    },
+    "energy": 120.0,
+    "instructions": -11108.0,
+    "durations": -2568.0,
+    "cycles": -63624.0,
+    "caches": -2260.0,
+    "cacheMisses": -286.0,
+    "branches": -2542.0,
+    "branchMisses": -506.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testDateSerializationInCollection": {
+    "dataV1": {
+      "energy": 78370.0,
+      "instructions": 2703570.0,
+      "durations": 3464008.0,
+      "cycles": 4864508.0,
+      "caches": 150100.0,
+      "cacheMisses": 13168.0,
+      "branches": 523382.0,
+      "branchMisses": 58784.0
+    },
+    "dataV2": {
+      "energy": 78978.0,
+      "instructions": 2724500.0,
+      "durations": 3444182.0,
+      "cycles": 4932550.0,
+      "caches": 152576.0,
+      "cacheMisses": 13288.0,
+      "branches": 525908.0,
+      "branchMisses": 59736.0
+    },
+    "energy": 608.0,
+    "instructions": 20930.0,
+    "durations": -19826.0,
+    "cycles": 68042.0,
+    "caches": 2476.0,
+    "cacheMisses": 120.0,
+    "branches": 2526.0,
+    "branchMisses": 952.0
+  },
+  "com.google.gson.GsonBuilderTest#testTransientFieldExclusion": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1171870.0,
+      "durations": 1145936.0,
+      "cycles": 1943918.0,
+      "caches": 88888.0,
+      "cacheMisses": 3732.0,
+      "branches": 234656.0,
+      "branchMisses": 16548.0
+    },
+    "dataV2": {
+      "energy": 41504.0,
+      "instructions": 1191852.0,
+      "durations": 1236408.0,
+      "cycles": 2023640.0,
+      "caches": 93098.0,
+      "cacheMisses": 3842.0,
+      "branches": 237998.0,
+      "branchMisses": 17346.0
+    },
+    "energy": 41504.0,
+    "instructions": 19982.0,
+    "durations": 90472.0,
+    "cycles": 79722.0,
+    "caches": 4210.0,
+    "cacheMisses": 110.0,
+    "branches": 3342.0,
+    "branchMisses": 798.0
+  },
+  "com.google.gson.functional.VersioningTest#testVersionedGsonWithUnversionedClassesSerialization": {
+    "dataV1": {
+      "energy": 38818.0,
+      "instructions": 1366528.0,
+      "durations": 1227108.0,
+      "cycles": 2058102.0,
+      "caches": 83718.0,
+      "cacheMisses": 3374.0,
+      "branches": 265728.0,
+      "branchMisses": 17848.0
+    },
+    "dataV2": {
+      "energy": 40772.0,
+      "instructions": 1369858.0,
+      "durations": 1248650.0,
+      "cycles": 2057656.0,
+      "caches": 84020.0,
+      "cacheMisses": 3368.0,
+      "branches": 265124.0,
+      "branchMisses": 17746.0
+    },
+    "energy": 1954.0,
+    "instructions": 3330.0,
+    "durations": 21542.0,
+    "cycles": -446.0,
+    "caches": 302.0,
+    "cacheMisses": -6.0,
+    "branches": -604.0,
+    "branchMisses": -102.0
+  },
+  "com.google.gson.functional.ObjectTest#testClassWithNoFieldsSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 824628.0,
+      "durations": 731750.0,
+      "cycles": 1252800.0,
+      "caches": 58308.0,
+      "cacheMisses": 3136.0,
+      "branches": 165922.0,
+      "branchMisses": 9542.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 711538.0,
+      "durations": 727348.0,
+      "cycles": 1236888.0,
+      "caches": 60240.0,
+      "cacheMisses": 3122.0,
+      "branches": 146302.0,
+      "branchMisses": 9552.0
+    },
+    "energy": 0.0,
+    "instructions": -113090.0,
+    "durations": -4402.0,
+    "cycles": -15912.0,
+    "caches": 1932.0,
+    "cacheMisses": -14.0,
+    "branches": -19620.0,
+    "branchMisses": 10.0
+  },
+  "com.google.gson.functional.CustomDeserializerTest#testJsonTypeFieldBasedDeserialization": {
+    "dataV1": {
+      "energy": 122314.0,
+      "instructions": 3913146.0,
+      "durations": 6393718.0,
+      "cycles": 5398174.0,
+      "caches": 224888.0,
+      "cacheMisses": 5322.0,
+      "branches": 785850.0,
+      "branchMisses": 44822.0
+    },
+    "dataV2": {
+      "energy": 123168.0,
+      "instructions": 3943106.0,
+      "durations": 6296636.0,
+      "cycles": 5609654.0,
+      "caches": 232400.0,
+      "cacheMisses": 5332.0,
+      "branches": 792132.0,
+      "branchMisses": 48588.0
+    },
+    "energy": 854.0,
+    "instructions": 29960.0,
+    "durations": -97082.0,
+    "cycles": 211480.0,
+    "caches": 7512.0,
+    "cacheMisses": 10.0,
+    "branches": 6282.0,
+    "branchMisses": 3766.0
+  },
+  "com.google.gson.functional.ExclusionStrategyFunctionalTest#testExcludeTopLevelClassSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 592282.0,
+      "durations": 660436.0,
+      "cycles": 895846.0,
+      "caches": 43510.0,
+      "cacheMisses": 2880.0,
+      "branches": 123430.0,
+      "branchMisses": 6078.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 593238.0,
+      "durations": 657042.0,
+      "cycles": 894920.0,
+      "caches": 43794.0,
+      "cacheMisses": 2882.0,
+      "branches": 123842.0,
+      "branchMisses": 6062.0
+    },
+    "energy": 0.0,
+    "instructions": 956.0,
+    "durations": -3394.0,
+    "cycles": -926.0,
+    "caches": 284.0,
+    "cacheMisses": 2.0,
+    "branches": 412.0,
+    "branchMisses": -16.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomTypeAdapterDoesNotAppliesToSubClasses": {
+    "dataV1": {
+      "energy": 40770.0,
+      "instructions": 2280500.0,
+      "durations": 1826874.0,
+      "cycles": 3422064.0,
+      "caches": 143574.0,
+      "cacheMisses": 3952.0,
+      "branches": 457288.0,
+      "branchMisses": 32224.0
+    },
+    "dataV2": {
+      "energy": 40650.0,
+      "instructions": 2295488.0,
+      "durations": 1859542.0,
+      "cycles": 3479720.0,
+      "caches": 145788.0,
+      "cacheMisses": 3862.0,
+      "branches": 460000.0,
+      "branchMisses": 33224.0
+    },
+    "energy": -120.0,
+    "instructions": 14988.0,
+    "durations": 32668.0,
+    "cycles": 57656.0,
+    "caches": 2214.0,
+    "cacheMisses": -90.0,
+    "branches": 2712.0,
+    "branchMisses": 1000.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomAdapterInvokedForCollectionElementSerializationWithType": {
+    "dataV1": {
+      "energy": 39064.0,
+      "instructions": 1902020.0,
+      "durations": 1598946.0,
+      "cycles": 2897454.0,
+      "caches": 123458.0,
+      "cacheMisses": 4132.0,
+      "branches": 375434.0,
+      "branchMisses": 26088.0
+    },
+    "dataV2": {
+      "energy": 40648.0,
+      "instructions": 1920288.0,
+      "durations": 1613300.0,
+      "cycles": 2946538.0,
+      "caches": 125302.0,
+      "cacheMisses": 4066.0,
+      "branches": 378328.0,
+      "branchMisses": 27120.0
+    },
+    "energy": 1584.0,
+    "instructions": 18268.0,
+    "durations": 14354.0,
+    "cycles": 49084.0,
+    "caches": 1844.0,
+    "cacheMisses": -66.0,
+    "branches": 2894.0,
+    "branchMisses": 1032.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testDefaultDateDeserializationUsingBuilder": {
+    "dataV1": {
+      "energy": 574828.0,
+      "instructions": 3.390181E7,
+      "durations": 2.859092E7,
+      "cycles": 3.6758794E7,
+      "caches": 835788.0,
+      "cacheMisses": 54840.0,
+      "branches": 6495146.0,
+      "branchMisses": 352560.0
+    },
+    "dataV2": {
+      "energy": 573850.0,
+      "instructions": 3.3898458E7,
+      "durations": 2.8198236E7,
+      "cycles": 3.6679492E7,
+      "caches": 829366.0,
+      "cacheMisses": 54586.0,
+      "branches": 6493200.0,
+      "branchMisses": 351908.0
+    },
+    "energy": -978.0,
+    "instructions": -3352.0,
+    "durations": -392684.0,
+    "cycles": -79302.0,
+    "caches": -6422.0,
+    "cacheMisses": -254.0,
+    "branches": -1946.0,
+    "branchMisses": -652.0
+  },
+  "com.google.gson.GsonTypeAdapterTest#testTypeAdapterDoesNotAffectNonAdaptedTypes": {
+    "dataV1": {
+      "energy": 41748.0,
+      "instructions": 616258.0,
+      "durations": 2698940.0,
+      "cycles": 1041854.0,
+      "caches": 51388.0,
+      "cacheMisses": 2966.0,
+      "branches": 128066.0,
+      "branchMisses": 8262.0
+    },
+    "dataV2": {
+      "energy": 41382.0,
+      "instructions": 617144.0,
+      "durations": 2696430.0,
+      "cycles": 1040828.0,
+      "caches": 51678.0,
+      "cacheMisses": 2998.0,
+      "branches": 128376.0,
+      "branchMisses": 8314.0
+    },
+    "energy": -366.0,
+    "instructions": 886.0,
+    "durations": -2510.0,
+    "cycles": -1026.0,
+    "caches": 290.0,
+    "cacheMisses": 32.0,
+    "branches": 310.0,
+    "branchMisses": 52.0
+  },
+  "com.google.gson.functional.TypeAdapterPrecedenceTest#testStreamingHierarchicalFollowedByNonstreaming": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 640694.0,
+      "durations": 704466.0,
+      "cycles": 996532.0,
+      "caches": 44474.0,
+      "cacheMisses": 2978.0,
+      "branches": 131588.0,
+      "branchMisses": 8380.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 639774.0,
+      "durations": 697948.0,
+      "cycles": 988060.0,
+      "caches": 44102.0,
+      "cacheMisses": 3022.0,
+      "branches": 131478.0,
+      "branchMisses": 8392.0
+    },
+    "energy": 0.0,
+    "instructions": -920.0,
+    "durations": -6518.0,
+    "cycles": -8472.0,
+    "caches": -372.0,
+    "cacheMisses": 44.0,
+    "branches": -110.0,
+    "branchMisses": 12.0
+  },
+  "com.google.gson.functional.NamingPolicyTest#testGsonWithLowerCaseUnderscorePolicyDeserialiation": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 886076.0,
+      "durations": 882460.0,
+      "cycles": 1363468.0,
+      "caches": 60862.0,
+      "cacheMisses": 3006.0,
+      "branches": 177628.0,
+      "branchMisses": 11762.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 886642.0,
+      "durations": 883638.0,
+      "cycles": 1363668.0,
+      "caches": 60926.0,
+      "cacheMisses": 3026.0,
+      "branches": 177774.0,
+      "branchMisses": 11762.0
+    },
+    "energy": 0.0,
+    "instructions": 566.0,
+    "durations": 1178.0,
+    "cycles": 200.0,
+    "caches": 64.0,
+    "cacheMisses": 20.0,
+    "branches": 146.0,
+    "branchMisses": 0.0
+  },
+  "com.google.gson.functional.ArrayTest#testNullsInArrayWithSerializeNullPropertySetSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 659182.0,
+      "durations": 710788.0,
+      "cycles": 994190.0,
+      "caches": 45614.0,
+      "cacheMisses": 3236.0,
+      "branches": 135574.0,
+      "branchMisses": 7000.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 660498.0,
+      "durations": 717562.0,
+      "cycles": 1000458.0,
+      "caches": 45864.0,
+      "cacheMisses": 3326.0,
+      "branches": 135808.0,
+      "branchMisses": 7152.0
+    },
+    "energy": 0.0,
+    "instructions": 1316.0,
+    "durations": 6774.0,
+    "cycles": 6268.0,
+    "caches": 250.0,
+    "cacheMisses": 90.0,
+    "branches": 234.0,
+    "branchMisses": 152.0
+  },
+  "com.google.gson.functional.TypeAdapterPrecedenceTest#testNonstreamingFollowedByNonstreaming": {
+    "dataV1": {
+      "energy": 38208.0,
+      "instructions": 700948.0,
+      "durations": 1118592.0,
+      "cycles": 1117900.0,
+      "caches": 50452.0,
+      "cacheMisses": 2976.0,
+      "branches": 143238.0,
+      "branchMisses": 9418.0
+    },
+    "dataV2": {
+      "energy": 40528.0,
+      "instructions": 699516.0,
+      "durations": 1123850.0,
+      "cycles": 1105216.0,
+      "caches": 50584.0,
+      "cacheMisses": 2972.0,
+      "branches": 143024.0,
+      "branchMisses": 9466.0
+    },
+    "energy": 2320.0,
+    "instructions": -1432.0,
+    "durations": 5258.0,
+    "cycles": -12684.0,
+    "caches": 132.0,
+    "cacheMisses": -4.0,
+    "branches": -214.0,
+    "branchMisses": 48.0
+  },
+  "com.google.gson.functional.PrimitiveTest#testLongAsStringSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 560676.0,
+      "durations": 652054.0,
+      "cycles": 842698.0,
+      "caches": 40038.0,
+      "cacheMisses": 3080.0,
+      "branches": 118238.0,
+      "branchMisses": 5634.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 560974.0,
+      "durations": 643306.0,
+      "cycles": 838716.0,
+      "caches": 40108.0,
+      "cacheMisses": 3094.0,
+      "branches": 118218.0,
+      "branchMisses": 5572.0
+    },
+    "energy": 0.0,
+    "instructions": 298.0,
+    "durations": -8748.0,
+    "cycles": -3982.0,
+    "caches": 70.0,
+    "cacheMisses": 14.0,
+    "branches": -20.0,
+    "branchMisses": -62.0
+  },
+  "com.google.gson.functional.PrettyPrintingTest#testPrettyPrintArrayOfPrimitives": {
+    "dataV1": {
+      "energy": 84840.0,
+      "instructions": 783418.0,
+      "durations": 5123872.0,
+      "cycles": 1341784.0,
+      "caches": 53264.0,
+      "cacheMisses": 1586.0,
+      "branches": 143158.0,
+      "branchMisses": 12148.0
+    },
+    "dataV2": {
+      "energy": 85814.0,
+      "instructions": 796604.0,
+      "durations": 5132292.0,
+      "cycles": 1365060.0,
+      "caches": 54796.0,
+      "cacheMisses": 1604.0,
+      "branches": 146232.0,
+      "branchMisses": 12436.0
+    },
+    "energy": 974.0,
+    "instructions": 13186.0,
+    "durations": 8420.0,
+    "cycles": 23276.0,
+    "caches": 1532.0,
+    "cacheMisses": 18.0,
+    "branches": 3074.0,
+    "branchMisses": 288.0
+  },
+  "com.google.gson.functional.MapAsArrayTypeAdapterTest#testMultipleEnableComplexKeyRegistrationHasNoEffect": {
+    "dataV1": {
+      "energy": 41504.0,
+      "instructions": 2120040.0,
+      "durations": 2371364.0,
+      "cycles": 3400452.0,
+      "caches": 139384.0,
+      "cacheMisses": 4254.0,
+      "branches": 406594.0,
+      "branchMisses": 33138.0
+    },
+    "dataV2": {
+      "energy": 41382.0,
+      "instructions": 2106756.0,
+      "durations": 2379390.0,
+      "cycles": 3393682.0,
+      "caches": 139410.0,
+      "cacheMisses": 4314.0,
+      "branches": 404248.0,
+      "branchMisses": 33494.0
+    },
+    "energy": -122.0,
+    "instructions": -13284.0,
+    "durations": 8026.0,
+    "cycles": -6770.0,
+    "caches": 26.0,
+    "cacheMisses": 60.0,
+    "branches": -2346.0,
+    "branchMisses": 356.0
+  },
+  "com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithCustomSerializer": {
+    "dataV1": {
+      "energy": 369750.0,
+      "instructions": 1.7457746E7,
+      "durations": 1.9527178E7,
+      "cycles": 2.0341736E7,
+      "caches": 621676.0,
+      "cacheMisses": 11188.0,
+      "branches": 3604430.0,
+      "branchMisses": 204906.0
+    },
+    "dataV2": {
+      "energy": 491454.0,
+      "instructions": 1.756299E7,
+      "durations": 2.4458184E7,
+      "cycles": 2.083593E7,
+      "caches": 634972.0,
+      "cacheMisses": 10954.0,
+      "branches": 3624752.0,
+      "branchMisses": 215840.0
+    },
+    "energy": 121704.0,
+    "instructions": 105244.0,
+    "durations": 4931006.0,
+    "cycles": 494194.0,
+    "caches": 13296.0,
+    "cacheMisses": -234.0,
+    "branches": 20322.0,
+    "branchMisses": 10934.0
+  },
+  "com.google.gson.functional.FieldNamingTest#testLowerCaseWithDashes": {
+    "dataV1": {
+      "energy": 41016.0,
+      "instructions": 1759380.0,
+      "durations": 1642276.0,
+      "cycles": 2193888.0,
+      "caches": 78796.0,
+      "cacheMisses": 3256.0,
+      "branches": 329310.0,
+      "branchMisses": 16616.0
+    },
+    "dataV2": {
+      "energy": 40770.0,
+      "instructions": 1751976.0,
+      "durations": 1642546.0,
+      "cycles": 2168994.0,
+      "caches": 77788.0,
+      "cacheMisses": 3270.0,
+      "branches": 328706.0,
+      "branchMisses": 16680.0
+    },
+    "energy": -246.0,
+    "instructions": -7404.0,
+    "durations": 270.0,
+    "cycles": -24894.0,
+    "caches": -1008.0,
+    "cacheMisses": 14.0,
+    "branches": -604.0,
+    "branchMisses": 64.0
+  },
+  "com.google.gson.functional.ParameterizedTypesTest#testParameterizedTypeWithReaderDeserialization": {
+    "dataV1": {
+      "energy": 330444.0,
+      "instructions": 1.5244882E7,
+      "durations": 1.9578958E7,
+      "cycles": 1.8093234E7,
+      "caches": 544420.0,
+      "cacheMisses": 13206.0,
+      "branches": 3164250.0,
+      "branchMisses": 175338.0
+    },
+    "dataV2": {
+      "energy": 494384.0,
+      "instructions": 1.5278912E7,
+      "durations": 2.9150862E7,
+      "cycles": 1.8064198E7,
+      "caches": 533856.0,
+      "cacheMisses": 13058.0,
+      "branches": 3169104.0,
+      "branchMisses": 175160.0
+    },
+    "energy": 163940.0,
+    "instructions": 34030.0,
+    "durations": 9571904.0,
+    "cycles": -29036.0,
+    "caches": -10564.0,
+    "cacheMisses": -148.0,
+    "branches": 4854.0,
+    "branchMisses": -178.0
+  },
+  "com.google.gson.functional.PrimitiveTest#testLongAsStringDeserialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 680776.0,
+      "durations": 743812.0,
+      "cycles": 1073220.0,
+      "caches": 48574.0,
+      "cacheMisses": 3598.0,
+      "branches": 141342.0,
+      "branchMisses": 7932.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 683028.0,
+      "durations": 742522.0,
+      "cycles": 1078558.0,
+      "caches": 48948.0,
+      "cacheMisses": 3598.0,
+      "branches": 141766.0,
+      "branchMisses": 7976.0
+    },
+    "energy": 0.0,
+    "instructions": 2252.0,
+    "durations": -1290.0,
+    "cycles": 5338.0,
+    "caches": 374.0,
+    "cacheMisses": 0.0,
+    "branches": 424.0,
+    "branchMisses": 44.0
+  },
+  "com.google.gson.functional.MapTest#testInterfaceTypeMap": {
+    "dataV1": {
+      "energy": 164550.0,
+      "instructions": 4896896.0,
+      "durations": 8289548.0,
+      "cycles": 6973042.0,
+      "caches": 272532.0,
+      "cacheMisses": 7076.0,
+      "branches": 931776.0,
+      "branchMisses": 58366.0
+    },
+    "dataV2": {
+      "energy": 164428.0,
+      "instructions": 4900342.0,
+      "durations": 8253752.0,
+      "cycles": 6959406.0,
+      "caches": 273000.0,
+      "cacheMisses": 7014.0,
+      "branches": 929962.0,
+      "branchMisses": 57744.0
+    },
+    "energy": -122.0,
+    "instructions": 3446.0,
+    "durations": -35796.0,
+    "cycles": -13636.0,
+    "caches": 468.0,
+    "cacheMisses": -62.0,
+    "branches": -1814.0,
+    "branchMisses": -622.0
+  },
+  "com.google.gson.functional.NamingPolicyTest#testGsonWithUpperCamelCaseSpacesPolicySerialiation": {
+    "dataV1": {
+      "energy": 164062.0,
+      "instructions": 956536.0,
+      "durations": 7554004.0,
+      "cycles": 1656118.0,
+      "caches": 75872.0,
+      "cacheMisses": 3104.0,
+      "branches": 191368.0,
+      "branchMisses": 14796.0
+    },
+    "dataV2": {
+      "energy": 164306.0,
+      "instructions": 957142.0,
+      "durations": 7541176.0,
+      "cycles": 1665840.0,
+      "caches": 76654.0,
+      "cacheMisses": 3094.0,
+      "branches": 191422.0,
+      "branchMisses": 14828.0
+    },
+    "energy": 244.0,
+    "instructions": 606.0,
+    "durations": -12828.0,
+    "cycles": 9722.0,
+    "caches": 782.0,
+    "cacheMisses": -10.0,
+    "branches": 54.0,
+    "branchMisses": 32.0
+  },
+  "com.google.gson.functional.InheritanceTest#testBaseSerializedAsSubForToJsonMethod": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1206984.0,
+      "durations": 1126572.0,
+      "cycles": 2228272.0,
+      "caches": 95230.0,
+      "cacheMisses": 1706.0,
+      "branches": 225388.0,
+      "branchMisses": 20496.0
+    },
+    "dataV2": {
+      "energy": 38330.0,
+      "instructions": 1230590.0,
+      "durations": 1517510.0,
+      "cycles": 2383832.0,
+      "caches": 106034.0,
+      "cacheMisses": 1734.0,
+      "branches": 229734.0,
+      "branchMisses": 21834.0
+    },
+    "energy": 38330.0,
+    "instructions": 23606.0,
+    "durations": 390938.0,
+    "cycles": 155560.0,
+    "caches": 10804.0,
+    "cacheMisses": 28.0,
+    "branches": 4346.0,
+    "branchMisses": 1338.0
+  },
+  "com.google.gson.functional.CustomSerializerTest#testBaseClassSerializerInvokedForBaseClassFieldsHoldingSubClassInstances": {
+    "dataV1": {
+      "energy": 83374.0,
+      "instructions": 1773722.0,
+      "durations": 4923304.0,
+      "cycles": 3538582.0,
+      "caches": 152036.0,
+      "cacheMisses": 2148.0,
+      "branches": 332406.0,
+      "branchMisses": 34840.0
+    },
+    "dataV2": {
+      "energy": 83130.0,
+      "instructions": 1833988.0,
+      "durations": 5747038.0,
+      "cycles": 3601880.0,
+      "caches": 153854.0,
+      "cacheMisses": 2172.0,
+      "branches": 341924.0,
+      "branchMisses": 35608.0
+    },
+    "energy": -244.0,
+    "instructions": 60266.0,
+    "durations": 823734.0,
+    "cycles": 63298.0,
+    "caches": 1818.0,
+    "cacheMisses": 24.0,
+    "branches": 9518.0,
+    "branchMisses": 768.0
+  },
+  "com.google.gson.functional.NamingPolicyTest#testGsonWithLowerCaseDotPolicyDeserialiation": {
+    "dataV1": {
+      "energy": 39306.0,
+      "instructions": 957662.0,
+      "durations": 1453324.0,
+      "cycles": 1626062.0,
+      "caches": 75522.0,
+      "cacheMisses": 3240.0,
+      "branches": 192366.0,
+      "branchMisses": 13740.0
+    },
+    "dataV2": {
+      "energy": 38940.0,
+      "instructions": 956910.0,
+      "durations": 1434696.0,
+      "cycles": 1624142.0,
+      "caches": 75162.0,
+      "cacheMisses": 3226.0,
+      "branches": 192076.0,
+      "branchMisses": 13738.0
+    },
+    "energy": -366.0,
+    "instructions": -752.0,
+    "durations": -18628.0,
+    "cycles": -1920.0,
+    "caches": -360.0,
+    "cacheMisses": -14.0,
+    "branches": -290.0,
+    "branchMisses": -2.0
+  },
+  "com.google.gson.functional.JavaUtilConcurrentAtomicTest#testAtomicLongArrayWithStringSerializationPolicy": {
+    "dataV1": {
+      "energy": 41992.0,
+      "instructions": 3745134.0,
+      "durations": 2452380.0,
+      "cycles": 4984780.0,
+      "caches": 139224.0,
+      "cacheMisses": 19190.0,
+      "branches": 743460.0,
+      "branchMisses": 36582.0
+    },
+    "dataV2": {
+      "energy": 41748.0,
+      "instructions": 3695944.0,
+      "durations": 2408356.0,
+      "cycles": 4906238.0,
+      "caches": 136168.0,
+      "cacheMisses": 18870.0,
+      "branches": 736502.0,
+      "branchMisses": 36014.0
+    },
+    "energy": -244.0,
+    "instructions": -49190.0,
+    "durations": -44024.0,
+    "cycles": -78542.0,
+    "caches": -3056.0,
+    "cacheMisses": -320.0,
+    "branches": -6958.0,
+    "branchMisses": -568.0
+  },
+  "com.google.gson.functional.NullObjectAndFieldTest#testCustomTypeAdapterPassesNullSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1462454.0,
+      "durations": 1235394.0,
+      "cycles": 2606998.0,
+      "caches": 95940.0,
+      "cacheMisses": 952.0,
+      "branches": 273916.0,
+      "branchMisses": 27564.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1413654.0,
+      "durations": 1241620.0,
+      "cycles": 2522000.0,
+      "caches": 92666.0,
+      "cacheMisses": 934.0,
+      "branches": 264896.0,
+      "branchMisses": 26014.0
+    },
+    "energy": 0.0,
+    "instructions": -48800.0,
+    "durations": 6226.0,
+    "cycles": -84998.0,
+    "caches": -3274.0,
+    "cacheMisses": -18.0,
+    "branches": -9020.0,
+    "branchMisses": -1550.0
+  },
+  "com.google.gson.functional.ObjectTest#testEmptyCollectionInAnObjectDeserialization": {
+    "dataV1": {
+      "energy": 121094.0,
+      "instructions": 2178008.0,
+      "durations": 5167456.0,
+      "cycles": 3507884.0,
+      "caches": 152826.0,
+      "cacheMisses": 4540.0,
+      "branches": 424032.0,
+      "branchMisses": 32720.0
+    },
+    "dataV2": {
+      "energy": 122192.0,
+      "instructions": 2181242.0,
+      "durations": 5187980.0,
+      "cycles": 3521190.0,
+      "caches": 153728.0,
+      "cacheMisses": 4368.0,
+      "branches": 424892.0,
+      "branchMisses": 33578.0
+    },
+    "energy": 1098.0,
+    "instructions": 3234.0,
+    "durations": 20524.0,
+    "cycles": 13306.0,
+    "caches": 902.0,
+    "cacheMisses": -172.0,
+    "branches": 860.0,
+    "branchMisses": 858.0
+  },
+  "com.google.gson.functional.SecurityTest#testJsonWithNonExectuableTokenWithConfiguredGsonDeserialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1127794.0,
+      "durations": 967070.0,
+      "cycles": 1635668.0,
+      "caches": 64456.0,
+      "cacheMisses": 3168.0,
+      "branches": 222100.0,
+      "branchMisses": 14214.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1125276.0,
+      "durations": 977560.0,
+      "cycles": 1601576.0,
+      "caches": 63608.0,
+      "cacheMisses": 3168.0,
+      "branches": 221408.0,
+      "branchMisses": 14066.0
+    },
+    "energy": 0.0,
+    "instructions": -2518.0,
+    "durations": 10490.0,
+    "cycles": -34092.0,
+    "caches": -848.0,
+    "cacheMisses": 0.0,
+    "branches": -692.0,
+    "branchMisses": -148.0
+  },
+  "com.google.gson.functional.FieldNamingTest#testLowerCaseWithUnderscores": {
+    "dataV1": {
+      "energy": 42604.0,
+      "instructions": 1823170.0,
+      "durations": 2778994.0,
+      "cycles": 2555258.0,
+      "caches": 104552.0,
+      "cacheMisses": 3430.0,
+      "branches": 342258.0,
+      "branchMisses": 20012.0
+    },
+    "dataV2": {
+      "energy": 42602.0,
+      "instructions": 1815468.0,
+      "durations": 2706958.0,
+      "cycles": 2490632.0,
+      "caches": 102376.0,
+      "cacheMisses": 3366.0,
+      "branches": 338632.0,
+      "branchMisses": 19602.0
+    },
+    "energy": -2.0,
+    "instructions": -7702.0,
+    "durations": -72036.0,
+    "cycles": -64626.0,
+    "caches": -2176.0,
+    "cacheMisses": -64.0,
+    "branches": -3626.0,
+    "branchMisses": -410.0
+  },
+  "com.google.gson.functional.NamingPolicyTest#testGsonDuplicateNameUsingSerializedNameFieldNamingPolicySerialization": {
+    "dataV1": {
+      "energy": 125854.0,
+      "instructions": 7213074.0,
+      "durations": 7450570.0,
+      "cycles": 8483704.0,
+      "caches": 234044.0,
+      "cacheMisses": 15520.0,
+      "branches": 1342342.0,
+      "branchMisses": 79502.0
+    },
+    "dataV2": {
+      "energy": 122316.0,
+      "instructions": 7188450.0,
+      "durations": 5828224.0,
+      "cycles": 8426756.0,
+      "caches": 231066.0,
+      "cacheMisses": 15470.0,
+      "branches": 1338010.0,
+      "branchMisses": 79014.0
+    },
+    "energy": -3538.0,
+    "instructions": -24624.0,
+    "durations": -1622346.0,
+    "cycles": -56948.0,
+    "caches": -2978.0,
+    "cacheMisses": -50.0,
+    "branches": -4332.0,
+    "branchMisses": -488.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testClassDeserialization": {
+    "dataV1": {
+      "energy": 36866.0,
+      "instructions": 1433478.0,
+      "durations": 1225076.0,
+      "cycles": 2095312.0,
+      "caches": 85520.0,
+      "cacheMisses": 4980.0,
+      "branches": 301760.0,
+      "branchMisses": 18436.0
+    },
+    "dataV2": {
+      "energy": 37964.0,
+      "instructions": 1434826.0,
+      "durations": 1219138.0,
+      "cycles": 2094814.0,
+      "caches": 86360.0,
+      "cacheMisses": 4888.0,
+      "branches": 301962.0,
+      "branchMisses": 18462.0
+    },
+    "energy": 1098.0,
+    "instructions": 1348.0,
+    "durations": -5938.0,
+    "cycles": -498.0,
+    "caches": 840.0,
+    "cacheMisses": -92.0,
+    "branches": 202.0,
+    "branchMisses": 26.0
+  },
+  "com.google.gson.functional.NullObjectAndFieldTest#testExplicitSerializationOfNullArrayMembers": {
+    "dataV1": {
+      "energy": 82642.0,
+      "instructions": 3755144.0,
+      "durations": 6734316.0,
+      "cycles": 6543820.0,
+      "caches": 246588.0,
+      "cacheMisses": 2928.0,
+      "branches": 694670.0,
+      "branchMisses": 70106.0
+    },
+    "dataV2": {
+      "energy": 121580.0,
+      "instructions": 3649418.0,
+      "durations": 9156380.0,
+      "cycles": 6409078.0,
+      "caches": 242624.0,
+      "cacheMisses": 2974.0,
+      "branches": 678488.0,
+      "branchMisses": 69190.0
+    },
+    "energy": 38938.0,
+    "instructions": -105726.0,
+    "durations": 2422064.0,
+    "cycles": -134742.0,
+    "caches": -3964.0,
+    "cacheMisses": 46.0,
+    "branches": -16182.0,
+    "branchMisses": -916.0
+  },
+  "com.google.gson.functional.ExclusionStrategyFunctionalTest#testExcludeTopLevelClassSerializationDoesNotImpactDeserialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 951640.0,
+      "durations": 873958.0,
+      "cycles": 1422416.0,
+      "caches": 62292.0,
+      "cacheMisses": 3198.0,
+      "branches": 189898.0,
+      "branchMisses": 11366.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 947198.0,
+      "durations": 873610.0,
+      "cycles": 1402240.0,
+      "caches": 60984.0,
+      "cacheMisses": 3206.0,
+      "branches": 188720.0,
+      "branchMisses": 11272.0
+    },
+    "energy": 0.0,
+    "instructions": -4442.0,
+    "durations": -348.0,
+    "cycles": -20176.0,
+    "caches": -1308.0,
+    "cacheMisses": 8.0,
+    "branches": -1178.0,
+    "branchMisses": -94.0
+  },
+  "com.google.gson.functional.CustomDeserializerTest#testCustomDeserializerReturnsNullForArrayElements": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 1307376.0,
+      "durations": 1117544.0,
+      "cycles": 1848626.0,
+      "caches": 78480.0,
+      "cacheMisses": 3518.0,
+      "branches": 266848.0,
+      "branchMisses": 15326.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 1316860.0,
+      "durations": 1161776.0,
+      "cycles": 1930648.0,
+      "caches": 82216.0,
+      "cacheMisses": 3538.0,
+      "branches": 268580.0,
+      "branchMisses": 16304.0
+    },
+    "energy": 0.0,
+    "instructions": 9484.0,
+    "durations": 44232.0,
+    "cycles": 82022.0,
+    "caches": 3736.0,
+    "cacheMisses": 20.0,
+    "branches": 1732.0,
+    "branchMisses": 978.0
+  },
+  "com.google.gson.functional.FieldExclusionTest#testDefaultNestedStaticClassIncluded": {
+    "dataV1": {
+      "energy": 41138.0,
+      "instructions": 1261938.0,
+      "durations": 1727302.0,
+      "cycles": 2170836.0,
+      "caches": 94062.0,
+      "cacheMisses": 3264.0,
+      "branches": 247792.0,
+      "branchMisses": 20524.0
+    },
+    "dataV2": {
+      "energy": 40894.0,
+      "instructions": 1264388.0,
+      "durations": 1747434.0,
+      "cycles": 2167856.0,
+      "caches": 94340.0,
+      "cacheMisses": 3292.0,
+      "branches": 248090.0,
+      "branchMisses": 20600.0
+    },
+    "energy": -244.0,
+    "instructions": 2450.0,
+    "durations": 20132.0,
+    "cycles": -2980.0,
+    "caches": 278.0,
+    "cacheMisses": 28.0,
+    "branches": 298.0,
+    "branchMisses": 76.0
+  },
+  "com.google.gson.functional.MapTest#testMapSerializationWithNullValueButSerializeNulls": {
+    "dataV1": {
+      "energy": 40892.0,
+      "instructions": 1295356.0,
+      "durations": 2217536.0,
+      "cycles": 2060954.0,
+      "caches": 91356.0,
+      "cacheMisses": 3372.0,
+      "branches": 258012.0,
+      "branchMisses": 18408.0
+    },
+    "dataV2": {
+      "energy": 41260.0,
+      "instructions": 1323986.0,
+      "durations": 2252750.0,
+      "cycles": 2115454.0,
+      "caches": 94270.0,
+      "cacheMisses": 3472.0,
+      "branches": 262902.0,
+      "branchMisses": 18946.0
+    },
+    "energy": 368.0,
+    "instructions": 28630.0,
+    "durations": 35214.0,
+    "cycles": 54500.0,
+    "caches": 2914.0,
+    "cacheMisses": 100.0,
+    "branches": 4890.0,
+    "branchMisses": 538.0
+  },
+  "com.google.gson.functional.NamingPolicyTest#testGsonWithLowerCaseDashPolicySerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 944752.0,
+      "durations": 902520.0,
+      "cycles": 1453130.0,
+      "caches": 63646.0,
+      "cacheMisses": 3062.0,
+      "branches": 188694.0,
+      "branchMisses": 12236.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 947564.0,
+      "durations": 899884.0,
+      "cycles": 1463172.0,
+      "caches": 64068.0,
+      "cacheMisses": 3086.0,
+      "branches": 189230.0,
+      "branchMisses": 12278.0
+    },
+    "energy": 0.0,
+    "instructions": 2812.0,
+    "durations": -2636.0,
+    "cycles": 10042.0,
+    "caches": 422.0,
+    "cacheMisses": 24.0,
+    "branches": 536.0,
+    "branchMisses": 42.0
+  },
+  "com.google.gson.functional.DefaultTypeAdaptersTest#testClassSerialization": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 864656.0,
+      "durations": 738620.0,
+      "cycles": 1047064.0,
+      "caches": 46802.0,
+      "cacheMisses": 3702.0,
+      "branches": 173094.0,
+      "branchMisses": 6584.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 874984.0,
+      "durations": 744114.0,
+      "cycles": 1055072.0,
+      "caches": 47180.0,
+      "cacheMisses": 3688.0,
+      "branches": 176868.0,
+      "branchMisses": 6704.0
+    },
+    "energy": 0.0,
+    "instructions": 10328.0,
+    "durations": 5494.0,
+    "cycles": 8008.0,
+    "caches": 378.0,
+    "cacheMisses": -14.0,
+    "branches": 3774.0,
+    "branchMisses": 120.0
+  },
+  "com.google.gson.functional.FieldNamingTest#testUpperCamelCase": {
+    "dataV1": {
+      "energy": 41504.0,
+      "instructions": 2872962.0,
+      "durations": 2862678.0,
+      "cycles": 4238790.0,
+      "caches": 168812.0,
+      "cacheMisses": 4436.0,
+      "branches": 550560.0,
+      "branchMisses": 36924.0
+    },
+    "dataV2": {
+      "energy": 41626.0,
+      "instructions": 2897276.0,
+      "durations": 2895904.0,
+      "cycles": 4299724.0,
+      "caches": 170644.0,
+      "cacheMisses": 4494.0,
+      "branches": 553968.0,
+      "branchMisses": 38100.0
+    },
+    "energy": 122.0,
+    "instructions": 24314.0,
+    "durations": 33226.0,
+    "cycles": 60934.0,
+    "caches": 1832.0,
+    "cacheMisses": 58.0,
+    "branches": 3408.0,
+    "branchMisses": 1176.0
+  },
+  "com.google.gson.functional.MapAsArrayTypeAdapterTest#testMapWithTypeVariableDeserialization": {
+    "dataV1": {
+      "energy": 121704.0,
+      "instructions": 2176758.0,
+      "durations": 5546756.0,
+      "cycles": 3559114.0,
+      "caches": 152180.0,
+      "cacheMisses": 4932.0,
+      "branches": 423670.0,
+      "branchMisses": 33220.0
+    },
+    "dataV2": {
+      "energy": 121826.0,
+      "instructions": 2176050.0,
+      "durations": 5586304.0,
+      "cycles": 3585780.0,
+      "caches": 153410.0,
+      "cacheMisses": 4992.0,
+      "branches": 423586.0,
+      "branchMisses": 33714.0
+    },
+    "energy": 122.0,
+    "instructions": -708.0,
+    "durations": 39548.0,
+    "cycles": 26666.0,
+    "caches": 1230.0,
+    "cacheMisses": 60.0,
+    "branches": -84.0,
+    "branchMisses": 494.0
+  },
+  "com.google.gson.functional.FieldNamingTest#testUpperCamelCaseWithSpaces": {
+    "dataV1": {
+      "energy": 41748.0,
+      "instructions": 1747074.0,
+      "durations": 1830288.0,
+      "cycles": 2294924.0,
+      "caches": 87710.0,
+      "cacheMisses": 3306.0,
+      "branches": 327496.0,
+      "branchMisses": 17868.0
+    },
+    "dataV2": {
+      "energy": 41382.0,
+      "instructions": 1738052.0,
+      "durations": 1788682.0,
+      "cycles": 2223568.0,
+      "caches": 83076.0,
+      "cacheMisses": 3246.0,
+      "branches": 326672.0,
+      "branchMisses": 17672.0
+    },
+    "energy": -366.0,
+    "instructions": -9022.0,
+    "durations": -41606.0,
+    "cycles": -71356.0,
+    "caches": -4634.0,
+    "cacheMisses": -60.0,
+    "branches": -824.0,
+    "branchMisses": -196.0
+  },
+  "com.google.gson.functional.CustomDeserializerTest#testCustomDeserializerReturnsNullForArrayElementsForArrayField": {
+    "dataV1": {
+      "energy": 41992.0,
+      "instructions": 1972310.0,
+      "durations": 2610432.0,
+      "cycles": 3005876.0,
+      "caches": 131904.0,
+      "cacheMisses": 4304.0,
+      "branches": 393448.0,
+      "branchMisses": 27442.0
+    },
+    "dataV2": {
+      "energy": 40772.0,
+      "instructions": 1982956.0,
+      "durations": 1731870.0,
+      "cycles": 3028128.0,
+      "caches": 131272.0,
+      "cacheMisses": 4172.0,
+      "branches": 395302.0,
+      "branchMisses": 28286.0
+    },
+    "energy": -1220.0,
+    "instructions": 10646.0,
+    "durations": -878562.0,
+    "cycles": 22252.0,
+    "caches": -632.0,
+    "cacheMisses": -132.0,
+    "branches": 1854.0,
+    "branchMisses": 844.0
+  },
+  "com.google.gson.functional.PrintFormattingTest#testCompactFormattingLeavesNoWhiteSpace": {
+    "dataV1": {
+      "energy": 81054.0,
+      "instructions": 3358782.0,
+      "durations": 3356840.0,
+      "cycles": 4840022.0,
+      "caches": 166746.0,
+      "cacheMisses": 6414.0,
+      "branches": 650678.0,
+      "branchMisses": 42316.0
+    },
+    "dataV2": {
+      "energy": 81176.0,
+      "instructions": 3358270.0,
+      "durations": 3364040.0,
+      "cycles": 4834894.0,
+      "caches": 167768.0,
+      "cacheMisses": 6398.0,
+      "branches": 649516.0,
+      "branchMisses": 42080.0
+    },
+    "energy": 122.0,
+    "instructions": -512.0,
+    "durations": 7200.0,
+    "cycles": -5128.0,
+    "caches": 1022.0,
+    "cacheMisses": -16.0,
+    "branches": -1162.0,
+    "branchMisses": -236.0
+  },
+  "com.google.gson.functional.CustomTypeAdaptersTest#testCustomAdapterInvokedForMapElementSerialization": {
+    "dataV1": {
+      "energy": 40284.0,
+      "instructions": 1274366.0,
+      "durations": 1164022.0,
+      "cycles": 2052746.0,
+      "caches": 80022.0,
+      "cacheMisses": 4860.0,
+      "branches": 245492.0,
+      "branchMisses": 17692.0
+    },
+    "dataV2": {
+      "energy": 40282.0,
+      "instructions": 1282796.0,
+      "durations": 1174738.0,
+      "cycles": 2063082.0,
+      "caches": 80870.0,
+      "cacheMisses": 4828.0,
+      "branches": 247138.0,
+      "branchMisses": 17934.0
+    },
+    "energy": -2.0,
+    "instructions": 8430.0,
+    "durations": 10716.0,
+    "cycles": 10336.0,
+    "caches": 848.0,
+    "cacheMisses": -32.0,
+    "branches": 1646.0,
+    "branchMisses": 242.0
+  },
+  "com.google.gson.functional.NamingPolicyTest#testGsonWithNonDefaultFieldNamingPolicyDeserialiation": {
+    "dataV1": {
+      "energy": 0.0,
+      "instructions": 835066.0,
+      "durations": 884582.0,
+      "cycles": 1329672.0,
+      "caches": 60484.0,
+      "cacheMisses": 3018.0,
+      "branches": 169564.0,
+      "branchMisses": 11148.0
+    },
+    "dataV2": {
+      "energy": 0.0,
+      "instructions": 835772.0,
+      "durations": 881142.0,
+      "cycles": 1323640.0,
+      "caches": 60462.0,
+      "cacheMisses": 3014.0,
+      "branches": 169824.0,
+      "branchMisses": 11124.0
+    },
+    "energy": 0.0,
+    "instructions": 706.0,
+    "durations": -3440.0,
+    "cycles": -6032.0,
+    "caches": -22.0,
+    "cacheMisses": -4.0,
+    "branches": 260.0,
+    "branchMisses": -24.0
+  }
+}

@@ -1,0 +1,50 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/Gson.java /tmp/v2/gson/src/main/java/com/google/gson/Gson.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/Gson.java	2021-09-30 23:31:12.993108248 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/Gson.java	2021-09-30 22:31:40.385158926 +0200
+@@ -37,6 +37,7 @@
+ 
+ import com.google.gson.internal.ConstructorConstructor;
+ import com.google.gson.internal.Excluder;
++import com.google.gson.internal.GsonBuildConfig;
+ import com.google.gson.internal.Primitives;
+ import com.google.gson.internal.Streams;
+ import com.google.gson.internal.bind.ArrayTypeAdapter;
+@@ -461,7 +462,7 @@
+           return candidate;
+         }
+       }
+-      throw new IllegalArgumentException("GSON cannot handle " + type);
++      throw new IllegalArgumentException("GSON (" + GsonBuildConfig.VERSION + ") cannot handle " + type);
+     } finally {
+       threadCalls.remove(type);
+ 
+@@ -703,6 +704,8 @@
+       ((TypeAdapter<Object>) adapter).write(writer, src);
+     } catch (IOException e) {
+       throw new JsonIOException(e);
++    } catch (AssertionError e) {
++      throw new AssertionError("AssertionError (GSON " + GsonBuildConfig.VERSION + "): " + e.getMessage(), e);
+     } finally {
+       writer.setLenient(oldLenient);
+       writer.setHtmlSafe(oldHtmlSafe);
+@@ -779,6 +782,8 @@
+       Streams.write(jsonElement, writer);
+     } catch (IOException e) {
+       throw new JsonIOException(e);
++    } catch (AssertionError e) {
++      throw new AssertionError("AssertionError (GSON " + GsonBuildConfig.VERSION + "): " + e.getMessage(), e);
+     } finally {
+       writer.setLenient(oldLenient);
+       writer.setHtmlSafe(oldHtmlSafe);
+@@ -935,6 +940,8 @@
+     } catch (IOException e) {
+       // TODO(inder): Figure out whether it is indeed right to rethrow this as JsonSyntaxException
+       throw new JsonSyntaxException(e);
++    } catch (AssertionError e) {
++      throw new AssertionError("AssertionError (GSON " + GsonBuildConfig.VERSION + "): " + e.getMessage(), e);
+     } finally {
+       reader.setLenient(oldLenient);
+     }
+Only in /tmp/v2/gson/src/main: java-templates
+Only in /tmp/v2/gson/src/test/java/com/google/gson/functional: GsonVersionDiagnosticsTest.java
+Only in /tmp/v2/gson/src/test/java/com/google/gson/internal: GsonBuildConfigTest.java

@@ -1,0 +1,37 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/Gson.java /tmp/v2/gson/src/main/java/com/google/gson/Gson.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/Gson.java	2021-09-30 22:28:42.489251722 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/Gson.java	2021-09-30 22:22:57.668555116 +0200
+@@ -705,7 +705,9 @@
+     } catch (IOException e) {
+       throw new JsonIOException(e);
+     } catch (AssertionError e) {
+-      throw new AssertionError("AssertionError (GSON " + GsonBuildConfig.VERSION + "): " + e.getMessage(), e);
++      AssertionError error = new AssertionError("AssertionError (GSON " + GsonBuildConfig.VERSION + "): " + e.getMessage());
++      error.initCause(e);
++      throw error;
+     } finally {
+       writer.setLenient(oldLenient);
+       writer.setHtmlSafe(oldHtmlSafe);
+@@ -783,7 +785,9 @@
+     } catch (IOException e) {
+       throw new JsonIOException(e);
+     } catch (AssertionError e) {
+-      throw new AssertionError("AssertionError (GSON " + GsonBuildConfig.VERSION + "): " + e.getMessage(), e);
++      AssertionError error = new AssertionError("AssertionError (GSON " + GsonBuildConfig.VERSION + "): " + e.getMessage());
++      error.initCause(e);
++      throw error;
+     } finally {
+       writer.setLenient(oldLenient);
+       writer.setHtmlSafe(oldHtmlSafe);
+@@ -941,7 +945,9 @@
+       // TODO(inder): Figure out whether it is indeed right to rethrow this as JsonSyntaxException
+       throw new JsonSyntaxException(e);
+     } catch (AssertionError e) {
+-      throw new AssertionError("AssertionError (GSON " + GsonBuildConfig.VERSION + "): " + e.getMessage(), e);
++      AssertionError error = new AssertionError("AssertionError (GSON " + GsonBuildConfig.VERSION + "): " + e.getMessage());
++      error.initCause(e);
++      throw error;
+     } finally {
+       reader.setLenient(oldLenient);
+     }
+Only in /tmp/v1/gson/src/main/java: com.google.gson

@@ -1,0 +1,16 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/JsonPrimitive.java /tmp/v2/gson/src/main/java/com/google/gson/JsonPrimitive.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/JsonPrimitive.java	2021-09-30 20:58:34.069288169 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/JsonPrimitive.java	2021-09-30 11:43:34.414619237 +0200
+@@ -100,10 +100,9 @@
+   public boolean getAsBoolean() {
+     if (isBoolean()) {
+       return ((Boolean) value).booleanValue();
+-    } else {
+-      // Check to see if the value as a String is "true" in any case.
+-      return Boolean.parseBoolean(getAsString());
+     }
++	// Check to see if the value as a String is "true" in any case.
++    return Boolean.parseBoolean(getAsString());
+   }
+ 
+   /**

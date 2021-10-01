@@ -1,0 +1,13 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java	2021-09-30 18:11:08.397982245 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java	2021-09-30 11:43:34.418619203 +0200
+@@ -130,6 +130,9 @@
+   }
+ 
+   @Override public JsonWriter name(String name) throws IOException {
++    if (name == null) {
++      throw new NullPointerException("name == null");
++    }
+     if (stack.isEmpty() || pendingName != null) {
+       throw new IllegalStateException();
+     }

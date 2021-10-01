@@ -1,0 +1,61 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/JsonElement.java /tmp/v2/gson/src/main/java/com/google/gson/JsonElement.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/JsonElement.java	2021-09-30 21:01:31.248449364 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/JsonElement.java	2021-09-30 11:43:34.414619237 +0200
+@@ -154,19 +154,6 @@
+   }
+ 
+   /**
+-   * convenience method to get this element as a {@link Boolean} value.
+-   *
+-   * @return get this element as a {@link Boolean} value.
+-   * @throws ClassCastException if the element is of not a {@link JsonPrimitive} and is not a valid
+-   * boolean value.
+-   * @throws IllegalStateException if the element is of the type {@link JsonArray} but contains
+-   * more than a single element.
+-   */
+-  Boolean getAsBooleanWrapper() {
+-    throw new UnsupportedOperationException(getClass().getSimpleName());
+-  }
+-
+-  /**
+    * convenience method to get this element as a {@link Number}.
+    *
+    * @return get this element as a {@link Number}.
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/JsonPrimitive.java /tmp/v2/gson/src/main/java/com/google/gson/JsonPrimitive.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/JsonPrimitive.java	2021-09-30 21:01:31.248449364 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/JsonPrimitive.java	2021-09-30 21:01:31.256449326 +0200
+@@ -92,16 +92,6 @@
+   }
+ 
+   /**
+-   * convenience method to get this element as a {@link Boolean}.
+-   *
+-   * @return get this element as a {@link Boolean}.
+-   */
+-  @Override
+-  Boolean getAsBooleanWrapper() {
+-    return (Boolean) value;
+-  }
+-
+-  /**
+    * convenience method to get this element as a boolean value.
+    *
+    * @return get this element as a primitive boolean value.
+@@ -109,7 +99,7 @@
+   @Override
+   public boolean getAsBoolean() {
+     if (isBoolean()) {
+-      return getAsBooleanWrapper().booleanValue();
++      return ((Boolean) value).booleanValue();
+     } else {
+       // Check to see if the value as a String is "true" in any case.
+       return Boolean.parseBoolean(getAsString());
+@@ -155,7 +145,7 @@
+     if (isNumber()) {
+       return getAsNumber().toString();
+     } else if (isBoolean()) {
+-      return getAsBooleanWrapper().toString();
++      return ((Boolean) value).toString();
+     } else {
+       return (String) value;
+     }

@@ -1,0 +1,450 @@
+Only in /tmp/v1/gson/src/main/java/com/google/gson: DefaultDateTypeAdapter.java
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/GsonBuilder.java /tmp/v2/gson/src/main/java/com/google/gson/GsonBuilder.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/GsonBuilder.java	2021-09-30 13:16:23.398498299 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/GsonBuilder.java	2021-09-30 11:43:34.414619237 +0200
+@@ -17,7 +17,6 @@
+ package com.google.gson;
+ 
+ import java.lang.reflect.Type;
+-import java.sql.Timestamp;
+ import java.text.DateFormat;
+ import java.util.ArrayList;
+ import java.util.Collections;
+@@ -28,8 +27,10 @@
+ 
+ import com.google.gson.internal.$Gson$Preconditions;
+ import com.google.gson.internal.Excluder;
++import com.google.gson.internal.bind.DefaultDateTypeAdapter;
+ import com.google.gson.internal.bind.TreeTypeAdapter;
+ import com.google.gson.internal.bind.TypeAdapters;
++import com.google.gson.internal.sql.SqlTypesSupport;
+ import com.google.gson.reflect.TypeToken;
+ import com.google.gson.stream.JsonReader;
+ 
+@@ -417,8 +418,8 @@
+    * call this method or {@link #setDateFormat(int)} multiple times, but only the last invocation
+    * will be used to decide the serialization format.
+    *
+-   * <p>The date format will be used to serialize and deserialize {@link java.util.Date}, {@link
+-   * java.sql.Timestamp} and {@link java.sql.Date}.
++   * <p>The date format will be used to serialize and deserialize {@link java.util.Date} and in case
++   * the {@code java.sql} module is present, also {@link java.sql.Timestamp} and {@link java.sql.Date}.
+    *
+    * <p>Note that this pattern must abide by the convention provided by {@code SimpleDateFormat}
+    * class. See the documentation in {@link java.text.SimpleDateFormat} for more information on
+@@ -602,26 +603,35 @@
+         this.factories, this.hierarchyFactories, factories);
+   }
+ 
+-  @SuppressWarnings("unchecked")
+   private void addTypeAdaptersForDate(String datePattern, int dateStyle, int timeStyle,
+       List<TypeAdapterFactory> factories) {
+-    DefaultDateTypeAdapter dateTypeAdapter;
+-    TypeAdapter<Timestamp> timestampTypeAdapter;
+-    TypeAdapter<java.sql.Date> javaSqlDateTypeAdapter;
+-    if (datePattern != null && !"".equals(datePattern.trim())) {
+-      dateTypeAdapter = new DefaultDateTypeAdapter(Date.class, datePattern);
+-      timestampTypeAdapter = (TypeAdapter) new DefaultDateTypeAdapter(Timestamp.class, datePattern);
+-      javaSqlDateTypeAdapter = (TypeAdapter) new DefaultDateTypeAdapter(java.sql.Date.class, datePattern);
++    TypeAdapterFactory dateAdapterFactory;
++    boolean sqlTypesSupported = SqlTypesSupport.SUPPORTS_SQL_TYPES;
++    TypeAdapterFactory sqlTimestampAdapterFactory = null;
++    TypeAdapterFactory sqlDateAdapterFactory = null;
++
++    if (datePattern != null && !datePattern.trim().isEmpty()) {
++      dateAdapterFactory = DefaultDateTypeAdapter.DateType.DATE.createAdapterFactory(datePattern);
++
++      if (sqlTypesSupported) {
++        sqlTimestampAdapterFactory = SqlTypesSupport.TIMESTAMP_DATE_TYPE.createAdapterFactory(datePattern);
++        sqlDateAdapterFactory = SqlTypesSupport.DATE_DATE_TYPE.createAdapterFactory(datePattern);
++      }
+     } else if (dateStyle != DateFormat.DEFAULT && timeStyle != DateFormat.DEFAULT) {
+-      dateTypeAdapter = new DefaultDateTypeAdapter(Date.class, dateStyle, timeStyle);
+-      timestampTypeAdapter = (TypeAdapter) new DefaultDateTypeAdapter(Timestamp.class, dateStyle, timeStyle);
+-      javaSqlDateTypeAdapter = (TypeAdapter) new DefaultDateTypeAdapter(java.sql.Date.class, dateStyle, timeStyle);
++      dateAdapterFactory = DefaultDateTypeAdapter.DateType.DATE.createAdapterFactory(dateStyle, timeStyle);
++
++      if (sqlTypesSupported) {
++        sqlTimestampAdapterFactory = SqlTypesSupport.TIMESTAMP_DATE_TYPE.createAdapterFactory(dateStyle, timeStyle);
++        sqlDateAdapterFactory = SqlTypesSupport.DATE_DATE_TYPE.createAdapterFactory(dateStyle, timeStyle);
++      }
+     } else {
+       return;
+     }
+ 
+-    factories.add(TypeAdapters.newFactory(Date.class, dateTypeAdapter));
+-    factories.add(TypeAdapters.newFactory(Timestamp.class, timestampTypeAdapter));
+-    factories.add(TypeAdapters.newFactory(java.sql.Date.class, javaSqlDateTypeAdapter));
++    factories.add(dateAdapterFactory);
++    if (sqlTypesSupported) {
++      factories.add(sqlTimestampAdapterFactory);
++      factories.add(sqlDateAdapterFactory);
++    }
+   }
+ }
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/Gson.java /tmp/v2/gson/src/main/java/com/google/gson/Gson.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/Gson.java	2021-09-30 13:16:23.398498299 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/Gson.java	2021-09-30 11:43:34.414619237 +0200
+@@ -49,9 +49,8 @@
+ import com.google.gson.internal.bind.MapTypeAdapterFactory;
+ import com.google.gson.internal.bind.ObjectTypeAdapter;
+ import com.google.gson.internal.bind.ReflectiveTypeAdapterFactory;
+-import com.google.gson.internal.bind.SqlDateTypeAdapter;
+-import com.google.gson.internal.bind.TimeTypeAdapter;
+ import com.google.gson.internal.bind.TypeAdapters;
++import com.google.gson.internal.sql.SqlTypesSupport;
+ import com.google.gson.reflect.TypeToken;
+ import com.google.gson.stream.JsonReader;
+ import com.google.gson.stream.JsonToken;
+@@ -262,9 +261,13 @@
+     factories.add(TypeAdapters.BIT_SET_FACTORY);
+     factories.add(DateTypeAdapter.FACTORY);
+     factories.add(TypeAdapters.CALENDAR_FACTORY);
+-    factories.add(TimeTypeAdapter.FACTORY);
+-    factories.add(SqlDateTypeAdapter.FACTORY);
+-    factories.add(TypeAdapters.TIMESTAMP_FACTORY);
++
++    if (SqlTypesSupport.SUPPORTS_SQL_TYPES) {
++      factories.add(SqlTypesSupport.TIME_FACTORY);
++      factories.add(SqlTypesSupport.DATE_FACTORY);
++      factories.add(SqlTypesSupport.TIMESTAMP_FACTORY);
++    }
++
+     factories.add(ArrayTypeAdapter.FACTORY);
+     factories.add(TypeAdapters.CLASS_FACTORY);
+ 
+Only in /tmp/v2/gson/src/main/java/com/google/gson/internal/bind: DefaultDateTypeAdapter.java
+Only in /tmp/v1/gson/src/main/java/com/google/gson/internal/bind: SqlDateTypeAdapter.java
+Only in /tmp/v1/gson/src/main/java/com/google/gson/internal/bind: TimeTypeAdapter.java
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-30 13:16:23.398498299 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-30 13:13:18.882680317 +0200
+@@ -26,12 +26,10 @@
+ import java.net.URL;
+ import java.security.AccessController;
+ import java.security.PrivilegedAction;
+-import java.sql.Timestamp;
+ import java.util.ArrayList;
+ import java.util.BitSet;
+ import java.util.Calendar;
+ import java.util.Currency;
+-import java.util.Date;
+ import java.util.GregorianCalendar;
+ import java.util.HashMap;
+ import java.util.List;
+@@ -409,7 +407,7 @@
+       out.value(value);
+     }
+   };
+-  
++
+   public static final TypeAdapter<BigDecimal> BIG_DECIMAL = new TypeAdapter<BigDecimal>() {
+     @Override public BigDecimal read(JsonReader in) throws IOException {
+       if (in.peek() == JsonToken.NULL) {
+@@ -427,7 +425,7 @@
+       out.value(value);
+     }
+   };
+-  
++
+   public static final TypeAdapter<BigInteger> BIG_INTEGER = new TypeAdapter<BigInteger>() {
+     @Override public BigInteger read(JsonReader in) throws IOException {
+       if (in.peek() == JsonToken.NULL) {
+@@ -572,27 +570,6 @@
+   }.nullSafe();
+   public static final TypeAdapterFactory CURRENCY_FACTORY = newFactory(Currency.class, CURRENCY);
+ 
+-  public static final TypeAdapterFactory TIMESTAMP_FACTORY = new TypeAdapterFactory() {
+-    @SuppressWarnings("unchecked") // we use a runtime check to make sure the 'T's equal
+-    @Override public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {
+-      if (typeToken.getRawType() != Timestamp.class) {
+-        return null;
+-      }
+-
+-      final TypeAdapter<Date> dateTypeAdapter = gson.getAdapter(Date.class);
+-      return (TypeAdapter<T>) new TypeAdapter<Timestamp>() {
+-        @Override public Timestamp read(JsonReader in) throws IOException {
+-          Date date = dateTypeAdapter.read(in);
+-          return date != null ? new Timestamp(date.getTime()) : null;
+-        }
+-
+-        @Override public void write(JsonWriter out, Timestamp value) throws IOException {
+-          dateTypeAdapter.write(out, value);
+-        }
+-      };
+-    }
+-  };
+-
+   public static final TypeAdapter<Calendar> CALENDAR = new TypeAdapter<Calendar>() {
+     private static final String YEAR = "year";
+     private static final String MONTH = "month";
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-30 13:16:23.398498299 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/$Gson$Types.java	2021-09-30 11:43:34.418619203 +0200
+@@ -339,6 +339,7 @@
+   }
+ 
+   public static Type resolve(Type context, Class<?> contextRawType, Type toResolve) {
++
+     return resolve(context, contextRawType, toResolve, new HashMap<TypeVariable<?>, Type>());
+   }
+ 
+Only in /tmp/v2/gson/src/main/java/com/google/gson/internal: sql
+Only in /tmp/v1/gson/src/test/java/com/google/gson: DefaultDateTypeAdapterTest.java
+diff -ru /tmp/v1/gson/src/test/java/com/google/gson/functional/CollectionTest.java /tmp/v2/gson/src/test/java/com/google/gson/functional/CollectionTest.java
+--- /tmp/v1/gson/src/test/java/com/google/gson/functional/CollectionTest.java	2021-09-30 13:16:23.402498296 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/functional/CollectionTest.java	2021-09-30 12:24:57.846049530 +0200
+@@ -37,7 +37,6 @@
+ import com.google.gson.JsonPrimitive;
+ import com.google.gson.JsonSerializationContext;
+ import com.google.gson.JsonSerializer;
+-import com.google.gson.common.MoreAsserts;
+ import com.google.gson.common.TestTypes.BagOfPrimitives;
+ import com.google.gson.reflect.TypeToken;
+ 
+diff -ru /tmp/v1/gson/src/test/java/com/google/gson/functional/DefaultTypeAdaptersTest.java /tmp/v2/gson/src/test/java/com/google/gson/functional/DefaultTypeAdaptersTest.java
+--- /tmp/v1/gson/src/test/java/com/google/gson/functional/DefaultTypeAdaptersTest.java	2021-09-30 13:16:23.402498296 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/functional/DefaultTypeAdaptersTest.java	2021-09-30 12:55:53.330165394 +0200
+@@ -69,12 +69,14 @@
+ public class DefaultTypeAdaptersTest extends TestCase {
+   private Gson gson;
+   private TimeZone oldTimeZone;
++  private Locale oldLocale;
+ 
+   @Override
+   protected void setUp() throws Exception {
+     super.setUp();
+     this.oldTimeZone = TimeZone.getDefault();
+     TimeZone.setDefault(TimeZone.getTimeZone("America/Los_Angeles"));
++    this.oldLocale = Locale.getDefault();
+     Locale.setDefault(Locale.US);
+     gson = new Gson();
+   }
+@@ -82,6 +84,7 @@
+   @Override
+   protected void tearDown() throws Exception {
+     TimeZone.setDefault(oldTimeZone);
++    Locale.setDefault(oldLocale);
+     super.tearDown();
+   }
+ 
+@@ -146,7 +149,7 @@
+     URI target = gson.fromJson(json, URI.class);
+     assertEquals(uriValue, target.toASCIIString());
+   }
+-  
++
+   public void testNullSerialization() throws Exception {
+     testNullSerializationAndDeserialization(Boolean.class);
+     testNullSerializationAndDeserialization(Byte.class);
+@@ -175,14 +178,15 @@
+     testNullSerializationAndDeserialization(Date.class);
+     testNullSerializationAndDeserialization(GregorianCalendar.class);
+     testNullSerializationAndDeserialization(Calendar.class);
+-    testNullSerializationAndDeserialization(Time.class);
+-    testNullSerializationAndDeserialization(Timestamp.class);
+-    testNullSerializationAndDeserialization(java.sql.Date.class);
+     testNullSerializationAndDeserialization(Enum.class);
+     testNullSerializationAndDeserialization(Class.class);
+   }
+ 
+   private void testNullSerializationAndDeserialization(Class<?> c) {
++    testNullSerializationAndDeserialization(gson, c);
++  }
++
++  public static void testNullSerializationAndDeserialization(Gson gson, Class<?> c) {
+     assertEquals("null", gson.toJson(null, c));
+     assertEquals(null, gson.fromJson("null", c));
+   }
+@@ -269,7 +273,7 @@
+     ClassWithBigInteger actual = gson.fromJson(json, ClassWithBigInteger.class);
+     assertEquals(expected.value, actual.value);
+   }
+-  
++
+   public void testOverrideBigIntegerTypeAdapter() throws Exception {
+     gson = new GsonBuilder()
+         .registerTypeAdapter(BigInteger.class, new NumberAsStringAdapter(BigInteger.class))
+@@ -347,60 +351,19 @@
+   // Date can not directly be compared with another instance since the deserialization loses the
+   // millisecond portion.
+   @SuppressWarnings("deprecation")
+-  private void assertEqualsDate(Date date, int year, int month, int day) {
++  public static void assertEqualsDate(Date date, int year, int month, int day) {
+     assertEquals(year-1900, date.getYear());
+     assertEquals(month, date.getMonth());
+     assertEquals(day, date.getDate());
+   }
+ 
+   @SuppressWarnings("deprecation")
+-  private void assertEqualsTime(Date date, int hours, int minutes, int seconds) {
++  public static void assertEqualsTime(Date date, int hours, int minutes, int seconds) {
+     assertEquals(hours, date.getHours());
+     assertEquals(minutes, date.getMinutes());
+     assertEquals(seconds, date.getSeconds());
+   }
+ 
+-  public void testDefaultJavaSqlDateSerialization() {
+-    java.sql.Date instant = new java.sql.Date(1259875082000L);
+-    String json = gson.toJson(instant);
+-    assertEquals("\"Dec 3, 2009\"", json);
+-  }
+-
+-  public void testDefaultJavaSqlDateDeserialization() {
+-    String json = "'Dec 3, 2009'";
+-    java.sql.Date extracted = gson.fromJson(json, java.sql.Date.class);
+-    assertEqualsDate(extracted, 2009, 11, 3);
+-  }
+-
+-  public void testDefaultJavaSqlTimestampSerialization() {
+-    Timestamp now = new java.sql.Timestamp(1259875082000L);
+-    String json = gson.toJson(now);
+-    if (JavaVersion.isJava9OrLater()) {
+-      assertEquals("\"Dec 3, 2009, 1:18:02 PM\"", json);
+-    } else {
+-      assertEquals("\"Dec 3, 2009 1:18:02 PM\"", json);
+-    }
+-  }
+-
+-  public void testDefaultJavaSqlTimestampDeserialization() {
+-    String json = "'Dec 3, 2009 1:18:02 PM'";
+-    Timestamp extracted = gson.fromJson(json, Timestamp.class);
+-    assertEqualsDate(extracted, 2009, 11, 3);
+-    assertEqualsTime(extracted, 13, 18, 2);
+-  }
+-
+-  public void testDefaultJavaSqlTimeSerialization() {
+-    Time now = new Time(1259875082000L);
+-    String json = gson.toJson(now);
+-    assertEquals("\"01:18:02 PM\"", json);
+-  }
+-
+-  public void testDefaultJavaSqlTimeDeserialization() {
+-    String json = "'1:18:02 PM'";
+-    Time extracted = gson.fromJson(json, Time.class);
+-    assertEqualsTime(extracted, 13, 18, 2);
+-  }
+-
+   public void testDefaultDateSerializationUsingBuilder() throws Exception {
+     Gson gson = new GsonBuilder().create();
+     Date now = new Date(1315806903103L);
+@@ -521,42 +484,6 @@
+     } finally {
+       TimeZone.setDefault(defaultTimeZone);
+       Locale.setDefault(defaultLocale);
+-    }
+-  }
+-
+-  // http://code.google.com/p/google-gson/issues/detail?id=230
+-  public void testTimestampSerialization() throws Exception {
+-    TimeZone defaultTimeZone = TimeZone.getDefault();
+-    TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+-    Locale defaultLocale = Locale.getDefault();
+-    Locale.setDefault(Locale.US);
+-    try {
+-      Timestamp timestamp = new Timestamp(0L);
+-      Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
+-      String json = gson.toJson(timestamp, Timestamp.class);
+-      assertEquals("\"1970-01-01\"", json);
+-      assertEquals(0, gson.fromJson("\"1970-01-01\"", Timestamp.class).getTime());
+-    } finally {
+-      TimeZone.setDefault(defaultTimeZone);
+-      Locale.setDefault(defaultLocale);
+-    }
+-  }
+-
+-  // http://code.google.com/p/google-gson/issues/detail?id=230
+-  public void testSqlDateSerialization() throws Exception {
+-    TimeZone defaultTimeZone = TimeZone.getDefault();
+-    TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+-    Locale defaultLocale = Locale.getDefault();
+-    Locale.setDefault(Locale.US);
+-    try {
+-      java.sql.Date sqlDate = new java.sql.Date(0L);
+-      Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
+-      String json = gson.toJson(sqlDate, Timestamp.class);
+-      assertEquals("\"1970-01-01\"", json);
+-      assertEquals(0, gson.fromJson("\"1970-01-01\"", java.sql.Date.class).getTime());
+-    } finally {
+-      TimeZone.setDefault(defaultTimeZone);
+-      Locale.setDefault(defaultLocale);
+     }
+   }
+ 
+diff -ru /tmp/v1/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersTest.java /tmp/v2/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersTest.java
+--- /tmp/v1/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersTest.java	2021-09-30 13:16:23.402498296 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/functional/TreeTypeAdaptersTest.java	2021-09-30 12:24:57.850049505 +0200
+@@ -172,6 +172,7 @@
+     int numClasses;
+   }
+ 
++  @SafeVarargs
+   private static <T> List<T> createList(T ...items) {
+     return Arrays.asList(items);
+   }
+Only in /tmp/v2/gson/src/test/java/com/google/gson/internal/bind: DefaultDateTypeAdapterTest.java
+diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypesResolveTest.java /tmp/v2/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypesResolveTest.java
+--- /tmp/v1/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypesResolveTest.java	2021-09-30 13:16:23.402498296 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/internal/bind/RecursiveTypesResolveTest.java	2021-09-30 12:24:57.854049479 +0200
+@@ -36,7 +36,7 @@
+ 
+   @SuppressWarnings("unused")
+   private static class Foo1<A> {
+-	public Foo2<? extends A> foo2;
++    public Foo2<? extends A> foo2;
+   }
+   @SuppressWarnings("unused")
+   private static class Foo2<B> {
+@@ -48,6 +48,7 @@
+    */
+ 
+   public void testRecursiveResolveSimple() {
++    @SuppressWarnings("rawtypes")
+     TypeAdapter<Foo1> adapter = new Gson().getAdapter(Foo1.class);
+     assertNotNull(adapter);
+   }
+@@ -62,6 +63,7 @@
+   }
+ 
+   public void testIssue440WeakReference() throws Exception {
++    @SuppressWarnings("rawtypes")
+     TypeAdapter<WeakReference> adapter = new Gson().getAdapter(WeakReference.class);
+     assertNotNull(adapter);
+   }
+@@ -105,11 +107,13 @@
+   }
+ 
+   public void testRecursiveTypeVariablesResolve1() throws Exception {
++    @SuppressWarnings("rawtypes")
+     TypeAdapter<TestType> adapter = new Gson().getAdapter(TestType.class);
+     assertNotNull(adapter);
+   }
+ 
+   public void testRecursiveTypeVariablesResolve12() throws Exception {
++    @SuppressWarnings("rawtypes")
+     TypeAdapter<TestType2> adapter = new Gson().getAdapter(TestType2.class);
+     assertNotNull(adapter);
+   }
+diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTest.java /tmp/v2/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTest.java
+--- /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTest.java	2021-09-30 13:16:23.402498296 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/internal/LinkedHashTreeMapTest.java	2021-09-30 11:43:34.426619137 +0200
+@@ -280,6 +280,7 @@
+     }
+   }
+ 
++  @SafeVarargs
+   private <T> void assertIterationOrder(Iterable<T> actual, T... expected) {
+     ArrayList<T> actualList = new ArrayList<T>();
+     for (T t : actual) {
+diff -ru /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedTreeMapTest.java /tmp/v2/gson/src/test/java/com/google/gson/internal/LinkedTreeMapTest.java
+--- /tmp/v1/gson/src/test/java/com/google/gson/internal/LinkedTreeMapTest.java	2021-09-30 13:16:23.402498296 +0200
++++ /tmp/v2/gson/src/test/java/com/google/gson/internal/LinkedTreeMapTest.java	2021-09-30 11:43:34.426619137 +0200
+@@ -140,6 +140,7 @@
+     MoreAsserts.assertEqualsAndHashCode(map1, map2);
+   }
+ 
++  @SafeVarargs
+   private <T> void assertIterationOrder(Iterable<T> actual, T... expected) {
+     ArrayList<T> actualList = new ArrayList<T>();
+     for (T t : actual) {
+Only in /tmp/v2/gson/src/test/java/com/google/gson/internal: sql

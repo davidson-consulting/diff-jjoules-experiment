@@ -1,0 +1,11 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-30 14:51:08.006796022 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java	2021-09-30 14:51:08.010796001 +0200
+@@ -782,6 +782,7 @@
+             continue;
+           }
+           field.setAccessible(true);
++          @SuppressWarnings("unchecked")
+           T constant = (T)(field.get(null));
+           String name = constant.name();
+           SerializedName annotation = field.getAnnotation(SerializedName.class);

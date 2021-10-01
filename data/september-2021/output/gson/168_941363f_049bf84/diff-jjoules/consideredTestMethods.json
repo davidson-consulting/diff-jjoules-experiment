@@ -1,0 +1,97 @@
+{
+  "com.google.gson.functional.CollectionTest": [
+    "testWildcardCollectionField",
+    "testFieldIsArrayList"
+  ],
+  "com.google.gson.functional.ParameterizedTypesTest": [
+    "testVariableTypeDeserialization",
+    "testParameterizedTypeGenericArraysSerialization",
+    "testTypesWithMultipleParametersDeserialization"
+  ],
+  "com.google.gson.MixedStreamTest": [
+    "testReaderDoesNotMutateState"
+  ],
+  "com.google.gson.functional.CustomTypeAdaptersTest": [
+    "testCustomNestedSerializers",
+    "testCustomNestedDeserializers"
+  ],
+  "com.google.gson.functional.NullObjectAndFieldTest": [
+    "testExplicitSerializationOfNulls",
+    "testPrintPrintingObjectWithNulls",
+    "testExplicitDeserializationOfNulls"
+  ],
+  "com.google.gson.functional.EscapingTest": [
+    "testGsonAcceptsEscapedAndNonEscapedJsonDeserialization"
+  ],
+  "com.google.gson.internal.bind.RecursiveTypesResolveTest": [
+    "testIssue603PrintStream",
+    "testIssue440WeakReference"
+  ],
+  "com.google.gson.functional.UncategorizedTest": [
+    "testInvalidJsonDeserializationFails"
+  ],
+  "com.google.gson.functional.FieldNamingTest": [
+    "testIdentity",
+    "testLowerCaseWithDashes",
+    "testLowerCaseWithUnderscores",
+    "testUpperCamelCaseWithSpaces"
+  ],
+  "com.google.gson.functional.InheritanceTest": [
+    "testClassWithBaseFieldSerialization",
+    "testSubClassSerialization",
+    "testBaseSerializedAsSub",
+    "testBaseSerializedAsSubWhenSpecifiedWithExplicitTypeForToJsonMethod",
+    "testBaseSerializedAsSubWhenSpecifiedWithExplicitType",
+    "testBaseSerializedAsSubForToJsonMethod"
+  ],
+  "com.google.gson.functional.PrettyPrintingTest": [
+    "testPrettyPrintArrayOfObjects"
+  ],
+  "com.google.gson.functional.CustomDeserializerTest": [
+    "testDefaultConstructorNotCalledOnObject"
+  ],
+  "com.google.gson.functional.ExclusionStrategyFunctionalTest": [
+    "testExclusionStrategyDeserialization",
+    "testExclusionStrategySerializationDoesNotImpactDeserialization",
+    "testExclusionStrategySerialization"
+  ],
+  "com.google.gson.functional.ObjectTest": [
+    "testArrayOfObjectsSerialization",
+    "testBagOfPrimitiveWrappersDeserialization",
+    "testNullFieldsSerialization",
+    "testBagOfPrimitivesDeserialization",
+    "testArrayOfObjectsAsFields",
+    "testJsonInMixedQuotesDeserialization",
+    "testObjectFieldNamesWithoutQuotesDeserialization",
+    "testNestedSerialization",
+    "testBagOfPrimitivesSerialization",
+    "testNullObjectFieldsDeserialization",
+    "testNestedDeserialization",
+    "testStringFieldWithEmptyValueSerialization",
+    "testArrayOfObjectsDeserialization"
+  ],
+  "com.google.gson.functional.ArrayTest": [
+    "testSingleNullInArraySerialization",
+    "testSingleNullInArrayDeserialization"
+  ],
+  "com.google.gson.functional.SecurityTest": [
+    "testNonExecutableJsonDeserialization",
+    "testJsonWithNonExectuableTokenWithRegularGsonDeserialization"
+  ],
+  "com.google.gson.functional.VersioningTest": [
+    "testVersionedGsonWithUnversionedClassesSerialization"
+  ],
+  "com.google.gson.functional.JsonParserTest": [
+    "testBadTypeForDeserializingCustomTree"
+  ],
+  "com.google.gson.functional.ThrowableFunctionalTest": [
+    "testErrorWithoutCause",
+    "testErrornWithCause",
+    "testExceptionWithoutCause",
+    "testSerializedNameOnExceptionFields",
+    "testExceptionWithCause"
+  ],
+  "com.google.gson.GsonTypeAdapterTest": [
+    "testDeserializerForAbstractClass"
+  ]
+}

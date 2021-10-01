@@ -1,0 +1,220 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/Expose.java /tmp/v2/gson/src/main/java/com/google/gson/annotations/Expose.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/annotations/Expose.java	2021-09-30 18:28:51.587876964 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/Expose.java	2021-09-30 11:43:34.418619203 +0200
+@@ -34,9 +34,9 @@
+  * <p>Here is an example of how this annotation is meant to be used:
+  * <p><pre>
+  * public class User {
+- *   &#64Expose private String firstName;
+- *   &#64Expose(serialize = false) private String lastName;
+- *   &#64Expose (serialize = false, deserialize = false) private String emailAddress;
++ *   &#64;Expose private String firstName;
++ *   &#64;Expose(serialize = false) private String lastName;
++ *   &#64;Expose (serialize = false, deserialize = false) private String emailAddress;
+  *   private String password;
+  * }
+  * </pre></p>
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/JsonAdapter.java /tmp/v2/gson/src/main/java/com/google/gson/annotations/JsonAdapter.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/annotations/JsonAdapter.java	2021-09-30 18:28:51.587876964 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/JsonAdapter.java	2021-09-30 11:43:34.418619203 +0200
+@@ -31,7 +31,7 @@
+  *
+  * <p>Here is an example of how this annotation is used:</p>
+  * <pre>
+- * &#64JsonAdapter(UserJsonAdapter.class)
++ * &#64;JsonAdapter(UserJsonAdapter.class)
+  * public class User {
+  *   public final String firstName, lastName;
+  *   private User(String firstName, String lastName) {
+@@ -40,7 +40,7 @@
+  *   }
+  * }
+  * public class UserJsonAdapter extends TypeAdapter&lt;User&gt; {
+- *   &#64Override public void write(JsonWriter out, User user) throws IOException {
++ *   &#64;Override public void write(JsonWriter out, User user) throws IOException {
+  *     // implement write: combine firstName and lastName into name
+  *     out.beginObject();
+  *     out.name("name");
+@@ -48,7 +48,7 @@
+  *     out.endObject();
+  *     // implement the write method
+  *   }
+- *   &#64Override public User read(JsonReader in) throws IOException {
++ *   &#64;Override public User read(JsonReader in) throws IOException {
+  *     // implement read: split name into firstName and lastName
+  *     in.beginObject();
+  *     in.nextName();
+@@ -59,13 +59,13 @@
+  * }
+  * </pre>
+  *
+- * Since User class specified UserJsonAdapter.class in &#64JsonAdapter annotation, it
++ * Since User class specified UserJsonAdapter.class in &#64;JsonAdapter annotation, it
+  * will automatically be invoked to serialize/deserialize User instances. <br>
+  *
+  * <p> Here is an example of how to apply this annotation to a field.
+  * <pre>
+  * private static final class Gadget {
+- *   &#64JsonAdapter(UserJsonAdapter2.class)
++ *   &#64;JsonAdapter(UserJsonAdapter2.class)
+  *   final User user;
+  *   Gadget(User user) {
+  *     this.user = user;
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/SerializedName.java /tmp/v2/gson/src/main/java/com/google/gson/annotations/SerializedName.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/annotations/SerializedName.java	2021-09-30 18:28:51.587876964 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/SerializedName.java	2021-09-30 11:43:34.418619203 +0200
+@@ -35,8 +35,8 @@
+  * <p>Here is an example of how this annotation is meant to be used:</p>
+  * <pre>
+  * public class MyClass {
+- *   &#64SerializedName("name") String a;
+- *   &#64SerializedName(value="name1", alternate={"name2", "name3"}) String b;
++ *   &#64;SerializedName("name") String a;
++ *   &#64;SerializedName(value="name1", alternate={"name2", "name3"}) String b;
+  *   String c;
+  *
+  *   public MyClass(String a, String b, String c) {
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/Since.java /tmp/v2/gson/src/main/java/com/google/gson/annotations/Since.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/annotations/Since.java	2021-09-30 18:28:51.587876964 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/Since.java	2021-09-30 11:43:34.418619203 +0200
+@@ -36,9 +36,9 @@
+  * public class User {
+  *   private String firstName;
+  *   private String lastName;
+- *   &#64Since(1.0) private String emailAddress;
+- *   &#64Since(1.0) private String password;
+- *   &#64Since(1.1) private Address address;
++ *   &#64;Since(1.0) private String emailAddress;
++ *   &#64;Since(1.0) private String password;
++ *   &#64;Since(1.1) private Address address;
+  * }
+  * </pre>
+  *
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/annotations/Until.java /tmp/v2/gson/src/main/java/com/google/gson/annotations/Until.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/annotations/Until.java	2021-09-30 18:28:51.587876964 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/annotations/Until.java	2021-09-30 11:43:34.418619203 +0200
+@@ -38,8 +38,8 @@
+  * public class User {
+  *   private String firstName;
+  *   private String lastName;
+- *   &#64Until(1.1) private String emailAddress;
+- *   &#64Until(1.1) private String password;
++ *   &#64;Until(1.1) private String emailAddress;
++ *   &#64;Until(1.1) private String password;
+  * }
+  * </pre>
+  *
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/ExclusionStrategy.java /tmp/v2/gson/src/main/java/com/google/gson/ExclusionStrategy.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/ExclusionStrategy.java	2021-09-30 18:28:51.587876964 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/ExclusionStrategy.java	2021-09-30 11:43:34.414619237 +0200
+@@ -46,11 +46,11 @@
+  *
+  * <p><strong>Excludes fields and objects based on a particular annotation:</strong>
+  * <pre class="code">
+- * public &#64interface FooAnnotation {
++ * public &#64;interface FooAnnotation {
+  *   // some implementation here
+  * }
+  *
+- * // Excludes any field (or class) that is tagged with an "&#64FooAnnotation"
++ * // Excludes any field (or class) that is tagged with an "&#64;FooAnnotation"
+  * private static class FooAnnotationExclusionStrategy implements ExclusionStrategy {
+  *   public boolean shouldSkipClass(Class&lt;?&gt; clazz) {
+  *     return clazz.getAnnotation(FooAnnotation.class) != null;
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/FieldNamingPolicy.java /tmp/v2/gson/src/main/java/com/google/gson/FieldNamingPolicy.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/FieldNamingPolicy.java	2021-09-30 18:28:51.587876964 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/FieldNamingPolicy.java	2021-09-30 11:43:34.414619237 +0200
+@@ -44,10 +44,10 @@
+    * Using this naming policy with Gson will ensure that the first "letter" of the Java
+    * field name is capitalized when serialized to its JSON form.
+    *
+-   * <p>Here's a few examples of the form "Java Field Name" ---> "JSON Field Name":</p>
++   * <p>Here's a few examples of the form "Java Field Name" ---&gt; "JSON Field Name":</p>
+    * <ul>
+-   *   <li>someFieldName ---> SomeFieldName</li>
+-   *   <li>_someFieldName ---> _SomeFieldName</li>
++   *   <li>someFieldName ---&gt; SomeFieldName</li>
++   *   <li>_someFieldName ---&gt; _SomeFieldName</li>
+    * </ul>
+    */
+   UPPER_CAMEL_CASE() {
+@@ -61,10 +61,10 @@
+    * field name is capitalized when serialized to its JSON form and the words will be
+    * separated by a space.
+    *
+-   * <p>Here's a few examples of the form "Java Field Name" ---> "JSON Field Name":</p>
++   * <p>Here's a few examples of the form "Java Field Name" ---&gt; "JSON Field Name":</p>
+    * <ul>
+-   *   <li>someFieldName ---> Some Field Name</li>
+-   *   <li>_someFieldName ---> _Some Field Name</li>
++   *   <li>someFieldName ---&gt; Some Field Name</li>
++   *   <li>_someFieldName ---&gt; _Some Field Name</li>
+    * </ul>
+    *
+    * @since 1.4
+@@ -79,12 +79,12 @@
+    * Using this naming policy with Gson will modify the Java Field name from its camel cased
+    * form to a lower case field name where each word is separated by an underscore (_).
+    *
+-   * <p>Here's a few examples of the form "Java Field Name" ---> "JSON Field Name":</p>
++   * <p>Here's a few examples of the form "Java Field Name" ---&gt; "JSON Field Name":</p>
+    * <ul>
+-   *   <li>someFieldName ---> some_field_name</li>
+-   *   <li>_someFieldName ---> _some_field_name</li>
+-   *   <li>aStringField ---> a_string_field</li>
+-   *   <li>aURL ---> a_u_r_l</li>
++   *   <li>someFieldName ---&gt; some_field_name</li>
++   *   <li>_someFieldName ---&gt; _some_field_name</li>
++   *   <li>aStringField ---&gt; a_string_field</li>
++   *   <li>aURL ---&gt; a_u_r_l</li>
+    * </ul>
+    */
+   LOWER_CASE_WITH_UNDERSCORES() {
+@@ -97,12 +97,12 @@
+    * Using this naming policy with Gson will modify the Java Field name from its camel cased
+    * form to a lower case field name where each word is separated by a dash (-).
+    *
+-   * <p>Here's a few examples of the form "Java Field Name" ---> "JSON Field Name":</p>
++   * <p>Here's a few examples of the form "Java Field Name" ---&gt; "JSON Field Name":</p>
+    * <ul>
+-   *   <li>someFieldName ---> some-field-name</li>
+-   *   <li>_someFieldName ---> _some-field-name</li>
+-   *   <li>aStringField ---> a-string-field</li>
+-   *   <li>aURL ---> a-u-r-l</li>
++   *   <li>someFieldName ---&gt; some-field-name</li>
++   *   <li>_someFieldName ---&gt; _some-field-name</li>
++   *   <li>aStringField ---&gt; a-string-field</li>
++   *   <li>aURL ---&gt; a-u-r-l</li>
+    * </ul>
+    * Using dashes in JavaScript is not recommended since dash is also used for a minus sign in
+    * expressions. This requires that a field named with dashes is always accessed as a quoted
+@@ -120,12 +120,12 @@
+    * Using this naming policy with Gson will modify the Java Field name from its camel cased
+    * form to a lower case field name where each word is separated by a dot (.).
+    *
+-   * <p>Here's a few examples of the form "Java Field Name" ---> "JSON Field Name":</p>
++   * <p>Here's a few examples of the form "Java Field Name" ---&gt; "JSON Field Name":</p>
+    * <ul>
+-   *   <li>someFieldName ---> some.field.name</li>
+-   *   <li>_someFieldName ---> _some.field.name</li>
+-   *   <li>aStringField ---> a.string.field</li>
+-   *   <li>aURL ---> a.u.r.l</li>
++   *   <li>someFieldName ---&gt; some.field.name</li>
++   *   <li>_someFieldName ---&gt; _some.field.name</li>
++   *   <li>aStringField ---&gt; a.string.field</li>
++   *   <li>aURL ---&gt; a.u.r.l</li>
+    * </ul>
+    * Using dots in JavaScript is not recommended since dot is also used for a member sign in
+    * expressions. This requires that a field named with dots is always accessed as a quoted
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/stream/JsonReader.java /tmp/v2/gson/src/main/java/com/google/gson/stream/JsonReader.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/stream/JsonReader.java	2021-09-30 18:28:51.587876964 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/stream/JsonReader.java	2021-09-30 11:43:34.422619169 +0200
+@@ -170,7 +170,7 @@
+  * precision loss, extremely large values should be written and read as strings
+  * in JSON.
+  *
+- * <a name="nonexecuteprefix"/><h3>Non-Execute Prefix</h3>
++ * <a id="nonexecuteprefix"/><h3>Non-Execute Prefix</h3>
+  * Web servers that serve private data using JSON may be vulnerable to <a
+  * href="http://en.wikipedia.org/wiki/JSON#Cross-site_request_forgery">Cross-site
+  * request forgery</a> attacks. In such an attack, a malicious site gains access

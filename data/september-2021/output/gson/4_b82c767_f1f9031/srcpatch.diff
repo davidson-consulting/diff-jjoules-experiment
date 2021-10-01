@@ -1,0 +1,19 @@
+diff -ru /tmp/v1/gson/src/test/resources/testcases-proguard.conf /tmp/v2/gson/src/test/resources/testcases-proguard.conf
+--- /tmp/v1/gson/src/test/resources/testcases-proguard.conf	2021-09-30 12:31:01.819775950 +0200
++++ /tmp/v2/gson/src/test/resources/testcases-proguard.conf	2021-09-30 11:43:34.430619103 +0200
+@@ -3,6 +3,8 @@
+ -optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/*
+ -optimizationpasses 5
+ -allowaccessmodification
++# On Windows mixed case class names might cause problems
++-dontusemixedcaseclassnames
+ -keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod
+ -keepclassmembers enum * {
+   public static **[] values();
+@@ -17,4 +19,5 @@
+ 
+ -dontwarn com.google.gson.functional.EnumWithObfuscatedTest
+ -dontwarn junit.framework.TestCase
+-
++# Ignore notes about duplicate JDK classes
++-dontnote module-info,jdk.internal.**

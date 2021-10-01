@@ -1,0 +1,84 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java	2021-09-30 21:41:55.204555411 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java	2021-09-30 13:13:18.882680317 +0200
+@@ -27,6 +27,7 @@
+ import java.io.Reader;
+ import java.util.Iterator;
+ import java.util.Map;
++import java.util.Arrays;
+ 
+ /**
+  * This reader walks the elements of a JsonElement as if it was coming from a
+@@ -282,15 +283,10 @@
+ 
+   private void push(Object newTop) {
+     if (stackSize == stack.length) {
+-      Object[] newStack = new Object[stackSize * 2];
+-      int[] newPathIndices = new int[stackSize * 2];
+-      String[] newPathNames = new String[stackSize * 2];
+-      System.arraycopy(stack, 0, newStack, 0, stackSize);
+-      System.arraycopy(pathIndices, 0, newPathIndices, 0, stackSize);
+-      System.arraycopy(pathNames, 0, newPathNames, 0, stackSize);
+-      stack = newStack;
+-      pathIndices = newPathIndices;
+-      pathNames = newPathNames;
++      int newLength = stackSize * 2;
++      stack = Arrays.copyOf(stack, newLength);
++      pathIndices = Arrays.copyOf(pathIndices, newLength);
++      pathNames = Arrays.copyOf(pathNames, newLength);
+     }
+     stack[stackSize++] = newTop;
+   }
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/stream/JsonReader.java /tmp/v2/gson/src/main/java/com/google/gson/stream/JsonReader.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/stream/JsonReader.java	2021-09-30 21:41:55.204555411 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/stream/JsonReader.java	2021-09-30 19:02:53.281067359 +0200
+@@ -22,6 +22,7 @@
+ import java.io.EOFException;
+ import java.io.IOException;
+ import java.io.Reader;
++import java.util.Arrays;
+ 
+ /**
+  * Reads a JSON (<a href="http://www.ietf.org/rfc/rfc7159.txt">RFC 7159</a>)
+@@ -1262,15 +1263,10 @@
+ 
+   private void push(int newTop) {
+     if (stackSize == stack.length) {
+-      int[] newStack = new int[stackSize * 2];
+-      int[] newPathIndices = new int[stackSize * 2];
+-      String[] newPathNames = new String[stackSize * 2];
+-      System.arraycopy(stack, 0, newStack, 0, stackSize);
+-      System.arraycopy(pathIndices, 0, newPathIndices, 0, stackSize);
+-      System.arraycopy(pathNames, 0, newPathNames, 0, stackSize);
+-      stack = newStack;
+-      pathIndices = newPathIndices;
+-      pathNames = newPathNames;
++      int newLength = stackSize * 2;
++      stack = Arrays.copyOf(stack, newLength);
++      pathIndices = Arrays.copyOf(pathIndices, newLength);
++      pathNames = Arrays.copyOf(pathNames, newLength);
+     }
+     stack[stackSize++] = newTop;
+   }
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/stream/JsonWriter.java /tmp/v2/gson/src/main/java/com/google/gson/stream/JsonWriter.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/stream/JsonWriter.java	2021-09-30 21:41:55.204555411 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/stream/JsonWriter.java	2021-09-30 20:05:25.557737993 +0200
+@@ -20,6 +20,7 @@
+ import java.io.Flushable;
+ import java.io.IOException;
+ import java.io.Writer;
++import java.util.Arrays;
+ 
+ import static com.google.gson.stream.JsonScope.DANGLING_NAME;
+ import static com.google.gson.stream.JsonScope.EMPTY_ARRAY;
+@@ -352,9 +353,7 @@
+ 
+   private void push(int newTop) {
+     if (stackSize == stack.length) {
+-      int[] newStack = new int[stackSize * 2];
+-      System.arraycopy(stack, 0, newStack, 0, stackSize);
+-      stack = newStack;
++      stack = Arrays.copyOf(stack, stackSize * 2);
+     }
+     stack[stackSize++] = newTop;
+   }
