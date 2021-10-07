@@ -52,6 +52,6 @@ def mvn_diff_jjoules_no_suspect(
             OPT_REPO_V1 + path_first_repository,
             OPT_REPO_V2 + path_second_repository,
             OPT_NO_REPORT,
-            OPT_ITERATION + 100
+            OPT_ITERATION + '10'
         ])
     )

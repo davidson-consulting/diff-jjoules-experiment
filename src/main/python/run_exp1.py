@@ -19,9 +19,9 @@ if __name__ == '__main__':
     if not args.no_clone:
         clone.remove_and_clone_both(commits[0])
 
-    begin = args.begin if args.begin != -1 else 0
-    end = args.end if args.end != -1 else 0
-
+    begin = args.begin if args.begin != -1 else 1 
+    end = args.end if args.end != -1 else len(commits) 
+    print(begin, end)
 
     for i in range(begin, end):#len(commits) - 1):
         
