@@ -7,6 +7,9 @@ def run_cmd(command):
     print(command)
     return os.system(command)
 
+def isfile(fname):
+    return os.path.isfile(fname)
+
 def read_file(file):
     with open(file, 'r') as file_to_read:
         content = file_to_read.read()
