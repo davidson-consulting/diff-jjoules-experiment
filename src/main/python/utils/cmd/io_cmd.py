@@ -30,8 +30,8 @@ def copy(src, dst):
 def copy_directory(src, dst):
     try:
         copytree(src, dst)
-    except (SameFileError):
-       print('src and dst same file... passing', src)
+    except (FileNotFoundError, SameFileError):
+       print('Error...', src, dst)
 
 def create_if_does_not_exist(directory):
         if not os.path.isdir(directory):

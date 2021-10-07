@@ -6,6 +6,7 @@ def run_cmd(command):
 
 MVN_CMD_WITH_SKIPS_F = 'mvn -Drat.skip=true -Djacoco.skip=true -Danimal.sniffer.skip=true -Dproguard.skip=true -f '
 POM_FILE = '/pom.xml'
+MVN_DATE_FORMAT_OPT = '-Djava.locale.providers=COMPAT,CLDR,SPI'
 
 CLEAN_GOAL = 'clean'
 INSTALL_GOAL = 'install'
@@ -22,7 +23,8 @@ def mvn_install_skip_test_build_classpath(path):
         INSTALL_GOAL,
         SKIP_TESTS,
         'dependency:build-classpath',
-        '-Dmdep.outputFile=classpath'
+        '-Dmdep.outputFile=classpath',
+        MVN_DATE_FORMAT_OPT
     ]))
 
 CMD_DIFF_TEST_SELECTION = 'eu.stamp-project:dspot-diff-test-selection:3.1.1-SNAPSHOT:list'
@@ -45,6 +47,7 @@ def mvn_diff_jjoules_no_suspect(
             path_first_version + POM_FILE,
             LOG_FILE_OPT,
             output_path_file,
+            MVN_DATE_FORMAT_OPT,
             CLEAN_GOAL,
             GOAL_DIFF_JJOULES_DIFF_JJOULES,
             OPT_SUSPECT + 'false',
