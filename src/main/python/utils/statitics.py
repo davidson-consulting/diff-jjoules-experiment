@@ -13,6 +13,8 @@ def mediane(data):
 
 def quartiles(data):
     data = sorted(data)
+    if len(data) < 4:
+        return data[0], data[-1]
     if len(data) % 2 == 0:
         cursor_middle = int(len(data) / 2)
         return mediane(data[:cursor_middle]), mediane(data[cursor_middle:])
@@ -44,14 +46,23 @@ def stats(data_test):
     cv = stddev / mean
     return med, variance, stddev, cv, qcd
 
+
+
 def from_dict_to_array(data, key):
     return [d[key] for d in data]
+
+def from_dict_to_array_rm_zero(data, key):
+    array = []
+    for d in data:
+        if d[key] > 0:
+            array.append(d[key])
+    return array
 
 def stats_for_given_units(data, units):
     stats_per_unit = {}
     for unit in units:
-        data_unit = from_dict_to_array(data, unit)
-        if not any(value == 0 for value in data_unit):
+        data_unit = from_dict_to_array_rm_zero(data, unit)
+        if len(data_unit) > 1 and all(not value == 0 for value in data_unit):
             med, variance, stddev, cv, qcd = stats(data_unit)
             stats_per_unit[unit] = [med, variance, stddev, cv, qcd]
         else:

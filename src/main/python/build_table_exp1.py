@@ -44,19 +44,20 @@ def build_row_overall_result_commit(commit_path):
 def build_row_stats_result_commit(commit_path):
     units = [ENERGY_KEY, INSTR_KEY, DURATIONS_KEY]
     nb_tests = 0
-    nb_unstable_tests = 0
+    nb_unstable_tests_per_unit = {}
     medianes_per_unit = {}
     variances_per_unit = {}
     for unit in units:
         medianes_per_unit[unit] = []
         variances_per_unit[unit] = []
+        nb_unstable_tests_per_unit[unit] = 0
     for json_data_path_file in [DATA_V1_JSON_FILE_NAME, DATA_V2_JSON_FILE_NAME]:
         data = read_json(commit_path + json_data_path_file)
         for fullqualified_test_method_name in data:
             current = []
+            nb_tests = nb_tests + 1
             for record in data[fullqualified_test_method_name]:
                 current.append(record)
-                nb_tests = nb_tests + 1
             #  med, variance, stddev, cv, qcd
             stats_per_unit = stats_for_given_units(current, units)
             for unit in units:
@@ -64,14 +65,18 @@ def build_row_stats_result_commit(commit_path):
                     medianes_per_unit[unit].append(stats_per_unit[unit][0])
                     variances_per_unit[unit].append(stats_per_unit[unit][1])
                 else:
-                    nb_unstable_tests = nb_unstable_tests + 1
-    avg_variance_per_unit, avg_stddev_per_unit= compute_avg_variance_avg_stddev_for_given_units(variances_per_unit, units)
+                    nb_unstable_tests_per_unit[unit] = nb_unstable_tests_per_unit[unit] + 1
+    avg_variance_per_unit, avg_stddev_per_unit = compute_avg_variance_avg_stddev_for_given_units(variances_per_unit, units)
     to_be_printed = [str(get_id_commit_function(commit_path))]
     to_be_printed.append(str(nb_tests))
-    to_be_printed.append(format_int(nb_tests, nb_unstable_tests))
+    #to_be_printed.append(format_int(nb_tests, nb_unstable_tests))
     for unit in units:
         avg_mediane = average(medianes_per_unit[unit])
-        to_be_printed.append(format(avg_mediane, avg_stddev_per_unit[unit]))
+        if nb_unstable_tests_per_unit[unit] == 0:
+            to_be_printed.append('-')
+        else:
+            to_be_printed.append(format_int(nb_tests, nb_unstable_tests_per_unit[unit]))
+        to_be_printed.append(compute_and_format_perc(avg_mediane, avg_stddev_per_unit[unit]))
     print(to_row_latex(to_be_printed))
 
 if __name__ == '__main__':
@@ -105,9 +110,11 @@ if __name__ == '__main__':
         to_header_latex([
             'ID',
             '\#Tests',
-            '\#Unstable Tests',
+            '\#Discarded(SEC)',
             'ENERGY',
+            '\#Discarded(Instr)',
             'INSTRUCTIONS',
+            '\#Discarded(Time)',
             'DURATIONS',
         ])
     )
