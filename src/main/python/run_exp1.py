@@ -3,7 +3,7 @@ import sys
 from utils.cmd.git_cmd import *
 from utils.cmd.io_cmd import *
 from utils.cmd.mvn_cmd import *
-from constants import *
+from utils.constants import *
 from utils.args.run_exp1_args import *
 
 import clone

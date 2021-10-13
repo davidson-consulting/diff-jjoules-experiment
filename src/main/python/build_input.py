@@ -1,6 +1,6 @@
 import sys
 
-from constants import *
+from utils.constants import *
 from utils.args.input_args import *
 
 from utils.cmd.git_cmd import *

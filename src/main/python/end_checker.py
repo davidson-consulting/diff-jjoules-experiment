@@ -1,15 +1,11 @@
 import random
 import os
 import sys
+
 from utils.cmd.json_cmd import *
 from utils.cmd.io_cmd import *
 from utils.statitics import *
-
-def check_if_end_properly(fileList):
-    for file in fileList:
-        if file == 'end.txt':
-            return False
-    return True
+from utils.utils import *
     
 def increase_first(nb_first, input_array, offset=0):
     array = [x for x in input_array]
