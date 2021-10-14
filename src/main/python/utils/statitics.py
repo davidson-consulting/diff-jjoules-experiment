@@ -46,8 +46,6 @@ def stats(data_test):
     cv = stddev / mean
     return med, variance, stddev, cv, qcd
 
-
-
 def from_dict_to_array(data, key):
     return [d[key] for d in data]
 
@@ -79,3 +77,23 @@ def compute_avg_variance_avg_stddev_for_given_units(variances_per_unit, units):
     for unit in units:
         avg_variance_per_unit[unit], avg_stddev_per_unit[unit] = compute_avg_variance_avg_stddev(variances_per_unit[unit])
     return avg_variance_per_unit, avg_stddev_per_unit
+
+def remove_outliers(data, perc=0.05):
+    if len(data) < 10:
+        return data
+    med = mediane(data)
+    nb_to_remove = int(len(data) * perc)
+    for i in range(nb_to_remove):
+        dist_beg = abs(med - data[0])
+        dist_end = abs(med - data[-1])
+        if dist_beg > dist_end:
+            data = data[1:]
+        else:
+            data = data[:-1]
+    return data
+
+def remove_outliers_for_units(data, units):
+    data_wo_outliers = {}
+    for unit in units:
+        data_wo_outliers[unit] = remove_outliers(from_dict_to_array_rm_zero(data, unit), perc=0.20)
+    return data_wo_outliers

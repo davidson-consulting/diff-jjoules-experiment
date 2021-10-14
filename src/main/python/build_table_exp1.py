@@ -52,12 +52,15 @@ def build_row_stats_result_commit(commit_path):
         variances_per_unit[unit] = []
         nb_unstable_tests_per_unit[unit] = 0
     for json_data_path_file in [DATA_V1_JSON_FILE_NAME, DATA_V2_JSON_FILE_NAME]:
+        if not isfile(commit_path + json_data_path_file):
+            return
         data = read_json(commit_path + json_data_path_file)
         for fullqualified_test_method_name in data:
             current = []
             nb_tests = nb_tests + 1
             for record in data[fullqualified_test_method_name]:
                 current.append(record)
+            units = remove_outliers_for_units(current, units)
             #  med, variance, stddev, cv, qcd
             stats_per_unit = stats_for_given_units(current, units)
             for unit in units:
@@ -92,19 +95,6 @@ if __name__ == '__main__':
                 considered_commits.append(dirName)
 
     considered_commits = sorted(considered_commits, key=get_id_commit_function)
-    print(
-        'ID',
-        '#Tests',
-        'DeltaOmega(Energy)',
-        'DeltaOmega(Instr)',
-        'DeltaOmega(Durat)',
-        'DiffJJoules(Energy)',
-        'DiffJJoules(Instr)',
-        'DiffJJoules(Durat)',
-    )
-    for considered_commit in considered_commits:
-        build_row_overall_result_commit(considered_commit)
-    print()
 
     print(
         to_header_latex([
@@ -120,5 +110,4 @@ if __name__ == '__main__':
     )
     for considered_commit in considered_commits:
         build_row_stats_result_commit(considered_commit)
-
     print(to_footer_latex())
