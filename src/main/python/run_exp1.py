@@ -16,6 +16,8 @@ if __name__ == '__main__':
     module = read_file(args.input + '/' + args.project + '/' + MODULE_FILE_PATH)
     base_output_path = args.output + '/' + args.project + '/'
 
+    must_use_date_format = args.date_format
+
     if not args.no_clone:
         clone.remove_and_clone_both(commits[0])
 
@@ -40,8 +42,8 @@ if __name__ == '__main__':
         delete_module_info_java(path_module_v1)
         delete_module_info_java(path_module_v2)
 
-        mvn_install_skip_test_build_classpath(path_module_v1)
-        mvn_install_skip_test_build_classpath(path_module_v2)
+        mvn_install_skip_test_build_classpath(path_module_v1, must_use_date_format)
+        mvn_install_skip_test_build_classpath(path_module_v2, must_use_date_format)
 
         mvn_diff_jjoules_no_suspect(
             PATH_V1,
@@ -49,6 +51,7 @@ if __name__ == '__main__':
             PATH_V2,
             path_module_v2,
             path_module_v1 + 'logs',
+            must_use_date_format
         )
 
         for file in FILES_TO_COPY:

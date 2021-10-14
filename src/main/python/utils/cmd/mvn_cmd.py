@@ -15,7 +15,7 @@ SKIP_TESTS = '-DskipTests'
 LOG_FILE_OPT = '--log-file'
 OPT_TEST = '-Dtest='
 
-def mvn_install_skip_test_build_classpath(path):
+def mvn_install_skip_test_build_classpath(path, must_use_date_format=False):
     return run_cmd(' '.join([
         MVN_CMD_WITH_SKIPS_F,
         path + POM_FILE,
@@ -24,7 +24,7 @@ def mvn_install_skip_test_build_classpath(path):
         SKIP_TESTS,
         'dependency:build-classpath',
         '-Dmdep.outputFile=classpath',
-        MVN_DATE_FORMAT_OPT
+        MVN_DATE_FORMAT_OPT if must_use_date_format else ''
     ]))
 
 CMD_DIFF_TEST_SELECTION = 'eu.stamp-project:dspot-diff-test-selection:3.1.1-SNAPSHOT:list'
@@ -40,14 +40,15 @@ OPT_ITERATION = '-Diterations='
 def mvn_diff_jjoules_no_suspect(
     path_first_repository, path_first_version, 
     path_second_repository, path_second_version,
-    output_path_file):
+    output_path_file,
+    must_use_date_format=False):
     return run_cmd(
         ' '.join([
             MVN_CMD_WITH_SKIPS_F,
             path_first_version + POM_FILE,
             LOG_FILE_OPT,
             output_path_file,
-            MVN_DATE_FORMAT_OPT,
+            MVN_DATE_FORMAT_OPT if must_use_date_format else ''
             CLEAN_GOAL,
             GOAL_DIFF_JJOULES_DIFF_JJOULES,
             OPT_SUSPECT + 'false',
@@ -55,6 +56,6 @@ def mvn_diff_jjoules_no_suspect(
             OPT_REPO_V1 + path_first_repository,
             OPT_REPO_V2 + path_second_repository,
             OPT_NO_REPORT,
-            OPT_ITERATION + '10'
+            OPT_ITERATION + '100'
         ])
     )

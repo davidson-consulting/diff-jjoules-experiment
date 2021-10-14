@@ -11,5 +11,6 @@ class RunArgs():
         parser.add_argument('-p', '--project', type=str, help='Specify the name of the projet.')
         parser.add_argument('-b', '--begin', type=int, default=-1, help='Specify the index of the commit to start with.')
         parser.add_argument('-e', '--end', type=int, default=-1, help='Specify the index of the commit to end with.')
+        parser.add_argument('-d', '--date-format', type=bool, default=False, help="Specify if we need to use the date format")
         
         return parser
