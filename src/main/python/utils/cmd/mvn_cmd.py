@@ -48,7 +48,7 @@ def mvn_diff_jjoules_no_suspect(
             path_first_version + POM_FILE,
             LOG_FILE_OPT,
             output_path_file,
-            MVN_DATE_FORMAT_OPT if must_use_date_format else ''
+            MVN_DATE_FORMAT_OPT if must_use_date_format else '',
             CLEAN_GOAL,
             GOAL_DIFF_JJOULES_DIFF_JJOULES,
             OPT_SUSPECT + 'false',
