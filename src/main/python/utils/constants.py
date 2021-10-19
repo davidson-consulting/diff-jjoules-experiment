@@ -25,3 +25,16 @@ FILES_TO_COPY = [
 FILES_TO_COPY_SUSPECT = [
     'TODO'
 ]
+
+CONSIDERED_TEST_METHODS_JSON_FILE_NAME = '/consideredTestMethods.json'
+DELTA_OMEGA_FILE_NAME = '/deltaOmega.json'
+DIFF_JJOULES_SEC_JSON_FILE_NAME = '/diff_jjoules.json'
+
+DATA_V1_JSON_FILE_NAME = '/data_v1.json'
+DATA_V2_JSON_FILE_NAME = '/data_v2.json'
+
+PACKAGE_KEY = 'package-0|uJ'
+ENERGY_KEY = 'energy'
+INSTR_KEY = 'instructions'
+DURATIONS_KEY = 'durations'
+DURATIONS_NS_KEY = 'duration|ns'
