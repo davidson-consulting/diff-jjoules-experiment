@@ -78,22 +78,22 @@ def compute_avg_variance_avg_stddev_for_given_units(variances_per_unit, units):
         avg_variance_per_unit[unit], avg_stddev_per_unit[unit] = compute_avg_variance_avg_stddev(variances_per_unit[unit])
     return avg_variance_per_unit, avg_stddev_per_unit
 
-def remove_outliers(data, perc=0.05):
-    if len(data) < 10:
-        return data
-    med = mediane(data)
-    nb_to_remove = int(len(data) * perc)
+def remove_outliers(data, unit, nb_to_remove, perc=0.05):
+    med = mediane(data_unit)
     for i in range(nb_to_remove):
-        dist_beg = abs(med - data[0])
-        dist_end = abs(med - data[-1])
+        dist_beg = abs(med - data_unit[0])
+        dist_end = abs(med - data_unit[-1])
         if dist_beg > dist_end:
-            data = data[1:]
+            data_unit = data_unit[1:]
         else:
-            data = data[:-1]
-    return data
+            data_unit = data_unit[:-1]
+    return data_unit
 
 def remove_outliers_for_units(data, units):
     data_wo_outliers = {}
+    if len(data) < 10:
+        return data
+    nb_to_remove = int(len(data) * perc)
     for unit in units:
-        data_wo_outliers[unit] = remove_outliers(from_dict_to_array_rm_zero(data, unit), perc=0.20)
+        data_wo_outliers[unit], nb_to_remove = remove_outliers(data, unit, nb_to_remove, perc=0.05)
     return data_wo_outliers
