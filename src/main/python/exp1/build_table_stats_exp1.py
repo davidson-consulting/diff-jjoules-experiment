@@ -29,8 +29,8 @@ def from_dict_to_array_rm_zero_for_both(data, key1, key2):
 
 # for now, we check that energy and instructions are correlated
 def corrcoef(data):
-    energy_array, instr_array = from_dict_to_array_rm_zero_for_both(data, ENERGY_KEY, INSTR_KEY)
-    return np.corrcoef(energy_array, instr_array)
+    energy_array, instr_array = from_dict_to_array_rm_zero_for_both(data, ENERGY_KEY, CYCLES_KEY)
+    return np.corrcoef(np.array(energy_array).T, np.array(instr_array).T)
 
 def get_all_test_and_correlated_map(diff_jjoules_directory, all_tests, correlated_map):
     id_commit = get_id_commit_function(diff_jjoules_directory)
@@ -38,10 +38,7 @@ def get_all_test_and_correlated_map(diff_jjoules_directory, all_tests, correlate
     data_V2 = read_json(diff_jjoules_directory + '/' + DATA_V2_JSON_FILE_NAME)
     for test in data_V1:
         all_tests.append(test)
-        correlated_map[str(id_commit) + '_v1_' + test] = corrcoef(data_V1[test])
-    for test in data_V2:
-        all_tests.append(test)
-        correlated_map[str(id_commit) + '_v2_' + test] = corrcoef(data_V2[test])
+        correlated_map[str(id_commit) + '_' + test] = corrcoef(data_V1[test])
 
 def get_test_considered(diff_jjoules_directory, considered_tests):
     current_considered_tests = read_json(diff_jjoules_directory + '/' + CONSIDERED_TEST_METHODS_JSON_FILE_NAME)
@@ -49,6 +46,14 @@ def get_test_considered(diff_jjoules_directory, considered_tests):
         considered_tests.extend([
             considered_test + '#' + test_method for test_method in current_considered_tests[considered_test]
         ])
+
+def add_if_has_a_given_correlation(key, considered_tests, nb_correlation_all, nb_correlation_considered, correlation, correlation_to_reach):
+    if abs(correlation[0][1]) >= correlation_to_reach or abs(correlation[1][0]) >= correlation_to_reach:
+        nb_correlation_all = nb_correlation_all + 1
+        test = key.split('_')[1]
+        if test in considered_tests:
+            nb_correlation_considered = nb_correlation_considered + 1
+    return nb_correlation_all, nb_correlation_considered
 
 def count_commits(root_folder):
     commits = []
@@ -83,16 +88,22 @@ def count_commits(root_folder):
     nb_moderate_correlation_for_all_tests = 0
     for key in correlated_map:
         correlation = correlated_map[key]
-        if abs(correlation[0][1]) >= 0.59 or abs(correlation[1][0]) >= 0.59:
-            nb_moderate_correlation_for_all_tests = nb_moderate_correlation_for_all_tests + 1
-            test = key.split('_')[2]    
-            if test in considered_tests:
-                nb_moderate_correlation_for_considered_tests = nb_moderate_correlation_for_considered_tests + 1
-        if abs(correlation[0][1]) >= 0.79 or abs(correlation[1][0]) >= 0.79:
-            nb_strong_correlation_for_all_tests = nb_strong_correlation_for_all_tests + 1
-            test = key.split('_')[2]    
-            if test in considered_tests:
-                nb_strong_correlation_for_considered_tests = nb_strong_correlation_for_considered_tests + 1
+        nb_moderate_correlation_for_all_tests, nb_moderate_correlation_for_considered_tests = add_if_has_a_given_correlation(
+            key, 
+            considered_tests, 
+            nb_moderate_correlation_for_all_tests, 
+            nb_moderate_correlation_for_considered_tests, 
+            correlation, 
+            0.59
+        )
+        nb_strong_correlation_for_all_tests, nb_strong_correlation_for_considered_tests = add_if_has_a_given_correlation(
+            key, 
+            considered_tests, 
+            nb_strong_correlation_for_all_tests, 
+            nb_strong_correlation_for_considered_tests, 
+            correlation, 
+            0.79
+        )
 
     print(
         to_row_latex([

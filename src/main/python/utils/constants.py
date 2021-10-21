@@ -38,5 +38,6 @@ ENERGY_KEY = 'energy'
 INSTR_KEY = 'instructions'
 DURATIONS_KEY = 'durations'
 DURATIONS_NS_KEY = 'duration|ns'
+CYCLES_KEY = 'cycles'
 
 PROJECTS = ['gson']
