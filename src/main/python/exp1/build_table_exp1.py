@@ -72,13 +72,7 @@ if __name__ == '__main__':
 
     root_folder = args.output + '/' + args.project
 
-    considered_commits = []
-    for dirName, subdirList, fileList in os.walk(root_folder):
-        if dirName.endswith('diff-jjoules'):
-            if check_if_end_properly(fileList):
-                considered_commits.append(dirName)
-
-    considered_commits = sorted(considered_commits, key=get_id_commit_function)
+    considered_commits = get_considered_commits_and_sort(root_folder)
 
     print(
         to_header_latex([
