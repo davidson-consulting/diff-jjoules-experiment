@@ -1,5 +1,10 @@
 import sys
 
+from os import listdir
+
+SCRIPT_DIR = os.path.abspath('./src/main/python/utils/')
+sys.path.append(os.path.dirname(SCRIPT_DIR))
+
 from utils.cmd.git_cmd import *
 from utils.cmd.io_cmd import *
 from utils.cmd.mvn_cmd import *
