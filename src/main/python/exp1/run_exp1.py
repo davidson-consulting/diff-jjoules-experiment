@@ -1,5 +1,6 @@
 import sys
 
+import os
 from os import listdir
 
 SCRIPT_DIR = os.path.abspath('./src/main/python/utils/')
