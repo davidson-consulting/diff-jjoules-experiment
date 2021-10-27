@@ -33,12 +33,13 @@ GOAL_DIFF_JJOULES_DIFF_JJOULES = 'fr.davidson:diff-jjoules:diff-jjoules'
 GOAL_DIFF_JJOULES_MARK = 'fr.davidson:diff-jjoules:mark'
 OPT_PATH_DIR_SECOND_VERSION = '-Dpath-dir-second-version='
 OPT_SUSPECT = "-Dsuspect="
+OPT_MARK = '-Dmark='
 OPT_REPO_V1 = '-Dpath-repo-v1='
 OPT_REPO_V2 = '-Dpath-repo-v2='
 OPT_NO_REPORT = '-Dreport=NONE'
 OPT_ITERATION = '-Diterations='
 
-def mvn_diff_jjoules_no_suspect(
+def mvn_diff_jjoules_no_mark(
     path_first_repository, path_first_version, 
     path_second_repository, path_second_version,
     output_path_file,
@@ -52,7 +53,7 @@ def mvn_diff_jjoules_no_suspect(
             MVN_DATE_FORMAT_OPT if must_use_date_format else '',
             CLEAN_GOAL,
             GOAL_DIFF_JJOULES_DIFF_JJOULES,
-            OPT_SUSPECT + 'false',
+            OPT_MARK + 'false',
             OPT_PATH_DIR_SECOND_VERSION + path_second_version,
             OPT_REPO_V1 + path_first_repository,
             OPT_REPO_V2 + path_second_repository,

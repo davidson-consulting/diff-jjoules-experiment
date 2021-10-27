@@ -28,7 +28,7 @@ if __name__ == '__main__':
         clone.remove_and_clone_both(commits[0])
 
     begin = args.begin if args.begin != -1 else 1 
-    end = args.end if args.end != -1 else len(commits) 
+    end = args.end if args.end != -1 else len(commits) - 1
     print(begin, end)
 
     for i in range(begin, end):#len(commits) - 1):
@@ -51,7 +51,7 @@ if __name__ == '__main__':
         mvn_install_skip_test_build_classpath(path_module_v1, must_use_date_format)
         mvn_install_skip_test_build_classpath(path_module_v2, must_use_date_format)
 
-        mvn_diff_jjoules_no_suspect(
+        mvn_diff_jjoules_no_mark(
             PATH_V1,
             path_module_v1,
             PATH_V2,
