@@ -1,4 +1,10 @@
 import math
+import numpy as np
+
+from scipy import stats as scipystats
+
+from .utils import *
+from .constants import *
 
 def average(data):
     return sum(data) / len(data)
@@ -46,16 +52,6 @@ def stats(data_test):
     cv = stddev / mean
     return med, variance, stddev, cv, qcd
 
-def from_dict_to_array(data, key):
-    return [d[key] for d in data]
-
-def from_dict_to_array_rm_zero(data, key):
-    array = []
-    for d in data:
-        if d[key] > 0:
-            array.append(d[key])
-    return array
-
 def stats_for_given_units(data, units):
     stats_per_unit = {}
     for unit in units:
@@ -78,22 +74,20 @@ def compute_avg_variance_avg_stddev_for_given_units(variances_per_unit, units):
         avg_variance_per_unit[unit], avg_stddev_per_unit[unit] = compute_avg_variance_avg_stddev(variances_per_unit[unit])
     return avg_variance_per_unit, avg_stddev_per_unit
 
-def remove_outliers(data, unit, nb_to_remove, perc=0.05):
-    med = mediane(data_unit)
-    for i in range(nb_to_remove):
-        dist_beg = abs(med - data_unit[0])
-        dist_end = abs(med - data_unit[-1])
-        if dist_beg > dist_end:
-            data_unit = data_unit[1:]
-        else:
-            data_unit = data_unit[:-1]
-    return data_unit
+def corrcoef(data):
+    energy_array, instr_array, cycles_array = from_dict_to_array_rm_zero_for_keys(data, ENERGY_KEY, INSTR_KEY, CYCLES_KEY)
+    corrcoef_instr = np.corrcoef(np.array(energy_array), np.array(instr_array))
+    corrcoef_cycles = np.corrcoef(np.array(energy_array), np.array(cycles_array))
+    '''
+    spearmanr_instr = scipystats.spearmanr(np.array(energy_array), np.array(instr_array))
+    spearmanr_cycles = scipystats.spearmanr(np.array(energy_array), np.array(cycles_array))
+    spearmanr = scipystats.spearmanr(np.array(instr_array), np.array(cycles_array))
+    corrcoef = np.corrcoef(np.array(instr_array), np.array(cycles_array))
+    print('instr', corrcoef_instr, spearmanr_instr)
+    print('cycles', corrcoef_cycles, spearmanr_cycles)
+    print('instr vs cycles', spearmanr, corrcoef)
+    '''
+    return corrcoef_instr, corrcoef_cycles
 
-def remove_outliers_for_units(data, units):
-    data_wo_outliers = {}
-    if len(data) < 10:
-        return data
-    nb_to_remove = int(len(data) * perc)
-    for unit in units:
-        data_wo_outliers[unit], nb_to_remove = remove_outliers(data, unit, nb_to_remove, perc=0.05)
-    return data_wo_outliers
+def corrcoef_datas(data_1, data_2):
+    return np.corrcoef(np.array(data_1), np.array(data_2))
