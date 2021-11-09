@@ -62,6 +62,47 @@ def mvn_diff_jjoules_no_mark(
         ])
     )
 
+GOAL_DIFF_JJOULES_MUTATE = 'fr.davidson:diff-jjoules:mutate'
+OPT_METHODS_NAME_PER_QUALIFIED_NAME = '-Dmethod-names-per-full-qualified-names='
+OPT_ENERGY_TO_CONSUME = '-Denergy-to-consume='
+
+def mvn_diff_jjoules_mutate(path_version, path_to_method_names_csv, energy_to_consume):
+    return run_cmd(
+        ' '.join([
+            MVN_CMD_WITH_SKIPS_F,
+            path_version + POM_FILE,
+            CLEAN_GOAL,
+            TEST_GOAL,
+            SKIP_TESTS,
+            GOAL_DIFF_JJOULES_MUTATE,
+            OPT_METHODS_NAME_PER_QUALIFIED_NAME + path_to_method_names_csv,
+            OPT_ENERGY_TO_CONSUME + energy_to_consume
+        ])
+    )
+
+def mvn_diff_jjoules_with_mark(
+    path_first_repository, path_first_version, 
+    path_second_repository, path_second_version,
+    output_path_file,
+    must_use_date_format=False):
+    return run_cmd(
+        ' '.join([
+            MVN_CMD_WITH_SKIPS_F,
+            path_first_version + POM_FILE,
+            LOG_FILE_OPT,
+            output_path_file,
+            MVN_DATE_FORMAT_OPT if must_use_date_format else '',
+            CLEAN_GOAL,
+            GOAL_DIFF_JJOULES_DIFF_JJOULES,
+            OPT_MARK + 'true',
+            OPT_PATH_DIR_SECOND_VERSION + path_second_version,
+            OPT_REPO_V1 + path_first_repository,
+            OPT_REPO_V2 + path_second_repository,
+            OPT_NO_REPORT,
+            OPT_ITERATION + '1'
+        ])
+    )
+
 OPT_DELTAS_PATH = '-Dpath-json-delta='
 
 def mvn_diff_jjoules_mark(
@@ -81,5 +122,20 @@ def mvn_diff_jjoules_mark(
             OPT_REPO_V2 + path_second_repository,
             OPT_NO_REPORT,
             OPT_DELTAS_PATH + deltas_json_path
+        ])
+    )
+
+SETUP_CLOVER_GOAL = 'org.openclover:clover-maven-plugin:4.4.1:setup'
+CLOVER_CLOVER_GOAL = 'org.openclover:clover-maven-plugin:4.4.1:clover'
+
+def mvn_clover(path_first_version):
+     return run_cmd(
+        ' '.join([
+            MVN_CMD_WITH_SKIPS_F,
+            path_first_version + POM_FILE,
+            CLEAN_GOAL,
+            SETUP_CLOVER_GOAL,
+            TEST_GOAL,
+            CLOVER_CLOVER_GOAL,
         ])
     )

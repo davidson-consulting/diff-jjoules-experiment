@@ -7,6 +7,10 @@ def run_cmd(command):
     print(command)
     return os.system(command)
 
+def write_file(path, content):
+    with open(path, 'w') as file_to_write:
+        file_to_write.write(content)
+
 def isfile(fname):
     return os.path.isfile(fname)
 
