@@ -28,13 +28,12 @@ def compute_med_and_var(diff_jjoules_directory, data, units, nb_test, medianes_p
         energy_data, instr_data, cycles_data = from_dict_to_array_rm_zero_for_keys_array(data[test], units)
         stats_per_unit = stats_for_given_units(data[test], units)
         if len(energy_data) == 0 or len(instr_data) == 0 or len(cycles_data) == 0:
+            print(diff_jjoules_directory, test)
             continue
         medianes_per_unit, variances_per_unit = compute_stats_and_add(energy_data, ENERGY_KEY, medianes_per_unit, variances_per_unit)
         medianes_per_unit, variances_per_unit = compute_stats_and_add(instr_data, INSTR_KEY, medianes_per_unit, variances_per_unit)
         medianes_per_unit, variances_per_unit = compute_stats_and_add(cycles_data, CYCLES_KEY, medianes_per_unit, variances_per_unit)
         count_test = count_test + 1
-    #if count_test == 0:
-    #    print(diff_jjoules_directory)
     return nb_test + count_test, medianes_per_unit, variances_per_unit
 
 def compute_stats_for_commit(diff_jjoules_directory, units, medianes_per_unit, variances_per_unit):

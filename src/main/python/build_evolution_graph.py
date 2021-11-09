@@ -26,6 +26,9 @@ if __name__ == '__main__':
 
     considered_commits = get_considered_commits_and_sort(root_folder)
     considered_commits.reverse()
+    considered_ids = []
+    for considered_commit in considered_commits:
+        considered_ids.append(get_id_commit_function(considered_commit))
 
     delta_omegas = [
         {
@@ -40,11 +43,15 @@ if __name__ == '__main__':
         }
     ]
 
-    for considered_commit in considered_commits:
-        id = get_id_commit_function(considered_commit)
-        path_to_delta_omega_json = considered_commit + DELTA_OMEGA_FILE_NAME
-        if isfile(path_to_delta_omega_json):
-            delta_omega = read_json(path_to_delta_omega_json)
-            delta_omegas.append(accumulate_deltas(delta_omegas[-1], delta_omega))
+    for i in range(len(listdir(root_folder))-1, 0, -1):
+        if i in considered_ids:
+            considered_commit = considered_commits[considered_ids.index(i)]
+            path_to_delta_omega_json = considered_commit + DELTA_OMEGA_FILE_NAME
+            if isfile(path_to_delta_omega_json):
+                delta_omega = read_json(path_to_delta_omega_json)
+                print(i, delta_omega)
+                delta_omegas.append(accumulate_deltas(delta_omegas[-1], delta_omega))
+        else:
+            delta_omegas.append(delta_omegas[-1])
 
-    plot_graph(delta_omegas, [ENERGY_KEY, INSTR_KEY, DURATIONS_KEY])
+    plot_graph(delta_omegas, [ENERGY_KEY, INSTR_KEY, DURATIONS_KEY, CYCLES_KEY])

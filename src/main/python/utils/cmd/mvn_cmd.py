@@ -48,8 +48,8 @@ def mvn_diff_jjoules_no_mark(
         ' '.join([
             MVN_CMD_WITH_SKIPS_F,
             path_first_version + POM_FILE,
-            LOG_FILE_OPT,
-            output_path_file,
+            #LOG_FILE_OPT,
+            #output_path_file,
             MVN_DATE_FORMAT_OPT if must_use_date_format else '',
             CLEAN_GOAL,
             GOAL_DIFF_JJOULES_DIFF_JJOULES,
@@ -58,7 +58,7 @@ def mvn_diff_jjoules_no_mark(
             OPT_REPO_V1 + path_first_repository,
             OPT_REPO_V2 + path_second_repository,
             OPT_NO_REPORT,
-            OPT_ITERATION + '100'
+            OPT_ITERATION + '1'
         ])
     )
 
