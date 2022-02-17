@@ -38,6 +38,7 @@ OPT_REPO_V1 = '-Dpath-repo-v1='
 OPT_REPO_V2 = '-Dpath-repo-v2='
 OPT_NO_REPORT = '-Dreport=NONE'
 OPT_ITERATION = '-Diterations='
+OPT_MEASURE = '-Dmeasure'
 
 def mvn_diff_jjoules_no_mark(
     path_first_repository, path_first_version, 
@@ -58,7 +59,8 @@ def mvn_diff_jjoules_no_mark(
             OPT_REPO_V1 + path_first_repository,
             OPT_REPO_V2 + path_second_repository,
             OPT_NO_REPORT,
-            OPT_ITERATION + '100'
+            OPT_ITERATION + '100',
+            OPT_MEASURE,
         ])
     )
 
@@ -99,7 +101,8 @@ def mvn_diff_jjoules_with_mark(
             OPT_REPO_V1 + path_first_repository,
             OPT_REPO_V2 + path_second_repository,
             OPT_NO_REPORT,
-            OPT_ITERATION + '1'
+            OPT_ITERATION + '100',
+            OPT_MEASURE
         ])
     )
 
@@ -122,6 +125,7 @@ def mvn_diff_jjoules_mark(
             OPT_REPO_V2 + path_second_repository,
             OPT_NO_REPORT,
             OPT_DELTAS_PATH + deltas_json_path
+            OPT_MEASURE,
         ])
     )
 
