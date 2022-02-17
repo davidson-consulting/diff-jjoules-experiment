@@ -29,8 +29,8 @@ def mvn_install_skip_test_build_classpath(path, must_use_date_format=False):
 
 CMD_DIFF_TEST_SELECTION = 'eu.stamp-project:dspot-diff-test-selection:3.1.1-SNAPSHOT:list'
 
-GOAL_DIFF_JJOULES_DIFF_JJOULES = 'fr.davidson:diff-jjoules:diff-jjoules'
-GOAL_DIFF_JJOULES_MARK = 'fr.davidson:diff-jjoules:mark'
+GOAL_DIFF_JJOULES_DIFF_JJOULES = 'fr.davidson:diff-jjoules-maven:diff-jjoules'
+GOAL_DIFF_JJOULES_MARK = 'fr.davidson:diff-jjoules-maven:mark'
 OPT_PATH_DIR_SECOND_VERSION = '-Dpath-dir-second-version='
 OPT_SUSPECT = "-Dsuspect="
 OPT_MARK = '-Dmark='
@@ -48,8 +48,8 @@ def mvn_diff_jjoules_no_mark(
         ' '.join([
             MVN_CMD_WITH_SKIPS_F,
             path_first_version + POM_FILE,
-            #LOG_FILE_OPT,
-            #output_path_file,
+            LOG_FILE_OPT,
+            output_path_file,
             MVN_DATE_FORMAT_OPT if must_use_date_format else '',
             CLEAN_GOAL,
             GOAL_DIFF_JJOULES_DIFF_JJOULES,
@@ -58,7 +58,7 @@ def mvn_diff_jjoules_no_mark(
             OPT_REPO_V1 + path_first_repository,
             OPT_REPO_V2 + path_second_repository,
             OPT_NO_REPORT,
-            OPT_ITERATION + '1'
+            OPT_ITERATION + '100'
         ])
     )
 
