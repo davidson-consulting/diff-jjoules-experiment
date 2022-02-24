@@ -59,7 +59,7 @@ def mvn_diff_jjoules_no_mark(
             OPT_REPO_V1 + path_first_repository,
             OPT_REPO_V2 + path_second_repository,
             OPT_NO_REPORT,
-            OPT_ITERATION + '2',
+            OPT_ITERATION + '100',
             OPT_MEASURE,
             '>' + output_path_file,
             '2>&1'
