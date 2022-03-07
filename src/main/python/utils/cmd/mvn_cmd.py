@@ -4,7 +4,7 @@ def run_cmd(command):
     print(command)
     return os.system(command)
 
-MVN_CMD_WITH_SKIPS_F = 'mvn -Drat.skip=true -Djacoco.skip=true -Danimal.sniffer.skip=true -Dproguard.skip=true -f '
+MVN_CMD_WITH_SKIPS_F = 'mvn -Drat.skip=true -Djacoco.skip=true -Danimal.sniffer.skip=true -Dproguard.skip=true -Dmaven.javadoc.skip=true -f '
 POM_FILE = '/pom.xml'
 MVN_DATE_FORMAT_OPT = '-Djava.locale.providers=COMPAT,CLDR,SPI'
 
