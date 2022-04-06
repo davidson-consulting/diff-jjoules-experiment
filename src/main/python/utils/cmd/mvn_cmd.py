@@ -66,11 +66,11 @@ def mvn_diff_jjoules_no_mark(
         ])
     )
 
-GOAL_DIFF_JJOULES_MUTATE = 'fr.davidson:diff-jjoules:mutate'
-OPT_METHODS_NAME_PER_QUALIFIED_NAME = '-Dmethod-names-per-full-qualified-names='
-OPT_ENERGY_TO_CONSUME = '-Denergy-to-consume='
+GOAL_DIFF_JJOULES_MUTATE = 'fr.davidson:diff-jjoules-mutation:mutate'
+OPT_METHOD_LIST_PATH = '-Dmethod-list-path='
+OPT_CONSUMPTION = '-Dconsumption='
 
-def mvn_diff_jjoules_mutate(path_version, path_to_method_names_csv, energy_to_consume):
+def mvn_diff_jjoules_mutate(path_version, path_to_method_names, energy_to_consume):
     return run_cmd(
         ' '.join([
             MVN_CMD_WITH_SKIPS_F,
@@ -79,12 +79,12 @@ def mvn_diff_jjoules_mutate(path_version, path_to_method_names_csv, energy_to_co
             TEST_GOAL,
             SKIP_TESTS,
             GOAL_DIFF_JJOULES_MUTATE,
-            OPT_METHODS_NAME_PER_QUALIFIED_NAME + path_to_method_names_csv,
-            OPT_ENERGY_TO_CONSUME + energy_to_consume
+            OPT_METHOD_LIST_PATH + path_to_method_names,
+            OPT_CONSUMPTION + energy_to_consume,
         ])
     )
 
-def mvn_diff_jjoules_with_mark(
+def mvn_diff_jjoules_with_mark_no_suspect(
     path_first_repository, path_first_version, 
     path_second_repository, path_second_version,
     output_path_file,
@@ -93,18 +93,21 @@ def mvn_diff_jjoules_with_mark(
         ' '.join([
             MVN_CMD_WITH_SKIPS_F,
             path_first_version + POM_FILE,
-            LOG_FILE_OPT,
-            output_path_file,
+            #LOG_FILE_OPT,
+            #output_path_file,
             MVN_DATE_FORMAT_OPT if must_use_date_format else '',
             CLEAN_GOAL,
             GOAL_DIFF_JJOULES_DIFF_JJOULES,
             OPT_MARK + 'true',
+            OPT_SUSPECT + 'false',
             OPT_PATH_DIR_SECOND_VERSION + path_second_version,
             OPT_REPO_V1 + path_first_repository,
             OPT_REPO_V2 + path_second_repository,
             OPT_NO_REPORT,
             OPT_ITERATION + '100',
             OPT_MEASURE
+            '>' + output_path_file,
+            '2>&1'
         ])
     )
 
@@ -145,3 +148,17 @@ def mvn_clover(path_first_version):
             CLOVER_CLOVER_GOAL,
         ])
     )
+
+GOAL_DIFF_JJOULES_COVERAGE = 'fr.davidson:diff-jjoules-maven:coverage'
+
+def mvn_diff_jjoules_coverage(path_first_version):
+     return run_cmd(' '.join([
+        MVN_CMD_WITH_SKIPS_F,
+        path_first_version + POM_FILE,
+        CLEAN_GOAL,
+        INSTALL_GOAL,
+        SKIP_TESTS,
+        'dependency:build-classpath',
+        '-Dmdep.outputFile=classpath',
+        GOAL_DIFF_JJOULES_COVERAGE
+    ]))
