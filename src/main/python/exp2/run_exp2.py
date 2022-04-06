@@ -29,12 +29,13 @@ if __name__ == '__main__':
     if not args.no_clone:
         clone.remove_and_clone_both(commits[0])
     
-    method_names_per_class_name = read_json(base_output_path + '/rq2/methodsNames.json')
-    mutation_intensities = ['1']
-
+    selected_methods_to_mutate = read_json(base_output_path + '/rq2/selected_methods_to_mutate.json')
+    mutation_intensities = read_json(base_output_path + '/rq2/mutation_intensities.json')
+    mutation_intensities = [str(int(mutation_intensities[key])) for key in ['min', 'med', 'max']]
+    
     for mutation_intensity in mutation_intensities:
-        for class_name in method_names_per_class_name:
-            for method_name in method_names_per_class_name[class_name]:
+        for class_name in selected_methods_to_mutate:
+            for method_name in selected_methods_to_mutate[class_name]:
 
                 output_path = base_output_path + '/rq2/' + str(mutation_intensity) + '_' + class_name + '_' + method_name + '/'
                 delete_dir_and_mkdir(output_path)
@@ -51,13 +52,14 @@ if __name__ == '__main__':
                 mvn_install_skip_test_build_classpath(path_module_v1, must_use_date_format)
                 mvn_install_skip_test_build_classpath(path_module_v2, must_use_date_format)
 
-                write_file(path_module_v2 +  '/methodsNames.csv', class_name + ';' + method_name)
+                current_selected_methods_to_mutate = {}
+                current_selected_methods_to_mutate[class_name] = [method_name]
+                write_json(path_module_v2 +  '/selected_methods_to_mutate.json', current_selected_methods_to_mutate)
 
-                mvn_diff_jjoules_mutate(path_module_v2, 'methodsNames.csv', mutation_intensity)
+                mvn_diff_jjoules_mutate(path_module_v2, 'selected_methods_to_mutate.json', mutation_intensity)
+                git_commit(path_module_v2)
 
-                input()
-
-                mvn_diff_jjoules_with_mark(
+                mvn_diff_jjoules_with_mark_no_suspect(
                     PATH_V1,
                     path_module_v1,
                     PATH_V2,
@@ -79,5 +81,3 @@ if __name__ == '__main__':
                         output_path + dir
                     )
                     delete_directory(path_module_v1 + dir)
-
-                sys.exit(1)
