@@ -105,7 +105,7 @@ def mvn_diff_jjoules_with_mark_no_suspect(
             OPT_REPO_V2 + path_second_repository,
             OPT_NO_REPORT,
             OPT_ITERATION + '100',
-            OPT_MEASURE
+            OPT_MEASURE,
             '>' + output_path_file,
             '2>&1'
         ])
