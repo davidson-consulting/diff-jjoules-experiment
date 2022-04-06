@@ -50,7 +50,9 @@ def stats(data_test):
     stddev = math.sqrt(variance)
     qcd = (q3 - q1) / (q3 + q1)
     cv = stddev / mean
-    return med, variance, stddev, cv, qcd
+    avg_abs_dev = sum([ abs(x - mean)  for x in data_test ]) / len(data_test)
+    rel_avg_dev = avg_abs_dev / mean
+    return med, variance, stddev, cv, qcd, avg_abs_dev, rel_avg_dev
 
 def stats_for_given_units(data, units):
     stats_per_unit = {}

@@ -40,4 +40,9 @@ DURATIONS_KEY = 'durations'
 DURATIONS_NS_KEY = 'duration|ns'
 CYCLES_KEY = 'cycles'
 
-PROJECTS = ['gson', 'jsoup', 'commons-io']
+PROJECTS = [
+    'gson', 
+    'jsoup', 
+    'commons-io',
+    'commons-lang'
+]

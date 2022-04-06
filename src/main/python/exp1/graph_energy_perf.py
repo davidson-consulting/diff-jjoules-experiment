@@ -27,9 +27,17 @@ def plot_energy_perf(project, project_root_folder):
             for test in data_v1:
                 data_test = data_v1[test]
                 energies = from_dict_to_array_rm_zero(data_test, ENERGY_KEY)
-                cycles = from_dict_to_array_rm_zero(data_test, CYCLES_KEY)
+                #cycles = from_dict_to_array_rm_zero(data_test, CYCLES_KEY)
                 instructions = from_dict_to_array_rm_zero(data_test, INSTR_KEY)
-                plt.plot(energies, cycles[0:len(energies)], 'bo', label='CYCLES',)
+                #instructions = instructions[0:20]
+                #energies = energies[0:20]
+                # plt.plot(energies, cycles[0:len(energies)], 'bo', label='CYCLES',)
+                # for xitem,yitem in np.nditer([energies, cycles[0:len(energies)]]):
+                #     annotation = energies.index(xitem)
+                #     plt.annotate(annotation, (xitem,yitem), textcoords="offset points",xytext=(0,10),ha="center")
+                for xitem,yitem in np.nditer([energies, instructions[0:len(energies)]]):
+                    annotation = energies.index(xitem)
+                    plt.annotate(annotation, (xitem,yitem), textcoords="offset points",xytext=(0,10),ha="center")
                 plt.plot(energies, instructions[0:len(energies)], 'ro', label='INSTR',)
                 plt.legend()
                 plt.show()
