@@ -47,3 +47,13 @@ def git_log_pretty_and_redirect(path_project, output_file_path):
             output_file_path
         ])
     )
+
+def git_commit(path_project):
+    run_cmd(
+        ' '.join([
+            'git', 
+            '-C', path_project, 
+            'commit', '-a',
+             '--allow-empty-message', '-m', '\'\''
+        ])
+    )
