@@ -12,24 +12,22 @@
     "com.google.gson.reflect.TypeToken": [
         "toString"
     ],
+    "com.google.gson.TypeAdapter": [
+        "nullSafe",
+        "toJsonTree"
+    ],
+    "com.google.gson.stream.JsonReader": [
+        "nextNull",
+        "nextLong",
+        "getPath",
+        "readEscapeCharacter"
+    ],
     "com.google.gson.GsonBuilder": [
         "enableComplexMapKeySerialization",
         "setFieldNamingStrategy"
     ],
-    "com.google.gson.internal.bind.TypeAdapters": [
-        "write"
-    ],
     "com.google.gson.JsonPrimitive": [
-        "equals",
-        "isBoolean"
-    ],
-    "com.google.gson.stream.JsonReader": [
-        "nextQuotedValue"
-    ],
-    "com.google.gson.internal.LinkedHashTreeMap": [
-        "LinkedHashTreeMap",
-        "size",
-        "get",
-        "containsKey"
+        "getAsFloat",
+        "getAsLong"
     ]
 }

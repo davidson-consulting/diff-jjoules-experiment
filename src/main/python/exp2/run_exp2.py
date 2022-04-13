@@ -29,8 +29,8 @@ if __name__ == '__main__':
     if not args.no_clone:
         clone.remove_and_clone_both(commits[0])
     
-    selected_methods_to_mutate = read_json(args.input + '/selected_methods_to_mutate.json')
-    mutation_intensities = read_json(args.input + '/mutation_intensities.json')
+    selected_methods_to_mutate = read_json(args.input + '/' + project + '/selected_methods_to_mutate.json')
+    mutation_intensities = read_json(args.input + '/' + project + '/mutation_intensities.json')
     mutation_intensities = [str(int(mutation_intensities[key])) for key in ['min', 'med', 'max']]
     
     for mutation_intensity in mutation_intensities:

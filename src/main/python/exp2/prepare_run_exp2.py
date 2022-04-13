@@ -64,8 +64,13 @@ class CoveredClass:
         return ''
 
 def filter_method_name(method_name):
-    discarded_method_names = ['equals', 'tostring', 'hashcode', 'pop', 'peek', 'poll', 'add', 'push', 'put']
-    return not method_name[0].isupper() and not method_name.startswith('is') and not method_name.startswith('has') and not method_name.startswith('get') and not method_name.startswith('set') and not method_name.lower() in discarded_method_names
+    discarded_method_names = ['equals', 'tostring', 'hashcode', 'pop', 'peek', 'poll', 'add', 'push', 'put', 'size', 'containskey', 'contains', 'clear']
+    return not method_name[0].isupper() and \
+        not method_name.startswith('is') and \
+        not method_name.startswith('has') and \
+        not method_name.startswith('get') and \
+        not method_name.startswith('set') and \
+        not method_name.lower() in discarded_method_names
 
 def get_max_indices(sorted_full_qualified_method_names):
     max_cursor = int(0.10 * len(sorted_full_qualified_method_names))
@@ -98,12 +103,11 @@ def to_full_qualified_name(class_name, method_name):
 def sorting_by_get_and_size(key, dict):
     return len(dict[key])
 
-
 def select_methods_to_mutate(path_module_v1, base_output_path):
     mvn_diff_jjoules_coverage(path_module_v1)
-    copy(path_module_v1 + 'clover_coverage.json', base_output_path + 'rq2/clover_coverage.json')
+    copy(path_module_v1 + 'clover_coverage.json', base_output_path + '/clover_coverage.json')
     mvn_clover(path_module_v1)
-    copy(path_module_v1 + 'target/site/clover/clover.xml', base_output_path + 'rq2/clover.xml')
+    copy(path_module_v1 + 'target/site/clover/clover.xml', base_output_path + '/clover.xml')
     file = minidom.parse(path_module_v1 + 'target/site/clover/clover.xml')
     covered_classes = []
     packages = file.getElementsByTagName('coverage')[0].getElementsByTagName('project')[0].getElementsByTagName('package')
@@ -174,8 +178,8 @@ def select_methods_to_mutate(path_module_v1, base_output_path):
         selected_methods_to_mutate[class_name].append(method_name)
         nb_test_per_selected_methods[class_name][method_name] = len(tests_that_hit_a_method_by_name[sorted_full_qualified_method_names[index]])
     
-    write_json(base_output_path + 'rq2/selected_methods_to_mutate.json', selected_methods_to_mutate)
-    write_json(base_output_path + 'rq2/nb_test_per_selected_methods.json', nb_test_per_selected_methods)
+    write_json(base_output_path + '/selected_methods_to_mutate.json', selected_methods_to_mutate)
+    write_json(base_output_path + '/nb_test_per_selected_methods.json', nb_test_per_selected_methods)
 
 def read_data_and_append(data, cycles_consumption):
     for test in data:
@@ -189,7 +193,7 @@ def get_cycles(data):
         cycles = d[CYCLES_KEY]
     return cycles
 
-def compute_mutation_intensities(root_folder):
+def compute_mutation_intensities(root_folder, output_path):
     cycles_delta = []
     commit_folders = listdir(root_folder)
     commit_folders.sort(key=lambda commit_folder: int(commit_folder.split('_')[0]) if commit_folder != 'rq2' else -1)
@@ -219,7 +223,7 @@ def compute_mutation_intensities(root_folder):
     mutation_intensities['max'] = cycles_delta[index_max] 
     mutation_intensities['med'] = cycles_delta[index_med]
     mutation_intensities['min'] = cycles_delta[index_min]
-    write_json(root_folder + 'rq2/mutation_intensities.json', mutation_intensities)
+    write_json(output_path + '/mutation_intensities.json', mutation_intensities)
 
 if __name__ == '__main__':
     # In this EXP, we want to :
@@ -263,6 +267,6 @@ if __name__ == '__main__':
     path_module_v1 = PATH_V1 + '/' + module + '/'
     delete_module_info_java(path_module_v1)
 
-    select_methods_to_mutate(path_module_v1, base_output_path)
+    select_methods_to_mutate(path_module_v1, args.input + '/' + args.project)
 
-    compute_mutation_intensities(base_output_path)
+    compute_mutation_intensities(base_output_path + '/exp1/', args.input + '/' + args.project)
