@@ -1,37 +1,18 @@
 {
-    "com.google.gson.stream.JsonWriter": [
-        "newline",
-        "beforeName"
-    ],
-    "com.google.gson.internal.ConstructorConstructor": [
-        "newDefaultImplementationConstructor"
-    ],
-    "com.google.gson.internal.Excluder": [
-        "excludeClassChecks",
-        "excludeClassInStrategy"
+    "com.google.gson.internal.bind.TypeAdapters": [
+        "create",
+        "read",
+        "newFactory"
     ],
     "com.google.gson.internal.bind.JsonTreeReader": [
-        "endArray",
-        "beginObject"
+        "beginObject",
+        "nextString"
     ],
-    "com.google.gson.JsonObject": [
-        "addProperty"
-    ],
-    "com.google.gson.TypeAdapter": [
-        "fromJson"
-    ],
-    "com.google.gson.internal.LazilyParsedNumber": [
-        "longValue"
-    ],
-    "com.google.gson.internal.bind.TreeTypeAdapter": [
-        "newTypeHierarchyFactory"
-    ],
-    "com.google.gson.internal.LinkedTreeMap": [
-        "findByObject",
-        "keySet"
-    ],
-    "com.google.gson.Gson": [
-        "toJson",
-        "newJsonReader"
+    "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory": [
+        "excludeField",
+        "create",
+        "createBoundField",
+        "write",
+        "read"
     ]
 }
