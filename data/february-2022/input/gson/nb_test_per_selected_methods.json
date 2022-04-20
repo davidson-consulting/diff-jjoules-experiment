@@ -1,18 +1,26 @@
 {
-    "com.google.gson.internal.bind.TypeAdapters": {
-        "create": 20,
-        "read": 19,
-        "newFactory": 18
+    "com.google.gson.JsonObject": {
+        "addProperty": 21
+    },
+    "com.google.gson.TypeAdapter": {
+        "fromJson": 21
+    },
+    "com.google.gson.internal.LazilyParsedNumber": {
+        "longValue": 20
     },
     "com.google.gson.internal.bind.JsonTreeReader": {
         "beginObject": 20,
         "nextString": 19
     },
-    "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory": {
-        "excludeField": 1,
-        "create": 1,
-        "createBoundField": 1,
-        "write": 1,
-        "read": 1
+    "com.google.gson.internal.LinkedTreeMap": {
+        "keySet": 1
+    },
+    "com.google.gson.stream.JsonWriter": {
+        "nullValue": 1
+    },
+    "com.google.gson.Gson": {
+        "toJson": 1,
+        "newJsonReader": 1,
+        "fromJson": 1
     }
 }
