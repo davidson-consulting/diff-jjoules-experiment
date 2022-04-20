@@ -27,6 +27,7 @@ FILES_TO_COPY_SUSPECT = [
 ]
 
 CONSIDERED_TEST_METHODS_JSON_FILE_NAME = '/consideredTestMethods.json'
+DELTA_FILE_NAME = '/deltas.json'
 DELTA_OMEGA_FILE_NAME = '/deltaOmega.json'
 DIFF_JJOULES_SEC_JSON_FILE_NAME = '/diff_jjoules.json'
 
@@ -44,5 +45,6 @@ PROJECTS = [
     'gson', 
     'jsoup', 
     'commons-io',
-    'commons-lang'
+    'commons-lang',
+    'mustache.java'
 ]

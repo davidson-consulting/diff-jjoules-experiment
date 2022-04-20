@@ -61,3 +61,40 @@ def has_any_zero(data):
         if d[ENERGY_KEY] == 0.0:
             return True
     return False
+
+def get_java_path_file(line):
+    for word in line.split(' '):
+        if word.endswith('.java'):
+            return word
+    for word in line.split('\t'):
+        if word.endswith('.java'):
+            return word
+    return ''
+
+def check_if_line_is_java_file_modification(line):
+    return (line.startswith('+++') or line.startswith('---')) and len(get_java_path_file(line)) > 0
+
+def find_most_impacted_module(path_v1, path_v2):
+    os.system(' '.join(['diff', '-ru', path_v1, path_v2, '>', '/tmp/diff']))
+    diff_content = read_file('/tmp/diff')
+    diff_content_lines = diff_content.split('\n')
+    nb_per_module = {}
+    for line in diff_content_lines:
+        if check_if_line_is_java_file_modification(line):
+            java_file = get_java_path_file(line)
+            if 'test' in java_file:
+                continue
+            if path_v1 in java_file:
+                module = java_file.split('src/main/java/')[0].split(path_v1)[1]
+            else:
+                module = java_file.split('src/main/java/')[0].split(path_v2)[1]
+            print(module)
+            if not module in nb_per_module:
+                nb_per_module[module] = 1
+            else:
+                nb_per_module[module] = nb_per_module[module] + 1
+    if len(nb_per_module) == 0:
+        return nb_per_module
+    print(nb_per_module)
+    return sorted(nb_per_module.items(), key=lambda x: x[1], reverse=True)[0][0]
+        
