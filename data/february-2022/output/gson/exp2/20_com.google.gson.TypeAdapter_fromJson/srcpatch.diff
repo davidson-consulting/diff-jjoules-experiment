@@ -1,0 +1,19 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/TypeAdapter.java /tmp/v2/gson/src/main/java/com/google/gson/TypeAdapter.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/TypeAdapter.java	2022-04-20 11:46:49.941043193 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/TypeAdapter.java	2022-04-20 12:07:20.326917544 +0200
+@@ -256,6 +256,7 @@
+    * @since 2.2
+    */
+   public final T fromJson(Reader in) throws IOException {
++    fr.davidson.tlpc.sensor.TLPCSensor.consume(20, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_ENERGY_CONSUMPTION);
+     JsonReader reader = new JsonReader(in);
+     return read(reader);
+   }
+@@ -270,6 +271,7 @@
+    * @since 2.2
+    */
+   public final T fromJson(String json) throws IOException {
++    fr.davidson.tlpc.sensor.TLPCSensor.consume(20, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_ENERGY_CONSUMPTION);
+     return fromJson(new StringReader(json));
+   }
+ 

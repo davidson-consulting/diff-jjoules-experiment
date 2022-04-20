@@ -1,0 +1,11 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java /tmp/v2/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java	2022-04-20 11:46:53.217025541 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java	2022-04-20 12:48:09.437880435 +0200
+@@ -432,6 +432,7 @@
+   }
+ 
+   @Override public Set<K> keySet() {
++    fr.davidson.tlpc.sensor.TLPCSensor.consume(20, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_ENERGY_CONSUMPTION);
+     KeySet result = keySet;
+     return result != null ? result : (keySet = new KeySet());
+   }

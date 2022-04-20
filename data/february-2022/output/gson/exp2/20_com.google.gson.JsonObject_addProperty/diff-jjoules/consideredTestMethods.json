@@ -1,0 +1,30 @@
+{
+  "com.google.gson.functional.CircularReferenceTest": [
+    "testSelfReferenceCustomHandlerSerialization"
+  ],
+  "com.google.gson.functional.CustomTypeAdaptersTest": [
+    "testCustomTypeAdapterAppliesToSubClassesSerializedAsBaseClass",
+    "testEnsureCustomSerializerNotInvokedForNullValues"
+  ],
+  "com.google.gson.internal.bind.JsonTreeReaderTest": [
+    "testSkipValue_filledJsonObject"
+  ],
+  "com.google.gson.functional.JsonParserTest": [
+    "testBadFieldTypeForCustomDeserializerCustomTree",
+    "testBadTypeForDeserializingCustomTree",
+    "testBadFieldTypeForDeserializingCustomTree"
+  ],
+  "com.google.gson.functional.PrintFormattingTest": [
+    "testJsonObjectWithNullValues",
+    "testJsonObjectWithNullValuesSerialized"
+  ],
+  "com.google.gson.functional.CustomSerializerTest": [
+    "testSubClassSerializerInvokedForBaseClassFieldsHoldingSubClassInstances",
+    "testBaseClassSerializerInvokedForBaseClassFields"
+  ],
+  "com.google.gson.JsonObjectTest": [
+    "testAddingCharacterProperties",
+    "testAddingBooleanProperties",
+    "testAddingStringProperties"
+  ]
+}

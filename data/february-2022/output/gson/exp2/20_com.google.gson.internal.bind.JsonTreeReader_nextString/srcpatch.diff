@@ -1,0 +1,11 @@
+diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java
+--- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java	2022-04-20 11:46:53.217025541 +0200
++++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java	2022-04-20 12:37:56.701351320 +0200
+@@ -175,6 +175,7 @@
+   }
+ 
+   @Override public String nextString() throws IOException {
++    fr.davidson.tlpc.sensor.TLPCSensor.consume(20, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_ENERGY_CONSUMPTION);
+     JsonToken token = peek();
+     if (token != JsonToken.STRING && token != JsonToken.NUMBER) {
+       throw new IllegalStateException(
