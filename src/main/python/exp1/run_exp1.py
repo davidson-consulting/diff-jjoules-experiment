@@ -9,6 +9,7 @@ sys.path.append(os.path.dirname(SCRIPT_DIR))
 from utils.cmd.git_cmd import *
 from utils.cmd.io_cmd import *
 from utils.cmd.mvn_cmd import *
+from utils.utils import *
 from utils.constants import *
 from utils.args.run_exp1_args import *
 
@@ -21,6 +22,8 @@ if __name__ == '__main__':
     commits = read_file_by_lines(args.input + '/' + args.project + '/' + COMMITS_FILE_PATH)
     module = read_file(args.input + '/' + args.project + '/' + MODULE_FILE_PATH)
     base_output_path = args.output + '/' + args.project + '/'
+
+    dynamic_module = module == '--dynamic'
 
     must_use_date_format = args.date_format
 
@@ -39,16 +42,23 @@ if __name__ == '__main__':
         current = str(i) + '_' + reduce_sha(commit_v1) + '_' + reduce_sha(commit_v2)
         print('running', current)
         
-        output_path = base_output_path + str(i) + '_' + reduce_sha(commit_v1) + '_' + reduce_sha(commit_v2) + '/' 
+        output_path = base_output_path + '/exp1/' +  str(i) + '_' + reduce_sha(commit_v1) + '_' + reduce_sha(commit_v2) + '/' 
 
         delete_dir_and_mkdir(output_path)
 
         git_reset_hard_folder(PATH_V1, commit_v1)
         git_reset_hard_folder(PATH_V2, commit_v2)
 
+        if dynamic_module:
+            module = find_most_impacted_module(PATH_V1 + '/', PATH_V2 + '/')
+        
+        if len(module) == 0:
+            print('skipping', current, 'module', 'is', 'empty')
+            continue
+        
         path_module_v1 = PATH_V1 + '/' + module + '/'
         path_module_v2 = PATH_V2 + '/' + module + '/'
-
+            
         delete_module_info_java(path_module_v1)
         delete_module_info_java(path_module_v2)
 
@@ -77,3 +87,5 @@ if __name__ == '__main__':
                 output_path + dir
             )
             delete_directory(path_module_v1 + dir)
+        
+        input()
