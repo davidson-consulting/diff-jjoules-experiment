@@ -1,18 +1,21 @@
 {
-    "com.google.gson.internal.bind.JsonTreeWriter": [
-        "endArray"
-    ],
-    "com.google.gson.stream.JsonReader": [
-        "skipQuotedValue"
-    ],
-    "com.google.gson.GsonBuilder": [
-        "serializeSpecialFloatingPointValues"
-    ],
-    "com.google.gson.JsonPrimitive": [
-        "deepCopy"
+    "com.google.gson.stream.JsonWriter": [
+        "flush"
     ],
     "com.google.gson.internal.bind.TypeAdapters": [
+        "write"
+    ],
+    "com.google.gson.internal.UnsafeAllocator": [
+        "newInstance"
+    ],
+    "com.google.gson.internal.bind.ArrayTypeAdapter": [
         "read"
+    ],
+    "com.google.gson.JsonObject": [
+        "remove"
+    ],
+    "com.google.gson.internal.Excluder": [
+        "disableInnerClassSerialization"
     ],
     "com.google.gson.internal.bind.util.ISO8601Utils": [
         "format"
@@ -23,8 +26,7 @@
     "com.google.gson.JsonStreamParser": [
         "next"
     ],
-    "com.google.gson.internal.bind.TreeTypeAdapter": [
-        "newTypeHierarchyFactory",
-        "read"
+    "com.google.gson.stream.JsonReader": [
+        "nextLong"
     ]
 }

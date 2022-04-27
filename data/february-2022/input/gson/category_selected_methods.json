@@ -1,0 +1,32 @@
+{
+    "com.google.gson.stream.JsonWriter": {
+        "flush": "max"
+    },
+    "com.google.gson.internal.bind.TypeAdapters": {
+        "write": "max"
+    },
+    "com.google.gson.internal.UnsafeAllocator": {
+        "newInstance": "max"
+    },
+    "com.google.gson.internal.bind.ArrayTypeAdapter": {
+        "read": "max"
+    },
+    "com.google.gson.JsonObject": {
+        "remove": "max"
+    },
+    "com.google.gson.internal.Excluder": {
+        "disableInnerClassSerialization": "min"
+    },
+    "com.google.gson.internal.bind.util.ISO8601Utils": {
+        "format": "min"
+    },
+    "com.google.gson.JsonArray": {
+        "remove": "min"
+    },
+    "com.google.gson.JsonStreamParser": {
+        "next": "min"
+    },
+    "com.google.gson.stream.JsonReader": {
+        "nextLong": "min"
+    }
+}
