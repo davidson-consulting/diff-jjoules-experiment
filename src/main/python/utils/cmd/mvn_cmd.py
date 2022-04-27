@@ -106,30 +106,35 @@ def mvn_diff_jjoules_with_mark_no_suspect(
             OPT_NO_REPORT,
             OPT_ITERATION + '100',
             OPT_MEASURE,
-            '>' + output_path_file,
-            '2>&1'
+            #'>' + output_path_file,
+            #'2>&1'
         ])
     )
 
-OPT_DELTAS_PATH = '-Dpath-json-delta='
+OPT_DELTAS_PATH = '-Dpath-deltas='
+OPT_CONSIDERED_TEST_METHOD = '-Dpath-considered-test-method='
 
 def mvn_diff_jjoules_mark(
-    path_first_repository, path_first_version, 
-    path_second_repository, path_second_version,
-    output_path_file, deltas_json_path):
+    path_first_repository,
+    path_first_version, 
+    path_second_repository,
+    path_second_version,
+    output_path_file, 
+    deltas_json_path,
+    considered_test_method):
     return run_cmd(
         ' '.join([
             MVN_CMD_WITH_SKIPS_F,
             path_first_version + POM_FILE,
-            LOG_FILE_OPT,
-            output_path_file,
-            CLEAN_GOAL,
-            GOAL_DIFF_JJOULES_DIFF_JJOULES,
+            #LOG_FILE_OPT,
+            #output_path_file,
+            GOAL_DIFF_JJOULES_MARK,
             OPT_PATH_DIR_SECOND_VERSION + path_second_version,
             OPT_REPO_V1 + path_first_repository,
             OPT_REPO_V2 + path_second_repository,
             OPT_NO_REPORT,
             OPT_DELTAS_PATH + deltas_json_path,
+            OPT_CONSIDERED_TEST_METHOD + considered_test_method,
             OPT_MEASURE,
         ])
     )

@@ -24,7 +24,7 @@ def check_if_end_properly(diff_jjoules_directory_path):
     return True
 
 def get_id_commit_function(commit_path):
-    return int(commit_path.split('/')[4].split('_')[0])
+    return int(commit_path.split('/')[5].split('_')[0])
 
 def get_considered_commits_and_sort(root_folder):
     considered_commits = []

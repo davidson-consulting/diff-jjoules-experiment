@@ -41,6 +41,9 @@ def format(med, value):
 def format_int(med, value):
     return str(int(value)) + ' (' + compute_and_format_perc(med, value) + ')'
 
+def format_int_with_total(total, value):
+    return str(int(value)) +'/' + str(total) + ' (' + compute_and_format_perc(total, value) + ')'
+
 def stats(data_test):
     med = mediane(data_test)
     q1, q3 = quartiles(data_test)
