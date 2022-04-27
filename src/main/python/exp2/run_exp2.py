@@ -31,7 +31,7 @@ if __name__ == '__main__':
     
     selected_methods_to_mutate = read_json(args.input + '/' + project + '/selected_methods_to_mutate.json')
     mutation_intensities = read_json(args.input + '/' + project + '/mutation_intensities.json')
-    mutation_intensities = [str(int(mutation_intensities[key])) for key in ['min', 'med', 'max']]
+    mutation_intensities = [str(int(mutation_intensities[key])) for key in ['min', 'max']]
     
     for mutation_intensity in mutation_intensities:
         for class_name in selected_methods_to_mutate:
@@ -40,8 +40,8 @@ if __name__ == '__main__':
                 output_path = base_output_path + '/exp2/' + str(mutation_intensity) + '_' + class_name + '_' + method_name + '/'
                 delete_dir_and_mkdir(output_path)
 
-                git_reset_hard_folder(PATH_V1, commits[1])
-                git_reset_hard_folder(PATH_V2, commits[1])
+                git_reset_hard_folder(PATH_V1, commits[2])
+                git_reset_hard_folder(PATH_V2, commits[2])
 
                 path_module_v1 = PATH_V1 + '/' + module + '/'
                 path_module_v2 = PATH_V2 + '/' + module + '/'
