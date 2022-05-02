@@ -1,24 +1,22 @@
 {
-    "org.jsoup.helper.W3CDom": [
-        "convert"
+    "org.jsoup.nodes.Attributes": [
+        "removeIgnoreCase",
+        "html"
     ],
-    "org.jsoup.nodes.DocumentType": [
-        "systemId",
-        "publicId"
+    "org.jsoup.nodes.XmlDeclaration": [
+        "outerHtmlHead"
     ],
-    "org.jsoup.nodes.Node": [
-        "removeAttr"
+    "org.jsoup.nodes.Attribute": [
+        "html"
     ],
     "org.jsoup.helper.HttpConnection": [
-        "encodeMimeName"
+        "post"
     ],
     "org.jsoup.select.Elements": [
-        "prev",
-        "parents",
-        "next",
-        "clone"
-    ],
-    "org.jsoup.safety.Safelist": [
-        "removeTags"
+        "eq",
+        "empty",
+        "clone",
+        "before",
+        "after"
     ]
 }
