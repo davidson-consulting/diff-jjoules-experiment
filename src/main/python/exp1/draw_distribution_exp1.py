@@ -64,12 +64,14 @@ def draw_distribution(project, project_root_folder):
     '''
     kwargs = dict(hist_kws={'alpha':.6}, kde_kws={'linewidth':2})
 
-    plt.figure(figsize=(10,7), dpi= 80)
-    sns.distplot(cvs_energies, color="dodgerblue", label="SEC", **kwargs)
     sns.distplot(cvs_instr, color="orange", label="Instr", **kwargs)
     sns.distplot(cvs_cycles, color="deeppink", label="Cycles", **kwargs)
+    sns.distplot(cvs_energies, color="dodgerblue", label="SEC", **kwargs)
+    plt.xlim(-0.1, 1.1)
     plt.legend()
-    plt.show()
+    plt.title(project)
+    plt.tight_layout()
+    plt.savefig('pictures/exp1/dist_' + project + '.png', dpi='figure')
     plt.clf()
 
 if __name__ == '__main__':

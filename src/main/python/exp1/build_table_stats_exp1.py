@@ -82,12 +82,12 @@ def build_row_for_project(project, project_root_folder):
     to_be_printed = [
         project,
         str(len(commits)) + ('(' + compute_and_format_perc(len(commits), nb_applicable_commit) + ')'),
-        str(nb_test),
+        #str(nb_test),
         '{:.2f}'.format(mediane(energy_cvs)),
         '{:.2f}'.format(mediane(instr_cvs)),
         '{:.2f}'.format(mediane(cycles_cvs)),
-        format_int(nb_test, count_sec_gt_instr),
-        format_int(nb_test, count_sec_gt_cycles),
+        compute_and_format_perc(nb_test, count_sec_gt_instr),
+        compute_and_format_perc(nb_test, count_sec_gt_cycles),
         '{:.2f}'.format(corrcoef_instr[0][1]),
         '{:.2f}'.format(corrcoef_cycles[0][1])
     ]
@@ -101,14 +101,14 @@ if __name__ == '__main__':
         to_header_latex([
             'Project',
             '\#Commits',
-            '\#TestExec',
-            '$\\tilde{x}_{SEC}$',
-            '$\\tilde{x}_{instr}$',
-            '$\\tilde{x}_{SEC}$',
-            '\#$CV(SEC) > CV(instr)$',
-            '\#$CV(SEC) > CV(cycles)$',
-            '$\\rho_{instr}$',
-            '$\\rho_{cycles}$',
+            #'\#TestExec',
+            '$\\tilde{CV}_{E}$',
+            '$\\tilde{CV}_{I}$',
+            '$\\tilde{CV}_{C}$',
+            '\#$CV_E > CV_I$',
+            '\#$CV_E > CV_C$',
+            '$\\rho_{I}$',
+            '$\\rho_{C}$',
         ])
     )
 
