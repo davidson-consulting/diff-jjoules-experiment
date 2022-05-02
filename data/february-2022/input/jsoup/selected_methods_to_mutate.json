@@ -1,24 +1,24 @@
 {
-    "org.jsoup.nodes.Attributes": [
-        "html",
-        "dataset"
+    "org.jsoup.helper.W3CDom": [
+        "convert"
     ],
-    "org.jsoup.nodes.CDataNode": [
-        "outerHtmlTail",
-        "outerHtmlHead"
+    "org.jsoup.nodes.DocumentType": [
+        "systemId",
+        "publicId"
     ],
-    "org.jsoup.parser.XmlTreeBuilder": [
-        "newInstance"
+    "org.jsoup.nodes.Node": [
+        "removeAttr"
     ],
-    "org.jsoup.parser.Parser": [
-        "parseBodyFragment"
-    ],
-    "org.jsoup.nodes.DataNode": [
-        "outerHtmlHead"
+    "org.jsoup.helper.HttpConnection": [
+        "encodeMimeName"
     ],
     "org.jsoup.select.Elements": [
-        "prepend",
-        "append",
-        "before"
+        "prev",
+        "parents",
+        "next",
+        "clone"
+    ],
+    "org.jsoup.safety.Safelist": [
+        "removeTags"
     ]
 }
