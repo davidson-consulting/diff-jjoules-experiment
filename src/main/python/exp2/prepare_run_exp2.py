@@ -110,27 +110,28 @@ def to_full_qualified_name(class_name, method_name):
     return class_name + '#' + method_name
 
 def sorting_by_get_and_size(key, dict):
-    return len(dict[key])
+    return (dict[key], key)
     
 def select_method_to_mutate_from_indices(
     indices, 
     category, 
-    sorted_full_qualified_method_names, 
+    sorted_hit_full_qualified_method_names, 
     covered_classes, 
     tests_that_hit_a_method_by_name, 
     selected_methods_to_mutate, 
     nb_test_per_selected_methods, 
     category_per_selected_methods):
+    full_qualified_method_names = sorted_hit_full_qualified_method_names
     for index in indices:
-        class_name, method_name = from_full_qualified_name(sorted_full_qualified_method_names[index])
+        class_name, method_name = from_full_qualified_name(full_qualified_method_names[index])
         if method_name == '':
-            print(sorted_full_qualified_method_names[index])
+            print('error in select_method_to_mutate_from_indices', full_qualified_method_names[index])
         if not class_name in selected_methods_to_mutate:
             selected_methods_to_mutate[class_name] = []
             nb_test_per_selected_methods[class_name] = {}
             category_per_selected_methods[class_name] = {}
         selected_methods_to_mutate[class_name].append(method_name)
-        nb_test_per_selected_methods[class_name][method_name] = len(tests_that_hit_a_method_by_name[sorted_full_qualified_method_names[index]])
+        nb_test_per_selected_methods[class_name][method_name] = len(tests_that_hit_a_method_by_name[full_qualified_method_names[index]])
         category_per_selected_methods[class_name][method_name] = category
     return selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods
         
@@ -176,6 +177,7 @@ def select_methods_to_mutate(path_module_v1, base_output_path):
                 covered_classes.append(current_covered_class)
     coverage = read_json(path_module_v1 + 'clover_coverage.json')
     tests_that_hit_a_method_by_name = {}
+    hit_by_method_name = {}
     for test_class in coverage['testClassCoverage']:
         for test_method in coverage['testClassCoverage'][test_class]['testMethodsCoverage']:
             test_method_coverages = coverage['testClassCoverage'][test_class]['testMethodsCoverage'][test_method]['classCoverageList']
@@ -194,20 +196,23 @@ def select_methods_to_mutate(path_module_v1, base_output_path):
                     if covered_method.count == 0 or covered_method.count > 100:
                         continue
                     full_qualified_method_name = to_full_qualified_name(covered_class_name, method_name)
+                    hit_by_method_name[full_qualified_method_name] = covered_method.count
                     full_qualified_test_method_name = to_full_qualified_name(test_class, test_method)
                     if not full_qualified_method_name in tests_that_hit_a_method_by_name:
-                        tests_that_hit_a_method_by_name[full_qualified_method_name] = { full_qualified_test_method_name }
+                        tests_that_hit_a_method_by_name[full_qualified_method_name] = {full_qualified_test_method_name}
                     else:
                         tests_that_hit_a_method_by_name[full_qualified_method_name].add(full_qualified_test_method_name)
-    sorted_full_qualified_method_names = sorted(tests_that_hit_a_method_by_name, key=lambda k: sorting_by_get_and_size(k, tests_that_hit_a_method_by_name), reverse=True)
+    sorted_hit_full_qualified_method_names = sorted(hit_by_method_name, key=lambda k: sorting_by_get_and_size(k, hit_by_method_name), reverse=True)
+    for sorted_hit_full_qualified_method_name in sorted_hit_full_qualified_method_names:
+        print(sorted_hit_full_qualified_method_name, hit_by_method_name[sorted_hit_full_qualified_method_name])
     selected_methods_to_mutate = {}
     nb_test_per_selected_methods = {}
     category_per_selected_methods = {}
     #indices = get_max_indices(sorted_full_qualified_method_names) + get_average_indices(sorted_full_qualified_method_names) + get_min_indices(sorted_full_qualified_method_names)
     #indices = get_average_indices(sorted_full_qualified_method_names) + get_min_indices(sorted_full_qualified_method_names)
-    selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods = select_method_to_mutate_from_indices(get_max_indices(sorted_full_qualified_method_names), 'max',  sorted_full_qualified_method_names, covered_classes, tests_that_hit_a_method_by_name, selected_methods_to_mutate,  nb_test_per_selected_methods, category_per_selected_methods)
-    #selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods = select_method_to_mutate_from_indices(get_average_indices(sorted_full_qualified_method_names), 'med',  sorted_full_qualified_method_names, selected_methods_to_mutate,  nb_test_per_selected_methods, category_per_selected_methods)
-    selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods = select_method_to_mutate_from_indices(get_min_indices(sorted_full_qualified_method_names), 'min',  sorted_full_qualified_method_names, covered_classes, tests_that_hit_a_method_by_name, selected_methods_to_mutate,  nb_test_per_selected_methods, category_per_selected_methods)
+    #selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods = select_method_to_mutate_from_indices(get_max_indices(sorted_full_qualified_method_names), 'max',  sorted_full_qualified_method_names, covered_classes, tests_that_hit_a_method_by_name, selected_methods_to_mutate,  nb_test_per_selected_methods, category_per_selected_methods)
+    selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods = select_method_to_mutate_from_indices(get_average_indices(sorted_hit_full_qualified_method_names), 'med',  sorted_hit_full_qualified_method_names, covered_classes, tests_that_hit_a_method_by_name, selected_methods_to_mutate,  nb_test_per_selected_methods, category_per_selected_methods)
+    selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods = select_method_to_mutate_from_indices(get_min_indices(sorted_hit_full_qualified_method_names), 'min',  sorted_hit_full_qualified_method_names, covered_classes, tests_that_hit_a_method_by_name, selected_methods_to_mutate,  nb_test_per_selected_methods, category_per_selected_methods)
     write_json(base_output_path + '/selected_methods_to_mutate.json', selected_methods_to_mutate)
     write_json(base_output_path + '/nb_test_per_selected_methods.json', nb_test_per_selected_methods)
     write_json(base_output_path + '/category_selected_methods.json', category_per_selected_methods)
@@ -300,4 +305,4 @@ if __name__ == '__main__':
 
     select_methods_to_mutate(path_module_v1, args.input + '/' + args.project)
 
-    compute_mutation_intensities(base_output_path + '/exp1/', args.input + '/' + args.project)
+    #compute_mutation_intensities(base_output_path + '/exp1/', args.input + '/' + args.project)
