@@ -227,17 +227,7 @@ def compute_mutation_intensities(root_folder, output_path):
             diff_jjoules_directory = root_folder + '/' + commit_folder + '/diff-jjoules'
             end_properly = check_if_end_properly(diff_jjoules_directory)
             if end_properly:
-                considered_test_methods = read_json(diff_jjoules_directory + '/' + CONSIDERED_TEST_METHODS_JSON_FILE_NAME)
                 nb_ended_properly = nb_ended_properly + 1
-                if len(considered_test_methods) == 0:
-                    continue
-                deltas = read_json(diff_jjoules_directory + '/' + DELTA_FILE_NAME)
-                for test_class_name in considered_test_methods:
-                    for test_method_name in considered_test_methods[test_class_name]:
-                        current_delta = abs(deltas[test_class_name + '#' + test_method_name][ENERGY_KEY])
-                        if not current_delta == 0:
-                            consumption_delta.append(current_delta)
-                '''
                 data_V1 = read_json(diff_jjoules_directory + '/' + DATA_V1_JSON_FILE_NAME)
                 data_V2 = read_json(diff_jjoules_directory + '/' + DATA_V2_JSON_FILE_NAME)
                 for test in data_V1:
@@ -245,7 +235,6 @@ def compute_mutation_intensities(root_folder, output_path):
                         med_consumption_V1 = mediane([d[ENERGY_KEY] for d in data_V1[test]])
                         med_consumption_V2 = mediane([d[ENERGY_KEY] for d in data_V2[test]])
                         consumption_delta.append(abs(med_consumption_V2 - med_consumption_V1))
-                '''
         if nb_ended_properly >= 100:
             break
     nb_delta = len(consumption_delta)
@@ -255,7 +244,7 @@ def compute_mutation_intensities(root_folder, output_path):
     index_max = int(nb_delta * 0.90)
     mutation_intensities = {}
     mutation_intensities['max'] = consumption_delta[index_max] 
-    #mutation_intensities['med'] = consumption_delta[index_med]
+    mutation_intensities['med'] = consumption_delta[index_med]
     mutation_intensities['min'] = consumption_delta[index_min]
     write_json(output_path + '/mutation_intensities.json', mutation_intensities)
 
@@ -305,4 +294,4 @@ if __name__ == '__main__':
 
     select_methods_to_mutate(path_module_v1, args.input + '/' + args.project)
 
-    #compute_mutation_intensities(base_output_path + '/exp1/', args.input + '/' + args.project)
+    compute_mutation_intensities(base_output_path + '/exp1/', args.input + '/' + args.project)
