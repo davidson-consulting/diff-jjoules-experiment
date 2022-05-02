@@ -1,32 +1,30 @@
 {
-    "com.google.gson.stream.JsonWriter": {
-        "flush": "max"
+    "com.google.gson.TypeAdapter": {
+        "toJsonTree": "med"
     },
-    "com.google.gson.internal.bind.TypeAdapters": {
-        "write": "max"
+    "com.google.gson.stream.JsonReader": {
+        "skipToEndOfLine": "med"
     },
-    "com.google.gson.internal.UnsafeAllocator": {
-        "newInstance": "max"
+    "com.google.gson.reflect.TypeToken": {
+        "typeEquals": "med"
     },
-    "com.google.gson.internal.bind.ArrayTypeAdapter": {
-        "read": "max"
-    },
-    "com.google.gson.JsonObject": {
-        "remove": "max"
+    "com.google.gson.internal.bind.JsonTreeWriter": {
+        "nullValue": "med"
     },
     "com.google.gson.internal.Excluder": {
-        "disableInnerClassSerialization": "min"
+        "excludeFieldsWithoutExposeAnnotation": "med"
+    },
+    "com.google.gson.GsonBuilder": {
+        "excludeFieldsWithModifiers": "min"
+    },
+    "com.google.gson.stream.JsonWriter": {
+        "jsonValue": "min",
+        "flush": "min"
+    },
+    "com.google.gson.internal.sql.SqlTypesSupport": {
+        "deserialize": "min"
     },
     "com.google.gson.internal.bind.util.ISO8601Utils": {
         "format": "min"
-    },
-    "com.google.gson.JsonArray": {
-        "remove": "min"
-    },
-    "com.google.gson.JsonStreamParser": {
-        "next": "min"
-    },
-    "com.google.gson.stream.JsonReader": {
-        "nextLong": "min"
     }
 }

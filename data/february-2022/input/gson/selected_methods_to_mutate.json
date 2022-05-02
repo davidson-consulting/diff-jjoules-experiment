@@ -1,32 +1,30 @@
 {
-    "com.google.gson.stream.JsonWriter": [
-        "flush"
+    "com.google.gson.TypeAdapter": [
+        "toJsonTree"
     ],
-    "com.google.gson.internal.bind.TypeAdapters": [
-        "write"
+    "com.google.gson.stream.JsonReader": [
+        "skipToEndOfLine"
     ],
-    "com.google.gson.internal.UnsafeAllocator": [
-        "newInstance"
+    "com.google.gson.reflect.TypeToken": [
+        "typeEquals"
     ],
-    "com.google.gson.internal.bind.ArrayTypeAdapter": [
-        "read"
-    ],
-    "com.google.gson.JsonObject": [
-        "remove"
+    "com.google.gson.internal.bind.JsonTreeWriter": [
+        "nullValue"
     ],
     "com.google.gson.internal.Excluder": [
-        "disableInnerClassSerialization"
+        "excludeFieldsWithoutExposeAnnotation"
+    ],
+    "com.google.gson.GsonBuilder": [
+        "excludeFieldsWithModifiers"
+    ],
+    "com.google.gson.stream.JsonWriter": [
+        "jsonValue",
+        "flush"
+    ],
+    "com.google.gson.internal.sql.SqlTypesSupport": [
+        "deserialize"
     ],
     "com.google.gson.internal.bind.util.ISO8601Utils": [
         "format"
-    ],
-    "com.google.gson.JsonArray": [
-        "remove"
-    ],
-    "com.google.gson.JsonStreamParser": [
-        "next"
-    ],
-    "com.google.gson.stream.JsonReader": [
-        "nextLong"
     ]
 }
