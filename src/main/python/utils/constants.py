@@ -48,3 +48,8 @@ PROJECTS = [
     'commons-lang',
     'mustache.java'
 ]
+
+
+TEST_FILTERS = ['ALL', 'EMPTY_INTERSECTION', 'STUDENTS_T_TEST']
+MARK_STRATEGIES = ['STRICT', 'AGGREGATE', 'CODE_COVERAGE', 'DIFF_COVERAGE']
+COHEN_S_DS = ['0.20', '0.50', '0.80', '1.20']

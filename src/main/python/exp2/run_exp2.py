@@ -31,7 +31,7 @@ if __name__ == '__main__':
     
     selected_methods_to_mutate = read_json(args.input + '/' + project + '/selected_methods_to_mutate.json')
     mutation_intensities = read_json(args.input + '/' + project + '/mutation_intensities.json')
-    mutation_intensities = [str(int(mutation_intensities[key])) for key in ['min', 'max']]
+    mutation_intensities = [str(int(mutation_intensities[key])) for key in ['zero', 'min', 'med', 'max']]
     
     for mutation_intensity in mutation_intensities:
         for class_name in selected_methods_to_mutate:
@@ -56,16 +56,16 @@ if __name__ == '__main__':
                 current_selected_methods_to_mutate[class_name] = [method_name]
                 write_json(path_module_v2 +  '/selected_methods_to_mutate.json', current_selected_methods_to_mutate)
 
-                mvn_diff_jjoules_mutate(path_module_v2, 'selected_methods_to_mutate.json', mutation_intensity)
+                mvn_diff_jjoules_mutate(path_module_v2, 'selected_methods_to_mutate.json', mutation_intensity)            
                 git_commit(path_module_v2)
 
-                mvn_diff_jjoules_with_mark_no_suspect(
+                mvn_diff_jjoules_no_mark(
                     PATH_V1,
                     path_module_v1,
                     PATH_V2,
                     path_module_v2,
                     path_module_v1 + 'logs',
-                    must_use_date_format,
+                    must_use_date_format
                 )
 
                 for file in FILES_TO_COPY:

@@ -232,8 +232,8 @@ def compute_mutation_intensities(root_folder, output_path):
                 data_V2 = read_json(diff_jjoules_directory + '/' + DATA_V2_JSON_FILE_NAME)
                 for test in data_V1:
                     if test in  data_V2:
-                        med_consumption_V1 = mediane([d[ENERGY_KEY] for d in data_V1[test]])
-                        med_consumption_V2 = mediane([d[ENERGY_KEY] for d in data_V2[test]])
+                        med_consumption_V1 = mediane([d[CYCLES_KEY] for d in data_V1[test]])
+                        med_consumption_V2 = mediane([d[CYCLES_KEY] for d in data_V2[test]])
                         consumption_delta.append(abs(med_consumption_V2 - med_consumption_V1))
         if nb_ended_properly >= 100:
             break
@@ -243,6 +243,7 @@ def compute_mutation_intensities(root_folder, output_path):
     index_med = int(nb_delta / 2)
     index_max = int(nb_delta * 0.90)
     mutation_intensities = {}
+    mutation_intensities['zero'] = 0
     mutation_intensities['max'] = consumption_delta[index_max] 
     mutation_intensities['med'] = consumption_delta[index_med]
     mutation_intensities['min'] = consumption_delta[index_min]

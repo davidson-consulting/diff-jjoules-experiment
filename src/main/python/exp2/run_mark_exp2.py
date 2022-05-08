@@ -36,14 +36,8 @@ if __name__ == '__main__':
     print(begin, end)
     
     files_to_copy = [
-        'coverage_first.json',
-        'coverage_second.json',
-        'deltaOmega.json',
-        'exec_additions.json',
-        'exec_deletions.json',
-        'omega.json',
-        'Omega.json',
-        'theta.json'
+       'consideredTestMethods.json',
+       'decision'
     ]
     
     properly_ended = []
@@ -59,25 +53,19 @@ if __name__ == '__main__':
         current = str(i) + '_' + reduce_sha(commit_v1) + '_' + reduce_sha(commit_v2)
         print('trying', current)
         
-        output_path = base_output_path + '/exp1/' +  str(i) + '_' + reduce_sha(commit_v1) + '_' + reduce_sha(commit_v2) + '/' 
+        exp1_output_path = base_output_path + '/exp1/' +  str(i) + '_' + reduce_sha(commit_v1) + '_' + reduce_sha(commit_v2) + '/' 
 
-        diff_jjoules_directory = output_path + '/diff-jjoules'
+        diff_jjoules_directory = exp1_output_path + '/diff-jjoules'
         end_properly = check_if_end_properly(diff_jjoules_directory)
         if not end_properly:
             continue            
         properly_ended.append(current)
-        considered_test_method_path = '/'.join([output_path, 'diff-jjoules', 'consideredTestMethods.json'])
-        if not isfile('/'.join([output_path, 'diff-jjoules', 'consideredTestMethods.json'])):
-            print('skipping', current)
-            continue
-        considered_test_method = read_json(considered_test_method_path)
-        if len(considered_test_method) == 0:
-            print('skipping', current)
-            continue
-
+       
         print('running', current)
         
-        deltas_json_path = '/'.join([output_path, 'diff-jjoules', 'deltas.json'])
+        deltas_json_path = '/'.join([exp1_output_path, 'diff-jjoules', 'deltas.json'])
+        data_v1_json_path = '/'.join([exp1_output_path, 'diff-jjoules', 'data_v1.json'])
+        data_v2_json_path = '/'.join([exp1_output_path, 'diff-jjoules', 'data_v2.json'])
 
         git_reset_hard_folder(PATH_V1, commit_v1)
         git_reset_hard_folder(PATH_V2, commit_v2)
@@ -97,7 +85,7 @@ if __name__ == '__main__':
         
         mvn_install_skip_test_build_classpath(path_module_v1, must_use_date_format)
         mvn_install_skip_test_build_classpath(path_module_v2, must_use_date_format)
-    
+
         mvn_diff_jjoules_mark(
             PATH_V1,
             path_module_v1,
@@ -105,13 +93,52 @@ if __name__ == '__main__':
             path_module_v2,
             path_module_v1 + 'logs',
             deltas_json_path,
-            considered_test_method_path
+            data_v1_json_path,
+            data_v2_json_path,
+            'ALL',
+            'CODE_COVERAGE',
+            '0.8'
         )
-        for file in files_to_copy:
-            copy(
-                '/'.join([path_module_v1, 'diff-jjoules', file]),
-                '/'.join([output_path, 'diff-jjoules', file])
-            )
-        delete_directory(path_module_v1 + 'diff-jjoules')
         
+        copy(
+            '/'.join([path_module_v1, 'diff-jjoules', 'coverage_v1.json']),
+            '/'.join([path_module_v1, 'coverage_v1.json'])
+        )
         
+        copy(
+            '/'.join([path_module_v1, 'diff-jjoules', 'coverage_v2.json']),
+            '/'.join([path_module_v1, 'coverage_v2.json'])
+        )
+        
+        exp2_output_path = base_output_path + '/exp2/' +  str(i) + '_' + reduce_sha(commit_v1) + '_' + reduce_sha(commit_v2) + '/'
+        delete_dir_and_mkdir(exp2_output_path)
+        
+        for test_filter in TEST_FILTERS:
+            for mark_strategy in MARK_STRATEGIES:
+                inner_loop_values = COHEN_S_DS if test_filter == 'STUDENTS_T_TEST' else ['0.8']
+                for cohen_s_d in inner_loop_values:
+                    current_output_path = exp2_output_path + '_'.join([test_filter, mark_strategy]) + ('_' + cohen_s_d if test_filter == 'STUDENTS_T_TEST' else '')
+                    delete_dir_and_mkdir(current_output_path)
+                    mvn_diff_jjoules_mark(
+                        PATH_V1,
+                        path_module_v1,
+                        PATH_V2,
+                        path_module_v2,
+                        path_module_v1 + 'logs',
+                        deltas_json_path,
+                        data_v1_json_path,
+                        data_v2_json_path,
+                        test_filter,
+                        mark_strategy,
+                        cohen_s_d,
+                        '/'.join([path_module_v1, 'coverage_v1.json']),
+                        '/'.join([path_module_v1, 'coverage_v2.json'])
+                    )
+                    for file in files_to_copy:
+                        copy(
+                            '/'.join([path_module_v1, 'diff-jjoules', file]),
+                            '/'.join([current_output_path, file])
+                        )
+                    delete_directory(path_module_v1 + 'diff-jjoules')
+        
+        input()
