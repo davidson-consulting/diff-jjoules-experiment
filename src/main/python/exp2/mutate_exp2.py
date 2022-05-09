@@ -33,6 +33,9 @@ if __name__ == '__main__':
     mutation_intensities = read_json(args.input + '/' + project + '/mutation_intensities.json')
     mutation_intensities = [str(int(mutation_intensities[key])) for key in ['zero', 'min', 'med', 'max']]
     
+    
+    mkdir(args.input + '/' + project + '/mutations/exp2')
+    
     for mutation_intensity in mutation_intensities:
         for class_name in selected_methods_to_mutate:
             for method_name in selected_methods_to_mutate[class_name]:
@@ -51,43 +54,20 @@ if __name__ == '__main__':
 
                 mvn_install_skip_test_build_classpath(path_module_v1, must_use_date_format)
                 mvn_install_skip_test_build_classpath(path_module_v2, must_use_date_format)
-                
-                path_mutated_java_file = args.input + '/' + project + '/mutations/exp2/' +  str(mutation_intensity) + '_' + class_name + '_' + method_name
-                package_path_name = '/'.join(class_name.split('.')[:-1])
-                simple_class_name = class_name.split('.')[-1]
-                path_dst_mutated_java_file = path_module_v2+ '/src/main/java/' + package_path_name + '/' + simple_class_name + '.java'
-                print('copy', path_mutated_java_file, 'to', path_dst_mutated_java_file)
-                input()
-                copy(
-                    path_mutated_java_file,
-                    path_dst_mutated_java_file
-                )
-                copy(
-                    args.input + '/' + project + '/pom.xml',
-                    path_module_v2 + '/pom.xml'
-                )
-                input()
-                git_commit(path_module_v2)
 
-                mvn_diff_jjoules_no_mark(
-                    PATH_V1,
-                    path_module_v1,
-                    PATH_V2,
-                    path_module_v2,
-                    path_module_v1 + 'logs',
-                    must_use_date_format
-                )
+                current_selected_methods_to_mutate = {}
+                current_selected_methods_to_mutate[class_name] = [method_name]
+                write_json(path_module_v2 +  '/selected_methods_to_mutate.json', current_selected_methods_to_mutate)
 
-                for file in FILES_TO_COPY:
-                    copy(
-                        path_module_v1 + file,
-                        output_path + file
-                    )
-                    delete_file(path_module_v1 + file)
+                mvn_diff_jjoules_mutate(path_module_v2, 'selected_methods_to_mutate.json', mutation_intensity)            
                 
-                for dir in DIRECTORIES_TO_COPY:
-                    copy_directory(
-                        path_module_v1 + dir,
-                        output_path + dir
-                    )
-                    delete_directory(path_module_v1 + dir)
+                mutated_path_name = '/src/main/java/' + class_name.replace('.', '/') + '.java'
+                
+                copy(
+                    path_module_v2 + mutated_path_name,
+                    args.input + '/' + project + '/mutations/exp2/' +  str(mutation_intensity) + '_' + class_name + '_' + method_name
+                )
+                copy(
+                    path_module_v2 + '/pom.xml',
+                    args.input + '/' + project + '/pom.xml'
+                )
