@@ -1,22 +1,22 @@
 {
-    "org.jsoup.nodes.Attributes": [
-        "removeIgnoreCase",
-        "html"
+    "org.jsoup.nodes.DocumentType": [
+        "name",
+        "systemId",
+        "publicId"
     ],
-    "org.jsoup.nodes.XmlDeclaration": [
-        "outerHtmlHead"
-    ],
-    "org.jsoup.nodes.Attribute": [
-        "html"
+    "org.jsoup.helper.W3CDom": [
+        "convert"
     ],
     "org.jsoup.helper.HttpConnection": [
-        "post"
+        "encodeMimeName"
     ],
     "org.jsoup.select.Elements": [
-        "eq",
-        "empty",
-        "clone",
-        "before",
-        "after"
+        "parents",
+        "next"
+    ],
+    "org.jsoup.safety.Safelist": [
+        "removeTags",
+        "removeEnforcedAttribute",
+        "removeAttributes"
     ]
 }

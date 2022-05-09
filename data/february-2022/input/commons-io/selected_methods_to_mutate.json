@@ -1,22 +1,28 @@
 {
-    "org.apache.commons.io.input.TaggedReader": [
-        "handleIOException"
+    "org.apache.commons.io.file.PathUtils": [
+        "deleteFile"
     ],
-    "org.apache.commons.io.output.UncheckedFilterOutputStream": [
-        "uncheck"
+    "org.apache.commons.io.IOUtils": [
+        "consume"
     ],
-    "org.apache.commons.io.function.IOFunction": [
-        "andThen"
+    "org.apache.commons.io.HexDump": [
+        "dump"
     ],
-    "org.apache.commons.io.filefilter.FileFilterUtils": [
-        "notFileFilter",
-        "filterSet",
-        "fileFileFilter",
-        "asFileFilter",
-        "directoryFileFilter"
+    "org.apache.commons.io.Charsets": [
+        "requiredCharsets"
+    ],
+    "org.apache.commons.io.output.ProxyCollectionWriter": [
+        "write"
+    ],
+    "org.apache.commons.io.input.buffer.CircularBufferInputStream": [
+        "close"
+    ],
+    "org.apache.commons.io.input.UnsynchronizedByteArrayInputStream": [
+        "mark"
     ],
     "org.apache.commons.io.input.SwappedDataInputStream": [
-        "readUTF",
-        "readShort"
+        "readUnsignedShort",
+        "readUnsignedByte",
+        "readUTF"
     ]
 }

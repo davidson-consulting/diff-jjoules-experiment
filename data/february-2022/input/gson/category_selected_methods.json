@@ -1,7 +1,4 @@
 {
-    "com.google.gson.TypeAdapter": {
-        "toJsonTree": "med"
-    },
     "com.google.gson.stream.JsonReader": {
         "skipToEndOfLine": "med"
     },
@@ -14,8 +11,10 @@
     "com.google.gson.internal.Excluder": {
         "excludeFieldsWithoutExposeAnnotation": "med"
     },
+    "com.google.gson.JsonStreamParser": {
+        "next": "med"
+    },
     "com.google.gson.GsonBuilder": {
-        "registerTypeAdapterFactory": "min",
         "excludeFieldsWithModifiers": "min"
     },
     "com.google.gson.stream.JsonWriter": {
@@ -24,5 +23,8 @@
     },
     "com.google.gson.internal.sql.SqlTypesSupport": {
         "deserialize": "min"
+    },
+    "com.google.gson.internal.bind.util.ISO8601Utils": {
+        "format": "min"
     }
 }

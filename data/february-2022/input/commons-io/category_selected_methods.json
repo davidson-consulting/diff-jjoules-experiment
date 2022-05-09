@@ -1,0 +1,28 @@
+{
+    "org.apache.commons.io.file.PathUtils": {
+        "deleteFile": "med"
+    },
+    "org.apache.commons.io.IOUtils": {
+        "consume": "med"
+    },
+    "org.apache.commons.io.HexDump": {
+        "dump": "med"
+    },
+    "org.apache.commons.io.Charsets": {
+        "requiredCharsets": "med"
+    },
+    "org.apache.commons.io.output.ProxyCollectionWriter": {
+        "write": "med"
+    },
+    "org.apache.commons.io.input.buffer.CircularBufferInputStream": {
+        "close": "min"
+    },
+    "org.apache.commons.io.input.UnsynchronizedByteArrayInputStream": {
+        "mark": "min"
+    },
+    "org.apache.commons.io.input.SwappedDataInputStream": {
+        "readUnsignedShort": "min",
+        "readUnsignedByte": "min",
+        "readUTF": "min"
+    }
+}
