@@ -504,6 +504,7 @@ public class Elements extends ArrayList<Element> {
      * @return next element siblings.
      */
     public Elements next() {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(45936, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         return siblings(null, true, false);
     }
 
@@ -513,6 +514,7 @@ public class Elements extends ArrayList<Element> {
      * @return next element siblings.
      */
     public Elements next(String query) {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(45936, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         return siblings(query, true, false);
     }
 
@@ -601,7 +603,7 @@ public class Elements extends ArrayList<Element> {
      Get the first matched element.
      @return The first matched element, or <code>null</code> if contents is empty.
      */
-    public @Nullable Element first() {
+     @Nullablepublic Element first() {
         return isEmpty() ? null : get(0);
     }
 
@@ -609,7 +611,7 @@ public class Elements extends ArrayList<Element> {
      Get the last matched element.
      @return The last matched element, or <code>null</code> if contents is empty.
      */
-    public @Nullable Element last() {
+     @Nullablepublic Element last() {
         return isEmpty() ? null : get(size() - 1);
     }
 

@@ -232,6 +232,7 @@ public class Safelist {
      @return this (for chaining)
      */
     public Safelist removeTags(String... tags) {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(396, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         Validate.notNull(tags);
 
         for(String tag: tags) {

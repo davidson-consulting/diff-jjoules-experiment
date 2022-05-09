@@ -589,6 +589,7 @@ public class Elements extends ArrayList<Element> {
      * @return all of the parents and ancestor elements of the matched elements
      */
     public Elements parents() {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(396, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         HashSet<Element> combo = new LinkedHashSet<>();
         for (Element e: this) {
             combo.addAll(e.parents());
@@ -601,7 +602,7 @@ public class Elements extends ArrayList<Element> {
      Get the first matched element.
      @return The first matched element, or <code>null</code> if contents is empty.
      */
-    public @Nullable Element first() {
+     @Nullablepublic Element first() {
         return isEmpty() ? null : get(0);
     }
 
@@ -609,7 +610,7 @@ public class Elements extends ArrayList<Element> {
      Get the last matched element.
      @return The last matched element, or <code>null</code> if contents is empty.
      */
-    public @Nullable Element last() {
+     @Nullablepublic Element last() {
         return isEmpty() ? null : get(size() - 1);
     }
 

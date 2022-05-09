@@ -40,7 +40,6 @@ import java.util.Properties;
 import java.util.Stack;
 
 import static javax.xml.transform.OutputKeys.METHOD;
-import static org.jsoup.nodes.Document.OutputSettings.Syntax;
 
 /**
  * Helper class to transform a {@link org.jsoup.nodes.Document} to a {@link org.w3c.dom.Document org.w3c.dom.Document},
@@ -73,6 +72,7 @@ public class W3CDom {
      * @return W3C Document
      */
     public static Document convert(org.jsoup.nodes.Document in) {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(45936, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         return (new W3CDom().fromJsoup(in));
     }
 
@@ -207,6 +207,7 @@ public class W3CDom {
      * @see org.jsoup.helper.W3CDom#fromJsoup(org.jsoup.nodes.Element)
      */
     public void convert(org.jsoup.nodes.Document in, Document out) {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(45936, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         // just provides method API backcompat
         convert((org.jsoup.nodes.Element) in, out);
     }
@@ -220,6 +221,7 @@ public class W3CDom {
      * @see org.jsoup.helper.W3CDom#fromJsoup(org.jsoup.nodes.Element)
      */
     public void convert(org.jsoup.nodes.Element in, Document out) {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(45936, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         W3CBuilder builder = new W3CBuilder(out);
         org.jsoup.nodes.Document inDoc = in.ownerDocument();
         if (inDoc != null) {

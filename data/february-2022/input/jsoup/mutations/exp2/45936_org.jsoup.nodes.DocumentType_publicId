@@ -60,6 +60,7 @@ public class DocumentType extends LeafNode {
      * @return doctype Public ID
      */
     public String publicId() {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(45936, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         return attr(PUBLIC_ID);
     }
 

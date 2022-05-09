@@ -299,6 +299,7 @@ public class Safelist {
      @return this (for chaining)
      */
     public Safelist removeAttributes(String tag, String... attributes) {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(45936, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         Validate.notEmpty(tag);
         Validate.notNull(attributes);
         Validate.isTrue(attributes.length > 0, "No attribute names supplied.");
@@ -619,7 +620,7 @@ public class Safelist {
         }
     }
 
-    abstract static class TypedValue {
+    abstractabstract static class TypedValue {
         private String value;
 
         TypedValue(String value) {
