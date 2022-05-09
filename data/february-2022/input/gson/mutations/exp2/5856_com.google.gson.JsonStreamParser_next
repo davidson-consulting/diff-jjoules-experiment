@@ -82,6 +82,7 @@ public final class JsonStreamParser implements Iterator<JsonElement> {
    * @since 1.4
    */
   public JsonElement next() throws JsonParseException {
+    fr.davidson.tlpc.sensor.TLPCSensor.consume(5856, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
     if (!hasNext()) {
       throw new NoSuchElementException();
     }

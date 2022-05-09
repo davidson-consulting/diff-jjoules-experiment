@@ -153,6 +153,7 @@ public final class JsonTreeWriter extends JsonWriter {
   }
 
   @Override public JsonWriter nullValue() throws IOException {
+    fr.davidson.tlpc.sensor.TLPCSensor.consume(0, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
     put(JsonNull.INSTANCE);
     return this;
   }

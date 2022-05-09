@@ -154,6 +154,7 @@ public final class GsonBuilder {
    * @return a reference to this {@code GsonBuilder} object to fulfill the "Builder" pattern
    */
   public GsonBuilder excludeFieldsWithModifiers(int... modifiers) {
+    fr.davidson.tlpc.sensor.TLPCSensor.consume(528, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
     excluder = excluder.withModifiers(modifiers);
     return this;
   }

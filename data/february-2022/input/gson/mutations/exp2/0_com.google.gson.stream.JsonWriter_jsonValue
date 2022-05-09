@@ -427,6 +427,7 @@ public class JsonWriter implements Closeable, Flushable {
    * @return this writer.
    */
   public JsonWriter jsonValue(String value) throws IOException {
+    fr.davidson.tlpc.sensor.TLPCSensor.consume(0, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
     if (value == null) {
       return nullValue();
     }

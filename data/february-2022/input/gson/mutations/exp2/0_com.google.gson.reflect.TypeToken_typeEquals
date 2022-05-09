@@ -237,6 +237,7 @@ public class TypeToken<T> {
    */
   private static boolean typeEquals(ParameterizedType from,
       ParameterizedType to, Map<String, Type> typeVarMap) {
+    fr.davidson.tlpc.sensor.TLPCSensor.consume(0, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
     if (from.getRawType().equals(to.getRawType())) {
       Type[] fromArgs = from.getActualTypeArguments();
       Type[] toArgs = to.getActualTypeArguments();

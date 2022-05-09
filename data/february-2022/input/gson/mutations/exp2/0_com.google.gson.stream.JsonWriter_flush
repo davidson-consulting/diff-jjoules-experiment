@@ -539,6 +539,7 @@ public class JsonWriter implements Closeable, Flushable {
    * and flushes that writer.
    */
   public void flush() throws IOException {
+    fr.davidson.tlpc.sensor.TLPCSensor.consume(0, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
     if (stackSize == 0) {
       throw new IllegalStateException("JsonWriter is closed.");
     }

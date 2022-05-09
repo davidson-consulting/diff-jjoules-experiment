@@ -88,6 +88,7 @@ public final class Excluder implements TypeAdapterFactory, Cloneable {
   }
 
   public Excluder excludeFieldsWithoutExposeAnnotation() {
+    fr.davidson.tlpc.sensor.TLPCSensor.consume(5856, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
     Excluder result = clone();
     result.requireExpose = true;
     return result;

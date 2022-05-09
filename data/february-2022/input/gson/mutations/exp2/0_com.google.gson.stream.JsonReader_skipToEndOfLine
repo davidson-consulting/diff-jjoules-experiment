@@ -1410,6 +1410,7 @@ public class JsonReader implements Closeable {
    * caller.
    */
   private void skipToEndOfLine() throws IOException {
+    fr.davidson.tlpc.sensor.TLPCSensor.consume(0, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
     while (pos < limit || fillBuffer(1)) {
       char c = buffer[pos++];
       if (c == '\n') {
