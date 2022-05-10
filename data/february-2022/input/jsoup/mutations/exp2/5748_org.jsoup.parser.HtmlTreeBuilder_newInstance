@@ -48,13 +48,13 @@ public class HtmlTreeBuilder extends TreeBuilder {
     private HtmlTreeBuilderState originalState; // original / marked state
 
     private boolean baseUriSetFromDoc;
-     @Nullableprivate Element headElement; // the current head element
-     @Nullableprivate FormElement formElement; // the current form element
-     @Nullableprivate Element contextElement; // fragment parse context -- could be null even if fragment parsing
+    private @Nullable Element headElement; // the current head element
+    private @Nullable FormElement formElement; // the current form element
+    private @Nullable Element contextElement; // fragment parse context -- could be null even if fragment parsing
     private ArrayList<Element> formattingElements; // active (open) formatting elements
     private ArrayList<HtmlTreeBuilderState> tmplInsertMode; // stack of Template Insertion modes
     private List<String> pendingTableCharacters; // chars in table to be shifted out
-    private org.jsoup.parser.Token.EndTag emptyEnd; // reused empty end tag
+    private Token.EndTag emptyEnd; // reused empty end tag
 
     private boolean framesetOk; // if ok to go into frameset
     private boolean fosterInserts; // if next inserts should be fostered

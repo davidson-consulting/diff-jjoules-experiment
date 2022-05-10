@@ -602,7 +602,7 @@ public class Elements extends ArrayList<Element> {
      Get the first matched element.
      @return The first matched element, or <code>null</code> if contents is empty.
      */
-     @Nullablepublic Element first() {
+     public @Nullable Element first() {
         return isEmpty() ? null : get(0);
     }
 
@@ -610,7 +610,7 @@ public class Elements extends ArrayList<Element> {
      Get the last matched element.
      @return The last matched element, or <code>null</code> if contents is empty.
      */
-     @Nullablepublic Element last() {
+     public @Nullable Element last() {
         return isEmpty() ? null : get(size() - 1);
     }
 

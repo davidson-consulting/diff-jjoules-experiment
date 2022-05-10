@@ -115,8 +115,8 @@ public class W3CDom {
                     transformer.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, doctype.getSystemId());
                     // handle <!doctype html> for legacy dom. TODO: nicer if <!doctype html>
                 else if (doctype.getName().equalsIgnoreCase("html")
-                    && StringUtil.isBlank(doctype.getPublicId())
-                    && StringUtil.isBlank(doctype.getSystemId()))
+                        && StringUtil.isBlank(doctype.getPublicId())
+                        && StringUtil.isBlank(doctype.getSystemId()))
                     transformer.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, "about:legacy-compat");
             }
 
@@ -259,8 +259,8 @@ public class W3CDom {
             // if there is a configured XPath factory, use that instead of the Java base impl:
             String property = System.getProperty(XPathFactoryProperty);
             final XPathFactory xPathFactory = property != null ?
-                XPathFactory.newInstance("jsoup") :
-                XPathFactory.newInstance();
+                    XPathFactory.newInstance("jsoup") :
+                    XPathFactory.newInstance();
 
             XPathExpression expression = xPathFactory.newXPath().compile(xpath);
             nodeList = (NodeList) expression.evaluate(contextNode, XPathConstants.NODESET); // love the strong typing here /s
@@ -323,7 +323,7 @@ public class W3CDom {
         private final Document doc;
         private final Stack<HashMap<String, String>> namespacesStack = new Stack<>(); // stack of namespaces, prefix => urn
         private Node dest;
-        private Syntax syntax = Syntax.xml; // the syntax (to coerce attributes to). From the input doc if available.
+        private org.jsoup.nodes.Document.OutputSettings.Syntax syntax = org.jsoup.nodes.Document.OutputSettings.Syntax.xml; // the syntax (to coerce attributes to). From the input doc if available.
         @Nullable private final org.jsoup.nodes.Element contextElement;
 
         public W3CBuilder(Document doc) {
@@ -348,8 +348,8 @@ public class W3CDom {
                 how browsers handle the situation, also. https://github.com/jhy/jsoup/issues/1093 */
                 try {
                     Element el = namespace == null && tagName.contains(":") ?
-                        doc.createElementNS("", tagName) : // doesn't have a real namespace defined
-                        doc.createElementNS(namespace, tagName);
+                            doc.createElementNS("", tagName) : // doesn't have a real namespace defined
+                            doc.createElementNS(namespace, tagName);
                     copyAttributes(sourceEl, el);
                     append(el, sourceEl);
                     if (sourceEl == contextElement)
