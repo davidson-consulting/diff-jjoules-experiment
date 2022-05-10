@@ -1,28 +1,28 @@
 {
-    "org.apache.commons.io.output.ProxyOutputStream": [
-        "close"
-    ],
-    "org.apache.commons.io.output.LockableFileWriter": [
-        "testLockDir",
-        "createLock"
-    ],
     "org.apache.commons.io.output.BrokenWriter": [
         "flush"
     ],
     "org.apache.commons.io.input.BrokenInputStream": [
         "close"
     ],
-    "org.apache.commons.io.output.NullAppendable": [
-        "append"
+    "org.apache.commons.io.input.AutoCloseInputStream": [
+        "close"
     ],
-    "org.apache.commons.io.output.AppendableWriter": [
-        "write",
-        "append"
+    "org.apache.commons.io.file.spi.FileSystemProviders": [
+        "installed"
+    ],
+    "org.apache.commons.io.file.PathUtils": [
+        "deleteFile"
     ],
     "org.apache.commons.io.input.buffer.CircularBufferInputStream": [
         "close"
     ],
     "org.apache.commons.io.input.UnsynchronizedByteArrayInputStream": [
         "mark"
+    ],
+    "org.apache.commons.io.input.SwappedDataInputStream": [
+        "readUnsignedShort",
+        "readUnsignedByte",
+        "readUTF"
     ]
 }

@@ -1,28 +1,28 @@
 {
-    "org.apache.commons.io.output.ProxyOutputStream": {
-        "close": 71
-    },
-    "org.apache.commons.io.output.LockableFileWriter": {
-        "testLockDir": 3,
-        "createLock": 3
-    },
     "org.apache.commons.io.output.BrokenWriter": {
         "flush": 10
     },
     "org.apache.commons.io.input.BrokenInputStream": {
         "close": 2
     },
-    "org.apache.commons.io.output.NullAppendable": {
-        "append": 1
+    "org.apache.commons.io.input.AutoCloseInputStream": {
+        "close": 5
     },
-    "org.apache.commons.io.output.AppendableWriter": {
-        "write": 6,
-        "append": 3
+    "org.apache.commons.io.file.spi.FileSystemProviders": {
+        "installed": 1
+    },
+    "org.apache.commons.io.file.PathUtils": {
+        "deleteFile": 18
     },
     "org.apache.commons.io.input.buffer.CircularBufferInputStream": {
         "close": 2
     },
     "org.apache.commons.io.input.UnsynchronizedByteArrayInputStream": {
         "mark": 6
+    },
+    "org.apache.commons.io.input.SwappedDataInputStream": {
+        "readUnsignedShort": 1,
+        "readUnsignedByte": 2,
+        "readUTF": 1
     }
 }
