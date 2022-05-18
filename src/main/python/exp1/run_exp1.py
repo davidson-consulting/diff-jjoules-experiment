@@ -61,6 +61,9 @@ if __name__ == '__main__':
             
         delete_module_info_java(path_module_v1)
         delete_module_info_java(path_module_v2)
+        
+        mvn_install_skip_test_build_classpath(PATH_V1, must_use_date_format)
+        mvn_install_skip_test_build_classpath(PATH_V2, must_use_date_format)
 
         mvn_install_skip_test_build_classpath(path_module_v1, must_use_date_format)
         mvn_install_skip_test_build_classpath(path_module_v2, must_use_date_format)
