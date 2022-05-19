@@ -1,22 +1,32 @@
 {
-    "org.apache.commons.lang3.mutable.MutableInt": {
-        "compareTo": "med",
-        "decrement": "min"
+    "org.apache.commons.lang3.text.StrSubstitutor": {
+        "replace": "med"
     },
-    "org.apache.commons.lang3.mutable.MutableFloat": {
-        "compareTo": "med",
-        "subtract": "min",
-        "increment": "min",
-        "doubleValue": "min",
-        "decrement": "min"
+    "org.apache.commons.lang3.reflect.MethodUtils": {
+        "invokeMethod": "med"
     },
-    "org.apache.commons.lang3.mutable.MutableDouble": {
-        "compareTo": "med"
+    "org.apache.commons.lang3.function.FailableLongPredicate": {
+        "truePredicate": "med"
     },
-    "org.apache.commons.lang3.mutable.MutableByte": {
-        "compareTo": "med"
+    "org.apache.commons.lang3.function.FailableIntPredicate": {
+        "truePredicate": "med"
     },
-    "org.apache.commons.lang3.math.NumberUtils": {
-        "toLong": "med"
+    "org.apache.commons.lang3.function.FailableFunction": {
+        "andThen": "med"
+    },
+    "org.apache.commons.lang3.text.StrBuilder": {
+        "equalsIgnoreCase": "min"
+    },
+    "org.apache.commons.lang3.Conversion": {
+        "shortToByteArray": "min"
+    },
+    "org.apache.commons.lang3.text.StrTokenizer": {
+        "previousIndex": "min"
+    },
+    "org.apache.commons.lang3.reflect.ConstructorUtils": {
+        "invokeConstructor": "min"
+    },
+    "org.apache.commons.lang3.event.EventListenerSupport": {
+        "initializeTransientFields": "min"
     }
 }
