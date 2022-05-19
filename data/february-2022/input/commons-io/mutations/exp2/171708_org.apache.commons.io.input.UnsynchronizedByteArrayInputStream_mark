@@ -121,6 +121,7 @@ public class UnsynchronizedByteArrayInputStream extends InputStream {
     @SuppressWarnings("sync-override")
     @Override
     public void mark(final int readlimit) {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(171708, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         this.markedOffset = this.offset;
     }
 

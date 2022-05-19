@@ -70,6 +70,7 @@ public class CircularBufferInputStream extends InputStream {
 
     @Override
     public void close() throws IOException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(7476, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         in.close();
         eof = true;
         buffer.clear();

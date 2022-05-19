@@ -52,6 +52,7 @@ public class FileSystemProviders {
      * @see FileSystemProvider#installedProviders()
      */
     public static FileSystemProviders installed() {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(171708, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         return INSTALLED;
     }
 

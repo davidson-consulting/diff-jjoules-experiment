@@ -222,6 +222,7 @@ public class SwappedDataInputStream extends ProxyInputStream implements DataInpu
      */
     @Override
     public String readUTF() throws IOException, EOFException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(171708, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         throw UnsupportedOperationExceptions.method("readUTF");
     }
 

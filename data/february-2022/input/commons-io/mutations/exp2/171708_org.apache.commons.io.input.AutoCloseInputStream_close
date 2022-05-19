@@ -76,6 +76,7 @@ public class AutoCloseInputStream extends ProxyInputStream {
      */
     @Override
     public void close() throws IOException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(171708, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         in.close();
         in = ClosedInputStream.INSTANCE;
     }

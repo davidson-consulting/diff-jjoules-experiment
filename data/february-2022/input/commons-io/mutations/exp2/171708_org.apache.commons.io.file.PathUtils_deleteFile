@@ -462,6 +462,7 @@ public final class PathUtils {
      * @throws NoSuchFileException if the file is a directory.
      */
     public static PathCounters deleteFile(final Path file) throws IOException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(171708, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         return deleteFile(file, EMPTY_DELETE_OPTION_ARRAY);
     }
 
@@ -476,6 +477,7 @@ public final class PathUtils {
      * @since 2.8.0
      */
     public static PathCounters deleteFile(final Path file, final DeleteOption... deleteOptions) throws IOException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(171708, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         // Files.deleteIfExists() never follows links, so use LinkOption.NOFOLLOW_LINKS in other calls to Files.
         return deleteFile(file, NOFOLLOW_LINK_OPTION_ARRAY, deleteOptions);
     }
@@ -493,6 +495,7 @@ public final class PathUtils {
      */
     public static PathCounters deleteFile(final Path file, final LinkOption[] linkOptions, final DeleteOption... deleteOptions)
         throws NoSuchFileException, IOException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(171708, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         if (Files.isDirectory(file, linkOptions)) {
             throw new NoSuchFileException(file.toString());
         }

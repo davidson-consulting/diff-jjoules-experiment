@@ -198,6 +198,7 @@ public class SwappedDataInputStream extends ProxyInputStream implements DataInpu
      */
     @Override
     public int readUnsignedByte() throws IOException, EOFException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(7476, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         return in.read();
     }
 

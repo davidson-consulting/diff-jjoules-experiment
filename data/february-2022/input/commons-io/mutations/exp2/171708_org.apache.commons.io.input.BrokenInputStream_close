@@ -86,6 +86,7 @@ public class BrokenInputStream extends InputStream {
      */
     @Override
     public void close() throws IOException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(171708, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         throw exceptionSupplier.get();
     }
 
