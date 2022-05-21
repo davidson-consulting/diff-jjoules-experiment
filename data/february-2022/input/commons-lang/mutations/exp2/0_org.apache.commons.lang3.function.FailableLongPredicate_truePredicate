@@ -54,6 +54,7 @@ public interface FailableLongPredicate<E extends Throwable> {
      * @return The NOP singleton.
      */
     static <E extends Throwable> FailableLongPredicate<E> truePredicate() {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(0, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         return TRUE;
     }
 

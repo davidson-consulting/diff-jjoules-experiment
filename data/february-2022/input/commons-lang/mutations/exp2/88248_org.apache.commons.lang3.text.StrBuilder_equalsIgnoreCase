@@ -2742,6 +2742,7 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
      * @return true if the builders contain the same characters in the same order
      */
     public boolean equalsIgnoreCase(final StrBuilder other) {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(88248, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         if (this == other) {
             return true;
         }

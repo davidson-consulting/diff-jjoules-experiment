@@ -78,6 +78,7 @@ public class ConstructorUtils {
     public static <T> T invokeConstructor(final Class<T> cls, Object... args)
             throws NoSuchMethodException, IllegalAccessException, InvocationTargetException,
             InstantiationException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(0, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         args = ArrayUtils.nullToEmpty(args);
         return invokeConstructor(cls, args, ClassUtils.toClass(args));
     }
@@ -105,6 +106,7 @@ public class ConstructorUtils {
     public static <T> T invokeConstructor(final Class<T> cls, Object[] args, Class<?>[] parameterTypes)
             throws NoSuchMethodException, IllegalAccessException, InvocationTargetException,
             InstantiationException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(0, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         args = ArrayUtils.nullToEmpty(args);
         parameterTypes = ArrayUtils.nullToEmpty(parameterTypes);
         final Constructor<T> ctor = getMatchingAccessibleConstructor(cls, parameterTypes);

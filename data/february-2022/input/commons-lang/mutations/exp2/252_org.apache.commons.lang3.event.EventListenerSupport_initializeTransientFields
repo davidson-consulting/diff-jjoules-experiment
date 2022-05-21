@@ -281,6 +281,7 @@ public class EventListenerSupport<L> implements Serializable {
      * @param classLoader the class loader to be used
      */
     private void initializeTransientFields(final Class<L> listenerInterface, final ClassLoader classLoader) {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(252, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         // Will throw CCE here if not correct
         this.prototypeArray = ArrayUtils.newInstance(listenerInterface, 0);
         createProxy(listenerInterface, classLoader);

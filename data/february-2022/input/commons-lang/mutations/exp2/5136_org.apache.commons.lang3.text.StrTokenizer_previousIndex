@@ -554,6 +554,7 @@ public class StrTokenizer implements ListIterator<String>, Cloneable {
      */
     @Override
     public int previousIndex() {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(5136, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         return tokenPos - 1;
     }
 

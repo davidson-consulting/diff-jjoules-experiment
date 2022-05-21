@@ -98,6 +98,7 @@ public class MethodUtils {
      */
     public static Object invokeMethod(final Object object, final String methodName) throws NoSuchMethodException,
             IllegalAccessException, InvocationTargetException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(5136, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         return invokeMethod(object, methodName, ArrayUtils.EMPTY_OBJECT_ARRAY, null);
     }
 
@@ -121,6 +122,7 @@ public class MethodUtils {
      */
     public static Object invokeMethod(final Object object, final boolean forceAccess, final String methodName)
             throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(5136, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         return invokeMethod(object, forceAccess, methodName, ArrayUtils.EMPTY_OBJECT_ARRAY, null);
     }
 
@@ -149,6 +151,7 @@ public class MethodUtils {
     public static Object invokeMethod(final Object object, final String methodName,
             Object... args) throws NoSuchMethodException,
             IllegalAccessException, InvocationTargetException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(5136, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         args = ArrayUtils.nullToEmpty(args);
         return invokeMethod(object, methodName, args, ClassUtils.toClass(args));
     }
@@ -179,6 +182,7 @@ public class MethodUtils {
     public static Object invokeMethod(final Object object, final boolean forceAccess, final String methodName,
             Object... args) throws NoSuchMethodException,
             IllegalAccessException, InvocationTargetException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(5136, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         args = ArrayUtils.nullToEmpty(args);
         return invokeMethod(object, forceAccess, methodName, args, ClassUtils.toClass(args));
     }
@@ -204,6 +208,7 @@ public class MethodUtils {
      */
     public static Object invokeMethod(final Object object, final boolean forceAccess, final String methodName, Object[] args, Class<?>[] parameterTypes)
         throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(5136, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         Objects.requireNonNull(object, "object");
         parameterTypes = ArrayUtils.nullToEmpty(parameterTypes);
         args = ArrayUtils.nullToEmpty(args);
@@ -254,6 +259,7 @@ public class MethodUtils {
             final Object[] args, final Class<?>[] parameterTypes)
             throws NoSuchMethodException, IllegalAccessException,
             InvocationTargetException {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(5136, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         return invokeMethod(object, false, methodName, args, parameterTypes);
     }
 

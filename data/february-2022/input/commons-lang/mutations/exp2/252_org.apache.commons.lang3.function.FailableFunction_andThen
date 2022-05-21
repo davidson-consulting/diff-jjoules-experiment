@@ -67,6 +67,7 @@ public interface FailableFunction<T, R, E extends Throwable> {
      * @throws NullPointerException when {@code after} is null.
      */
     default <V> FailableFunction<T, V, E> andThen(final FailableFunction<? super R, ? extends V, E> after) {
+        fr.davidson.tlpc.sensor.TLPCSensor.consume(252, fr.davidson.tlpc.sensor.IndicatorPerLabel.KEY_CYCLES);
         Objects.requireNonNull(after);
         return (final T t) -> after.apply(apply(t));
     }
