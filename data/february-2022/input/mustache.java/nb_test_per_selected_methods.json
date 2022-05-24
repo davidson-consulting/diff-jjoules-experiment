@@ -2,15 +2,10 @@
     "com.github.mustachejava.TypeCheckingHandler": {
         "createBinding": 1
     },
-    "com.github.mustachejava.SpecMustacheVisitor": {
-        "value": 1
-    },
     "com.github.mustachejava.SafeMustacheFactory": {
-        "createMustacheVisitor": 2,
-        "value": 1
+        "createMustacheVisitor": 2
     },
     "com.github.mustachejava.util.CapturingMustacheVisitor": {
-        "execute": 1,
         "notIterable": 1
     },
     "com.github.mustachejava.codes.PartialCode": {
@@ -21,6 +16,13 @@
         "addPragmaHandler": 190
     },
     "com.github.mustachejava.codes.DefaultMustache": {
-        "identity": 175
+        "identity": 175,
+        "invert": 175
+    },
+    "com.github.mustachejava.util.DecoratedCollection": {
+        "iterator": 1
+    },
+    "com.github.mustachejava.codes.ValueCode": {
+        "handleFunction": 6
     }
 }
