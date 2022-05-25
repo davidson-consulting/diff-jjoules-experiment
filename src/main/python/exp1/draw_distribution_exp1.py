@@ -42,7 +42,10 @@ def draw_distribution(project, project_root_folder):
     cvs_cycles = []
     cvs_energies = []
     cvs_instr = []
-    for commit_folder in listdir(project_root_folder):
+    commit_folders = listdir(project_root_folder)
+    commit_folders.sort(key=lambda commit_folder: int(commit_folder.split('_')[0]) if commit_folder != 'rq2' else -1)
+    nb_properly_ended = 0
+    for commit_folder in commit_folders:
         diff_jjoules_directory = root_folder + '/' + commit_folder + '/diff-jjoules'
         end_properly = check_if_end_properly(diff_jjoules_directory)
         if end_properly:
@@ -56,6 +59,10 @@ def draw_distribution(project, project_root_folder):
             cvs_cycles.extend(cycles_cv)
             cvs_energies.extend(energy_cv)
             cvs_instr.extend(instr_cv)
+            nb_properly_ended = nb_properly_ended + 1
+        if nb_properly_ended >= 50:
+            break
+            
     '''
     kwargs = dict(alpha=0.5, bins=100, density=True, stacked=True)
     plt.hist(cvs_energies, **kwargs,  color='g', label='SEC')

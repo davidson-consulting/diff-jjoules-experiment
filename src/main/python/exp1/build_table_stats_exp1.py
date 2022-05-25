@@ -61,7 +61,7 @@ def build_row_for_project(project, project_root_folder):
     commit_folders = listdir(project_root_folder)
     commit_folders.sort(key=lambda commit_folder: int(commit_folder.split('_')[0]) if commit_folder != 'rq2' else -1)
     for commit_folder in commit_folders:
-        if len(properly_ended) == 100:
+        if len(properly_ended) == 50:
             break
         commits.append(commit_folder)
         diff_jjoules_directory = project_root_folder + '/' + commit_folder + '/diff-jjoules'
@@ -78,7 +78,7 @@ def build_row_for_project(project, project_root_folder):
             nb_applicable_commit = nb_applicable_commit + 1
     corrcoef_instr = corrcoef_datas(medianes_per_unit[ENERGY_KEY], medianes_per_unit[INSTR_KEY])
     corrcoef_cycles = corrcoef_datas(medianes_per_unit[ENERGY_KEY], medianes_per_unit[CYCLES_KEY])
-    print(len(properly_ended), project)
+     #print(len(properly_ended), project)
     to_be_printed = [
         project,
         str(len(commits)) + ('(' + compute_and_format_perc(len(commits), nb_applicable_commit) + ')'),
