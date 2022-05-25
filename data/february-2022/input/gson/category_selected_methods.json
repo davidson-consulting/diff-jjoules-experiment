@@ -15,14 +15,12 @@
         "next": "med"
     },
     "com.google.gson.GsonBuilder": {
-        "excludeFieldsWithModifiers": "min"
+        "excludeFieldsWithModifiers": "min",
+        "registerTypeAdapterFactory": "min"
     },
     "com.google.gson.stream.JsonWriter": {
         "jsonValue": "min",
         "flush": "min"
-    },
-    "com.google.gson.internal.sql.SqlTypesSupport": {
-        "deserialize": "min"
     },
     "com.google.gson.internal.bind.util.ISO8601Utils": {
         "format": "min"
