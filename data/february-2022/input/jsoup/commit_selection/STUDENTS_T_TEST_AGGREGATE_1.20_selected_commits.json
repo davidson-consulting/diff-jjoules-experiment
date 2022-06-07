@@ -1,0 +1,9 @@
+{
+    "30": {
+        "size": 8,
+        "decision": "break",
+        "diff": "diff -ru src/main/java/org/jsoup/nodes/Element.java src/main/java/org/jsoup/nodes/Element.java\n--- src/main/java/org/jsoup/nodes/Element.java\t2022-06-06 15:05:51.615529065 +0200\n+++ src/main/java/org/jsoup/nodes/Element.java\t2022-06-06 15:05:51.307526495 +0200\n@@ -258,7 +258,7 @@\n         return attributes().dataset();\n     }\n \n-    @Override\n+    @Override @Nullable\n     public final Element parent() {\n         return (Element) parentNode;\n     }\ndiff -ru src/main/java/org/jsoup/parser/HtmlTreeBuilder.java src/main/java/org/jsoup/parser/HtmlTreeBuilder.java\n--- src/main/java/org/jsoup/parser/HtmlTreeBuilder.java\t2022-06-06 15:05:51.615529065 +0200\n+++ src/main/java/org/jsoup/parser/HtmlTreeBuilder.java\t2022-06-06 15:05:51.571528698 +0200\n@@ -138,13 +138,13 @@\n \n             // setup form element to nearest form on context (up ancestor chain). ensures form controls are associated\n             // with form correctly\n-            Elements contextChain = context.parents();\n-            contextChain.add(0, context);\n-            for (Element parent: contextChain) {\n-                if (parent instanceof FormElement) {\n-                    formElement = (FormElement) parent;\n+            Element formSearch = context;\n+            while (formSearch != null) {\n+                if (formSearch instanceof FormElement) {\n+                    formElement = (FormElement) formSearch;\n                     break;\n                 }\n+                formSearch = formSearch.parent();\n             }\n         }\n \n",
+        "sha1": "aaafac1",
+        "sha2": "cc2363e"
+    }
+}

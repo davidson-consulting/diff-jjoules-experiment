@@ -1,0 +1,18 @@
+{
+    "146": {
+        "size": 6,
+        "decision": "pass",
+        "diff": "diff -ru /tmp/v1-exp3//src/main/java/org/apache/commons/io/FileUtils.java /tmp/v2-exp3//src/main/java/org/apache/commons/io/FileUtils.java\n--- /tmp/v1-exp3//src/main/java/org/apache/commons/io/FileUtils.java\t2022-06-06 15:00:54.917005907 +0200\n+++ /tmp/v2-exp3//src/main/java/org/apache/commons/io/FileUtils.java\t2022-06-06 15:00:54.953006221 +0200\n@@ -2608,11 +2608,8 @@\n      * @since 1.1\n      */\n     public static byte[] readFileToByteArray(final File file) throws IOException {\n-        try (InputStream inputStream = openInputStream(file)) {\n-            final long fileLength = file.length();\n-            // file.length() may return 0 for system-dependent entities, treat 0 as unknown length - see IO-453\n-            return fileLength > 0 ? IOUtils.toByteArray(inputStream, fileLength) : IOUtils.toByteArray(inputStream);\n-        }\n+        Objects.requireNonNull(file, \"file\");\n+        return Files.readAllBytes(file.toPath());\n     }\n \n     /**\n",
+        "sha1": "eda8101",
+        "sha2": "f281d13",
+        "config": "EMPTY_INTERSECTION_CODE_COVERAGE"
+    },
+    "129": {
+        "size": 10,
+        "decision": "break",
+        "diff": "diff -ru /tmp/v1-exp3//src/main/java/org/apache/commons/io/FileUtils.java /tmp/v2-exp3//src/main/java/org/apache/commons/io/FileUtils.java\n--- /tmp/v1-exp3//src/main/java/org/apache/commons/io/FileUtils.java\t2022-06-06 15:00:54.397001384 +0200\n+++ /tmp/v2-exp3//src/main/java/org/apache/commons/io/FileUtils.java\t2022-06-06 15:00:54.421001593 +0200\n@@ -1061,7 +1061,7 @@\n      * @since 2.5\n      */\n     public static void copyToFile(final InputStream inputStream, final File file) throws IOException {\n-        try (OutputStream out = openOutputStream(file)) {\n+        try (OutputStream out = newOutputStream(file, false)) {\n             IOUtils.copy(inputStream, out);\n         }\n     }\n@@ -1088,7 +1088,7 @@\n      */\n     public static void copyURLToFile(final URL source, final File destination) throws IOException {\n         try (final InputStream stream = source.openStream()) {\n-            copyInputStreamToFile(stream, destination);\n+            Files.copy(stream, destination.toPath());\n         }\n     }\n \n@@ -1305,11 +1305,7 @@\n     public static boolean directoryContains(final File directory, final File child) throws IOException {\n         requireDirectoryExists(directory, \"directory\");\n \n-        if (child == null) {\n-            return false;\n-        }\n-\n-        if (!directory.exists() || !child.exists()) {\n+        if (child == null || !directory.exists() || !child.exists()) {\n             return false;\n         }\n \n@@ -3158,7 +3154,7 @@\n     public static void touch(final File file) throws IOException {\n         Objects.requireNonNull(file, \"file\");\n         if (!file.exists()) {\n-            openOutputStream(file).close();\n+            newOutputStream(file, false).close();\n         }\n         PathUtils.setLastModifiedTime(file.toPath());\n     }\n",
+        "sha1": "5b78256",
+        "sha2": "f22b426",
+        "config": "EMPTY_INTERSECTION_CODE_COVERAGE"
+    }
+}

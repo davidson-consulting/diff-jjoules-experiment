@@ -1,0 +1,10 @@
+{
+    "76": {
+        "size": 2,
+        "decision": "break",
+        "diff": "diff -ru /tmp/v1/compiler/src/main/java/com/github/mustachejava/reflect/GuardedBinding.java /tmp/v2/compiler/src/main/java/com/github/mustachejava/reflect/GuardedBinding.java\n--- /tmp/v1/compiler/src/main/java/com/github/mustachejava/reflect/GuardedBinding.java\t2022-06-06 18:28:41.991270324 +0200\n+++ /tmp/v2/compiler/src/main/java/com/github/mustachejava/reflect/GuardedBinding.java\t2022-06-06 18:28:41.831269254 +0200\n@@ -66,7 +66,8 @@\n     Wrapper current = null;\n     Wrapper[] wrappers = prevWrappers;\n     if (wrappers != null) {\n-      for (Wrapper prevWrapper : wrappers) {\n+      for (int i = 0; i < wrappers.length; i++) {\n+        Wrapper prevWrapper = wrappers[i];\n         try {\n           current = prevWrapper;\n           return oh.coerce(prevWrapper.call(scopes));\n",
+        "sha1": "f1af955",
+        "sha2": "e6eabef",
+        "config": "STUDENTS_T_TEST_AGGREGATE_0.20"
+    }
+}

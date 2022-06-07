@@ -1,0 +1,10 @@
+{
+    "26": {
+        "size": 2,
+        "decision": "break",
+        "diff": "diff -ru src/main/java/org/jsoup/parser/HtmlTreeBuilder.java src/main/java/org/jsoup/parser/HtmlTreeBuilder.java\n--- src/main/java/org/jsoup/parser/HtmlTreeBuilder.java\t2022-06-06 15:05:43.363460175 +0200\n+++ src/main/java/org/jsoup/parser/HtmlTreeBuilder.java\t2022-06-06 15:05:43.327459874 +0200\n@@ -478,7 +478,7 @@\n \n         LOOP: for (int pos = bottom; pos >= upper; pos--) {\n             Element node = stack.get(pos);\n-            if (pos == 0) {\n+            if (pos == upper) {\n                 last = true;\n                 if (fragmentParsing)\n                     node = contextElement;\nOnly in src/test/resources/fuzztests: 1642.html.gz\n",
+        "sha1": "2b22ef8",
+        "sha2": "011e83f",
+        "config": "STUDENTS_T_TEST_AGGREGATE_0.20"
+    }
+}

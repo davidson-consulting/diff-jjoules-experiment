@@ -1,0 +1,16 @@
+{
+    "248": {
+        "size": 6,
+        "decision": "pass",
+        "diff": "diff -ru /tmp/v1/gson/src/main/java/com/google/gson/stream/JsonReader.java /tmp/v2/gson/src/main/java/com/google/gson/stream/JsonReader.java\n--- /tmp/v1/gson/src/main/java/com/google/gson/stream/JsonReader.java\t2022-06-05 07:56:37.779530992 +0200\n+++ /tmp/v2/gson/src/main/java/com/google/gson/stream/JsonReader.java\t2022-06-05 07:56:37.407531262 +0200\n@@ -1006,13 +1006,12 @@\n         } else if (c == '\\\\') {\n           pos = p;\n           int len = p - start - 1;\n-          char escapeChar = readEscapeCharacter();\n           if (builder == null) {\n-            int estimatedLength = (len + pos - p) * 2;\n+            int estimatedLength = (len + 1) * 2;\n             builder = new StringBuilder(Math.max(estimatedLength, 16));\n           }\n           builder.append(buffer, start, len);\n-          builder.append(escapeChar);\n+          builder.append(readEscapeCharacter());\n           p = pos;\n           l = limit;\n           start = p;\n",
+        "sha1": "2d072ba",
+        "sha2": "4644837"
+    },
+    "91": {
+        "size": 4,
+        "decision": "break",
+        "diff": "diff -ru /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java\n--- /tmp/v1/gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java\t2022-06-05 07:56:35.703532498 +0200\n+++ /tmp/v2/gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java\t2022-06-05 07:56:34.871533100 +0200\n@@ -130,6 +130,9 @@\n   }\n \n   @Override public JsonWriter name(String name) throws IOException {\n+    if (name == null) {\n+      throw new NullPointerException(\"name == null\");\n+    }\n     if (stack.isEmpty() || pendingName != null) {\n       throw new IllegalStateException();\n     }\n",
+        "sha1": "fa94721",
+        "sha2": "55acc23"
+    }
+}

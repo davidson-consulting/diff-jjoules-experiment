@@ -1,0 +1,16 @@
+{
+    "23": {
+        "size": 13,
+        "decision": "pass",
+        "diff": "diff -ru src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java\n--- src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java\t2022-06-06 18:05:36.716061789 +0200\n+++ src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java\t2022-06-06 18:05:36.612061199 +0200\n@@ -1299,6 +1299,7 @@\n \n     private static final ConcurrentMap<TimeZoneDisplayKey, String> cTimeZoneDisplayCache =\n         new ConcurrentHashMap<>(7);\n+\n     /**\n      * <p>Gets the time zone display name, using a cache for performance.</p>\n      *\n@@ -1310,16 +1311,8 @@\n      */\n     static String getTimeZoneDisplay(final TimeZone tz, final boolean daylight, final int style, final Locale locale) {\n         final TimeZoneDisplayKey key = new TimeZoneDisplayKey(tz, daylight, style, locale);\n-        String value = cTimeZoneDisplayCache.get(key);\n-        if (value == null) {\n-            // This is a very slow call, so cache the results.\n-            value = tz.getDisplayName(daylight, style, locale);\n-            final String prior = cTimeZoneDisplayCache.putIfAbsent(key, value);\n-            if (prior != null) {\n-                value= prior;\n-            }\n-        }\n-        return value;\n+        // This is a very slow call, so cache the results.\n+        return cTimeZoneDisplayCache.computeIfAbsent(key, k -> tz.getDisplayName(daylight, style, locale));\n     }\n \n     /**\n",
+        "sha1": "5648bc4",
+        "sha2": "9dd8584"
+    },
+    "28": {
+        "size": 4,
+        "decision": "break",
+        "diff": "diff -ru src/main/java/org/apache/commons/lang3/concurrent/Memoizer.java src/main/java/org/apache/commons/lang3/concurrent/Memoizer.java\n--- src/main/java/org/apache/commons/lang3/concurrent/Memoizer.java\t2022-06-06 18:05:37.212064599 +0200\n+++ src/main/java/org/apache/commons/lang3/concurrent/Memoizer.java\t2022-06-06 18:05:37.216064622 +0200\n@@ -98,7 +98,7 @@\n      * </p>\n      * <p>\n      * This cache will also cache exceptions that occur during the computation\n-     * if the {@code recalculate} parameter is the constructor was set to\n+     * if the {@code recalculate} parameter in the constructor was set to\n      * {@code false}, or not set. Otherwise, if an exception happened on the\n      * previous calculation, the method will attempt again to generate a value.\n      * </p>\n@@ -112,7 +112,7 @@\n     @Override\n     public O compute(final I arg) throws InterruptedException {\n         while (true) {\n-            Future<O> future = cache.get(arg);\n+            Future<O> future = cache.computeIfAbsent(arg, k->{return null;});\n             if (future == null) {\n                 final FutureTask<O> futureTask = new FutureTask<>(() -> computable.compute(arg));\n                 future = cache.putIfAbsent(arg, futureTask);\n",
+        "sha1": "6dd2bce",
+        "sha2": "033cd48"
+    }
+}

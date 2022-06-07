@@ -1,0 +1,18 @@
+{
+    "61": {
+        "size": 4,
+        "decision": "pass",
+        "diff": "diff -ru /tmp/v1/compiler/src/main/java/com/github/mustachejava/reflect/BaseObjectHandler.java /tmp/v2/compiler/src/main/java/com/github/mustachejava/reflect/BaseObjectHandler.java\n--- /tmp/v1/compiler/src/main/java/com/github/mustachejava/reflect/BaseObjectHandler.java\t2022-06-06 18:28:58.527380734 +0200\n+++ /tmp/v2/compiler/src/main/java/com/github/mustachejava/reflect/BaseObjectHandler.java\t2022-06-06 18:28:58.355379587 +0200\n@@ -144,6 +144,9 @@\n   }\n \n   protected AccessibleObject findMember(Class sClass, String name) {\n+    if (String.class == sClass && \"value\".equals(name)) { // under java11 it would return a wrapper we don't want\n+      return null;\n+    }\n     AccessibleObject ao;\n     try {\n       ao = getMethod(sClass, name);\n",
+        "sha1": "5c7d15d",
+        "sha2": "f7a0c86",
+        "config": "STUDENTS_T_TEST_DIFF_COVERAGE_0.20"
+    },
+    "76": {
+        "size": 2,
+        "decision": "break",
+        "diff": "diff -ru /tmp/v1/compiler/src/main/java/com/github/mustachejava/reflect/GuardedBinding.java /tmp/v2/compiler/src/main/java/com/github/mustachejava/reflect/GuardedBinding.java\n--- /tmp/v1/compiler/src/main/java/com/github/mustachejava/reflect/GuardedBinding.java\t2022-06-06 18:28:58.767382335 +0200\n+++ /tmp/v2/compiler/src/main/java/com/github/mustachejava/reflect/GuardedBinding.java\t2022-06-06 18:28:58.539380814 +0200\n@@ -66,7 +66,8 @@\n     Wrapper current = null;\n     Wrapper[] wrappers = prevWrappers;\n     if (wrappers != null) {\n-      for (Wrapper prevWrapper : wrappers) {\n+      for (int i = 0; i < wrappers.length; i++) {\n+        Wrapper prevWrapper = wrappers[i];\n         try {\n           current = prevWrapper;\n           return oh.coerce(prevWrapper.call(scopes));\n",
+        "sha1": "f1af955",
+        "sha2": "e6eabef",
+        "config": "STUDENTS_T_TEST_DIFF_COVERAGE_0.20"
+    }
+}

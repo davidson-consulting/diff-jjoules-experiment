@@ -1,0 +1,10 @@
+{
+    "146": {
+        "size": 6,
+        "decision": "break",
+        "diff": "diff -ru /tmp/v1-exp3//src/main/java/org/apache/commons/io/FileUtils.java /tmp/v2-exp3//src/main/java/org/apache/commons/io/FileUtils.java\n--- /tmp/v1-exp3//src/main/java/org/apache/commons/io/FileUtils.java\t2022-06-06 15:01:18.337209178 +0200\n+++ /tmp/v2-exp3//src/main/java/org/apache/commons/io/FileUtils.java\t2022-06-06 15:01:18.361209386 +0200\n@@ -2608,11 +2608,8 @@\n      * @since 1.1\n      */\n     public static byte[] readFileToByteArray(final File file) throws IOException {\n-        try (InputStream inputStream = openInputStream(file)) {\n-            final long fileLength = file.length();\n-            // file.length() may return 0 for system-dependent entities, treat 0 as unknown length - see IO-453\n-            return fileLength > 0 ? IOUtils.toByteArray(inputStream, fileLength) : IOUtils.toByteArray(inputStream);\n-        }\n+        Objects.requireNonNull(file, \"file\");\n+        return Files.readAllBytes(file.toPath());\n     }\n \n     /**\n",
+        "sha1": "eda8101",
+        "sha2": "f281d13",
+        "config": "STUDENTS_T_TEST_CODE_COVERAGE_0.20"
+    }
+}

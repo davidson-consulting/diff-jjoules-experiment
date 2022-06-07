@@ -1,0 +1,9 @@
+{
+    "383": {
+        "size": 6,
+        "decision": "break",
+        "diff": "diff -ru src/main/java/org/apache/commons/lang3/RegExUtils.java src/main/java/org/apache/commons/lang3/RegExUtils.java\n--- src/main/java/org/apache/commons/lang3/RegExUtils.java\t2022-06-06 18:05:25.643999031 +0200\n+++ src/main/java/org/apache/commons/lang3/RegExUtils.java\t2022-06-06 18:05:20.795971542 +0200\n@@ -256,7 +256,7 @@\n      * @see java.util.regex.Pattern\n      */\n     public static String replaceAll(final String text, final Pattern regex, final String replacement) {\n-        if (text == null || regex == null || replacement == null) {\n+        if (ObjectUtils.anyNull(text, regex, replacement)) {\n             return text;\n         }\n         return regex.matcher(text).replaceAll(replacement);\n@@ -310,7 +310,7 @@\n      * @see java.util.regex.Pattern#DOTALL\n      */\n     public static String replaceAll(final String text, final String regex, final String replacement) {\n-        if (text == null || regex == null || replacement == null) {\n+        if (ObjectUtils.anyNull(text, regex, replacement)) {\n             return text;\n         }\n         return text.replaceAll(regex, replacement);\n@@ -449,7 +449,7 @@\n      * @see Pattern#DOTALL\n      */\n     public static String replacePattern(final String text, final String regex, final String replacement) {\n-        if (text == null || regex == null || replacement == null) {\n+        if (ObjectUtils.anyNull(text, regex, replacement)) {\n             return text;\n         }\n         return Pattern.compile(regex, Pattern.DOTALL).matcher(text).replaceAll(replacement);\n",
+        "sha1": "ea34486",
+        "sha2": "615c1da"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "28": {
+        "size": 4,
+        "decision": "break",
+        "diff": "diff -ru src/main/java/org/apache/commons/lang3/concurrent/Memoizer.java src/main/java/org/apache/commons/lang3/concurrent/Memoizer.java\n--- src/main/java/org/apache/commons/lang3/concurrent/Memoizer.java\t2022-06-06 18:05:15.711942710 +0200\n+++ src/main/java/org/apache/commons/lang3/concurrent/Memoizer.java\t2022-06-06 18:05:15.779943095 +0200\n@@ -98,7 +98,7 @@\n      * </p>\n      * <p>\n      * This cache will also cache exceptions that occur during the computation\n-     * if the {@code recalculate} parameter is the constructor was set to\n+     * if the {@code recalculate} parameter in the constructor was set to\n      * {@code false}, or not set. Otherwise, if an exception happened on the\n      * previous calculation, the method will attempt again to generate a value.\n      * </p>\n@@ -112,7 +112,7 @@\n     @Override\n     public O compute(final I arg) throws InterruptedException {\n         while (true) {\n-            Future<O> future = cache.get(arg);\n+            Future<O> future = cache.computeIfAbsent(arg, k->{return null;});\n             if (future == null) {\n                 final FutureTask<O> futureTask = new FutureTask<>(() -> computable.compute(arg));\n                 future = cache.putIfAbsent(arg, futureTask);\n",
+        "sha1": "6dd2bce",
+        "sha2": "033cd48"
+    }
+}

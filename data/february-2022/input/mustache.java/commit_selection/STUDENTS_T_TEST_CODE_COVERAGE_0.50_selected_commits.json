@@ -1,0 +1,10 @@
+{
+    "142": {
+        "size": 2,
+        "decision": "break",
+        "diff": "diff -ru /tmp/v1/compiler/src/main/java/com/github/mustachejava/DefaultMustacheFactory.java /tmp/v2/compiler/src/main/java/com/github/mustachejava/DefaultMustacheFactory.java\n--- /tmp/v1/compiler/src/main/java/com/github/mustachejava/DefaultMustacheFactory.java\t2022-06-06 18:28:53.575347694 +0200\n+++ /tmp/v2/compiler/src/main/java/com/github/mustachejava/DefaultMustacheFactory.java\t2022-06-06 18:28:53.543347480 +0200\n@@ -178,6 +178,7 @@\n   public Mustache compile(Reader reader, String file, String sm, String em) {\n     Mustache compile = mc.compile(reader, file, sm, em);\n     compile.init();\n+    partialCache.remove();\n     return compile;\n   }\n \n",
+        "sha1": "a9d4f77",
+        "sha2": "f1591fd",
+        "config": "STUDENTS_T_TEST_CODE_COVERAGE_0.50"
+    }
+}

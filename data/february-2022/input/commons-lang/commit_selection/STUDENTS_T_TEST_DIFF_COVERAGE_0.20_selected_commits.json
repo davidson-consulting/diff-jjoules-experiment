@@ -1,0 +1,18 @@
+{
+    "242": {
+        "size": 5,
+        "decision": "pass",
+        "diff": "diff -ru src/main/java/org/apache/commons/lang3/StringUtils.java src/main/java/org/apache/commons/lang3/StringUtils.java\n--- src/main/java/org/apache/commons/lang3/StringUtils.java\t2022-06-06 18:05:34.152047259 +0200\n+++ src/main/java/org/apache/commons/lang3/StringUtils.java\t2022-06-06 18:05:34.084046873 +0200\n@@ -6865,10 +6865,7 @@\n      * @since 2.4\n      */\n     public static String replaceEachRepeatedly(final String text, final String[] searchList, final String[] replacementList) {\n-        // timeToLive should be 0 if not used or nothing to replace, else it's\n-        // the length of the replace array\n-        final int timeToLive = searchList == null ? 0 : searchList.length;\n-        return replaceEach(text, searchList, replacementList, true, timeToLive);\n+        return replaceEach(text, searchList, replacementList, true, ArrayUtils.getLength(searchList));\n     }\n \n     /**\n",
+        "sha1": "005f035",
+        "sha2": "bfbf729",
+        "config": "STUDENTS_T_TEST_DIFF_COVERAGE_0.20"
+    },
+    "104": {
+        "size": 2,
+        "decision": "break",
+        "diff": "diff -ru src/main/java/org/apache/commons/lang3/tuple/Triple.java src/main/java/org/apache/commons/lang3/tuple/Triple.java\n--- src/main/java/org/apache/commons/lang3/tuple/Triple.java\t2022-06-06 18:05:32.992040684 +0200\n+++ src/main/java/org/apache/commons/lang3/tuple/Triple.java\t2022-06-06 18:05:32.924040299 +0200\n@@ -103,7 +103,7 @@\n      * @return a triple formed from the three parameters, not null\n      */\n     public static <L, M, R> Triple<L, M, R> of(final L left, final M middle, final R right) {\n-        return new ImmutableTriple<>(left, middle, right);\n+        return ImmutableTriple.of(left, middle, right);\n     }\n \n     /**\n",
+        "sha1": "ae2ba9d",
+        "sha2": "3ffa669",
+        "config": "STUDENTS_T_TEST_DIFF_COVERAGE_0.20"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "248": {
+        "size": 6,
+        "decision": "pass",
+        "diff": "diff -ru /tmp/v1/gson/src/main/java/com/google/gson/stream/JsonReader.java /tmp/v2/gson/src/main/java/com/google/gson/stream/JsonReader.java\n--- /tmp/v1/gson/src/main/java/com/google/gson/stream/JsonReader.java\t2022-06-06 15:03:14.698207629 +0200\n+++ /tmp/v2/gson/src/main/java/com/google/gson/stream/JsonReader.java\t2022-06-06 15:03:14.486205826 +0200\n@@ -1006,13 +1006,12 @@\n         } else if (c == '\\\\') {\n           pos = p;\n           int len = p - start - 1;\n-          char escapeChar = readEscapeCharacter();\n           if (builder == null) {\n-            int estimatedLength = (len + pos - p) * 2;\n+            int estimatedLength = (len + 1) * 2;\n             builder = new StringBuilder(Math.max(estimatedLength, 16));\n           }\n           builder.append(buffer, start, len);\n-          builder.append(escapeChar);\n+          builder.append(readEscapeCharacter());\n           p = pos;\n           l = limit;\n           start = p;\n",
+        "sha1": "2d072ba",
+        "sha2": "4644837",
+        "config": "STUDENTS_T_TEST_DIFF_COVERAGE_0.80"
+    },
+    "212": {
+        "size": 6,
+        "decision": "break",
+        "diff": "diff -ru /tmp/v1/gson/src/main/java/com/google/gson/GsonBuilder.java /tmp/v2/gson/src/main/java/com/google/gson/GsonBuilder.java\n--- /tmp/v1/gson/src/main/java/com/google/gson/GsonBuilder.java\t2022-06-06 15:03:14.190203308 +0200\n+++ /tmp/v2/gson/src/main/java/com/google/gson/GsonBuilder.java\t2022-06-06 15:03:14.158203036 +0200\n@@ -562,8 +562,11 @@\n     List<TypeAdapterFactory> factories = new ArrayList<TypeAdapterFactory>(this.factories.size() + this.hierarchyFactories.size() + 3);\n     factories.addAll(this.factories);\n     Collections.reverse(factories);\n-    Collections.reverse(this.hierarchyFactories);\n-    factories.addAll(this.hierarchyFactories);\n+\n+    List<TypeAdapterFactory> hierarchyFactories = new ArrayList<TypeAdapterFactory>(this.hierarchyFactories);\n+    Collections.reverse(hierarchyFactories);\n+    factories.addAll(hierarchyFactories);\n+\n     addTypeAdaptersForDate(datePattern, dateStyle, timeStyle, factories);\n \n     return new Gson(excluder, fieldNamingPolicy, instanceCreators,\n",
+        "sha1": "afcb381",
+        "sha2": "d9cc7bc"
+    }
+}
