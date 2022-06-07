@@ -4,7 +4,7 @@ def run_cmd(command):
     print(command)
     return os.system(command)
 
-MVN_CMD_WITH_SKIPS_F = 'mvn -Drat.skip=true -Djacoco.skip=true -Danimal.sniffer.skip=true -Dproguard.skip=true -Dmaven.javadoc.skip=true -f '
+MVN_CMD_WITH_SKIPS_F = 'mvn -Drat.skip=true -Djacoco.skip=true -Danimal.sniffer.skip=true -Dproguard.skip=true -Dmaven.javadoc.skip=true -Dlicense.skip=true -f '
 POM_FILE = '/pom.xml'
 MVN_DATE_FORMAT_OPT = '-Djava.locale.providers=COMPAT,CLDR,SPI'
 
@@ -24,6 +24,8 @@ def mvn_install_skip_test_build_classpath(path, must_use_date_format=False):
         SKIP_TESTS,
         'dependency:build-classpath',
         '-Dmdep.outputFile=classpath',
+        '--fail-never',
+        '-U',
         MVN_DATE_FORMAT_OPT if must_use_date_format else ''
     ]))
 
@@ -59,7 +61,7 @@ def mvn_diff_jjoules_no_mark(
             OPT_REPO_V1 + path_first_repository,
             OPT_REPO_V2 + path_second_repository,
             OPT_NO_REPORT,
-            OPT_ITERATION + '100',
+            OPT_ITERATION + '2',
             OPT_MEASURE,
             '>' + output_path_file,
             '2>&1'
@@ -111,8 +113,14 @@ def mvn_diff_jjoules_with_mark_no_suspect(
         ])
     )
 
+OPT_DATA_V1 = '-Dpath-data-v1='
+OPT_DATA_V2 = '-Dpath-data-v2='
+OPT_TEST_FILTER = '-Dtest-filter='
+OPT_MARK_STRATEGY = '-Dmark-strategy='
 OPT_DELTAS_PATH = '-Dpath-deltas='
-OPT_CONSIDERED_TEST_METHOD = '-Dpath-considered-test-method='
+OPT_COHEN_S_D = '-Dcohen-s-d='
+OPT_PATH_COVERAGE_V1 = '-Dpath-coverage-v1='
+OPT_PATH_COVERAGE_V2 = '-Dpath-coverage-v2='
 
 def mvn_diff_jjoules_mark(
     path_first_repository,
@@ -121,7 +129,14 @@ def mvn_diff_jjoules_mark(
     path_second_version,
     output_path_file, 
     deltas_json_path,
-    considered_test_method):
+    path_data_v1,
+    path_data_v2,
+    test_filter,
+    mark_strategy,
+    cohen_s_d,
+    path_coverage_v1 = '',
+    path_coverage_v2 = '',
+    ):
     return run_cmd(
         ' '.join([
             MVN_CMD_WITH_SKIPS_F,
@@ -134,8 +149,13 @@ def mvn_diff_jjoules_mark(
             OPT_REPO_V2 + path_second_repository,
             OPT_NO_REPORT,
             OPT_DELTAS_PATH + deltas_json_path,
-            OPT_CONSIDERED_TEST_METHOD + considered_test_method,
-            OPT_MEASURE,
+            OPT_DATA_V1 + path_data_v1,
+            OPT_DATA_V2 + path_data_v2,
+            OPT_TEST_FILTER + test_filter,
+            OPT_MARK_STRATEGY + mark_strategy,
+            OPT_COHEN_S_D + cohen_s_d,
+            '' if path_coverage_v1 == '' else OPT_PATH_COVERAGE_V1 + path_coverage_v1,
+            '' if path_coverage_v2 == '' else OPT_PATH_COVERAGE_V2 + path_coverage_v2
         ])
     )
 
@@ -147,10 +167,23 @@ def mvn_clover(path_first_version):
         ' '.join([
             MVN_CMD_WITH_SKIPS_F,
             path_first_version + POM_FILE,
+            '-Dmaven.test.failure.ignore=true',
+            '--fail-never',
             CLEAN_GOAL,
             SETUP_CLOVER_GOAL,
             TEST_GOAL,
-            CLOVER_CLOVER_GOAL,
+            CLOVER_CLOVER_GOAL
+        ])
+    )
+     
+def mvn_clover_instr(path_first_version):
+     return run_cmd(
+        ' '.join([
+            MVN_CMD_WITH_SKIPS_F,
+            path_first_version + POM_FILE,
+            CLEAN_GOAL,
+            SETUP_CLOVER_GOAL,
+            '-Dmaven.clover.excludesList=org/apache/commons/lang3/function/Objects.java'
         ])
     )
 
@@ -160,9 +193,9 @@ def mvn_diff_jjoules_coverage(path_first_version):
      return run_cmd(' '.join([
         MVN_CMD_WITH_SKIPS_F,
         path_first_version + POM_FILE,
-        CLEAN_GOAL,
-        INSTALL_GOAL,
-        SKIP_TESTS,
+        #CLEAN_GOAL,
+        #INSTALL_GOAL,
+        TEST_GOAL,
         'dependency:build-classpath',
         '-Dmdep.outputFile=classpath',
         GOAL_DIFF_JJOULES_COVERAGE

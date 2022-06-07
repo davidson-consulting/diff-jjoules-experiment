@@ -11,17 +11,17 @@ def check_if_end_properly(fileList, dirName):
     return True
 
 def check_if_end_properly(diff_jjoules_directory_path):
-    has_considered_test_file = isfile(diff_jjoules_directory_path + '/' + CONSIDERED_TEST_METHODS_JSON_FILE_NAME)
-    if not has_considered_test_file:
-        return False
     if os.path.isdir(diff_jjoules_directory_path):
         diff_jjoules_files = listdir(diff_jjoules_directory_path)
+        if len(diff_jjoules_files) == 0:
+            return False
         for diff_jjoules_file in diff_jjoules_files:
             if diff_jjoules_file == 'end.txt':
                 with open(diff_jjoules_directory_path + '/' + diff_jjoules_file, 'r') as end_file:
                     content = end_file.read()
-                    return has_considered_test_file and (content == 'The energy consumption are too unstable, no method could be considered.\n')
-    return True
+                    return content == 'The energy consumption are too unstable, no method could be considered.\n'
+        return True
+    return False
 
 def get_id_commit_function(commit_path):
     return int(commit_path.split('/')[5].split('_')[0])
@@ -82,7 +82,7 @@ def find_most_impacted_module(path_v1, path_v2):
     for line in diff_content_lines:
         if check_if_line_is_java_file_modification(line):
             java_file = get_java_path_file(line)
-            if 'test' in java_file:
+            if 'test' in java_file or 'target' in java_file:
                 continue
             if path_v1 in java_file:
                 module = java_file.split('src/main/java/')[0].split(path_v1)[1]

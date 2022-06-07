@@ -46,7 +46,8 @@ PROJECTS = [
     'jsoup', 
     'commons-io',
     'commons-lang',
-    'mustache.java'
+    'mustache.java',
+    'xwiki'
 ]
 
 
