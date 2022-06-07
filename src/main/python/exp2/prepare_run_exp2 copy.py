@@ -35,6 +35,7 @@ class CoveredMethod:
         self.count = count
 
     def add_covered_line(self, covered_line):
+        self.count = self.count + covered_line.count
         self.covered_lines.append(covered_line)
     
     def has_no_line_to_zero_or_gt_hundred(self):
@@ -72,14 +73,17 @@ class CoveredClass:
         return ''
 
 def filter_method_name(method_name):
-    discarded_method_names = ['equals', 'tostring', 'hashcode', 'pop', 'peek', 'poll', 'add', 'push', 'put', 'size', 'containskey', 'contains', 'clear']
+    discarded_method_names = ['equals', 'tostring', 'hashcode', 'pop', 'peek', 'poll', 'add', 'push', 'put', 'size', 'containskey', 'contains', 'clear', 'increment', 'decrement', 'compareTo', 'subtract', 'toLong', 'initializeTransientFields', 'invokeConstructor', 'equalsIgnoreCase', 'previousIndex', 'compare', 'intValue', 'iterator', 'max', 'longValue', 'addProcessor', 'processBitVector']
     return not '<' in method_name and \
         not method_name[0].isupper() and \
         not method_name.startswith('is') and \
         not method_name.startswith('has') and \
         not method_name.startswith('get') and \
         not method_name.startswith('set') and \
-        not method_name.lower() in discarded_method_names
+        not method_name.startswith('to') and \
+        not method_name.endswith('value') and \
+        not method_name.lower() in discarded_method_names and \
+        not method_name in discarded_method_names
 
 def get_max_indices(sorted_full_qualified_method_names):
     max_cursor = int(0.10 * len(sorted_full_qualified_method_names))
@@ -134,13 +138,31 @@ def select_method_to_mutate_from_indices(
         nb_test_per_selected_methods[class_name][method_name] = len(tests_that_hit_a_method_by_name[full_qualified_method_names[index]])
         category_per_selected_methods[class_name][method_name] = category
     return selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods
-        
+
+def get_count_for(coverage, class_name_to_find, line):
+    hit_count = 0
+    for test_class_name in coverage['testClassCoverage']:
+        for test_method_name in coverage['testClassCoverage'][test_class_name]['testMethodsCoverage']:
+            for class_name in coverage['testClassCoverage'][test_class_name]['testMethodsCoverage'][test_method_name]['classCoverageList']:
+                if class_name == class_name_to_find:
+                    for hit_count_and_line_number in coverage['testClassCoverage'][test_class_name]['testMethodsCoverage'][test_method_name]['classCoverageList'][class_name]['coverages']:
+                        if int(hit_count_and_line_number['line']) == int(line):
+                            hit_count = hit_count + hit_count_and_line_number['hitCount']
+    return hit_count
+                                
+
 def select_methods_to_mutate(path_module_v1, base_output_path):
+    '''
     mvn_diff_jjoules_coverage(path_module_v1)
     copy(path_module_v1 + 'clover_coverage.json', base_output_path + '/clover_coverage.json')
+    mvn_clover_instr(path_module_v1)
     mvn_clover(path_module_v1)
     copy(path_module_v1 + 'target/site/clover/clover.xml', base_output_path + '/clover.xml')
+    coverage = read_json(path_module_v1 + 'clover_coverage.json')
     file = minidom.parse(path_module_v1 + 'target/site/clover/clover.xml')
+    '''
+    coverage = read_json('/home/benjamin/workspace/diff-jjoules-experiment/data/february-2022/input/commons-lang/clover_coverage.json')
+    file = minidom.parse('/home/benjamin/workspace/diff-jjoules-experiment/data/february-2022/input/commons-lang/clover.xml')
     covered_classes = []
     packages = file.getElementsByTagName('coverage')[0].getElementsByTagName('project')[0].getElementsByTagName('package')
     for package in packages:
@@ -152,8 +174,8 @@ def select_methods_to_mutate(path_module_v1, base_output_path):
                 metrics = java_class_file.getElementsByTagName('metrics')[0]
                 nb_methods = metrics.attributes['methods'].value
                 nb_covered_methods = metrics.attributes['coveredmethods'].value
-                if nb_methods == '0' or nb_covered_methods == '0':
-                    continue
+                #if nb_methods == '0' or nb_covered_methods == '0':
+                #    continue
                 path = java_class_file.attributes['path'].value
                 package = path[0:-len(class_name)].split('src/main/java/')[1].replace('/', '.')
                 full_qualified_name = package + class_name[0:-len('.java')]
@@ -167,15 +189,14 @@ def select_methods_to_mutate(path_module_v1, base_output_path):
                         signature = line.attributes['signature'].value
                         method_name = signature.split('(')[0]
                         num_line = line.attributes['num'].value
-                        count = int(line.attributes['count'].value)
+                        count = get_count_for(coverage, full_qualified_name, num_line)
                         current_covered_method = CoveredMethod(method_name, num_line, count)
                     elif not line.attributes['type'].value == 'cond':
                         num_line = line.attributes['num'].value
-                        count = int(line.attributes['count'].value)
-                        if not current_covered_method == None:
+                        count = get_count_for(coverage, full_qualified_name, num_line)
+                        if not count == 0 and not current_covered_method == None:
                             current_covered_method.add_covered_line(CoveredLine(num_line, count))
                 covered_classes.append(current_covered_class)
-    coverage = read_json(path_module_v1 + 'clover_coverage.json')
     tests_that_hit_a_method_by_name = {}
     hit_by_method_name = {}
     for test_class in coverage['testClassCoverage']:
@@ -211,8 +232,10 @@ def select_methods_to_mutate(path_module_v1, base_output_path):
     #indices = get_max_indices(sorted_full_qualified_method_names) + get_average_indices(sorted_full_qualified_method_names) + get_min_indices(sorted_full_qualified_method_names)
     #indices = get_average_indices(sorted_full_qualified_method_names) + get_min_indices(sorted_full_qualified_method_names)
     #selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods = select_method_to_mutate_from_indices(get_max_indices(sorted_full_qualified_method_names), 'max',  sorted_full_qualified_method_names, covered_classes, tests_that_hit_a_method_by_name, selected_methods_to_mutate,  nb_test_per_selected_methods, category_per_selected_methods)
+    #selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods = select_method_to_mutate_from_indices(get_average_indices(sorted_hit_full_qualified_method_names), 'med',  sorted_hit_full_qualified_method_names, covered_classes, tests_that_hit_a_method_by_name, selected_methods_to_mutate,  nb_test_per_selected_methods, category_per_selected_methods)
+    #selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods = select_method_to_mutate_from_indices(get_min_indices(sorted_hit_full_qualified_method_names), 'min',  sorted_hit_full_qualified_method_names, covered_classes, tests_that_hit_a_method_by_name, selected_methods_to_mutate,  nb_test_per_selected_methods, category_per_selected_methods)
     selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods = select_method_to_mutate_from_indices(get_average_indices(sorted_hit_full_qualified_method_names), 'med',  sorted_hit_full_qualified_method_names, covered_classes, tests_that_hit_a_method_by_name, selected_methods_to_mutate,  nb_test_per_selected_methods, category_per_selected_methods)
-    selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods = select_method_to_mutate_from_indices(get_min_indices(sorted_hit_full_qualified_method_names), 'min',  sorted_hit_full_qualified_method_names, covered_classes, tests_that_hit_a_method_by_name, selected_methods_to_mutate,  nb_test_per_selected_methods, category_per_selected_methods)
+    selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods = select_method_to_mutate_from_indices(get_max_indices(sorted_hit_full_qualified_method_names), 'min',  sorted_hit_full_qualified_method_names, covered_classes, tests_that_hit_a_method_by_name, selected_methods_to_mutate,  nb_test_per_selected_methods, category_per_selected_methods)
     write_json(base_output_path + '/selected_methods_to_mutate.json', selected_methods_to_mutate)
     write_json(base_output_path + '/nb_test_per_selected_methods.json', nb_test_per_selected_methods)
     write_json(base_output_path + '/category_selected_methods.json', category_per_selected_methods)
@@ -235,13 +258,11 @@ def compute_mutation_intensities(root_folder, output_path):
                         med_consumption_V1 = mediane([d[CYCLES_KEY] for d in data_V1[test]])
                         med_consumption_V2 = mediane([d[CYCLES_KEY] for d in data_V2[test]])
                         consumption_delta.append(abs(med_consumption_V2 - med_consumption_V1))
-        if nb_ended_properly >= 100:
+        if nb_ended_properly >= 50:
             break
     nb_delta = len(consumption_delta)
     consumption_delta = sorted(consumption_delta)
     index_min = int(nb_delta * 0.10)
-    while consumption_delta[index_min] == 0:
-        index_min = index_min + 1
     index_med = int(nb_delta / 2)
     index_max = int(nb_delta * 0.90)
     mutation_intensities = {}
@@ -280,14 +301,12 @@ if __name__ == '__main__':
     # We will take only 2 intensities
 
     # resulting with 3 * 15 runs
-
+    
     args = RunArgs().build_parser().parse_args()
 
     commits = read_file_by_lines(args.input + '/' + args.project + '/' + COMMITS_FILE_PATH)
     module = read_file(args.input + '/' + args.project + '/' + MODULE_FILE_PATH)
-    module = ''
     base_output_path = args.output + '/' + args.project + '/'
-
     must_use_date_format = args.date_format
 
     if not args.no_clone:

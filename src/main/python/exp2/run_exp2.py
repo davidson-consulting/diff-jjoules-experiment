@@ -29,14 +29,24 @@ if __name__ == '__main__':
     if not args.no_clone:
         clone.remove_and_clone_both(commits[0])
     
+    delete_directory(PATH_V1 + '_running')
+    delete_directory(PATH_V2 + '_running')
+    
+    copy_directory(PATH_V1, PATH_V1 + '_running')
+    copy_directory(PATH_V2, PATH_V2 + '_running')
+    
+    PATH_V1 = PATH_V1 + '_running'
+    PATH_V2 = PATH_V2 + '_running'
+    
     selected_methods_to_mutate = read_json(args.input + '/' + project + '/selected_methods_to_mutate.json')
     mutation_intensities = read_json(args.input + '/' + project + '/mutation_intensities.json')
-    mutation_intensities = [str(int(mutation_intensities[key])) for key in ['zero', 'min', 'med', 'max']]
+    #mutation_intensities = [str(int(mutation_intensities[key])) for key in ['zero']]#, 'min', 'med', 'max']]
+    mutation_intensities = [str(int(mutation_intensities[key])) for key in ['min', 'med', 'max']]
     
     for mutation_intensity in mutation_intensities:
         for class_name in selected_methods_to_mutate:
             for method_name in selected_methods_to_mutate[class_name]:
-
+                
                 output_path = base_output_path + '/exp2/' + str(mutation_intensity) + '_' + class_name + '_' + method_name + '/'
                 delete_dir_and_mkdir(output_path)
 
@@ -57,7 +67,6 @@ if __name__ == '__main__':
                 simple_class_name = class_name.split('.')[-1]
                 path_dst_mutated_java_file = path_module_v2+ '/src/main/java/' + package_path_name + '/' + simple_class_name + '.java'
                 print('copy', path_mutated_java_file, 'to', path_dst_mutated_java_file)
-                input()
                 copy(
                     path_mutated_java_file,
                     path_dst_mutated_java_file
@@ -66,7 +75,6 @@ if __name__ == '__main__':
                     args.input + '/' + project + '/pom.xml',
                     path_module_v2 + '/pom.xml'
                 )
-                input()
                 git_commit(path_module_v2)
 
                 mvn_diff_jjoules_no_mark(
@@ -77,7 +85,7 @@ if __name__ == '__main__':
                     path_module_v1 + 'logs',
                     must_use_date_format
                 )
-
+                
                 for file in FILES_TO_COPY:
                     copy(
                         path_module_v1 + file,

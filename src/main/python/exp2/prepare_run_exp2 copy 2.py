@@ -72,14 +72,15 @@ class CoveredClass:
         return ''
 
 def filter_method_name(method_name):
-    discarded_method_names = ['equals', 'tostring', 'hashcode', 'pop', 'peek', 'poll', 'add', 'push', 'put', 'size', 'containskey', 'contains', 'clear']
+    discarded_method_names = ['equals', 'tostring', 'hashcode', 'pop', 'peek', 'poll', 'add', 'push', 'put', 'size', 'containskey', 'contains', 'clear', 'value', 'execute', 'partial', 'checkField']
     return not '<' in method_name and \
         not method_name[0].isupper() and \
         not method_name.startswith('is') and \
         not method_name.startswith('has') and \
         not method_name.startswith('get') and \
         not method_name.startswith('set') and \
-        not method_name.lower() in discarded_method_names
+        not method_name.lower() in discarded_method_names and \
+        not method_name in discarded_method_names
 
 def get_max_indices(sorted_full_qualified_method_names):
     max_cursor = int(0.10 * len(sorted_full_qualified_method_names))
@@ -136,11 +137,17 @@ def select_method_to_mutate_from_indices(
     return selected_methods_to_mutate, nb_test_per_selected_methods, category_per_selected_methods
         
 def select_methods_to_mutate(path_module_v1, base_output_path):
+    '''
     mvn_diff_jjoules_coverage(path_module_v1)
     copy(path_module_v1 + 'clover_coverage.json', base_output_path + '/clover_coverage.json')
+    mvn_clover_instr(path_module_v1)
     mvn_clover(path_module_v1)
     copy(path_module_v1 + 'target/site/clover/clover.xml', base_output_path + '/clover.xml')
+    coverage = read_json(path_module_v1 + 'clover_coverage.json')
     file = minidom.parse(path_module_v1 + 'target/site/clover/clover.xml')
+    '''
+    coverage = read_json('/home/benjamin/workspace/diff-jjoules-experiment/data/february-2022/input/mustache.java/clover_coverage.json')
+    file = minidom.parse('/home/benjamin/workspace/diff-jjoules-experiment/data/february-2022/input/mustache.java/clover.xml')
     covered_classes = []
     packages = file.getElementsByTagName('coverage')[0].getElementsByTagName('project')[0].getElementsByTagName('package')
     for package in packages:
@@ -175,7 +182,6 @@ def select_methods_to_mutate(path_module_v1, base_output_path):
                         if not current_covered_method == None:
                             current_covered_method.add_covered_line(CoveredLine(num_line, count))
                 covered_classes.append(current_covered_class)
-    coverage = read_json(path_module_v1 + 'clover_coverage.json')
     tests_that_hit_a_method_by_name = {}
     hit_by_method_name = {}
     for test_class in coverage['testClassCoverage']:
@@ -235,7 +241,7 @@ def compute_mutation_intensities(root_folder, output_path):
                         med_consumption_V1 = mediane([d[CYCLES_KEY] for d in data_V1[test]])
                         med_consumption_V2 = mediane([d[CYCLES_KEY] for d in data_V2[test]])
                         consumption_delta.append(abs(med_consumption_V2 - med_consumption_V1))
-        if nb_ended_properly >= 100:
+        if nb_ended_properly >= 50:
             break
     nb_delta = len(consumption_delta)
     consumption_delta = sorted(consumption_delta)
@@ -285,7 +291,6 @@ if __name__ == '__main__':
 
     commits = read_file_by_lines(args.input + '/' + args.project + '/' + COMMITS_FILE_PATH)
     module = read_file(args.input + '/' + args.project + '/' + MODULE_FILE_PATH)
-    module = ''
     base_output_path = args.output + '/' + args.project + '/'
 
     must_use_date_format = args.date_format

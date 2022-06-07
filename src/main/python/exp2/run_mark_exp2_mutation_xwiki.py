@@ -47,8 +47,14 @@ if __name__ == '__main__':
     commits = read_file_by_lines(args.input + '/' + args.project + '/' + COMMITS_FILE_PATH)
     
     for mutation_intensity in mutation_intensities:
-        for class_name in selected_methods_to_mutate:
-            for method_name in selected_methods_to_mutate[class_name]:
+        for module_class_name in selected_methods_to_mutate:
+            split_module_class_name = module_class_name.split('_')
+            module = split_module_class_name[0]
+            class_name = split_module_class_name[1]
+            for method_name in selected_methods_to_mutate[module_class_name]:
+                
+                if not method_name in ['addSignature', 'searchInstalledExtensions']:
+                    continue
                 
                 exp2_output_path = base_output_path + '/exp2/' + str(mutation_intensity) + '_' + class_name + '_' + method_name + '/'
                   
@@ -56,18 +62,11 @@ if __name__ == '__main__':
                 data_v1_json_path = '/'.join([exp2_output_path, 'diff-jjoules', 'data_v1.json'])
                 data_v2_json_path = '/'.join([exp2_output_path, 'diff-jjoules', 'data_v2.json'])
                 
-                if dynamic_module:
-                    module = find_most_impacted_module(PATH_V1 + '/', PATH_V2 + '/')
-        
-                if dynamic_module and len(module) == 0:
-                    print('skipping', current, 'module', 'is', 'empty')
-                    continue
+                path_module_v1 = module
+                path_module_v2 = module.replace('v1', 'v2')
                 
-                path_module_v1 = PATH_V1 + '/' + module + '/'
-                path_module_v2 = PATH_V2 + '/' + module + '/'
-                
-                git_reset_hard_folder(PATH_V1, commits[2])
-                git_reset_hard_folder(PATH_V2, commits[2])
+                git_reset_hard_folder(PATH_V1, commits[49])
+                git_reset_hard_folder(PATH_V2, commits[49])
 
                 delete_module_info_java(path_module_v1)
                 delete_module_info_java(path_module_v2)
@@ -139,4 +138,4 @@ if __name__ == '__main__':
                                     '/'.join([path_module_v1, 'diff-jjoules', file]),
                                     '/'.join([current_output_path, file])
                                 )
-                            delete_directory(path_module_v1 + 'diff-jjoules')
+                            delete_directory(path_module_v1 + '/diff-jjoules')

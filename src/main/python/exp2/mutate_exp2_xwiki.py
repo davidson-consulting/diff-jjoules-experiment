@@ -33,24 +33,23 @@ if __name__ == '__main__':
     mutation_intensities = read_json(args.input + '/' + project + '/mutation_intensities.json')
     mutation_intensities = [str(int(mutation_intensities[key])) for key in ['zero', 'min', 'med', 'max']]
     
-    
     mkdir(args.input + '/' + project + '/mutations/exp2')
     
     for mutation_intensity in mutation_intensities:
-        for class_name in selected_methods_to_mutate:
-            for method_name in selected_methods_to_mutate[class_name]:
+        for module_class_name in selected_methods_to_mutate:
+            split_module_class_name = module_class_name.split('_')
+            module = split_module_class_name[0]
+            class_name = split_module_class_name[1]
+            for method_name in selected_methods_to_mutate[module_class_name]:
                 
-                if not method_name == 'registerTypeAdapterFactory':
+                if not method_name in ['searchInstalledExtensions', 'addSignature']:
                     continue
                 
-                output_path = base_output_path + '/exp2/' + str(mutation_intensity) + '_' + class_name + '_' + method_name + '/'
-                delete_dir_and_mkdir(output_path)
-
                 git_reset_hard_folder(PATH_V1, commits[2])
                 git_reset_hard_folder(PATH_V2, commits[2])
 
-                path_module_v1 = PATH_V1 + '/' + module + '/'
-                path_module_v2 = PATH_V2 + '/' + module + '/'
+                path_module_v1 = module
+                path_module_v2 = module
 
                 delete_module_info_java(path_module_v1)
                 delete_module_info_java(path_module_v2)
@@ -75,5 +74,6 @@ if __name__ == '__main__':
                 )
                 copy(
                     path_module_v2 + '/pom.xml',
-                    args.input + '/' + project + '/pom.xml'
+                    args.input + '/' + project + '/mutations/exp2/' +  str(mutation_intensity) + '_' + class_name + '_' + method_name + '_pom.xml'
                 )
+            
