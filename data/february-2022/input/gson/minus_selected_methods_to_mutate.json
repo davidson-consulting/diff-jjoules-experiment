@@ -1,0 +1,244 @@
+{
+    "med": [
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "null",
+            "line": 327,
+            "block": 0,
+            "file": "JsonTreeReader.java",
+            "index": 1,
+            "method": {
+                "name": "locationString",
+                "description": "()Ljava/lang/String;",
+                "class": "JsonTreeReader",
+                "package": "com.google.gson.internal.bind"
+            },
+            "tests": {
+                "run": 4,
+                "ordered": [
+                    "com.google.gson.internal.bind.JsonElementReaderTest.testWrongType(com.google.gson.internal.bind.JsonElementReaderTest)",
+                    "com.google.gson.functional.JsonParserTest.testBadTypeForDeserializingCustomTree(com.google.gson.functional.JsonParserTest)",
+                    "com.google.gson.functional.JsonParserTest.testBadFieldTypeForDeserializingCustomTree(com.google.gson.functional.JsonParserTest)",
+                    "com.google.gson.functional.JsonParserTest.testBadFieldTypeForCustomDeserializerCustomTree(com.google.gson.functional.JsonParserTest)"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "false",
+            "line": 273,
+            "block": 0,
+            "file": "TypeToken.java",
+            "index": 1,
+            "method": {
+                "name": "matches",
+                "description": "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;Ljava/util/Map;)Z",
+                "class": "TypeToken",
+                "package": "com.google.gson.reflect"
+            },
+            "tests": {
+                "run": 3,
+                "ordered": [
+                    "com.google.gson.reflect.TypeTokenTest.testIsAssignableFromWithTypeParameters(com.google.gson.reflect.TypeTokenTest)",
+                    "com.google.gson.reflect.TypeTokenTest.testIsAssignableFromWithBasicWildcards(com.google.gson.reflect.TypeTokenTest)",
+                    "com.google.gson.reflect.TypeTokenTest.testIsAssignableFromWithNestedWildcards(com.google.gson.reflect.TypeTokenTest)"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "false",
+            "line": 240,
+            "block": 0,
+            "file": "TypeToken.java",
+            "index": 1,
+            "method": {
+                "name": "typeEquals",
+                "description": "(Ljava/lang/reflect/ParameterizedType;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map;)Z",
+                "class": "TypeToken",
+                "package": "com.google.gson.reflect"
+            },
+            "tests": {
+                "run": 3,
+                "ordered": [
+                    "com.google.gson.reflect.TypeTokenTest.testIsAssignableFromWithTypeParameters(com.google.gson.reflect.TypeTokenTest)",
+                    "com.google.gson.reflect.TypeTokenTest.testIsAssignableFromWithBasicWildcards(com.google.gson.reflect.TypeTokenTest)",
+                    "com.google.gson.reflect.TypeTokenTest.testIsAssignableFromWithNestedWildcards(com.google.gson.reflect.TypeTokenTest)"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "void",
+            "line": 339,
+            "block": 0,
+            "file": "LinkedHashTreeMap.java",
+            "index": 1,
+            "method": {
+                "name": "rebalance",
+                "description": "(Lcom/google/gson/internal/LinkedHashTreeMap$Node;Z)V",
+                "class": "LinkedHashTreeMap",
+                "package": "com.google.gson.internal"
+            },
+            "tests": {
+                "run": 2,
+                "ordered": [
+                    "com.google.gson.internal.LinkedHashTreeMapTest.testRemoveRootDoesNotDoubleUnlink(com.google.gson.internal.LinkedHashTreeMapTest)",
+                    "com.google.gson.internal.LinkedHashTreeMapTest.testForceDoublingAndRehash(com.google.gson.internal.LinkedHashTreeMapTest)"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "\"\"",
+            "line": 233,
+            "block": 0,
+            "file": "$Gson$Types.java",
+            "index": 1,
+            "method": {
+                "name": "typeToString",
+                "description": "(Ljava/lang/reflect/Type;)Ljava/lang/String;",
+                "class": "$Gson$Types",
+                "package": "com.google.gson.internal"
+            },
+            "tests": {
+                "run": 1,
+                "ordered": [
+                    "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest.testIncorrectJsonAdapterType(com.google.gson.functional.JsonAdapterAnnotationOnClassesTest)"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        }
+    ],
+    "min": [
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "null",
+            "line": 233,
+            "block": 0,
+            "file": "$Gson$Types.java",
+            "index": 1,
+            "method": {
+                "name": "typeToString",
+                "description": "(Ljava/lang/reflect/Type;)Ljava/lang/String;",
+                "class": "$Gson$Types",
+                "package": "com.google.gson.internal"
+            },
+            "tests": {
+                "run": 1,
+                "ordered": [
+                    "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest.testIncorrectJsonAdapterType(com.google.gson.functional.JsonAdapterAnnotationOnClassesTest)"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "void",
+            "line": 558,
+            "block": 0,
+            "file": "LinkedHashTreeMap.java",
+            "index": 1,
+            "method": {
+                "name": "doubleCapacity",
+                "description": "()V",
+                "class": "LinkedHashTreeMap",
+                "package": "com.google.gson.internal"
+            },
+            "tests": {
+                "run": 1,
+                "ordered": [
+                    "com.google.gson.internal.LinkedHashTreeMapTest.testForceDoublingAndRehash(com.google.gson.internal.LinkedHashTreeMapTest)"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "void",
+            "line": 402,
+            "block": 0,
+            "file": "LinkedHashTreeMap.java",
+            "index": 1,
+            "method": {
+                "name": "rotateLeft",
+                "description": "(Lcom/google/gson/internal/LinkedHashTreeMap$Node;)V",
+                "class": "LinkedHashTreeMap",
+                "package": "com.google.gson.internal"
+            },
+            "tests": {
+                "run": 1,
+                "ordered": [
+                    "com.google.gson.internal.LinkedHashTreeMapTest.testForceDoublingAndRehash(com.google.gson.internal.LinkedHashTreeMapTest)"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "void",
+            "line": 430,
+            "block": 0,
+            "file": "LinkedHashTreeMap.java",
+            "index": 1,
+            "method": {
+                "name": "rotateRight",
+                "description": "(Lcom/google/gson/internal/LinkedHashTreeMap$Node;)V",
+                "class": "LinkedHashTreeMap",
+                "package": "com.google.gson.internal"
+            },
+            "tests": {
+                "run": 1,
+                "ordered": [
+                    "com.google.gson.internal.LinkedHashTreeMapTest.testForceDoublingAndRehash(com.google.gson.internal.LinkedHashTreeMapTest)"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "null",
+            "line": 857,
+            "block": 0,
+            "file": "TypeAdapters.java",
+            "index": 1,
+            "method": {
+                "name": "newFactoryForMultipleTypes",
+                "description": "(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;",
+                "class": "TypeAdapters",
+                "package": "com.google.gson.internal.bind"
+            },
+            "tests": {
+                "run": 1,
+                "ordered": [
+                    "com.google.gson.CommentsTest.testParseComments(com.google.gson.CommentsTest)"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        }
+    ]
+}
