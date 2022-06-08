@@ -1,0 +1,422 @@
+{
+    "med": [
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "void",
+            "line": 1047,
+            "block": 0,
+            "file": "HttpConnection.java",
+            "index": 1,
+            "method": {
+                "name": "safeClose",
+                "description": "()V",
+                "class": "HttpConnection$Response",
+                "package": "org.jsoup.helper"
+            },
+            "tests": {
+                "run": 55,
+                "ordered": [
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:testBinaryContentTypeThrowsException()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:handlesEmptyRedirect()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:canFetchBinaryAsBytes()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:throwsExceptionOn404()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:maxBodySizeInReadToByteBuffer()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:sendHeadRequest()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:handlesWrongContentLengthDuringBufferedRead()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:canConnectToLocalServer()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:supportsDeflate()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:handlesRedirect()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:handlesLargerContentLengthParseRead()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:repeatable()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:fetchHandlesXml()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:getUtf8Bom()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:combinesSameHeadersWithComma()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:bodyAfterParseThrowsValidationError()]",
+                    "org.jsoup.integration.SessionTest.[engine:junit-jupiter]/[class:org.jsoup.integration.SessionTest]/[method:testCanChangeParsers()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:handlesUnknownEscapesAcrossBuffer()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:fetchHandlesXmlAsHtmlWhenParserSet()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:fetchURl()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:parseParseThrowsValidates()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:multipleParsesOkAfterBufferUp()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:fetchURIWithWhitespace()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:ignoresExceptionIfSoConfigured()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:bodyAndBytesAvailableBeforeParse()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:baseHrefCorrectAfterHttpEquiv()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:testParseRss()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:fetchToW3c()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:canSendSecFetchHeaders()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:sendsRequestBody()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:sendsRequestBodyJsonWithoutData()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:sendsRequestBodyJsonWithData()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:secFetchHeadersSurviveRedirect()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:doesPost()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:doesNotPostFor302()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:doesPut()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:requestCookiesSurviveRedirect()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:doesPostFor307()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:doesPostMultipartWithoutInputstream()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:doesGet()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:sendsRequestBodyWithUrlParams()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:multiCookieSet()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:postFiles()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:maxBodySize()]",
+                    "org.jsoup.integration.SessionTest.[engine:junit-jupiter]/[class:org.jsoup.integration.SessionTest]/[method:testPathScopedCookiesOnRedirect()]",
+                    "org.jsoup.integration.SessionTest.[engine:junit-jupiter]/[class:org.jsoup.integration.SessionTest]/[method:testPathScopedCookies()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:postHtmlFile()]",
+                    "org.jsoup.nodes.FormElementTest.[engine:junit-jupiter]/[class:org.jsoup.nodes.FormElementTest]/[method:formSubmissionCarriesCookiesFromSession()]",
+                    "org.jsoup.integration.SessionIT.[engine:junit-jupiter]/[class:org.jsoup.integration.SessionIT]/[method:multiThread()]",
+                    "org.jsoup.helper.DataUtilTest.[engine:junit-jupiter]/[class:org.jsoup.helper.DataUtilTest]/[method:discardsSpuriousByteOrderMark()]",
+                    "org.jsoup.integration.ConnectIT.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectIT]/[method:canInterruptBodyStringRead()]",
+                    "org.jsoup.integration.ConnectIT.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectIT]/[method:infiniteReadSupported()]",
+                    "org.jsoup.integration.ConnectIT.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectIT]/[method:canInterruptDocumentRead()]",
+                    "org.jsoup.integration.ConnectIT.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectIT]/[method:slowReadOk()]",
+                    "org.jsoup.integration.SessionIT.[engine:junit-jupiter]/[class:org.jsoup.integration.SessionIT]/[method:multiThreadWithoutNewRequestBlowsUp()]"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "true",
+            "line": 579,
+            "block": 0,
+            "file": "HtmlTreeBuilder.java",
+            "index": 1,
+            "method": {
+                "name": "inScope",
+                "description": "([Ljava/lang/String;)Z",
+                "class": "HtmlTreeBuilder",
+                "package": "org.jsoup.parser"
+            },
+            "tests": {
+                "run": 33,
+                "ordered": [
+                    "org.jsoup.parser.HtmlParserTest.[engine:junit-jupiter]/[class:org.jsoup.parser.HtmlParserTest]/[method:parseFragmentOnCreatedDocument()]",
+                    "org.jsoup.parser.HtmlParserTest.[engine:junit-jupiter]/[class:org.jsoup.parser.HtmlParserTest]/[method:testHeaderContents()]",
+                    "org.jsoup.parser.HtmlParserTest.[engine:junit-jupiter]/[class:org.jsoup.parser.HtmlParserTest]/[method:testHgroup()]",
+                    "org.jsoup.select.ElementsTest.[engine:junit-jupiter]/[class:org.jsoup.select.ElementsTest]/[method:filter()]",
+                    "org.jsoup.select.SelectorTest.[engine:junit-jupiter]/[class:org.jsoup.select.SelectorTest]/[method:parentWithClassChild()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#16]",
+                    "org.jsoup.select.SelectorTest.[engine:junit-jupiter]/[class:org.jsoup.select.SelectorTest]/[method:multiChildDescent()]",
+                    "org.jsoup.safety.CleanerTest.[engine:junit-jupiter]/[class:org.jsoup.safety.CleanerTest]/[method:testRelaxed()]",
+                    "org.jsoup.helper.DataUtilTest.[engine:junit-jupiter]/[class:org.jsoup.helper.DataUtilTest]/[method:supportsBOMinFiles()]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#16]",
+                    "org.jsoup.parser.HtmlParserTest.[engine:junit-jupiter]/[class:org.jsoup.parser.HtmlParserTest]/[method:handlesXmlDeclAndCommentsBeforeDoctype()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:fetchToW3c()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testGoogleSearchIpod()]",
+                    "org.jsoup.helper.W3CDomTest.[engine:junit-jupiter]/[class:org.jsoup.helper.W3CDomTest]/[method:convertsGoogleLocation()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testSmhBizArticle()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testWikiFromString()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testFileParseNoCharsetMethod()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testNytArticle()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testYahooJp()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testYahooArticle()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testWikiExpandedFromString()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testNewsHomepage()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testXwiki()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testXwikiExpanded()]",
+                    "org.jsoup.nodes.DocumentTest.[engine:junit-jupiter]/[class:org.jsoup.nodes.DocumentTest]/[method:testLocation()]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:postHtmlFile()]",
+                    "org.jsoup.nodes.FormElementTest.[engine:junit-jupiter]/[class:org.jsoup.nodes.FormElementTest]/[method:formSubmissionCarriesCookiesFromSession()]",
+                    "org.jsoup.helper.W3CDomTest.[engine:junit-jupiter]/[class:org.jsoup.helper.W3CDomTest]/[method:convertsGoogle()]",
+                    "org.jsoup.integration.SessionIT.[engine:junit-jupiter]/[class:org.jsoup.integration.SessionIT]/[method:multiThread()]",
+                    "org.jsoup.helper.DataUtilTest.[engine:junit-jupiter]/[class:org.jsoup.helper.DataUtilTest]/[method:discardsSpuriousByteOrderMark()]",
+                    "org.jsoup.integration.ConnectIT.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectIT]/[method:infiniteReadSupported()]",
+                    "org.jsoup.integration.ConnectIT.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectIT]/[method:slowReadOk()]",
+                    "org.jsoup.integration.SessionIT.[engine:junit-jupiter]/[class:org.jsoup.integration.SessionIT]/[method:multiThreadWithoutNewRequestBlowsUp()]"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "true",
+            "line": 593,
+            "block": 0,
+            "file": "HtmlTreeBuilder.java",
+            "index": 1,
+            "method": {
+                "name": "inListItemScope",
+                "description": "(Ljava/lang/String;)Z",
+                "class": "HtmlTreeBuilder",
+                "package": "org.jsoup.parser"
+            },
+            "tests": {
+                "run": 30,
+                "ordered": [
+                    "org.jsoup.parser.HtmlParserTest.[engine:junit-jupiter]/[class:org.jsoup.parser.HtmlParserTest]/[method:doesNotCreateImplicitLists()]",
+                    "org.jsoup.nodes.ElementTest.[engine:junit-jupiter]/[class:org.jsoup.nodes.ElementTest]/[method:testNextElementSiblings()]",
+                    "org.jsoup.nodes.ElementTest.[engine:junit-jupiter]/[class:org.jsoup.nodes.ElementTest]/[method:testPreviousElementSiblings()]",
+                    "org.jsoup.parser.HtmlParserTest.[engine:junit-jupiter]/[class:org.jsoup.parser.HtmlParserTest]/[method:handleNullContextInParseFragment()]",
+                    "org.jsoup.select.SelectorTest.[engine:junit-jupiter]/[class:org.jsoup.select.SelectorTest]/[method:adjacentSiblings()]",
+                    "org.jsoup.select.SelectorTest.[engine:junit-jupiter]/[class:org.jsoup.select.SelectorTest]/[method:notAdjacent()]",
+                    "org.jsoup.select.SelectorTest.[engine:junit-jupiter]/[class:org.jsoup.select.SelectorTest]/[method:generalSiblings()]",
+                    "org.jsoup.select.SelectorTest.[engine:junit-jupiter]/[class:org.jsoup.select.SelectorTest]/[method:adjacentSiblingsWithId()]",
+                    "org.jsoup.select.SelectorTest.[engine:junit-jupiter]/[class:org.jsoup.select.SelectorTest]/[method:mixCombinator()]",
+                    "org.jsoup.select.SelectorTest.[engine:junit-jupiter]/[class:org.jsoup.select.SelectorTest]/[method:mixCombinatorGroup()]",
+                    "org.jsoup.select.QueryParserTest.[engine:junit-jupiter]/[class:org.jsoup.select.QueryParserTest]/[method:testConsumeSubQuery()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#8]",
+                    "org.jsoup.select.SelectorTest.[engine:junit-jupiter]/[class:org.jsoup.select.SelectorTest]/[method:handlesCommasInSelector()]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#8]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testGoogleSearchIpod()]",
+                    "org.jsoup.helper.W3CDomTest.[engine:junit-jupiter]/[class:org.jsoup.helper.W3CDomTest]/[method:convertsGoogleLocation()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testSmhBizArticle()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testWikiFromString()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testFileParseNoCharsetMethod()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testNytArticle()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testYahooJp()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testYahooArticle()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testWikiExpandedFromString()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testNewsHomepage()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testXwiki()]",
+                    "org.jsoup.integration.ParseTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ParseTest]/[method:testXwikiExpanded()]",
+                    "org.jsoup.nodes.DocumentTest.[engine:junit-jupiter]/[class:org.jsoup.nodes.DocumentTest]/[method:testLocation()]",
+                    "org.jsoup.helper.W3CDomTest.[engine:junit-jupiter]/[class:org.jsoup.helper.W3CDomTest]/[method:convertsGoogle()]",
+                    "org.jsoup.integration.SessionIT.[engine:junit-jupiter]/[class:org.jsoup.integration.SessionIT]/[method:multiThread()]",
+                    "org.jsoup.helper.DataUtilTest.[engine:junit-jupiter]/[class:org.jsoup.helper.DataUtilTest]/[method:discardsSpuriousByteOrderMark()]"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "\"\"",
+            "line": 78,
+            "block": 0,
+            "file": "LeafNode.java",
+            "index": 1,
+            "method": {
+                "name": "baseUri",
+                "description": "()Ljava/lang/String;",
+                "class": "LeafNode",
+                "package": "org.jsoup.nodes"
+            },
+            "tests": {
+                "run": 26,
+                "ordered": [
+                    "org.jsoup.nodes.CommentTest.[engine:junit-jupiter]/[class:org.jsoup.nodes.CommentTest]/[method:asXmlDeclaration()]",
+                    "org.jsoup.parser.XmlTreeBuilderTest.[engine:junit-jupiter]/[class:org.jsoup.parser.XmlTreeBuilderTest]/[method:handlesLTinScript()]",
+                    "org.jsoup.parser.XmlTreeBuilderTest.[engine:junit-jupiter]/[class:org.jsoup.parser.XmlTreeBuilderTest]/[method:caseSensitiveDeclaration()]",
+                    "org.jsoup.parser.XmlTreeBuilderTest.[engine:junit-jupiter]/[class:org.jsoup.parser.XmlTreeBuilderTest]/[method:handlesDodgyXmlDecl()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[method:bookmark()]",
+                    "org.jsoup.parser.XmlTreeBuilderTest.[engine:junit-jupiter]/[class:org.jsoup.parser.XmlTreeBuilderTest]/[method:testParseDeclarationWithoutAttributes()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#26]",
+                    "org.jsoup.parser.XmlTreeBuilderTest.[engine:junit-jupiter]/[class:org.jsoup.parser.XmlTreeBuilderTest]/[method:testParseDeclarationAttributes()]",
+                    "org.jsoup.parser.XmlTreeBuilderTest.[engine:junit-jupiter]/[class:org.jsoup.parser.XmlTreeBuilderTest]/[method:handlesXmlDeclarationAsDeclaration()]",
+                    "org.jsoup.nodes.NodeTest.[engine:junit-jupiter]/[class:org.jsoup.nodes.NodeTest]/[method:forEachNode()]",
+                    "org.jsoup.nodes.TextNodeTest.[engine:junit-jupiter]/[class:org.jsoup.nodes.TextNodeTest]/[method:testSplitAnEmbolden()]",
+                    "org.jsoup.parser.XmlTreeBuilderTest.[engine:junit-jupiter]/[class:org.jsoup.parser.XmlTreeBuilderTest]/[method:testDetectCharsetEncodingDeclaration()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#6]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#3]",
+                    "org.jsoup.helper.DataUtilTest.[engine:junit-jupiter]/[class:org.jsoup.helper.DataUtilTest]/[method:supportsXmlCharsetDeclaration()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#2]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:testParseRss()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#16]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#26]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#22]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#16]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#6]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#2]",
+                    "org.jsoup.helper.DataUtilTest.[engine:junit-jupiter]/[class:org.jsoup.helper.DataUtilTest]/[method:discardsSpuriousByteOrderMark()]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#3]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#22]"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "\"A\"",
+            "line": 78,
+            "block": 0,
+            "file": "LeafNode.java",
+            "index": 1,
+            "method": {
+                "name": "baseUri",
+                "description": "()Ljava/lang/String;",
+                "class": "LeafNode",
+                "package": "org.jsoup.nodes"
+            },
+            "tests": {
+                "run": 26,
+                "ordered": [
+                    "org.jsoup.nodes.CommentTest.[engine:junit-jupiter]/[class:org.jsoup.nodes.CommentTest]/[method:asXmlDeclaration()]",
+                    "org.jsoup.parser.XmlTreeBuilderTest.[engine:junit-jupiter]/[class:org.jsoup.parser.XmlTreeBuilderTest]/[method:handlesLTinScript()]",
+                    "org.jsoup.parser.XmlTreeBuilderTest.[engine:junit-jupiter]/[class:org.jsoup.parser.XmlTreeBuilderTest]/[method:caseSensitiveDeclaration()]",
+                    "org.jsoup.parser.XmlTreeBuilderTest.[engine:junit-jupiter]/[class:org.jsoup.parser.XmlTreeBuilderTest]/[method:handlesDodgyXmlDecl()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[method:bookmark()]",
+                    "org.jsoup.parser.XmlTreeBuilderTest.[engine:junit-jupiter]/[class:org.jsoup.parser.XmlTreeBuilderTest]/[method:testParseDeclarationWithoutAttributes()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#26]",
+                    "org.jsoup.parser.XmlTreeBuilderTest.[engine:junit-jupiter]/[class:org.jsoup.parser.XmlTreeBuilderTest]/[method:testParseDeclarationAttributes()]",
+                    "org.jsoup.parser.XmlTreeBuilderTest.[engine:junit-jupiter]/[class:org.jsoup.parser.XmlTreeBuilderTest]/[method:handlesXmlDeclarationAsDeclaration()]",
+                    "org.jsoup.nodes.NodeTest.[engine:junit-jupiter]/[class:org.jsoup.nodes.NodeTest]/[method:forEachNode()]",
+                    "org.jsoup.nodes.TextNodeTest.[engine:junit-jupiter]/[class:org.jsoup.nodes.TextNodeTest]/[method:testSplitAnEmbolden()]",
+                    "org.jsoup.parser.XmlTreeBuilderTest.[engine:junit-jupiter]/[class:org.jsoup.parser.XmlTreeBuilderTest]/[method:testDetectCharsetEncodingDeclaration()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#6]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#3]",
+                    "org.jsoup.helper.DataUtilTest.[engine:junit-jupiter]/[class:org.jsoup.helper.DataUtilTest]/[method:supportsXmlCharsetDeclaration()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#2]",
+                    "org.jsoup.integration.ConnectTest.[engine:junit-jupiter]/[class:org.jsoup.integration.ConnectTest]/[method:testParseRss()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#16]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#26]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#22]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#16]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#6]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#2]",
+                    "org.jsoup.helper.DataUtilTest.[engine:junit-jupiter]/[class:org.jsoup.helper.DataUtilTest]/[method:discardsSpuriousByteOrderMark()]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#3]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#22]"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        }
+    ],
+    "min": [
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "true",
+            "line": 1661,
+            "block": 0,
+            "file": "HtmlTreeBuilderState.java",
+            "index": 1,
+            "method": {
+                "name": "process",
+                "description": "(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z",
+                "class": "HtmlTreeBuilderState$21",
+                "package": "org.jsoup.parser"
+            },
+            "tests": {
+                "run": 7,
+                "ordered": [
+                    "org.jsoup.parser.HtmlParserTest.[engine:junit-jupiter]/[class:org.jsoup.parser.HtmlParserTest]/[method:ignoresContentAfterFrameset()]",
+                    "org.jsoup.parser.HtmlParserTest.[engine:junit-jupiter]/[class:org.jsoup.parser.HtmlParserTest]/[method:handlesFrames()]",
+                    "org.jsoup.nodes.DocumentTest.[engine:junit-jupiter]/[class:org.jsoup.nodes.DocumentTest]/[method:framesetSupportsBodyMethod()]",
+                    "org.jsoup.safety.CleanerTest.[engine:junit-jupiter]/[class:org.jsoup.safety.CleanerTest]/[method:handlesFramesets()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#16]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#16]",
+                    "org.jsoup.helper.DataUtilTest.[engine:junit-jupiter]/[class:org.jsoup.helper.DataUtilTest]/[method:discardsSpuriousByteOrderMark()]"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "false",
+            "line": 1712,
+            "block": 0,
+            "file": "HtmlTreeBuilderState.java",
+            "index": 1,
+            "method": {
+                "name": "process",
+                "description": "(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z",
+                "class": "HtmlTreeBuilderState$23",
+                "package": "org.jsoup.parser"
+            },
+            "tests": {
+                "run": 6,
+                "ordered": [
+                    "org.jsoup.parser.HtmlParserTest.[engine:junit-jupiter]/[class:org.jsoup.parser.HtmlParserTest]/[method:ignoresContentAfterFrameset()]",
+                    "org.jsoup.parser.HtmlParserTest.[engine:junit-jupiter]/[class:org.jsoup.parser.HtmlParserTest]/[method:handlesFrames()]",
+                    "org.jsoup.safety.CleanerTest.[engine:junit-jupiter]/[class:org.jsoup.safety.CleanerTest]/[method:handlesFramesets()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#16]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#16]",
+                    "org.jsoup.helper.DataUtilTest.[engine:junit-jupiter]/[class:org.jsoup.helper.DataUtilTest]/[method:discardsSpuriousByteOrderMark()]"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "true",
+            "line": 1712,
+            "block": 0,
+            "file": "HtmlTreeBuilderState.java",
+            "index": 1,
+            "method": {
+                "name": "process",
+                "description": "(Lorg/jsoup/parser/Token;Lorg/jsoup/parser/HtmlTreeBuilder;)Z",
+                "class": "HtmlTreeBuilderState$23",
+                "package": "org.jsoup.parser"
+            },
+            "tests": {
+                "run": 6,
+                "ordered": [
+                    "org.jsoup.parser.HtmlParserTest.[engine:junit-jupiter]/[class:org.jsoup.parser.HtmlParserTest]/[method:ignoresContentAfterFrameset()]",
+                    "org.jsoup.parser.HtmlParserTest.[engine:junit-jupiter]/[class:org.jsoup.parser.HtmlParserTest]/[method:handlesFrames()]",
+                    "org.jsoup.safety.CleanerTest.[engine:junit-jupiter]/[class:org.jsoup.safety.CleanerTest]/[method:handlesFramesets()]",
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#16]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testXmlParse(java.io.File)]/[test-template-invocation:#16]",
+                    "org.jsoup.helper.DataUtilTest.[engine:junit-jupiter]/[class:org.jsoup.helper.DataUtilTest]/[method:discardsSpuriousByteOrderMark()]"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "true",
+            "line": 117,
+            "block": 0,
+            "file": "StructuralEvaluator.java",
+            "index": 1,
+            "method": {
+                "name": "matches",
+                "description": "(Lorg/jsoup/nodes/Element;Lorg/jsoup/nodes/Element;)Z",
+                "class": "StructuralEvaluator$PreviousSibling",
+                "package": "org.jsoup.select"
+            },
+            "tests": {
+                "run": 4,
+                "ordered": [
+                    "org.jsoup.select.SelectorTest.[engine:junit-jupiter]/[class:org.jsoup.select.SelectorTest]/[method:generalSiblings()]",
+                    "org.jsoup.select.SelectorTest.[engine:junit-jupiter]/[class:org.jsoup.select.SelectorTest]/[method:findBetweenSpan()]",
+                    "org.jsoup.nodes.ElementTest.[engine:junit-jupiter]/[class:org.jsoup.nodes.ElementTest]/[method:testIs()]",
+                    "org.jsoup.helper.DataUtilTest.[engine:junit-jupiter]/[class:org.jsoup.helper.DataUtilTest]/[method:discardsSpuriousByteOrderMark()]"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
+            "mutator": "void",
+            "line": 684,
+            "block": 0,
+            "file": "HtmlTreeBuilder.java",
+            "index": 1,
+            "method": {
+                "name": "closeElement",
+                "description": "(Ljava/lang/String;)V",
+                "class": "HtmlTreeBuilder",
+                "package": "org.jsoup.parser"
+            },
+            "tests": {
+                "run": 3,
+                "ordered": [
+                    "org.jsoup.integration.FuzzFixesTest.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesTest]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#28]",
+                    "org.jsoup.integration.FuzzFixesIT.[engine:junit-jupiter]/[class:org.jsoup.integration.FuzzFixesIT]/[test-template:testHtmlParse(java.io.File)]/[test-template-invocation:#28]",
+                    "org.jsoup.helper.DataUtilTest.[engine:junit-jupiter]/[class:org.jsoup.helper.DataUtilTest]/[method:discardsSpuriousByteOrderMark()]"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        }
+    ]
+}
