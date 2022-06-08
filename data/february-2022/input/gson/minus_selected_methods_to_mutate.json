@@ -128,6 +128,29 @@
         {
             "detected": false,
             "status": "SURVIVED",
+            "mutator": "\"A\"",
+            "line": 233,
+            "block": 0,
+            "file": "$Gson$Types.java",
+            "index": 1,
+            "method": {
+                "name": "typeToString",
+                "description": "(Ljava/lang/reflect/Type;)Ljava/lang/String;",
+                "class": "$Gson$Types",
+                "package": "com.google.gson.internal"
+            },
+            "tests": {
+                "run": 1,
+                "ordered": [
+                    "com.google.gson.functional.JsonAdapterAnnotationOnClassesTest.testIncorrectJsonAdapterType(com.google.gson.functional.JsonAdapterAnnotationOnClassesTest)"
+                ],
+                "killing": [],
+                "succeeding": []
+            }
+        },
+        {
+            "detected": false,
+            "status": "SURVIVED",
             "mutator": "null",
             "line": 233,
             "block": 0,
@@ -212,29 +235,6 @@
                 "run": 1,
                 "ordered": [
                     "com.google.gson.internal.LinkedHashTreeMapTest.testForceDoublingAndRehash(com.google.gson.internal.LinkedHashTreeMapTest)"
-                ],
-                "killing": [],
-                "succeeding": []
-            }
-        },
-        {
-            "detected": false,
-            "status": "SURVIVED",
-            "mutator": "null",
-            "line": 857,
-            "block": 0,
-            "file": "TypeAdapters.java",
-            "index": 1,
-            "method": {
-                "name": "newFactoryForMultipleTypes",
-                "description": "(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;",
-                "class": "TypeAdapters",
-                "package": "com.google.gson.internal.bind"
-            },
-            "tests": {
-                "run": 1,
-                "ordered": [
-                    "com.google.gson.CommentsTest.testParseComments(com.google.gson.CommentsTest)"
                 ],
                 "killing": [],
                 "succeeding": []
