@@ -74,12 +74,15 @@ if __name__ == '__main__':
     smallest_passing_commit = None
     smallest_breaking_commit = None
     
-    #for test_filter in ['EMPTY_INTERSECTION', 'STUDENTS_T_TEST']:
-    for test_filter in ['STUDENTS_T_TEST']:
-        #for mark_strategy in ['AGGREGATE', 'CODE_COVERAGE', 'DIFF_COVERAGE']:
-        for mark_strategy in ['CODE_COVERAGE']:
-            #inner_loop_values = COHEN_S_DS if test_filter == 'STUDENTS_T_TEST' else ['']
-            inner_loop_values = ['0.80'] if test_filter == 'STUDENTS_T_TEST' else ['']
+    passing = []
+    breaking = []
+    
+    for test_filter in ['EMPTY_INTERSECTION', 'STUDENTS_T_TEST']:
+    #for test_filter in ['STUDENTS_T_TEST']:
+        for mark_strategy in ['AGGREGATE', 'CODE_COVERAGE', 'DIFF_COVERAGE']:
+        #for mark_strategy in ['CODE_COVERAGE']:
+            inner_loop_values = COHEN_S_DS if test_filter == 'STUDENTS_T_TEST' else ['']
+            #inner_loop_values = ['0.80'] if test_filter == 'STUDENTS_T_TEST' else ['']
             for cohen_s_d in inner_loop_values:
                 config = '_'.join([test_filter, mark_strategy]) + ('' if cohen_s_d == '' else ('_' + cohen_s_d))
                 
@@ -101,12 +104,14 @@ if __name__ == '__main__':
                         git_reset_hard_folder(PATH_V1, commit_v1)
                         git_reset_hard_folder(PATH_V2, commit_v2)
                         
+                        '''
                         if dynamic_module:
                             module = find_most_impacted_module(PATH_V1 + '/', PATH_V2 + '/')
                         
                         if len(module) == 0:
                             print('skipping', current, 'module', 'is', 'empty')
                             continue
+                        '''
 
                         path_diff_v1 = PATH_V1 + '/' + module + '/src'
                         path_diff_v2 = PATH_V2 + '/' + module + '/src'
@@ -129,9 +134,12 @@ if __name__ == '__main__':
                     if not selected_commit_passing == None and not selected_commit_breaking == None:
                         break
                     if selected_commit_passing == None and decision_per_commit_index[key] == 'pass':
+                        print(config, key, nb_changed_line_per_commit_index[key])
+                        passing.append((config, key, nb_changed_line_per_commit_index[key]))
                         selected_commit_passing = key
                         continue
                     if selected_commit_breaking == None and decision_per_commit_index[key] == 'break':
+                        breaking.append((config, key, nb_changed_line_per_commit_index[key]))
                         selected_commit_breaking = key
                         continue
                 selected_commits = {}
@@ -159,7 +167,13 @@ if __name__ == '__main__':
                     print(selected_commit_breaking, nb_changed_line_per_commit_index[selected_commit_breaking], decision_per_commit_index[selected_commit_breaking])
                 
                 #write_json(args.input + '/' + args.project + '/commit_selection/' +  config +'_selected_commits.json', selected_commits)
-                write_json(args.input + '/' + args.project + '/commit_selection/' +  'selected_commits.json', selected_commits)
+                #write_json(args.input + '/' + args.project + '/commit_selection/' +  'selected_commits.json', selected_commits)
 
     print(smallest_passing_commit)
     print(smallest_breaking_commit)
+    
+    for p in passing:
+        print(p)
+        
+    for b in breaking:
+        print(b)
